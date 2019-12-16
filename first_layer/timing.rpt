@@ -1,0 +1,41 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri Dec 13 02:17:08 2019
+| Host         : GCS running 64-bit Ubuntu 18.04.3 LTS
+| Command      : report_timing -file /home/gsaied/Desktop/verilog_rtl/first_layer/timing.rpt
+| Design       : conv1
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+---------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 u_1/img_out_reg_0_0/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1)
+  Destination:            genblk1[0].mac_i/mul_out_reg/A[0]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.470ns  (logic 2.292ns (66.055%)  route 1.178ns (33.945%))
+  Logic Levels:           4  (LUT3=1 LUT5=1 RAMB36E1=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB36E1                     0.000     0.000 r  u_1/img_out_reg_0_0/CLKARDCLK
+                         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      1.915     1.915 r  u_1/img_out_reg_0_0/CASCADEOUTA
+                         net (fo=1, unplaced)         0.065     1.980    u_1/img_out_reg_0_0_n_0
+                         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.291     2.271 r  u_1/img_out_reg_1_0/DOADO[0]
+                         net (fo=1, unplaced)         0.434     2.705    u_1/img_out_reg_1_0_n_35
+                         LUT3 (Prop_lut3_I2_O)        0.043     2.748 r  u_1/mul_out_reg_i_47/O
+                         net (fo=1, unplaced)         0.244     2.992    u_1/mul_out_reg_i_47_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.043     3.035 r  u_1/mul_out_reg_i_31/O
+                         net (fo=64, unplaced)        0.434     3.470    genblk1[0].mac_i/A[0]
+                         DSP48E1                                      r  genblk1[0].mac_i/mul_out_reg/A[0]
+  -------------------------------------------------------------------    -------------------
+
+
+
+

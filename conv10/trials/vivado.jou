@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Dec 12 23:26:16 2019
+# Process ID: 4361
+# Current directory: /home/gsaied/Desktop/verilog_rtl/conv10/part2
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/verilog_rtl/conv10/part2/vivado.log
+# Journal file: /home/gsaied/Desktop/verilog_rtl/conv10/part2/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+vi rom.sv 
+ls
+ls
+source synth.tcl 
+vi synth.tcl 
+source synth.tcl 
