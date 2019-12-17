@@ -1,7 +1,0 @@
-Running: xsim.dir/conv1_behav/xsimk -simmode gui -wdb conv1_behav.wdb -simrunnum 0 -socket 46763
-Design successfully loaded
-Design Loading Memory Usage: 45040 KB (Peak: 45048 KB)
-Design Loading CPU Usage: 20 ms
-Simulation completed
-Simulation Memory Usage: 131136 KB (Peak: 192312 KB)
-Simulation CPU Usage: 540 ms
