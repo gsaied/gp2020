@@ -1,6 +1,6 @@
 /* FIRST IMPLEMENTATION OF A CONV LAYER
 * LAYER: CONV1 
-* INPUT SIZE: 256*256*3
+* INPUT SIZE: 258*258*3
 * OUTPUT SIZE: 128*128*64
 * STRIDE: 2
 * PAD:	1
@@ -8,26 +8,25 @@
 */
 
 module conv1#(
+parameter WOUT = 128 ,
 parameter DSP_NO = 64 ,
 parameter STRIDE = 2 ,
-parameter W_IN = 256 ,
-parameter H_IN = 256 ,
+parameter W_IN = 258 ,
 parameter WIDTH = 16 ,
 parameter CHIN = 3 , 
 parameter KERNEL_DIM = 3 ,
-parameter CHOUT = 64  ,
-parameter WINDOWS=CHIN*(((W_IN-1)/STRIDE)**2),
-parameter CONV1_TIMER = $clog2(WINDOWS)
+parameter CHOUT = 64   
 )       
 	(
 	input clk,
 	input rst,
 	input conv1_en,
+	output reg conv1_sample,
 	output reg conv1_end , 
 	output reg [15:0] ofm [0:DSP_NO-1]
 
 );
-wire [WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
+wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_rom b1 (
 	.bias_mem(biasing_wire)
 );
@@ -89,8 +88,13 @@ always @(posedge clk or negedge rst) begin
 		ref_address<= 18'b0 ; 
 	end
 	else if (rom_clr_pulse) begin
+		if (ref_address[7:1] == 7'b1) begin
+			ref_address <= ref_address+STRIDE+256 ; 
+		end
+		else begin
 		ref_address<= ref_address+STRIDE;//makes sense; for window has ended here, a new address should be generated
 		img_rom_address<= ref_address+STRIDE ; 
+		end
 	end
 	else begin
 		case (img_addr_counter) 
@@ -158,16 +162,16 @@ end
 */
 always @(*) begin
 	for (int i = 0 ; i < DSP_NO ; i++) begin
-		ofmw2[i]  = ofmw[i] + {16'b0,biasing_wire[i]}  ; //bias + CHECK IF THIS LOGIC IS CORRECT
+		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
 	end
 end
 always@(posedge clk) begin
 	if(!conv1_end && conv1_en && clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
-			if(ofmw[i][31] == 1'b1 ) 
+			if(ofmw2[i][31] == 1'b1 ) 
 				ofm[i] <= 16'b0 ;
 			else
-				ofm[i] <= ofmw2[i][31:16];
+				ofm[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
 		end
 	end
 end
@@ -201,17 +205,20 @@ endgenerate//#FILTERS instances of macs
 //CHECK IF THE LAYER HAS FINISHED
 /////////////////////////////////
 
-reg [$clog2(CHOUT**2)-1:0] conv1_timer ;// will be changed
+reg [$clog2(WOUT**2)-1:0] conv1_timer ;
 always @(posedge clk or negedge rst) begin//will be modified to use clk_sampling as the counting signal
 	if (!rst) begin
 		conv1_timer<= 0 ;
 		conv1_end <= 1'b0 ; 
 	end
-	else if (conv1_timer == CHOUT**2-1)
+	else if (conv1_timer == WOUT**2-1)
 		conv1_end <= 1'b1 ;//LAYER_1 HAS FINISHED
 	else if (clr_pulse) 
 		conv1_timer<= conv1_timer+1 ; 
 	else 
 		conv1_timer<= conv1_timer; 
 end
+always @(posedge clk) begin
+   conv1_sample <= clr_pulse ; 
+end 
 endmodule

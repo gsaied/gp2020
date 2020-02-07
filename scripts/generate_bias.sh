@@ -1,7 +1,7 @@
 #!/bin/bash
 count=0;
 count2=0
-WIDTH=16
+WIDTH=32
 echo -e "Enter number of filters\n" ;
 read DSP_NO
 if [  "$1"  == "unix" ] || [[ -z $1 ]] ; then
@@ -16,11 +16,11 @@ if [  -n biasing.sv ] ; then
 fi
 echo "
 module biasing_rom (
-	output [15:0] bias_mem [0:"$DSP_NO"-1]
+	output ["$WIDTH"-1:0] bias_mem [0:"$DSP_NO"-1]
 );
 ">> biasing.sv
 cat bias.mem | while read LINE; do
-	echo "reg ["$WIDTH"-1:0] bias_reg_"$count" = 16'b$LINE;" >> biasing.sv
+	echo "reg ["$WIDTH"-1:0] bias_reg_"$count" = 32'b$LINE;" >> biasing.sv
 	((count++));
 done
 cat bias.mem | while read LINE ; do

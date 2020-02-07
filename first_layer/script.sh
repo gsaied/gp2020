@@ -1,6 +1,8 @@
 #!/bin/bash
 	find *.mem | grep -v img | grep -v bias | grep -v weights |  while read LINE ; do rm -rf $LINE ; done
 	rm -rf rom.sv
+dos2unix weights.mem;
+count=0 
 file_count=1
 file=""
 if [[ -n $1 ]] && [[ -n $2 ]] && [[ -n $3 ]] ; then
@@ -63,6 +65,10 @@ cat decl.sv >> rom.sv
 cat readmem.sv >> rom.sv
 cat always.sv >> rom.sv
 echo "endmodule" >> rom.sv
+let "target= 2**$address" ;
 rm -rf always.sv decl.sv readmem.sv
-find *.mem | grep -v bias | grep -v img | grep -v weights |  while read LINE ; do cat weights.mem >> $LINE ; done
-
+#find *.mem | grep -v bias | grep -v img | grep -v weights |  while read LINE ; do
+#for (( c = 0 ; c < $target-$limit ; c++)) ; do
+#	echo "0000000000000000" >>$LINE ;
+#done
+#done

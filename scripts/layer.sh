@@ -7,11 +7,15 @@ echo -e "Enter weights Width/Height \n" ;
 read KERNEL_DIM ; 
 echo -e "Enter output channels\n" ; 
 read DSP_NO ; 
+echo -e "Enter output width/height\n" ; 
+read WOUT ; 
+
 echo -e "Enter Layer name, i.e "$layer_name"\n" ; 
 read layer_name ; 
 touch "$layer_name".sv ; 
 echo "
 module "$layer_name" #(
+	parameter WOUT = "$WOUT",
 	parameter DSP_NO = "$DSP_NO" ,
 	parameter W_IN = "$W_IN" ,
 	parameter WIDTH = 16 ,
@@ -22,7 +26,7 @@ module "$layer_name" #(
 	input clk,
 	input rst,
 	input "$layer_name"_en,
-	input [15:0] ifm,
+	input [WIDTH-1:0] ifm,
 	output reg "$layer_name"_end,
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
@@ -127,13 +131,13 @@ end
 ///////////////////////////////
 //CHECK FOR LAYER END//////////
 ///////////////////////////////
-reg [\$clog2(DSP_NO**2)-1:0] "$layer_name"_timer ;
+reg [\$clog2(WOUT**2)-1:0] "$layer_name"_timer ;
 always @(posedge clk or negedge rst) begin
 	if (!rst) begin
 		"$layer_name"_timer<= 0 ;
 		"$layer_name"_end <= 1'b0 ;
 	end
-	else if ("$layer_name"_timer == DSP_NO**2-1)
+	else if ("$layer_name"_timer == WOUT**2-1)
 		"$layer_name"_end <= 1'b1 ;//LAYER HAS FINISHED
 	else
 		"$layer_name"_timer<= "$layer_name"_timer+1 ;
