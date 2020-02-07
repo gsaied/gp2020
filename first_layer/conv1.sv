@@ -82,14 +82,25 @@ always @(posedge clk or negedge rst) begin
 	else 
 		img_addr_counter <= img_addr_counter+1 ;
 end
+reg [7:0] row_end ;
+always @(posedge clk or negedge rst) begin
+	if (!rst)
+		row_end <= 0 ; 
+	else if (rom_clr_pulse) 
+		row_end <= row_end +1 ; 
+	else if (row_end == 128)
+		row_end <= 0 ; 
+
+end
 always @(posedge clk or negedge rst) begin
 	if(!rst) begin
 		img_rom_address<=18'b0; 
 		ref_address<= 18'b0 ; 
 	end
 	else if (rom_clr_pulse) begin
-		if (ref_address[7:1] == 7'b1) begin
-			ref_address <= ref_address+STRIDE+256 ; 
+		if (row_end == 127) begin
+			ref_address <= ref_address+2*STRIDE+258 ; 
+			img_rom_address<= ref_address+2*STRIDE+258 ; 
 		end
 		else begin
 		ref_address<= ref_address+STRIDE;//makes sense; for window has ended here, a new address should be generated

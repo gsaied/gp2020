@@ -27,7 +27,7 @@ module fire2_squeeze_3 #(
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
 
-wire [WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
+wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_rom b7 (
 	.bias_mem(biasing_wire)
 );
@@ -110,7 +110,7 @@ endgenerate
 /////////////////////////////////
 always @(*) begin
 	for (int i = 0 ; i < DSP_NO ; i++) begin
-		ofmw2[i]  = ofmw[i] + {biasing_wire[i],16'b0}  ; //bias + CHECK IF THIS LOGIC IS CORRECT
+		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ; //bias + CHECK IF THIS LOGIC IS CORRECT
 	end
 end
 always@(posedge clk_sampling) begin

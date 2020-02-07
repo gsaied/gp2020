@@ -10,7 +10,7 @@ read DSP_NO ;
 echo -e "Enter output width/height\n" ; 
 read WOUT ; 
 
-echo -e "Enter Layer name, i.e "$layer_name"\n" ; 
+echo -e "Enter Layer name" ; 
 read layer_name ; 
 touch "$layer_name".sv ; 
 echo "
@@ -28,6 +28,7 @@ module "$layer_name" #(
 	input "$layer_name"_en,
 	input [WIDTH-1:0] ifm,
 	output reg "$layer_name"_end,
+	output reg "$layer_name"_sample,
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
 
@@ -141,6 +142,9 @@ always @(posedge clk or negedge rst) begin
 		"$layer_name"_end <= 1'b1 ;//LAYER HAS FINISHED
 	else
 		"$layer_name"_timer<= "$layer_name"_timer+1 ;
+end
+always @(posedge clk) begin
+	"$layer_name"_sample <= clr_pulse ; 
 end
 endmodule
 

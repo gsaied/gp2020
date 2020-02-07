@@ -1,6 +1,6 @@
 
 module biasing_rom (
-	output [32:0] bias_mem [0:16-1]
+	output [31:0] bias_mem [0:16-1]
 );
 
 reg [32-1:0] bias_reg_0 = 32'b00000000000000000000000000000000;
