@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Fri Feb  7 16:46:24 2020
+| Date         : Sat Feb  8 14:05:03 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.3 LTS
 | Command      : report_timing -file timing.rpt
 | Design       : conv1

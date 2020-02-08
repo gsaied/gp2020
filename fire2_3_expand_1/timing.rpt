@@ -1,0 +1,62 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sat Feb  8 15:20:11 2020
+| Host         : GCS running 64-bit unknown
+| Command      : report_timing -file timing.rpt
+| Design       : fire2_3_expand_1
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 fire2_expand_1_en
+                            (input port)
+  Destination:            ofm_2_reg[10][0]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire2_expand_1_en (IN)
+                         net (fo=0)                   0.000     0.000    fire2_expand_1_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire2_expand_1_en_IBUF_inst/O
+                         net (fo=1913, unplaced)      0.434     0.993    genblk1[10].mac_i/fire2_expand_1_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[10].mac_i/ofm_2[10][1]_i_19/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[10].mac_i/ofm_2[10][1]_i_19_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[10].mac_i/ofm_2_reg[10][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[10].mac_i/ofm_2_reg[10][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[10].mac_i/ofm_2_reg[10][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[10].mac_i/ofm_2_reg[10][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[10].mac_i/ofm_2_reg[10][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[10].mac_i/ofm_2_reg[10][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[10].mac_i/ofm_2_reg[10][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[10].mac_i/ofm_2_reg[10][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[10].mac_i/ofm_2_reg[10][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[10].mac_i/ofm_2_reg[10][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[10].mac_i/ofm_2_reg[10][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[10].mac_i/ofm_2_reg[10][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[10].mac_i/ofm_2_reg[10][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[10].mac_i/ofm_2_reg[10][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[10].mac_i/ofm_2_reg[10][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_234_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[10][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[10][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[10][0]/R
+  -------------------------------------------------------------------    -------------------
+
+
+
+

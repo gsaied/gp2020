@@ -216,13 +216,13 @@ endgenerate//#FILTERS instances of macs
 //CHECK IF THE LAYER HAS FINISHED
 /////////////////////////////////
 
-reg [$clog2(WOUT**2)-1:0] conv1_timer ;
+reg [$clog2(WOUT**2):0] conv1_timer ;
 always @(posedge clk or negedge rst) begin//will be modified to use clk_sampling as the counting signal
 	if (!rst) begin
 		conv1_timer<= 0 ;
 		conv1_end <= 1'b0 ; 
 	end
-	else if (conv1_timer == WOUT**2-1)
+	else if (conv1_timer == WOUT**2+1)
 		conv1_end <= 1'b1 ;//LAYER_1 HAS FINISHED
 	else if (clr_pulse) 
 		conv1_timer<= conv1_timer+1 ; 
