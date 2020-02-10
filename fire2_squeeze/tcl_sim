@@ -1,0 +1,10 @@
+add_force {/fire2_squeeze_3/rst} -radix hex {1 0ns}
+add_force {/fire2_squeeze_3/clk} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+add_force {/fire2_squeeze_3/fire2_squeeze_3_en} -radix hex {1 0ns}
+add_force {/fire2_squeeze_3/ifm} -radix hex {11 0ns}
+run 10 ns 
+add_force {/fire2_squeeze_3/rst} -radix hex {0 0ns}
+run 10 ns
+add_force {/fire2_squeeze_3/rst} -radix hex {1 0ns}
+run 10 ns
+
