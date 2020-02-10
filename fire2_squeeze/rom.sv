@@ -7,6 +7,7 @@
 	parameter NUM=16)
 	(
 		input [ADDR-1:0] address ,
+		input clk,
 		output reg [WIDTH-1:0] rom_out [0:NUM-1]
 	);	
 	
@@ -94,4 +95,5 @@ rom_out[12] <= rom_13[address] ;
 rom_out[13] <= rom_14[address] ;
 rom_out[14] <= rom_15[address] ;
 rom_out[15] <= rom_16[address] ;
+end
 endmodule

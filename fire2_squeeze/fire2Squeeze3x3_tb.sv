@@ -38,19 +38,27 @@ reg [15:0] ifm;
 wire fire2_squeeze_3_end;
 wire [15:0] ofm [0:DSP_NO-1];
 reg  [15:0] reg_ofm [0:DSP_NO-1]; 
-int fw,fr,i,k,scan;
 reg clr_pulse = fire2_squeeze_3.clr_pulse ; 
-reg q ;
-reg dd ;
-initial begin 
-fr= $fopen("in_fire2.txt","r");
+//
+//
+reg [15:0] python [0:2**22] ; 
+initial begin
+	$readmemb("in_fire2.txt",python) ; 
 end
-always @(posedge clk)
-begin 
-q <= clr_pulse ; 
-scan= $fscanf(fr,"%b\n",ifm); 
-end
-fire2_squeeze_3 fire2_squeeze_3tb(.clk(clk),.rst(rst),.fire2_squeeze_3_en(fire2_squeeze_3_en),.ifm(ifm),.fire2_squeeze_3_end(fire2_squeeze_3_end),.ofm(ofm),.fire2_squeeze_3_sample(clr_pulse));
+int addr ; 
+reg [15:0] python_in ;
+///////////////////////////
+always @(posedge clk ) begin
+	if (!rst || clr_pulse) begin
+		python_in<= 0 ;
+		addr <= 0 ; 
+	end
+	else begin
+		addr<= addr +1 ;
+		python_in<= python[addr] ; 
+	end
+end///////
+fire2_squeeze_3 fire2_squeeze_3tb(.clk(clk),.rst(rst),.fire2_squeeze_3_en(fire2_squeeze_3_en),.ifm(python_in),.fire2_squeeze_3_end(fire2_squeeze_3_end),.ofm(ofm),.fire2_squeeze_3_sample(clr_pulse));
 assign reg_ofm=ofm; 
 
 always begin 
@@ -58,9 +66,6 @@ always begin
 clk= ~clk;
 end
 
-initial begin 
-fw= $fopen("out_fire2.txt","w");
-end
 initial begin 
 clk=0;
 fire2_squeeze_3_en=1;
@@ -70,17 +75,6 @@ rst = 1 ;
 
 end 
 
-always @(posedge q) begin
-
-    if (!fire2_squeeze_3_end ) 
-    begin
-        for (int i=0;i<16;i++)
-             begin
-                $fwrite(fw,"%b\n",reg_ofm[i]);
-                $display("ofm[k]=%b",reg_ofm[i]); 
-             end
-    end
-end
 
 
 endmodule

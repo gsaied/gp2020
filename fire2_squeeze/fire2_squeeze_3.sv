@@ -94,8 +94,8 @@ end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH:0] ofmw [0:DSP_NO-1];
+reg [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
 genvar i ; 
 generate for (i = 0 ; i< CHOUT ; i++) begin
 	mac mac_i (
@@ -119,7 +119,7 @@ end
 always@(posedge clk) begin
 	if(fire2_squeeze_3_en && !fire2_squeeze_3_end && clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
-			if(ofmw2[i][31] == 1'b1 ) 
+			if(ofmw2[i][31] == 1'b1 || ofmw2[i][32] == 1'b1 ) 
 				ofm[i] <= 16'b0 ;
 			else
 				ofm[i] <= {ofmw2[i][31],ofmw2[i][28:14]};

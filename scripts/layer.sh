@@ -32,7 +32,7 @@ module "$layer_name" #(
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
 
-wire [WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
+wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_rom b7 (
 	.bias_mem(biasing_wire)
 );
@@ -49,7 +49,6 @@ rom_array_layer_1 u_2 (
 );
 ///////////////////////////////////
 //this signal is very important to track
-//represents a pulse to clr pin of mac to reset every 27 cycles of clk
 ///////////////////////////////////
 reg clr_pulse ;
 reg rom_clr_pulse;
@@ -116,7 +115,7 @@ endgenerate
 /////////////////////////////////
 always @(*) begin
 	for (int i = 0 ; i < DSP_NO ; i++) begin
-		ofmw2[i]  = ofmw[i] + {biasing_wire[i],16'b0}  ; //bias + CHECK IF THIS LOGIC IS CORRECT
+		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
 	end
 end
 always@(posedge clk) begin
@@ -125,22 +124,22 @@ always@(posedge clk) begin
 			if(ofmw2[i][31] == 1'b1 )
 				ofm[i] <= 16'b0 ;
 			else
-				ofm[i] <= ofmw2[i][23:8] ;//relu
+				ofm[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
 		end
 	end
 end
 ///////////////////////////////
 //CHECK FOR LAYER END//////////
 ///////////////////////////////
-reg [\$clog2(WOUT**2)-1:0] "$layer_name"_timer ;
+reg [\$clog2(WOUT**2):0] "$layer_name"_timer ;
 always @(posedge clk or negedge rst) begin
 	if (!rst) begin
 		"$layer_name"_timer<= 0 ;
 		"$layer_name"_end <= 1'b0 ;
 	end
-	else if ("$layer_name"_timer == WOUT**2-1)
+	else if ("$layer_name"_timer == WOUT**2)
 		"$layer_name"_end <= 1'b1 ;//LAYER HAS FINISHED
-	else
+	else if (clr_pulse)
 		"$layer_name"_timer<= "$layer_name"_timer+1 ;
 end
 always @(posedge clk) begin
