@@ -36,3 +36,5 @@ Run output will be captured here: /home/gsaied/Desktop/old_rtl/fire4_expand3/pro
 report_utilization
 ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
 WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 13 16:31:39 2020...
