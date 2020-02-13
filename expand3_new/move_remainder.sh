@@ -1,7 +1,6 @@
 #!/bin/bash
 file=1
 count=1
-echo -e "Enter layer name, same as bias and weights rom \n" ;
 find *.mem | grep extend | while read ss ; do
 	rm -rf $ss ;
 done

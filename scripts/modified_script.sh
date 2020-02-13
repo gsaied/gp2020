@@ -18,7 +18,7 @@ address=` ./log2.pl "$limit"` ;
 #echo -e "always @(*) begin\n if (rom_en) begin" >> always.sv
 echo "
 	/* verilator lint_off COMBDLY */
-	module rom_array_layer_1 #(
+	module rom_"$layername" #(
 	parameter WIDTH=16,
 	parameter KERNEL="$1",
 	parameter ADDR="$address",

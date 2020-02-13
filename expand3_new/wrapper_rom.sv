@@ -12,7 +12,7 @@ parameter NUM=256)
 wire [WIDTH-1:0] rom1_wire [0:NUM-1]; 
 wire [WIDTH-1:0] rom2_wire [0:NUM-1]; 
 rom_fire6_expand3 u1 (
-	.address(address),
+	.address(address[8:0]),
 	.rom_out(rom1_wire) 
 );
 rom2_fire6_expand3 u2 (

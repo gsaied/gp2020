@@ -3,7 +3,7 @@
 	module rom_fire6_expand3 #(
 	parameter WIDTH=16,
 	parameter KERNEL=3,
-	parameter ADDR=10,
+	parameter ADDR=9,
 	parameter NUM=256)
 	(
 		input [ADDR-1:0] address ,
