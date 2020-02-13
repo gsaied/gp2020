@@ -9,8 +9,7 @@ echo -e "Enter output channels\n" ;
 read DSP_NO ; 
 echo -e "Enter output width/height\n" ; 
 read WOUT ; 
-
-echo -e "Enter Layer name" ; 
+echo -e "Enter Layer name, same as weights rom and biasing" ; 
 read layer_name ; 
 touch "$layer_name".sv ; 
 echo "
@@ -27,13 +26,14 @@ module "$layer_name" #(
 	input rst,
 	input "$layer_name"_en,
 	input [WIDTH-1:0] ifm,
-	output reg "$layer_name"_end,
+	input ram_feedback,
 	output reg "$layer_name"_sample,
+	output "$layer_name"_finish ,
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
-
+reg "$layer_name"_end;
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
-biasing_rom b7 (
+biasing_"$layer_name" b7 (
 	.bias_mem(biasing_wire)
 );
 ///////////////////////////////////
@@ -43,7 +43,7 @@ wire [WIDTH-1:0] kernels [0:DSP_NO-1] ;
 reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ;
 reg [\$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
 //////////////////////////////////
-rom_array_layer_1 u_2 (
+rom_"$layer_name" u_2 (
 	.address(weight_rom_address),
 	.rom_out(kernels)
 );
@@ -59,12 +59,13 @@ always @(posedge clk or negedge rst) begin
 		weight_rom_address<= 0 ;
 	else if (rom_clr_pulse)
 		weight_rom_address<= 0;
-	else begin
+	else if ("$layer_name"_en) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
 always @(posedge clk) begin
-	kernel_regs<=kernels ;
+	if("$layer_name"_en) 
+		kernel_regs<=kernels ;
 end
 ////////////////////////////
 //GENERATION OF CLR PULSE///
@@ -96,8 +97,8 @@ end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH:0] ofmw [0:DSP_NO-1];
+reg [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
 genvar i ;
 generate for (i = 0 ; i< DSP_NO ; i++) begin
 	mac mac_i (
@@ -145,6 +146,7 @@ end
 always @(posedge clk) begin
 	"$layer_name"_sample <= clr_pulse ; 
 end
+assign "$layer_name"_finish= !ram_feedback && "$layer_name"_sample ; 
 endmodule
 
 

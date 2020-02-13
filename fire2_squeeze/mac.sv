@@ -11,8 +11,6 @@ wire signed [32:0] intermed ;
 	always @(posedge clk ) begin
 		if (!rst || clr)
 			mul_out <= 33'b0 ;
-		//else if (clr) 
-		//	mul_out <= 32'b0 ;
 		else
 			mul_out <= intermed ; 
 	end

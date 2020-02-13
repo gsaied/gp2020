@@ -1,10 +1,10 @@
 read_verilog -sv [ glob *.sv ] 
-create_fileset -constrset constr
+#create_fileset -constrset constr
 #uncomment the following 2 lines to get schematic view
-#synth_design -top integ -rtl 
+#synth_design -rtl <TOP>
 #start_gui
 #synth_design -top integ -part xc7vx690t -keep_equivalent_registers
-synth_design -top -part xc7vx690t -constrset constr
+synth_design -top ToP -part xc7vx690t
 #opt_design
 
 report_utilization -file utiliziation.rpt
