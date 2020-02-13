@@ -69,7 +69,7 @@ always @(posedge clk or negedge rst) begin
 		weight_rom_address<= 0 ; 
 	else if (rom_clr_pulse)
 		weight_rom_address<= 0;
-	else begin
+	else if (fire2_expand_1_en || fire3_expand_1_en)begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
@@ -122,8 +122,8 @@ end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH:0] ofmw [0:DSP_NO-1];
+reg [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
 genvar i ; 
 generate for (i = 0 ; i< CHOUT ; i++) begin
 	mac mac_i (
@@ -176,15 +176,15 @@ always @(posedge clk or negedge rst) begin
 		fire3_expand_1_end <= 1'b0 ; 
 	end
 	else if (fire2_expand_1_en) begin
-		if (fire2_expand_1_timer == WOUT**2+1)
+		if (fire2_expand_1_timer == WOUT**2)
 			fire2_expand_1_end <= 1'b1 ;
-		else
+		else if (clr_pulse)
 			fire2_expand_1_timer<= fire2_expand_1_timer+1 ; 
 		end
 	else begin
-		if (fire3_expand_1_timer == WOUT**2+1)
+		if (fire3_expand_1_timer == WOUT**2)
 			fire3_expand_1_end <= 1'b1 ;
-		else
+		else if (clr_pulse)
 			fire3_expand_1_timer<= fire3_expand_1_timer+1 ; 
 		end
 end

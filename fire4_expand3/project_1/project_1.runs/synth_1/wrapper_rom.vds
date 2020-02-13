@@ -1,0 +1,926 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Feb 13 16:06:42 2020
+# Process ID: 22617
+# Current directory: /home/gsaied/Desktop/old_rtl/fire4_expand3/project_1/project_1.runs/synth_1
+# Command line: vivado -log wrapper_rom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source wrapper_rom.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/fire4_expand3/project_1/project_1.runs/synth_1/wrapper_rom.vds
+# Journal file: /home/gsaied/Desktop/old_rtl/fire4_expand3/project_1/project_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source wrapper_rom.tcl -notrace
+Command: synth_design -top wrapper_rom -part xc7vx690tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22649 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1425.996 ; gain = 29.000 ; free physical = 960 ; free virtual = 5302
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'wrapper_rom' [/home/gsaied/Desktop/old_rtl/fire4_expand3/wrapper_rom.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 3 - type: integer 
+	Parameter ADDR bound to: 9 - type: integer 
+	Parameter NUM bound to: 128 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'rom_fire4_expand3' [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 3 - type: integer 
+	Parameter ADDR bound to: 8 - type: integer 
+	Parameter NUM bound to: 128 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:16]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:19]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:22]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:25]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:28]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:31]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:34]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:37]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:40]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:43]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:46]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:49]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:52]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:55]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:58]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:61]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:64]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:67]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:70]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:73]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:76]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:79]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:82]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:85]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:88]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:91]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:94]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:97]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:100]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:103]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:106]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:109]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:112]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:115]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:118]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:121]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:124]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:127]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:130]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:133]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:136]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:139]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:142]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:145]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:148]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:151]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:154]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:157]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:160]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:163]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:166]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:169]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:172]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:175]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:178]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:181]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:184]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:187]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:190]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:193]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:196]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:199]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:202]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:205]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:208]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:211]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:214]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:217]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:220]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:223]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:226]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:229]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:232]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:235]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:238]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:241]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:244]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:247]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:250]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:253]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:256]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:259]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:262]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:265]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:268]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:271]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:274]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:277]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:280]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:283]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:286]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:289]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:292]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:295]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:298]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:301]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:304]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:307]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:310]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:313]
+INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_1.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:399]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_2.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:400]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_3.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:401]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_4.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:402]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_5.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:403]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_6.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:404]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_7.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:405]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_8.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:406]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_9.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:407]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_10.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:408]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_11.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:409]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_12.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:410]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_13.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:411]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_14.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:412]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_15.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:413]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_16.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:414]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_17.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:415]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_18.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:416]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_19.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:417]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_20.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:418]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_21.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:419]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_22.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:420]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_23.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:421]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_24.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:422]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_25.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:423]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_26.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:424]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_27.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:425]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_28.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:426]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_29.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:427]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_30.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:428]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_31.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:429]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_32.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:430]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_33.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:431]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_34.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:432]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_35.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:433]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_36.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:434]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_37.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:435]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_38.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:436]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_39.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:437]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_40.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:438]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_41.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:439]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_42.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:440]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_43.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:441]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_44.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:442]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_45.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:443]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_46.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:444]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_47.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:445]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_48.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:446]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_49.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:447]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_50.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:448]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_51.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:449]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_52.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:450]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_53.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:451]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_54.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:452]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_55.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:453]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_56.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:454]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_57.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:455]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_58.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:456]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_59.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:457]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_60.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:458]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_61.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:459]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_62.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:460]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_63.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:461]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_64.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:462]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_65.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:463]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_66.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:464]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_67.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:465]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_68.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:466]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_69.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:467]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_70.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:468]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_71.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:469]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_72.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:470]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_73.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:471]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_74.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:472]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_75.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:473]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_76.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:474]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_77.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:475]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_78.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:476]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_79.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:477]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_80.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:478]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_81.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:479]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_82.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:480]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_83.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:481]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_84.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:482]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_85.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:483]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_86.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:484]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_87.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:485]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_88.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:486]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_89.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:487]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_90.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:488]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_91.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:489]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_92.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:490]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_93.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:491]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_94.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:492]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_95.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:493]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_96.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:494]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_97.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:495]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_98.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:496]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_99.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:497]
+INFO: [Synth 8-3876] $readmem data file 'file_fire4_expand3_100.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:498]
+INFO: [Common 17-14] Message 'Synth 8-3876' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'rom_fire4_expand3' (1#1) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'rom2_fire4_expand3' [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom2_fire4_expand3.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 3 - type: integer 
+	Parameter ADDR bound to: 5 - type: integer 
+	Parameter NUM bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rom2_fire4_expand3' (2#1) [/home/gsaied/Desktop/old_rtl/fire4_expand3/rom2_fire4_expand3.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'wrapper_rom' (3#1) [/home/gsaied/Desktop/old_rtl/fire4_expand3/wrapper_rom.sv:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1496.746 ; gain = 99.750 ; free physical = 928 ; free virtual = 5271
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1496.746 ; gain = 99.750 ; free physical = 935 ; free virtual = 5278
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1504.750 ; gain = 107.754 ; free physical = 935 ; free virtual = 5278
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1706.828 ; gain = 309.832 ; free physical = 710 ; free virtual = 5054
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 128   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module wrapper_rom 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 128   
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:11:52 ; elapsed = 00:12:09 . Memory (MB): peak = 2535.945 ; gain = 1138.949 ; free physical = 787 ; free virtual = 4926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------+------------+---------------+----------------+
+|Module Name        | RTL Object | Depth x Width | Implemented As | 
++-------------------+------------+---------------+----------------+
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom2_fire4_expand3 | p_0_out    | 32x16         | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|rom_fire4_expand3  | p_0_out    | 256x16        | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
+|wrapper_rom        | p_0_out    | 32x16         | LUT            | 
++-------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:11:57 ; elapsed = 00:12:14 . Memory (MB): peak = 2535.945 ; gain = 1138.949 ; free physical = 789 ; free virtual = 4927
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:12:16 ; elapsed = 00:12:33 . Memory (MB): peak = 2544.969 ; gain = 1147.973 ; free physical = 899 ; free virtual = 5037
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:12:18 ; elapsed = 00:12:35 . Memory (MB): peak = 2544.969 ; gain = 1147.973 ; free physical = 896 ; free virtual = 5034
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:12:18 ; elapsed = 00:12:35 . Memory (MB): peak = 2544.969 ; gain = 1147.973 ; free physical = 896 ; free virtual = 5034
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:12:18 ; elapsed = 00:12:36 . Memory (MB): peak = 2544.969 ; gain = 1147.973 ; free physical = 896 ; free virtual = 5034
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:12:18 ; elapsed = 00:12:36 . Memory (MB): peak = 2544.969 ; gain = 1147.973 ; free physical = 896 ; free virtual = 5034
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:12:24 ; elapsed = 00:12:42 . Memory (MB): peak = 2544.969 ; gain = 1147.973 ; free physical = 897 ; free virtual = 5036
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:12:24 ; elapsed = 00:12:42 . Memory (MB): peak = 2544.969 ; gain = 1147.973 ; free physical = 897 ; free virtual = 5036
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT3  |  1692|
+|2     |LUT4  |     2|
+|3     |LUT5  |  2376|
+|4     |LUT6  |  6263|
+|5     |MUXF7 |  2870|
+|6     |MUXF8 |  1262|
+|7     |IBUF  |     9|
+|8     |OBUF  |  2048|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       | 16522|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:12:24 ; elapsed = 00:12:42 . Memory (MB): peak = 2544.969 ; gain = 1147.973 ; free physical = 897 ; free virtual = 5036
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:12:24 ; elapsed = 00:12:42 . Memory (MB): peak = 2544.969 ; gain = 1147.973 ; free physical = 898 ; free virtual = 5036
+Synthesis Optimization Complete : Time (s): cpu = 00:12:24 ; elapsed = 00:12:42 . Memory (MB): peak = 2544.977 ; gain = 1147.973 ; free physical = 898 ; free virtual = 5036
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4132 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'wrapper_rom' is not ideal for floorplanning, since the cellview 'wrapper_rom' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2568.980 ; gain = 0.000 ; free physical = 820 ; free virtual = 4959
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+217 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:12:34 ; elapsed = 00:12:50 . Memory (MB): peak = 2568.980 ; gain = 1179.988 ; free physical = 888 ; free virtual = 5026
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.980 ; gain = 0.000 ; free physical = 888 ; free virtual = 5026
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/gsaied/Desktop/old_rtl/fire4_expand3/project_1/project_1.runs/synth_1/wrapper_rom.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file wrapper_rom_utilization_synth.rpt -pb wrapper_rom_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 13 16:19:50 2020...
