@@ -1,5 +1,4 @@
-
-	/* verilator lint_off COMBDLY */
+/* verilator lint_off COMBDLY */
 	module rom_2 #(
 	parameter WIDTH=16,
 	parameter KERNEL=1,

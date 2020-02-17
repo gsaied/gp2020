@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/biasing_2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module biasing_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/biasing_3.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module biasing_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/fire2_expand_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fire2_3_expand_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_3.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/fire2_3Expand1x1_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fire2_3Expand1x1_tb

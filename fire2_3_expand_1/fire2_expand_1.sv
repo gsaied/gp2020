@@ -23,12 +23,15 @@ module fire2_3_expand_1 #(
 	input fire3_expand_1_en,
 	input [15:0] ifm_2,
 	input [15:0] ifm_3,
-	output reg fire2_expand_1_end,
-	output reg fire3_expand_1_end,
+	input ram_feedback,
+	output fire2_expand_1_finish,
+	output fire3_expand_1_finish,
 	output reg fire2_expand_1_sample,
 	output reg [WIDTH-1:0] ofm_2 [0:DSP_NO-1],
 	output reg [WIDTH-1:0] ofm_3 [0:DSP_NO-1]
 );
+	reg fire2_expand_1_end;
+	reg fire3_expand_1_end;
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
 reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
@@ -56,6 +59,10 @@ rom_3 u_3 (
 	.address(weight_rom_address),
 	.rom_out(kernels_3)
 );
+reg layer_en_reg ;
+always @(posedge clk) begin
+    layer_en_reg <= fire2_expand_1_en || fire3_expand_1_en ; 
+end 
 ///////////////////////////////////
 //this signal is very important to track
 //represents a pulse to clr pin of mac 
@@ -102,7 +109,7 @@ always @(posedge clk or negedge rst) begin
 		rom_clr_pulse <= 1'b0 ; 
 		clr_counter <= 0 ;
 	end
-	else if (!(fire2_expand_1_end && fire3_expand_1_end)) begin
+	else if (!(fire2_expand_1_end && fire3_expand_1_end) && (fire3_expand_1_en || fire2_expand_1_en)) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ; 
 			clr_counter <= clr_counter+1 ;
@@ -130,6 +137,7 @@ generate for (i = 0 ; i< CHOUT ; i++) begin
 		.clr(clr_pulse),
 		.clk(clk),
 		.rst(rst),
+		.layer_en(layer_en_reg),
 		.pix(ifm),
 		.mul_out(ofmw[i]),
 		.ker(kernel_regs[i])
@@ -191,5 +199,7 @@ end
 always @(posedge clk) begin
 	fire2_expand_1_sample <= clr_pulse ; 
 end 
+assign fire2_expand_1_finish = fire2_expand_1_end && !ram_feedback ;
+assign fire3_expand_1_finish = fire2_expand_1_end && !ram_feedback ;
 endmodule
 

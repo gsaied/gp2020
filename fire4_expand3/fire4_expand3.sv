@@ -132,7 +132,7 @@ end
 always @(posedge clk) begin
 	fire4_expand3_sample <= clr_pulse ; 
 end
-assign fire4_expand3_finish= !ram_feedback && fire4_expand3_sample ; 
+assign fire4_expand3_finish= !ram_feedback && fire4_expand3_end ; 
 endmodule
 
 

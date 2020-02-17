@@ -1,0 +1,7 @@
+Running: xsim.dir/fire2_3Expand1x1_tb_behav/xsimk -simmode gui -wdb fire2_3Expand1x1_tb_behav.wdb -simrunnum 0 -socket 48003
+Design successfully loaded
+Design Loading Memory Usage: 60592 KB (Peak: 60600 KB)
+Design Loading CPU Usage: 60 ms
+Simulation completed
+Simulation Memory Usage: 246112 KB (Peak: 246112 KB)
+Simulation CPU Usage: 570 ms

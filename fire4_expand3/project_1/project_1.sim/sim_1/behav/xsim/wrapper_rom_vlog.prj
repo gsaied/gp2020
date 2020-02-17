@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../rom2_fire4_expand3.sv" \
+"../../../../../rom_fire4_expand3.sv" \
+"../../../../../wrapper_rom.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
