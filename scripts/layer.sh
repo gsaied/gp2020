@@ -151,7 +151,7 @@ end
 always @(posedge clk) begin
 	"$layer_name"_sample <= clr_pulse ; 
 end
-assign "$layer_name"_finish= !ram_feedback && "$layer_name"_sample ; 
+assign "$layer_name"_finish= !ram_feedback && "$layer_name"_end ; 
 endmodule
 
 

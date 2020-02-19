@@ -9,7 +9,6 @@ echo -e "Enter output channels\n" ;
 read DSP_NO ; 
 echo -e "Enter output width/height\n" ; 
 read WOUT ; 
-
 echo -e "Enter Layer name, same as weights rom and biasing" ; 
 read layer_name ; 
 touch "$layer_name".sv ; 
@@ -68,6 +67,10 @@ always @(posedge clk) begin
 	if("$layer_name"_en) 
 		kernel_regs<=kernels ;
 end
+reg layer_en_reg ;
+always @(posedge clk) begin
+    layer_en_reg <= "$layer_name"_en  ; 
+end 
 ////////////////////////////
 //GENERATION OF CLR PULSE///
 ////////////////////////////
@@ -78,7 +81,7 @@ always @(posedge clk or negedge rst) begin
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
-	else if (!"$layer_name"_end) begin
+	else if (!"$layer_name"_end && "$layer_name"_en) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
@@ -107,6 +110,7 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 		.clk(clk),
 		.rst(rst),
 		.pix(ifm),
+		.layer_en(layer_en_reg);
 		.mul_out(ofmw[i]),
 		.ker(kernel_regs[i])
 	);
@@ -147,7 +151,7 @@ end
 always @(posedge clk) begin
 	"$layer_name"_sample <= clr_pulse ; 
 end
-assign "$layer_name"_finish= !ram_feedback && "$layer_name"_sample ; 
+assign "$layer_name"_finish= !ram_feedback && "$layer_name"_end ; 
 endmodule
 
 

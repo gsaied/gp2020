@@ -1,0 +1,2270 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Feb 19 13:39:30 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.3 LTS
+| Command      : report_timing -max_paths 50 -file timing.rpt
+| Design       : fire4_5_expand_3
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 ram_feedback
+                            (input port)
+  Destination:            fire5_expand_3_finish
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.270ns  (logic 2.401ns (73.428%)  route 0.869ns (26.572%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  ram_feedback (IN)
+                         net (fo=0)                   0.000     0.000    ram_feedback
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 f  ram_feedback_IBUF_inst/O
+                         net (fo=2, unplaced)         0.434     0.993    ram_feedback_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.047     1.040 r  fire5_expand_3_finish_OBUF_inst_i_1/O
+                         net (fo=1, unplaced)         0.434     1.474    fire5_expand_3_finish_OBUF
+                         OBUF (Prop_obuf_I_O)         1.795     3.270 r  fire5_expand_3_finish_OBUF_inst/O
+                         net (fo=0)                   0.000     3.270    fire5_expand_3_finish
+                                                                      r  fire5_expand_3_finish (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ram_feedback
+                            (input port)
+  Destination:            fire4_expand_3_finish
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.266ns  (logic 2.397ns (73.396%)  route 0.869ns (26.604%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  ram_feedback (IN)
+                         net (fo=0)                   0.000     0.000    ram_feedback
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 f  ram_feedback_IBUF_inst/O
+                         net (fo=2, unplaced)         0.434     0.993    ram_feedback_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  fire4_expand_3_finish_OBUF_inst_i_1/O
+                         net (fo=1, unplaced)         0.434     1.470    fire4_expand_3_finish_OBUF
+                         OBUF (Prop_obuf_I_O)         1.795     3.266 r  fire4_expand_3_finish_OBUF_inst/O
+                         net (fo=0)                   0.000     3.266    fire4_expand_3_finish
+                                                                      r  fire4_expand_3_finish (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][0]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][0]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][10]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][10]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][11]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][11]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][12]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][12]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][13]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][13]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][14]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][14]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][15]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][15]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][1]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][1]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][2]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][2]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][3]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][3]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][4]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][4]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][5]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][5]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][6]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][6]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][7]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][7]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][8]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][8]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[106][9]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[106].mac_i/fire4_expand_3_en_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[106].mac_i/ofm_3[106][1]_i_8/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[106].mac_i/ofm_3[106][1]_i_8_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[106].mac_i/ofm_3_reg[106][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[106].mac_i/ofm_3_reg[106][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[106].mac_i/ofm_3_reg[106][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[106].mac_i/ofm_3_reg[106][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[106].mac_i/ofm_3_reg[106][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[106].mac_i/ofm_3_reg[106][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[106].mac_i/ofm_3_reg[106][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[106].mac_i/ofm_3_reg[106][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[106].mac_i/ofm_3_reg[106][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[106].mac_i/ofm_3_reg[106][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[106].mac_i/ofm_3_reg[106][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[106].mac_i/ofm_3_reg[106][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_298_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[106][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[106][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[106][9]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][0]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][0]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][10]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][10]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][11]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][11]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][12]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][12]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][13]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][13]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][14]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][14]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][15]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][15]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][1]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][1]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][2]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][2]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][3]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][3]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][4]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][4]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][5]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][5]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][6]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][6]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][7]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][7]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][8]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][8]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[110][9]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[110].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[110].mac_i/ofm_2[110][1]_i_10/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[110].mac_i/ofm_2[110][1]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[110].mac_i/ofm_2_reg[110][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[110].mac_i/ofm_2_reg[110][1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[110].mac_i/ofm_2_reg[110][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[110].mac_i/ofm_2_reg[110][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[110].mac_i/ofm_2_reg[110][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[110].mac_i/ofm_2_reg[110][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[110].mac_i/ofm_2_reg[110][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[110].mac_i/ofm_2_reg[110][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[110].mac_i/ofm_2_reg[110][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[110].mac_i/ofm_2_reg[110][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[110].mac_i/ofm_2_reg[110][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[110].mac_i/ofm_2_reg[110][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_290_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[110][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[110][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[110][9]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][0]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][0]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][10]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][10]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][11]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][11]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][12]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][12]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][13]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][13]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][14]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][14]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][15]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][15]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][1]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][1]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][2]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][2]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][3]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][3]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][4]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][4]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][5]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][5]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][6]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][6]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][7]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][7]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][8]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][8]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire4_expand_3_en
+                            (input port)
+  Destination:            ofm_2_reg[115][9]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.535ns  (logic 1.421ns (56.076%)  route 1.113ns (43.924%))
+  Logic Levels:           11  (CARRY4=8 IBUF=1 LUT2=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  fire4_expand_3_en (IN)
+                         net (fo=0)                   0.000     0.000    fire4_expand_3_en
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  fire4_expand_3_en_IBUF_inst/O
+                         net (fo=3504, unplaced)      0.434     0.993    genblk1[115].mac_i/DI[0]
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  genblk1[115].mac_i/ofm_3[115][1]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.036    genblk1[115].mac_i/ofm_3[115][1]_i_18_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.246     1.282 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.282    genblk1[115].mac_i/ofm_3_reg[115][1]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.332 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     1.332    genblk1[115].mac_i/ofm_3_reg[115][1]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.382 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.382    genblk1[115].mac_i/ofm_3_reg[115][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.432 r  genblk1[115].mac_i/ofm_3_reg[115][1]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.432    genblk1[115].mac_i/ofm_3_reg[115][1]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.482 r  genblk1[115].mac_i/ofm_3_reg[115][5]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.482    genblk1[115].mac_i/ofm_3_reg[115][5]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.532 r  genblk1[115].mac_i/ofm_3_reg[115][9]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.532    genblk1[115].mac_i/ofm_3_reg[115][9]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     1.582 r  genblk1[115].mac_i/ofm_3_reg[115][13]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.582    genblk1[115].mac_i/ofm_3_reg[115][13]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.154     1.736 r  genblk1[115].mac_i/ofm_3_reg[115][15]_i_3/O[3]
+                         net (fo=6, unplaced)         0.285     2.021    p_280_out[15]
+                         LUT5 (Prop_lut5_I4_O)        0.120     2.141 r  ofm_2[115][15]_i_1/O
+                         net (fo=16, unplaced)        0.394     2.535    ofm_2[115][15]_i_1_n_0
+                         FDRE                                         r  ofm_2_reg[115][9]/R
+  -------------------------------------------------------------------    -------------------
+
+
+
+

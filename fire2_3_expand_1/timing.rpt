@@ -1,10 +1,10 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Mon Feb 17 21:16:36 2020
+| Date         : Tue Feb 18 00:40:28 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.3 LTS
 | Command      : report_timing -file timing.rpt
-| Design       : trial
+| Design       : fire2_3_expand_1
 | Device       : 7vx690t-ffg1157
 | Speed File   : -3  PRODUCTION 1.11 2014-09-11
 ------------------------------------------------------------------------------------
@@ -12,23 +12,26 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 Timing Report
 
 Slack:                    inf
-  Source:                 rom_out_reg[0][0]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            rom_out[0][0]
+  Source:                 ram_feedback
+                            (input port)
+  Destination:            fire2_expand_1_finish
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
-  Logic Levels:           2  (FDRE=1 OBUF=1)
+  Data Path Delay:        3.266ns  (logic 2.397ns (73.396%)  route 0.869ns (26.604%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-                         FDRE                         0.000     0.000 r  rom_out_reg[0][0]/C
-                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  rom_out_reg[0][0]/Q
-                         net (fo=1, unplaced)         0.434     0.660    rom_out[0]_OBUF[0]
-                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  rom_out[0][0]_INST_0/O
-                         net (fo=0)                   0.000     2.534    rom_out[0][0]
-                                                                      r  rom_out[0][0] (OUT)
+                                                      0.000     0.000 f  ram_feedback (IN)
+                         net (fo=0)                   0.000     0.000    ram_feedback
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 f  ram_feedback_IBUF_inst/O
+                         net (fo=1, unplaced)         0.434     0.993    ram_feedback_IBUF
+                         LUT2 (Prop_lut2_I1_O)        0.043     1.036 r  fire2_expand_1_finish_OBUF_inst_i_1/O
+                         net (fo=2, unplaced)         0.434     1.470    fire3_expand_1_finish_OBUF
+                         OBUF (Prop_obuf_I_O)         1.795     3.266 r  fire2_expand_1_finish_OBUF_inst/O
+                         net (fo=0)                   0.000     3.266    fire2_expand_1_finish
+                                                                      r  fire2_expand_1_finish (OUT)
   -------------------------------------------------------------------    -------------------
 
 
