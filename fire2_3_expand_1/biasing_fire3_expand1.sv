@@ -1,5 +1,5 @@
 
-module biasing_3 (
+module biasing_fire3_expand1 (
 	output [32-1:0] bias_mem [0:64-1]
 );
 

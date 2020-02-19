@@ -36,11 +36,11 @@ reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
 reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
 wire [2*WIDTH-1:0] biasing_wire_2 [0:DSP_NO-1] ;
-biasing_2 b7 (
+biasing_fire2_expand1 b7 (
 	.bias_mem(biasing_wire_2)
 );
 wire [2*WIDTH-1:0] biasing_wire_3 [0:DSP_NO-1] ;
-biasing_3 b8 (
+biasing_fire3_expand1 b8 (
 	.bias_mem(biasing_wire_3)
 );
 ///////////////////////////////////
@@ -51,11 +51,11 @@ wire [WIDTH-1:0] kernels_3 [0:DSP_NO-1] ;
 reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ; 
 reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ; 
 //////////////////////////////////
-rom_2 u_2 (
+rom_fire2_expand1 u_2 (
 	.address(weight_rom_address),
 	.rom_out(kernels_2)
 );
-rom_3 u_3 (
+rom_fire3_expand1 u_3 (
 	.address(weight_rom_address),
 	.rom_out(kernels_3)
 );
