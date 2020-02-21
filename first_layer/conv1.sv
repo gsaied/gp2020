@@ -21,8 +21,9 @@ parameter CHOUT = 64
 	input clk,
 	input rst,
 	input conv1_en,
+	input ram_feedback,
 	output reg conv1_sample,
-	output reg conv1_end , 
+	output conv1_finish,
 	output reg [15:0] ofm [0:DSP_NO-1]
 
 );
@@ -31,8 +32,9 @@ biasing_rom b1 (
 	.bias_mem(biasing_wire)
 );
 ////////////////////////////////////
-wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
-reg  [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
+	reg conv1_end ; 
+wire [2*WIDTH:0] ofmw [0:DSP_NO-1];
+reg  [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
 reg [4:0] clr_counter ;
 //reg [$clog2(WINDOWS)-1:0] conv1_timer ; 
 ///////////////////////////////////
@@ -232,4 +234,12 @@ end
 always @(posedge clk) begin
    conv1_sample <= clr_pulse ; 
 end 
+reg ram_feedback_reg ; 
+always @(posedge clk or negedge rst) begin
+        if(!rst) 
+                ram_feedback_reg<= 1'b0 ;
+        else if (ram_feedback) 
+                ram_feedback_reg<= 1'b1;
+end
+assign conv1_finish = conv1_end && !ram_feedback_reg ; 
 endmodule

@@ -129,7 +129,7 @@ always @(posedge clk or negedge rst) begin
 		fire5_squeeze_timer<= 0 ;
 		fire5_squeeze_end <= 1'b0 ;
 	end
-	else if (fire5_squeeze_timer == WOUT**2)
+	else if (fire5_squeeze_timer == WOUT**2+1)
 		fire5_squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire5_squeeze_timer<= fire5_squeeze_timer+1 ;
@@ -138,6 +138,14 @@ always @(posedge clk) begin
 	fire5_squeeze_sample <= clr_pulse ; 
 end
 assign fire5_squeeze_finish= !ram_feedback && fire5_squeeze_end ; 
+reg ram_feedback_reg ; 
+always @(posedge clk or negedge rst) begin
+	if(!rst)
+		ram_feedback_reg<=1'b0 ;
+	else if (ram_feedback) 
+		ram_feedback_reg<= 1'b1 ;
+end
+assign fire5_squeeze_finish= !ram_feedback_reg && fire5_squeeze_end ; 
 endmodule
 
 

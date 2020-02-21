@@ -23,7 +23,8 @@ module fire2_3_expand_1 #(
 	input fire3_expand_1_en,
 	input [15:0] ifm_2,
 	input [15:0] ifm_3,
-	input ram_feedback,
+	input ram_feedback_2,
+	input ram_feedback_3,
 	output fire2_expand_1_finish,
 	output fire3_expand_1_finish,
 	output reg fire2_expand_1_sample,
@@ -184,13 +185,13 @@ always @(posedge clk or negedge rst) begin
 		fire3_expand_1_end <= 1'b0 ; 
 	end
 	else if (fire2_expand_1_en) begin
-		if (fire2_expand_1_timer == WOUT**2)
+		if (fire2_expand_1_timer == WOUT**2+1)
 			fire2_expand_1_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire2_expand_1_timer<= fire2_expand_1_timer+1 ; 
 		end
 	else begin
-		if (fire3_expand_1_timer == WOUT**2)
+		if (fire3_expand_1_timer == WOUT**2+1)
 			fire3_expand_1_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire3_expand_1_timer<= fire3_expand_1_timer+1 ; 
@@ -199,7 +200,20 @@ end
 always @(posedge clk) begin
 	fire2_expand_1_sample <= clr_pulse ; 
 end 
-assign fire2_expand_1_finish = fire2_expand_1_end && !ram_feedback ;
-assign fire3_expand_1_finish = fire2_expand_1_end && !ram_feedback ;
+
+reg ram_feedback_reg_2 ; 
+reg ram_feedback_reg_3 ; 
+always @(posedge clk or negedge rst) begin
+	if(!rst) begin
+		ram_feedback_reg_2<=1'b0 ;
+		ram_feedback_reg_3<=1'b0 ;
+	end
+	else if (ram_feedback_2) 
+		ram_feedback_reg_2<= 1'b1 ;
+	else if (ram_feedback_3) 
+		ram_feedback_reg_3<= 1'b1 ;
+end
+assign fire2_expand_1_finish = fire2_expand_1_end && !ram_feedback_reg_2 ;
+assign fire3_expand_1_finish = fire3_expand_1_end && !ram_feedback_reg_3 ;
 endmodule
 

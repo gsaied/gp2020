@@ -110,7 +110,7 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 		.clk(clk),
 		.rst(rst),
 		.pix(ifm),
-		.layer_en(layer_en_reg);
+		.layer_en(layer_en_reg),
 		.mul_out(ofmw[i]),
 		.ker(kernel_regs[i])
 	);
@@ -143,7 +143,7 @@ always @(posedge clk or negedge rst) begin
 		"$layer_name"_timer<= 0 ;
 		"$layer_name"_end <= 1'b0 ;
 	end
-	else if ("$layer_name"_timer == WOUT**2)
+	else if ("$layer_name"_timer == WOUT**2+1)
 		"$layer_name"_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		"$layer_name"_timer<= "$layer_name"_timer+1 ;
@@ -151,7 +151,14 @@ end
 always @(posedge clk) begin
 	"$layer_name"_sample <= clr_pulse ; 
 end
-assign "$layer_name"_finish= !ram_feedback && "$layer_name"_end ; 
+reg ram_feedback_reg ; 
+always @(posedge clk or negedge rst) begin
+	if (!rst)
+		ram_feedback_reg<= 1'b0 ; 
+	else if (ram_feedback)
+		ram_feedback_reg<= 1'b1 ;
+end
+assign "$layer_name"_finish= !ram_feedback_reg && "$layer_name"_end ; 
 endmodule
 
 

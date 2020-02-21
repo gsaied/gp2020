@@ -23,7 +23,8 @@ module fire4_5_expand_3 #(
 	input fire5_expand_3_en,
 	input [15:0] ifm_2,
 	input [15:0] ifm_3,
-	input ram_feedback,
+	input ram_feedback_4,
+	input ram_feedback_5,
 	output fire4_expand_3_finish,
 	output fire5_expand_3_finish,
 	output reg fire4_expand_3_sample,
@@ -199,7 +200,22 @@ end
 always @(posedge clk) begin
 	fire4_expand_3_sample <= clr_pulse ; 
 end 
-assign fire4_expand_3_finish = fire4_expand_3_end && !ram_feedback ;
-assign fire5_expand_3_finish = fire5_expand_3_end && !ram_feedback ;
+////////////////////////////////
+//LAYER FINISH FLAG LOGIC///////
+////////////////////////////////
+reg ram_feedback_reg_4 ;
+reg ram_feedback_reg_5 ;
+always @(posedge clk or negedge rst) begin
+	if(!rst) begin
+		ram_feedback_reg_4<= 1'b0 ;
+		ram_feedback_reg_5<= 1'b0 ;
+	end
+	else if (ram_feedback_4) 
+		ram_feedback_reg_4<= 1'b1;
+	else if (ram_feedback_5) 
+		ram_feedback_reg_5<= 1'b1;
+end
+assign fire4_expand_3_finish = fire4_expand_3_end && !ram_feedback_reg_4 ;
+assign fire5_expand_3_finish = fire5_expand_3_end && !ram_feedback_reg_5 ;
 endmodule
 

@@ -26,7 +26,7 @@ echo "
 	" >> rom2_"$layername".sv
 echo "initial begin" >> readmem.sv
 count=1
-find *.mem | grep extend | sort -n -t _ -k 3 | while read LINE ; do
+find *.mem | grep extend | sort -n -t _ -k 6 | while read LINE ; do
 	
 	echo "
   	(* rom_style=\"{distributed}\" *)
