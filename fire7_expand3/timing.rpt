@@ -1,0 +1,1263 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sat Feb 22 23:48:49 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_timing -max_paths 50 -file timing.rpt
+| Design       : fire7_expand3
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 fire7_expand3_end_reg/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            fire7_expand3_finish
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.913ns  (logic 2.140ns (73.483%)  route 0.772ns (26.517%))
+  Logic Levels:           3  (FDCE=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  fire7_expand3_end_reg/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  fire7_expand3_end_reg/Q
+                         net (fo=99, unplaced)        0.338     0.564    fire7_expand3_end_reg_n_0
+                         LUT2 (Prop_lut2_I0_O)        0.119     0.683 r  fire7_expand3_finish_OBUF_inst_i_1/O
+                         net (fo=1, unplaced)         0.434     1.117    fire7_expand3_finish_OBUF
+                         OBUF (Prop_obuf_I_O)         1.795     2.913 r  fire7_expand3_finish_OBUF_inst/O
+                         net (fo=0)                   0.000     2.913    fire7_expand3_finish
+                                                                      r  fire7_expand3_finish (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[11].mac_i/mul_out_reg/B[11]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.576ns  (logic 0.474ns (18.398%)  route 2.102ns (81.602%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[11].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[11].mac_i/mul_out_reg_i_78__176/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[11].mac_i/mul_out_reg_i_78__176_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[11].mac_i/mul_out_reg_i_29__178/O
+                         net (fo=3, unplaced)         0.395     1.812    genblk1[11].mac_i/mul_out_reg_i_29__178_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.855 r  genblk1[11].mac_i/mul_out_reg_i_17__178/O
+                         net (fo=1, unplaced)         0.244     2.099    u_2/rom1_wire[11]_11[11]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.142 r  u_2/mul_out_reg_i_3__10/O
+                         net (fo=1, unplaced)         0.434     2.576    genblk1[11].mac_i/B[11]
+                         DSP48E1                                      r  genblk1[11].mac_i/mul_out_reg/B[11]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[11].mac_i/mul_out_reg/B[12]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.576ns  (logic 0.474ns (18.398%)  route 2.102ns (81.602%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[11].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[11].mac_i/mul_out_reg_i_78__176/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[11].mac_i/mul_out_reg_i_78__176_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[11].mac_i/mul_out_reg_i_29__178/O
+                         net (fo=3, unplaced)         0.395     1.812    genblk1[11].mac_i/mul_out_reg_i_29__178_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.855 r  genblk1[11].mac_i/mul_out_reg_i_16__178/O
+                         net (fo=1, unplaced)         0.244     2.099    u_2/rom1_wire[11]_11[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.142 r  u_2/mul_out_reg_i_2__9/O
+                         net (fo=1, unplaced)         0.434     2.576    genblk1[11].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[11].mac_i/mul_out_reg/B[12]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[11].mac_i/mul_out_reg/B[13]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.576ns  (logic 0.474ns (18.398%)  route 2.102ns (81.602%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[11].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[11].mac_i/mul_out_reg_i_78__176/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[11].mac_i/mul_out_reg_i_78__176_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[11].mac_i/mul_out_reg_i_29__178/O
+                         net (fo=3, unplaced)         0.395     1.812    genblk1[11].mac_i/mul_out_reg_i_29__178_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.855 r  genblk1[11].mac_i/mul_out_reg_i_15__178/O
+                         net (fo=1, unplaced)         0.244     2.099    u_2/rom1_wire[11]_11[13]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.142 r  u_2/mul_out_reg_i_1__8/O
+                         net (fo=5, unplaced)         0.434     2.576    genblk1[11].mac_i/B[13]
+                         DSP48E1                                      r  genblk1[11].mac_i/mul_out_reg/B[13]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[11].mac_i/mul_out_reg/B[14]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.576ns  (logic 0.474ns (18.398%)  route 2.102ns (81.602%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[11].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[11].mac_i/mul_out_reg_i_78__176/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[11].mac_i/mul_out_reg_i_78__176_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[11].mac_i/mul_out_reg_i_29__178/O
+                         net (fo=3, unplaced)         0.395     1.812    genblk1[11].mac_i/mul_out_reg_i_29__178_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.855 r  genblk1[11].mac_i/mul_out_reg_i_15__178/O
+                         net (fo=1, unplaced)         0.244     2.099    u_2/rom1_wire[11]_11[13]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.142 r  u_2/mul_out_reg_i_1__8/O
+                         net (fo=5, unplaced)         0.434     2.576    genblk1[11].mac_i/B[13]
+                         DSP48E1                                      r  genblk1[11].mac_i/mul_out_reg/B[14]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[11].mac_i/mul_out_reg/B[15]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.576ns  (logic 0.474ns (18.398%)  route 2.102ns (81.602%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[11].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[11].mac_i/mul_out_reg_i_78__176/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[11].mac_i/mul_out_reg_i_78__176_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[11].mac_i/mul_out_reg_i_29__178/O
+                         net (fo=3, unplaced)         0.395     1.812    genblk1[11].mac_i/mul_out_reg_i_29__178_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.855 r  genblk1[11].mac_i/mul_out_reg_i_15__178/O
+                         net (fo=1, unplaced)         0.244     2.099    u_2/rom1_wire[11]_11[13]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.142 r  u_2/mul_out_reg_i_1__8/O
+                         net (fo=5, unplaced)         0.434     2.576    genblk1[11].mac_i/B[13]
+                         DSP48E1                                      r  genblk1[11].mac_i/mul_out_reg/B[15]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[11].mac_i/mul_out_reg/B[16]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.576ns  (logic 0.474ns (18.398%)  route 2.102ns (81.602%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[11].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[11].mac_i/mul_out_reg_i_78__176/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[11].mac_i/mul_out_reg_i_78__176_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[11].mac_i/mul_out_reg_i_29__178/O
+                         net (fo=3, unplaced)         0.395     1.812    genblk1[11].mac_i/mul_out_reg_i_29__178_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.855 r  genblk1[11].mac_i/mul_out_reg_i_15__178/O
+                         net (fo=1, unplaced)         0.244     2.099    u_2/rom1_wire[11]_11[13]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.142 r  u_2/mul_out_reg_i_1__8/O
+                         net (fo=5, unplaced)         0.434     2.576    genblk1[11].mac_i/B[13]
+                         DSP48E1                                      r  genblk1[11].mac_i/mul_out_reg/B[16]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[11].mac_i/mul_out_reg/B[17]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.576ns  (logic 0.474ns (18.398%)  route 2.102ns (81.602%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[11].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[11].mac_i/mul_out_reg_i_78__176/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[11].mac_i/mul_out_reg_i_78__176_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[11].mac_i/mul_out_reg_i_29__178/O
+                         net (fo=3, unplaced)         0.395     1.812    genblk1[11].mac_i/mul_out_reg_i_29__178_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.855 r  genblk1[11].mac_i/mul_out_reg_i_15__178/O
+                         net (fo=1, unplaced)         0.244     2.099    u_2/rom1_wire[11]_11[13]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.142 r  u_2/mul_out_reg_i_1__8/O
+                         net (fo=5, unplaced)         0.434     2.576    genblk1[11].mac_i/B[13]
+                         DSP48E1                                      r  genblk1[11].mac_i/mul_out_reg/B[17]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[40].mac_i/mul_out_reg/B[9]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.571ns  (logic 0.474ns (18.433%)  route 2.097ns (81.567%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[3]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[3]/Q
+                         net (fo=17947, unplaced)     0.641     0.867    genblk1[40].mac_i/Q[3]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[40].mac_i/mul_out_reg_i_77__146/O
+                         net (fo=4, unplaced)         0.401     1.387    genblk1[40].mac_i/mul_out_reg_i_77__146_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.430 r  genblk1[40].mac_i/mul_out_reg_i_33__148/O
+                         net (fo=1, unplaced)         0.377     1.807    genblk1[40].mac_i/mul_out_reg_i_33__148_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.850 r  genblk1[40].mac_i/mul_out_reg_i_17__148/O
+                         net (fo=1, unplaced)         0.244     2.094    u_2/rom1_wire[40]_40[9]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.137 r  u_2/mul_out_reg_i_4__39/O
+                         net (fo=1, unplaced)         0.434     2.571    genblk1[40].mac_i/B[9]
+                         DSP48E1                                      r  genblk1[40].mac_i/mul_out_reg/B[9]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[0].mac_i/mul_out_reg/B[12]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[0].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[0].mac_i/mul_out_reg_i_31__189/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[0].mac_i/mul_out_reg_i_31__189_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[0].mac_i/mul_out_reg_i_15__189/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[0].mac_i/weight_rom_address_reg[7]
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[0].mac_i/mul_out_reg_i_17__189/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[0]_0[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_2/O
+                         net (fo=1, unplaced)         0.434     2.569    genblk1[0].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[0].mac_i/mul_out_reg/B[12]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[150].mac_i/mul_out_reg/B[12]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[150].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[150].mac_i/mul_out_reg_i_31__38/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[150].mac_i/mul_out_reg_i_31__38_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[150].mac_i/mul_out_reg_i_15__38/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[150].mac_i/weight_rom_address_reg[4]_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[150].mac_i/mul_out_reg_i_17__38/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[150]_148[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_2__140/O
+                         net (fo=1, unplaced)         0.434     2.569    genblk1[150].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[150].mac_i/mul_out_reg/B[12]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[153].mac_i/mul_out_reg/B[11]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[153].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[153].mac_i/mul_out_reg_i_76__36/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[153].mac_i/mul_out_reg_i_76__36_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[153].mac_i/mul_out_reg_i_27__36/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[153].mac_i/mul_out_reg_i_27__36_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[153].mac_i/mul_out_reg_i_15__36/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[153]_151[11]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_2__143/O
+                         net (fo=1, unplaced)         0.434     2.569    genblk1[153].mac_i/B[11]
+                         DSP48E1                                      r  genblk1[153].mac_i/mul_out_reg/B[11]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[153].mac_i/mul_out_reg/B[12]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[153].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[153].mac_i/mul_out_reg_i_76__36/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[153].mac_i/mul_out_reg_i_76__36_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[153].mac_i/mul_out_reg_i_27__36/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[153].mac_i/mul_out_reg_i_27__36_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[153].mac_i/mul_out_reg_i_14__33/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[153]_151[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__142/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[153].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[153].mac_i/mul_out_reg/B[12]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[153].mac_i/mul_out_reg/B[13]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[153].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[153].mac_i/mul_out_reg_i_76__36/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[153].mac_i/mul_out_reg_i_76__36_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[153].mac_i/mul_out_reg_i_27__36/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[153].mac_i/mul_out_reg_i_27__36_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[153].mac_i/mul_out_reg_i_14__33/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[153]_151[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__142/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[153].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[153].mac_i/mul_out_reg/B[13]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[153].mac_i/mul_out_reg/B[14]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[153].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[153].mac_i/mul_out_reg_i_76__36/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[153].mac_i/mul_out_reg_i_76__36_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[153].mac_i/mul_out_reg_i_27__36/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[153].mac_i/mul_out_reg_i_27__36_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[153].mac_i/mul_out_reg_i_14__33/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[153]_151[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__142/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[153].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[153].mac_i/mul_out_reg/B[14]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[153].mac_i/mul_out_reg/B[15]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[153].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[153].mac_i/mul_out_reg_i_76__36/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[153].mac_i/mul_out_reg_i_76__36_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[153].mac_i/mul_out_reg_i_27__36/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[153].mac_i/mul_out_reg_i_27__36_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[153].mac_i/mul_out_reg_i_14__33/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[153]_151[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__142/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[153].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[153].mac_i/mul_out_reg/B[15]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[153].mac_i/mul_out_reg/B[16]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[153].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[153].mac_i/mul_out_reg_i_76__36/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[153].mac_i/mul_out_reg_i_76__36_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[153].mac_i/mul_out_reg_i_27__36/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[153].mac_i/mul_out_reg_i_27__36_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[153].mac_i/mul_out_reg_i_14__33/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[153]_151[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__142/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[153].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[153].mac_i/mul_out_reg/B[16]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[153].mac_i/mul_out_reg/B[17]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[4]/Q
+                         net (fo=17197, unplaced)     0.641     0.867    genblk1[153].mac_i/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[153].mac_i/mul_out_reg_i_76__36/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[153].mac_i/mul_out_reg_i_76__36_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[153].mac_i/mul_out_reg_i_27__36/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[153].mac_i/mul_out_reg_i_27__36_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[153].mac_i/mul_out_reg_i_14__33/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[153]_151[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__142/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[153].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[153].mac_i/mul_out_reg/B[17]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[160].mac_i/mul_out_reg/B[11]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[160].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[160].mac_i/mul_out_reg_i_75__29/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[160].mac_i/mul_out_reg_i_75__29_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[160].mac_i/mul_out_reg_i_27__29/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[160].mac_i/mul_out_reg_i_27__29_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[160].mac_i/mul_out_reg_i_15__29/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[160]_158[11]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_2__150/O
+                         net (fo=1, unplaced)         0.434     2.569    genblk1[160].mac_i/B[11]
+                         DSP48E1                                      r  genblk1[160].mac_i/mul_out_reg/B[11]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[160].mac_i/mul_out_reg/B[12]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[160].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[160].mac_i/mul_out_reg_i_75__29/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[160].mac_i/mul_out_reg_i_75__29_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[160].mac_i/mul_out_reg_i_27__29/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[160].mac_i/mul_out_reg_i_27__29_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[160].mac_i/mul_out_reg_i_14__27/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[160]_158[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__148/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[160].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[160].mac_i/mul_out_reg/B[12]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[160].mac_i/mul_out_reg/B[13]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[160].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[160].mac_i/mul_out_reg_i_75__29/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[160].mac_i/mul_out_reg_i_75__29_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[160].mac_i/mul_out_reg_i_27__29/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[160].mac_i/mul_out_reg_i_27__29_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[160].mac_i/mul_out_reg_i_14__27/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[160]_158[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__148/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[160].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[160].mac_i/mul_out_reg/B[13]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[160].mac_i/mul_out_reg/B[14]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[160].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[160].mac_i/mul_out_reg_i_75__29/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[160].mac_i/mul_out_reg_i_75__29_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[160].mac_i/mul_out_reg_i_27__29/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[160].mac_i/mul_out_reg_i_27__29_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[160].mac_i/mul_out_reg_i_14__27/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[160]_158[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__148/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[160].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[160].mac_i/mul_out_reg/B[14]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[160].mac_i/mul_out_reg/B[15]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[160].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[160].mac_i/mul_out_reg_i_75__29/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[160].mac_i/mul_out_reg_i_75__29_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[160].mac_i/mul_out_reg_i_27__29/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[160].mac_i/mul_out_reg_i_27__29_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[160].mac_i/mul_out_reg_i_14__27/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[160]_158[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__148/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[160].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[160].mac_i/mul_out_reg/B[15]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[160].mac_i/mul_out_reg/B[16]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[160].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[160].mac_i/mul_out_reg_i_75__29/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[160].mac_i/mul_out_reg_i_75__29_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[160].mac_i/mul_out_reg_i_27__29/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[160].mac_i/mul_out_reg_i_27__29_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[160].mac_i/mul_out_reg_i_14__27/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[160]_158[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__148/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[160].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[160].mac_i/mul_out_reg/B[16]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[160].mac_i/mul_out_reg/B[17]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[160].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[160].mac_i/mul_out_reg_i_75__29/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[160].mac_i/mul_out_reg_i_75__29_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[160].mac_i/mul_out_reg_i_27__29/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[160].mac_i/mul_out_reg_i_27__29_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[160].mac_i/mul_out_reg_i_14__27/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[160]_158[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__148/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[160].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[160].mac_i/mul_out_reg/B[17]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[179].mac_i/mul_out_reg/B[11]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[179].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[179].mac_i/mul_out_reg_i_74__10/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[179].mac_i/mul_out_reg_i_74__10_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[179].mac_i/mul_out_reg_i_27__10/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[179].mac_i/mul_out_reg_i_27__10_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[179].mac_i/mul_out_reg_i_15__10/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[179]_177[11]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_2__169/O
+                         net (fo=1, unplaced)         0.434     2.569    genblk1[179].mac_i/B[11]
+                         DSP48E1                                      r  genblk1[179].mac_i/mul_out_reg/B[11]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[179].mac_i/mul_out_reg/B[12]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[179].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[179].mac_i/mul_out_reg_i_74__10/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[179].mac_i/mul_out_reg_i_74__10_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[179].mac_i/mul_out_reg_i_27__10/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[179].mac_i/mul_out_reg_i_27__10_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[179].mac_i/mul_out_reg_i_14__9/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[179]_177[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__167/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[179].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[179].mac_i/mul_out_reg/B[12]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[179].mac_i/mul_out_reg/B[13]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[179].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[179].mac_i/mul_out_reg_i_74__10/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[179].mac_i/mul_out_reg_i_74__10_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[179].mac_i/mul_out_reg_i_27__10/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[179].mac_i/mul_out_reg_i_27__10_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[179].mac_i/mul_out_reg_i_14__9/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[179]_177[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__167/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[179].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[179].mac_i/mul_out_reg/B[13]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[179].mac_i/mul_out_reg/B[14]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[179].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[179].mac_i/mul_out_reg_i_74__10/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[179].mac_i/mul_out_reg_i_74__10_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[179].mac_i/mul_out_reg_i_27__10/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[179].mac_i/mul_out_reg_i_27__10_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[179].mac_i/mul_out_reg_i_14__9/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[179]_177[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__167/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[179].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[179].mac_i/mul_out_reg/B[14]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[179].mac_i/mul_out_reg/B[15]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[179].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[179].mac_i/mul_out_reg_i_74__10/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[179].mac_i/mul_out_reg_i_74__10_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[179].mac_i/mul_out_reg_i_27__10/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[179].mac_i/mul_out_reg_i_27__10_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[179].mac_i/mul_out_reg_i_14__9/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[179]_177[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__167/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[179].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[179].mac_i/mul_out_reg/B[15]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[179].mac_i/mul_out_reg/B[16]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[179].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[179].mac_i/mul_out_reg_i_74__10/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[179].mac_i/mul_out_reg_i_74__10_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[179].mac_i/mul_out_reg_i_27__10/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[179].mac_i/mul_out_reg_i_27__10_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[179].mac_i/mul_out_reg_i_14__9/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[179]_177[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__167/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[179].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[179].mac_i/mul_out_reg/B[16]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[179].mac_i/mul_out_reg/B[17]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[7]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[7]/Q
+                         net (fo=9311, unplaced)      0.641     0.867    genblk1[179].mac_i/Q[7]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[179].mac_i/mul_out_reg_i_74__10/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[179].mac_i/mul_out_reg_i_74__10_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[179].mac_i/mul_out_reg_i_27__10/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[179].mac_i/mul_out_reg_i_27__10_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[179].mac_i/mul_out_reg_i_14__9/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[179]_177[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__167/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[179].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[179].mac_i/mul_out_reg/B[17]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[42].mac_i/mul_out_reg/B[11]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[42].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[42].mac_i/mul_out_reg_i_75__145/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[42].mac_i/mul_out_reg_i_75__145_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[42].mac_i/mul_out_reg_i_27__146/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[42].mac_i/mul_out_reg_i_27__146_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[42].mac_i/mul_out_reg_i_15__146/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[42]_42[11]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_2__38/O
+                         net (fo=1, unplaced)         0.434     2.569    genblk1[42].mac_i/B[11]
+                         DSP48E1                                      r  genblk1[42].mac_i/mul_out_reg/B[11]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[42].mac_i/mul_out_reg/B[12]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[42].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[42].mac_i/mul_out_reg_i_75__145/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[42].mac_i/mul_out_reg_i_75__145_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[42].mac_i/mul_out_reg_i_27__146/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[42].mac_i/mul_out_reg_i_27__146_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[42].mac_i/mul_out_reg_i_14__128/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[42]_42[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__37/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[42].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[42].mac_i/mul_out_reg/B[12]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[42].mac_i/mul_out_reg/B[13]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[42].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[42].mac_i/mul_out_reg_i_75__145/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[42].mac_i/mul_out_reg_i_75__145_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[42].mac_i/mul_out_reg_i_27__146/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[42].mac_i/mul_out_reg_i_27__146_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[42].mac_i/mul_out_reg_i_14__128/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[42]_42[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__37/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[42].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[42].mac_i/mul_out_reg/B[13]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[42].mac_i/mul_out_reg/B[14]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[42].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[42].mac_i/mul_out_reg_i_75__145/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[42].mac_i/mul_out_reg_i_75__145_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[42].mac_i/mul_out_reg_i_27__146/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[42].mac_i/mul_out_reg_i_27__146_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[42].mac_i/mul_out_reg_i_14__128/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[42]_42[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__37/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[42].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[42].mac_i/mul_out_reg/B[14]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[42].mac_i/mul_out_reg/B[15]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[42].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[42].mac_i/mul_out_reg_i_75__145/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[42].mac_i/mul_out_reg_i_75__145_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[42].mac_i/mul_out_reg_i_27__146/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[42].mac_i/mul_out_reg_i_27__146_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[42].mac_i/mul_out_reg_i_14__128/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[42]_42[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__37/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[42].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[42].mac_i/mul_out_reg/B[15]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[42].mac_i/mul_out_reg/B[16]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[42].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[42].mac_i/mul_out_reg_i_75__145/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[42].mac_i/mul_out_reg_i_75__145_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[42].mac_i/mul_out_reg_i_27__146/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[42].mac_i/mul_out_reg_i_27__146_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[42].mac_i/mul_out_reg_i_14__128/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[42]_42[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__37/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[42].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[42].mac_i/mul_out_reg/B[16]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[42].mac_i/mul_out_reg/B[17]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[42].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[42].mac_i/mul_out_reg_i_75__145/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[42].mac_i/mul_out_reg_i_75__145_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[42].mac_i/mul_out_reg_i_27__146/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[42].mac_i/mul_out_reg_i_27__146_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[42].mac_i/mul_out_reg_i_14__128/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[42]_42[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__37/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[42].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[42].mac_i/mul_out_reg/B[17]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[78].mac_i/mul_out_reg/B[12]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[78].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[78].mac_i/mul_out_reg_i_77__77/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[78].mac_i/mul_out_reg_i_77__77_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[78].mac_i/mul_out_reg_i_29__77/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[78].mac_i/mul_out_reg_i_29__77_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[78].mac_i/mul_out_reg_i_16__77/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[78]_77[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_2__71/O
+                         net (fo=1, unplaced)         0.434     2.569    genblk1[78].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[78].mac_i/mul_out_reg/B[12]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[78].mac_i/mul_out_reg/B[13]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[78].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[78].mac_i/mul_out_reg_i_77__77/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[78].mac_i/mul_out_reg_i_77__77_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[78].mac_i/mul_out_reg_i_29__77/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[78].mac_i/mul_out_reg_i_29__77_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[78].mac_i/mul_out_reg_i_15__77/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[78]_77[13]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__71/O
+                         net (fo=5, unplaced)         0.434     2.569    genblk1[78].mac_i/B[13]
+                         DSP48E1                                      r  genblk1[78].mac_i/mul_out_reg/B[13]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[78].mac_i/mul_out_reg/B[14]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[78].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[78].mac_i/mul_out_reg_i_77__77/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[78].mac_i/mul_out_reg_i_77__77_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[78].mac_i/mul_out_reg_i_29__77/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[78].mac_i/mul_out_reg_i_29__77_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[78].mac_i/mul_out_reg_i_15__77/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[78]_77[13]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__71/O
+                         net (fo=5, unplaced)         0.434     2.569    genblk1[78].mac_i/B[13]
+                         DSP48E1                                      r  genblk1[78].mac_i/mul_out_reg/B[14]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[78].mac_i/mul_out_reg/B[15]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[78].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[78].mac_i/mul_out_reg_i_77__77/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[78].mac_i/mul_out_reg_i_77__77_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[78].mac_i/mul_out_reg_i_29__77/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[78].mac_i/mul_out_reg_i_29__77_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[78].mac_i/mul_out_reg_i_15__77/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[78]_77[13]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__71/O
+                         net (fo=5, unplaced)         0.434     2.569    genblk1[78].mac_i/B[13]
+                         DSP48E1                                      r  genblk1[78].mac_i/mul_out_reg/B[15]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[78].mac_i/mul_out_reg/B[16]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[78].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[78].mac_i/mul_out_reg_i_77__77/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[78].mac_i/mul_out_reg_i_77__77_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[78].mac_i/mul_out_reg_i_29__77/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[78].mac_i/mul_out_reg_i_29__77_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[78].mac_i/mul_out_reg_i_15__77/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[78]_77[13]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__71/O
+                         net (fo=5, unplaced)         0.434     2.569    genblk1[78].mac_i/B[13]
+                         DSP48E1                                      r  genblk1[78].mac_i/mul_out_reg/B[16]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[78].mac_i/mul_out_reg/B[17]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[5]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[5]/Q
+                         net (fo=15258, unplaced)     0.641     0.867    genblk1[78].mac_i/Q[5]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[78].mac_i/mul_out_reg_i_77__77/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[78].mac_i/mul_out_reg_i_77__77_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[78].mac_i/mul_out_reg_i_29__77/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[78].mac_i/mul_out_reg_i_29__77_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[78].mac_i/mul_out_reg_i_15__77/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[78]_77[13]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__71/O
+                         net (fo=5, unplaced)         0.434     2.569    genblk1[78].mac_i/B[13]
+                         DSP48E1                                      r  genblk1[78].mac_i/mul_out_reg/B[17]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[96].mac_i/mul_out_reg/B[11]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[3]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[3]/Q
+                         net (fo=17947, unplaced)     0.641     0.867    genblk1[96].mac_i/Q[3]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[96].mac_i/mul_out_reg_i_74__95/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[96].mac_i/mul_out_reg_i_74__95_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[96].mac_i/mul_out_reg_i_27__95/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[96].mac_i/mul_out_reg_i_27__95_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[96].mac_i/mul_out_reg_i_15__95/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[96]_94[11]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_2__87/O
+                         net (fo=1, unplaced)         0.434     2.569    genblk1[96].mac_i/B[11]
+                         DSP48E1                                      r  genblk1[96].mac_i/mul_out_reg/B[11]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[96].mac_i/mul_out_reg/B[12]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[3]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[3]/Q
+                         net (fo=17947, unplaced)     0.641     0.867    genblk1[96].mac_i/Q[3]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[96].mac_i/mul_out_reg_i_74__95/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[96].mac_i/mul_out_reg_i_74__95_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[96].mac_i/mul_out_reg_i_27__95/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[96].mac_i/mul_out_reg_i_27__95_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[96].mac_i/mul_out_reg_i_14__86/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[96]_94[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__87/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[96].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[96].mac_i/mul_out_reg/B[12]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[96].mac_i/mul_out_reg/B[13]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[3]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[3]/Q
+                         net (fo=17947, unplaced)     0.641     0.867    genblk1[96].mac_i/Q[3]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[96].mac_i/mul_out_reg_i_74__95/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[96].mac_i/mul_out_reg_i_74__95_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[96].mac_i/mul_out_reg_i_27__95/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[96].mac_i/mul_out_reg_i_27__95_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[96].mac_i/mul_out_reg_i_14__86/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[96]_94[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__87/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[96].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[96].mac_i/mul_out_reg/B[13]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[96].mac_i/mul_out_reg/B[14]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[3]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[3]/Q
+                         net (fo=17947, unplaced)     0.641     0.867    genblk1[96].mac_i/Q[3]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[96].mac_i/mul_out_reg_i_74__95/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[96].mac_i/mul_out_reg_i_74__95_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[96].mac_i/mul_out_reg_i_27__95/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[96].mac_i/mul_out_reg_i_27__95_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[96].mac_i/mul_out_reg_i_14__86/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[96]_94[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__87/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[96].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[96].mac_i/mul_out_reg/B[14]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weight_rom_address_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[96].mac_i/mul_out_reg/B[15]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.569ns  (logic 0.474ns (18.448%)  route 2.095ns (81.552%))
+  Logic Levels:           5  (FDCE=1 LUT3=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  weight_rom_address_reg[3]/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  weight_rom_address_reg[3]/Q
+                         net (fo=17947, unplaced)     0.641     0.867    genblk1[96].mac_i/Q[3]
+                         LUT6 (Prop_lut6_I0_O)        0.119     0.986 r  genblk1[96].mac_i/mul_out_reg_i_74__95/O
+                         net (fo=2, unplaced)         0.388     1.374    genblk1[96].mac_i/mul_out_reg_i_74__95_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.043     1.417 r  genblk1[96].mac_i/mul_out_reg_i_27__95/O
+                         net (fo=2, unplaced)         0.388     1.805    genblk1[96].mac_i/mul_out_reg_i_27__95_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.043     1.848 r  genblk1[96].mac_i/mul_out_reg_i_14__86/O
+                         net (fo=1, unplaced)         0.244     2.092    u_2/rom1_wire[96]_94[12]
+                         LUT3 (Prop_lut3_I1_O)        0.043     2.135 r  u_2/mul_out_reg_i_1__87/O
+                         net (fo=6, unplaced)         0.434     2.569    genblk1[96].mac_i/B[12]
+                         DSP48E1                                      r  genblk1[96].mac_i/mul_out_reg/B[15]
+  -------------------------------------------------------------------    -------------------
+
+
+
+

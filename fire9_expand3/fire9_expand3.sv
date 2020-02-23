@@ -101,7 +101,7 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 		.pix(ifm),
 		.layer_en(1),
 		.mul_out(ofmw[i]),
-		.ker(kernel_regs[i])
+		.ker(kernels[i])
 	);
 end
 endgenerate

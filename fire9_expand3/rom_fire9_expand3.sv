@@ -8,7 +8,7 @@
 	(
 		input [ADDR-1:0] address ,
 		input clk,
-		output [WIDTH-1:0] rom_out [0:NUM-1]
+		output reg [WIDTH-1:0] rom_out [0:NUM-1]
 	);	
 	
 

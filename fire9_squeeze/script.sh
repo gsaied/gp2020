@@ -38,7 +38,7 @@ if [ -z "$file" ] ; then
   	(* rom_style=\"{distributed}\" *)
 	reg [WIDTH-1:0] rom_"$file_count" [0:2**ADDR-1] ;" >> decl.sv;
 	#echo -e "\t rom_out[$(($file_count-1))] <= rom_"$file_count"[address["$(($file_count-1))"]];" >> always.sv
-	echo "\$readmemb("\"$file\"",rom_"$file_count",0,"$limit"-1);" >> readmem.sv;
+	echo "\$readmemb("\"$file\"",rom_"$file_count",0,2**ADDR-1);" >> readmem.sv;
 	((file_count++));
 fi
 if [[ $count -eq $limit ]] ; then
