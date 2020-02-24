@@ -156,18 +156,12 @@ end
 always@(posedge clk) begin
 	if(clr_pulse && (conv10_1_en || conv10_2_en) && !(conv10_1_end && conv10_2_end)) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
-			if(ofmw2[i][31] == 1'b1 ) begin 
-				if (conv10_1_en)
-					ofm_1[i] <= 16'b0 ;
-				else
-					ofm_2[i] <= 16'b0 ;
-			end
 			else begin
 				if (conv10_1_en)
-					ofm_1[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
+					ofm_1[i] <= {ofmw2[i][31],ofmw2[i][29:15]};
 				else
 
-					ofm_2[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
+					ofm_2[i] <= {ofmw2[i][31],ofmw2[i][29:15]};
 			end
 		end
 	end

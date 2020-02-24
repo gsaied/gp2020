@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sun Feb 23 20:20:31 2020
+| Date         : Mon Feb 24 20:10:50 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_design_analysis -file design.rpt
 | Design       : fire2_squeeze
@@ -18,46 +18,46 @@ Table of Contents
 1. Setup Path Characteristics 1-1
 ---------------------------------
 
-+---------------------------+----------------------+
-|      Characteristics      |        Path #1       |
-+---------------------------+----------------------+
-| Requirement               |                0.000 |
-| Path Delay                |                3.266 |
-| Logic Delay               | 2.397(74%)           |
-| Net Delay                 | 0.869(26%)           |
-| Clock Skew                |                0.000 |
-| Slack                     |                  inf |
-| Clock Relationship        | Safely Timed         |
-| Logic Levels              |                    3 |
-| Routes                    |                    0 |
-| Logical Path              | IBUF LUT2 OBUF       |
-| Start Point Clock         | input port clock     |
-| End Point Clock           |                      |
-| DSP Block                 | None                 |
-| BRAM                      | None                 |
-| IO Crossings              |                    0 |
-| Config Crossings          |                    0 |
-| SLR Crossings             |                    0 |
-| PBlocks                   |                    0 |
-| High Fanout               |                    1 |
-| Dont Touch                |                    0 |
-| Mark Debug                |                    0 |
-| Start Point Pin Primitive | ram_feedback         |
-| End Point Pin Primitive   | fire2_squeeze_finish |
-| Start Point Pin           | ram_feedback         |
-| End Point Pin             | fire2_squeeze_finish |
-+---------------------------+----------------------+
++---------------------------+-------------------------+
+|      Characteristics      |         Path #1         |
++---------------------------+-------------------------+
+| Requirement               |                   5.000 |
+| Path Delay                |                   2.874 |
+| Logic Delay               | 2.140(75%)              |
+| Net Delay                 | 0.733(25%)              |
+| Clock Skew                |                  -1.657 |
+| Slack                     |                  -1.066 |
+| Clock Relationship        | Safely Timed            |
+| Logic Levels              |                       2 |
+| Routes                    |                       0 |
+| Logical Path              | FDCE LUT2 OBUF          |
+| Start Point Clock         | clk                     |
+| End Point Clock           | clk                     |
+| DSP Block                 | None                    |
+| BRAM                      | None                    |
+| IO Crossings              |                       0 |
+| Config Crossings          |                       0 |
+| SLR Crossings             |                       0 |
+| PBlocks                   |                       0 |
+| High Fanout               |                      20 |
+| Dont Touch                |                       0 |
+| Mark Debug                |                       0 |
+| Start Point Pin Primitive | FDCE/C                  |
+| End Point Pin Primitive   | fire2_squeeze_finish    |
+| Start Point Pin           | fire2_squeeze_end_reg/C |
+| End Point Pin             | fire2_squeeze_finish    |
++---------------------------+-------------------------+
 * Bounding box calculated as % of dimensions for the target device (620, 1000)
 
 
 2. Logic Level Distribution
 ---------------------------
 
-+-----------------+-------------+-----+-----+---+----+----+---+----+----+----+-----+
-| End Point Clock | Requirement |  1  |  2  | 3 |  4 |  5 | 7 |  8 |  9 | 10 |  11 |
-+-----------------+-------------+-----+-----+---+----+----+---+----+----+----+-----+
-| (none)          | 0.000ns     | 270 | 426 | 1 | 24 | 18 | 6 | 21 | 34 | 72 | 128 |
-+-----------------+-------------+-----+-----+---+----+----+---+----+----+----+-----+
++-----------------+-------------+----+-----+---+----+----+-----+
+| End Point Clock | Requirement |  0 |  1  | 2 |  4 |  9 |  10 |
++-----------------+-------------+----+-----+---+----+----+-----+
+| clk             | 5.000ns     | 52 | 737 | 1 | 18 | 64 | 128 |
++-----------------+-------------+----+-----+---+----+----+-----+
 * Columns represent the logic levels per end point clock
 ** Distribution is for top worst 1000 paths
 

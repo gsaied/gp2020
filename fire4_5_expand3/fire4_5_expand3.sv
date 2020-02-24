@@ -185,13 +185,13 @@ always @(posedge clk or negedge rst) begin
 		fire5_expand_3_end <= 1'b0 ; 
 	end
 	else if (fire4_expand_3_en) begin
-		if (fire4_expand_3_timer == WOUT**2)
+		if (fire4_expand_3_timer == WOUT**2+1)
 			fire4_expand_3_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire4_expand_3_timer<= fire4_expand_3_timer+1 ; 
 		end
 	else begin
-		if (fire5_expand_3_timer == WOUT**2)
+		if (fire5_expand_3_timer == WOUT**2+1)
 			fire5_expand_3_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire5_expand_3_timer<= fire5_expand_3_timer+1 ; 

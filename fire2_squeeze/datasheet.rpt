@@ -1,0 +1,814 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Feb 24 23:03:57 2020
+| Host         : GCS running 64-bit unknown
+| Command      : report_datasheet
+| Design       : fire2_squeeze
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Data Sheet Report
+
+Input Ports Setup/Hold
+
+----------+------------------+---------+-------+---------------+---------+---------------+---------+----------+
+Reference | Input            | IO Reg  | Delay |     Setup(ns) | Process |      Hold(ns) | Process | Internal |
+Clock     | Port             | Type    | Type  | to Clk (Edge) | Corner  | to Clk (Edge) | Corner  | Clock    |
+----------+------------------+---------+-------+---------------+---------+---------------+---------+----------+
+clk       | fire2_squeeze_en | FDRE    | -     |     4.895 (r) | SLOW    |     0.903 (r) | SLOW    |          |
+clk       | ifm[0]           | DSP48E1 | -     |     4.059 (r) | SLOW    |     0.660 (r) | SLOW    |          |
+clk       | ifm[1]           | DSP48E1 | -     |     6.077 (r) | SLOW    |     0.675 (r) | SLOW    |          |
+clk       | ifm[2]           | DSP48E1 | -     |     4.085 (r) | SLOW    |     0.798 (r) | SLOW    |          |
+clk       | ifm[3]           | DSP48E1 | -     |     4.121 (r) | SLOW    |     0.866 (r) | SLOW    |          |
+clk       | ifm[4]           | DSP48E1 | -     |     4.137 (r) | SLOW    |     0.904 (r) | SLOW    |          |
+clk       | ifm[5]           | DSP48E1 | -     |     4.215 (r) | SLOW    |     0.873 (r) | SLOW    |          |
+clk       | ifm[6]           | DSP48E1 | -     |     4.150 (r) | SLOW    |     0.713 (r) | SLOW    |          |
+clk       | ifm[7]           | DSP48E1 | -     |     4.148 (r) | SLOW    |     0.936 (r) | SLOW    |          |
+clk       | ifm[8]           | DSP48E1 | -     |     4.220 (r) | SLOW    |     0.823 (r) | SLOW    |          |
+clk       | ifm[9]           | DSP48E1 | -     |     4.172 (r) | SLOW    |     0.827 (r) | SLOW    |          |
+clk       | ifm[10]          | DSP48E1 | -     |     4.199 (r) | SLOW    |     0.744 (r) | SLOW    |          |
+clk       | ifm[11]          | DSP48E1 | -     |     4.148 (r) | SLOW    |     0.642 (r) | SLOW    |          |
+clk       | ifm[12]          | DSP48E1 | -     |     4.224 (r) | SLOW    |     0.813 (r) | SLOW    |          |
+clk       | ifm[13]          | DSP48E1 | -     |     4.262 (r) | SLOW    |     0.664 (r) | SLOW    |          |
+clk       | ifm[14]          | DSP48E1 | -     |     4.210 (r) | SLOW    |     0.883 (r) | SLOW    |          |
+clk       | ifm[15]          | DSP48E1 | -     |     4.398 (r) | SLOW    |     0.944 (r) | SLOW    |          |
+clk       | ram_feedback     | FDCE    | -     |     0.661 (r) | FAST    |     0.888 (r) | SLOW    |          |
+clk       | rst              | DSP48E1 | -     |     5.729 (r) | SLOW    |     0.805 (r) | SLOW    |          |
+----------+------------------+---------+-------+---------------+---------+---------------+---------+----------+
+
+
+Output Ports Clock-to-out
+
+----------+----------------------+--------+-------+----------------+---------+----------------+---------+----------+
+Reference | Output               | IO Reg | Delay | Max Clk (Edge) | Process | Min Clk (Edge) | Process | Internal |
+Clock     | Port                 | Type   | Type  |    to port(ns) | Corner  |    to port(ns) | Corner  | Clock    |
+----------+----------------------+--------+-------+----------------+---------+----------------+---------+----------+
+clk       | fire2_squeeze_finish | FDCE   | -     |      7.038 (r) | SLOW    |      3.317 (r) | FAST    |          |
+clk       | fire2_squeeze_sample | FDRE   | -     |      6.796 (r) | SLOW    |      3.203 (r) | FAST    |          |
+clk       | ofm[0][0]            | FDRE   | -     |      6.811 (r) | SLOW    |      3.219 (r) | FAST    |          |
+clk       | ofm[0][1]            | FDRE   | -     |      6.753 (r) | SLOW    |      3.138 (r) | FAST    |          |
+clk       | ofm[0][2]            | FDRE   | -     |      6.746 (r) | SLOW    |      3.131 (r) | FAST    |          |
+clk       | ofm[0][3]            | FDRE   | -     |      6.742 (r) | SLOW    |      3.126 (r) | FAST    |          |
+clk       | ofm[0][4]            | FDRE   | -     |      6.744 (r) | SLOW    |      3.128 (r) | FAST    |          |
+clk       | ofm[0][5]            | FDRE   | -     |      6.758 (r) | SLOW    |      3.142 (r) | FAST    |          |
+clk       | ofm[0][6]            | FDRE   | -     |      6.758 (r) | SLOW    |      3.143 (r) | FAST    |          |
+clk       | ofm[0][7]            | FDRE   | -     |      6.820 (r) | SLOW    |      3.166 (r) | FAST    |          |
+clk       | ofm[0][8]            | FDRE   | -     |      6.744 (r) | SLOW    |      3.129 (r) | FAST    |          |
+clk       | ofm[0][9]            | FDRE   | -     |      6.758 (r) | SLOW    |      3.143 (r) | FAST    |          |
+clk       | ofm[0][10]           | FDRE   | -     |      6.761 (r) | SLOW    |      3.146 (r) | FAST    |          |
+clk       | ofm[0][11]           | FDRE   | -     |      6.733 (r) | SLOW    |      3.120 (r) | FAST    |          |
+clk       | ofm[0][12]           | FDRE   | -     |      6.730 (r) | SLOW    |      3.115 (r) | FAST    |          |
+clk       | ofm[0][13]           | FDRE   | -     |      6.721 (r) | SLOW    |      3.107 (r) | FAST    |          |
+clk       | ofm[0][14]           | FDRE   | -     |      6.812 (r) | SLOW    |      3.159 (r) | FAST    |          |
+clk       | ofm[0][15]           | FDRE   | -     |      6.823 (r) | SLOW    |      3.235 (r) | FAST    |          |
+clk       | ofm[10][0]           | FDRE   | -     |      6.802 (r) | SLOW    |      3.151 (r) | FAST    |          |
+clk       | ofm[10][1]           | FDRE   | -     |      6.695 (r) | SLOW    |      3.084 (r) | FAST    |          |
+clk       | ofm[10][2]           | FDRE   | -     |      6.785 (r) | SLOW    |      3.135 (r) | FAST    |          |
+clk       | ofm[10][3]           | FDRE   | -     |      6.708 (r) | SLOW    |      3.096 (r) | FAST    |          |
+clk       | ofm[10][4]           | FDRE   | -     |      6.710 (r) | SLOW    |      3.099 (r) | FAST    |          |
+clk       | ofm[10][5]           | FDRE   | -     |      6.702 (r) | SLOW    |      3.091 (r) | FAST    |          |
+clk       | ofm[10][6]           | FDRE   | -     |      6.702 (r) | SLOW    |      3.092 (r) | FAST    |          |
+clk       | ofm[10][7]           | FDRE   | -     |      6.695 (r) | SLOW    |      3.086 (r) | FAST    |          |
+clk       | ofm[10][8]           | FDRE   | -     |      6.699 (r) | SLOW    |      3.089 (r) | FAST    |          |
+clk       | ofm[10][9]           | FDRE   | -     |      6.823 (r) | SLOW    |      3.235 (r) | FAST    |          |
+clk       | ofm[10][10]          | FDRE   | -     |      6.819 (r) | SLOW    |      3.233 (r) | FAST    |          |
+clk       | ofm[10][11]          | FDRE   | -     |      6.706 (r) | SLOW    |      3.096 (r) | FAST    |          |
+clk       | ofm[10][12]          | FDRE   | -     |      6.784 (r) | SLOW    |      3.134 (r) | FAST    |          |
+clk       | ofm[10][13]          | FDRE   | -     |      6.748 (r) | SLOW    |      3.136 (r) | FAST    |          |
+clk       | ofm[10][14]          | FDRE   | -     |      6.824 (r) | SLOW    |      3.173 (r) | FAST    |          |
+clk       | ofm[10][15]          | FDRE   | -     |      6.726 (r) | SLOW    |      3.114 (r) | FAST    |          |
+clk       | ofm[11][0]           | FDRE   | -     |      6.731 (r) | SLOW    |      3.119 (r) | FAST    |          |
+clk       | ofm[11][1]           | FDRE   | -     |      6.825 (r) | SLOW    |      3.237 (r) | FAST    |          |
+clk       | ofm[11][2]           | FDRE   | -     |      6.826 (r) | SLOW    |      3.239 (r) | FAST    |          |
+clk       | ofm[11][3]           | FDRE   | -     |      6.826 (r) | SLOW    |      3.238 (r) | FAST    |          |
+clk       | ofm[11][4]           | FDRE   | -     |      6.719 (r) | SLOW    |      3.105 (r) | FAST    |          |
+clk       | ofm[11][5]           | FDRE   | -     |      6.820 (r) | SLOW    |      3.227 (r) | FAST    |          |
+clk       | ofm[11][6]           | FDRE   | -     |      6.835 (r) | SLOW    |      3.239 (r) | FAST    |          |
+clk       | ofm[11][7]           | FDRE   | -     |      6.824 (r) | SLOW    |      3.231 (r) | FAST    |          |
+clk       | ofm[11][8]           | FDRE   | -     |      6.820 (r) | SLOW    |      3.229 (r) | FAST    |          |
+clk       | ofm[11][9]           | FDRE   | -     |      6.707 (r) | SLOW    |      3.093 (r) | FAST    |          |
+clk       | ofm[11][10]          | FDRE   | -     |      6.787 (r) | SLOW    |      3.134 (r) | FAST    |          |
+clk       | ofm[11][11]          | FDRE   | -     |      6.825 (r) | SLOW    |      3.233 (r) | FAST    |          |
+clk       | ofm[11][12]          | FDRE   | -     |      6.823 (r) | SLOW    |      3.231 (r) | FAST    |          |
+clk       | ofm[11][13]          | FDRE   | -     |      6.821 (r) | SLOW    |      3.228 (r) | FAST    |          |
+clk       | ofm[11][14]          | FDRE   | -     |      6.836 (r) | SLOW    |      3.238 (r) | FAST    |          |
+clk       | ofm[11][15]          | FDRE   | -     |      6.755 (r) | SLOW    |      3.101 (r) | FAST    |          |
+clk       | ofm[12][0]           | FDRE   | -     |      6.745 (r) | SLOW    |      3.202 (r) | FAST    |          |
+clk       | ofm[12][1]           | FDRE   | -     |      6.760 (r) | SLOW    |      3.204 (r) | FAST    |          |
+clk       | ofm[12][2]           | FDRE   | -     |      6.719 (r) | SLOW    |      3.174 (r) | FAST    |          |
+clk       | ofm[12][3]           | FDRE   | -     |      6.643 (r) | SLOW    |      3.138 (r) | FAST    |          |
+clk       | ofm[12][4]           | FDRE   | -     |      6.677 (r) | SLOW    |      3.175 (r) | FAST    |          |
+clk       | ofm[12][5]           | FDRE   | -     |      6.684 (r) | SLOW    |      3.185 (r) | FAST    |          |
+clk       | ofm[12][6]           | FDRE   | -     |      6.716 (r) | SLOW    |      3.191 (r) | FAST    |          |
+clk       | ofm[12][7]           | FDRE   | -     |      6.681 (r) | SLOW    |      3.161 (r) | FAST    |          |
+clk       | ofm[12][8]           | FDRE   | -     |      6.619 (r) | SLOW    |      3.141 (r) | FAST    |          |
+clk       | ofm[12][9]           | FDRE   | -     |      6.605 (r) | SLOW    |      3.129 (r) | FAST    |          |
+clk       | ofm[12][10]          | FDRE   | -     |      6.630 (r) | SLOW    |      3.144 (r) | FAST    |          |
+clk       | ofm[12][11]          | FDRE   | -     |      6.522 (r) | SLOW    |      3.081 (r) | FAST    |          |
+clk       | ofm[12][12]          | FDRE   | -     |      6.541 (r) | SLOW    |      3.097 (r) | FAST    |          |
+clk       | ofm[12][13]          | FDRE   | -     |      6.644 (r) | SLOW    |      3.162 (r) | FAST    |          |
+clk       | ofm[12][14]          | FDRE   | -     |      6.721 (r) | SLOW    |      3.203 (r) | FAST    |          |
+clk       | ofm[12][15]          | FDRE   | -     |      6.726 (r) | SLOW    |      3.206 (r) | FAST    |          |
+clk       | ofm[13][0]           | FDRE   | -     |      6.775 (r) | SLOW    |      3.227 (r) | FAST    |          |
+clk       | ofm[13][1]           | FDRE   | -     |      6.764 (r) | SLOW    |      3.233 (r) | FAST    |          |
+clk       | ofm[13][2]           | FDRE   | -     |      6.771 (r) | SLOW    |      3.214 (r) | FAST    |          |
+clk       | ofm[13][3]           | FDRE   | -     |      6.686 (r) | SLOW    |      3.166 (r) | FAST    |          |
+clk       | ofm[13][4]           | FDRE   | -     |      6.619 (r) | SLOW    |      3.139 (r) | FAST    |          |
+clk       | ofm[13][5]           | FDRE   | -     |      6.608 (r) | SLOW    |      3.131 (r) | FAST    |          |
+clk       | ofm[13][6]           | FDRE   | -     |      6.646 (r) | SLOW    |      3.159 (r) | FAST    |          |
+clk       | ofm[13][7]           | FDRE   | -     |      6.593 (r) | SLOW    |      3.121 (r) | FAST    |          |
+clk       | ofm[13][8]           | FDRE   | -     |      6.617 (r) | SLOW    |      3.136 (r) | FAST    |          |
+clk       | ofm[13][9]           | FDRE   | -     |      6.624 (r) | SLOW    |      3.151 (r) | FAST    |          |
+clk       | ofm[13][10]          | FDRE   | -     |      6.697 (r) | SLOW    |      3.188 (r) | FAST    |          |
+clk       | ofm[13][11]          | FDRE   | -     |      6.706 (r) | SLOW    |      3.193 (r) | FAST    |          |
+clk       | ofm[13][12]          | FDRE   | -     |      6.735 (r) | SLOW    |      3.213 (r) | FAST    |          |
+clk       | ofm[13][13]          | FDRE   | -     |      6.743 (r) | SLOW    |      3.208 (r) | FAST    |          |
+clk       | ofm[13][14]          | FDRE   | -     |      6.787 (r) | SLOW    |      3.242 (r) | FAST    |          |
+clk       | ofm[13][15]          | FDRE   | -     |      6.688 (r) | SLOW    |      3.189 (r) | FAST    |          |
+clk       | ofm[14][0]           | FDRE   | -     |      6.708 (r) | SLOW    |      3.201 (r) | FAST    |          |
+clk       | ofm[14][1]           | FDRE   | -     |      6.541 (r) | SLOW    |      3.104 (r) | FAST    |          |
+clk       | ofm[14][2]           | FDRE   | -     |      6.455 (r) | SLOW    |      2.993 (r) | FAST    |          |
+clk       | ofm[14][3]           | FDRE   | -     |      6.561 (r) | SLOW    |      3.121 (r) | FAST    |          |
+clk       | ofm[14][4]           | FDRE   | -     |      6.778 (r) | SLOW    |      3.257 (r) | FAST    |          |
+clk       | ofm[14][5]           | FDRE   | -     |      6.736 (r) | SLOW    |      3.218 (r) | FAST    |          |
+clk       | ofm[14][6]           | FDRE   | -     |      6.780 (r) | SLOW    |      3.259 (r) | FAST    |          |
+clk       | ofm[14][7]           | FDRE   | -     |      6.700 (r) | SLOW    |      3.215 (r) | FAST    |          |
+clk       | ofm[14][8]           | FDRE   | -     |      6.637 (r) | SLOW    |      3.192 (r) | FAST    |          |
+clk       | ofm[14][9]           | FDRE   | -     |      6.596 (r) | SLOW    |      3.155 (r) | FAST    |          |
+clk       | ofm[14][10]          | FDRE   | -     |      6.677 (r) | SLOW    |      3.199 (r) | FAST    |          |
+clk       | ofm[14][11]          | FDRE   | -     |      6.679 (r) | SLOW    |      3.198 (r) | FAST    |          |
+clk       | ofm[14][12]          | FDRE   | -     |      6.684 (r) | SLOW    |      3.199 (r) | FAST    |          |
+clk       | ofm[14][13]          | FDRE   | -     |      6.748 (r) | SLOW    |      3.227 (r) | FAST    |          |
+clk       | ofm[14][14]          | FDRE   | -     |      6.821 (r) | SLOW    |      3.264 (r) | FAST    |          |
+clk       | ofm[14][15]          | FDRE   | -     |      6.776 (r) | SLOW    |      3.249 (r) | FAST    |          |
+clk       | ofm[15][0]           | FDRE   | -     |      6.650 (r) | SLOW    |      3.111 (r) | FAST    |          |
+clk       | ofm[15][1]           | FDRE   | -     |      6.709 (r) | SLOW    |      3.117 (r) | FAST    |          |
+clk       | ofm[15][2]           | FDRE   | -     |      6.665 (r) | SLOW    |      3.087 (r) | FAST    |          |
+clk       | ofm[15][3]           | FDRE   | -     |      6.573 (r) | SLOW    |      3.033 (r) | FAST    |          |
+clk       | ofm[15][4]           | FDRE   | -     |      6.657 (r) | SLOW    |      3.078 (r) | FAST    |          |
+clk       | ofm[15][5]           | FDRE   | -     |      6.667 (r) | SLOW    |      3.152 (r) | FAST    |          |
+clk       | ofm[15][6]           | FDRE   | -     |      6.570 (r) | SLOW    |      3.032 (r) | FAST    |          |
+clk       | ofm[15][7]           | FDRE   | -     |      6.776 (r) | SLOW    |      3.218 (r) | FAST    |          |
+clk       | ofm[15][8]           | FDRE   | -     |      6.713 (r) | SLOW    |      3.195 (r) | FAST    |          |
+clk       | ofm[15][9]           | FDRE   | -     |      6.663 (r) | SLOW    |      3.148 (r) | FAST    |          |
+clk       | ofm[15][10]          | FDRE   | -     |      6.746 (r) | SLOW    |      3.196 (r) | FAST    |          |
+clk       | ofm[15][11]          | FDRE   | -     |      6.749 (r) | SLOW    |      3.195 (r) | FAST    |          |
+clk       | ofm[15][12]          | FDRE   | -     |      6.786 (r) | SLOW    |      3.227 (r) | FAST    |          |
+clk       | ofm[15][13]          | FDRE   | -     |      6.571 (r) | SLOW    |      3.032 (r) | FAST    |          |
+clk       | ofm[15][14]          | FDRE   | -     |      6.643 (r) | SLOW    |      3.065 (r) | FAST    |          |
+clk       | ofm[15][15]          | FDRE   | -     |      6.661 (r) | SLOW    |      3.150 (r) | FAST    |          |
+clk       | ofm[1][0]            | FDRE   | -     |      6.642 (r) | SLOW    |      3.068 (r) | FAST    |          |
+clk       | ofm[1][1]            | FDRE   | -     |      6.546 (r) | SLOW    |      3.010 (r) | FAST    |          |
+clk       | ofm[1][2]            | FDRE   | -     |      6.621 (r) | SLOW    |      3.047 (r) | FAST    |          |
+clk       | ofm[1][3]            | FDRE   | -     |      6.809 (r) | SLOW    |      3.233 (r) | FAST    |          |
+clk       | ofm[1][4]            | FDRE   | -     |      6.631 (r) | SLOW    |      3.056 (r) | FAST    |          |
+clk       | ofm[1][5]            | FDRE   | -     |      6.560 (r) | SLOW    |      3.025 (r) | FAST    |          |
+clk       | ofm[1][6]            | FDRE   | -     |      6.564 (r) | SLOW    |      3.029 (r) | FAST    |          |
+clk       | ofm[1][7]            | FDRE   | -     |      6.564 (r) | SLOW    |      3.031 (r) | FAST    |          |
+clk       | ofm[1][8]            | FDRE   | -     |      6.788 (r) | SLOW    |      3.239 (r) | FAST    |          |
+clk       | ofm[1][9]            | FDRE   | -     |      6.740 (r) | SLOW    |      3.194 (r) | FAST    |          |
+clk       | ofm[1][10]           | FDRE   | -     |      6.756 (r) | SLOW    |      3.207 (r) | FAST    |          |
+clk       | ofm[1][11]           | FDRE   | -     |      6.689 (r) | SLOW    |      3.176 (r) | FAST    |          |
+clk       | ofm[1][12]           | FDRE   | -     |      6.706 (r) | SLOW    |      3.189 (r) | FAST    |          |
+clk       | ofm[1][13]           | FDRE   | -     |      6.782 (r) | SLOW    |      3.228 (r) | FAST    |          |
+clk       | ofm[1][14]           | FDRE   | -     |      6.677 (r) | SLOW    |      3.165 (r) | FAST    |          |
+clk       | ofm[1][15]           | FDRE   | -     |      6.594 (r) | SLOW    |      3.058 (r) | FAST    |          |
+clk       | ofm[2][0]            | FDRE   | -     |      6.630 (r) | SLOW    |      3.075 (r) | FAST    |          |
+clk       | ofm[2][1]            | FDRE   | -     |      6.569 (r) | SLOW    |      3.033 (r) | FAST    |          |
+clk       | ofm[2][2]            | FDRE   | -     |      6.644 (r) | SLOW    |      3.070 (r) | FAST    |          |
+clk       | ofm[2][3]            | FDRE   | -     |      6.598 (r) | SLOW    |      3.061 (r) | FAST    |          |
+clk       | ofm[2][4]            | FDRE   | -     |      6.678 (r) | SLOW    |      3.102 (r) | FAST    |          |
+clk       | ofm[2][5]            | FDRE   | -     |      6.585 (r) | SLOW    |      3.046 (r) | FAST    |          |
+clk       | ofm[2][6]            | FDRE   | -     |      6.585 (r) | SLOW    |      3.047 (r) | FAST    |          |
+clk       | ofm[2][7]            | FDRE   | -     |      6.815 (r) | SLOW    |      3.256 (r) | FAST    |          |
+clk       | ofm[2][8]            | FDRE   | -     |      6.755 (r) | SLOW    |      3.237 (r) | FAST    |          |
+clk       | ofm[2][9]            | FDRE   | -     |      6.720 (r) | SLOW    |      3.205 (r) | FAST    |          |
+clk       | ofm[2][10]           | FDRE   | -     |      6.790 (r) | SLOW    |      3.240 (r) | FAST    |          |
+clk       | ofm[2][11]           | FDRE   | -     |      6.811 (r) | SLOW    |      3.254 (r) | FAST    |          |
+clk       | ofm[2][12]           | FDRE   | -     |      6.831 (r) | SLOW    |      3.271 (r) | FAST    |          |
+clk       | ofm[2][13]           | FDRE   | -     |      6.603 (r) | SLOW    |      3.063 (r) | FAST    |          |
+clk       | ofm[2][14]           | FDRE   | -     |      6.669 (r) | SLOW    |      3.090 (r) | FAST    |          |
+clk       | ofm[2][15]           | FDRE   | -     |      6.692 (r) | SLOW    |      3.113 (r) | FAST    |          |
+clk       | ofm[3][0]            | FDRE   | -     |      6.504 (r) | SLOW    |      3.085 (r) | FAST    |          |
+clk       | ofm[3][1]            | FDRE   | -     |      6.592 (r) | SLOW    |      3.095 (r) | FAST    |          |
+clk       | ofm[3][2]            | FDRE   | -     |      6.602 (r) | SLOW    |      3.106 (r) | FAST    |          |
+clk       | ofm[3][3]            | FDRE   | -     |      6.796 (r) | SLOW    |      3.274 (r) | FAST    |          |
+clk       | ofm[3][4]            | FDRE   | -     |      6.817 (r) | SLOW    |      3.282 (r) | FAST    |          |
+clk       | ofm[3][5]            | FDRE   | -     |      6.787 (r) | SLOW    |      3.264 (r) | FAST    |          |
+clk       | ofm[3][6]            | FDRE   | -     |      6.708 (r) | SLOW    |      3.223 (r) | FAST    |          |
+clk       | ofm[3][7]            | FDRE   | -     |      6.740 (r) | SLOW    |      3.258 (r) | FAST    |          |
+clk       | ofm[3][8]            | FDRE   | -     |      6.730 (r) | SLOW    |      3.252 (r) | FAST    |          |
+clk       | ofm[3][9]            | FDRE   | -     |      6.770 (r) | SLOW    |      3.265 (r) | FAST    |          |
+clk       | ofm[3][10]           | FDRE   | -     |      6.748 (r) | SLOW    |      3.249 (r) | FAST    |          |
+clk       | ofm[3][11]           | FDRE   | -     |      6.660 (r) | SLOW    |      3.202 (r) | FAST    |          |
+clk       | ofm[3][12]           | FDRE   | -     |      6.629 (r) | SLOW    |      3.174 (r) | FAST    |          |
+clk       | ofm[3][13]           | FDRE   | -     |      6.629 (r) | SLOW    |      3.170 (r) | FAST    |          |
+clk       | ofm[3][14]           | FDRE   | -     |      6.547 (r) | SLOW    |      3.128 (r) | FAST    |          |
+clk       | ofm[3][15]           | FDRE   | -     |      6.619 (r) | SLOW    |      3.166 (r) | FAST    |          |
+clk       | ofm[4][0]            | FDRE   | -     |      6.747 (r) | SLOW    |      3.230 (r) | FAST    |          |
+clk       | ofm[4][1]            | FDRE   | -     |      6.777 (r) | SLOW    |      3.247 (r) | FAST    |          |
+clk       | ofm[4][2]            | FDRE   | -     |      6.737 (r) | SLOW    |      3.218 (r) | FAST    |          |
+clk       | ofm[4][3]            | FDRE   | -     |      6.698 (r) | SLOW    |      3.218 (r) | FAST    |          |
+clk       | ofm[4][4]            | FDRE   | -     |      6.748 (r) | SLOW    |      3.271 (r) | FAST    |          |
+clk       | ofm[4][5]            | FDRE   | -     |      6.740 (r) | SLOW    |      3.267 (r) | FAST    |          |
+clk       | ofm[4][6]            | FDRE   | -     |      6.763 (r) | SLOW    |      3.263 (r) | FAST    |          |
+clk       | ofm[4][7]            | FDRE   | -     |      6.718 (r) | SLOW    |      3.224 (r) | FAST    |          |
+clk       | ofm[4][8]            | FDRE   | -     |      6.656 (r) | SLOW    |      3.203 (r) | FAST    |          |
+clk       | ofm[4][9]            | FDRE   | -     |      6.640 (r) | SLOW    |      3.189 (r) | FAST    |          |
+clk       | ofm[4][10]           | FDRE   | -     |      6.663 (r) | SLOW    |      3.203 (r) | FAST    |          |
+clk       | ofm[4][11]           | FDRE   | -     |      6.591 (r) | SLOW    |      3.174 (r) | FAST    |          |
+clk       | ofm[4][12]           | FDRE   | -     |      6.607 (r) | SLOW    |      3.186 (r) | FAST    |          |
+clk       | ofm[4][13]           | FDRE   | -     |      6.670 (r) | SLOW    |      3.212 (r) | FAST    |          |
+clk       | ofm[4][14]           | FDRE   | -     |      6.746 (r) | SLOW    |      3.252 (r) | FAST    |          |
+clk       | ofm[4][15]           | FDRE   | -     |      6.762 (r) | SLOW    |      3.266 (r) | FAST    |          |
+clk       | ofm[5][0]            | FDRE   | -     |      6.828 (r) | SLOW    |      3.306 (r) | FAST    |          |
+clk       | ofm[5][1]            | FDRE   | -     |      6.582 (r) | SLOW    |      3.165 (r) | FAST    |          |
+clk       | ofm[5][2]            | FDRE   | -     |      6.804 (r) | SLOW    |      3.280 (r) | FAST    |          |
+clk       | ofm[5][3]            | FDRE   | -     |      6.759 (r) | SLOW    |      3.274 (r) | FAST    |          |
+clk       | ofm[5][4]            | FDRE   | -     |      6.797 (r) | SLOW    |      3.315 (r) | FAST    |          |
+clk       | ofm[5][5]            | FDRE   | -     |      6.779 (r) | SLOW    |      3.300 (r) | FAST    |          |
+clk       | ofm[5][6]            | FDRE   | -     |      6.780 (r) | SLOW    |      3.275 (r) | FAST    |          |
+clk       | ofm[5][7]            | FDRE   | -     |      6.766 (r) | SLOW    |      3.266 (r) | FAST    |          |
+clk       | ofm[5][8]            | FDRE   | -     |      6.696 (r) | SLOW    |      3.237 (r) | FAST    |          |
+clk       | ofm[5][9]            | FDRE   | -     |      6.666 (r) | SLOW    |      3.209 (r) | FAST    |          |
+clk       | ofm[5][10]           | FDRE   | -     |      6.678 (r) | SLOW    |      3.218 (r) | FAST    |          |
+clk       | ofm[5][11]           | FDRE   | -     |      6.629 (r) | SLOW    |      3.207 (r) | FAST    |          |
+clk       | ofm[5][12]           | FDRE   | -     |      6.648 (r) | SLOW    |      3.222 (r) | FAST    |          |
+clk       | ofm[5][13]           | FDRE   | -     |      6.705 (r) | SLOW    |      3.243 (r) | FAST    |          |
+clk       | ofm[5][14]           | FDRE   | -     |      6.771 (r) | SLOW    |      3.272 (r) | FAST    |          |
+clk       | ofm[5][15]           | FDRE   | -     |      6.798 (r) | SLOW    |      3.296 (r) | FAST    |          |
+clk       | ofm[6][0]            | FDRE   | -     |      6.880 (r) | SLOW    |      3.210 (r) | FAST    |          |
+clk       | ofm[6][1]            | FDRE   | -     |      6.870 (r) | SLOW    |      3.179 (r) | FAST    |          |
+clk       | ofm[6][2]            | FDRE   | -     |      6.867 (r) | SLOW    |      3.177 (r) | FAST    |          |
+clk       | ofm[6][3]            | FDRE   | -     |      6.901 (r) | SLOW    |      3.209 (r) | FAST    |          |
+clk       | ofm[6][4]            | FDRE   | -     |      6.900 (r) | SLOW    |      3.208 (r) | FAST    |          |
+clk       | ofm[6][5]            | FDRE   | -     |      6.893 (r) | SLOW    |      3.202 (r) | FAST    |          |
+clk       | ofm[6][6]            | FDRE   | -     |      6.890 (r) | SLOW    |      3.199 (r) | FAST    |          |
+clk       | ofm[6][7]            | FDRE   | -     |      6.934 (r) | SLOW    |      3.225 (r) | FAST    |          |
+clk       | ofm[6][8]            | FDRE   | -     |      6.859 (r) | SLOW    |      3.189 (r) | FAST    |          |
+clk       | ofm[6][9]            | FDRE   | -     |      6.886 (r) | SLOW    |      3.195 (r) | FAST    |          |
+clk       | ofm[6][10]           | FDRE   | -     |      6.880 (r) | SLOW    |      3.189 (r) | FAST    |          |
+clk       | ofm[6][11]           | FDRE   | -     |      6.876 (r) | SLOW    |      3.186 (r) | FAST    |          |
+clk       | ofm[6][12]           | FDRE   | -     |      6.871 (r) | SLOW    |      3.181 (r) | FAST    |          |
+clk       | ofm[6][13]           | FDRE   | -     |      6.872 (r) | SLOW    |      3.181 (r) | FAST    |          |
+clk       | ofm[6][14]           | FDRE   | -     |      6.910 (r) | SLOW    |      3.200 (r) | FAST    |          |
+clk       | ofm[6][15]           | FDRE   | -     |      6.841 (r) | SLOW    |      3.174 (r) | FAST    |          |
+clk       | ofm[7][0]            | FDRE   | -     |      6.853 (r) | SLOW    |      3.185 (r) | FAST    |          |
+clk       | ofm[7][1]            | FDRE   | -     |      6.862 (r) | SLOW    |      3.175 (r) | FAST    |          |
+clk       | ofm[7][2]            | FDRE   | -     |      6.866 (r) | SLOW    |      3.179 (r) | FAST    |          |
+clk       | ofm[7][3]            | FDRE   | -     |      6.877 (r) | SLOW    |      3.189 (r) | FAST    |          |
+clk       | ofm[7][4]            | FDRE   | -     |      6.876 (r) | SLOW    |      3.188 (r) | FAST    |          |
+clk       | ofm[7][5]            | FDRE   | -     |      6.861 (r) | SLOW    |      3.175 (r) | FAST    |          |
+clk       | ofm[7][6]            | FDRE   | -     |      6.860 (r) | SLOW    |      3.174 (r) | FAST    |          |
+clk       | ofm[7][7]            | FDRE   | -     |      6.847 (r) | SLOW    |      3.162 (r) | FAST    |          |
+clk       | ofm[7][8]            | FDRE   | -     |      6.845 (r) | SLOW    |      3.160 (r) | FAST    |          |
+clk       | ofm[7][9]            | FDRE   | -     |      6.958 (r) | SLOW    |      3.233 (r) | FAST    |          |
+clk       | ofm[7][10]           | FDRE   | -     |      6.864 (r) | SLOW    |      3.179 (r) | FAST    |          |
+clk       | ofm[7][11]           | FDRE   | -     |      6.868 (r) | SLOW    |      3.182 (r) | FAST    |          |
+clk       | ofm[7][12]           | FDRE   | -     |      6.873 (r) | SLOW    |      3.187 (r) | FAST    |          |
+clk       | ofm[7][13]           | FDRE   | -     |      6.866 (r) | SLOW    |      3.199 (r) | FAST    |          |
+clk       | ofm[7][14]           | FDRE   | -     |      6.851 (r) | SLOW    |      3.183 (r) | FAST    |          |
+clk       | ofm[7][15]           | FDRE   | -     |      6.872 (r) | SLOW    |      3.184 (r) | FAST    |          |
+clk       | ofm[8][0]            | FDRE   | -     |      6.873 (r) | SLOW    |      3.186 (r) | FAST    |          |
+clk       | ofm[8][1]            | FDRE   | -     |      6.859 (r) | SLOW    |      3.191 (r) | FAST    |          |
+clk       | ofm[8][2]            | FDRE   | -     |      6.845 (r) | SLOW    |      3.177 (r) | FAST    |          |
+clk       | ofm[8][3]            | FDRE   | -     |      6.861 (r) | SLOW    |      3.192 (r) | FAST    |          |
+clk       | ofm[8][4]            | FDRE   | -     |      6.871 (r) | SLOW    |      3.200 (r) | FAST    |          |
+clk       | ofm[8][5]            | FDRE   | -     |      6.836 (r) | SLOW    |      3.145 (r) | FAST    |          |
+clk       | ofm[8][6]            | FDRE   | -     |      6.842 (r) | SLOW    |      3.152 (r) | FAST    |          |
+clk       | ofm[8][7]            | FDRE   | -     |      6.843 (r) | SLOW    |      3.152 (r) | FAST    |          |
+clk       | ofm[8][8]            | FDRE   | -     |      6.835 (r) | SLOW    |      3.144 (r) | FAST    |          |
+clk       | ofm[8][9]            | FDRE   | -     |      6.848 (r) | SLOW    |      3.158 (r) | FAST    |          |
+clk       | ofm[8][10]           | FDRE   | -     |      6.928 (r) | SLOW    |      3.199 (r) | FAST    |          |
+clk       | ofm[8][11]           | FDRE   | -     |      6.829 (r) | SLOW    |      3.139 (r) | FAST    |          |
+clk       | ofm[8][12]           | FDRE   | -     |      6.832 (r) | SLOW    |      3.141 (r) | FAST    |          |
+clk       | ofm[8][13]           | FDRE   | -     |      6.863 (r) | SLOW    |      3.172 (r) | FAST    |          |
+clk       | ofm[8][14]           | FDRE   | -     |      6.865 (r) | SLOW    |      3.173 (r) | FAST    |          |
+clk       | ofm[8][15]           | FDRE   | -     |      6.904 (r) | SLOW    |      3.174 (r) | FAST    |          |
+clk       | ofm[9][0]            | FDRE   | -     |      6.981 (r) | SLOW    |      3.237 (r) | FAST    |          |
+clk       | ofm[9][1]            | FDRE   | -     |      6.984 (r) | SLOW    |      3.240 (r) | FAST    |          |
+clk       | ofm[9][2]            | FDRE   | -     |      6.972 (r) | SLOW    |      3.229 (r) | FAST    |          |
+clk       | ofm[9][3]            | FDRE   | -     |      6.965 (r) | SLOW    |      3.223 (r) | FAST    |          |
+clk       | ofm[9][4]            | FDRE   | -     |      6.979 (r) | SLOW    |      3.237 (r) | FAST    |          |
+clk       | ofm[9][5]            | FDRE   | -     |      6.981 (r) | SLOW    |      3.239 (r) | FAST    |          |
+clk       | ofm[9][6]            | FDRE   | -     |      7.058 (r) | SLOW    |      3.277 (r) | FAST    |          |
+clk       | ofm[9][7]            | FDRE   | -     |      6.961 (r) | SLOW    |      3.220 (r) | FAST    |          |
+clk       | ofm[9][8]            | FDRE   | -     |      6.957 (r) | SLOW    |      3.214 (r) | FAST    |          |
+clk       | ofm[9][9]            | FDRE   | -     |      6.958 (r) | SLOW    |      3.216 (r) | FAST    |          |
+clk       | ofm[9][10]           | FDRE   | -     |      6.967 (r) | SLOW    |      3.223 (r) | FAST    |          |
+clk       | ofm[9][11]           | FDRE   | -     |      6.952 (r) | SLOW    |      3.209 (r) | FAST    |          |
+clk       | ofm[9][12]           | FDRE   | -     |      6.946 (r) | SLOW    |      3.203 (r) | FAST    |          |
+clk       | ofm[9][13]           | FDRE   | -     |      6.947 (r) | SLOW    |      3.203 (r) | FAST    |          |
+clk       | ofm[9][14]           | FDRE   | -     |      6.972 (r) | SLOW    |      3.228 (r) | FAST    |          |
+clk       | ofm[9][15]           | FDRE   | -     |      6.966 (r) | SLOW    |      3.223 (r) | FAST    |          |
+----------+----------------------+--------+-------+----------------+---------+----------------+---------+----------+
+
+
+Setup between Clocks
+
+-------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+Source | Destination |  Src:Rise     | Process |  Src:Rise     | Process |  Src:Fall     | Process |  Src:Fall     | Process |
+Clock  | Clock       | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  |
+-------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+clk    | clk         |         7.709 | SLOW    |               |         |               |         |               |         |
+-------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+
+
+Setup / Hold times for input bus
+Clocked by: clk
+Worst Case Data Window: 7.021 ns
+Ideal Clock Offset to Actual Clock: -2.567 ns
+-------------------+-------------+---------+------------+---------+-----------+-----------+---------------+
+                   |             | Process |            | Process | Setup     |  Hold     | Source Offset |
+Source             |   Setup(ns) | Corner  |   Hold(ns) | Corner  | Slack(ns) | Slack(ns) | to Center(ns) |
+-------------------+-------------+---------+------------+---------+-----------+-----------+---------------+
+ifm[0]             |   4.059 (r) | SLOW    |  0.660 (r) | SLOW    |    -0.559 |     0.340 |        -0.450 |
+ifm[1]             |   6.077 (r) | SLOW    |  0.675 (r) | SLOW    |    -2.577 |     0.325 |        -1.451 |
+ifm[2]             |   4.085 (r) | SLOW    |  0.798 (r) | SLOW    |    -0.585 |     0.202 |        -0.393 |
+ifm[3]             |   4.121 (r) | SLOW    |  0.866 (r) | SLOW    |    -0.621 |     0.134 |        -0.377 |
+ifm[4]             |   4.137 (r) | SLOW    |  0.904 (r) | SLOW    |    -0.637 |     0.096 |        -0.366 |
+ifm[5]             |   4.215 (r) | SLOW    |  0.873 (r) | SLOW    |    -0.715 |     0.127 |        -0.421 |
+ifm[6]             |   4.150 (r) | SLOW    |  0.713 (r) | SLOW    |    -0.650 |     0.287 |        -0.468 |
+ifm[7]             |   4.148 (r) | SLOW    |  0.936 (r) | SLOW    |    -0.648 |     0.064 |        -0.356 |
+ifm[8]             |   4.220 (r) | SLOW    |  0.823 (r) | SLOW    |    -0.720 |     0.177 |        -0.448 |
+ifm[9]             |   4.172 (r) | SLOW    |  0.827 (r) | SLOW    |    -0.672 |     0.173 |        -0.422 |
+ifm[10]            |   4.199 (r) | SLOW    |  0.744 (r) | SLOW    |    -0.699 |     0.256 |        -0.478 |
+ifm[11]            |   4.148 (r) | SLOW    |  0.642 (r) | SLOW    |    -0.648 |     0.358 |        -0.503 |
+ifm[12]            |   4.224 (r) | SLOW    |  0.813 (r) | SLOW    |    -0.724 |     0.187 |        -0.456 |
+ifm[13]            |   4.262 (r) | SLOW    |  0.664 (r) | SLOW    |    -0.762 |     0.336 |        -0.549 |
+ifm[14]            |   4.210 (r) | SLOW    |  0.883 (r) | SLOW    |    -0.710 |     0.117 |        -0.413 |
+ifm[15]            |   4.398 (r) | SLOW    |  0.944 (r) | SLOW    |    -0.898 |     0.056 |        -0.477 |
+-------------------+-------------+---------+------------+---------+-----------+-----------+---------------+
+Worst Case Summary |   6.077 (r) | SLOW    |  0.944 (r) | SLOW    |    -2.577 |     0.056 |             - |
+-------------------+-------------+---------+------------+---------+-----------+-----------+---------------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.129 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[0][0]          |   6.811 (r) | SLOW    |   3.219 (r) | FAST    |    0.112 |
+ofm[0][1]          |   6.753 (r) | SLOW    |   3.138 (r) | FAST    |    0.031 |
+ofm[0][2]          |   6.746 (r) | SLOW    |   3.131 (r) | FAST    |    0.025 |
+ofm[0][3]          |   6.742 (r) | SLOW    |   3.126 (r) | FAST    |    0.020 |
+ofm[0][4]          |   6.744 (r) | SLOW    |   3.128 (r) | FAST    |    0.022 |
+ofm[0][5]          |   6.758 (r) | SLOW    |   3.142 (r) | FAST    |    0.037 |
+ofm[0][6]          |   6.758 (r) | SLOW    |   3.143 (r) | FAST    |    0.037 |
+ofm[0][7]          |   6.820 (r) | SLOW    |   3.166 (r) | FAST    |    0.098 |
+ofm[0][8]          |   6.744 (r) | SLOW    |   3.129 (r) | FAST    |    0.022 |
+ofm[0][9]          |   6.758 (r) | SLOW    |   3.143 (r) | FAST    |    0.037 |
+ofm[0][10]         |   6.761 (r) | SLOW    |   3.146 (r) | FAST    |    0.039 |
+ofm[0][11]         |   6.733 (r) | SLOW    |   3.120 (r) | FAST    |    0.013 |
+ofm[0][12]         |   6.730 (r) | SLOW    |   3.115 (r) | FAST    |    0.009 |
+ofm[0][13]         |   6.721 (r) | SLOW    |   3.107 (r) | FAST    |    0.000 |
+ofm[0][14]         |   6.812 (r) | SLOW    |   3.159 (r) | FAST    |    0.091 |
+ofm[0][15]         |   6.823 (r) | SLOW    |   3.235 (r) | FAST    |    0.129 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.823 (r) | SLOW    |   3.107 (r) | FAST    |    0.129 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.152 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[10][0]         |   6.802 (r) | SLOW    |   3.151 (r) | FAST    |    0.107 |
+ofm[10][1]         |   6.695 (r) | SLOW    |   3.084 (r) | FAST    |    0.000 |
+ofm[10][2]         |   6.785 (r) | SLOW    |   3.135 (r) | FAST    |    0.090 |
+ofm[10][3]         |   6.708 (r) | SLOW    |   3.096 (r) | FAST    |    0.013 |
+ofm[10][4]         |   6.710 (r) | SLOW    |   3.099 (r) | FAST    |    0.015 |
+ofm[10][5]         |   6.702 (r) | SLOW    |   3.091 (r) | FAST    |    0.008 |
+ofm[10][6]         |   6.702 (r) | SLOW    |   3.092 (r) | FAST    |    0.008 |
+ofm[10][7]         |   6.695 (r) | SLOW    |   3.086 (r) | FAST    |    0.002 |
+ofm[10][8]         |   6.699 (r) | SLOW    |   3.089 (r) | FAST    |    0.006 |
+ofm[10][9]         |   6.823 (r) | SLOW    |   3.235 (r) | FAST    |    0.152 |
+ofm[10][10]        |   6.819 (r) | SLOW    |   3.233 (r) | FAST    |    0.150 |
+ofm[10][11]        |   6.706 (r) | SLOW    |   3.096 (r) | FAST    |    0.012 |
+ofm[10][12]        |   6.784 (r) | SLOW    |   3.134 (r) | FAST    |    0.089 |
+ofm[10][13]        |   6.748 (r) | SLOW    |   3.136 (r) | FAST    |    0.053 |
+ofm[10][14]        |   6.824 (r) | SLOW    |   3.173 (r) | FAST    |    0.129 |
+ofm[10][15]        |   6.726 (r) | SLOW    |   3.114 (r) | FAST    |    0.031 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.824 (r) | SLOW    |   3.084 (r) | FAST    |    0.152 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.146 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[11][0]         |   6.731 (r) | SLOW    |   3.119 (r) | FAST    |    0.026 |
+ofm[11][1]         |   6.825 (r) | SLOW    |   3.237 (r) | FAST    |    0.144 |
+ofm[11][2]         |   6.826 (r) | SLOW    |   3.239 (r) | FAST    |    0.146 |
+ofm[11][3]         |   6.826 (r) | SLOW    |   3.238 (r) | FAST    |    0.145 |
+ofm[11][4]         |   6.719 (r) | SLOW    |   3.105 (r) | FAST    |    0.012 |
+ofm[11][5]         |   6.820 (r) | SLOW    |   3.227 (r) | FAST    |    0.134 |
+ofm[11][6]         |   6.835 (r) | SLOW    |   3.239 (r) | FAST    |    0.146 |
+ofm[11][7]         |   6.824 (r) | SLOW    |   3.231 (r) | FAST    |    0.138 |
+ofm[11][8]         |   6.820 (r) | SLOW    |   3.229 (r) | FAST    |    0.136 |
+ofm[11][9]         |   6.707 (r) | SLOW    |   3.093 (r) | FAST    |    0.000 |
+ofm[11][10]        |   6.787 (r) | SLOW    |   3.134 (r) | FAST    |    0.080 |
+ofm[11][11]        |   6.825 (r) | SLOW    |   3.233 (r) | FAST    |    0.140 |
+ofm[11][12]        |   6.823 (r) | SLOW    |   3.231 (r) | FAST    |    0.138 |
+ofm[11][13]        |   6.821 (r) | SLOW    |   3.228 (r) | FAST    |    0.135 |
+ofm[11][14]        |   6.836 (r) | SLOW    |   3.238 (r) | FAST    |    0.145 |
+ofm[11][15]        |   6.755 (r) | SLOW    |   3.101 (r) | FAST    |    0.047 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.836 (r) | SLOW    |   3.093 (r) | FAST    |    0.146 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.239 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[12][0]         |   6.745 (r) | SLOW    |   3.202 (r) | FAST    |    0.223 |
+ofm[12][1]         |   6.760 (r) | SLOW    |   3.204 (r) | FAST    |    0.239 |
+ofm[12][2]         |   6.719 (r) | SLOW    |   3.174 (r) | FAST    |    0.197 |
+ofm[12][3]         |   6.643 (r) | SLOW    |   3.138 (r) | FAST    |    0.122 |
+ofm[12][4]         |   6.677 (r) | SLOW    |   3.175 (r) | FAST    |    0.156 |
+ofm[12][5]         |   6.684 (r) | SLOW    |   3.185 (r) | FAST    |    0.162 |
+ofm[12][6]         |   6.716 (r) | SLOW    |   3.191 (r) | FAST    |    0.195 |
+ofm[12][7]         |   6.681 (r) | SLOW    |   3.161 (r) | FAST    |    0.159 |
+ofm[12][8]         |   6.619 (r) | SLOW    |   3.141 (r) | FAST    |    0.098 |
+ofm[12][9]         |   6.605 (r) | SLOW    |   3.129 (r) | FAST    |    0.083 |
+ofm[12][10]        |   6.630 (r) | SLOW    |   3.144 (r) | FAST    |    0.109 |
+ofm[12][11]        |   6.522 (r) | SLOW    |   3.081 (r) | FAST    |    0.000 |
+ofm[12][12]        |   6.541 (r) | SLOW    |   3.097 (r) | FAST    |    0.020 |
+ofm[12][13]        |   6.644 (r) | SLOW    |   3.162 (r) | FAST    |    0.122 |
+ofm[12][14]        |   6.721 (r) | SLOW    |   3.203 (r) | FAST    |    0.200 |
+ofm[12][15]        |   6.726 (r) | SLOW    |   3.206 (r) | FAST    |    0.205 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.760 (r) | SLOW    |   3.081 (r) | FAST    |    0.239 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.194 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[13][0]         |   6.775 (r) | SLOW    |   3.227 (r) | FAST    |    0.181 |
+ofm[13][1]         |   6.764 (r) | SLOW    |   3.233 (r) | FAST    |    0.170 |
+ofm[13][2]         |   6.771 (r) | SLOW    |   3.214 (r) | FAST    |    0.178 |
+ofm[13][3]         |   6.686 (r) | SLOW    |   3.166 (r) | FAST    |    0.093 |
+ofm[13][4]         |   6.619 (r) | SLOW    |   3.139 (r) | FAST    |    0.025 |
+ofm[13][5]         |   6.608 (r) | SLOW    |   3.131 (r) | FAST    |    0.014 |
+ofm[13][6]         |   6.646 (r) | SLOW    |   3.159 (r) | FAST    |    0.052 |
+ofm[13][7]         |   6.593 (r) | SLOW    |   3.121 (r) | FAST    |    0.000 |
+ofm[13][8]         |   6.617 (r) | SLOW    |   3.136 (r) | FAST    |    0.023 |
+ofm[13][9]         |   6.624 (r) | SLOW    |   3.151 (r) | FAST    |    0.030 |
+ofm[13][10]        |   6.697 (r) | SLOW    |   3.188 (r) | FAST    |    0.104 |
+ofm[13][11]        |   6.706 (r) | SLOW    |   3.193 (r) | FAST    |    0.113 |
+ofm[13][12]        |   6.735 (r) | SLOW    |   3.213 (r) | FAST    |    0.142 |
+ofm[13][13]        |   6.743 (r) | SLOW    |   3.208 (r) | FAST    |    0.150 |
+ofm[13][14]        |   6.787 (r) | SLOW    |   3.242 (r) | FAST    |    0.194 |
+ofm[13][15]        |   6.688 (r) | SLOW    |   3.189 (r) | FAST    |    0.095 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.787 (r) | SLOW    |   3.121 (r) | FAST    |    0.194 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.366 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[14][0]         |   6.708 (r) | SLOW    |   3.201 (r) | FAST    |    0.253 |
+ofm[14][1]         |   6.541 (r) | SLOW    |   3.104 (r) | FAST    |    0.111 |
+ofm[14][2]         |   6.455 (r) | SLOW    |   2.993 (r) | FAST    |    0.000 |
+ofm[14][3]         |   6.561 (r) | SLOW    |   3.121 (r) | FAST    |    0.128 |
+ofm[14][4]         |   6.778 (r) | SLOW    |   3.257 (r) | FAST    |    0.323 |
+ofm[14][5]         |   6.736 (r) | SLOW    |   3.218 (r) | FAST    |    0.281 |
+ofm[14][6]         |   6.780 (r) | SLOW    |   3.259 (r) | FAST    |    0.325 |
+ofm[14][7]         |   6.700 (r) | SLOW    |   3.215 (r) | FAST    |    0.246 |
+ofm[14][8]         |   6.637 (r) | SLOW    |   3.192 (r) | FAST    |    0.200 |
+ofm[14][9]         |   6.596 (r) | SLOW    |   3.155 (r) | FAST    |    0.162 |
+ofm[14][10]        |   6.677 (r) | SLOW    |   3.199 (r) | FAST    |    0.222 |
+ofm[14][11]        |   6.679 (r) | SLOW    |   3.198 (r) | FAST    |    0.224 |
+ofm[14][12]        |   6.684 (r) | SLOW    |   3.199 (r) | FAST    |    0.229 |
+ofm[14][13]        |   6.748 (r) | SLOW    |   3.227 (r) | FAST    |    0.293 |
+ofm[14][14]        |   6.821 (r) | SLOW    |   3.264 (r) | FAST    |    0.366 |
+ofm[14][15]        |   6.776 (r) | SLOW    |   3.249 (r) | FAST    |    0.321 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.821 (r) | SLOW    |   2.993 (r) | FAST    |    0.366 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.216 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[15][0]         |   6.650 (r) | SLOW    |   3.111 (r) | FAST    |    0.080 |
+ofm[15][1]         |   6.709 (r) | SLOW    |   3.117 (r) | FAST    |    0.139 |
+ofm[15][2]         |   6.665 (r) | SLOW    |   3.087 (r) | FAST    |    0.095 |
+ofm[15][3]         |   6.573 (r) | SLOW    |   3.033 (r) | FAST    |    0.003 |
+ofm[15][4]         |   6.657 (r) | SLOW    |   3.078 (r) | FAST    |    0.086 |
+ofm[15][5]         |   6.667 (r) | SLOW    |   3.152 (r) | FAST    |    0.120 |
+ofm[15][6]         |   6.570 (r) | SLOW    |   3.032 (r) | FAST    |    0.000 |
+ofm[15][7]         |   6.776 (r) | SLOW    |   3.218 (r) | FAST    |    0.206 |
+ofm[15][8]         |   6.713 (r) | SLOW    |   3.195 (r) | FAST    |    0.163 |
+ofm[15][9]         |   6.663 (r) | SLOW    |   3.148 (r) | FAST    |    0.117 |
+ofm[15][10]        |   6.746 (r) | SLOW    |   3.196 (r) | FAST    |    0.176 |
+ofm[15][11]        |   6.749 (r) | SLOW    |   3.195 (r) | FAST    |    0.179 |
+ofm[15][12]        |   6.786 (r) | SLOW    |   3.227 (r) | FAST    |    0.216 |
+ofm[15][13]        |   6.571 (r) | SLOW    |   3.032 (r) | FAST    |    0.001 |
+ofm[15][14]        |   6.643 (r) | SLOW    |   3.065 (r) | FAST    |    0.073 |
+ofm[15][15]        |   6.661 (r) | SLOW    |   3.150 (r) | FAST    |    0.118 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.786 (r) | SLOW    |   3.032 (r) | FAST    |    0.216 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.263 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[1][0]          |   6.642 (r) | SLOW    |   3.068 (r) | FAST    |    0.097 |
+ofm[1][1]          |   6.546 (r) | SLOW    |   3.010 (r) | FAST    |    0.000 |
+ofm[1][2]          |   6.621 (r) | SLOW    |   3.047 (r) | FAST    |    0.075 |
+ofm[1][3]          |   6.809 (r) | SLOW    |   3.233 (r) | FAST    |    0.263 |
+ofm[1][4]          |   6.631 (r) | SLOW    |   3.056 (r) | FAST    |    0.085 |
+ofm[1][5]          |   6.560 (r) | SLOW    |   3.025 (r) | FAST    |    0.015 |
+ofm[1][6]          |   6.564 (r) | SLOW    |   3.029 (r) | FAST    |    0.019 |
+ofm[1][7]          |   6.564 (r) | SLOW    |   3.031 (r) | FAST    |    0.020 |
+ofm[1][8]          |   6.788 (r) | SLOW    |   3.239 (r) | FAST    |    0.242 |
+ofm[1][9]          |   6.740 (r) | SLOW    |   3.194 (r) | FAST    |    0.194 |
+ofm[1][10]         |   6.756 (r) | SLOW    |   3.207 (r) | FAST    |    0.211 |
+ofm[1][11]         |   6.689 (r) | SLOW    |   3.176 (r) | FAST    |    0.165 |
+ofm[1][12]         |   6.706 (r) | SLOW    |   3.189 (r) | FAST    |    0.179 |
+ofm[1][13]         |   6.782 (r) | SLOW    |   3.228 (r) | FAST    |    0.236 |
+ofm[1][14]         |   6.677 (r) | SLOW    |   3.165 (r) | FAST    |    0.155 |
+ofm[1][15]         |   6.594 (r) | SLOW    |   3.058 (r) | FAST    |    0.048 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.809 (r) | SLOW    |   3.010 (r) | FAST    |    0.263 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.262 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[2][0]          |   6.630 (r) | SLOW    |   3.075 (r) | FAST    |    0.061 |
+ofm[2][1]          |   6.569 (r) | SLOW    |   3.033 (r) | FAST    |    0.000 |
+ofm[2][2]          |   6.644 (r) | SLOW    |   3.070 (r) | FAST    |    0.075 |
+ofm[2][3]          |   6.598 (r) | SLOW    |   3.061 (r) | FAST    |    0.029 |
+ofm[2][4]          |   6.678 (r) | SLOW    |   3.102 (r) | FAST    |    0.109 |
+ofm[2][5]          |   6.585 (r) | SLOW    |   3.046 (r) | FAST    |    0.016 |
+ofm[2][6]          |   6.585 (r) | SLOW    |   3.047 (r) | FAST    |    0.016 |
+ofm[2][7]          |   6.815 (r) | SLOW    |   3.256 (r) | FAST    |    0.246 |
+ofm[2][8]          |   6.755 (r) | SLOW    |   3.237 (r) | FAST    |    0.204 |
+ofm[2][9]          |   6.720 (r) | SLOW    |   3.205 (r) | FAST    |    0.172 |
+ofm[2][10]         |   6.790 (r) | SLOW    |   3.240 (r) | FAST    |    0.221 |
+ofm[2][11]         |   6.811 (r) | SLOW    |   3.254 (r) | FAST    |    0.242 |
+ofm[2][12]         |   6.831 (r) | SLOW    |   3.271 (r) | FAST    |    0.262 |
+ofm[2][13]         |   6.603 (r) | SLOW    |   3.063 (r) | FAST    |    0.034 |
+ofm[2][14]         |   6.669 (r) | SLOW    |   3.090 (r) | FAST    |    0.100 |
+ofm[2][15]         |   6.692 (r) | SLOW    |   3.113 (r) | FAST    |    0.123 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.831 (r) | SLOW    |   3.033 (r) | FAST    |    0.262 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.313 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[3][0]          |   6.504 (r) | SLOW    |   3.085 (r) | FAST    |    0.000 |
+ofm[3][1]          |   6.592 (r) | SLOW    |   3.095 (r) | FAST    |    0.089 |
+ofm[3][2]          |   6.602 (r) | SLOW    |   3.106 (r) | FAST    |    0.098 |
+ofm[3][3]          |   6.796 (r) | SLOW    |   3.274 (r) | FAST    |    0.292 |
+ofm[3][4]          |   6.817 (r) | SLOW    |   3.282 (r) | FAST    |    0.313 |
+ofm[3][5]          |   6.787 (r) | SLOW    |   3.264 (r) | FAST    |    0.284 |
+ofm[3][6]          |   6.708 (r) | SLOW    |   3.223 (r) | FAST    |    0.204 |
+ofm[3][7]          |   6.740 (r) | SLOW    |   3.258 (r) | FAST    |    0.236 |
+ofm[3][8]          |   6.730 (r) | SLOW    |   3.252 (r) | FAST    |    0.227 |
+ofm[3][9]          |   6.770 (r) | SLOW    |   3.265 (r) | FAST    |    0.266 |
+ofm[3][10]         |   6.748 (r) | SLOW    |   3.249 (r) | FAST    |    0.245 |
+ofm[3][11]         |   6.660 (r) | SLOW    |   3.202 (r) | FAST    |    0.156 |
+ofm[3][12]         |   6.629 (r) | SLOW    |   3.174 (r) | FAST    |    0.125 |
+ofm[3][13]         |   6.629 (r) | SLOW    |   3.170 (r) | FAST    |    0.125 |
+ofm[3][14]         |   6.547 (r) | SLOW    |   3.128 (r) | FAST    |    0.043 |
+ofm[3][15]         |   6.619 (r) | SLOW    |   3.166 (r) | FAST    |    0.115 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.817 (r) | SLOW    |   3.085 (r) | FAST    |    0.313 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.186 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[4][0]          |   6.747 (r) | SLOW    |   3.230 (r) | FAST    |    0.155 |
+ofm[4][1]          |   6.777 (r) | SLOW    |   3.247 (r) | FAST    |    0.186 |
+ofm[4][2]          |   6.737 (r) | SLOW    |   3.218 (r) | FAST    |    0.146 |
+ofm[4][3]          |   6.698 (r) | SLOW    |   3.218 (r) | FAST    |    0.107 |
+ofm[4][4]          |   6.748 (r) | SLOW    |   3.271 (r) | FAST    |    0.157 |
+ofm[4][5]          |   6.740 (r) | SLOW    |   3.267 (r) | FAST    |    0.149 |
+ofm[4][6]          |   6.763 (r) | SLOW    |   3.263 (r) | FAST    |    0.172 |
+ofm[4][7]          |   6.718 (r) | SLOW    |   3.224 (r) | FAST    |    0.127 |
+ofm[4][8]          |   6.656 (r) | SLOW    |   3.203 (r) | FAST    |    0.065 |
+ofm[4][9]          |   6.640 (r) | SLOW    |   3.189 (r) | FAST    |    0.048 |
+ofm[4][10]         |   6.663 (r) | SLOW    |   3.203 (r) | FAST    |    0.072 |
+ofm[4][11]         |   6.591 (r) | SLOW    |   3.174 (r) | FAST    |    0.000 |
+ofm[4][12]         |   6.607 (r) | SLOW    |   3.186 (r) | FAST    |    0.016 |
+ofm[4][13]         |   6.670 (r) | SLOW    |   3.212 (r) | FAST    |    0.079 |
+ofm[4][14]         |   6.746 (r) | SLOW    |   3.252 (r) | FAST    |    0.155 |
+ofm[4][15]         |   6.762 (r) | SLOW    |   3.266 (r) | FAST    |    0.171 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.777 (r) | SLOW    |   3.174 (r) | FAST    |    0.186 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.246 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[5][0]          |   6.828 (r) | SLOW    |   3.306 (r) | FAST    |    0.246 |
+ofm[5][1]          |   6.582 (r) | SLOW    |   3.165 (r) | FAST    |    0.000 |
+ofm[5][2]          |   6.804 (r) | SLOW    |   3.280 (r) | FAST    |    0.222 |
+ofm[5][3]          |   6.759 (r) | SLOW    |   3.274 (r) | FAST    |    0.178 |
+ofm[5][4]          |   6.797 (r) | SLOW    |   3.315 (r) | FAST    |    0.216 |
+ofm[5][5]          |   6.779 (r) | SLOW    |   3.300 (r) | FAST    |    0.197 |
+ofm[5][6]          |   6.780 (r) | SLOW    |   3.275 (r) | FAST    |    0.199 |
+ofm[5][7]          |   6.766 (r) | SLOW    |   3.266 (r) | FAST    |    0.185 |
+ofm[5][8]          |   6.696 (r) | SLOW    |   3.237 (r) | FAST    |    0.115 |
+ofm[5][9]          |   6.666 (r) | SLOW    |   3.209 (r) | FAST    |    0.084 |
+ofm[5][10]         |   6.678 (r) | SLOW    |   3.218 (r) | FAST    |    0.097 |
+ofm[5][11]         |   6.629 (r) | SLOW    |   3.207 (r) | FAST    |    0.047 |
+ofm[5][12]         |   6.648 (r) | SLOW    |   3.222 (r) | FAST    |    0.066 |
+ofm[5][13]         |   6.705 (r) | SLOW    |   3.243 (r) | FAST    |    0.124 |
+ofm[5][14]         |   6.771 (r) | SLOW    |   3.272 (r) | FAST    |    0.189 |
+ofm[5][15]         |   6.798 (r) | SLOW    |   3.296 (r) | FAST    |    0.216 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.828 (r) | SLOW    |   3.165 (r) | FAST    |    0.246 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.093 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[6][0]          |   6.880 (r) | SLOW    |   3.210 (r) | FAST    |    0.039 |
+ofm[6][1]          |   6.870 (r) | SLOW    |   3.179 (r) | FAST    |    0.029 |
+ofm[6][2]          |   6.867 (r) | SLOW    |   3.177 (r) | FAST    |    0.026 |
+ofm[6][3]          |   6.901 (r) | SLOW    |   3.209 (r) | FAST    |    0.060 |
+ofm[6][4]          |   6.900 (r) | SLOW    |   3.208 (r) | FAST    |    0.059 |
+ofm[6][5]          |   6.893 (r) | SLOW    |   3.202 (r) | FAST    |    0.052 |
+ofm[6][6]          |   6.890 (r) | SLOW    |   3.199 (r) | FAST    |    0.049 |
+ofm[6][7]          |   6.934 (r) | SLOW    |   3.225 (r) | FAST    |    0.093 |
+ofm[6][8]          |   6.859 (r) | SLOW    |   3.189 (r) | FAST    |    0.018 |
+ofm[6][9]          |   6.886 (r) | SLOW    |   3.195 (r) | FAST    |    0.044 |
+ofm[6][10]         |   6.880 (r) | SLOW    |   3.189 (r) | FAST    |    0.039 |
+ofm[6][11]         |   6.876 (r) | SLOW    |   3.186 (r) | FAST    |    0.034 |
+ofm[6][12]         |   6.871 (r) | SLOW    |   3.181 (r) | FAST    |    0.030 |
+ofm[6][13]         |   6.872 (r) | SLOW    |   3.181 (r) | FAST    |    0.030 |
+ofm[6][14]         |   6.910 (r) | SLOW    |   3.200 (r) | FAST    |    0.069 |
+ofm[6][15]         |   6.841 (r) | SLOW    |   3.174 (r) | FAST    |    0.000 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.934 (r) | SLOW    |   3.174 (r) | FAST    |    0.093 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.112 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[7][0]          |   6.853 (r) | SLOW    |   3.185 (r) | FAST    |    0.025 |
+ofm[7][1]          |   6.862 (r) | SLOW    |   3.175 (r) | FAST    |    0.017 |
+ofm[7][2]          |   6.866 (r) | SLOW    |   3.179 (r) | FAST    |    0.021 |
+ofm[7][3]          |   6.877 (r) | SLOW    |   3.189 (r) | FAST    |    0.031 |
+ofm[7][4]          |   6.876 (r) | SLOW    |   3.188 (r) | FAST    |    0.030 |
+ofm[7][5]          |   6.861 (r) | SLOW    |   3.175 (r) | FAST    |    0.016 |
+ofm[7][6]          |   6.860 (r) | SLOW    |   3.174 (r) | FAST    |    0.015 |
+ofm[7][7]          |   6.847 (r) | SLOW    |   3.162 (r) | FAST    |    0.002 |
+ofm[7][8]          |   6.845 (r) | SLOW    |   3.160 (r) | FAST    |    0.000 |
+ofm[7][9]          |   6.958 (r) | SLOW    |   3.233 (r) | FAST    |    0.112 |
+ofm[7][10]         |   6.864 (r) | SLOW    |   3.179 (r) | FAST    |    0.019 |
+ofm[7][11]         |   6.868 (r) | SLOW    |   3.182 (r) | FAST    |    0.023 |
+ofm[7][12]         |   6.873 (r) | SLOW    |   3.187 (r) | FAST    |    0.028 |
+ofm[7][13]         |   6.866 (r) | SLOW    |   3.199 (r) | FAST    |    0.039 |
+ofm[7][14]         |   6.851 (r) | SLOW    |   3.183 (r) | FAST    |    0.023 |
+ofm[7][15]         |   6.872 (r) | SLOW    |   3.184 (r) | FAST    |    0.026 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.958 (r) | SLOW    |   3.160 (r) | FAST    |    0.112 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.099 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[8][0]          |   6.873 (r) | SLOW    |   3.186 (r) | FAST    |    0.047 |
+ofm[8][1]          |   6.859 (r) | SLOW    |   3.191 (r) | FAST    |    0.052 |
+ofm[8][2]          |   6.845 (r) | SLOW    |   3.177 (r) | FAST    |    0.038 |
+ofm[8][3]          |   6.861 (r) | SLOW    |   3.192 (r) | FAST    |    0.053 |
+ofm[8][4]          |   6.871 (r) | SLOW    |   3.200 (r) | FAST    |    0.061 |
+ofm[8][5]          |   6.836 (r) | SLOW    |   3.145 (r) | FAST    |    0.006 |
+ofm[8][6]          |   6.842 (r) | SLOW    |   3.152 (r) | FAST    |    0.013 |
+ofm[8][7]          |   6.843 (r) | SLOW    |   3.152 (r) | FAST    |    0.014 |
+ofm[8][8]          |   6.835 (r) | SLOW    |   3.144 (r) | FAST    |    0.006 |
+ofm[8][9]          |   6.848 (r) | SLOW    |   3.158 (r) | FAST    |    0.019 |
+ofm[8][10]         |   6.928 (r) | SLOW    |   3.199 (r) | FAST    |    0.099 |
+ofm[8][11]         |   6.829 (r) | SLOW    |   3.139 (r) | FAST    |    0.000 |
+ofm[8][12]         |   6.832 (r) | SLOW    |   3.141 (r) | FAST    |    0.003 |
+ofm[8][13]         |   6.863 (r) | SLOW    |   3.172 (r) | FAST    |    0.034 |
+ofm[8][14]         |   6.865 (r) | SLOW    |   3.173 (r) | FAST    |    0.036 |
+ofm[8][15]         |   6.904 (r) | SLOW    |   3.174 (r) | FAST    |    0.074 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   6.928 (r) | SLOW    |   3.139 (r) | FAST    |    0.099 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: clk
+Bus Skew: 0.111 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+ofm[9][0]          |   6.981 (r) | SLOW    |   3.237 (r) | FAST    |    0.034 |
+ofm[9][1]          |   6.984 (r) | SLOW    |   3.240 (r) | FAST    |    0.038 |
+ofm[9][2]          |   6.972 (r) | SLOW    |   3.229 (r) | FAST    |    0.026 |
+ofm[9][3]          |   6.965 (r) | SLOW    |   3.223 (r) | FAST    |    0.020 |
+ofm[9][4]          |   6.979 (r) | SLOW    |   3.237 (r) | FAST    |    0.034 |
+ofm[9][5]          |   6.981 (r) | SLOW    |   3.239 (r) | FAST    |    0.036 |
+ofm[9][6]          |   7.058 (r) | SLOW    |   3.277 (r) | FAST    |    0.111 |
+ofm[9][7]          |   6.961 (r) | SLOW    |   3.220 (r) | FAST    |    0.017 |
+ofm[9][8]          |   6.957 (r) | SLOW    |   3.214 (r) | FAST    |    0.011 |
+ofm[9][9]          |   6.958 (r) | SLOW    |   3.216 (r) | FAST    |    0.013 |
+ofm[9][10]         |   6.967 (r) | SLOW    |   3.223 (r) | FAST    |    0.021 |
+ofm[9][11]         |   6.952 (r) | SLOW    |   3.209 (r) | FAST    |    0.006 |
+ofm[9][12]         |   6.946 (r) | SLOW    |   3.203 (r) | FAST    |    0.000 |
+ofm[9][13]         |   6.947 (r) | SLOW    |   3.203 (r) | FAST    |    0.000 |
+ofm[9][14]         |   6.972 (r) | SLOW    |   3.228 (r) | FAST    |    0.026 |
+ofm[9][15]         |   6.966 (r) | SLOW    |   3.223 (r) | FAST    |    0.020 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   7.058 (r) | SLOW    |   3.203 (r) | FAST    |    0.111 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+

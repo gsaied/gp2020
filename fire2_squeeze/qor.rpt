@@ -1,0 +1,58 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Feb 24 19:56:49 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_qor_suggestions -file qor.rpt
+| Design       : fire2_squeeze
+| Device       : xc7vx690t
+------------------------------------------------------------------------------------
+
+Report QoR Suggestions
+
+Table of Contents
+-----------------
+1. QoR Suggestions Report Summary
+2. QoR Suggestions - Clocking
+2.1 Summary
+2.2 Details
+
+1. QoR Suggestions Report Summary
+---------------------------------
+
++----------+----------------------------+------------------------------------------------------------------------------------------+
+| Category |     Suggestion Purpose     |                                          Details                                         |
++----------+----------------------------+------------------------------------------------------------------------------------------+
+| Clocking | Optimize clocking networks | Optimize clocking networks to minimize skew and insertion delays.                        |
++----------+----------------------------+------------------------------------------------------------------------------------------+
+* By default the number of failing paths is limited to 100. Use the -max_paths options to override.
+** The design checks report may change until design is completely implemented/routed
+
+
+2. QoR Suggestions - Clocking
+-----------------------------
+
+2.1 Summary
+-----------
+
++-----------------------+-----------------------+----------------------------------------+-------------------------------------+
+|       Suggestion      |      Description      |                Next Step               |             Explanation             |
++-----------------------+-----------------------+----------------------------------------+-------------------------------------+
+| CLOCK-5               | Rebalance source and  | Fix the design to balance source and   | The source and destination clock    |
+|                       | destination clock     | destination clock path delays          | path delays are unbalanced          |
+|                       | paths                 |                                        | resulting in high clock skew.       |
++-----------------------+-----------------------+----------------------------------------+-------------------------------------+
+
+
+2.2 Details
+-----------
+
++-----------------------+-------+--------+---------+---------+----------+-------+--------+--------------+-------------------+-----------------------+----------------------------+-----------------+-----------+
+|       Suggestion      | Path  |  Skew  |         |         | Datapath | Cell% | Route% | Source Clock | Destination Clock | Source Clock Topology | Destination Clock Topology |    Startpoint   |  Endpoint |
+|                       |  Type |        | Slack   | Req.    |   Delay  |       |        |              |                   |                       |                            |                 |           |
+|                       |       |        |         |         |          |       |        |              |                   |                       |                            |                 |           |
++-----------------------+-------+--------+---------+---------+----------+-------+--------+--------------+-------------------+-----------------------+----------------------------+-----------------+-----------+
+| CLOCK-5               | SETUP | -3.991 |  -3.558 |   5.000 |    3.031 | 66.60 |  33.40 | clk          | clk               | IBUF BUFG FDRE        |                            | ofm_reg[9][6]/C | ofm[9][6] |
++-----------------------+-------+--------+---------+---------+----------+-------+--------+--------------+-------------------+-----------------------+----------------------------+-----------------+-----------+
+
+

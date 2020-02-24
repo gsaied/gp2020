@@ -2,47 +2,40 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Feb 23 20:12:14 2020
-# Process ID: 8001
+# Start of session at: Mon Feb 24 20:09:38 2020
+# Process ID: 11287
 # Current directory: /home/gsaied/Desktop/old_rtl/fire2_squeeze
 # Command line: vivado -mode tcl -source synth.tcl
 # Log file: /home/gsaied/Desktop/old_rtl/fire2_squeeze/vivado.log
 # Journal file: /home/gsaied/Desktop/old_rtl/fire2_squeeze/vivado.jou
 #-----------------------------------------------------------
 source synth.tcl
-vi top_fire2_squeeze.sv 
-source synth.tcl 
-place_design 
-report_design_analysis 
-route_design 
-opt_design 
-report_utilization 
 vi utiliziation.rpt 
-vi design.rpt 
-report_utilization -hierarchical
-vi synth.tcl 
-viva
-source synth.tcl 
-vi synth.tcl 
-source synth.tcl 
-vi utiliziation.rpt 
-vi fire2_squeeze.sv 
-place_design 
-place_design 
+vi hierarchical_utilization.rpt 
+report_timing -to [get_ports ofm[9][6]]
+report_timing -to [get_ports ofm[9][6]] -file ofm96.rpt
+vo ofm96.rpt 
+vi ofm96.rpt 
+report_timing
+report_timing -file timi.rpt
+place_design -directive default
+report_timing
+phys_opt_design 
 route_design 
+report_route_status 
+report_route_status -show_all -file routing.rpt
+vi routing.rpt 
+vi utiliziation.rpt 
 report_utilization 
-opt_design 
-report_utilization 
-report_high_fanout_nets 
-report_methodology
-report_design_analysis 
-report_timing -max_paths 5 -to [all_outputs ]
-report_timing -max_paths 5 -to [all_outputs ] -delay_type min
-report_timing_summary 
-report_utilization 
-report_exceptions 
-report_power
-report_power_opt 
-report_qor_suggestions 
 report_drc 
-vi synth.tcl 
+report_drc -file drc.rpt
+report_power
+report_timing
+report_qor_
+report_qor_suggestions 
+write_bitstream 
+write_bitstream -file s
+report_drc -file drc.rpt
+vi drc.rpt 
+report_datasheet 
+report_datasheet > datasheet.rpt

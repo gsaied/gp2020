@@ -14,7 +14,7 @@ module fire8_expand1 #(
 	input [WIDTH-1:0] ifm,
 	input ram_feedback,
 	output reg fire8_expand1_sample,
-	output fire8_expand1_finish ,
+	//output fire8_expand1_finish ,
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
 reg fire8_expand1_end;
@@ -144,7 +144,7 @@ always @(posedge clk or negedge rst) begin
 	else if (ram_feedback)
 		ram_feedback_reg<= 1'b1 ;
 end
-assign fire8_expand1_finish= !ram_feedback_reg && fire8_expand1_end ; 
+//assign fire8_expand1_finish= !ram_feedback_reg && fire8_expand1_end ; 
 endmodule
 
 

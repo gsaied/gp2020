@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sun Feb 23 20:20:29 2020
+| Date         : Mon Feb 24 20:10:39 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -file utiliziation.rpt
 | Design       : fire2_squeeze
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |  245 |     0 |    433200 |  0.06 |
 |   LUT as Logic          |  245 |     0 |    433200 |  0.06 |
 |   LUT as Memory         |    0 |     0 |    174200 |  0.00 |
-| Slice Registers         |  294 |     0 |    866400 |  0.03 |
-|   Register as Flip Flop |  294 |     0 |    866400 |  0.03 |
+| Slice Registers         |  295 |     0 |    866400 |  0.03 |
+|   Register as Flip Flop |  295 |     0 |    866400 |  0.03 |
 |   Register as Latch     |    0 |     0 |    866400 |  0.00 |
 | F7 Muxes                |    6 |     0 |    216600 | <0.01 |
 | F8 Muxes                |    0 |     0 |    108300 |  0.00 |
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 37    |          Yes |           - |        Reset |
+| 38    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 257   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -154,16 +154,16 @@ Table of Contents
 +----------+------+---------------------+
 | OBUF     |  258 |                  IO |
 | FDRE     |  257 |        Flop & Latch |
-| LUT1     |  181 |                 LUT |
+| LUT1     |  180 |                 LUT |
 | CARRY4   |   99 |          CarryLogic |
-| FDCE     |   37 |        Flop & Latch |
+| FDCE     |   38 |        Flop & Latch |
 | LUT6     |   24 |                 LUT |
 | LUT4     |   23 |                 LUT |
 | IBUF     |   20 |                  IO |
 | DSP48E1  |   16 |    Block Arithmetic |
 | RAMB18E1 |   15 |        Block Memory |
 | LUT5     |   11 |                 LUT |
-| LUT2     |    7 |                 LUT |
+| LUT2     |    8 |                 LUT |
 | MUXF7    |    6 |               MuxFx |
 | LUT3     |    6 |                 LUT |
 | BUFG     |    1 |               Clock |

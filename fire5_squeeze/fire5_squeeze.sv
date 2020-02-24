@@ -137,7 +137,6 @@ end
 always @(posedge clk) begin
 	fire5_squeeze_sample <= clr_pulse ; 
 end
-assign fire5_squeeze_finish= !ram_feedback && fire5_squeeze_end ; 
 reg ram_feedback_reg ; 
 always @(posedge clk or negedge rst) begin
 	if(!rst)

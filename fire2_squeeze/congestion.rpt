@@ -1,0 +1,53 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Feb 24 19:26:40 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_design_analysis -congestion -file congestion.rpt
+| Design       : fire2_squeeze
+| Device       : xc7vx690t
+------------------------------------------------------------------------------------
+
+Report Design Analysis
+
+Table of Contents
+-----------------
+1. Placer Final Level Congestion Reporting
+2. Initial Estimated Router Congestion Reporting
+3. SLR Net Crossing Reporting
+
+1. Placer Final Level Congestion Reporting
+------------------------------------------
+
++-----------+-------+------------+-----------------------------------+---------------------+---------------+---------------+------+--------+------+------+------+-----+-------+-----+
+| Direction | Level | Congestion |               Window              |      Cell Names     | Combined LUTs | Avg LUT Input |  LUT | LUTRAM | Flop | MUXF | RAMB | DSP | CARRY | SRL |
++-----------+-------+------------+-----------------------------------+---------------------+---------------+---------------+------+--------+------+------+------+-----+-------+-----+
+| North     |     0 |        30% | (CLBLM_L_X30Y395,CLBLM_L_X30Y395) | fire2_squeeze(100%) |            0% |         1.000 | 25%  | 0%     |   6% |   0% | NA   | NA  |    0% |  0% |
+| East      |     0 |        22% | (CLBLM_R_X33Y420,CLBLM_R_X33Y420) | fire2_squeeze(100%) |            0% |         0.500 | 50%  | 0%     |   0% |   0% | NA   | NA  |    5% |  0% |
+| South     |     0 |        30% | (CLBLM_L_X30Y288,CLBLM_L_X30Y288) | fire2_squeeze(100%) |            0% |         0.000 | 0%   | 0%     |  18% |   0% | NA   | NA  |    0% |  0% |
+| West      |     0 |        22% | (CLBLL_L_X32Y397,CLBLL_L_X32Y397) | fire2_squeeze(100%) |           50% |         5.750 | 100% | NA     |  43% |   0% | NA   | NA  |    0% |  NA |
++-----------+-------+------------+-----------------------------------+---------------------+---------------+---------------+------+--------+------+------+------+-----+-------+-----+
+
+
+2. Initial Estimated Router Congestion Reporting
+------------------------------------------------
+
++-----------+------+-------+------------------+-----------------------------------+---------------------+---------------+---------------+-----+--------+------+------+------+-----+-------+-----+
+| Direction | Type | Level | Percentage Tiles |               Window              |      Cell Names     | Combined LUTs | Avg LUT Input | LUT | LUTRAM | Flop | MUXF | RAMB | DSP | CARRY | SRL |
++-----------+------+-------+------------------+-----------------------------------+---------------------+---------------+---------------+-----+--------+------+------+------+-----+-------+-----+
+| North     | Long |     0 |           0.003% | (CLBLM_R_X33Y459,CLBLM_R_X33Y459) |                     |            0% |         0.000 | 0%  | 0%     |   0% |   0% | NA   | NA  |    0% |  0% |
+| South     | Long |     0 |           0.003% | (CLBLM_R_X33Y441,CLBLM_R_X33Y441) |                     |            0% |         0.000 | 0%  | 0%     |   0% |   0% | NA   | NA  |    0% |  0% |
+| East      | Long |     0 |           0.001% | (CLBLL_L_X18Y389,CLBLL_L_X18Y389) |                     |            0% |         0.000 | 0%  | NA     |   0% |   0% | NA   | NA  |    0% |  NA |
+| West      | Long |     0 |           0.001% | (CLBLM_L_X30Y389,CLBLM_L_X30Y389) | fire2_squeeze(100%) |            0% |         3.250 | 50% | 0%     |  31% |   0% | NA   | NA  |    0% |  0% |
++-----------+------+-------+------------------+-----------------------------------+---------------------+---------------+---------------+-----+--------+------+------+------+-----+-------+-----+
+
+
+3. SLR Net Crossing Reporting
+-----------------------------
+
++------------+-----------------------------+
+| Cell Names | Number of Nets crossing SLR |
++------------+-----------------------------+
+* The current part is not an SSI device
+
+
