@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Feb 23 02:42:44 2020
-# Process ID: 4445
+# Start of session at: Sun Feb 23 12:40:37 2020
+# Process ID: 2446
 # Current directory: /home/gsaied/Desktop/old_rtl/conv10
 # Command line: vivado -mode tcl -source synth.tcl
 # Log file: /home/gsaied/Desktop/old_rtl/conv10/vivado.log
@@ -17,9 +17,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4455 
+INFO: Helper process launched with PID 2624 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1447.645 ; gain = 97.000 ; free physical = 5974 ; free virtual = 8678
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1447.645 ; gain = 97.000 ; free physical = 5512 ; free virtual = 8811
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'conv10_1_2' [/home/gsaied/Desktop/old_rtl/conv10/conv10_1_2.sv:10]
 	Parameter WOUT bound to: 8 - type: integer 
@@ -376,10 +376,10 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'ofmw2_reg[412]' and
 INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6155] done synthesizing module 'conv10_1_2' (10#1) [/home/gsaied/Desktop/old_rtl/conv10/conv10_1_2.sv:10]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2305.105 ; gain = 954.461 ; free physical = 5239 ; free virtual = 7988
+Finished Synthesize : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2305.105 ; gain = 954.461 ; free physical = 4751 ; free virtual = 8097
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2305.105 ; gain = 954.461 ; free physical = 5353 ; free virtual = 8102
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2305.105 ; gain = 954.461 ; free physical = 4863 ; free virtual = 8210
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -387,7 +387,7 @@ Start Loading Part and Timing Information
 Loading part: xc7vx690tffg1157-3
 INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2313.109 ; gain = 962.465 ; free physical = 5337 ; free virtual = 8100
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2313.109 ; gain = 962.465 ; free physical = 4862 ; free virtual = 8209
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "rom_489" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "rom_490" won't be mapped to RAM because it is too sparse
@@ -443,7 +443,7 @@ INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is to
 INFO: [Synth 8-5546] ROM "conv10_1_end" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "conv10_2_end" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:32 ; elapsed = 00:01:40 . Memory (MB): peak = 3182.148 ; gain = 1831.504 ; free physical = 4633 ; free virtual = 7497
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:33 ; elapsed = 00:01:39 . Memory (MB): peak = 3182.094 ; gain = 1831.449 ; free physical = 4068 ; free virtual = 7589
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 

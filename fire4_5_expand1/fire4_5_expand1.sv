@@ -23,10 +23,10 @@ module fire4_5_expand_1 #(
 	input fire5_expand_1_en,
 	input [15:0] ifm_4,
 	input [15:0] ifm_5,
-	input ram_feedback_2,
-	input ram_feedback_3,
-	output fire4_expand_1_finish,
-	output fire5_expand_1_finish,
+	input ram_feedback_4,
+	input ram_feedback_5,
+	//output fire4_expand_1_finish,
+	//output fire5_expand_1_finish,
 	output reg fire4_expand_1_sample,
 	output reg [WIDTH-1:0] ofm_4 [0:DSP_NO-1],
 	output reg [WIDTH-1:0] ofm_5 [0:DSP_NO-1]
@@ -208,12 +208,14 @@ always @(posedge clk or negedge rst) begin
 		ram_feedback_reg_4<=1'b0 ;
 		ram_feedback_reg_5<=1'b0 ;
 	end
-	else if (ram_feedback_2) 
+	else if (ram_feedback_4) 
 		ram_feedback_reg_4<= 1'b1 ;
-	else if (ram_feedback_3) 
+	else if (ram_feedback_5) 
 		ram_feedback_reg_5<= 1'b1 ;
 end
+/*
 assign fire4_expand_1_finish = fire4_expand_1_end && !ram_feedback_reg_4 ;
 assign fire5_expand_1_finish = fire5_expand_1_end && !ram_feedback_reg_5 ;
+*/
 endmodule
 

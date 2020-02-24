@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Feb 23 20:12:14 2020
+# Process ID: 8001
+# Current directory: /home/gsaied/Desktop/old_rtl/fire2_squeeze
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/fire2_squeeze/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire2_squeeze/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+vi top_fire2_squeeze.sv 
+source synth.tcl 
+place_design 
+report_design_analysis 
+route_design 
+opt_design 
+report_utilization 
+vi utiliziation.rpt 
+vi design.rpt 
+report_utilization -hierarchical
+vi synth.tcl 
+viva
+source synth.tcl 
+vi synth.tcl 
+source synth.tcl 
+vi utiliziation.rpt 
+vi fire2_squeeze.sv 
+place_design 
+place_design 
+route_design 
+report_utilization 
+opt_design 
+report_utilization 
+report_high_fanout_nets 
+report_methodology
+report_design_analysis 
+report_timing -max_paths 5 -to [all_outputs ]
+report_timing -max_paths 5 -to [all_outputs ] -delay_type min
+report_timing_summary 
+report_utilization 
+report_exceptions 
+report_power
+report_power_opt 
+report_qor_suggestions 
+report_drc 
+vi synth.tcl 

@@ -25,8 +25,8 @@ module fire2_3_expand_1 #(
 	input [15:0] ifm_3,
 	input ram_feedback_2,
 	input ram_feedback_3,
-	output fire2_expand_1_finish,
-	output fire3_expand_1_finish,
+	//output fire2_expand_1_finish,
+	//output fire3_expand_1_finish,
 	output reg fire2_expand_1_sample,
 	output reg [WIDTH-1:0] ofm_2 [0:DSP_NO-1],
 	output reg [WIDTH-1:0] ofm_3 [0:DSP_NO-1]
@@ -213,7 +213,9 @@ always @(posedge clk or negedge rst) begin
 	else if (ram_feedback_3) 
 		ram_feedback_reg_3<= 1'b1 ;
 end
+/*
 assign fire2_expand_1_finish = fire2_expand_1_end && !ram_feedback_reg_2 ;
 assign fire3_expand_1_finish = fire3_expand_1_end && !ram_feedback_reg_3 ;
+*/
 endmodule
 

@@ -64,7 +64,7 @@ always @(posedge clk or negedge rst) begin
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
-	else if (!fire2_squeeze_end) begin
+	else if (!fire2_squeeze_end && fire2_squeeze_en) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
@@ -72,12 +72,12 @@ always @(posedge clk or negedge rst) begin
 		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
 			clr_counter <= 0 ;
 			clr_pulse<= 1'b1 ;
-		rom_clr_pulse <= 1'b0 ;
+			rom_clr_pulse <= 1'b0 ;
 		end
 		else begin
 			clr_pulse <= 1'b0 ;
 			clr_counter <= clr_counter +1;
-		rom_clr_pulse <= 1'b0 ;
+			rom_clr_pulse <= 1'b0 ;
 		end
 	end
 end
@@ -92,6 +92,7 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 		.clr(clr_pulse),
 		.clk(clk),
 		.rst(rst),
+		.layer_en(1),
 		.pix(ifm),
 		.mul_out(ofmw[i]),
 		.ker(kernel_regs[i])

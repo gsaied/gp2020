@@ -61,7 +61,7 @@ always @(posedge clk or negedge rst) begin
 		weight_rom_address<= 5'b0 ; 
 	else if (rom_clr_pulse)
 		weight_rom_address<= 5'b0;// 5--> ceil(logn(HIN**2*CHIN,2))
-	else begin
+	else if (conv1_en) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
@@ -135,7 +135,7 @@ always @(posedge clk or negedge rst) begin
 		clr_pulse <= 1'b0 ;
 		rom_clr_pulse<= 1'b0 ;
 	end
-	else if (!conv1_end) begin
+	else if (!conv1_end && conv1_en) begin
 		if (clr_counter == KERNEL_DIM**2*CHIN-1) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter<= clr_counter +1 ;
@@ -204,7 +204,7 @@ end
 //////////////////////////////////
 genvar i ; 
 generate for (i = 0 ; i < CHOUT ; i++) begin
-	mac mac_i  (
+	conv_mac mac_i  (
 		.clr(clr_pulse),
 		.clk(clk),
 		.rst(rst),
