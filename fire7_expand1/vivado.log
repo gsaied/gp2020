@@ -35,3 +35,5 @@ WARNING: [Common 17-259] Unknown Tcl command 'vi utiliziation.rpt' sending comma
 couldn't fork child process: not enough memory
 vi utiliziation.rpt
 WARNING: [Common 17-259] Unknown Tcl command 'vi utiliziation.rpt' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 24 23:33:03 2020...

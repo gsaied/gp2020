@@ -1,0 +1,1018 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Feb 25 19:50:12 2020
+| Host         : GCS running 64-bit unknown
+| Command      : report_timing -max_paths 50 -file timing.rpt
+| Design       : fire6_squeeze
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 fire6_squeeze_end_reg/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            fire6_squeeze_finish
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.904ns  (logic 2.140ns (73.710%)  route 0.763ns (26.290%))
+  Logic Levels:           3  (FDCE=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  fire6_squeeze_end_reg/C
+                         FDCE (Prop_fdce_C_Q)         0.226     0.226 r  fire6_squeeze_end_reg/Q
+                         net (fo=69, unplaced)        0.329     0.555    fire6_squeeze_end_reg_n_0
+                         LUT2 (Prop_lut2_I0_O)        0.119     0.674 r  fire6_squeeze_finish_OBUF_inst_i_1/O
+                         net (fo=1, unplaced)         0.434     1.108    fire6_squeeze_finish_OBUF
+                         OBUF (Prop_obuf_I_O)         1.795     2.904 r  fire6_squeeze_finish_OBUF_inst/O
+                         net (fo=0)                   0.000     2.904    fire6_squeeze_finish
+                                                                      r  fire6_squeeze_finish (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fire6_squeeze_sample_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            fire6_squeeze_sample
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  fire6_squeeze_sample_reg/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  fire6_squeeze_sample_reg/Q
+                         net (fo=1, unplaced)         0.434     0.660    fire6_squeeze_sample_OBUF
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  fire6_squeeze_sample_OBUF_inst/O
+                         net (fo=0)                   0.000     2.534    fire6_squeeze_sample
+                                                                      r  fire6_squeeze_sample (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][0]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][0]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[0]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][0]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][0]
+                                                                      r  ofm[0][0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][10]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][10]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][10]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[10]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][10]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][10]
+                                                                      r  ofm[0][10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][11]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][11]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][11]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[11]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][11]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][11]
+                                                                      r  ofm[0][11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][12]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][12]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][12]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][12]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[12]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][12]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][12]
+                                                                      r  ofm[0][12] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][13]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][13]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][13]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][13]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[13]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][13]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][13]
+                                                                      r  ofm[0][13] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][14]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][14]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][14]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][14]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[14]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][14]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][14]
+                                                                      r  ofm[0][14] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][15]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][15]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][15]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][15]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[15]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][15]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][15]
+                                                                      r  ofm[0][15] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][1]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][1]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[1]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][1]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][1]
+                                                                      r  ofm[0][1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][2]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][2]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[2]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][2]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][2]
+                                                                      r  ofm[0][2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][3]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][3]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[3]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][3]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][3]
+                                                                      r  ofm[0][3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][4]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][4]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[4]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][4]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][4]
+                                                                      r  ofm[0][4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][5]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][5]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[5]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][5]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][5]
+                                                                      r  ofm[0][5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][6]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][6]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][6]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[6]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][6]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][6]
+                                                                      r  ofm[0][6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][7]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][7]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[7]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][7]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][7]
+                                                                      r  ofm[0][7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][8]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][8]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][8]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][8]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[8]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][8]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][8]
+                                                                      r  ofm[0][8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[0][9]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[0][9]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[0][9]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[0][9]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[0]_OBUF[9]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[0][9]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[0][9]
+                                                                      r  ofm[0][9] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][0]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][0]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[0]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][0]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][0]
+                                                                      r  ofm[10][0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][10]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][10]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][10]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[10]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][10]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][10]
+                                                                      r  ofm[10][10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][11]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][11]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][11]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[11]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][11]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][11]
+                                                                      r  ofm[10][11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][12]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][12]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][12]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][12]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[12]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][12]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][12]
+                                                                      r  ofm[10][12] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][13]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][13]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][13]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][13]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[13]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][13]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][13]
+                                                                      r  ofm[10][13] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][14]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][14]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][14]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][14]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[14]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][14]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][14]
+                                                                      r  ofm[10][14] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][15]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][15]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][15]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][15]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[15]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][15]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][15]
+                                                                      r  ofm[10][15] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][1]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][1]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[1]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][1]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][1]
+                                                                      r  ofm[10][1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][2]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][2]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[2]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][2]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][2]
+                                                                      r  ofm[10][2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][3]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][3]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[3]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][3]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][3]
+                                                                      r  ofm[10][3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][4]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][4]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[4]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][4]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][4]
+                                                                      r  ofm[10][4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][5]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][5]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[5]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][5]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][5]
+                                                                      r  ofm[10][5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][6]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][6]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][6]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[6]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][6]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][6]
+                                                                      r  ofm[10][6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][7]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][7]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[7]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][7]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][7]
+                                                                      r  ofm[10][7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][8]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][8]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][8]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][8]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[8]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][8]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][8]
+                                                                      r  ofm[10][8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[10][9]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[10][9]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[10][9]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[10][9]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[10]_OBUF[9]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[10][9]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[10][9]
+                                                                      r  ofm[10][9] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][0]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][0]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[0]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][0]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][0]
+                                                                      r  ofm[11][0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][10]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][10]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][10]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[10]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][10]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][10]
+                                                                      r  ofm[11][10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][11]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][11]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][11]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[11]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][11]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][11]
+                                                                      r  ofm[11][11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][12]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][12]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][12]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][12]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[12]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][12]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][12]
+                                                                      r  ofm[11][12] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][13]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][13]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][13]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][13]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[13]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][13]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][13]
+                                                                      r  ofm[11][13] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][14]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][14]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][14]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][14]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[14]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][14]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][14]
+                                                                      r  ofm[11][14] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][15]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][15]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][15]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][15]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[15]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][15]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][15]
+                                                                      r  ofm[11][15] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][1]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][1]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[1]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][1]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][1]
+                                                                      r  ofm[11][1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][2]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][2]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[2]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][2]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][2]
+                                                                      r  ofm[11][2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][3]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][3]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[3]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][3]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][3]
+                                                                      r  ofm[11][3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][4]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][4]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[4]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][4]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][4]
+                                                                      r  ofm[11][4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][5]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][5]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[5]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][5]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][5]
+                                                                      r  ofm[11][5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][6]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][6]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][6]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[6]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][6]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][6]
+                                                                      r  ofm[11][6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][7]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][7]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[7]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][7]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][7]
+                                                                      r  ofm[11][7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][8]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][8]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][8]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][8]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[8]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][8]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][8]
+                                                                      r  ofm[11][8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ofm_reg[11][9]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ofm[11][9]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.534ns  (logic 2.099ns (82.855%)  route 0.434ns (17.145%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  ofm_reg[11][9]/C
+                         FDRE (Prop_fdre_C_Q)         0.226     0.226 r  ofm_reg[11][9]/Q
+                         net (fo=1, unplaced)         0.434     0.660    ofm[11]_OBUF[9]
+                         OBUF (Prop_obuf_I_O)         1.873     2.534 r  ofm[11][9]_INST_0/O
+                         net (fo=0)                   0.000     2.534    ofm[11][9]
+                                                                      r  ofm[11][9] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

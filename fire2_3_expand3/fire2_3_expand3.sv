@@ -75,12 +75,14 @@ reg rom_clr_pulse;
 always @(posedge clk or negedge rst) begin
 	if(!rst)
 		weight_rom_address<= 0 ; 
-	else if (rom_clr_pulse)
+	else if (rom_clr_pulse || rst_gen)
 		weight_rom_address<= 0;
 	else if (fire2_expand_3_en || fire3_expand_3_en)begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
+wire rst_gen ;// resets all signals after fire2 ends
+assign rst_gen = fire2_expand_3_end && fire2_expand_3_en ; 
 ////////////////////////////
 //ENABLE SIGNALS MULTIPLEX//
 //ROM & INPUTS TO MAC///////
@@ -106,11 +108,11 @@ end
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ; 
 always @(posedge clk or negedge rst) begin
 	if(!rst) begin
-		clr_pulse <= 1'b0 ; 
-		rom_clr_pulse <= 1'b0 ; 
-		clr_counter <= 0 ;
+			clr_pulse <= 1'b0 ; 
+			rom_clr_pulse <= 1'b0 ; 
+			clr_counter <= 0 ;
 	end
-	else if (!(fire2_expand_3_end && fire3_expand_3_end) && (fire3_expand_3_en || fire2_expand_3_en)) begin
+	else if (!(fire2_expand_3_end && fire3_expand_3_end) && (fire3_expand_3_en || fire2_expand_3_en) && !rst_gen) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ; 
 			clr_counter <= clr_counter+1 ;
@@ -126,6 +128,11 @@ always @(posedge clk or negedge rst) begin
 			rom_clr_pulse <= 1'b0 ; 
 		end
 	end
+	else if (rst_gen) begin
+			clr_pulse <= 1'b0 ; 
+			rom_clr_pulse <= 1'b0 ; 
+			clr_counter <= 0 ;
+	end
 end
 //////////////////////////////
 //CORE GENERATION/////////////
@@ -135,7 +142,7 @@ reg [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
 genvar i ; 
 generate for (i = 0 ; i< CHOUT ; i++) begin
 	mac mac_i (
-		.clr(clr_pulse),
+		.clr(clr_pulse || rst_gen),
 		.clk(clk),
 		.rst(rst),
 		.layer_en(layer_en_reg),
@@ -159,14 +166,13 @@ always@(posedge clk) begin
 			if(ofmw2[i][31] == 1'b1 ) begin 
 				if (fire2_expand_3_en)
 					ofm_2[i] <= 16'b0 ;
-				else
+				else if (fire3_expand_3_en)
 					ofm_3[i] <= 16'b0 ;
 			end
 			else begin
 				if (fire2_expand_3_en)
 					ofm_2[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
-				else
-
+				else if (fire3_expand_3_en)
 					ofm_3[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
 			end
 		end
@@ -190,7 +196,7 @@ always @(posedge clk or negedge rst) begin
 		else if (clr_pulse)
 			fire2_expand_3_timer<= fire2_expand_3_timer+1 ; 
 		end
-	else begin
+	else if (fire3_expand_3_en) begin
 		if (fire3_expand_3_timer == WOUT**2+1)
 			fire3_expand_3_end <= 1'b1 ;
 		else if (clr_pulse)

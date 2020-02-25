@@ -1,6 +1,5 @@
-
-	/* verilator lint_off COMBDLY */
-	module rom2_conv10_2 #(
+/* verilator lint_off COMBDLY */
+module rom2_conv10_2 #(
 	parameter WIDTH=16,
 	parameter KERNEL=1,
 	parameter ADDR=8,

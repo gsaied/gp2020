@@ -75,12 +75,14 @@ reg rom_clr_pulse;
 always @(posedge clk or negedge rst) begin
 	if(!rst)
 		weight_rom_address<= 0 ; 
-	else if (rom_clr_pulse)
+	else if (rom_clr_pulse || rst_gen)
 		weight_rom_address<= 0;
 	else if (fire4_expand_3_en || fire5_expand_3_en)begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
+wire rst_gen ; 
+assign rst_gen = fire4_expand_3_end && fire4_expand_3_en ;
 ////////////////////////////
 //ENABLE SIGNALS MULTIPLEX//
 //ROM & INPUTS TO MAC///////
@@ -110,7 +112,7 @@ always @(posedge clk or negedge rst) begin
 		rom_clr_pulse <= 1'b0 ; 
 		clr_counter <= 0 ;
 	end
-	else if (!(fire4_expand_3_end && fire5_expand_3_end) && (fire5_expand_3_en || fire4_expand_3_en)) begin
+	else if (!(fire4_expand_3_end && fire5_expand_3_end) && (fire5_expand_3_en || fire4_expand_3_en) && !rst_gen) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ; 
 			clr_counter <= clr_counter+1 ;
@@ -126,6 +128,11 @@ always @(posedge clk or negedge rst) begin
 			rom_clr_pulse <= 1'b0 ; 
 		end
 	end
+	else if (rst_gen) begin
+		clr_pulse <= 1'b0 ; 
+		rom_clr_pulse <= 1'b0 ; 
+		clr_counter <= 0 ;
+	end
 end
 //////////////////////////////
 //CORE GENERATION/////////////
@@ -135,7 +142,7 @@ reg [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
 genvar i ; 
 generate for (i = 0 ; i< CHOUT ; i++) begin
 	mac mac_i (
-		.clr(clr_pulse),
+		.clr(clr_pulse || rst_gen),
 		.clk(clk),
 		.rst(rst),
 		.layer_en(layer_en_reg),

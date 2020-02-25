@@ -3,10 +3,10 @@ read_verilog -sv [ glob *.sv ]
 #uncomment the following 2 lines to get schematic view
 #synth_design -rtl <TOP>
 #start_gui
-#synth_design -top integ -part xc7vx690t -keep_equivalent_registers
-synth_design -top [lindex [find_top] 0] -part xc7vx690t
-#opt_design
-
+#synth_design -top pop -part xc7vx690t -keep_equivalent_registers -quiet 
+synth_design -top fire6_squeeze -part xc7vx690t -quiet -flatten_hierarchy rebuilt 
+opt_design
+write_checkpoint -force post_synth_fire6_squeeze.dcp
 report_utilization -file utiliziation.rpt
 report_utilization -hierarchical -file hierarchical_utilization.rpt
 report_timing -max_paths 50 -file timing.rpt
