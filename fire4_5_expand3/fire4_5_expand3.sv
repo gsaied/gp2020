@@ -21,15 +21,15 @@ module fire4_5_expand_3 #(
 	input rst,
 	input fire4_expand_3_en,
 	input fire5_expand_3_en,
-	input [15:0] ifm_2,
-	input [15:0] ifm_3,
+	input [15:0] ifm_4,
+	input [15:0] ifm_5,
 	input ram_feedback_4,
 	input ram_feedback_5,
 	output fire4_expand_3_finish,
 	output fire5_expand_3_finish,
 	output reg fire4_expand_3_sample,
-	output reg [WIDTH-1:0] ofm_2 [0:DSP_NO-1],
-	output reg [WIDTH-1:0] ofm_3 [0:DSP_NO-1]
+	output reg [WIDTH-1:0] ofm_4 [0:DSP_NO-1],
+	output reg [WIDTH-1:0] ofm_5 [0:DSP_NO-1]
 );
 	reg fire4_expand_3_end;
 	reg fire5_expand_3_end;
