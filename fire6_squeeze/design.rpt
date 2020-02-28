@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Feb 25 19:50:14 2020
-| Host         : GCS running 64-bit unknown
+| Date         : Thu Feb 27 16:53:53 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_design_analysis -file design.rpt
 | Design       : fire6_squeeze
 | Device       : xc7vx690t
@@ -39,7 +39,7 @@ Table of Contents
 | Config Crossings          |                       0 |
 | SLR Crossings             |                       0 |
 | PBlocks                   |                       0 |
-| High Fanout               |                    2789 |
+| High Fanout               |                    2731 |
 | Dont Touch                |                       0 |
 | Mark Debug                |                       0 |
 | Start Point Pin Primitive | FDCE/C                  |

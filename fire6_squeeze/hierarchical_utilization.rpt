@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Feb 25 19:50:10 2020
-| Host         : GCS running 64-bit unknown
+| Date         : Thu Feb 27 16:53:34 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -hierarchical -file hierarchical_utilization.rpt
 | Design       : fire6_squeeze
 | Device       : 7vx690tffg1157-3
@@ -21,15 +21,15 @@ Table of Contents
 +---------------------+--------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |       Instance      |       Module       | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +---------------------+--------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| fire6_squeeze       |              (top) |       5499 |       5499 |       0 |    0 | 2661 |     64 |      0 |           64 |
-|   (fire6_squeeze)   |              (top) |        125 |        125 |       0 |    0 | 2660 |      0 |      0 |            0 |
-|   genblk1[0].mac_i  |                mac |         30 |         30 |       0 |    0 |    0 |      0 |      0 |            1 |
+| fire6_squeeze       |              (top) |       5497 |       5497 |       0 |    0 | 2603 |     64 |      0 |           64 |
+|   (fire6_squeeze)   |              (top) |        123 |        123 |       0 |    0 | 2603 |      0 |      0 |            0 |
+|   genblk1[0].mac_i  |                mac |         31 |         31 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[10].mac_i |              mac_0 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[11].mac_i |              mac_1 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[12].mac_i |              mac_2 |          4 |          4 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[13].mac_i |              mac_3 |         30 |         30 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[14].mac_i |              mac_4 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   genblk1[15].mac_i |              mac_5 |          4 |          4 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[15].mac_i |              mac_5 |          5 |          5 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[16].mac_i |              mac_6 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[17].mac_i |              mac_7 |          4 |          4 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[18].mac_i |              mac_8 |         29 |         29 |       0 |    0 |    0 |      0 |      0 |            1 |
@@ -38,7 +38,7 @@ Table of Contents
 |   genblk1[20].mac_i |             mac_11 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[21].mac_i |             mac_12 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[22].mac_i |             mac_13 |          1 |          1 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   genblk1[23].mac_i |             mac_14 |          4 |          4 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[23].mac_i |             mac_14 |          5 |          5 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[24].mac_i |             mac_15 |          4 |          4 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[25].mac_i |             mac_16 |          1 |          1 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[26].mac_i |             mac_17 |         29 |         29 |       0 |    0 |    0 |      0 |      0 |            1 |
@@ -47,7 +47,7 @@ Table of Contents
 |   genblk1[29].mac_i |             mac_20 |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[2].mac_i  |             mac_21 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[30].mac_i |             mac_22 |         31 |         31 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   genblk1[31].mac_i |             mac_23 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[31].mac_i |             mac_23 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[32].mac_i |             mac_24 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[33].mac_i |             mac_25 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[34].mac_i |             mac_26 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |            1 |
@@ -55,7 +55,7 @@ Table of Contents
 |   genblk1[36].mac_i |             mac_28 |          1 |          1 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[37].mac_i |             mac_29 |          1 |          1 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[38].mac_i |             mac_30 |         30 |         30 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   genblk1[39].mac_i |             mac_31 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[39].mac_i |             mac_31 |          4 |          4 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[3].mac_i  |             mac_32 |         27 |         27 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[40].mac_i |             mac_33 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[41].mac_i |             mac_34 |         29 |         29 |       0 |    0 |    0 |      0 |      0 |            1 |
@@ -64,7 +64,7 @@ Table of Contents
 |   genblk1[44].mac_i |             mac_37 |          4 |          4 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[45].mac_i |             mac_38 |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[46].mac_i |             mac_39 |          1 |          1 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   genblk1[47].mac_i |             mac_40 |         30 |         30 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[47].mac_i |             mac_40 |         31 |         31 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[48].mac_i |             mac_41 |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[49].mac_i |             mac_42 |         29 |         29 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[4].mac_i  |             mac_43 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
@@ -73,7 +73,7 @@ Table of Contents
 |   genblk1[52].mac_i |             mac_46 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[53].mac_i |             mac_47 |         29 |         29 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[54].mac_i |             mac_48 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   genblk1[55].mac_i |             mac_49 |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[55].mac_i |             mac_49 |         29 |         29 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[56].mac_i |             mac_50 |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[57].mac_i |             mac_51 |         29 |         29 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[58].mac_i |             mac_52 |          4 |          4 |       0 |    0 |    0 |      0 |      0 |            1 |
@@ -81,14 +81,14 @@ Table of Contents
 |   genblk1[5].mac_i  |             mac_54 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[60].mac_i |             mac_55 |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[61].mac_i |             mac_56 |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   genblk1[62].mac_i |             mac_57 |          4 |          4 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   genblk1[63].mac_i |             mac_58 |          5 |          5 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[62].mac_i |             mac_57 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[63].mac_i |             mac_58 |          9 |          9 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[6].mac_i  |             mac_59 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[7].mac_i  |             mac_60 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[8].mac_i  |             mac_61 |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[9].mac_i  |             mac_62 |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   u_2               |  rom_fire6_squeeze |       1032 |       1032 |       0 |    0 |    1 |     64 |      0 |            0 |
-|   u_3               | rom2_fire6_squeeze |       3543 |       3543 |       0 |    0 |    0 |      0 |      0 |            0 |
+|   u_2               |  rom_fire6_squeeze |       1024 |       1024 |       0 |    0 |    0 |     64 |      0 |            0 |
+|   u_3               | rom2_fire6_squeeze |       3541 |       3541 |       0 |    0 |    0 |      0 |      0 |            0 |
 +---------------------+--------------------+------------+------------+---------+------+------+--------+--------+--------------+
 
 

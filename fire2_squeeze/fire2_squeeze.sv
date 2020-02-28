@@ -39,6 +39,7 @@ rom_fire2_squeeze u_2 (
 ///////////////////////////////////
 reg clr_pulse ;
 reg rom_clr_pulse;
+always @(posedge clk) clr_pulse <= rom_clr_pulse ; 
 ///////
 ///////
 always @(posedge clk or negedge rst) begin
@@ -50,17 +51,18 @@ always @(posedge clk or negedge rst) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
+
 always @(posedge clk) begin
 	if(fire2_squeeze_en) 
 		kernel_regs<=kernels ;
 end
+
 ////////////////////////////
 //GENERATION OF CLR PULSE///
 ////////////////////////////
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ;
 always @(posedge clk or negedge rst) begin
 	if(!rst) begin
-		clr_pulse <= 1'b0 ;
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
@@ -71,11 +73,9 @@ always @(posedge clk or negedge rst) begin
 		end
 		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
 			clr_counter <= 0 ;
-			clr_pulse<= 1'b1 ;
 			rom_clr_pulse <= 1'b0 ;
 		end
 		else begin
-			clr_pulse <= 1'b0 ;
 			clr_counter <= clr_counter +1;
 			rom_clr_pulse <= 1'b0 ;
 		end

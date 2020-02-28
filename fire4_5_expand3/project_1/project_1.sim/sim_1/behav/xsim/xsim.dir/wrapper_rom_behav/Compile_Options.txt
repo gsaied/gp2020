@@ -1,1 +1,0 @@
--wto "7a7a64df72984ca58d3813628c11bdd4" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "wrapper_rom_behav" "xil_defaultlib.wrapper_rom" "xil_defaultlib.glbl" -log "elaborate.log" 

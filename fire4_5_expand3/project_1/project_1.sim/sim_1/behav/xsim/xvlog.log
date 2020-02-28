@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/fire4_expand3/rom2_fire4_expand3.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rom2_fire4_expand3
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/fire4_expand3/rom_fire4_expand3.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rom_fire4_expand3
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/fire4_expand3/wrapper_rom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wrapper_rom

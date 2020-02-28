@@ -25,7 +25,6 @@ biasing_fire6_squeeze b7 (
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
-wire [WIDTH-1:0] kernels [0:DSP_NO-1] ;
 wire [WIDTH-1:0] kernels_bram [0:DSP_NO-1] ;
 wire [WIDTH-1:0] kernels_lut [0:DSP_NO-1] ;
 reg [WIDTH-1:0] kernels_lut_reg [0:DSP_NO-1] ;
@@ -45,7 +44,7 @@ always @(posedge clk) begin
 		kernels_lut_reg<=kernels_lut ;
 end
 always @(*) begin
-	if (weight_rom_address > 2047)
+	if (weight_rom_address > 2048)
 		kernel_regs <= kernels_lut_reg ;
 	else
 		kernel_regs <= kernels_bram ;
@@ -55,6 +54,7 @@ end
 ///////////////////////////////////
 reg clr_pulse ;
 reg rom_clr_pulse;
+always @(posedge clk) clr_pulse <= rom_clr_pulse ;
 ///////
 ///////
 always @(posedge clk or negedge rst) begin
@@ -76,7 +76,6 @@ end
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ;
 always @(posedge clk or negedge rst) begin
 	if(!rst) begin
-		clr_pulse <= 1'b0 ;
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
@@ -87,11 +86,9 @@ always @(posedge clk or negedge rst) begin
 		end
 		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
 			clr_counter <= 0 ;
-			clr_pulse<= 1'b1 ;
 			rom_clr_pulse <= 1'b0 ;
 		end
 		else begin
-			clr_pulse <= 1'b0 ;
 			clr_counter <= clr_counter +1;
 			rom_clr_pulse <= 1'b0 ;
 		end

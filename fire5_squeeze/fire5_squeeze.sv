@@ -50,7 +50,6 @@ always @(posedge clk or negedge rst) begin
 	end
 end
 always @(posedge clk) begin
-	if(fire5_squeeze_en) 
 		kernel_regs<=kernels ;
 end
 reg layer_en_reg ;

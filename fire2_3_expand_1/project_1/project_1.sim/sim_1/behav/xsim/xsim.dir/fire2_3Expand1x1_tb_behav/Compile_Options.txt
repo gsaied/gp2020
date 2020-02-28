@@ -1,1 +1,0 @@
--wto "1e4faa0de1054682a6d8d866214e89cb" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "fire2_3Expand1x1_tb_behav" "xil_defaultlib.fire2_3Expand1x1_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

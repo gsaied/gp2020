@@ -1,0 +1,38 @@
+add_force {/fire6_squeeze/rst} -radix hex {1 0ns}
+add_force {/fire6_squeeze/clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 1000 ns
+run 1000 ns
+run 1000 ns
+add_force {/fire6_squeeze/rst} -radix hex {0 0ns}
+run 1000 ns
+add_force {/fire6_squeeze/rst} -radix hex {1 0ns}
+run 1000 ns
+run 1000 ns
+add_force {/fire6_squeeze/fire6_squeeze_en} -radix hex {1 0ns}
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+

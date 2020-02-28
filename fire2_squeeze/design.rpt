@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Mon Feb 24 20:10:50 2020
+| Date         : Sat Feb 29 01:17:14 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_design_analysis -file design.rpt
 | Design       : fire2_squeeze
@@ -18,46 +18,46 @@ Table of Contents
 1. Setup Path Characteristics 1-1
 ---------------------------------
 
-+---------------------------+-------------------------+
-|      Characteristics      |         Path #1         |
-+---------------------------+-------------------------+
-| Requirement               |                   5.000 |
-| Path Delay                |                   2.874 |
-| Logic Delay               | 2.140(75%)              |
-| Net Delay                 | 0.733(25%)              |
-| Clock Skew                |                  -1.657 |
-| Slack                     |                  -1.066 |
-| Clock Relationship        | Safely Timed            |
-| Logic Levels              |                       2 |
-| Routes                    |                       0 |
-| Logical Path              | FDCE LUT2 OBUF          |
-| Start Point Clock         | clk                     |
-| End Point Clock           | clk                     |
-| DSP Block                 | None                    |
-| BRAM                      | None                    |
-| IO Crossings              |                       0 |
-| Config Crossings          |                       0 |
-| SLR Crossings             |                       0 |
-| PBlocks                   |                       0 |
-| High Fanout               |                      20 |
-| Dont Touch                |                       0 |
-| Mark Debug                |                       0 |
-| Start Point Pin Primitive | FDCE/C                  |
-| End Point Pin Primitive   | fire2_squeeze_finish    |
-| Start Point Pin           | fire2_squeeze_end_reg/C |
-| End Point Pin             | fire2_squeeze_finish    |
-+---------------------------+-------------------------+
++---------------------------+---------------------------------------------------------------------------+
+|      Characteristics      |                                  Path #1                                  |
++---------------------------+---------------------------------------------------------------------------+
+| Requirement               |                                                                     5.000 |
+| Path Delay                |                                                                     2.244 |
+| Logic Delay               | 1.161(52%)                                                                |
+| Net Delay                 | 1.083(48%)                                                                |
+| Clock Skew                |                                                                    -0.145 |
+| Slack                     |                                                                     2.281 |
+| Clock Relationship        | Safely Timed                                                              |
+| Logic Levels              |                                                                         9 |
+| Routes                    |                                                                         0 |
+| Logical Path              | DSP48E1 CARRY4 CARRY4 CARRY4 CARRY4 CARRY4 CARRY4 CARRY4 CARRY4 LUT4 FDRE |
+| Start Point Clock         | clk                                                                       |
+| End Point Clock           | clk                                                                       |
+| DSP Block                 | Seq                                                                       |
+| BRAM                      | None                                                                      |
+| IO Crossings              |                                                                         0 |
+| Config Crossings          |                                                                         0 |
+| SLR Crossings             |                                                                         0 |
+| PBlocks                   |                                                                         0 |
+| High Fanout               |                                                                        16 |
+| Dont Touch                |                                                                         0 |
+| Mark Debug                |                                                                         0 |
+| Start Point Pin Primitive | DSP48E1/CLK                                                               |
+| End Point Pin Primitive   | FDRE/R                                                                    |
+| Start Point Pin           | mul_out_reg/CLK                                                           |
+| End Point Pin             | ofm_reg[12][0]/R                                                          |
++---------------------------+---------------------------------------------------------------------------+
 * Bounding box calculated as % of dimensions for the target device (620, 1000)
 
 
 2. Logic Level Distribution
 ---------------------------
 
-+-----------------+-------------+----+-----+---+----+----+-----+
-| End Point Clock | Requirement |  0 |  1  | 2 |  4 |  9 |  10 |
-+-----------------+-------------+----+-----+---+----+----+-----+
-| clk             | 5.000ns     | 52 | 737 | 1 | 18 | 64 | 128 |
-+-----------------+-------------+----+-----+---+----+----+-----+
++-----------------+-------------+-----+-----+----+----+----+----+----+----+----+----+-----+
+| End Point Clock | Requirement |  0  |  1  |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 |  10 |
++-----------------+-------------+-----+-----+----+----+----+----+----+----+----+----+-----+
+| clk             | 5.000ns     | 270 | 336 | 13 | 11 | 24 | 21 | 43 | 48 | 34 | 72 | 128 |
++-----------------+-------------+-----+-----+----+----+----+----+----+----+----+----+-----+
 * Columns represent the logic levels per end point clock
 ** Distribution is for top worst 1000 paths
 

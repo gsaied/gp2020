@@ -1,0 +1,76 @@
+Design Route Status
+                                               :      # nets :
+   ------------------------------------------- : ----------- :
+   # of logical nets.......................... :        1822 :
+       # of nets not needing routing.......... :         686 :
+           # of internally routed nets........ :         686 :
+       # of routable nets..................... :        1131 :
+           # of fully routed nets............. :        1117 :
+       # of nets with routing errors.......... :          19 :
+           # of nets with some unplaced pins.. :           5 :
+           # of nets with some unrouted pins.. :           2 :
+           # of nets with resource conflicts.. :          14 :
+   ------------------------------------------- : ----------- :
+
+
+Nets with Routing Errors:
+  GLOBAL_LOGIC0
+    Unrouted Pins -- only the first 10 are listed, use -show_all to get the full list:
+      fire2_squeeze_timer_reg[4]_i_1/CI
+      genblk1[10].mac_i/ofm_reg[10][4]_i_1/CI
+      genblk1[12].mac_i/ofm_reg[12][14]_i_1/CI
+      genblk1[13].mac_i/ofm_reg[13][6]_i_1/CI
+      genblk1[14].mac_i/ofm_reg[14][2]_i_2/CI
+      genblk1[15].mac_i/ofm_reg[15][2]_i_2/CI
+      genblk1[1].mac_i/ofm_reg[1][2]_i_1/CI
+      genblk1[2].mac_i/ofm_reg[2][2]_i_1/CI
+      genblk1[3].mac_i/ofm_reg[3][13]_i_1/CI
+      genblk1[4].mac_i/ofm_reg[4][6]_i_1/CI
+    Conflicts with Site Pins -- only the first 10 are listed, use -show_all to get the full list:
+      CLBLL_R_X25Y321/CLBLL_LL_COUT_N (SLICE_X38Y322/CIN)
+      CLBLM_L_X24Y317/CLBLM_M_COUT_N (SLICE_X36Y318/CIN)
+      CLBLM_L_X24Y328/CLBLM_M_COUT_N (SLICE_X36Y329/CIN)
+      CLBLM_L_X30Y322/CLBLM_M_COUT_N (SLICE_X46Y323/CIN)
+      CLBLM_L_X30Y325/CLBLM_L_COUT_N (SLICE_X47Y326/CIN)
+      CLBLM_R_X23Y312/CLBLM_M_COUT_N (SLICE_X34Y313/CIN)
+      CLBLM_R_X23Y318/CLBLM_L_COUT_N (SLICE_X35Y319/CIN)
+      CLBLM_R_X23Y324/CLBLM_M_COUT_N (SLICE_X34Y325/CIN)
+      CLBLM_R_X29Y301/CLBLM_M_COUT_N (SLICE_X44Y302/CIN)
+      CLBLM_R_X29Y306/CLBLM_L_COUT_N (SLICE_X45Y307/CIN)
+  clr_pulse_reg_n_0
+    Unplaced Pin: genblk1[0].mac_i/ofm[0][15]_i_1/I1
+  fire2_squeeze_en_IBUF
+    Unplaced Pin: genblk1[0].mac_i/ofm[0][15]_i_1/I2
+  fire2_squeeze_end_reg_n_0
+    Unplaced Pin: genblk1[0].mac_i/ofm[0][15]_i_1/I0
+  fire2_squeeze_timer_reg[0]_i_2_n_0
+    Conflicts with Site Pins: CLBLL_R_X25Y321/CLBLL_LL_COUT_N (SLICE_X38Y322/CIN)
+  genblk1[0].mac_i/D[15]
+    Unplaced Pin: genblk1[0].mac_i/ofm[0][15]_i_1/I3
+  genblk1[0].mac_i/SR[0]
+    Unplaced Pin: genblk1[0].mac_i/ofm[0][15]_i_1/O
+  genblk1[10].mac_i/ofm_reg[10][0]_i_1_n_0
+    Conflicts with Site Pins: CLBLM_L_X24Y328/CLBLM_M_COUT_N (SLICE_X36Y329/CIN)
+  genblk1[12].mac_i/ofm_reg[12][10]_i_1_n_0
+    Conflicts with Site Pins: CLBLM_R_X23Y318/CLBLM_L_COUT_N (SLICE_X35Y319/CIN)
+  genblk1[13].mac_i/ofm_reg[13][2]_i_1_n_0
+    Conflicts with Site Pins: CLBLM_R_X23Y324/CLBLM_M_COUT_N (SLICE_X34Y325/CIN)
+  genblk1[14].mac_i/ofm_reg[14][2]_i_3_n_0
+    Conflicts with Site Pins: CLBLM_R_X29Y301/CLBLM_M_COUT_N (SLICE_X44Y302/CIN)
+  genblk1[15].mac_i/ofm_reg[15][2]_i_7_n_0
+    Conflicts with Site Pins: CLBLM_R_X29Y306/CLBLM_L_COUT_N (SLICE_X45Y307/CIN)
+  genblk1[1].mac_i/ofm_reg[1][2]_i_2_n_0
+    Conflicts with Site Pins: CLBLM_L_X30Y322/CLBLM_M_COUT_N (SLICE_X46Y323/CIN)
+  genblk1[2].mac_i/ofm_reg[2][2]_i_2_n_0
+    Conflicts with Site Pins: CLBLM_L_X24Y317/CLBLM_M_COUT_N (SLICE_X36Y318/CIN)
+  genblk1[3].mac_i/ofm_reg[3][9]_i_1_n_0
+    Conflicts with Site Pins: CLBLM_L_X30Y325/CLBLM_L_COUT_N (SLICE_X47Y326/CIN)
+  genblk1[4].mac_i/ofm_reg[4][2]_i_1_n_0
+    Conflicts with Site Pins: CLBLM_R_X29Y312/CLBLM_M_COUT_N (SLICE_X44Y313/CIN)
+  genblk1[5].mac_i/ofm_reg[5][2]_i_7_n_0
+    Conflicts with Site Pins: CLBLM_R_X23Y312/CLBLM_M_COUT_N (SLICE_X34Y313/CIN)
+  genblk1[7].mac_i/ofm_reg[7][2]_i_7_n_0
+    Conflicts with Site Pins: CLBLM_R_X29Y321/CLBLM_M_COUT_N (SLICE_X44Y322/CIN)
+  genblk1[9].mac_i/ofm_reg[9][7]_i_1_n_0
+    Conflicts with Site Pins: CLBLM_R_X29Y320/CLBLM_L_COUT_N (SLICE_X45Y321/CIN)
+

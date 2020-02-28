@@ -28,8 +28,8 @@ module fire4_5_expand_3 #(
 	output fire4_expand_3_finish,
 	output fire5_expand_3_finish,
 	output reg fire4_expand_3_sample,
-	output reg [WIDTH-1:0] ofm_2 [0:DSP_NO-1],
-	output reg [WIDTH-1:0] ofm_3 [0:DSP_NO-1]
+	output reg [WIDTH-1:0] ofm_4 [0:DSP_NO-1],
+	output reg [WIDTH-1:0] ofm_5 [0:DSP_NO-1]
 );
 	reg fire4_expand_3_end;
 	reg fire5_expand_3_end;
@@ -165,16 +165,16 @@ always@(posedge clk) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 ) begin 
 				if (fire4_expand_3_en)
-					ofm_2[i] <= 16'b0 ;
+					ofm_4[i] <= 16'b0 ;
 				else
-					ofm_3[i] <= 16'b0 ;
+					ofm_5[i] <= 16'b0 ;
 			end
 			else begin
 				if (fire4_expand_3_en)
-					ofm_2[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
+					ofm_4[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
 				else
 
-					ofm_3[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
+					ofm_5[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
 			end
 		end
 	end

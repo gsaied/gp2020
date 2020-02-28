@@ -25,10 +25,11 @@ biasing_fire8_expand3 b7 (
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
+wire [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ;
 wire [WIDTH-1:0] kernels [0:DSP_NO-1] ;
-reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ;
 reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
 //////////////////////////////////
+(* keep_hierarchy = "yes" *)
 rom_fire8_expand3 u_2 (
 	.clk(clk),
 	.address(weight_rom_address),

@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Feb 27 16:47:51 2020
+# Process ID: 11113
+# Current directory: /home/gsaied/Desktop/old_rtl/fire6_squeeze
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/fire6_squeeze/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire6_squeeze/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+# synth_design -top fire6_squeeze -part xc7vx690t  -flatten_hierarchy rebuilt -gated_clock_conversion on -quiet
+# write_checkpoint -force post_synth_fire6_squeeze.dcp
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2326.953 ; gain = 0.000 ; free physical = 1515 ; free virtual = 6693
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/gsaied/Desktop/old_rtl/fire6_squeeze/post_synth_fire6_squeeze.dcp' has been generated.
+# report_utilization -file utiliziation.rpt
+# report_utilization -hierarchical -file hierarchical_utilization.rpt
+# report_timing -max_paths 50 -file timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 50 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2631.738 ; gain = 272.770 ; free physical = 886 ; free virtual = 6061
+# report_design_analysis -file design.rpt
+vi utiliziation.rpt 
+WARNING: [Common 17-259] Unknown Tcl command 'vi utiliziation.rpt' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 27 17:18:25 2020...
