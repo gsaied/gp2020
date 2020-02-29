@@ -4,7 +4,7 @@ read_verilog -sv [ glob *.sv ]
 #synth_design -rtl <TOP>
 #start_gui
 #synth_design -top integ -part xc7vx690t -keep_equivalent_registers
-synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy built -directive AreaOptimized_high
+synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high
 #keep_hierarchy for brams
 #opt_design
 

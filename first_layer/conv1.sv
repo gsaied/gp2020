@@ -6,7 +6,7 @@
 * PAD:	1
 * WINDOW: 3*3
 */
-
+/* verilator lint_off COMBDLY */
 module conv1#(
 parameter WOUT = 128 ,
 parameter DSP_NO = 64 ,
@@ -33,8 +33,8 @@ biasing_rom b1 (
 );
 ////////////////////////////////////
 	reg conv1_end ; 
-wire [2*WIDTH:0] ofmw [0:DSP_NO-1];
-reg  [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
+reg  [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
 reg [4:0] clr_counter ;
 //reg [$clog2(WINDOWS)-1:0] conv1_timer ; 
 ///////////////////////////////////
@@ -54,6 +54,7 @@ rom_array_layer_1 u_2 (
 ///////////////////////////////////
 reg clr_pulse ; 
 reg rom_clr_pulse ;
+always @(posedge clk) clr_pulse<= rom_clr_pulse ;
 ///////
 ///////
 always @(posedge clk or negedge rst) begin
@@ -123,16 +124,15 @@ always @(posedge clk or negedge rst) begin
 		endcase
 	end
 end
-img_rom u_1 (
+wrapper_image u_1 (
 	.clk(clk),
 	.address(img_rom_address),
-	.img_out(img_rom_wire)
+	.image_wrapper_o(img_rom_wire)
 );
 // counter to generate clock_divider
 always @(posedge clk or negedge rst) begin
 	if(!rst) begin
 		clr_counter<= 5'b0 ; 
-		clr_pulse <= 1'b0 ;
 		rom_clr_pulse<= 1'b0 ;
 	end
 	else if (!conv1_end && conv1_en) begin
@@ -142,37 +142,17 @@ always @(posedge clk or negedge rst) begin
 		end
 		else if (clr_counter == KERNEL_DIM**2*CHIN ) begin //after 10 cycles the new output is good to go. New inputs to be fetched
 			clr_counter<= 5'b0 ; 
-			clr_pulse <= 1'b1 ;
-		rom_clr_pulse<= 1'b0 ;
+			rom_clr_pulse<= 1'b0 ;
 		end
 		else begin
-			clr_pulse <= 1'b0 ; //remain 0 as long as MAC is active
 			clr_counter<= clr_counter +1 ;	
-		rom_clr_pulse<= 1'b0 ;
+			rom_clr_pulse<= 1'b0 ;
 		end
 	end
 end
 //////////////////////////////////////////
 // wait for all channels to be processed
 // ///////////////////////////////////////
-/*
-reg [4:0] clk_sampling_counter ; 
-reg clk_sampling ; 
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
-		clk_sampling_counter <= 5'b0 ; 
-		clk_sampling<= 1'b0 ;
-	end
-	else if (clk_sampling_counter == 28) begin
-		clk_sampling<= 1'b1 ; 
-		clk_sampling_counter<= 0;
-	end
-	else begin
-		clk_sampling<= 1'b0 ;
-		clk_sampling_counter<= clk_sampling_counter +1 ;
-	end
-end
-*/
 always @(*) begin
 	for (int i = 0 ; i < DSP_NO ; i++) begin
 		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
@@ -188,20 +168,6 @@ always@(posedge clk) begin
 		end
 	end
 end
-//
-//////////////////////////////////
-//MOVING ADDRESS TOWARDS CHANNELS AFTER COMPLETING 1 WINDOW
-//////////////////////////////////
-/*
-	if (!rst)
-		ch_active <=2'b1;
-	else if (ch_active == CHIN) 
-		ch_active <= 2'b1 ; 
-	else
-		ch_active <= ch_active +1;
-end
-*/
-//////////////////////////////////
 genvar i ; 
 generate for (i = 0 ; i < CHOUT ; i++) begin
 	conv_mac mac_i  (

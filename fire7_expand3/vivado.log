@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sat Feb 22 22:54:57 2020
-# Process ID: 13178
+# Start of session at: Sat Feb 29 02:36:46 2020
+# Process ID: 23531
 # Current directory: /home/gsaied/Desktop/old_rtl/fire7_expand3
 # Command line: vivado -mode tcl -source synth.tcl
 # Log file: /home/gsaied/Desktop/old_rtl/fire7_expand3/vivado.log
@@ -11,15 +11,17 @@
 #-----------------------------------------------------------
 source synth.tcl
 # read_verilog -sv [ glob *.sv ] 
-# synth_design -top [lindex [find_top] 0] -part xc7vx690t
-Command: synth_design -top fire7_expand3 -part xc7vx690t
+# create_fileset -constrset constr
+# add_files -fileset constr expand3_fire7.xdc
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy full -directive AreaOptimized_high -constrset constr
+Command: synth_design -top fire7_expand3 -part xc7vx690t -flatten_hierarchy full -directive AreaOptimized_high -constrset constr
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13242 
+INFO: Helper process launched with PID 23548 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1442.648 ; gain = 92.000 ; free physical = 3704 ; free virtual = 6204
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1426.996 ; gain = 28.000 ; free physical = 2814 ; free virtual = 5426
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'fire7_expand3' [/home/gsaied/Desktop/old_rtl/fire7_expand3/fire7_expand3.sv:2]
 	Parameter WOUT bound to: 16 - type: integer 
@@ -355,25 +357,61 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'ofmw2_reg[92]' and 
 INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6155] done synthesizing module 'fire7_expand3' (6#1) [/home/gsaied/Desktop/old_rtl/fire7_expand3/fire7_expand3.sv:2]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1588.398 ; gain = 237.750 ; free physical = 3606 ; free virtual = 6127
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1571.746 ; gain = 172.750 ; free physical = 2742 ; free virtual = 5366
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1588.398 ; gain = 237.750 ; free physical = 3619 ; free virtual = 6140
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1571.746 ; gain = 172.750 ; free physical = 2743 ; free virtual = 5384
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1571.746 ; gain = 172.750 ; free physical = 2743 ; free virtual = 5384
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire7_expand3/expand3_fire7.xdc]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire7_expand3/expand3_fire7.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2096.684 ; gain = 0.000 ; free physical = 2148 ; free virtual = 4854
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2097.684 ; gain = 0.000 ; free physical = 2145 ; free virtual = 4851
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2097.684 ; gain = 1.000 ; free physical = 2145 ; free virtual = 4851
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 2097.684 ; gain = 698.688 ; free physical = 2292 ; free virtual = 5007
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx690tffg1157-3
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1596.402 ; gain = 245.754 ; free physical = 3647 ; free virtual = 6169
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 2097.684 ; gain = 698.688 ; free physical = 2292 ; free virtual = 5007
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 2097.684 ; gain = 698.688 ; free physical = 2292 ; free virtual = 5007
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "clr_pulse" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clr_pulse" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "fire7_expand3_end" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1976.309 ; gain = 625.660 ; free physical = 3209 ; free virtual = 5803
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:53 . Memory (MB): peak = 2097.684 ; gain = 698.688 ; free physical = 2209 ; free virtual = 4921
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -388,7 +426,6 @@ Report RTL Partitions:
 |6     |fire7_expand3__GCB1            |           1|      4551|
 |7     |fire7_expand3__GCB2            |           1|      6424|
 +------+-------------------------------+------------+----------+
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1222,7 +1259,6 @@ BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
@@ -2142,7 +2178,7 @@ INFO: [Synth 8-3886] merging instance 'i_2/kernel_regs_reg[74][11]' (FDE) to 'i_
 INFO: [Synth 8-3886] merging instance 'i_2/kernel_regs_reg[74][12]' (FDE) to 'i_2/kernel_regs_reg[74][13]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:51:25 ; elapsed = 00:52:04 . Memory (MB): peak = 3926.199 ; gain = 2575.551 ; free physical = 1707 ; free virtual = 4662
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:59:05 ; elapsed = 01:00:37 . Memory (MB): peak = 4051.801 ; gain = 2652.805 ; free physical = 5006 ; free virtual = 7231
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2716,6 +2752,7 @@ ROM:
 |fire7_expand3      | p_0_out    | 512x16        | LUT            | 
 |fire7_expand3      | p_0_out    | 512x16        | LUT            | 
 |fire7_expand3      | p_0_out    | 512x16        | LUT            | 
+|fire7_expand3      | p_0_out    | 512x16        | LUT            | 
 |fire7_expand3      | p_0_out    | 64x16         | LUT            | 
 |fire7_expand3      | p_0_out    | 64x16         | LUT            | 
 |fire7_expand3      | p_0_out    | 64x16         | LUT            | 
@@ -3088,39 +3125,55 @@ Report RTL Partitions:
 +------+-------------------------------+------------+----------+
 |      |RTL Partition                  |Replication |Instances |
 +------+-------------------------------+------------+----------+
-|1     |rom_fire7_expand3__GB0         |           1|    116249|
-|2     |rom_fire7_expand3__GB1         |           1|     29114|
-|3     |rom_fire7_expand3__GB2         |           1|     37550|
+|1     |rom_fire7_expand3__GB0         |           1|    116241|
+|2     |rom_fire7_expand3__GB1         |           1|     29113|
+|3     |rom_fire7_expand3__GB2         |           1|     37546|
 |4     |wrapper_rom_fire7_expand3__GC0 |           1|      9812|
 |5     |fire7_expand3__GCB0            |           1|      3723|
 |6     |fire7_expand3__GCB1            |           1|      2222|
-|7     |fire7_expand3__GCB2            |           1|      3615|
+|7     |fire7_expand3__GCB2            |           1|      3600|
 +------+-------------------------------+------------+----------+
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:59:15 ; elapsed = 01:00:46 . Memory (MB): peak = 4051.801 ; gain = 2652.805 ; free physical = 4884 ; free virtual = 7141
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:51:27 ; elapsed = 00:52:06 . Memory (MB): peak = 3926.199 ; gain = 2575.551 ; free physical = 1707 ; free virtual = 4671
+Finished Timing Optimization : Time (s): cpu = 01:01:59 ; elapsed = 01:03:32 . Memory (MB): peak = 4051.801 ; gain = 2652.805 ; free physical = 5099 ; free virtual = 7346
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-------------------------------+------------+----------+
-|      |RTL Partition                  |Replication |Instances |
-+------+-------------------------------+------------+----------+
-|1     |rom_fire7_expand3__GB0         |           1|    116249|
-|2     |rom_fire7_expand3__GB1         |           1|     29114|
-|3     |rom_fire7_expand3__GB2         |           1|     37550|
-|4     |wrapper_rom_fire7_expand3__GC0 |           1|      9812|
-|5     |fire7_expand3__GCB0            |           1|      3723|
-|6     |fire7_expand3__GCB1            |           1|      2222|
-|7     |fire7_expand3__GCB2            |           1|      3615|
-+------+-------------------------------+------------+----------+
++------+---------------------+------------+----------+
+|      |RTL Partition        |Replication |Instances |
++------+---------------------+------------+----------+
+|1     |fire7_expand3__GCB0  |           1|      3723|
+|2     |fire7_expand3_GT2    |           1|     15453|
+|3     |fire7_expand3_GT3    |           1|     12636|
+|4     |fire7_expand3_GT4    |           1|      9748|
+|5     |fire7_expand3_GT6    |           1|      7824|
+|6     |fire7_expand3_GT0__1 |           1|     18107|
+|7     |fire7_expand3_GT2__1 |           1|     11593|
+|8     |fire7_expand3_GT3__1 |           1|      8856|
+|9     |fire7_expand3_GT4__1 |           1|      7077|
+|10    |fire7_expand3_GT2__2 |           1|      8573|
+|11    |fire7_expand3_GT3__2 |           1|      7641|
+|12    |fire7_expand3_GT0__2 |           1|      7649|
+|13    |fire7_expand3_GT1    |           1|     12793|
+|14    |fire7_expand3_GT2__3 |           1|      9936|
+|15    |fire7_expand3_GT4__3 |           1|      7711|
+|16    |fire7_expand3_GT2__4 |           1|      7629|
+|17    |fire7_expand3_GT0    |           1|      7435|
+|18    |fire7_expand3_GT1__3 |           1|     37873|
++------+---------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:52:06 ; elapsed = 00:52:46 . Memory (MB): peak = 3953.566 ; gain = 2602.918 ; free physical = 2016 ; free virtual = 4973
+Finished Technology Mapping : Time (s): cpu = 01:02:31 ; elapsed = 01:04:04 . Memory (MB): peak = 4064.809 ; gain = 2665.812 ; free physical = 5180 ; free virtual = 7423
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3144,7 +3197,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:52:10 ; elapsed = 00:52:50 . Memory (MB): peak = 3953.566 ; gain = 2602.918 ; free physical = 2015 ; free virtual = 4980
+Finished IO Insertion : Time (s): cpu = 01:02:34 ; elapsed = 01:04:07 . Memory (MB): peak = 4064.809 ; gain = 2665.812 ; free physical = 5162 ; free virtual = 7420
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3157,7 +3210,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:52:10 ; elapsed = 00:52:50 . Memory (MB): peak = 3953.566 ; gain = 2602.918 ; free physical = 2015 ; free virtual = 4980
+Finished Renaming Generated Instances : Time (s): cpu = 01:02:34 ; elapsed = 01:04:07 . Memory (MB): peak = 4064.809 ; gain = 2665.812 ; free physical = 5163 ; free virtual = 7421
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3166,28 +3219,10 @@ Report RTL Partitions:
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:52:15 ; elapsed = 00:52:55 . Memory (MB): peak = 3953.566 ; gain = 2602.918 ; free physical = 2018 ; free virtual = 4974
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:52:15 ; elapsed = 00:52:55 . Memory (MB): peak = 3953.566 ; gain = 2602.918 ; free physical = 2010 ; free virtual = 4975
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:52:20 ; elapsed = 00:53:00 . Memory (MB): peak = 3953.566 ; gain = 2602.918 ; free physical = 2004 ; free virtual = 4971
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:52:20 ; elapsed = 00:53:00 . Memory (MB): peak = 3953.566 ; gain = 2602.918 ; free physical = 1996 ; free virtual = 4971
+Finished Handling Custom Attributes : Time (s): cpu = 01:02:58 ; elapsed = 01:04:31 . Memory (MB): peak = 4064.809 ; gain = 2665.812 ; free physical = 5166 ; free virtual = 7424
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3200,245 +3235,56 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+--------+------+
-|      |Cell    |Count |
-+------+--------+------+
-|1     |BUFG    |     1|
-|2     |CARRY4  |  1506|
-|3     |DSP48E1 |   192|
-|4     |LUT1    |  2301|
-|5     |LUT2    |     9|
-|6     |LUT3    |  2589|
-|7     |LUT4    |   200|
-|8     |LUT5    |   424|
-|9     |LUT6    | 22931|
-|10    |MUXF7   |  8398|
-|11    |MUXF8   |    29|
-|12    |FDCE    |    53|
-|13    |FDRE    |  3074|
-|14    |IBUF    |    20|
-|15    |OBUF    |  3074|
-+------+--------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |  1506|
+|3     |DSP48E1   |    29|
+|4     |DSP48E1_1 |   163|
+|5     |LUT1      |  2301|
+|6     |LUT2      |    11|
+|7     |LUT3      |  2376|
+|8     |LUT4      |     8|
+|9     |LUT5      |   717|
+|10    |LUT6      | 22676|
+|11    |MUXF7     |  8378|
+|12    |MUXF8     |   640|
+|13    |FDCE      |    54|
+|14    |FDRE      |  3371|
+|15    |FDSE      |    90|
+|16    |IBUF      |    20|
+|17    |OBUF      |  3074|
++------+----------+------+
 
 Report Instance Areas: 
-+------+-----------------------+--------------------------+------+
-|      |Instance               |Module                    |Cells |
-+------+-----------------------+--------------------------+------+
-|1     |top                    |                          | 44801|
-|2     |  \genblk1[0].mac_i    |mac                       |   166|
-|3     |  \genblk1[100].mac_i  |mac_0                     |   163|
-|4     |  \genblk1[101].mac_i  |mac_1                     |   193|
-|5     |  \genblk1[102].mac_i  |mac_2                     |   191|
-|6     |  \genblk1[103].mac_i  |mac_3                     |   171|
-|7     |  \genblk1[104].mac_i  |mac_4                     |   170|
-|8     |  \genblk1[105].mac_i  |mac_5                     |   162|
-|9     |  \genblk1[106].mac_i  |mac_6                     |   159|
-|10    |  \genblk1[107].mac_i  |mac_7                     |   194|
-|11    |  \genblk1[108].mac_i  |mac_8                     |   157|
-|12    |  \genblk1[109].mac_i  |mac_9                     |   168|
-|13    |  \genblk1[10].mac_i   |mac_10                    |   196|
-|14    |  \genblk1[110].mac_i  |mac_11                    |   166|
-|15    |  \genblk1[111].mac_i  |mac_12                    |   164|
-|16    |  \genblk1[112].mac_i  |mac_13                    |   166|
-|17    |  \genblk1[113].mac_i  |mac_14                    |   152|
-|18    |  \genblk1[114].mac_i  |mac_15                    |   162|
-|19    |  \genblk1[115].mac_i  |mac_16                    |   167|
-|20    |  \genblk1[116].mac_i  |mac_17                    |   173|
-|21    |  \genblk1[117].mac_i  |mac_18                    |   164|
-|22    |  \genblk1[118].mac_i  |mac_19                    |   196|
-|23    |  \genblk1[119].mac_i  |mac_20                    |   189|
-|24    |  \genblk1[11].mac_i   |mac_21                    |   198|
-|25    |  \genblk1[120].mac_i  |mac_22                    |   172|
-|26    |  \genblk1[121].mac_i  |mac_23                    |   162|
-|27    |  \genblk1[122].mac_i  |mac_24                    |   171|
-|28    |  \genblk1[123].mac_i  |mac_25                    |   200|
-|29    |  \genblk1[124].mac_i  |mac_26                    |   172|
-|30    |  \genblk1[125].mac_i  |mac_27                    |   185|
-|31    |  \genblk1[126].mac_i  |mac_28                    |   192|
-|32    |  \genblk1[127].mac_i  |mac_29                    |   163|
-|33    |  \genblk1[128].mac_i  |mac_30                    |   171|
-|34    |  \genblk1[129].mac_i  |mac_31                    |   163|
-|35    |  \genblk1[12].mac_i   |mac_32                    |   187|
-|36    |  \genblk1[130].mac_i  |mac_33                    |   164|
-|37    |  \genblk1[131].mac_i  |mac_34                    |   164|
-|38    |  \genblk1[132].mac_i  |mac_35                    |   167|
-|39    |  \genblk1[133].mac_i  |mac_36                    |   161|
-|40    |  \genblk1[134].mac_i  |mac_37                    |   190|
-|41    |  \genblk1[135].mac_i  |mac_38                    |   161|
-|42    |  \genblk1[136].mac_i  |mac_39                    |   200|
-|43    |  \genblk1[137].mac_i  |mac_40                    |   168|
-|44    |  \genblk1[138].mac_i  |mac_41                    |   160|
-|45    |  \genblk1[139].mac_i  |mac_42                    |   166|
-|46    |  \genblk1[13].mac_i   |mac_43                    |   192|
-|47    |  \genblk1[140].mac_i  |mac_44                    |   159|
-|48    |  \genblk1[141].mac_i  |mac_45                    |   191|
-|49    |  \genblk1[142].mac_i  |mac_46                    |   162|
-|50    |  \genblk1[143].mac_i  |mac_47                    |   165|
-|51    |  \genblk1[144].mac_i  |mac_48                    |   194|
-|52    |  \genblk1[145].mac_i  |mac_49                    |   168|
-|53    |  \genblk1[146].mac_i  |mac_50                    |   195|
-|54    |  \genblk1[147].mac_i  |mac_51                    |   172|
-|55    |  \genblk1[148].mac_i  |mac_52                    |   158|
-|56    |  \genblk1[149].mac_i  |mac_53                    |   170|
-|57    |  \genblk1[14].mac_i   |mac_54                    |   187|
-|58    |  \genblk1[150].mac_i  |mac_55                    |   195|
-|59    |  \genblk1[151].mac_i  |mac_56                    |   159|
-|60    |  \genblk1[152].mac_i  |mac_57                    |   160|
-|61    |  \genblk1[153].mac_i  |mac_58                    |   166|
-|62    |  \genblk1[154].mac_i  |mac_59                    |   188|
-|63    |  \genblk1[155].mac_i  |mac_60                    |   185|
-|64    |  \genblk1[156].mac_i  |mac_61                    |   191|
-|65    |  \genblk1[157].mac_i  |mac_62                    |   190|
-|66    |  \genblk1[158].mac_i  |mac_63                    |   193|
-|67    |  \genblk1[159].mac_i  |mac_64                    |   169|
-|68    |  \genblk1[15].mac_i   |mac_65                    |   189|
-|69    |  \genblk1[160].mac_i  |mac_66                    |   169|
-|70    |  \genblk1[161].mac_i  |mac_67                    |   172|
-|71    |  \genblk1[162].mac_i  |mac_68                    |   161|
-|72    |  \genblk1[163].mac_i  |mac_69                    |   168|
-|73    |  \genblk1[164].mac_i  |mac_70                    |   160|
-|74    |  \genblk1[165].mac_i  |mac_71                    |   166|
-|75    |  \genblk1[166].mac_i  |mac_72                    |   161|
-|76    |  \genblk1[167].mac_i  |mac_73                    |   185|
-|77    |  \genblk1[168].mac_i  |mac_74                    |   192|
-|78    |  \genblk1[169].mac_i  |mac_75                    |   171|
-|79    |  \genblk1[16].mac_i   |mac_76                    |   186|
-|80    |  \genblk1[170].mac_i  |mac_77                    |   190|
-|81    |  \genblk1[171].mac_i  |mac_78                    |   194|
-|82    |  \genblk1[172].mac_i  |mac_79                    |   161|
-|83    |  \genblk1[173].mac_i  |mac_80                    |   170|
-|84    |  \genblk1[174].mac_i  |mac_81                    |   172|
-|85    |  \genblk1[175].mac_i  |mac_82                    |   191|
-|86    |  \genblk1[176].mac_i  |mac_83                    |   188|
-|87    |  \genblk1[177].mac_i  |mac_84                    |   163|
-|88    |  \genblk1[178].mac_i  |mac_85                    |   190|
-|89    |  \genblk1[179].mac_i  |mac_86                    |   166|
-|90    |  \genblk1[17].mac_i   |mac_87                    |   173|
-|91    |  \genblk1[180].mac_i  |mac_88                    |   160|
-|92    |  \genblk1[181].mac_i  |mac_89                    |   165|
-|93    |  \genblk1[182].mac_i  |mac_90                    |   166|
-|94    |  \genblk1[183].mac_i  |mac_91                    |   186|
-|95    |  \genblk1[184].mac_i  |mac_92                    |   174|
-|96    |  \genblk1[185].mac_i  |mac_93                    |   166|
-|97    |  \genblk1[186].mac_i  |mac_94                    |   163|
-|98    |  \genblk1[187].mac_i  |mac_95                    |   168|
-|99    |  \genblk1[188].mac_i  |mac_96                    |   195|
-|100   |  \genblk1[189].mac_i  |mac_97                    |   172|
-|101   |  \genblk1[18].mac_i   |mac_98                    |   191|
-|102   |  \genblk1[190].mac_i  |mac_99                    |   164|
-|103   |  \genblk1[191].mac_i  |mac_100                   |   191|
-|104   |  \genblk1[19].mac_i   |mac_101                   |   195|
-|105   |  \genblk1[1].mac_i    |mac_102                   |   154|
-|106   |  \genblk1[20].mac_i   |mac_103                   |   169|
-|107   |  \genblk1[21].mac_i   |mac_104                   |   160|
-|108   |  \genblk1[22].mac_i   |mac_105                   |   165|
-|109   |  \genblk1[23].mac_i   |mac_106                   |   191|
-|110   |  \genblk1[24].mac_i   |mac_107                   |   194|
-|111   |  \genblk1[25].mac_i   |mac_108                   |   164|
-|112   |  \genblk1[26].mac_i   |mac_109                   |   159|
-|113   |  \genblk1[27].mac_i   |mac_110                   |   164|
-|114   |  \genblk1[28].mac_i   |mac_111                   |   167|
-|115   |  \genblk1[29].mac_i   |mac_112                   |   190|
-|116   |  \genblk1[2].mac_i    |mac_113                   |   167|
-|117   |  \genblk1[30].mac_i   |mac_114                   |   195|
-|118   |  \genblk1[31].mac_i   |mac_115                   |   169|
-|119   |  \genblk1[32].mac_i   |mac_116                   |   171|
-|120   |  \genblk1[33].mac_i   |mac_117                   |   164|
-|121   |  \genblk1[34].mac_i   |mac_118                   |   171|
-|122   |  \genblk1[35].mac_i   |mac_119                   |   174|
-|123   |  \genblk1[36].mac_i   |mac_120                   |   169|
-|124   |  \genblk1[37].mac_i   |mac_121                   |   161|
-|125   |  \genblk1[38].mac_i   |mac_122                   |   165|
-|126   |  \genblk1[39].mac_i   |mac_123                   |   195|
-|127   |  \genblk1[3].mac_i    |mac_124                   |   158|
-|128   |  \genblk1[40].mac_i   |mac_125                   |   190|
-|129   |  \genblk1[41].mac_i   |mac_126                   |   195|
-|130   |  \genblk1[42].mac_i   |mac_127                   |   167|
-|131   |  \genblk1[43].mac_i   |mac_128                   |   191|
-|132   |  \genblk1[44].mac_i   |mac_129                   |   169|
-|133   |  \genblk1[45].mac_i   |mac_130                   |   173|
-|134   |  \genblk1[46].mac_i   |mac_131                   |   169|
-|135   |  \genblk1[47].mac_i   |mac_132                   |   161|
-|136   |  \genblk1[48].mac_i   |mac_133                   |   172|
-|137   |  \genblk1[49].mac_i   |mac_134                   |   191|
-|138   |  \genblk1[4].mac_i    |mac_135                   |   170|
-|139   |  \genblk1[50].mac_i   |mac_136                   |   196|
-|140   |  \genblk1[51].mac_i   |mac_137                   |   196|
-|141   |  \genblk1[52].mac_i   |mac_138                   |   167|
-|142   |  \genblk1[53].mac_i   |mac_139                   |   194|
-|143   |  \genblk1[54].mac_i   |mac_140                   |   161|
-|144   |  \genblk1[55].mac_i   |mac_141                   |   162|
-|145   |  \genblk1[56].mac_i   |mac_142                   |   189|
-|146   |  \genblk1[57].mac_i   |mac_143                   |   200|
-|147   |  \genblk1[58].mac_i   |mac_144                   |   172|
-|148   |  \genblk1[59].mac_i   |mac_145                   |   164|
-|149   |  \genblk1[5].mac_i    |mac_146                   |   166|
-|150   |  \genblk1[60].mac_i   |mac_147                   |   169|
-|151   |  \genblk1[61].mac_i   |mac_148                   |   182|
-|152   |  \genblk1[62].mac_i   |mac_149                   |   169|
-|153   |  \genblk1[63].mac_i   |mac_150                   |    37|
-|154   |  \genblk1[64].mac_i   |mac_151                   |   166|
-|155   |  \genblk1[65].mac_i   |mac_152                   |   197|
-|156   |  \genblk1[66].mac_i   |mac_153                   |   161|
-|157   |  \genblk1[67].mac_i   |mac_154                   |   199|
-|158   |  \genblk1[68].mac_i   |mac_155                   |   194|
-|159   |  \genblk1[69].mac_i   |mac_156                   |   159|
-|160   |  \genblk1[6].mac_i    |mac_157                   |   186|
-|161   |  \genblk1[70].mac_i   |mac_158                   |   173|
-|162   |  \genblk1[71].mac_i   |mac_159                   |   165|
-|163   |  \genblk1[72].mac_i   |mac_160                   |   163|
-|164   |  \genblk1[73].mac_i   |mac_161                   |   171|
-|165   |  \genblk1[74].mac_i   |mac_162                   |   185|
-|166   |  \genblk1[75].mac_i   |mac_163                   |   186|
-|167   |  \genblk1[76].mac_i   |mac_164                   |   187|
-|168   |  \genblk1[77].mac_i   |mac_165                   |   158|
-|169   |  \genblk1[78].mac_i   |mac_166                   |   168|
-|170   |  \genblk1[79].mac_i   |mac_167                   |   197|
-|171   |  \genblk1[7].mac_i    |mac_168                   |   160|
-|172   |  \genblk1[80].mac_i   |mac_169                   |   161|
-|173   |  \genblk1[81].mac_i   |mac_170                   |   197|
-|174   |  \genblk1[82].mac_i   |mac_171                   |   163|
-|175   |  \genblk1[83].mac_i   |mac_172                   |   196|
-|176   |  \genblk1[84].mac_i   |mac_173                   |    10|
-|177   |  \genblk1[85].mac_i   |mac_174                   |   161|
-|178   |  \genblk1[86].mac_i   |mac_175                   |   183|
-|179   |  \genblk1[87].mac_i   |mac_176                   |   169|
-|180   |  \genblk1[88].mac_i   |mac_177                   |   188|
-|181   |  \genblk1[89].mac_i   |mac_178                   |   162|
-|182   |  \genblk1[8].mac_i    |mac_179                   |   170|
-|183   |  \genblk1[90].mac_i   |mac_180                   |   191|
-|184   |  \genblk1[91].mac_i   |mac_181                   |   161|
-|185   |  \genblk1[92].mac_i   |mac_182                   |   162|
-|186   |  \genblk1[93].mac_i   |mac_183                   |   160|
-|187   |  \genblk1[94].mac_i   |mac_184                   |   171|
-|188   |  \genblk1[95].mac_i   |mac_185                   |   192|
-|189   |  \genblk1[96].mac_i   |mac_186                   |   191|
-|190   |  \genblk1[97].mac_i   |mac_187                   |   163|
-|191   |  \genblk1[98].mac_i   |mac_188                   |   165|
-|192   |  \genblk1[99].mac_i   |mac_189                   |   189|
-|193   |  \genblk1[9].mac_i    |mac_190                   |   161|
-|194   |  u_2                  |wrapper_rom_fire7_expand3 |  5039|
-|195   |    u1                 |rom_fire7_expand3         |   346|
-+------+-----------------------+--------------------------+------+
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       | 45415|
++------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:52:20 ; elapsed = 00:53:00 . Memory (MB): peak = 3953.566 ; gain = 2602.918 ; free physical = 1996 ; free virtual = 4971
+Finished Writing Synthesis Report : Time (s): cpu = 01:02:58 ; elapsed = 01:04:31 . Memory (MB): peak = 4064.809 ; gain = 2665.812 ; free physical = 5166 ; free virtual = 7424
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 192 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:52:20 ; elapsed = 00:53:00 . Memory (MB): peak = 3953.566 ; gain = 2602.918 ; free physical = 1997 ; free virtual = 4972
-Synthesis Optimization Complete : Time (s): cpu = 00:52:20 ; elapsed = 00:53:00 . Memory (MB): peak = 3953.574 ; gain = 2602.918 ; free physical = 2008 ; free virtual = 4982
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 01:02:32 ; elapsed = 01:04:03 . Memory (MB): peak = 4064.809 ; gain = 2139.875 ; free physical = 5228 ; free virtual = 7486
+Synthesis Optimization Complete : Time (s): cpu = 01:02:58 ; elapsed = 01:04:31 . Memory (MB): peak = 4064.816 ; gain = 2665.812 ; free physical = 5228 ; free virtual = 7486
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 10125 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 10716 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'fire7_expand3' is not ideal for floorplanning, since the cellview 'fire7_expand3' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire7_expand3/expand3_fire7.xdc]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire7_expand3/expand3_fire7.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3977.578 ; gain = 0.000 ; free physical = 1924 ; free virtual = 4923
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4064.816 ; gain = 0.000 ; free physical = 5174 ; free virtual = 7439
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-333 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+335 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:52:33 ; elapsed = 00:53:12 . Memory (MB): peak = 3977.578 ; gain = 2647.371 ; free physical = 2028 ; free virtual = 5027
+synth_design: Time (s): cpu = 01:03:08 ; elapsed = 01:04:41 . Memory (MB): peak = 4064.816 ; gain = 2673.809 ; free physical = 5289 ; free virtual = 7553
 # report_utilization -file utiliziation.rpt
 # report_utilization -hierarchical -file hierarchical_utilization.rpt
 # report_timing -max_paths 50 -file timing.rpt
@@ -3446,12 +3292,876 @@ INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-78] ReportTimingParams: -max_paths 50 -nworst 1 -delay_type max -sort_by slack.
-report_timing: Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 4055.559 ; gain = 77.980 ; free physical = 1372 ; free virtual = 4410
+report_timing: Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 4158.797 ; gain = 93.980 ; free physical = 4743 ; free virtual = 7040
 # report_design_analysis -file design.rpt
-report_design_analysis: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 4055.559 ; gain = 0.000 ; free physical = 1351 ; free virtual = 4381
-vi ut
-WARNING: [Common 17-259] Unknown Tcl command 'vi ut' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
-vi utiliziation.rpt 
-WARNING: [Common 17-259] Unknown Tcl command 'vi utiliziation.rpt' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
-exit
-INFO: [Common 17-206] Exiting Vivado at Sat Feb 22 23:55:42 2020...
+report_design_analysis: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 4158.797 ; gain = 0.000 ; free physical = 4719 ; free virtual = 7010
+# opt_design -directive ExploreArea
+Command: opt_design -directive ExploreArea
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: ExploreArea
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4190.812 ; gain = 32.012 ; free physical = 4712 ; free virtual = 7006
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 1789e1c5c
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4190.812 ; gain = 0.000 ; free physical = 4704 ; free virtual = 7006
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 118cedbda
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 4190.812 ; gain = 0.000 ; free physical = 4731 ; free virtual = 7048
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 10d8a947f
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 4190.812 ; gain = 0.000 ; free physical = 4738 ; free virtual = 7048
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: ad843109
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 4190.812 ; gain = 0.000 ; free physical = 4732 ; free virtual = 7043
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: ad843109
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 4190.812 ; gain = 0.000 ; free physical = 4733 ; free virtual = 7043
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 4190.812 ; gain = 0.000 ; free physical = 4735 ; free virtual = 7046
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 6 Constant propagation | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 4190.812 ; gain = 0.000 ; free physical = 4637 ; free virtual = 6965
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 7 Sweep
+Phase 7 Sweep | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 4190.812 ; gain = 0.000 ; free physical = 4280 ; free virtual = 6694
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 8 Resynthesis
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-74] Optimized 0 modules.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 8 Resynthesis | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:39 . Memory (MB): peak = 4214.168 ; gain = 23.355 ; free physical = 3775 ; free virtual = 6340
+INFO: [Opt 31-389] Phase Resynthesis created 0 cells and removed 0 cells
+
+Phase 9 Post Processing Netlist
+Phase 9 Post Processing Netlist | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:39 . Memory (MB): peak = 4214.168 ; gain = 23.355 ; free physical = 3776 ; free virtual = 6341
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               1  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  Resynthesis                  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.17 . Memory (MB): peak = 4214.168 ; gain = 0.000 ; free physical = 3776 ; free virtual = 6341
+Ending Logic Optimization Task | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:40 . Memory (MB): peak = 4214.168 ; gain = 23.355 ; free physical = 3776 ; free virtual = 6341
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4214.168 ; gain = 0.000 ; free physical = 3776 ; free virtual = 6341
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4214.168 ; gain = 0.000 ; free physical = 3771 ; free virtual = 6336
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4214.168 ; gain = 0.000 ; free physical = 3768 ; free virtual = 6334
+Ending Netlist Obfuscation Task | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4214.168 ; gain = 0.000 ; free physical = 3718 ; free virtual = 6283
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:00 ; elapsed = 00:00:44 . Memory (MB): peak = 4214.168 ; gain = 55.371 ; free physical = 3724 ; free virtual = 6292
+# report_utilization -file post_opt_utilization.rpt
+opt_design -resynth_area
+Command: opt_design -resynth_area
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4214.168 ; gain = 0.000 ; free physical = 3716 ; free virtual = 6293
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Resynthesis
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-74] Optimized 0 modules.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 1 Resynthesis | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:24 . Memory (MB): peak = 4214.172 ; gain = 0.004 ; free physical = 3740 ; free virtual = 6317
+INFO: [Opt 31-389] Phase Resynthesis created 0 cells and removed 0 cells
+
+Phase 2 Post Processing Netlist
+Phase 2 Post Processing Netlist | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:24 . Memory (MB): peak = 4214.172 ; gain = 0.004 ; free physical = 3740 ; free virtual = 6317
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Resynthesis              |               0  |               0  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:24 . Memory (MB): peak = 4214.172 ; gain = 0.004 ; free physical = 3741 ; free virtual = 6317
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3740 ; free virtual = 6317
+Ending Netlist Obfuscation Task | Checksum: ff1dc5cc
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3740 ; free virtual = 6317
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:27 . Memory (MB): peak = 4214.172 ; gain = 0.004 ; free physical = 3741 ; free virtual = 6318
+0
+opt_design -merge_equivalent_drivers 
+Command: opt_design -merge_equivalent_drivers
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3771 ; free virtual = 6348
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Merging equivalent drivers
+Phase 1 Merging equivalent drivers | Checksum: 5e112f5b
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:40 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3796 ; free virtual = 6358
+INFO: [Opt 31-389] Phase Merging equivalent drivers created 0 cells and removed 40 cells
+
+Phase 2 Post Processing Netlist
+Phase 2 Post Processing Netlist | Checksum: 5e112f5b
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:40 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3788 ; free virtual = 6357
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+------------------------------------------------------------------------------------------------------------------------
+|  Phase                       |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+------------------------------------------------------------------------------------------------------------------------
+|  Merging equivalent drivers  |               0  |              40  |                                              0  |
+|  Post Processing Netlist     |               0  |               0  |                                              0  |
+------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 7353aba9
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:41 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3781 ; free virtual = 6358
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3781 ; free virtual = 6357
+Ending Netlist Obfuscation Task | Checksum: 7353aba9
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3781 ; free virtual = 6358
+INFO: [Common 17-83] Releasing license: Implementation
+8 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:44 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3785 ; free virtual = 6362
+0
+report_utilization 
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sat Feb 29 03:45:06 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_utilization
+| Design       : fire7_expand3
+| Device       : 7vx690tffg1157-3
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+-------+-------+-----------+-------+
+|        Site Type        |  Used | Fixed | Available | Util% |
++-------------------------+-------+-------+-----------+-------+
+| Slice LUTs*             | 27877 |     0 |    433200 |  6.44 |
+|   LUT as Logic          | 27877 |     0 |    433200 |  6.44 |
+|   LUT as Memory         |     0 |     0 |    174200 |  0.00 |
+| Slice Registers         |  3495 |     0 |    866400 |  0.40 |
+|   Register as Flip Flop |  3495 |     0 |    866400 |  0.40 |
+|   Register as Latch     |     0 |     0 |    866400 |  0.00 |
+| F7 Muxes                |  8378 |     0 |    216600 |  3.87 |
+| F8 Muxes                |   640 |     0 |    108300 |  0.59 |
++-------------------------+-------+-------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 34    |          Yes |           - |        Reset |
+| 90    |          Yes |         Set |            - |
+| 3371  |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| Block RAM Tile |    0 |     0 |      1470 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |      1470 |  0.00 |
+|   RAMB18       |    0 |     0 |      2940 |  0.00 |
++----------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |  192 |     0 |      3600 |  5.33 |
+|   DSP48E1 only |  192 |       |           |       |
++----------------+------+-------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+--------+
+|          Site Type          | Used | Fixed | Available |  Util% |
++-----------------------------+------+-------+-----------+--------+
+| Bonded IOB                  | 3094 |     0 |       600 | 515.67 |
+| Bonded IPADs                |    0 |     0 |        62 |   0.00 |
+| Bonded OPADs                |    0 |     0 |        40 |   0.00 |
+| PHY_CONTROL                 |    0 |     0 |        20 |   0.00 |
+| PHASER_REF                  |    0 |     0 |        20 |   0.00 |
+| OUT_FIFO                    |    0 |     0 |        80 |   0.00 |
+| IN_FIFO                     |    0 |     0 |        80 |   0.00 |
+| IDELAYCTRL                  |    0 |     0 |        20 |   0.00 |
+| IBUFDS                      |    0 |     0 |       576 |   0.00 |
+| GTHE2_CHANNEL               |    0 |     0 |        20 |   0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |   0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |   0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        10 |   0.00 |
+| ILOGIC                      |    0 |     0 |       600 |   0.00 |
+| OLOGIC                      |    0 |     0 |       600 |   0.00 |
++-----------------------------+------+-------+-----------+--------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFIO      |    0 |     0 |        80 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
+| BUFMRCE    |    0 |     0 |        40 |  0.00 |
+| BUFHCE     |    0 |     0 |       240 |  0.00 |
+| BUFR       |    0 |     0 |        80 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+-------+---------------------+
+| Ref Name |  Used | Functional Category |
++----------+-------+---------------------+
+| LUT6     | 22656 |                 LUT |
+| MUXF7    |  8378 |               MuxFx |
+| FDRE     |  3371 |        Flop & Latch |
+| OBUF     |  3074 |                  IO |
+| LUT3     |  2376 |                 LUT |
+| LUT1     |  2300 |                 LUT |
+| CARRY4   |  1506 |          CarryLogic |
+| LUT5     |   717 |                 LUT |
+| MUXF8    |   640 |               MuxFx |
+| DSP48E1  |   192 |    Block Arithmetic |
+| FDSE     |    90 |        Flop & Latch |
+| FDCE     |    34 |        Flop & Latch |
+| IBUF     |    20 |                  IO |
+| LUT2     |    11 |                 LUT |
+| LUT4     |     8 |                 LUT |
+| BUFG     |     1 |               Clock |
++----------+-------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+report_timing
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sat Feb 29 03:45:24 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_timing
+| Design       : fire7_expand3
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             1.872ns  (required time - arrival time)
+  Source:                 kernel_regs_reg[101][0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            genblk1[101].mac_i/mul_out_reg/B[0]
+                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.660ns  (logic 0.226ns (34.220%)  route 0.434ns (65.780%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.368ns = ( 6.368 - 5.000 ) 
+    Source Clock Delay      (SCD):    1.657ns
+    Clock Pessimism Removal (CPR):    0.144ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.558     0.558 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.434     0.993    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.080     1.073 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3687, unplaced)      0.584     1.657    clk_IBUF_BUFG
+                         FDRE                                         r  kernel_regs_reg[101][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.226     1.883 r  kernel_regs_reg[101][0]/Q
+                         net (fo=1, unplaced)         0.434     2.317    kernel_regs_reg_n_0_[101][0]
+                         DSP48E1                                      r  genblk1[101].mac_i/mul_out_reg/B[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=0)                   0.000     5.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.445     5.445 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.413     5.857    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.072     5.929 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3687, unplaced)      0.439     6.368    clk_IBUF_BUFG
+                         DSP48E1                                      r  genblk1[101].mac_i/mul_out_reg/CLK
+                         clock pessimism              0.144     6.512    
+                         clock uncertainty           -0.035     6.477    
+                         DSP48E1 (Setup_dsp48e1_CLK_B[0])
+                                                     -2.287     4.190    genblk1[101].mac_i/mul_out_reg
+  -------------------------------------------------------------------
+                         required time                          4.190    
+                         arrival time                          -2.317    
+  -------------------------------------------------------------------
+                         slack                                  1.872    
+
+
+
+
+report_timing: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3705 ; free virtual = 6283
+report_timing -hold
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type min -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sat Feb 29 03:45:31 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_timing -hold
+| Design       : fire7_expand3
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.000ns  (arrival time - required time)
+  Source:                 layer_en_reg_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            genblk1[0].mac_i/mul_out_reg/CEP
+                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.104ns  (logic 0.104ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.819ns
+    Source Clock Delay      (SCD):    0.491ns
+    Clock Pessimism Removal (CPR):    0.183ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.098     0.098 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.253     0.351    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.026     0.377 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3687, unplaced)      0.114     0.491    clk_IBUF_BUFG
+                         FDRE                                         r  layer_en_reg_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.104     0.595 r  layer_en_reg_reg/Q
+                         net (fo=192, unplaced)       0.000     0.595    layer_en_reg
+                         DSP48E1                                      r  genblk1[0].mac_i/mul_out_reg/CEP
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.263     0.263 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.267     0.530    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.030     0.560 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3687, unplaced)      0.259     0.819    clk_IBUF_BUFG
+                         DSP48E1                                      r  genblk1[0].mac_i/mul_out_reg/CLK
+                         clock pessimism             -0.183     0.636    
+                         DSP48E1 (Hold_dsp48e1_CLK_CEP)
+                                                     -0.041     0.595    genblk1[0].mac_i/mul_out_reg
+  -------------------------------------------------------------------
+                         required time                         -0.595    
+                         arrival time                           0.595    
+  -------------------------------------------------------------------
+                         slack                                  0.000    
+
+
+
+
+place_design 
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.10 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3708 ; free virtual = 6275
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 0b6e9f20
+
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.16 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3708 ; free virtual = 6275
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3788 ; free virtual = 6355
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-415] IO Placement failed due to overutilization. This design contains 3094 I/O ports
+ while the target  device: 7vx690t package: ffg1157, contains only 600 available user I/O. The target device has 600 usable I/O pins of which 0 are already occupied by user-locked I/Os.
+ To rectify this issue:
+ 1. Ensure you are targeting the correct device and package.  Select a larger device or different package if necessary.
+ 2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+ 3. Consider design changes to reduce the number of I/Os necessary.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+ERROR: [Place 30-68] Instance clk_IBUF_BUFG_inst (BUFG) is not placed
+ERROR: [Place 30-68] Instance clk_IBUF_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance fire7_expand3_en_IBUF_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance fire7_expand3_finish_OBUF_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance fire7_expand3_sample_OBUF_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[0]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[10]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[11]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[12]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[13]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[14]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[15]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[1]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[2]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[3]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[4]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[5]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[6]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[7]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[8]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[9]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][8]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][9]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][8]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][9]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][8]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][9]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][8]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][9]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][8]_INST_0 (OBUF) is not placed
+INFO: [Common 17-14] Message 'Place 30-68' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e6658a04
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3737 ; free virtual = 6298
+Phase 1 Placer Initialization | Checksum: e6658a04
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3737 ; free virtual = 6298
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: e6658a04
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3754 ; free virtual = 6316
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 0 Warnings, 0 Critical Warnings and 103 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+place_design -no_fanout_opt  -directive Explore
+Command: place_design -no_fanout_opt -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'Explore' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3581 ; free virtual = 6263
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e6658a04
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3581 ; free virtual = 6263
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3613 ; free virtual = 6302
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-415] IO Placement failed due to overutilization. This design contains 3094 I/O ports
+ while the target  device: 7vx690t package: ffg1157, contains only 600 available user I/O. The target device has 600 usable I/O pins of which 0 are already occupied by user-locked I/Os.
+ To rectify this issue:
+ 1. Ensure you are targeting the correct device and package.  Select a larger device or different package if necessary.
+ 2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+ 3. Consider design changes to reduce the number of I/Os necessary.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+ERROR: [Place 30-68] Instance clk_IBUF_BUFG_inst (BUFG) is not placed
+ERROR: [Place 30-68] Instance clk_IBUF_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance fire7_expand3_en_IBUF_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance fire7_expand3_finish_OBUF_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance fire7_expand3_sample_OBUF_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[0]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[10]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[11]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[12]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[13]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[14]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[15]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[1]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[2]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[3]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[4]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[5]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[6]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[7]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[8]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ifm_IBUF[9]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][8]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[0][9]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][8]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[100][9]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][8]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[101][9]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][8]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[102][9]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance ofm[103][8]_INST_0 (OBUF) is not placed
+INFO: [Common 17-14] Message 'Place 30-68' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e6658a04
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3649 ; free virtual = 6331
+Phase 1 Placer Initialization | Checksum: e6658a04
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3649 ; free virtual = 6331
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: e6658a04
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 4214.172 ; gain = 0.000 ; free physical = 3666 ; free virtual = 6348
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 0 Warnings, 0 Critical Warnings and 103 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
