@@ -180,7 +180,8 @@ reg flag1=0;
 reg flag2=0;
 reg flag3=0;
 reg flag4=0;
-reg norm_numofchannels;
+reg [2:0] norm_numofchannels;
+reg [2:0] randomcounter;
 reg conv1rst,squeeze2rst,expand2rst,squeeze3rst,expand3rst,squeeze4rst,expand4rst,squeeze5rst,expand5rst,squeeze6rst,expand6rst,squeeze7rst,expand7rst,squeeze8rst,expand8rst,squeeze9rst,expand9rst,conv10_1rst,conv10_2rst=1;
 reg[9:0] startdata;
 wire newlayer;
@@ -191,21 +192,23 @@ reg flagreset;
 reg[14:0] index;//real index in ram
 reg[14:0] index_shifted;//real index in ram
 reg[14:0] win;// first index in windows
+reg[14:0] winref;
 reg[11:0] numwin;//total number of windows
-reg[6:0] rowcounter;//to put internal padding
+reg[6:0] rowcounter1;//to put internal padding
+reg[6:0] rowcounter2;//to put internal padding
 reg[5:0] rowwin;///////////////number of windows
 reg[5:0] countwin;//number of windows on a row
 reg[5:0] channels;
 reg[5:0] channels1;
 reg[5:0] channels2;
 reg[5:0] channels3;
-reg[5:0] a0;
-reg[5:0] a1;
+reg[4:0] a0;
+reg[4:0] a1;
 reg[1:0] stride_squeeze;//////////////stride for each reading layer
 reg[11:0] no_of_win_squeeze; /////////no of win for each reading
 reg[7:0] lengthofrow;///////////no of elements in row
-reg[8:0] channels_counter;////////count no of channels
-reg[8:0] numchannels;/////////total no of input channels for each reading layer
+reg[9:0] channels_counter;////////count no of channels
+reg[9:0] numchannels;/////////total no of input channels for each reading layer
 reg[1:0] rowfilter;////////no of rows in the filter
 reg[1:0] colfilter;////////no of cols in the filter
 reg[1:0] row,col;
@@ -215,7 +218,8 @@ reg flagread_shifted;
 reg flagread_shiftedagain;
 reg flagread_shiftedagainagain;
 reg resetmem;//initialize memory with zeros
-reg[15:0] truncated_index;//index for new ram
+reg[14:0] truncated_index;//index for new ram
+reg [5:0] ram_numcounter;
 reg shift1conv1;
 reg shift2conv1;
 reg shift1expand2;
@@ -649,7 +653,7 @@ always@(*) begin
                dina1[i]=expand71x1[0:ram_num-1];
                dina1[i+1]=expand71x1[ram_num:2*ram_num-1];
                dina1[i+2]=expand71x1[2*ram_num:3*ram_num-1];
-               dina2[i]=expand71x1[0:ram_num-1];
+               dina2[i]=expand73x3[0:ram_num-1];
                dina2[i+1]=expand73x3[ram_num:2*ram_num-1];
                dina2[i+2]=expand73x3[2*ram_num:3*ram_num-1];
            end
@@ -741,7 +745,7 @@ always@(*) begin
            numchannels=63;
            rowfilter=2;
            colfilter=2;
-      
+           
            for ( int i = 0 ; i < num_instances ; i++) begin
                 
                 for ( int j = 0 ; j < ram_num ; j++) begin
@@ -939,8 +943,8 @@ always@(*) begin
            stride_squeeze=1;
            no_of_win_squeeze=63; 
            lengthofrow=8;
-           rowfilter=2;
-           colfilter=2;
+           rowfilter=0;
+           colfilter=0;
 
            for ( int i = 0 ; i < num_instances ; i++) begin
                 
@@ -1014,7 +1018,8 @@ always@(posedge clk or negedge rst) begin
         flag2<=0;
         flag3<=0;
         set2_counter<=0;
-        rowcounter<=0;
+        rowcounter1<=0;
+        rowcounter2<=0;
         resetmem<=0;
         flag4<=0;
         flagreset<=0;
@@ -1046,7 +1051,8 @@ always@(posedge clk or negedge rst) begin
             flag3<=0;
             flag4<=0;
             set2_counter<=0;
-            rowcounter<=0;
+            rowcounter1<=0;
+            rowcounter2<=0;
             flagreset<=0;
             if(enconv1) begin
                 if(flagconv1) begin
@@ -1107,27 +1113,27 @@ always@(posedge clk or negedge rst) begin
         if(clock1) begin
             flagconv1<=1;
             if(!flag1) begin
-               for(int i=0;i<norm_numofchannels;i++)begin//to open the enables of instances for each layer 
+               for(randomcounter=0;randomcounter<norm_numofchannels;randomcounter++)begin//to open the enables of instances for each layer 
                    for(int rams=0;rams<ram_num;rams++)begin
-                    ena1[set1_counter+i][rams]<=1;
-                    wea1[set1_counter+i][rams]<=1;
+                    ena1[set1_counter+randomcounter][rams]<=1;
+                    wea1[set1_counter+randomcounter][rams]<=1;
                    end
                end
                
-              if(addra1[0]==1022 || (addra1[0]==1020 && flag3)||(addra1[0]==1020 && rowcounter==lengthofrow)) begin
-                   if(set1_counter>=num_instances-1)begin
+              if(addra1[0]==1022 || (addra1[0]==1020 && flag3)||(addra1[0]==1020 && {1'b0,rowcounter1}==lengthofrow)) begin
+                   if({1'b0,set1_counter}>=num_instances-1)begin
                         flag1<=1;
                         end
                    else  
                         set1_counter<=set1_counter+norm_numofchannels;
                end
-               if(rowcounter==lengthofrow && addra1[0]!=1020) begin
+               if({1'b0,rowcounter1}==lengthofrow && addra1[0]!=1020) begin
                    flag3<=1;
                end
-               if(rowcounter==lengthofrow)begin
-                        rowcounter<=0;
+               if({1'b0,rowcounter1}==lengthofrow)begin
+                        rowcounter1<=0;
                    end
-                   else if(enconv1||enexpand3||enexpand5||enexpand7) rowcounter<=rowcounter+1;
+                   else if(enconv1||enexpand3||enexpand5||enexpand7) rowcounter1<=rowcounter1+1;
                if(flag3)begin
                   
                    
@@ -1158,19 +1164,19 @@ always@(posedge clk or negedge rst) begin
             if(enconv1) begin
                 if(flag1) begin
                     if(!flag2) begin
-                       for(int i=0;i<norm_numofchannels;i++)begin//to open the enables of instances for each layer 
+                       for(randomcounter=0;randomcounter<norm_numofchannels;randomcounter++)begin//to open the enables of instances for each layer 
                    for(int rams=0;rams<ram_num;rams++)begin
-                    ena2[set2_counter+i][rams]<=1;
-                    wea2[set2_counter+i][rams]<=1;
+                    ena2[set2_counter+{1'b0,randomcounter}][rams]<=1;
+                    wea2[set2_counter+{1'b0,randomcounter}][rams]<=1;
                    end
                end
-                       if(rowcounter==lengthofrow&&addra2[0]!=1020) begin
+                       if({1'b0,rowcounter2}==lengthofrow&&addra2[0]!=1020) begin
                            flag4<=1;
                        end
-                       if(rowcounter==lengthofrow)begin
-                        rowcounter<=0;
+                       if({1'b0,rowcounter2}==lengthofrow)begin
+                        rowcounter2<=0;
                    end
-                   else if(enconv1||enexpand3||enexpand5||enexpand7) rowcounter<=rowcounter+1;
+                   else if(enconv1||enexpand3||enexpand5||enexpand7) rowcounter2<=rowcounter2+1;
                        if(flag4)begin
                            for(int addressrams_counter=0;addressrams_counter<ram_num;addressrams_counter++) begin
             
@@ -1186,7 +1192,7 @@ always@(posedge clk or negedge rst) begin
                            end
                        end
                        
-                       if(addra2[0]==1022|| (addra2[0]==1020 && flag4)||(addra2[0]==1020 && rowcounter==lengthofrow )) begin
+                       if(addra2[0]==1022|| (addra2[0]==1020 && flag4)||(addra2[0]==1020 && {1'b0,rowcounter2}==lengthofrow )) begin
                            if(set2_counter>=num_instances)
                                 flag2<=1;
                            else  
@@ -1198,19 +1204,19 @@ always@(posedge clk or negedge rst) begin
             end
             else  begin
                 if(!flag2) begin
-                   for(int i=0;i<norm_numofchannels;i++)begin//to open the enables of instances for each layer 
+                   for(randomcounter=0;randomcounter<norm_numofchannels;randomcounter++)begin//to open the enables of instances for each layer 
                    for(int rams=0;rams<ram_num;rams++)begin
-                    ena2[set2_counter+i][rams]<=1;
-                    wea2[set2_counter+i][rams]<=1;
+                    ena2[set2_counter+{1'b0,randomcounter}][rams]<=1;
+                    wea2[set2_counter+{1'b0,randomcounter}][rams]<=1;
                    end
                end
-                   if(rowcounter==lengthofrow && addra2[0]!=1020) begin
+                   if({1'b0,rowcounter2}==lengthofrow && addra2[0]!=1020) begin
                        flag4<=1;
                    end
-                   if(rowcounter==lengthofrow)begin
-                        rowcounter<=0;
+                   if({1'b0,rowcounter2}==lengthofrow)begin
+                        rowcounter2<=0;
                    end
-                   else if(enconv1||enexpand3||enexpand5||enexpand7) rowcounter<=rowcounter+1;
+                   else if(enconv1||enexpand3||enexpand5||enexpand7) rowcounter2<=rowcounter2+1;
                    if(flag4)begin
                        for(int addressrams_counter=0;addressrams_counter<ram_num;addressrams_counter++) begin
         
@@ -1225,7 +1231,7 @@ always@(posedge clk or negedge rst) begin
                            
                        end
                    end
-                   if(addra2[0]==1022|| (addra2[0]==1020 && flag4)||(addra2[0]==1020 &&  rowcounter==lengthofrow )) begin
+                   if(addra2[0]==1022|| (addra2[0]==1020 && flag4)||(addra2[0]==1020 &&  {1'b0,rowcounter2}==lengthofrow )) begin
                        if(set2_counter>=num_instances)
                             flag2<=1;
                        else  
@@ -1247,7 +1253,9 @@ always@(posedge clk or negedge rst) begin
         if(newlayer)begin
             index<=0;
             win<=0;
+	    winref<=0;
             channels<=0;
+            channels_counter<=0;
             channels1<=0;
             channels2<=0;
             channels3<=0;
@@ -1294,10 +1302,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==0)begin
                         ena1[instances][channels1]<=1;
                         ena2[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1323,10 +1331,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==1)begin
                         ena1[instances][channels1]<=1;
                         ena2[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1351,10 +1359,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==2)begin
                         ena1[instances][channels1]<=1;
                         ena2[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1380,10 +1388,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==3)begin
                         ena1[instances][channels1]<=1;
                         ena2[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1408,10 +1416,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==4)begin
                         ena1[instances][channels1]<=1;
                         ena2[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1433,10 +1441,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==5)begin
                         ena1[instances][channels1]<=1;
                         ena2[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1461,10 +1469,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==6)begin
                         ena1[instances][channels1]<=1;
                         ena2[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1489,10 +1497,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==7)begin
                         ena1[instances][channels1]<=1;
                         ena2[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1517,10 +1525,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==0)begin
                         ena2[instances][channels1]<=1;
                         ena1[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1546,10 +1554,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==1)begin
                         ena2[instances][channels1]<=1;
                         ena1[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1575,10 +1583,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==2)begin
                         ena2[instances][channels1]<=1;
                         ena1[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1604,10 +1612,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==3)begin
                         ena2[instances][channels1]<=1;
                         ena1[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1633,10 +1641,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==4)begin
                         ena2[instances][channels1]<=1;
                         ena1[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1662,10 +1670,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==5)begin
                         ena2[instances][channels1]<=1;
                         ena1[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1691,10 +1699,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==6)begin
                         ena2[instances][channels1]<=1;
                         ena1[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1720,10 +1728,10 @@ always@(posedge clk or negedge rst) begin
                     if(instances==7)begin
                         ena2[instances][channels1]<=1;
                         ena1[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            if(i!=channels1)begin
-                                ena1[instances][i]<=0;
-                                ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter!=channels1)begin
+                                ena1[instances][ram_numcounter]<=0;
+                                ena2[instances][ram_numcounter]<=0;
                             end
                         end
                     end
@@ -1748,14 +1756,14 @@ always@(posedge clk or negedge rst) begin
                 for(int instances=0;instances<num_instances;instances++)begin
                         ena1[instances][channels1]<=0;
                         ena2[instances][channels1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            ena1[instances][i]<=0;
-                            ena2[instances][i]<=0;
+                        for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                            ena1[instances][ram_numcounter]<=0;
+                            ena2[instances][ram_numcounter]<=0;
                         end
                 end
                 ena2[8][channels1]<=1;
-                for (int i=0;i<ram_num;i++)begin
-                        if(i!=channels1)
+                for (ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
+                        if(ram_numcounter!=channels1)
                             ena2[8][i]<=0;
                 end
             
@@ -1767,80 +1775,145 @@ always@(posedge clk or negedge rst) begin
                   
                     if(row==rowfilter)begin
                         row<=0;
-                        if(channels==ram_num-2|| (channels_counter==366 && numchannels==735)||(channels_counter==734 && numchannels==735))begin
-                            if(countwin==rowwin )begin//rowwin 
-                                    win<=win+2*stride_squeeze+lengthofrow;//stride 
+                        if({1'b0,channels}==ram_num-2|| (channels_counter==366 && numchannels==735)||(channels_counter==734 && numchannels==735))begin
+                            if(channels_counter==numchannels-1)begin
+                                if(countwin==rowwin )begin//rowwin
                                     countwin<=0;
-                                end
-                                else begin
-                                    win<=win+stride_squeeze; //stride 
-                                    countwin<=countwin+1;
-                            end
-                        end
-                        if(channels==ram_num-1 || (channels_counter==367 && numchannels==735)||(channels_counter==735 && numchannels==735))begin//for squeeze 2 no of channels =ram num
-                            if(channels_counter<numchannels)begin//for squeeze 2 channels = channels_counter
-                                channels<=0;
-                                if(channels_counter<ram_num )begin
-                                    if(numchannels==2*ram_num)//true for 128ch layers (fire 2,3)
-                                        index<=win+8192;
-                                    else if(index<8192)
-                                            index<=win+1024;
-                                        else index<=win+8192+1024;  
-                                end
-                                else if(channels_counter<2*ram_num) begin
-                                    if(numchannels==4*ram_num)//true for 256ch layers (fire 4,5)
-                                        index<=win+8192;
-                                    else if(index<8192)
-                                               index<=win+2048;
-                                            else index<=win+8192+1024;
-                                           
-                                end
-                                else if(channels_counter<3*ram_num) begin
-                                    if(numchannels==6*ram_num)//true for 384ch layers (fire 7)
-                                        index<=win+8192;
-                                    else if(index<8192)
-                                            index<=win+3072;
-                                        else index<=win+8192+1024; 
-                                end
-                                else if(channels_counter<4*ram_num) begin
-                                    if(numchannels==8*ram_num)//true for 512ch layers (fire 6,8) and last inst (736ch)
-                                        index<=win+8192;
-                                    else if(index<8192)
-                                            index<=win+4096;//5th instance in set1 (736ch)
-                                        else index<=win+8192+1024; 
+                                    if(stride_squeeze==2) 
+                                        win<=win+2*stride_squeeze+{7'b0,lengthofrow};//stride 
+                                    else if(stride_squeeze==1)
+                                        win<=win+{13'b0,stride_squeeze};//stride 
+                                    end
+                                    else begin
+                                        countwin<=countwin+1;
+                                        win<=win+{13'b0,stride_squeeze}; //stride 
                                         
                                 end
+                            end
+                        end
+                        if({1'b0,channels}==ram_num-1 || (channels_counter==367 && numchannels==735)||(channels_counter==735 && numchannels==735))begin//for squeeze 2 no of channels =ram num
+                            if(channels_counter<numchannels)begin//for squeeze 2 channels = channels_counter
+                                channels<=0;
+                                col<=0;
+                                channels_counter<=channels_counter+1;
+                                if(channels_counter<ram_num )begin
+                                    if(numchannels==2*ram_num-1)begin//true for 128ch layers (fire 2,3)
+                                        index<=win+8192;
+                                        winref<=win+8192;
+                                        end
+                                    else if(index<8192)begin
+                                            if(numchannels==4*ram_num-1&&(win>=1024)) index<=win+1024+1024;
+                                            else index<=win+1024;
+					                        winref<=win+1024;
+                                            end
+                                        else begin
+                                            index<=win+8192+1024;
+                                            winref<=win+8192+1024;					
+                                        end  
+                                end
+                                else if(channels_counter<2*ram_num) begin
+                                    if(numchannels==4*ram_num-1)begin//true for 256ch layers (fire 4,5)
+                                        if(win>=1024) index<=win+8192+1024;
+                                        else index<=win+8192;
+                                        winref<=win+8192;
+                                        end
+                                    else if(index<8192)begin
+                                               index<=win+2048;
+					       winref<=win+2048;
+				    end
+                                            else begin
+						index<=win+8192+1024;
+						winref<=win+8192+1024;
+                                           end
+                                end
+                                else if(channels_counter<3*ram_num) begin
+                                    if(numchannels==6*ram_num-1)begin//true for 384ch layers (fire 7)
+                                        index<=win+8192;
+					winref<=win+8192;
+				    end
+                                    else if(index<8192)begin
+                                            index<=win+3072;
+					    winref<=win+3072;
+					end
+                                        else begin
+                                            if(numchannels==4*ram_num-1&&(win>=1024)) index<=win+8192+2048;                
+                                            else index<=win+8192+1024;
+                                            winref<=win+8192+1024;
+                                        end 
+                                end
+                                else if(channels_counter<4*ram_num) begin
+                                    if(numchannels==8*ram_num-1)begin//true for 512ch layers (fire 6,8) and last inst (736ch)
+                                        index<=win+8192;
+                                        winref<=win+8192;
+                                    end
+                                    else if(index<8192)begin
+                                            index<=win+4096;//5th instance in set1 (736ch)
+                                            winref<=win+4096;    
+                                         end
+                                            else begin
+                                                index<=win+8192+1024; 
+                                                winref<=win+8192+1024; 
+                                                                
+                                            end
+                                end
                                 else if(channels_counter<5*ram_num) begin //2nd instance in set2 (512ch)
-                                         if(index<8192)
+                                         if(index<8192)begin
                                             index<=win+5120;//6th instance in set1 (736ch)
-                                        else index<=win+8192+1024; 
+                                            winref<=win+5120;
+                                        end
+                                        else begin
+                                            if(numchannels==8*ram_num-1)begin
+                                                index<=win+8192+1024; 
+                                                winref<=win+8192+1024;
+                                            end
+                                            else begin
+                                                index<=win+8192+2048; 
+                                                winref<=win+8192+2048;
+                                            end
+                                        end 
                                      end  
                                 else if(channels_counter<6*ram_num) begin //3rd instance in set2 (512ch)
-                                        if (numchannels==736 && channels_counter==367)
+                                        if (numchannels==735 && channels_counter==367)begin
                                             index<=win+8192;//1st instance in set2 (736ch)
-                                        else index<=win+8192+2048; 
+                                            winref<=win+8192;
+                                        end
+                                        else begin
+                                            index<=win+8192+2048;
+                                            winref<=win+8192+2048;
+                                        end
                                      end
                                 else if(channels_counter<7*ram_num) begin //4th instance in set2 (512ch)
-                                       if (numchannels==736)
+                                       if (numchannels==735)begin
                                             index<=win+8192+1024;//2nd instance in set2 (736ch)
-                                        else index<=win+8192+3072; 
+                                            winref<=win+8192+1024;
+                                        end
+                                    else begin
+                                    index<=win+8192+3072;
+                                    winref<=win+8192+3072;
+                                     
+                                     end
                                      end
                                 else if(channels_counter<8*ram_num) begin//3rd instance in set2 (736ch)
-                                        index<=win+8192+2048; 
+                                        index<=win+8192+2048;
+					                    winref<=win+8192+2048;
+					 
                                      end    
                                  else if(channels_counter<9*ram_num) begin//4th instance in set2 (736ch)
-                                        index<=win+8192+3072; 
+                                        index<=win+8192+3072; 	
+					                    winref<=win+8192+3072; 
                                      end  
                                  else if(channels_counter<10*ram_num) begin//5th instance in set2 (736ch)
                                         index<=win+8192+4096; 
+					                    winref<=win+8192+4096; 
                                      end 
                                  else if(channels_counter<11*ram_num) begin//6th instance in set2 (736ch)
                                          index<=win+8192+5120; 
+					                      winref<=win+8192+5120; 
                                       end            
                             end
-                            else begin
+                            else begin//if window end
                                 channels<=0;
-				channels_counter<=0;
+				                channels_counter<=0;
                                 if(numwin==no_of_win_squeeze) begin//no_of_win_squeeze
                                     flagread<=1;
                                 end
@@ -1848,27 +1921,78 @@ always@(posedge clk or negedge rst) begin
                                 else begin
                                     col<=3;
                                     numwin<=numwin+1;
-                                    index<=win-1;
+                                    if(numchannels==4*ram_num-1 &&(win>=1024 &&win<2048)) index<=win-1+1024;
+                                    else index<=win-1;
+                                    
+                                    winref<=win;
                                 end
                             end
                         end
-                        else begin
+                        else begin//IF CHANNELS DIDN'T END
                             col<=0;
                             channels<=channels+1;
                             channels_counter<=channels_counter+1;
-                            index<=win;
+                            if(channels_counter<64)begin
+                                if(numchannels==4*ram_num-1 &&(winref>=1024&&winref<2048)) index<=winref+1024;
+                                else index<=winref;
+                            end
+                            else if(channels_counter<128)begin
+                                if(numchannels==4*ram_num-1 &&(winref>=2048&&winref<3072)) index<=winref+1024;
+                                else index<=winref;
+                            end
+                            else if(channels_counter<192)begin
+                                if(numchannels==4*ram_num-1 &&(winref>=9216 &&winref<10240)) index<=winref+1024;
+                                else index<=winref;
+                            end
+                            else if(channels_counter>=192)begin
+                                if(numchannels==4*ram_num-1 &&(winref>=10240 &&winref<11264)) index<=winref+1024;
+                                else index<=winref;
+                            end
                         end
                         
                     end
                     
-                    else begin
-                         index<=index+(lengthofrow-2);//shift row 130
+                    else begin//IF ROW DIDN'T END
+                         if(channels_counter<64)begin
+                             if(expand5_end&&(index>=992&&index<2048)) index<=index+({7'b0,lengthofrow}-2)+1024;
+                             else index<=index+({7'b0,lengthofrow}-2);//shift row 130
+                         end
+                         else if(channels_counter<128)begin
+                            if(expand5_end&&(index>=2016&&index<3072)) index<=index+({7'b0,lengthofrow}-2)+1024;
+                            else index<=index+({7'b0,lengthofrow}-2);//shift row 130
+                         end
+                         else if(channels_counter<192)begin
+                             if(expand5_end&&(index>=9184 &&index<10240)) index<=index+({7'b0,lengthofrow}-2)+1024;
+                             else index<=index+({7'b0,lengthofrow}-2);//shift row 130
+                         end
+                         else if(channels_counter>=192)begin
+                            if(expand5_end&&(index>=10208 &&index<11264)) index<=index+({7'b0,lengthofrow}-2)+1024;
+                            else index<=index+({7'b0,lengthofrow}-2);//shift row 130
+                         end
                          row<=row+1;
                          col<=0;
                      end
                 end
             else begin
-                index<=index+1;
+                if(col!=3)begin
+                    if(channels_counter<64)begin
+                        if(numchannels==4*ram_num-1 &&(index>=1023 &&index<2048)) index<=index+1+1024;
+                        else index<=index+1;
+                    end
+                    else if (channels_counter<128)begin
+                        if(numchannels==4*ram_num-1 &&(index>=2047 &&index<3072)) index<=index+1+1024;
+                        else index<=index+1;
+                    end
+                    else if(channels_counter<192)begin
+                        if(numchannels==4*ram_num-1 &&(index>=9215 &&index<10240)) index<=index+1+1024;
+                        else index<=index+1;
+                    end
+                    else if (channels_counter>=192)begin
+                        if(numchannels==4*ram_num-1 &&(index>=10239 &&index<11264)) index<=index+1+1024;
+                        else index<=index+1;
+                    end
+                end
+                else index<=index+1;
                 col<=col+1;
             end
         end
@@ -1940,6 +2064,10 @@ always@(posedge clk or negedge rst)begin///////choose enable for reading layer
             ensqueeze8<=1;
             squeeze8<=douta[a1][channels3];
             end
+            else if(expand8_end)begin
+            ensqueeze9<=1;
+            squeeze9<=douta[a1][channels3];
+            end
             else if(expand9_end)begin
             enconv10_1<=1;
             conv10_1<=douta[a1][channels3];
@@ -1960,6 +2088,7 @@ always@(posedge clk or negedge rst)begin///////choose enable for reading layer
             ensqueeze5<=0;
             ensqueeze6<=0;
             ensqueeze7<=0;
+            startcounter<=0;
             ensqueeze8<=0;
             ensqueeze9<=0;
             enconv10_1<=0;

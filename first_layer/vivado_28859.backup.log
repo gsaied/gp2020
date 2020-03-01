@@ -1,0 +1,1870 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Mar  1 03:18:21 2020
+# Process ID: 28859
+# Current directory: /home/gsaied/Desktop/old_rtl/first_layer
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/first_layer/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/first_layer/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+# create_fileset -constrset constr
+# add_files strain_conv1.xdc -fileset constr 
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -constrset constr
+Command: synth_design -top conv1 -part xc7vx690t -flatten_hierarchy rebuilt -constrset constr
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 28870 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1425.465 ; gain = 70.000 ; free physical = 2631 ; free virtual = 6078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'conv1' [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:10]
+	Parameter WOUT bound to: 128 - type: integer 
+	Parameter DSP_NO bound to: 64 - type: integer 
+	Parameter STRIDE bound to: 2 - type: integer 
+	Parameter W_IN bound to: 258 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter CHIN bound to: 3 - type: integer 
+	Parameter KERNEL_DIM bound to: 3 - type: integer 
+	Parameter CHOUT bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'conv_mac' [/home/gsaied/Desktop/old_rtl/first_layer/conv_mac.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mac' (1#1) [/home/gsaied/Desktop/old_rtl/first_layer/conv_mac.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'biasing_rom' [/home/gsaied/Desktop/old_rtl/first_layer/biasing.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'biasing_rom' (2#1) [/home/gsaied/Desktop/old_rtl/first_layer/biasing.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'rom_array_layer_1' [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 3 - type: integer 
+	Parameter ADDR bound to: 5 - type: integer 
+	Parameter NUM bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:15]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:18]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:21]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:24]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:27]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:30]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:33]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:36]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:39]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:42]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:45]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:48]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:51]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:54]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:57]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:60]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:63]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:66]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:69]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:72]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:75]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:78]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:81]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:84]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:87]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:90]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:93]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:96]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:99]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:102]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:105]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:108]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:111]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:114]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:117]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:120]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:123]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:126]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:129]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:132]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:135]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:138]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:141]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:144]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:147]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:150]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:153]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:156]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:159]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:162]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:165]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:168]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:171]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:174]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:177]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:180]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:183]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:186]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:189]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:192]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:195]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:198]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:201]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:204]
+INFO: [Synth 8-3876] $readmem data file 'file_1.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:206]
+INFO: [Synth 8-3876] $readmem data file 'file_2.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:207]
+INFO: [Synth 8-3876] $readmem data file 'file_3.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:208]
+INFO: [Synth 8-3876] $readmem data file 'file_4.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:209]
+INFO: [Synth 8-3876] $readmem data file 'file_5.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:210]
+INFO: [Synth 8-3876] $readmem data file 'file_6.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:211]
+INFO: [Synth 8-3876] $readmem data file 'file_7.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:212]
+INFO: [Synth 8-3876] $readmem data file 'file_8.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:213]
+INFO: [Synth 8-3876] $readmem data file 'file_9.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:214]
+INFO: [Synth 8-3876] $readmem data file 'file_10.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:215]
+INFO: [Synth 8-3876] $readmem data file 'file_11.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:216]
+INFO: [Synth 8-3876] $readmem data file 'file_12.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:217]
+INFO: [Synth 8-3876] $readmem data file 'file_13.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:218]
+INFO: [Synth 8-3876] $readmem data file 'file_14.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:219]
+INFO: [Synth 8-3876] $readmem data file 'file_15.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:220]
+INFO: [Synth 8-3876] $readmem data file 'file_16.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:221]
+INFO: [Synth 8-3876] $readmem data file 'file_17.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:222]
+INFO: [Synth 8-3876] $readmem data file 'file_18.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:223]
+INFO: [Synth 8-3876] $readmem data file 'file_19.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:224]
+INFO: [Synth 8-3876] $readmem data file 'file_20.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:225]
+INFO: [Synth 8-3876] $readmem data file 'file_21.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:226]
+INFO: [Synth 8-3876] $readmem data file 'file_22.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:227]
+INFO: [Synth 8-3876] $readmem data file 'file_23.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:228]
+INFO: [Synth 8-3876] $readmem data file 'file_24.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:229]
+INFO: [Synth 8-3876] $readmem data file 'file_25.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:230]
+INFO: [Synth 8-3876] $readmem data file 'file_26.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:231]
+INFO: [Synth 8-3876] $readmem data file 'file_27.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:232]
+INFO: [Synth 8-3876] $readmem data file 'file_28.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:233]
+INFO: [Synth 8-3876] $readmem data file 'file_29.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:234]
+INFO: [Synth 8-3876] $readmem data file 'file_30.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:235]
+INFO: [Synth 8-3876] $readmem data file 'file_31.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:236]
+INFO: [Synth 8-3876] $readmem data file 'file_32.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:237]
+INFO: [Synth 8-3876] $readmem data file 'file_33.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:238]
+INFO: [Synth 8-3876] $readmem data file 'file_34.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:239]
+INFO: [Synth 8-3876] $readmem data file 'file_35.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:240]
+INFO: [Synth 8-3876] $readmem data file 'file_36.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:241]
+INFO: [Synth 8-3876] $readmem data file 'file_37.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:242]
+INFO: [Synth 8-3876] $readmem data file 'file_38.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:243]
+INFO: [Synth 8-3876] $readmem data file 'file_39.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:244]
+INFO: [Synth 8-3876] $readmem data file 'file_40.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:245]
+INFO: [Synth 8-3876] $readmem data file 'file_41.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:246]
+INFO: [Synth 8-3876] $readmem data file 'file_42.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:247]
+INFO: [Synth 8-3876] $readmem data file 'file_43.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:248]
+INFO: [Synth 8-3876] $readmem data file 'file_44.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:249]
+INFO: [Synth 8-3876] $readmem data file 'file_45.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:250]
+INFO: [Synth 8-3876] $readmem data file 'file_46.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:251]
+INFO: [Synth 8-3876] $readmem data file 'file_47.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:252]
+INFO: [Synth 8-3876] $readmem data file 'file_48.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:253]
+INFO: [Synth 8-3876] $readmem data file 'file_49.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:254]
+INFO: [Synth 8-3876] $readmem data file 'file_50.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:255]
+INFO: [Synth 8-3876] $readmem data file 'file_51.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:256]
+INFO: [Synth 8-3876] $readmem data file 'file_52.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:257]
+INFO: [Synth 8-3876] $readmem data file 'file_53.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:258]
+INFO: [Synth 8-3876] $readmem data file 'file_54.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:259]
+INFO: [Synth 8-3876] $readmem data file 'file_55.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:260]
+INFO: [Synth 8-3876] $readmem data file 'file_56.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:261]
+INFO: [Synth 8-3876] $readmem data file 'file_57.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:262]
+INFO: [Synth 8-3876] $readmem data file 'file_58.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:263]
+INFO: [Synth 8-3876] $readmem data file 'file_59.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:264]
+INFO: [Synth 8-3876] $readmem data file 'file_60.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:265]
+INFO: [Synth 8-3876] $readmem data file 'file_61.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:266]
+INFO: [Synth 8-3876] $readmem data file 'file_62.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:267]
+INFO: [Synth 8-3876] $readmem data file 'file_63.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:268]
+INFO: [Synth 8-3876] $readmem data file 'file_64.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:269]
+INFO: [Synth 8-6155] done synthesizing module 'rom_array_layer_1' (3#1) [/home/gsaied/Desktop/old_rtl/first_layer/rom.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'wrapper_image' [/home/gsaied/Desktop/old_rtl/first_layer/wrapper_image.sv:2]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter ADDR bound to: 18 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [/home/gsaied/Desktop/old_rtl/first_layer/wrapper_image.sv:12]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [/home/gsaied/Desktop/old_rtl/first_layer/wrapper_image.sv:15]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [/home/gsaied/Desktop/old_rtl/first_layer/wrapper_image.sv:18]
+INFO: [Synth 8-3876] $readmem data file 'first_part.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/wrapper_image.sv:21]
+INFO: [Synth 8-3876] $readmem data file 'second_part.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/wrapper_image.sv:22]
+INFO: [Synth 8-3876] $readmem data file 'third_part.mem' is read successfully [/home/gsaied/Desktop/old_rtl/first_layer/wrapper_image.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'wrapper_image' (4#1) [/home/gsaied/Desktop/old_rtl/first_layer/wrapper_image.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'conv1' (5#1) [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1594.285 ; gain = 238.820 ; free physical = 2534 ; free virtual = 5993
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1594.285 ; gain = 238.820 ; free physical = 2529 ; free virtual = 5995
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1594.285 ; gain = 238.820 ; free physical = 2529 ; free virtual = 5995
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'keep_hierarchy' is not supported in the xdc constraint file. [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc:2]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2090.512 ; gain = 0.000 ; free physical = 2070 ; free virtual = 5542
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2090.512 ; gain = 0.000 ; free physical = 2069 ; free virtual = 5541
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2090.512 ; gain = 0.000 ; free physical = 2069 ; free virtual = 5541
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2090.512 ; gain = 735.047 ; free physical = 2176 ; free virtual = 5649
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1157-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2090.512 ; gain = 735.047 ; free physical = 2176 ; free virtual = 5649
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2090.512 ; gain = 735.047 ; free physical = 2179 ; free virtual = 5651
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5547] Trying to map ROM "first_part" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "second_part" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "third_part" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:114]
+INFO: [Synth 8-5546] ROM "row_end" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "conv1_end" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 2106.527 ; gain = 751.062 ; free physical = 2120 ; free virtual = 5587
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 64    
+	   2 Input     18 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 64    
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 131   
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---ROMs : 
+	                              ROMs := 3     
++---Muxes : 
+	   8 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module conv1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 64    
+	   2 Input     18 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 128   
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   8 Input     18 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+Module wrapper_image 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module conv_mac 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "conv1_end" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP genblk1[0].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[0] is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: register genblk1[0].mac_i/mul_out_reg is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: operator genblk1[0].mac_i/intermed is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: operator genblk1[0].mac_i/intermed0 is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[1].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[1] is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: register genblk1[1].mac_i/mul_out_reg is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: operator genblk1[1].mac_i/intermed is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: operator genblk1[1].mac_i/intermed0 is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[2].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[2] is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: register genblk1[2].mac_i/mul_out_reg is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: operator genblk1[2].mac_i/intermed is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: operator genblk1[2].mac_i/intermed0 is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[3].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[3] is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: register genblk1[3].mac_i/mul_out_reg is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: operator genblk1[3].mac_i/intermed is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: operator genblk1[3].mac_i/intermed0 is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[4].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[4] is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: register genblk1[4].mac_i/mul_out_reg is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: operator genblk1[4].mac_i/intermed is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: operator genblk1[4].mac_i/intermed0 is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[5].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[5] is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: register genblk1[5].mac_i/mul_out_reg is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: operator genblk1[5].mac_i/intermed is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: operator genblk1[5].mac_i/intermed0 is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[6].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[6] is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: register genblk1[6].mac_i/mul_out_reg is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: operator genblk1[6].mac_i/intermed is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: operator genblk1[6].mac_i/intermed0 is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[7].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[7] is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: register genblk1[7].mac_i/mul_out_reg is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: operator genblk1[7].mac_i/intermed is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: operator genblk1[7].mac_i/intermed0 is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[8].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[8] is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: register genblk1[8].mac_i/mul_out_reg is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: operator genblk1[8].mac_i/intermed is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: operator genblk1[8].mac_i/intermed0 is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[9].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[9] is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: register genblk1[9].mac_i/mul_out_reg is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: operator genblk1[9].mac_i/intermed is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: operator genblk1[9].mac_i/intermed0 is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[10].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[10] is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: register genblk1[10].mac_i/mul_out_reg is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: operator genblk1[10].mac_i/intermed is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: operator genblk1[10].mac_i/intermed0 is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[11].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[11] is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: register genblk1[11].mac_i/mul_out_reg is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: operator genblk1[11].mac_i/intermed is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: operator genblk1[11].mac_i/intermed0 is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[12].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[12] is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: register genblk1[12].mac_i/mul_out_reg is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: operator genblk1[12].mac_i/intermed is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: operator genblk1[12].mac_i/intermed0 is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[13].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[13] is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: register genblk1[13].mac_i/mul_out_reg is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: operator genblk1[13].mac_i/intermed is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: operator genblk1[13].mac_i/intermed0 is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[14].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[14] is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: register genblk1[14].mac_i/mul_out_reg is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: operator genblk1[14].mac_i/intermed is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: operator genblk1[14].mac_i/intermed0 is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[15].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[15] is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: register genblk1[15].mac_i/mul_out_reg is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: operator genblk1[15].mac_i/intermed is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: operator genblk1[15].mac_i/intermed0 is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[16].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[16] is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: register genblk1[16].mac_i/mul_out_reg is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: operator genblk1[16].mac_i/intermed is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: operator genblk1[16].mac_i/intermed0 is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[17].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[17] is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: register genblk1[17].mac_i/mul_out_reg is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: operator genblk1[17].mac_i/intermed is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: operator genblk1[17].mac_i/intermed0 is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[18].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[18] is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: register genblk1[18].mac_i/mul_out_reg is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: operator genblk1[18].mac_i/intermed is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: operator genblk1[18].mac_i/intermed0 is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[19].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[19] is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: register genblk1[19].mac_i/mul_out_reg is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: operator genblk1[19].mac_i/intermed is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: operator genblk1[19].mac_i/intermed0 is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[20].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[20] is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: register genblk1[20].mac_i/mul_out_reg is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: operator genblk1[20].mac_i/intermed is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: operator genblk1[20].mac_i/intermed0 is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[21].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[21] is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: register genblk1[21].mac_i/mul_out_reg is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: operator genblk1[21].mac_i/intermed is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: operator genblk1[21].mac_i/intermed0 is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[22].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[22] is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: register genblk1[22].mac_i/mul_out_reg is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: operator genblk1[22].mac_i/intermed is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: operator genblk1[22].mac_i/intermed0 is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[23].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[23] is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: register genblk1[23].mac_i/mul_out_reg is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: operator genblk1[23].mac_i/intermed is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: operator genblk1[23].mac_i/intermed0 is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[24].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[24] is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: register genblk1[24].mac_i/mul_out_reg is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: operator genblk1[24].mac_i/intermed is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: operator genblk1[24].mac_i/intermed0 is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[25].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[25] is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: register genblk1[25].mac_i/mul_out_reg is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: operator genblk1[25].mac_i/intermed is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: operator genblk1[25].mac_i/intermed0 is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[26].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[26] is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: register genblk1[26].mac_i/mul_out_reg is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: operator genblk1[26].mac_i/intermed is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: operator genblk1[26].mac_i/intermed0 is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[27].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[27] is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: register genblk1[27].mac_i/mul_out_reg is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: operator genblk1[27].mac_i/intermed is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: operator genblk1[27].mac_i/intermed0 is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[28].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[28] is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: register genblk1[28].mac_i/mul_out_reg is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: operator genblk1[28].mac_i/intermed is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: operator genblk1[28].mac_i/intermed0 is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[29].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[29] is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: register genblk1[29].mac_i/mul_out_reg is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: operator genblk1[29].mac_i/intermed is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: operator genblk1[29].mac_i/intermed0 is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[30].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[30] is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: register genblk1[30].mac_i/mul_out_reg is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: operator genblk1[30].mac_i/intermed is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: operator genblk1[30].mac_i/intermed0 is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[31].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[31] is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: register genblk1[31].mac_i/mul_out_reg is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: operator genblk1[31].mac_i/intermed is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: operator genblk1[31].mac_i/intermed0 is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[32].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[32] is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: register genblk1[32].mac_i/mul_out_reg is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: operator genblk1[32].mac_i/intermed is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: operator genblk1[32].mac_i/intermed0 is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[33].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[33] is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: register genblk1[33].mac_i/mul_out_reg is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: operator genblk1[33].mac_i/intermed is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: operator genblk1[33].mac_i/intermed0 is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[34].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[34] is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: register genblk1[34].mac_i/mul_out_reg is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: operator genblk1[34].mac_i/intermed is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: operator genblk1[34].mac_i/intermed0 is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[35].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[35] is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: register genblk1[35].mac_i/mul_out_reg is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: operator genblk1[35].mac_i/intermed is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: operator genblk1[35].mac_i/intermed0 is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[36].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[36] is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: register genblk1[36].mac_i/mul_out_reg is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: operator genblk1[36].mac_i/intermed is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: operator genblk1[36].mac_i/intermed0 is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[37].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[37] is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: register genblk1[37].mac_i/mul_out_reg is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: operator genblk1[37].mac_i/intermed is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: operator genblk1[37].mac_i/intermed0 is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[38].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[38] is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: register genblk1[38].mac_i/mul_out_reg is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: operator genblk1[38].mac_i/intermed is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: operator genblk1[38].mac_i/intermed0 is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[39].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[39] is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: register genblk1[39].mac_i/mul_out_reg is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: operator genblk1[39].mac_i/intermed is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: operator genblk1[39].mac_i/intermed0 is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[40].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[40] is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: register genblk1[40].mac_i/mul_out_reg is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: operator genblk1[40].mac_i/intermed is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: operator genblk1[40].mac_i/intermed0 is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[41].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[41] is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: register genblk1[41].mac_i/mul_out_reg is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: operator genblk1[41].mac_i/intermed is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: operator genblk1[41].mac_i/intermed0 is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[42].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[42] is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: register genblk1[42].mac_i/mul_out_reg is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: operator genblk1[42].mac_i/intermed is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: operator genblk1[42].mac_i/intermed0 is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[43].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[43] is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: register genblk1[43].mac_i/mul_out_reg is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: operator genblk1[43].mac_i/intermed is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: operator genblk1[43].mac_i/intermed0 is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[44].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[44] is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: register genblk1[44].mac_i/mul_out_reg is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: operator genblk1[44].mac_i/intermed is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: operator genblk1[44].mac_i/intermed0 is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[45].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[45] is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: register genblk1[45].mac_i/mul_out_reg is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: operator genblk1[45].mac_i/intermed is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: operator genblk1[45].mac_i/intermed0 is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[46].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[46] is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: register genblk1[46].mac_i/mul_out_reg is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: operator genblk1[46].mac_i/intermed is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: operator genblk1[46].mac_i/intermed0 is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[47].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[47] is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: register genblk1[47].mac_i/mul_out_reg is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: operator genblk1[47].mac_i/intermed is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: operator genblk1[47].mac_i/intermed0 is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[48].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[48] is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: register genblk1[48].mac_i/mul_out_reg is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: operator genblk1[48].mac_i/intermed is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: operator genblk1[48].mac_i/intermed0 is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[49].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[49] is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: register genblk1[49].mac_i/mul_out_reg is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: operator genblk1[49].mac_i/intermed is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: operator genblk1[49].mac_i/intermed0 is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[50].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[50] is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: register genblk1[50].mac_i/mul_out_reg is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: operator genblk1[50].mac_i/intermed is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: operator genblk1[50].mac_i/intermed0 is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[51].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[51] is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: register genblk1[51].mac_i/mul_out_reg is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: operator genblk1[51].mac_i/intermed is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: operator genblk1[51].mac_i/intermed0 is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[52].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[52] is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: register genblk1[52].mac_i/mul_out_reg is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: operator genblk1[52].mac_i/intermed is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: operator genblk1[52].mac_i/intermed0 is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[53].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[53] is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: register genblk1[53].mac_i/mul_out_reg is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: operator genblk1[53].mac_i/intermed is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: operator genblk1[53].mac_i/intermed0 is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[54].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[54] is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: register genblk1[54].mac_i/mul_out_reg is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: operator genblk1[54].mac_i/intermed is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: operator genblk1[54].mac_i/intermed0 is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[55].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[55] is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: register genblk1[55].mac_i/mul_out_reg is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: operator genblk1[55].mac_i/intermed is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: operator genblk1[55].mac_i/intermed0 is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[56].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[56] is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: register genblk1[56].mac_i/mul_out_reg is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: operator genblk1[56].mac_i/intermed is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: operator genblk1[56].mac_i/intermed0 is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[57].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[57] is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: register genblk1[57].mac_i/mul_out_reg is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: operator genblk1[57].mac_i/intermed is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: operator genblk1[57].mac_i/intermed0 is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[58].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[58] is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: register genblk1[58].mac_i/mul_out_reg is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: operator genblk1[58].mac_i/intermed is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: operator genblk1[58].mac_i/intermed0 is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[59].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[59] is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: register genblk1[59].mac_i/mul_out_reg is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: operator genblk1[59].mac_i/intermed is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: operator genblk1[59].mac_i/intermed0 is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[60].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[60] is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: register genblk1[60].mac_i/mul_out_reg is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: operator genblk1[60].mac_i/intermed is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: operator genblk1[60].mac_i/intermed0 is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[61].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[61] is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: register genblk1[61].mac_i/mul_out_reg is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: operator genblk1[61].mac_i/intermed is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: operator genblk1[61].mac_i/intermed0 is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[62].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[62] is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: register genblk1[62].mac_i/mul_out_reg is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: operator genblk1[62].mac_i/intermed is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: operator genblk1[62].mac_i/intermed0 is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[63].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[63] is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: register genblk1[63].mac_i/mul_out_reg is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: operator genblk1[63].mac_i/intermed is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: operator genblk1[63].mac_i/intermed0 is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_6/\ref_address_reg[0] )
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__0' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__1' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__2' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__3' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__4' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__5' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__6' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__7' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__8' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__9' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__10' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__11' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__12' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__13' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:53 . Memory (MB): peak = 2122.543 ; gain = 767.078 ; free physical = 2051 ; free virtual = 5547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------------+------------+---------------+----------------+
+|Module Name       | RTL Object | Depth x Width | Implemented As | 
++------------------+------------+---------------+----------------+
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
+|wrapper_image     | o1_reg     | 131072x16     | Block RAM      | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
+|conv1             | p_0_out    | 32x16         | LUT            | 
++------------------+------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A*B2)'   | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance u_1i_0/u_1/o3_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_0/u_1/o3_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 2176.543 ; gain = 821.078 ; free physical = 1858 ; free virtual = 5355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__0' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__1' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__2' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__3' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__4' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__5' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__6' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__7' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__8' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__9' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__10' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__11' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__12' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__13' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 2294.559 ; gain = 939.094 ; free physical = 1797 ; free virtual = 5286
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'u_1/address_reg_reg[0]' (FD) to 'u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-6837] The timing for the instance u_1/o3_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o3_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o2_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:05 ; elapsed = 00:01:12 . Memory (MB): peak = 2294.559 ; gain = 939.094 ; free physical = 1878 ; free virtual = 5365
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net img_rom_wire[15] is driving 960 big block pins (URAM, BRAM and DSP loads). Created 96 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:15 . Memory (MB): peak = 2294.559 ; gain = 939.094 ; free physical = 1876 ; free virtual = 5364
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:08 ; elapsed = 00:01:15 . Memory (MB): peak = 2294.559 ; gain = 939.094 ; free physical = 1876 ; free virtual = 5364
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:16 . Memory (MB): peak = 2294.559 ; gain = 939.094 ; free physical = 1875 ; free virtual = 5364
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:16 . Memory (MB): peak = 2294.559 ; gain = 939.094 ; free physical = 1875 ; free virtual = 5364
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:16 . Memory (MB): peak = 2294.559 ; gain = 939.094 ; free physical = 1875 ; free virtual = 5364
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:16 . Memory (MB): peak = 2294.559 ; gain = 939.094 ; free physical = 1875 ; free virtual = 5364
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     1|
+|2     |CARRY4      |   538|
+|3     |DSP48E1     |    64|
+|4     |LUT1        |   482|
+|5     |LUT2        |    15|
+|6     |LUT3        |    26|
+|7     |LUT4        |    88|
+|8     |LUT5        |   883|
+|9     |LUT6        |   139|
+|10    |RAMB36E1    |     1|
+|11    |RAMB36E1_1  |     1|
+|12    |RAMB36E1_10 |     1|
+|13    |RAMB36E1_11 |     1|
+|14    |RAMB36E1_12 |     1|
+|15    |RAMB36E1_13 |     1|
+|16    |RAMB36E1_14 |     1|
+|17    |RAMB36E1_15 |     1|
+|18    |RAMB36E1_16 |     1|
+|19    |RAMB36E1_17 |     1|
+|20    |RAMB36E1_18 |     1|
+|21    |RAMB36E1_19 |     1|
+|22    |RAMB36E1_2  |     1|
+|23    |RAMB36E1_20 |     7|
+|24    |RAMB36E1_21 |     7|
+|25    |RAMB36E1_22 |     1|
+|26    |RAMB36E1_23 |     1|
+|27    |RAMB36E1_24 |     1|
+|28    |RAMB36E1_25 |     1|
+|29    |RAMB36E1_26 |     1|
+|30    |RAMB36E1_27 |     1|
+|31    |RAMB36E1_28 |     1|
+|32    |RAMB36E1_29 |     1|
+|33    |RAMB36E1_3  |     1|
+|34    |RAMB36E1_30 |     1|
+|35    |RAMB36E1_31 |     1|
+|36    |RAMB36E1_32 |     1|
+|37    |RAMB36E1_33 |     1|
+|38    |RAMB36E1_34 |     1|
+|39    |RAMB36E1_35 |     1|
+|40    |RAMB36E1_36 |     1|
+|41    |RAMB36E1_37 |     1|
+|42    |RAMB36E1_38 |     1|
+|43    |RAMB36E1_39 |     1|
+|44    |RAMB36E1_4  |     1|
+|45    |RAMB36E1_40 |     7|
+|46    |RAMB36E1_41 |     7|
+|47    |RAMB36E1_42 |     1|
+|48    |RAMB36E1_43 |     1|
+|49    |RAMB36E1_44 |     1|
+|50    |RAMB36E1_45 |     1|
+|51    |RAMB36E1_46 |     1|
+|52    |RAMB36E1_47 |     1|
+|53    |RAMB36E1_48 |     1|
+|54    |RAMB36E1_49 |     1|
+|55    |RAMB36E1_5  |     1|
+|56    |RAMB36E1_50 |     1|
+|57    |RAMB36E1_51 |     1|
+|58    |RAMB36E1_52 |     1|
+|59    |RAMB36E1_53 |     1|
+|60    |RAMB36E1_54 |     1|
+|61    |RAMB36E1_55 |     1|
+|62    |RAMB36E1_56 |     1|
+|63    |RAMB36E1_57 |     1|
+|64    |RAMB36E1_58 |     1|
+|65    |RAMB36E1_59 |     1|
+|66    |RAMB36E1_6  |     1|
+|67    |RAMB36E1_60 |     7|
+|68    |RAMB36E1_61 |     7|
+|69    |RAMB36E1_7  |     1|
+|70    |RAMB36E1_8  |     1|
+|71    |RAMB36E1_9  |     1|
+|72    |FDCE        |   178|
+|73    |FDRE        |  1028|
+|74    |IBUF        |     4|
+|75    |OBUF        |  1026|
++------+------------+------+
+
+Report Instance Areas: 
++------+----------------------+--------------+------+
+|      |Instance              |Module        |Cells |
++------+----------------------+--------------+------+
+|1     |top                   |              |  4570|
+|2     |  \genblk1[0].mac_i   |conv_mac      |    27|
+|3     |  \genblk1[10].mac_i  |conv_mac_0    |    27|
+|4     |  \genblk1[11].mac_i  |conv_mac_1    |    26|
+|5     |  \genblk1[12].mac_i  |conv_mac_2    |    28|
+|6     |  \genblk1[13].mac_i  |conv_mac_3    |    25|
+|7     |  \genblk1[14].mac_i  |conv_mac_4    |    49|
+|8     |  \genblk1[15].mac_i  |conv_mac_5    |    28|
+|9     |  \genblk1[16].mac_i  |conv_mac_6    |    29|
+|10    |  \genblk1[17].mac_i  |conv_mac_7    |    24|
+|11    |  \genblk1[18].mac_i  |conv_mac_8    |    29|
+|12    |  \genblk1[19].mac_i  |conv_mac_9    |    28|
+|13    |  \genblk1[1].mac_i   |conv_mac_10   |    26|
+|14    |  \genblk1[20].mac_i  |conv_mac_11   |    30|
+|15    |  \genblk1[21].mac_i  |conv_mac_12   |    28|
+|16    |  \genblk1[22].mac_i  |conv_mac_13   |    29|
+|17    |  \genblk1[23].mac_i  |conv_mac_14   |    31|
+|18    |  \genblk1[24].mac_i  |conv_mac_15   |    24|
+|19    |  \genblk1[25].mac_i  |conv_mac_16   |    25|
+|20    |  \genblk1[26].mac_i  |conv_mac_17   |    27|
+|21    |  \genblk1[27].mac_i  |conv_mac_18   |    28|
+|22    |  \genblk1[28].mac_i  |conv_mac_19   |    28|
+|23    |  \genblk1[29].mac_i  |conv_mac_20   |    26|
+|24    |  \genblk1[2].mac_i   |conv_mac_21   |    30|
+|25    |  \genblk1[30].mac_i  |conv_mac_22   |    31|
+|26    |  \genblk1[31].mac_i  |conv_mac_23   |    26|
+|27    |  \genblk1[32].mac_i  |conv_mac_24   |    28|
+|28    |  \genblk1[33].mac_i  |conv_mac_25   |    24|
+|29    |  \genblk1[34].mac_i  |conv_mac_26   |    51|
+|30    |  \genblk1[35].mac_i  |conv_mac_27   |    27|
+|31    |  \genblk1[36].mac_i  |conv_mac_28   |    28|
+|32    |  \genblk1[37].mac_i  |conv_mac_29   |    25|
+|33    |  \genblk1[38].mac_i  |conv_mac_30   |    29|
+|34    |  \genblk1[39].mac_i  |conv_mac_31   |    51|
+|35    |  \genblk1[3].mac_i   |conv_mac_32   |    24|
+|36    |  \genblk1[40].mac_i  |conv_mac_33   |    29|
+|37    |  \genblk1[41].mac_i  |conv_mac_34   |    29|
+|38    |  \genblk1[42].mac_i  |conv_mac_35   |    30|
+|39    |  \genblk1[43].mac_i  |conv_mac_36   |    27|
+|40    |  \genblk1[44].mac_i  |conv_mac_37   |    27|
+|41    |  \genblk1[45].mac_i  |conv_mac_38   |    29|
+|42    |  \genblk1[46].mac_i  |conv_mac_39   |    28|
+|43    |  \genblk1[47].mac_i  |conv_mac_40   |    29|
+|44    |  \genblk1[48].mac_i  |conv_mac_41   |    21|
+|45    |  \genblk1[49].mac_i  |conv_mac_42   |    49|
+|46    |  \genblk1[4].mac_i   |conv_mac_43   |    23|
+|47    |  \genblk1[50].mac_i  |conv_mac_44   |    27|
+|48    |  \genblk1[51].mac_i  |conv_mac_45   |    20|
+|49    |  \genblk1[52].mac_i  |conv_mac_46   |    29|
+|50    |  \genblk1[53].mac_i  |conv_mac_47   |    30|
+|51    |  \genblk1[54].mac_i  |conv_mac_48   |    49|
+|52    |  \genblk1[55].mac_i  |conv_mac_49   |    26|
+|53    |  \genblk1[56].mac_i  |conv_mac_50   |    28|
+|54    |  \genblk1[57].mac_i  |conv_mac_51   |    27|
+|55    |  \genblk1[58].mac_i  |conv_mac_52   |    31|
+|56    |  \genblk1[59].mac_i  |conv_mac_53   |    23|
+|57    |  \genblk1[5].mac_i   |conv_mac_54   |    29|
+|58    |  \genblk1[60].mac_i  |conv_mac_55   |    51|
+|59    |  \genblk1[61].mac_i  |conv_mac_56   |    27|
+|60    |  \genblk1[62].mac_i  |conv_mac_57   |    25|
+|61    |  \genblk1[63].mac_i  |conv_mac_58   |    27|
+|62    |  \genblk1[6].mac_i   |conv_mac_59   |    28|
+|63    |  \genblk1[7].mac_i   |conv_mac_60   |    47|
+|64    |  \genblk1[8].mac_i   |conv_mac_61   |    29|
+|65    |  \genblk1[9].mac_i   |conv_mac_62   |    23|
+|66    |  u_1                 |wrapper_image |   212|
++------+----------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:16 . Memory (MB): peak = 2294.559 ; gain = 939.094 ; free physical = 1875 ; free virtual = 5364
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 2294.559 ; gain = 442.867 ; free physical = 1941 ; free virtual = 5429
+Synthesis Optimization Complete : Time (s): cpu = 00:01:10 ; elapsed = 00:01:17 . Memory (MB): peak = 2294.566 ; gain = 939.094 ; free physical = 1941 ; free virtual = 5429
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 700 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'keep_hierarchy' is not supported in the xdc constraint file. [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc:2]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2294.566 ; gain = 0.000 ; free physical = 1858 ; free virtual = 5347
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+299 Infos, 0 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:20 . Memory (MB): peak = 2294.566 ; gain = 947.098 ; free physical = 2036 ; free virtual = 5525
+# report_utilization -file utiliziation.rpt
+# report_utilization -hierarchical -file hierarchical_utilization.rpt
+# report_timing -max_paths 50 -file timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 50 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2623.328 ; gain = 328.762 ; free physical = 1541 ; free virtual = 5019
+# report_design_analysis -file design.rpt
+vi utiliziation.rpt
+WARNING: [Common 17-259] Unknown Tcl command 'vi utiliziation.rpt' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+opt_design -directive ExploreArea
+Command: opt_design -directive ExploreArea
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: ExploreArea
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2668.344 ; gain = 39.016 ; free physical = 1383 ; free virtual = 4853
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 17812816f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2668.344 ; gain = 0.000 ; free physical = 1376 ; free virtual = 4849
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 32 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 9d58040f
+
+Time (s): cpu = 00:00:00.60 ; elapsed = 00:00:00.49 . Memory (MB): peak = 2726.344 ; gain = 0.000 ; free physical = 1298 ; free virtual = 4772
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 48d41fae
+
+Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.62 . Memory (MB): peak = 2726.344 ; gain = 0.000 ; free physical = 1292 ; free virtual = 4766
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: b279e40a
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2726.344 ; gain = 0.000 ; free physical = 1302 ; free virtual = 4776
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: b279e40a
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2726.344 ; gain = 0.000 ; free physical = 1295 ; free virtual = 4770
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 186699d33
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2726.344 ; gain = 0.000 ; free physical = 1263 ; free virtual = 4738
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 6 Constant propagation | Checksum: 186699d33
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2726.344 ; gain = 0.000 ; free physical = 1256 ; free virtual = 4731
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 7 Sweep
+Phase 7 Sweep | Checksum: 186699d33
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2726.344 ; gain = 0.000 ; free physical = 1236 ; free virtual = 4710
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 8 Resynthesis
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-74] Optimized 2 modules.
+INFO: [Opt 31-75] Optimized module 'conv1'.
+INFO: [Opt 31-75] Optimized module 'wrapper_image'.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 8 Resynthesis | Checksum: ebe42479
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 2734.172 ; gain = 7.828 ; free physical = 923 ; free virtual = 4399
+INFO: [Opt 31-389] Phase Resynthesis created 332 cells and removed 461 cells
+
+Phase 9 Post Processing Netlist
+Phase 9 Post Processing Netlist | Checksum: ebe42479
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 2734.172 ; gain = 7.828 ; free physical = 923 ; free virtual = 4400
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               1  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  Resynthesis                  |             332  |             461  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2734.172 ; gain = 0.000 ; free physical = 923 ; free virtual = 4400
+Ending Logic Optimization Task | Checksum: d9b0a7c9
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 2734.172 ; gain = 7.828 ; free physical = 928 ; free virtual = 4400
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.683 | TNS=-1311.766 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 98 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 2 Total Ports: 196
+Ending PowerOpt Patch Enables Task | Checksum: 3c799677
+
+Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.55 . Memory (MB): peak = 2958.445 ; gain = 0.000 ; free physical = 801 ; free virtual = 4278
+Ending Power Optimization Task | Checksum: 3c799677
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 2958.445 ; gain = 224.273 ; free physical = 808 ; free virtual = 4288
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 3c799677
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2958.445 ; gain = 0.000 ; free physical = 808 ; free virtual = 4288
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2958.445 ; gain = 0.000 ; free physical = 808 ; free virtual = 4288
+Ending Netlist Obfuscation Task | Checksum: 1ecf1641
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2958.445 ; gain = 0.000 ; free physical = 808 ; free virtual = 4288
+INFO: [Common 17-83] Releasing license: Implementation
+32 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:28 . Memory (MB): peak = 2958.445 ; gain = 330.117 ; free physical = 808 ; free virtual = 4288
+0
+report_utilization 
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sun Mar  1 03:21:30 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_utilization
+| Design       : conv1
+| Device       : 7vx690tffg1157-3
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs*             | 1505 |     0 |    433200 |  0.35 |
+|   LUT as Logic          | 1505 |     0 |    433200 |  0.35 |
+|   LUT as Memory         |    0 |     0 |    174200 |  0.00 |
+| Slice Registers         | 1206 |     0 |    866400 |  0.14 |
+|   Register as Flip Flop | 1206 |     0 |    866400 |  0.14 |
+|   Register as Latch     |    0 |     0 |    866400 |  0.00 |
+| F7 Muxes                |    0 |     0 |    216600 |  0.00 |
+| F8 Muxes                |    0 |     0 |    108300 |  0.00 |
++-------------------------+------+-------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 178   |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 1028  |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++-------------------+------+-------+-----------+-------+
+|     Site Type     | Used | Fixed | Available | Util% |
++-------------------+------+-------+-----------+-------+
+| Block RAM Tile    |   98 |     0 |      1470 |  6.67 |
+|   RAMB36/FIFO*    |   98 |     0 |      1470 |  6.67 |
+|     RAMB36E1 only |   98 |       |           |       |
+|   RAMB18          |    0 |     0 |      2940 |  0.00 |
++-------------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |   64 |     0 |      3600 |  1.78 |
+|   DSP48E1 only |   64 |       |           |       |
++----------------+------+-------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+--------+
+|          Site Type          | Used | Fixed | Available |  Util% |
++-----------------------------+------+-------+-----------+--------+
+| Bonded IOB                  | 1030 |     0 |       600 | 171.67 |
+| Bonded IPADs                |    0 |     0 |        62 |   0.00 |
+| Bonded OPADs                |    0 |     0 |        40 |   0.00 |
+| PHY_CONTROL                 |    0 |     0 |        20 |   0.00 |
+| PHASER_REF                  |    0 |     0 |        20 |   0.00 |
+| OUT_FIFO                    |    0 |     0 |        80 |   0.00 |
+| IN_FIFO                     |    0 |     0 |        80 |   0.00 |
+| IDELAYCTRL                  |    0 |     0 |        20 |   0.00 |
+| IBUFDS                      |    0 |     0 |       576 |   0.00 |
+| GTHE2_CHANNEL               |    0 |     0 |        20 |   0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |   0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |   0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        10 |   0.00 |
+| ILOGIC                      |    0 |     0 |       600 |   0.00 |
+| OLOGIC                      |    0 |     0 |       600 |   0.00 |
++-----------------------------+------+-------+-----------+--------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFIO      |    0 |     0 |        80 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
+| BUFMRCE    |    0 |     0 |        40 |  0.00 |
+| BUFHCE     |    0 |     0 |       240 |  0.00 |
+| BUFR       |    0 |     0 |        80 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+------+---------------------+
+| Ref Name | Used | Functional Category |
++----------+------+---------------------+
+| FDRE     | 1028 |        Flop & Latch |
+| OBUF     | 1026 |                  IO |
+| LUT5     |  883 |                 LUT |
+| CARRY4   |  538 |          CarryLogic |
+| LUT1     |  481 |                 LUT |
+| FDCE     |  178 |        Flop & Latch |
+| RAMB36E1 |   98 |        Block Memory |
+| LUT2     |   77 |                 LUT |
+| DSP48E1  |   64 |    Block Arithmetic |
+| LUT3     |   28 |                 LUT |
+| LUT6     |   21 |                 LUT |
+| LUT4     |   15 |                 LUT |
+| IBUF     |    4 |                  IO |
+| BUFG     |    1 |               Clock |
++----------+------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+opt_design -merge_equivalent_drivers
+Command: opt_design -merge_equivalent_drivers
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2958.445 ; gain = 0.000 ; free physical = 701 ; free virtual = 4173
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Merging equivalent drivers
+Phase 1 Merging equivalent drivers | Checksum: 6e938795
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2958.445 ; gain = 0.000 ; free physical = 194 ; free virtual = 3670
+INFO: [Opt 31-389] Phase Merging equivalent drivers created 0 cells and removed 110 cells
+
+Phase 2 Post Processing Netlist
+Phase 2 Post Processing Netlist | Checksum: 6e938795
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2958.445 ; gain = 0.000 ; free physical = 189 ; free virtual = 3670
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+------------------------------------------------------------------------------------------------------------------------
+|  Phase                       |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+------------------------------------------------------------------------------------------------------------------------
+|  Merging equivalent drivers  |               0  |             110  |                                              0  |
+|  Post Processing Netlist     |               0  |               0  |                                              0  |
+------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: fbad9a1e
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2958.445 ; gain = 0.000 ; free physical = 185 ; free virtual = 3670
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2958.445 ; gain = 0.000 ; free physical = 185 ; free virtual = 3669
+Ending Netlist Obfuscation Task | Checksum: fbad9a1e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2958.445 ; gain = 0.000 ; free physical = 185 ; free virtual = 3669
+INFO: [Common 17-83] Releasing license: Implementation
+8 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2958.445 ; gain = 0.000 ; free physical = 186 ; free virtual = 3671
+0
+report_utilization 
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sun Mar  1 03:22:08 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_utilization
+| Design       : conv1
+| Device       : 7vx690tffg1157-3
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs*             | 1502 |     0 |    433200 |  0.35 |
+|   LUT as Logic          | 1502 |     0 |    433200 |  0.35 |
+|   LUT as Memory         |    0 |     0 |    174200 |  0.00 |
+| Slice Registers         | 1099 |     0 |    866400 |  0.13 |
+|   Register as Flip Flop | 1099 |     0 |    866400 |  0.13 |
+|   Register as Latch     |    0 |     0 |    866400 |  0.00 |
+| F7 Muxes                |    0 |     0 |    216600 |  0.00 |
+| F8 Muxes                |    0 |     0 |    108300 |  0.00 |
++-------------------------+------+-------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 71    |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 1028  |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++-------------------+------+-------+-----------+-------+
+|     Site Type     | Used | Fixed | Available | Util% |
++-------------------+------+-------+-----------+-------+
+| Block RAM Tile    |   98 |     0 |      1470 |  6.67 |
+|   RAMB36/FIFO*    |   98 |     0 |      1470 |  6.67 |
+|     RAMB36E1 only |   98 |       |           |       |
+|   RAMB18          |    0 |     0 |      2940 |  0.00 |
++-------------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |   64 |     0 |      3600 |  1.78 |
+|   DSP48E1 only |   64 |       |           |       |
++----------------+------+-------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+--------+
+|          Site Type          | Used | Fixed | Available |  Util% |
++-----------------------------+------+-------+-----------+--------+
+| Bonded IOB                  | 1030 |     0 |       600 | 171.67 |
+| Bonded IPADs                |    0 |     0 |        62 |   0.00 |
+| Bonded OPADs                |    0 |     0 |        40 |   0.00 |
+| PHY_CONTROL                 |    0 |     0 |        20 |   0.00 |
+| PHASER_REF                  |    0 |     0 |        20 |   0.00 |
+| OUT_FIFO                    |    0 |     0 |        80 |   0.00 |
+| IN_FIFO                     |    0 |     0 |        80 |   0.00 |
+| IDELAYCTRL                  |    0 |     0 |        20 |   0.00 |
+| IBUFDS                      |    0 |     0 |       576 |   0.00 |
+| GTHE2_CHANNEL               |    0 |     0 |        20 |   0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |   0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |   0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        10 |   0.00 |
+| ILOGIC                      |    0 |     0 |       600 |   0.00 |
+| OLOGIC                      |    0 |     0 |       600 |   0.00 |
++-----------------------------+------+-------+-----------+--------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFIO      |    0 |     0 |        80 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
+| BUFMRCE    |    0 |     0 |        40 |  0.00 |
+| BUFHCE     |    0 |     0 |       240 |  0.00 |
+| BUFR       |    0 |     0 |        80 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+------+---------------------+
+| Ref Name | Used | Functional Category |
++----------+------+---------------------+
+| FDRE     | 1028 |        Flop & Latch |
+| OBUF     | 1026 |                  IO |
+| LUT5     |  882 |                 LUT |
+| CARRY4   |  538 |          CarryLogic |
+| LUT1     |  480 |                 LUT |
+| RAMB36E1 |   98 |        Block Memory |
+| LUT2     |   76 |                 LUT |
+| FDCE     |   71 |        Flop & Latch |
+| DSP48E1  |   64 |    Block Arithmetic |
+| LUT3     |   28 |                 LUT |
+| LUT6     |   21 |                 LUT |
+| LUT4     |   15 |                 LUT |
+| IBUF     |    4 |                  IO |
+| BUFG     |    1 |               Clock |
++----------+------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Mar  1 03:37:37 2020...

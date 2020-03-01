@@ -1,12 +1,5 @@
+/* verilator lint_off INITIALDLY */
 /* verilator lint_off COMBDLY */
-/*
-* FIRE3 && FIRE2 EXPAND 3*3   IMPLEMENTATION
-* INPUT SIZE: 64*64*16
-* OUTPUT SIZE: 64*64*64
-* STRIDE: 1
-* PAD:	1
-* WINDOW: 3*3
-*/
 module conv10_1_2 #(
 	parameter WOUT = 8,
 	parameter DSP_NO = 512,
@@ -18,11 +11,10 @@ module conv10_1_2 #(
 )
 (
 	input clk,
-	input rst,
-	input conv10_1_en,
-	input conv10_2_en,
-	input [15:0] ifm_1,
-	input [15:0] ifm_2,
+	input conv10_1_en_i,
+	input conv10_2_en_i,
+	input [15:0] ifm_1_i,
+	input [15:0] ifm_2_i,
 	input ram_feedback_1,
 	input ram_feedback_2,
 	output conv10_1_finish,
@@ -33,6 +25,19 @@ module conv10_1_2 #(
 );
 	reg conv10_1_end;
 	reg conv10_2_end;
+	reg [WIDTH-1:0] ifm_1 ;
+	reg [WIDTH-1:0] ifm_2 ;
+	reg conv10_1_en ;
+	reg conv10_2_en ;
+////////////////////////
+/* REGISTERING INPUTS */
+////////////////////////
+always @(posedge clk) begin
+	conv10_1_en <= conv10_1_en_i ;
+	conv10_2_en <= conv10_2_en_i ;
+	ifm_1<= ifm_1_i ; 
+	ifm_2<= ifm_2_i ; 
+end
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
 reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
@@ -70,12 +75,22 @@ end
 ///////////////////////////////////
 reg clr_pulse ; 
 reg rom_clr_pulse;
+always @(posedge clk) clr_pulse <= rom_clr_pulse ;
 ///////
 ///////
-always @(posedge clk or negedge rst) begin
-	if(!rst)
-		weight_rom_address<= 0 ; 
-	else if (rom_clr_pulse || rst_gen )
+initial begin
+	weight_rom_address<= 0 ;
+	rom_clr_pulse <= 1'b0 ; 
+	clr_counter <= 0 ;
+	conv10_1_timer<= 0 ;
+	conv10_2_timer<= 0 ;
+	conv10_1_end <= 1'b0 ; 
+	conv10_2_end <= 1'b0 ; 
+	ram_feedback_reg_1<=1'b0 ;
+	ram_feedback_reg_2<=1'b0 ;
+end
+always @(posedge clk  ) begin
+	if (rom_clr_pulse || rst_gen )
 		weight_rom_address<= 0;
 	else if (conv10_1_en || conv10_2_en)begin
 		weight_rom_address<= weight_rom_address+1;
@@ -106,30 +121,22 @@ end
 //GENERATION OF CLR PULSE///
 ////////////////////////////
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ; 
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
-		clr_pulse <= 1'b0 ; 
-		rom_clr_pulse <= 1'b0 ; 
-		clr_counter <= 0 ;
-	end
-	else if (!(conv10_1_end && conv10_2_end) && (conv10_2_en || conv10_1_en) && !rst_gen) begin
+always @(posedge clk ) begin
+	if (!(conv10_1_end && conv10_2_end) && (conv10_2_en || conv10_1_en) && !rst_gen) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ; 
 			clr_counter <= clr_counter+1 ;
 		end
 		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
 			clr_counter <= 0 ;
-			clr_pulse<= 1'b1 ;
 			rom_clr_pulse <= 1'b0 ; 
 		end
 		else begin
-			clr_pulse <= 1'b0 ; 
 			clr_counter <= clr_counter +1;
 			rom_clr_pulse <= 1'b0 ; 
 		end
 	end
 	else if (rst_gen) begin
-		clr_pulse <= 1'b0 ; 
 		rom_clr_pulse <= 1'b0 ; 
 		clr_counter <= 0 ;
 	end
@@ -137,14 +144,13 @@ end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
+reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
 genvar i ; 
 generate for (i = 0 ; i< CHOUT ; i++) begin
 	mac mac_i (
 		.clr(clr_pulse || rst_gen),
 		.clk(clk),
-		.rst(rst),
 		.layer_en(layer_en_reg),
 		.pix(ifm),
 		.mul_out(ofmw[i]),
@@ -175,14 +181,8 @@ end
 ///////////////////////////////
 reg [$clog2(WOUT**2):0] conv10_1_timer ;
 reg [$clog2(WOUT**2):0] conv10_2_timer ;
-always @(posedge clk or negedge rst) begin
-	if (!rst) begin
-		conv10_1_timer<= 0 ;
-		conv10_2_timer<= 0 ;
-		conv10_1_end <= 1'b0 ; 
-		conv10_2_end <= 1'b0 ; 
-	end
-	else if (conv10_1_en) begin
+always @(posedge clk ) begin
+	if (conv10_1_en) begin
 		if (conv10_1_timer == WOUT**2+1)
 			conv10_1_end <= 1'b1 ;
 		else if (clr_pulse)
@@ -199,14 +199,10 @@ always @(posedge clk) begin
 	conv10_1_sample <= clr_pulse ; 
 end 
 
-reg ram_feedback_reg_1 ; 
-reg ram_feedback_reg_2 ; 
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
-		ram_feedback_reg_1<=1'b0 ;
-		ram_feedback_reg_2<=1'b0 ;
-	end
-	else if (ram_feedback_1) 
+(* dont_touch = "true" *)reg ram_feedback_reg_1 ; 
+(* dont_touch = "true" *)reg ram_feedback_reg_2 ; 
+always @(posedge clk ) begin
+	if (ram_feedback_1) 
 		ram_feedback_reg_1<= 1'b1 ;
 	else if (ram_feedback_2) 
 		ram_feedback_reg_2<= 1'b1 ;

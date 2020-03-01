@@ -57,10 +57,18 @@ reg rom_clr_pulse ;
 always @(posedge clk) clr_pulse<= rom_clr_pulse ;
 ///////
 ///////
-always @(posedge clk or negedge rst) begin
-	if(!rst)
-		weight_rom_address<= 5'b0 ; 
-	else if (rom_clr_pulse)
+initial begin
+	weight_rom_address<= 5'b0 ; 
+	conv1_timer<= 0 ;
+	conv1_end <= 1'b0 ; 
+	clr_counter<= 5'b0 ; 
+	rom_clr_pulse<= 1'b0 ;
+	img_addr_counter <= 0 ;
+	img_rom_address<=18'b0; 
+	ref_address<= 18'b0 ; 
+end
+always @(posedge clk) begin
+	if (rom_clr_pulse)
 		weight_rom_address<= 5'b0;// 5--> ceil(logn(HIN**2*CHIN,2))
 	else if (conv1_en) begin
 		weight_rom_address<= weight_rom_address+1;
@@ -77,10 +85,8 @@ reg [17:0] ref_address ;
 //GENERATION OF WINDOW ADDRESSES///
 ///////////////////////////////////
 reg [4:0] img_addr_counter ;
-always @(posedge clk or negedge rst) begin
-	if(!rst)
-		img_addr_counter <= 0 ;
-	else if (rom_clr_pulse)
+always @(posedge clk) begin
+	if (rom_clr_pulse)
 		img_addr_counter <= 0 ;
 	else if (conv1_en)
 		img_addr_counter <= img_addr_counter+1 ;
@@ -95,12 +101,8 @@ always @(posedge clk or negedge rst) begin
 		row_end <= 0 ; 
 
 end
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
-		img_rom_address<=18'b0; 
-		ref_address<= 18'b0 ; 
-	end
-	else if (rom_clr_pulse) begin
+always @(posedge clk) begin
+	if (rom_clr_pulse) begin
 		if (row_end == 127) begin
 			ref_address <= ref_address+2*STRIDE+258 ; 
 			img_rom_address<= ref_address+2*STRIDE+258 ; 
@@ -130,12 +132,8 @@ wrapper_image u_1 (
 	.image_wrapper_o(img_rom_wire)
 );
 // counter to generate clock_divider
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
-		clr_counter<= 5'b0 ; 
-		rom_clr_pulse<= 1'b0 ;
-	end
-	else if (!conv1_end && conv1_en) begin
+always @(posedge clk) begin
+	if (!conv1_end && conv1_en) begin
 		if (clr_counter == KERNEL_DIM**2*CHIN-1) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter<= clr_counter +1 ;
@@ -173,7 +171,6 @@ generate for (i = 0 ; i < CHOUT ; i++) begin
 	conv_mac mac_i  (
 		.clr(clr_pulse),
 		.clk(clk),
-		.rst(rst),
 		.pix(img_rom_wire),
 		.mul_out(ofmw[i]),
 		.ker(kernel_regs[i])
@@ -185,12 +182,8 @@ endgenerate//#FILTERS instances of macs
 /////////////////////////////////
 
 reg [$clog2(WOUT**2):0] conv1_timer ;
-always @(posedge clk or negedge rst) begin//will be modified to use clk_sampling as the counting signal
-	if (!rst) begin
-		conv1_timer<= 0 ;
-		conv1_end <= 1'b0 ; 
-	end
-	else if (conv1_timer == WOUT**2+1)
+always @(posedge clk) begin//will be modified to use clk_sampling as the counting signal
+	if (conv1_timer == WOUT**2+1)
 		conv1_end <= 1'b1 ;//LAYER_1 HAS FINISHED
 	else if (clr_pulse) 
 		conv1_timer<= conv1_timer+1 ; 
@@ -200,11 +193,10 @@ end
 always @(posedge clk) begin
    conv1_sample <= clr_pulse ; 
 end 
-reg ram_feedback_reg ; 
-always @(posedge clk or negedge rst) begin
-        if(!rst) 
-                ram_feedback_reg<= 1'b0 ;
-        else if (ram_feedback) 
+(* dont_touch = "true" *)reg ram_feedback_reg ; 
+initial ram_feedback_reg<= 1'b0 ;
+always @(posedge clk) begin
+        if (ram_feedback) 
                 ram_feedback_reg<= 1'b1;
 end
 assign conv1_finish = conv1_end && !ram_feedback_reg ; 

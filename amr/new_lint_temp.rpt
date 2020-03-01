@@ -1,0 +1,32 @@
+%Error: temp.sv:134: Cannot find file containing module: ram_3d
+%Error: temp.sv:134: This may be because there's no search path specified with -I<dir>.
+%Error: temp.sv:134: Looked in:
+%Error: temp.sv:134:       ram_3d
+%Error: temp.sv:134:       ram_3d.v
+%Error: temp.sv:134:       ram_3d.sv
+%Error: temp.sv:134:       obj_dir/ram_3d
+%Error: temp.sv:134:       obj_dir/ram_3d.v
+%Error: temp.sv:134:       obj_dir/ram_3d.sv
+%Error: temp.sv:157: Cannot find file containing module: ram_3d
+%Warning-WIDTH: temp.sv:1305: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Warning-WIDTH: temp.sv:1334: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1362: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1391: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1392: Operator NEQ expects 32 bits on the RHS, but RHS's VARREF 'channels1' generates 6 bits.
+%Warning-WIDTH: temp.sv:1419: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1444: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1472: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1500: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1528: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1557: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1586: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1615: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1644: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1673: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1702: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1731: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1759: Operator LT expects 32 or 7 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 6 bits.
+%Warning-WIDTH: temp.sv:1766: Operator NEQ expects 32 bits on the RHS, but RHS's VARREF 'channels1' generates 6 bits.
+%Error: Exiting due to 10 error(s), 19 warning(s)
+%Error: Command Failed /usr/bin/verilator_bin --lint-only temp.sv

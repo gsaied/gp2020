@@ -1,4 +1,4 @@
-
+/* verilator lint_off INITIALDLY */
 module fire9Squeeze #(
 	parameter WOUT = 8,
 	parameter DSP_NO = 112 ,
@@ -9,7 +9,6 @@ module fire9Squeeze #(
 )
 (
 	input clk,
-	input rst,
 	input fire9Squeeze_en,
 	input [WIDTH-1:0] ifm,
 	input ram_feedback,
@@ -38,19 +37,25 @@ rom_fire9Squeeze u_2 (
 ///////////////////////////////////
 reg clr_pulse ;
 reg rom_clr_pulse;
+initial begin
+	weight_rom_address<= 0 ;
+	ram_feedback_reg<=1'b0 ;
+	rom_clr_pulse <= 1'b0 ;
+	clr_counter <= 0 ;
+	fire9Squeeze_timer<= 0 ;
+	fire9Squeeze_end <= 1'b0 ;
+end
+always @(posedge clk) clr_pulse <= rom_clr_pulse ; 
 ///////
 ///////
-always @(posedge clk or negedge rst) begin
-	if(!rst)
-		weight_rom_address<= 0 ;
-	else if (rom_clr_pulse)
+always @(posedge clk ) begin
+	if (rom_clr_pulse)
 		weight_rom_address<= 0;
 	else if (fire9Squeeze_en) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
 always @(posedge clk) begin
-	if(fire9Squeeze_en) 
 		kernel_regs<=kernels ;
 end
 reg layer_en_reg ;
@@ -61,40 +66,32 @@ end
 //GENERATION OF CLR PULSE///
 ////////////////////////////
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ;
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
-		clr_pulse <= 1'b0 ;
-		rom_clr_pulse <= 1'b0 ;
-		clr_counter <= 0 ;
-	end
-	else if (!fire9Squeeze_end && fire9Squeeze_en) begin
+always @(posedge clk) begin
+	if (!fire9Squeeze_end && fire9Squeeze_en) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
 		end
 		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
 			clr_counter <= 0 ;
-			clr_pulse<= 1'b1 ;
-		rom_clr_pulse <= 1'b0 ;
+			rom_clr_pulse <= 1'b0 ;
 		end
 		else begin
-			clr_pulse <= 1'b0 ;
 			clr_counter <= clr_counter +1;
-		rom_clr_pulse <= 1'b0 ;
+			rom_clr_pulse <= 1'b0 ;
 		end
 	end
 end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
+reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
 genvar i ;
 generate for (i = 0 ; i< DSP_NO ; i++) begin
 	mac mac_i (
 		.clr(clr_pulse),
 		.clk(clk),
-		.rst(rst),
 		.pix(ifm),
 		.layer_en(layer_en_reg),
 		.mul_out(ofmw[i]),
@@ -124,12 +121,8 @@ end
 //CHECK FOR LAYER END//////////
 ///////////////////////////////
 reg [$clog2(WOUT**2):0] fire9Squeeze_timer ;
-always @(posedge clk or negedge rst) begin
-	if (!rst) begin
-		fire9Squeeze_timer<= 0 ;
-		fire9Squeeze_end <= 1'b0 ;
-	end
-	else if (fire9Squeeze_timer == WOUT**2+1)
+always @(posedge clk) begin
+	if (fire9Squeeze_timer == WOUT**2+1)
 		fire9Squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire9Squeeze_timer<= fire9Squeeze_timer+1 ;
@@ -137,15 +130,12 @@ end
 always @(posedge clk) begin
 	fire9Squeeze_sample <= clr_pulse ; 
 end
-reg ram_feedback_reg ; 
-always @(posedge clk or negedge rst) begin
-	if(!rst)
-		ram_feedback_reg<=1'b0 ;
-	else if (ram_feedback) 
+(* dont_touch = "true" *)reg ram_feedback_reg ; 
+always @(posedge clk) begin
+	 if (ram_feedback) 
 		ram_feedback_reg<= 1'b1 ;
 end
 assign fire9Squeeze_finish= !ram_feedback_reg && fire9Squeeze_end ; 
 endmodule
-
 
 

@@ -1,5 +1,4 @@
 module conv_mac (
-	input rst,
 	input clk,
 	input clr,
 	input signed [15:0] pix,
@@ -9,7 +8,7 @@ module conv_mac (
 wire signed [31:0] intermed ;
 	assign intermed = pix*ker + mul_out ; 
 	always @(posedge clk ) begin
-		if (!rst || clr)
+		if (clr)
 			mul_out <= 32'b0 ;
 		else
 			mul_out <= intermed ; 

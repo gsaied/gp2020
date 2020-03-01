@@ -1,0 +1,64 @@
+%Warning-WIDTH: 2ndSharedMemory.sv:1249: Operator EQ expects 32 or 5 bits on the LHS, but LHS's VARREF 'channels_2' generates 4 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Warning-WIDTH: 2ndSharedMemory.sv:1261: Operator EQ expects 32 or 5 bits on the LHS, but LHS's VARREF 'channels_2' generates 4 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1348: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1353: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1355: Operator NEQ expects 6 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 4 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1361: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1370: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1375: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1377: Operator NEQ expects 6 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 4 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1383: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1391: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1396: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1398: Operator NEQ expects 6 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 4 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1404: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1412: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1417: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1419: Operator NEQ expects 6 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 4 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1425: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1433: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1438: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1440: Operator NEQ expects 6 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 4 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1446: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1454: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1459: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1461: Operator NEQ expects 6 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 4 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1467: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1475: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1480: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1482: Operator NEQ expects 6 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 4 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1488: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1496: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1501: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1503: Operator NEQ expects 6 bits on the LHS, but LHS's VARREF 'ram_numcounter' generates 4 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1509: Bit extraction of var[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1611: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1616: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1621: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1626: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1631: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1636: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1641: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-WIDTH: 2ndSharedMemory.sv:1646: Bit extraction of array[15:0] requires 4 bit index, not 6 bits.
+%Warning-INITIALDLY: ram_3d.sv:26: Delayed assignments (<=) in initial or final block; suggest blocking assignments (=).
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:935: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:936: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:968: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:969: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1085: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1107: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1128: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1149: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1170: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1191: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1212: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1356: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1378: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1399: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1420: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1441: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1462: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error-BLKLOOPINIT: 2ndSharedMemory.sv:1483: Unsupported: Delayed assignment to array inside for loops (non-delayed is ok - see docs)
+%Error: Exiting due to 18 error(s), 43 warning(s)
+%Error: Command Failed /usr/bin/verilator_bin --lint-only 2ndSharedMemory.sv
