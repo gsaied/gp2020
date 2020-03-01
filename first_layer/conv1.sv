@@ -82,7 +82,7 @@ always @(posedge clk or negedge rst) begin
 		img_addr_counter <= 0 ;
 	else if (rom_clr_pulse)
 		img_addr_counter <= 0 ;
-	else 
+	else if (conv1_en)
 		img_addr_counter <= img_addr_counter+1 ;
 end
 reg [7:0] row_end ;
@@ -110,7 +110,7 @@ always @(posedge clk or negedge rst) begin
 		img_rom_address<= ref_address+STRIDE ; 
 		end
 	end
-	else begin
+	else if (conv1_en) begin
 		case (img_addr_counter) 
 			5'd2 : img_rom_address<= ref_address+ W_IN ;
 			5'd5 : img_rom_address<= ref_address+ W_IN*2 ;

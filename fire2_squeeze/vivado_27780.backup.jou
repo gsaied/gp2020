@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Mar  1 02:52:26 2020
+# Process ID: 27780
+# Current directory: /home/gsaied/Desktop/old_rtl/fire2_squeeze
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/fire2_squeeze/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire2_squeeze/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+vi synth.tcl 
+source synth.tcl 
+delete_fileset constr
+source synth.tcl 
+vi utiliziation.rpt 
+vi synth.tcl 
+vi squeeze_fire2.xdc 
+delete_fileset costr
+delete_fileset constr
+source synth.tcl 
+vi squeeze_fire2.xdc 
+get_cells 
+get_interfaces 
+get_cells u_1
+get_cells u_2
+vi fire2_squeeze.sv 
+get_cells mac_1
+vi fire2_squeeze.sv 
+get_cells mac
+get_cells mac*
+vi squeeze_fire2.xdc 
+get_cells u_3
+get_cells u_2

@@ -29,7 +29,7 @@ wire [WIDTH-1:0] kernels [0:DSP_NO-1] ;
 reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ;
 reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
 //////////////////////////////////
-rom_fire2_squeeze u_2 (
+(* keep_hierarchy = "yes" *)rom_fire2_squeeze u_2 (
 	.clk(clk),
 	.address(weight_rom_address),
 	.rom_out(kernels)
@@ -51,12 +51,13 @@ always @(posedge clk or negedge rst) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
-
+/*
 always @(posedge clk) begin
 	if(fire2_squeeze_en) 
 		kernel_regs<=kernels ;
 end
 
+*/
 ////////////////////////////
 //GENERATION OF CLR PULSE///
 ////////////////////////////
@@ -84,8 +85,8 @@ end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
+reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
 genvar i ;
 generate for (i = 0 ; i< DSP_NO ; i++) begin
 	mac mac_i (
@@ -95,7 +96,7 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 		.layer_en(1),
 		.pix(ifm),
 		.mul_out(ofmw[i]),
-		.ker(kernel_regs[i])
+		.ker(kernels[i])
 	);
 end
 endgenerate

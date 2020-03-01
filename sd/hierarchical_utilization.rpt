@@ -1,0 +1,27 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sun Mar  1 00:16:21 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_utilization -hierarchical -file hierarchical_utilization.rpt
+| Design       : wrapper_image
+| Device       : 7vx690tffg1157-3
+| Design State : Synthesized
+-------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------+--------+------------+------------+---------+------+-----+--------+--------+--------------+
+|    Instance   | Module | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++---------------+--------+------------+------------+---------+------+-----+--------+--------+--------------+
+| wrapper_image |  (top) |         34 |         34 |       0 |    0 |   1 |     98 |      0 |            0 |
++---------------+--------+------------+------------+---------+------+-----+--------+--------+--------------+
+
+

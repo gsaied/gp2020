@@ -25,8 +25,12 @@ end
 reg [WIDTH-1:0] o1; 
 reg [WIDTH-1:0] o2; 
 reg [WIDTH-1:0] o3; 
+reg [1:0] address_reg ; 
+always @(posedge clk) begin
+	address_reg <= address[17:16] ;
+end
 always @(*) begin
-	case(address[ADDR-1:ADDR-2]) 
+	case(address_reg) 
 		2'b10:image_wrapper_o<= o2;
 		2'b11:image_wrapper_o<= o3;
 		default:image_wrapper_o<= o1;

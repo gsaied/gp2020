@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Feb  8 14:05:02 2020
-| Host         : GCS running 64-bit Ubuntu 18.04.3 LTS
+| Date         : Sun Mar  1 03:20:10 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_design_analysis -file design.rpt
 | Design       : conv1
 | Device       : xc7vx690t
@@ -18,35 +18,35 @@ Table of Contents
 1. Setup Path Characteristics 1-1
 ---------------------------------
 
-+---------------------------+-------------------------------------+
-|      Characteristics      |               Path #1               |
-+---------------------------+-------------------------------------+
-| Requirement               |                               0.000 |
-| Path Delay                |                               3.470 |
-| Logic Delay               | 2.292(67%)                          |
-| Net Delay                 | 1.178(33%)                          |
-| Clock Skew                |                               0.000 |
-| Slack                     |                                 inf |
-| Clock Relationship        | Safely Timed                        |
-| Logic Levels              |                                   4 |
-| Routes                    |                                   0 |
-| Logical Path              | RAMB36E1 RAMB36E1 LUT3 LUT5 DSP48E1 |
-| Start Point Clock         |                                     |
-| End Point Clock           |                                     |
-| DSP Block                 | Seq                                 |
-| BRAM                      | No DO_REG                           |
-| IO Crossings              |                                   0 |
-| Config Crossings          |                                   0 |
-| SLR Crossings             |                                   0 |
-| PBlocks                   |                                   0 |
-| High Fanout               |                                1483 |
-| Dont Touch                |                                   0 |
-| Mark Debug                |                                   0 |
-| Start Point Pin Primitive | RAMB36E1/CLKARDCLK                  |
-| End Point Pin Primitive   | DSP48E1/A[0]                        |
-| Start Point Pin           | img_out_reg_0_0/CLKARDCLK           |
-| End Point Pin             | mul_out_reg/A[0]                    |
-+---------------------------+-------------------------------------+
++---------------------------+--------------------------------+
+|      Characteristics      |             Path #1            |
++---------------------------+--------------------------------+
+| Requirement               |                          5.000 |
+| Path Delay                |                          3.183 |
+| Logic Delay               | 2.249(71%)                     |
+| Net Delay                 | 0.934(29%)                     |
+| Clock Skew                |                         -0.145 |
+| Slack                     |                         -0.683 |
+| Clock Relationship        | Safely Timed                   |
+| Logic Levels              |                              2 |
+| Routes                    |                              0 |
+| Logical Path              | RAMB36E1 RAMB36E1 LUT6 DSP48E1 |
+| Start Point Clock         | clk                            |
+| End Point Clock           | clk                            |
+| DSP Block                 | Seq                            |
+| BRAM                      | No DO_REG                      |
+| IO Crossings              |                              0 |
+| Config Crossings          |                              0 |
+| SLR Crossings             |                              0 |
+| PBlocks                   |                              0 |
+| High Fanout               |                             64 |
+| Dont Touch                |                              0 |
+| Mark Debug                |                              0 |
+| Start Point Pin Primitive | RAMB36E1/CLKARDCLK             |
+| End Point Pin Primitive   | DSP48E1/A[0]                   |
+| Start Point Pin           | o1_reg_0_0/CLKARDCLK           |
+| End Point Pin             | mul_out_reg/A[0]               |
++---------------------------+--------------------------------+
 * Bounding box calculated as % of dimensions for the target device (620, 1000)
 
 
@@ -54,9 +54,9 @@ Table of Contents
 ---------------------------
 
 +-----------------+-------------+------+
-| End Point Clock | Requirement |   4  |
+| End Point Clock | Requirement |   2  |
 +-----------------+-------------+------+
-| (none)          | 0.000ns     | 1000 |
+| clk             | 5.000ns     | 1000 |
 +-----------------+-------------+------+
 * Columns represent the logic levels per end point clock
 ** Distribution is for top worst 1000 paths
