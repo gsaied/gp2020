@@ -69,19 +69,17 @@ always @(posedge clk /*or negedge rst*/) begin
 		clr_counter <= 0 ;
 	end
 	else */if (!fire6_expand3_end && fire6_expand3_en) begin
-		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
+		if(clr_counter > KERNEL_DIM**2*CHIN-2 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
 		end
-		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
+		else if(clr_counter > KERNEL_DIM**2*CHIN-1) begin
 			clr_counter <= 0 ;
-		
-		rom_clr_pulse <= 1'b0 ;
+			rom_clr_pulse <= 1'b0 ;
 		end
 		else begin
-			
 			clr_counter <= clr_counter +1;
-		rom_clr_pulse <= 1'b0 ;
+			rom_clr_pulse <= 1'b0 ;
 		end
 	end
 end
@@ -112,12 +110,12 @@ always @(*) begin
 	end
 end
 initial begin
-weight_rom_address=0;
-ram_feedback_reg=1'b0;
-rom_clr_pulse=1'b0;
-clr_counter=0;
-fire6_expand3_timer=0;
-fire6_expand3_end=1'b0;
+	weight_rom_address=0;
+	ram_feedback_reg=1'b0;
+	rom_clr_pulse=1'b0;
+	clr_counter=0;
+	fire6_expand3_timer=0;
+	fire6_expand3_end=1'b0;
 end
 always@(posedge clk) begin
 	if(clr_pulse && fire6_expand3_en && !fire6_expand3_end) begin
@@ -138,7 +136,7 @@ always @(posedge clk /*or negedge rst*/) begin
 		fire6_expand3_timer<= 0 ;
 		fire6_expand3_end <= 1'b0 ;
 	end
-	else*/ if (fire6_expand3_timer == WOUT**2+1)
+	else*/ if (fire6_expand3_timer > WOUT**2)
 		fire6_expand3_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire6_expand3_timer<= fire6_expand3_timer+1 ;

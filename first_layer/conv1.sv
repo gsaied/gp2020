@@ -97,13 +97,13 @@ always @(posedge clk or negedge rst) begin
 		row_end <= 0 ; 
 	else if (rom_clr_pulse) 
 		row_end <= row_end +1 ; 
-	else if (row_end == 128)
+	else if (row_end > 127)
 		row_end <= 0 ; 
 
 end
 always @(posedge clk) begin
 	if (rom_clr_pulse) begin
-		if (row_end == 127) begin
+		if (row_end > 126) begin
 			ref_address <= ref_address+2*STRIDE+258 ; 
 			img_rom_address<= ref_address+2*STRIDE+258 ; 
 		end
@@ -134,11 +134,11 @@ wrapper_image u_1 (
 // counter to generate clock_divider
 always @(posedge clk) begin
 	if (!conv1_end && conv1_en) begin
-		if (clr_counter == KERNEL_DIM**2*CHIN-1) begin
+		if (clr_counter > KERNEL_DIM**2*CHIN-2) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter<= clr_counter +1 ;
 		end
-		else if (clr_counter == KERNEL_DIM**2*CHIN ) begin //after 10 cycles the new output is good to go. New inputs to be fetched
+		else if (clr_counter > KERNEL_DIM**2*CHIN-1 ) begin //after 10 cycles the new output is good to go. New inputs to be fetched
 			clr_counter<= 5'b0 ; 
 			rom_clr_pulse<= 1'b0 ;
 		end
@@ -183,7 +183,7 @@ endgenerate//#FILTERS instances of macs
 
 reg [$clog2(WOUT**2):0] conv1_timer ;
 always @(posedge clk) begin//will be modified to use clk_sampling as the counting signal
-	if (conv1_timer == WOUT**2+1)
+	if (conv1_timer > WOUT**2)
 		conv1_end <= 1'b1 ;//LAYER_1 HAS FINISHED
 	else if (clr_pulse) 
 		conv1_timer<= conv1_timer+1 ; 

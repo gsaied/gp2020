@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Mar  3 18:00:25 2020
-# Process ID: 14979
+# Start of session at: Wed Mar  4 05:34:00 2020
+# Process ID: 7398
 # Current directory: /home/gsaied/Desktop/old_rtl/first_layer
 # Command line: vivado -mode tcl -source synth.tcl
 # Log file: /home/gsaied/Desktop/old_rtl/first_layer/vivado.log
@@ -20,9 +20,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14989 
+INFO: Helper process launched with PID 7411 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1424.457 ; gain = 69.000 ; free physical = 1138 ; free virtual = 5325
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1424.461 ; gain = 69.000 ; free physical = 3183 ; free virtual = 7684
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'conv1' [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:10]
 	Parameter WOUT bound to: 128 - type: integer 
@@ -184,7 +184,7 @@ INFO: [Synth 8-3876] $readmem data file 'third_part.mem' is read successfully [/
 INFO: [Synth 8-6155] done synthesizing module 'wrapper_image' (4#1) [/home/gsaied/Desktop/old_rtl/first_layer/wrapper_image.sv:2]
 INFO: [Synth 8-6155] done synthesizing module 'conv1' (5#1) [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:10]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1594.277 ; gain = 238.820 ; free physical = 1049 ; free virtual = 5240
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1594.281 ; gain = 238.820 ; free physical = 3080 ; free virtual = 7599
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -197,10 +197,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1594.277 ; gain = 238.820 ; free physical = 1054 ; free virtual = 5245
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1594.281 ; gain = 238.820 ; free physical = 3089 ; free virtual = 7599
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1594.277 ; gain = 238.820 ; free physical = 1054 ; free virtual = 5245
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1594.281 ; gain = 238.820 ; free physical = 3089 ; free virtual = 7599
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -211,37 +211,34 @@ Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/temp.xdc]
 Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/temp.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2088.832 ; gain = 0.000 ; free physical = 598 ; free virtual = 4789
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2088.836 ; gain = 0.000 ; free physical = 2630 ; free virtual = 7148
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2088.832 ; gain = 0.000 ; free physical = 597 ; free virtual = 4788
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2088.832 ; gain = 0.000 ; free physical = 597 ; free virtual = 4788
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2088.836 ; gain = 0.000 ; free physical = 2628 ; free virtual = 7147
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2088.836 ; gain = 0.000 ; free physical = 2628 ; free virtual = 7147
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2088.832 ; gain = 733.375 ; free physical = 712 ; free virtual = 4895
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2088.836 ; gain = 733.375 ; free physical = 2744 ; free virtual = 7254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx690tffg1157-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2088.832 ; gain = 733.375 ; free physical = 712 ; free virtual = 4895
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2088.836 ; gain = 733.375 ; free physical = 2739 ; free virtual = 7254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2088.832 ; gain = 733.375 ; free physical = 706 ; free virtual = 4897
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2088.836 ; gain = 733.375 ; free physical = 2741 ; free virtual = 7256
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5547] Trying to map ROM "first_part" into Block RAM due to explicit "ram_style" or "rom_style" specification
 INFO: [Synth 8-5547] Trying to map ROM "second_part" into Block RAM due to explicit "ram_style" or "rom_style" specification
 INFO: [Synth 8-5547] Trying to map ROM "third_part" into Block RAM due to explicit "ram_style" or "rom_style" specification
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:116]
-INFO: [Synth 8-5546] ROM "row_end" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "conv1_end" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 2104.848 ; gain = 749.391 ; free physical = 655 ; free virtual = 4844
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 2104.852 ; gain = 749.391 ; free physical = 2694 ; free virtual = 7207
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -272,13 +269,10 @@ Detailed RTL Component Info :
 	   3 Input     18 Bit        Muxes := 1     
 	   8 Input     18 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
-	   2 Input      9 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
 	   9 Input      3 Bit        Muxes := 1     
 	   9 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -302,13 +296,10 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   3 Input     18 Bit        Muxes := 1     
 	   8 Input     18 Bit        Muxes := 1     
-	   2 Input      9 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
 	   9 Input      3 Bit        Muxes := 1     
 	   9 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module wrapper_image 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -338,9 +329,6 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "conv1_end" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 DSP Report: Generating DSP genblk1[0].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
 DSP Report: register kernel_regs_reg[0] is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
 DSP Report: register genblk1[0].mac_i/mul_out_reg is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
@@ -661,24 +649,24 @@ DSP Report: register kernel_regs_reg[63] is absorbed into DSP genblk1[63].mac_i/
 DSP Report: register genblk1[63].mac_i/mul_out_reg is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
 DSP Report: operator genblk1[63].mac_i/intermed is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
 DSP Report: operator genblk1[63].mac_i/intermed0 is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_10/\ref_address_reg[0] )
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__0' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__1' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__2' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__3' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__4' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__5' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__6' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__7' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__8' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__9' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__10' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__11' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__12' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__13' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_6/\ref_address_reg[0] )
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__0' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__1' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__2' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__3' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__4' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__5' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__6' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__7' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__8' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__9' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__10' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__11' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__12' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/u_1/o1_reg_mux_sel__13' (FD) to 'u_1i_4/u_1/o1_reg_mux_sel__14'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 2128.863 ; gain = 773.406 ; free physical = 611 ; free virtual = 4821
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 2136.875 ; gain = 781.414 ; free physical = 2615 ; free virtual = 7147
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -753,7 +741,6 @@ ROM:
 |rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
 |rom_array_layer_1 | p_0_out    | 32x16         | LUT            | 
 |wrapper_image     | o1_reg     | 131072x16     | Block RAM      | 
-|conv1             | p_0_out    | 32x16         | LUT            | 
 |conv1             | p_0_out    | 32x16         | LUT            | 
 |conv1             | p_0_out    | 32x16         | LUT            | 
 |conv1             | p_0_out    | 32x16         | LUT            | 
@@ -884,56 +871,56 @@ Note: The table above is a preliminary report that shows the DSPs inferred at th
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6837] The timing for the instance u_1i_0/u_1/o3_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_0/u_1/o3_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o3_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o3_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_2/u_1/o2_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_4/u_1/o1_reg_3_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -944,28 +931,28 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 2173.863 ; gain = 818.406 ; free physical = 386 ; free virtual = 4607
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:58 . Memory (MB): peak = 2172.875 ; gain = 817.414 ; free physical = 2136 ; free virtual = 6662
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__0' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__1' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__2' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__3' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__4' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__5' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__6' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__7' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__8' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__9' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__10' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__11' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__12' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
-INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__13' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__0' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__1' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__2' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__3' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__4' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__5' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__6' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__7' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__8' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__9' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__10' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__11' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__12' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_4/o1_reg_mux_sel__13' (FD) to 'u_1i_4/o1_reg_mux_sel__14'
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 318 ; free virtual = 4539
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 2291.891 ; gain = 936.430 ; free physical = 2031 ; free virtual = 6559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1029,7 +1016,7 @@ INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_14 (implemented as
 INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 395 ; free virtual = 4616
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 2291.891 ; gain = 936.430 ; free physical = 1840 ; free virtual = 6368
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1054,7 +1041,7 @@ INFO: [Synth 8-6064] Net img_rom_wire[15] is driving 960 big block pins (URAM, B
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 396 ; free virtual = 4617
+Finished IO Insertion : Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 2291.891 ; gain = 936.430 ; free physical = 1780 ; free virtual = 6308
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1067,7 +1054,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 396 ; free virtual = 4617
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 2291.891 ; gain = 936.430 ; free physical = 1780 ; free virtual = 6308
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1079,25 +1066,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 396 ; free virtual = 4617
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 2291.891 ; gain = 936.430 ; free physical = 1768 ; free virtual = 6296
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 396 ; free virtual = 4617
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 2291.891 ; gain = 936.430 ; free physical = 1768 ; free virtual = 6296
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 396 ; free virtual = 4617
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 2291.891 ; gain = 936.430 ; free physical = 1768 ; free virtual = 6296
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 397 ; free virtual = 4617
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 2291.891 ; gain = 936.430 ; free physical = 1767 ; free virtual = 6296
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1115,12 +1102,12 @@ Report Cell Usage:
 +------+------------+------+
 |1     |CARRY4      |   538|
 |2     |DSP48E1     |    64|
-|3     |LUT1        |   490|
-|4     |LUT2        |    12|
+|3     |LUT1        |   491|
+|4     |LUT2        |    14|
 |5     |LUT3        |    29|
-|6     |LUT4        |    90|
-|7     |LUT5        |   884|
-|8     |LUT6        |   132|
+|6     |LUT4        |    89|
+|7     |LUT5        |   883|
+|8     |LUT6        |   130|
 |9     |RAMB36E1    |     1|
 |10    |RAMB36E1_1  |     1|
 |11    |RAMB36E1_10 |     1|
@@ -1184,7 +1171,7 @@ Report Cell Usage:
 |69    |RAMB36E1_8  |     1|
 |70    |RAMB36E1_9  |     1|
 |71    |FDCE        |     8|
-|72    |FDRE        |  1204|
+|72    |FDRE        |  1205|
 |73    |FDSE        |     1|
 +------+------------+------+
 
@@ -1260,11 +1247,11 @@ Report Instance Areas:
 |66    |  u_1                 |wrapper_image |   212|
 +------+----------------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 397 ; free virtual = 4617
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 2291.891 ; gain = 936.430 ; free physical = 1767 ; free virtual = 6295
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 2291.879 ; gain = 441.867 ; free physical = 462 ; free virtual = 4683
-Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 2291.887 ; gain = 936.422 ; free physical = 463 ; free virtual = 4684
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 2291.891 ; gain = 441.875 ; free physical = 1821 ; free virtual = 6349
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 2291.898 ; gain = 936.430 ; free physical = 1821 ; free virtual = 6349
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 700 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1272,14 +1259,14 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/temp.xdc]
 Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/temp.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2291.887 ; gain = 0.000 ; free physical = 384 ; free virtual = 4605
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2291.898 ; gain = 0.000 ; free physical = 1721 ; free virtual = 6249
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-300 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+294 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2291.887 ; gain = 944.426 ; free physical = 564 ; free virtual = 4785
+synth_design: Time (s): cpu = 00:01:12 ; elapsed = 00:01:17 . Memory (MB): peak = 2291.898 ; gain = 944.434 ; free physical = 1861 ; free virtual = 6389
 # report_utilization -file utiliziation.rpt
 # report_utilization -hierarchical -file hierarchical_utilization.rpt
 # report_timing -file post_synth_timing.rpt
@@ -1289,11 +1276,11 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
 Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
 INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
-report_timing: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2622.695 ; gain = 330.809 ; free physical = 137 ; free virtual = 4286
+report_timing: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2622.707 ; gain = 330.809 ; free physical = 1325 ; free virtual = 5867
 # write_checkpoint -force temp_syn.dcp
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2622.695 ; gain = 0.000 ; free physical = 137 ; free virtual = 4286
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2622.707 ; gain = 0.000 ; free physical = 1325 ; free virtual = 5867
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2663.898 ; gain = 0.000 ; free physical = 132 ; free virtual = 4285
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2662.910 ; gain = 0.000 ; free physical = 1319 ; free virtual = 5866
 INFO: [Common 17-1381] The checkpoint '/home/gsaied/Desktop/old_rtl/first_layer/temp_syn.dcp' has been generated.
 # if {[get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]] < 0} {
 # puts "Found setup timing violations => running physical optimization"
@@ -1313,63 +1300,63 @@ INFO: [DRC 23-27] Running DRC with 4 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2670.859 ; gain = 4.996 ; free physical = 140 ; free virtual = 4282
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2670.871 ; gain = 5.996 ; free physical = 1294 ; free virtual = 5836
 
 Starting Cache Timing Information Task
-Ending Cache Timing Information Task | Checksum: 1b784d192
+Ending Cache Timing Information Task | Checksum: 16e234dcd
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2670.859 ; gain = 0.000 ; free physical = 140 ; free virtual = 4282
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2670.871 ; gain = 0.000 ; free physical = 1289 ; free virtual = 5831
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 32 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1af4b60c6
+Phase 1 Retarget | Checksum: 1860f134d
 
-Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.33 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 132 ; free virtual = 4236
+Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.37 . Memory (MB): peak = 2721.871 ; gain = 0.000 ; free physical = 1251 ; free virtual = 5793
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
 INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: c56b9e4f
+Phase 2 Constant propagation | Checksum: 115d13504
 
-Time (s): cpu = 00:00:00.58 ; elapsed = 00:00:00.43 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 132 ; free virtual = 4236
+Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:00.49 . Memory (MB): peak = 2721.871 ; gain = 0.000 ; free physical = 1250 ; free virtual = 5792
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1bacd208e
+Phase 3 Sweep | Checksum: 12812f6cd
 
-Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.71 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 132 ; free virtual = 4236
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2721.871 ; gain = 0.000 ; free physical = 1217 ; free virtual = 5759
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Sweep, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 1bacd208e
+Phase 4 BUFG optimization | Checksum: 12812f6cd
 
-Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.73 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 132 ; free virtual = 4236
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.93 . Memory (MB): peak = 2721.871 ; gain = 0.000 ; free physical = 1217 ; free virtual = 5759
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: a467164b
+Phase 5 Shift Register Optimization | Checksum: bed32c08
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 131 ; free virtual = 4235
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2721.871 ; gain = 0.000 ; free physical = 1249 ; free virtual = 5792
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 6 Constant propagation | Checksum: a467164b
+Phase 6 Constant propagation | Checksum: bed32c08
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 131 ; free virtual = 4236
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2721.871 ; gain = 0.000 ; free physical = 1246 ; free virtual = 5792
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 7 Sweep
-Phase 7 Sweep | Checksum: a467164b
+Phase 7 Sweep | Checksum: bed32c08
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 131 ; free virtual = 4236
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2721.871 ; gain = 0.000 ; free physical = 1246 ; free virtual = 5791
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Sweep, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -1382,16 +1369,16 @@ INFO: [Opt 31-75] Optimized module 'conv1'.
 INFO: [Opt 31-75] Optimized module 'wrapper_image'.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 8 Resynthesis | Checksum: f840fa2a
+Phase 8 Resynthesis | Checksum: 4bf1701c
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 2729.688 ; gain = 7.828 ; free physical = 484 ; free virtual = 4236
-INFO: [Opt 31-389] Phase Resynthesis created 338 cells and removed 446 cells
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 2729.699 ; gain = 7.828 ; free physical = 1205 ; free virtual = 5746
+INFO: [Opt 31-389] Phase Resynthesis created 336 cells and removed 452 cells
 INFO: [Opt 31-1021] In phase Resynthesis, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 9 Post Processing Netlist
-Phase 9 Post Processing Netlist | Checksum: f840fa2a
+Phase 9 Post Processing Netlist | Checksum: 4bf1701c
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 2729.688 ; gain = 7.828 ; free physical = 484 ; free virtual = 4236
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 2729.699 ; gain = 7.828 ; free physical = 1204 ; free virtual = 5745
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -1407,7 +1394,7 @@ Opt_design Change Summary
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Constant propagation         |               0  |               0  |                                              1  |
 |  Sweep                        |               0  |               0  |                                              2  |
-|  Resynthesis                  |             338  |             446  |                                              2  |
+|  Resynthesis                  |             336  |             452  |                                              2  |
 |  Post Processing Netlist      |               0  |               0  |                                              0  |
 -------------------------------------------------------------------------------------------------------------------------
 
@@ -1415,10 +1402,10 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2729.688 ; gain = 0.000 ; free physical = 484 ; free virtual = 4236
-Ending Logic Optimization Task | Checksum: dcd1dd43
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2729.699 ; gain = 0.000 ; free physical = 1204 ; free virtual = 5745
+Ending Logic Optimization Task | Checksum: 111a13367
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2729.688 ; gain = 7.828 ; free physical = 484 ; free virtual = 4236
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 2729.699 ; gain = 7.828 ; free physical = 1204 ; free virtual = 5744
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -1439,27 +1426,27 @@ INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 64 newly gated: 34 Total Ports: 196
 Number of Flops added for Enable Generation: 4
 
-Ending PowerOpt Patch Enables Task | Checksum: 10527057d
+Ending PowerOpt Patch Enables Task | Checksum: 1227edfb3
 
-Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.39 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 461 ; free virtual = 4215
-Ending Power Optimization Task | Checksum: 10527057d
+Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.46 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 1157 ; free virtual = 5697
+Ending Power Optimization Task | Checksum: 1227edfb3
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2951.961 ; gain = 222.273 ; free physical = 472 ; free virtual = 4225
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 2952.965 ; gain = 223.266 ; free physical = 1166 ; free virtual = 5707
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 10527057d
+Ending Final Cleanup Task | Checksum: 1227edfb3
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4225
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 1166 ; free virtual = 5707
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4225
-Ending Netlist Obfuscation Task | Checksum: c33ac33e
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 1166 ; free virtual = 5707
+Ending Netlist Obfuscation Task | Checksum: 162963638
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4225
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 1166 ; free virtual = 5707
 INFO: [Common 17-83] Releasing license: Implementation
 38 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:21 . Memory (MB): peak = 2951.961 ; gain = 286.102 ; free physical = 472 ; free virtual = 4225
+opt_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:23 . Memory (MB): peak = 2952.965 ; gain = 288.094 ; free physical = 1166 ; free virtual = 5707
 # opt_design -merge_equivalent_drivers
 Command: opt_design -merge_equivalent_drivers
 Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
@@ -1471,22 +1458,22 @@ INFO: [DRC 23-27] Running DRC with 4 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 471 ; free virtual = 4225
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 1153 ; free virtual = 5694
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 1 Merging equivalent drivers
-Phase 1 Merging equivalent drivers | Checksum: 137ec959b
+Phase 1 Merging equivalent drivers | Checksum: b6b2258c
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 480 ; free virtual = 4226
-INFO: [Opt 31-389] Phase Merging equivalent drivers created 0 cells and removed 183 cells
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 1131 ; free virtual = 5674
+INFO: [Opt 31-389] Phase Merging equivalent drivers created 0 cells and removed 187 cells
 INFO: [Opt 31-1021] In phase Merging equivalent drivers, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Post Processing Netlist
-Phase 2 Post Processing Netlist | Checksum: 137ec959b
+Phase 2 Post Processing Netlist | Checksum: b6b2258c
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4226
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 1131 ; free virtual = 5674
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -1495,24 +1482,24 @@ Opt_design Change Summary
 ------------------------------------------------------------------------------------------------------------------------
 |  Phase                       |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 ------------------------------------------------------------------------------------------------------------------------
-|  Merging equivalent drivers  |               0  |             183  |                                              1  |
+|  Merging equivalent drivers  |               0  |             187  |                                              1  |
 |  Post Processing Netlist     |               0  |               0  |                                              0  |
 ------------------------------------------------------------------------------------------------------------------------
 
 
-Ending Logic Optimization Task | Checksum: 15e839db5
+Ending Logic Optimization Task | Checksum: ec99bf70
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4226
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 1129 ; free virtual = 5672
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4226
-Ending Netlist Obfuscation Task | Checksum: 15e839db5
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 1129 ; free virtual = 5671
+Ending Netlist Obfuscation Task | Checksum: ec99bf70
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4226
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 1128 ; free virtual = 5670
 INFO: [Common 17-83] Releasing license: Implementation
 9 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 474 ; free virtual = 4228
+opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 1130 ; free virtual = 5672
 # report_utilization -file post_utiliziation.rpt
 # report_utilization -hierarchical -file post_hierarchical_utilization.rpt
 # report_timing -file post_opt_timing.rpt
@@ -1524,7 +1511,7 @@ report_utilization
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Mar  3 18:02:38 2020
+| Date         : Wed Mar  4 05:36:20 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization
 | Design       : conv1
@@ -1553,11 +1540,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 1516 |     0 |    433200 |  0.35 |
-|   LUT as Logic          | 1516 |     0 |    433200 |  0.35 |
+| Slice LUTs*             | 1509 |     0 |    433200 |  0.35 |
+|   LUT as Logic          | 1509 |     0 |    433200 |  0.35 |
 |   LUT as Memory         |    0 |     0 |    174200 |  0.00 |
-| Slice Registers         | 1112 |     0 |    866400 |  0.13 |
-|   Register as Flip Flop | 1112 |     0 |    866400 |  0.13 |
+| Slice Registers         | 1107 |     0 |    866400 |  0.13 |
+|   Register as Flip Flop | 1107 |     0 |    866400 |  0.13 |
 |   Register as Latch     |    0 |     0 |    866400 |  0.00 |
 | F7 Muxes                |    0 |     0 |    216600 |  0.00 |
 | F8 Muxes                |    0 |     0 |    108300 |  0.00 |
@@ -1580,7 +1567,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 11    |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 1100  |          Yes |       Reset |            - |
+| 1095  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -1675,16 +1662,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 1100 |        Flop & Latch |
-| LUT5     |  894 |                 LUT |
+| FDRE     | 1095 |        Flop & Latch |
+| LUT5     |  891 |                 LUT |
 | CARRY4   |  538 |          CarryLogic |
 | LUT1     |  482 |                 LUT |
 | RAMB36E1 |   98 |        Block Memory |
-| LUT2     |   73 |                 LUT |
+| LUT2     |   76 |                 LUT |
 | DSP48E1  |   64 |    Block Arithmetic |
-| LUT3     |   26 |                 LUT |
-| LUT4     |   21 |                 LUT |
-| LUT6     |   20 |                 LUT |
+| LUT3     |   25 |                 LUT |
+| LUT6     |   19 |                 LUT |
+| LUT4     |   16 |                 LUT |
 | FDCE     |   11 |        Flop & Latch |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
@@ -1706,5 +1693,330 @@ Table of Contents
 +----------+------+
 
 
+vi slack.rpt 
+WARNING: [Common 17-259] Unknown Tcl command 'vi slack.rpt' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+report_timing
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Mar  4 05:36:41 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_timing
+| Design       : conv1
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -0.564ns  (required time - arrival time)
+  Source:                 u_1/o2_reg_0_0/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            genblk1[0].mac_i/mul_out_reg/A[0]
+                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.183ns  (logic 2.249ns (70.660%)  route 0.934ns (29.340%))
+  Logic Levels:           2  (LUT6=1 RAMB36E1=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.483ns = ( 5.483 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.508ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1268, unset)         0.508     0.508    u_1/clk
+                         RAMB36E1                                     r  u_1/o2_reg_0_0/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+                         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      1.915     2.423 r  u_1/o2_reg_0_0/CASCADEOUTA
+                         net (fo=1, unplaced)         0.065     2.488    u_1/o2_reg_0_0_n_0
+                         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.291     2.779 r  u_1/o2_reg_1_0/DOADO[0]
+                         net (fo=1, unplaced)         0.434     3.213    u_1/o2_reg[0]
+                         LUT6 (Prop_lut6_I4_O)        0.043     3.256 r  u_1/wrapper_image_LUT6/O
+                         net (fo=64, unplaced)        0.434     3.691    genblk1[0].mac_i/A[0]
+                         DSP48E1                                      r  genblk1[0].mac_i/mul_out_reg/A[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=1268, unset)         0.483     5.483    genblk1[0].mac_i/clk
+                         DSP48E1                                      r  genblk1[0].mac_i/mul_out_reg/CLK
+                         clock pessimism              0.000     5.483    
+                         clock uncertainty           -0.035     5.447    
+                         DSP48E1 (Setup_dsp48e1_CLK_A[0])
+                                                     -2.320     3.127    genblk1[0].mac_i/mul_out_reg
+  -------------------------------------------------------------------
+                         required time                          3.127    
+                         arrival time                          -3.691    
+  -------------------------------------------------------------------
+                         slack                                 -0.564    
+
+
+
+
+place_design 
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 786 ; free virtual = 5332
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e87ffac4
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 786 ; free virtual = 5332
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 828 ; free virtual = 5370
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: fa13bde0
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 783 ; free virtual = 5321
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1bebb2b3f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 742 ; free virtual = 5293
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1bebb2b3f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 742 ; free virtual = 5293
+Phase 1 Placer Initialization | Checksum: 1bebb2b3f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 742 ; free virtual = 5293
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1603ccdc7
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 737 ; free virtual = 5289
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-76] Pass 1. Identified 3 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net clr_pulse. Replicated 9 times.
+INFO: [Physopt 32-81] Processed net weight_rom_address_reg__0[0]. Replicated 9 times.
+INFO: [Physopt 32-81] Processed net weight_rom_address_reg__0[3]. Replicated 10 times.
+INFO: [Physopt 32-232] Optimized 3 nets. Created 28 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 3 nets or cells. Created 28 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 437 ; free virtual = 5006
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 443 ; free virtual = 5012
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Fanout                        |           28  |              0  |                     3  |           0  |           1  |  00:00:05  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |           28  |              0  |                     3  |           0  |           6  |  00:00:05  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 256346c2c
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:48 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 437 ; free virtual = 5006
+Phase 2 Global Placement | Checksum: 1eca650e7
+
+Time (s): cpu = 00:02:58 ; elapsed = 00:01:22 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 460 ; free virtual = 5015
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1eca650e7
+
+Time (s): cpu = 00:02:58 ; elapsed = 00:01:22 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 448 ; free virtual = 5015
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 297c41889
+
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:24 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 445 ; free virtual = 5006
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2a7ef97e3
+
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:24 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 431 ; free virtual = 4998
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1e3840b31
+
+Time (s): cpu = 00:03:03 ; elapsed = 00:01:24 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 430 ; free virtual = 4997
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 2b5c2a257
+
+Time (s): cpu = 00:03:07 ; elapsed = 00:01:27 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 404 ; free virtual = 4958
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1bf93e404
+
+Time (s): cpu = 00:03:10 ; elapsed = 00:01:30 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 401 ; free virtual = 4963
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 16be4cdff
+
+Time (s): cpu = 00:03:10 ; elapsed = 00:01:30 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 408 ; free virtual = 4969
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 2308038b1
+
+Time (s): cpu = 00:03:10 ; elapsed = 00:01:30 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 408 ; free virtual = 4969
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 14db17166
+
+Time (s): cpu = 00:03:14 ; elapsed = 00:01:32 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 380 ; free virtual = 4935
+Phase 3 Detail Placement | Checksum: 14db17166
+
+Time (s): cpu = 00:03:14 ; elapsed = 00:01:32 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 400 ; free virtual = 4954
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1fb859862
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-46] BUFG insertion identified 0 candidate nets, 0 success, 0 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1fb859862
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:01:35 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 397 ; free virtual = 4958
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-2.409. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 169587628
+
+Time (s): cpu = 00:06:37 ; elapsed = 00:04:55 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 148 ; free virtual = 4576
+Phase 4.1 Post Commit Optimization | Checksum: 169587628
+
+Time (s): cpu = 00:06:37 ; elapsed = 00:04:55 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 143 ; free virtual = 4575
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 169587628
+
+Time (s): cpu = 00:06:37 ; elapsed = 00:04:55 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 140 ; free virtual = 4572
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 169587628
+
+Time (s): cpu = 00:06:37 ; elapsed = 00:04:55 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 140 ; free virtual = 4572
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 140 ; free virtual = 4572
+Phase 4.4 Final Placement Cleanup | Checksum: 157c4b30c
+
+Time (s): cpu = 00:06:37 ; elapsed = 00:04:55 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 152 ; free virtual = 4584
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 157c4b30c
+
+Time (s): cpu = 00:06:37 ; elapsed = 00:04:55 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 152 ; free virtual = 4584
+Ending Placer Task | Checksum: 11b1e20b7
+
+Time (s): cpu = 00:06:37 ; elapsed = 00:04:56 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 229 ; free virtual = 4661
+INFO: [Common 17-83] Releasing license: Implementation
+31 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:06:40 ; elapsed = 00:04:58 . Memory (MB): peak = 2952.965 ; gain = 0.000 ; free physical = 229 ; free virtual = 4661
+report_timing -hold 
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type min -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Mar  4 06:10:09 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_timing -hold
+| Design       : conv1
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.163ns  (arrival time - required time)
+  Source:                 clr_counter_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            clr_counter_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.238ns  (logic 0.128ns (53.721%)  route 0.110ns (46.279%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.312ns
+    Source Clock Delay      (SCD):    0.296ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1296, unset)         0.296     0.296    clk
+    SLICE_X45Y171        FDRE                                         r  clr_counter_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y171        FDRE (Prop_fdre_C_Q)         0.100     0.396 r  clr_counter_reg[2]/Q
+                         net (fo=4, estimated)        0.110     0.507    clr_counter_reg__0[2]
+    SLICE_X45Y171        LUT3 (Prop_lut3_I2_O)        0.028     0.535 r  conv1_LUT3_18/O
+                         net (fo=1, routed)           0.000     0.535    p_0_in__0[2]
+    SLICE_X45Y171        FDRE                                         r  clr_counter_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1296, unset)         0.312     0.312    clk
+    SLICE_X45Y171        FDRE                                         r  clr_counter_reg[2]/C
+                         clock pessimism              0.000     0.312    
+    SLICE_X45Y171        FDRE (Hold_fdre_C_D)         0.060     0.372    clr_counter_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -0.372    
+                         arrival time                           0.535    
+  -------------------------------------------------------------------
+                         slack                                  0.163    
+
+
+
+
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Mar  3 18:02:44 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  4 06:20:25 2020...

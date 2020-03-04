@@ -55,11 +55,11 @@ always @(posedge clk/* or posedge rst*/) begin
 		clr_counter <= 0 ;
 	end
 	else*/ if (!fire8_squeeze_end && fire8_squeeze_en) begin
-		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
+		if(clr_counter > KERNEL_DIM**2*CHIN-2 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
 		end
-		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
+		else if(clr_counter > KERNEL_DIM**2*CHIN-1) begin
 			clr_counter <= 0 ;
 			rom_clr_pulse <= 1'b0 ;
 		end
@@ -114,7 +114,7 @@ always @(posedge clk/* or posedge rst*/) begin
 		fire8_squeeze_timer<= 0 ;
 		fire8_squeeze_end <= 1'b0 ;
 	end
-	else*/ if (fire8_squeeze_timer == WOUT**2+1)
+	else*/ if (fire8_squeeze_timer > WOUT**2)
 		fire8_squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire8_squeeze_timer<= fire8_squeeze_timer+1 ;

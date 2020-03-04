@@ -1,0 +1,62 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Mar  4 07:35:47 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_timing -file post_opt_timing.rpt
+| Design       : fire7_expand3
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             1.964ns  (required time - arrival time)
+  Source:                 kernel_regs_reg[101][0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            genblk1[101].mac_i/mul_out_reg/B[0]
+                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.688ns  (logic 0.254ns (36.896%)  route 0.434ns (63.104%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.483ns = ( 5.483 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.508ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=3567, unset)         0.508     0.508    clk
+                         FDRE                                         r  kernel_regs_reg[101][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.254     0.762 r  kernel_regs_reg[101][0]/Q
+                         net (fo=1, unplaced)         0.434     1.196    genblk1[101].mac_i/B[0]
+                         DSP48E1                                      r  genblk1[101].mac_i/mul_out_reg/B[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=3567, unset)         0.483     5.483    genblk1[101].mac_i/clk
+                         DSP48E1                                      r  genblk1[101].mac_i/mul_out_reg/CLK
+                         clock pessimism              0.000     5.483    
+                         clock uncertainty           -0.035     5.447    
+                         DSP48E1 (Setup_dsp48e1_CLK_B[0])
+                                                     -2.287     3.160    genblk1[101].mac_i/mul_out_reg
+  -------------------------------------------------------------------
+                         required time                          3.160    
+                         arrival time                          -1.196    
+  -------------------------------------------------------------------
+                         slack                                  1.964    
+
+
+
+

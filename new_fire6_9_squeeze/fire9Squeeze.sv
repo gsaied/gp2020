@@ -54,11 +54,11 @@ end
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ;
 always @(posedge clk) begin
 	if (!fire9Squeeze_end && fire9Squeeze_en) begin
-		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
+		if(clr_counter > KERNEL_DIM**2*CHIN-2 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
 		end
-		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
+		else if(clr_counter > KERNEL_DIM**2*CHIN-1) begin
 			clr_counter <= 0 ;
 			rom_clr_pulse <= 1'b0 ;
 		end
@@ -108,7 +108,7 @@ end
 ///////////////////////////////
 reg [$clog2(WOUT**2):0] fire9Squeeze_timer ;
 always @(posedge clk) begin
-	if (fire9Squeeze_timer == WOUT**2+1)
+	if (fire9Squeeze_timer > WOUT**2)
 		fire9Squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire9Squeeze_timer<= fire9Squeeze_timer+1 ;

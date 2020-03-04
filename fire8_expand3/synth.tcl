@@ -16,8 +16,7 @@ if {[get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]] < 0} {
 puts "Found setup timing violations => running physical optimization"
 report_timing -file slack.rpt
 }
-opt_design -directive ExploreArea
-opt_design -merge_equivalent_drivers
+opt_design -directive ExploreSequentialArea
 report_utilization -file post_utiliziation.rpt
 report_utilization -hierarchical -file post_hierarchical_utilization.rpt
 report_timing -file post_opt_timing.rpt

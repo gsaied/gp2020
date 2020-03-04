@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Mar  3 18:01:42 2020
+| Date         : Wed Mar  4 05:35:27 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -hierarchical -file hierarchical_utilization.rpt
 | Design       : conv1
@@ -21,8 +21,8 @@ Table of Contents
 +---------------------+---------------+------------+------------+---------+------+------+--------+--------+--------------+
 |       Instance      |     Module    | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +---------------------+---------------+------------+------------+---------+------+------+--------+--------+--------------+
-| conv1               |         (top) |       1624 |       1624 |       0 |    0 | 1213 |     98 |      0 |           64 |
-|   (conv1)           |         (top) |        193 |        193 |       0 |    0 | 1211 |      0 |      0 |            0 |
+| conv1               |         (top) |       1623 |       1623 |       0 |    0 | 1214 |     98 |      0 |           64 |
+|   (conv1)           |         (top) |        192 |        192 |       0 |    0 | 1212 |      0 |      0 |            0 |
 |   genblk1[0].mac_i  |      conv_mac |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[10].mac_i |    conv_mac_0 |         18 |         18 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[11].mac_i |    conv_mac_1 |         17 |         17 |       0 |    0 |    0 |      0 |      0 |            1 |

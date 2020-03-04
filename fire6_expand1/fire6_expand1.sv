@@ -18,6 +18,8 @@ module fire6_expand1 #(
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
 reg fire6_expand1_end;
+reg [$clog2(WOUT**2):0] fire6_expand1_timer ;
+(*dont_touch="yes"*)reg ram_feedback_reg ; 
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_fire6_expand1 b7 (
 	.bias_mem(biasing_wire)
@@ -69,19 +71,18 @@ always @(posedge clk /*or negedge rst*/) begin
 		clr_counter <= 0 ;
 	end
 	else */if (!fire6_expand1_end && fire6_expand1_en) begin
-		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
+		if(clr_counter >KERNEL_DIM**2*CHIN-2 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
 		end
-		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
+		else if(clr_counter > KERNEL_DIM**2*CHIN-1) begin
 			clr_counter <= 0 ;
-
-		rom_clr_pulse <= 1'b0 ;
+			rom_clr_pulse <= 1'b0 ;
 		end
 		else begin
 		
 			clr_counter <= clr_counter +1;
-		rom_clr_pulse <= 1'b0 ;
+			rom_clr_pulse <= 1'b0 ;
 		end
 	end
 end
@@ -132,13 +133,12 @@ end
 ///////////////////////////////
 //CHECK FOR LAYER END//////////
 ///////////////////////////////
-reg [$clog2(WOUT**2):0] fire6_expand1_timer ;
 always @(posedge clk /*or negedge rst*/) begin
 	/*if (!rst) begin
 		fire6_expand1_timer<= 0 ;
 		fire6_expand1_end <= 1'b0 ;
 	end
-	else */if (fire6_expand1_timer == WOUT**2+1)
+	else */if (fire6_expand1_timer > WOUT**2)
 		fire6_expand1_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire6_expand1_timer<= fire6_expand1_timer+1 ;
@@ -146,7 +146,6 @@ end
 always @(posedge clk) begin
 	fire6_expand1_sample <= clr_pulse ; 
 end
-(*dont_touch="yes"*)reg ram_feedback_reg ; 
 always @(posedge clk /*or negedge rst*/) begin
 	/*if (!rst)
 		ram_feedback_reg<= 1'b0 ; 

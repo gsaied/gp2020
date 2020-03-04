@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Mar  3 18:01:52 2020
+| Date         : Wed Mar  4 05:35:39 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_timing -file post_synth_timing.rpt
 | Design       : conv1
@@ -35,7 +35,7 @@ Slack (VIOLATED) :        -0.564ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=1374, unset)         0.508     0.508    u_1/clk
+                         net (fo=1375, unset)         0.508     0.508    u_1/clk
                          RAMB36E1                                     r  u_1/o1_reg_0_0/CLKARDCLK
   -------------------------------------------------------------------    -------------------
                          RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
@@ -51,7 +51,7 @@ Slack (VIOLATED) :        -0.564ns  (required time - arrival time)
 
                          (clock clk rise edge)        5.000     5.000 r  
                                                       0.000     5.000 r  clk (IN)
-                         net (fo=1374, unset)         0.483     5.483    genblk1[0].mac_i/clk
+                         net (fo=1375, unset)         0.483     5.483    genblk1[0].mac_i/clk
                          DSP48E1                                      r  genblk1[0].mac_i/mul_out_reg/CLK
                          clock pessimism              0.000     5.483    
                          clock uncertainty           -0.035     5.447    

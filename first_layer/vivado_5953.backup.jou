@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Mar  4 05:15:02 2020
+# Process ID: 5953
+# Current directory: /home/gsaied/Desktop/old_rtl/first_layer
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/first_layer/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/first_layer/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+vi utiliziation.rpt
+vi post_utiliziation.rpt 
+vi vivado.log 
+vi conv1.sv 
+vi synth.tcl 
