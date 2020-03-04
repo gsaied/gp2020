@@ -18,7 +18,7 @@ module fire2_3_expand_1 #(
 )
 (
 	input clk,
-	input rst,
+//	input rst,
 	input fire2_expand_1_en,
 	input fire3_expand_1_en,
 	input [15:0] ifm_2,
@@ -44,6 +44,7 @@ wire [2*WIDTH-1:0] biasing_wire_3 [0:DSP_NO-1] ;
 biasing_fire3_expand1 b8 (
 	.bias_mem(biasing_wire_3)
 );
+always@ (posedge clk) clr_pulse<= rom_clr_pulse;
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
@@ -72,10 +73,10 @@ reg clr_pulse ;
 reg rom_clr_pulse;
 ///////
 ///////
-always @(posedge clk or negedge rst) begin
-	if(!rst)
+always @(posedge clk/* or negedge rst*/) begin
+	/*if(!rst)
 		weight_rom_address<= 0 ; 
-	else if (rom_clr_pulse || rst_gen)
+	else*/ if (rom_clr_pulse || rst_gen)
 		weight_rom_address<= 0;
 	else if (fire2_expand_1_en || fire3_expand_1_en)begin
 		weight_rom_address<= weight_rom_address+1;
@@ -106,30 +107,29 @@ end
 //GENERATION OF CLR PULSE///
 ////////////////////////////
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ; 
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
+always @(posedge clk /*or negedge rst*/) begin
+	/*if(!rst) begin
 			clr_pulse <= 1'b0 ; 
 			rom_clr_pulse <= 1'b0 ; 
 			clr_counter <= 0 ;
 	end
-	else if (!(fire2_expand_1_end && fire3_expand_1_end) && (fire3_expand_1_en || fire2_expand_1_en) && !rst_gen ) begin
+	else*/ if (!(fire2_expand_1_end && fire3_expand_1_end) && (fire3_expand_1_en || fire2_expand_1_en) && !rst_gen ) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ; 
 			clr_counter <= clr_counter+1 ;
 		end
 		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
 			clr_counter <= 0 ;
-			clr_pulse<= 1'b1 ;
 			rom_clr_pulse <= 1'b0 ; 
 		end
 		else begin
-			clr_pulse <= 1'b0 ; 
+		
 			clr_counter <= clr_counter +1;
 			rom_clr_pulse <= 1'b0 ; 
 		end
 	end
         else if (rst_gen) begin
-                        clr_pulse <= 1'b0 ; 
+                      
                         rom_clr_pulse <= 1'b0 ; 
                         clr_counter <= 0 ; 
         end
@@ -137,14 +137,14 @@ end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
+reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
 genvar i ; 
 generate for (i = 0 ; i< CHOUT ; i++) begin
 	mac mac_i (
 		.clr(clr_pulse || rst_gen),
 		.clk(clk),
-		.rst(rst),
+	//	.rst(rst),
 		.layer_en(layer_en_reg),
 		.pix(ifm),
 		.mul_out(ofmw[i]),
@@ -159,6 +159,17 @@ always @(*) begin
 	for (int i = 0 ; i < DSP_NO ; i++) begin
 		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
 	end
+end
+initial begin
+	weight_rom_address<=0;
+	ram_feedback_reg_2<=1'b0;
+	ram_feedback_reg_3<=1'b0;
+	rom_clr_pulse <= 1'b0;
+	clr_counter <=0;
+	fire2_expand_1_timer<=0;
+	fire3_expand_1_timer<=0;
+	fire2_expand_1_end<=1'b0;
+	fire3_expand_1_end<=1'b0;
 end
 always@(posedge clk) begin
 	if(clr_pulse && (fire2_expand_1_en || fire3_expand_1_en) && !(fire2_expand_1_end && fire3_expand_1_end)) begin
@@ -184,14 +195,14 @@ end
 ///////////////////////////////
 reg [$clog2(WOUT**2):0] fire2_expand_1_timer ;
 reg [$clog2(WOUT**2):0] fire3_expand_1_timer ;
-always @(posedge clk or negedge rst) begin
-	if (!rst) begin
+always @(posedge clk /*or negedge rst*/) begin
+	/*if (!rst) begin
 		fire2_expand_1_timer<= 0 ;
 		fire3_expand_1_timer<= 0 ;
 		fire2_expand_1_end <= 1'b0 ; 
 		fire3_expand_1_end <= 1'b0 ; 
 	end
-	else if (fire2_expand_1_en) begin
+	else*/ if (fire2_expand_1_en) begin
 		if (fire2_expand_1_timer == WOUT**2+1)
 			fire2_expand_1_end <= 1'b1 ;
 		else if (clr_pulse)
@@ -208,14 +219,14 @@ always @(posedge clk) begin
 	fire2_expand_1_sample <= clr_pulse ; 
 end 
 
-reg ram_feedback_reg_2 ; 
-reg ram_feedback_reg_3 ; 
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
+(*dont_touch="yes"*)reg ram_feedback_reg_2 ; 
+(*dont_touch="yes"*)reg ram_feedback_reg_3 ; 
+always @(posedge clk /*or negedge rst*/) begin
+	/*if(!rst) begin
 		ram_feedback_reg_2<=1'b0 ;
 		ram_feedback_reg_3<=1'b0 ;
 	end
-	else if (ram_feedback_2) 
+	else*/ if (ram_feedback_2) 
 		ram_feedback_reg_2<= 1'b1 ;
 	else if (ram_feedback_3) 
 		ram_feedback_reg_3<= 1'b1 ;

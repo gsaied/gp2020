@@ -1,0 +1,84 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/gsaied/Desktop/old_rtl/amr
+vFirstSharedMemory
+Z1 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1583184457
+!i10b 1
+!s100 ?[So7>zUk6FMU8gC_5Sj93
+I?ZIDBDX3@a];5<JLR4JnK1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 FirstSharedMemory_sv_unit
+S1
+R0
+w1583184453
+8FirstSharedMemory.sv
+FFirstSharedMemory.sv
+Z3 L0 23
+Z4 OL;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1583184457.000000
+!s107 FirstSharedMemory.sv|
+!s90 FirstSharedMemory.sv|
+!i113 0
+Z5 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 tCvgOpt 0
+n@first@shared@memory
+vram_3d
+R1
+!s110 1583183133
+!i10b 1
+!s100 c2[b?oKFf6bU2iKA@b[im3
+I;=BH0?nkBM9YchMVc8kzD2
+R2
+!s105 ram_3d_sv_unit
+S1
+R0
+w1583099142
+8ram_3d.sv
+Fram_3d.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1583183133.000000
+!s107 ram_3d.sv|FirstSharedMemory.sv|2ndSharedMemory.sv|
+!s90 2ndSharedMemory.sv|FirstSharedMemory.sv|ram_3d.sv|
+!i113 0
+R5
+R6
+vSecondSharedMemory
+R1
+!s110 1583190768
+!i10b 1
+!s100 oAk@QW9K;^X>^JYQmHkcW1
+IKbaIin09]fBL:PjabKGzk1
+R2
+!s105 _2ndSharedMemory_sv_unit
+S1
+R0
+w1583190761
+82ndSharedMemory.sv
+F2ndSharedMemory.sv
+R3
+R4
+r1
+!s85 0
+31
+!s108 1583190767.000000
+!s107 2ndSharedMemory.sv|
+!s90 2ndSharedMemory.sv|
+!i113 0
+R5
+R6
+n@second@shared@memory

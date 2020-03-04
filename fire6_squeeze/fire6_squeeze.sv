@@ -9,7 +9,7 @@ module fire6_squeeze #(
 )
 (
 	input clk,
-	input rst,
+//	input rst,
 	input fire6_squeeze_en,
 	input [WIDTH-1:0] ifm,
 	input ram_feedback,
@@ -57,10 +57,10 @@ reg rom_clr_pulse;
 always @(posedge clk) clr_pulse <= rom_clr_pulse ;
 ///////
 ///////
-always @(posedge clk or negedge rst) begin
-	if(!rst)
+always @(posedge clk /*or negedge rst*/) begin
+	/*if(!rst)
 		weight_rom_address<= 0 ;
-	else if (rom_clr_pulse)
+	else*/ if (rom_clr_pulse)
 		weight_rom_address<= 0;
 	else if (fire6_squeeze_en) begin
 		weight_rom_address<= weight_rom_address+1;
@@ -74,12 +74,12 @@ end
 //GENERATION OF CLR PULSE///
 ////////////////////////////
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ;
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
+always @(posedge clk/* or negedge rst*/) begin
+	/*if(!rst) begin
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
-	else if (!fire6_squeeze_end && fire6_squeeze_en) begin
+	else */if (!fire6_squeeze_end && fire6_squeeze_en) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
@@ -97,14 +97,14 @@ end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
+reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
 genvar i ;
 generate for (i = 0 ; i< DSP_NO ; i++) begin
 	mac mac_i (
 		.clr(clr_pulse),
 		.clk(clk),
-		.rst(rst),
+	//	.rst(rst),
 		.pix(ifm),
 		.layer_en(layer_en_reg),
 		.mul_out(ofmw[i]),
@@ -120,6 +120,14 @@ always @(*) begin
 		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
 	end
 end
+initial begin
+weight_rom_address=0;
+ram_feedback_reg=1'b0;
+rom_clr_pulse=1'b0;
+clr_counter=0;
+fire6_squeeze_timer=0;
+fire6_squeeze_end=1'b0;
+end
 always@(posedge clk) begin
 	if(clr_pulse && fire6_squeeze_en && !fire6_squeeze_end) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
@@ -134,12 +142,12 @@ end
 //CHECK FOR LAYER END//////////
 ///////////////////////////////
 reg [$clog2(WOUT**2):0] fire6_squeeze_timer ;
-always @(posedge clk or negedge rst) begin
-	if (!rst) begin
+always @(posedge clk/* or negedge rst*/) begin
+	/*if (!rst) begin
 		fire6_squeeze_timer<= 0 ;
 		fire6_squeeze_end <= 1'b0 ;
 	end
-	else if (fire6_squeeze_timer == WOUT**2+1)
+	else */if (fire6_squeeze_timer == WOUT**2+1)
 		fire6_squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire6_squeeze_timer<= fire6_squeeze_timer+1 ;
@@ -147,11 +155,11 @@ end
 always @(posedge clk) begin
 	fire6_squeeze_sample <= clr_pulse ; 
 end
-reg ram_feedback_reg ; 
-always @(posedge clk or negedge rst) begin
-	if (!rst)
+(*dont_touch="yes"*)reg ram_feedback_reg ; 
+always @(posedge clk/* or negedge rst*/) begin
+	/*if (!rst)
 		ram_feedback_reg<= 1'b0 ; 
-	else if (ram_feedback)
+	else */if (ram_feedback)
 		ram_feedback_reg<= 1'b1 ;
 end
 assign fire6_squeeze_finish= !ram_feedback_reg && fire6_squeeze_end ; 

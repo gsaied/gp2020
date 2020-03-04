@@ -1,3 +1,0 @@
-#!/bin/bash
-find *.mem | grep -v bias | grep -v img | grep -v weights | while read LINE ; do rm -rf $LINE ; done
-

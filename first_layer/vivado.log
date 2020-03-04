@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Mar  2 00:59:45 2020
-# Process ID: 10717
+# Start of session at: Tue Mar  3 18:00:25 2020
+# Process ID: 14979
 # Current directory: /home/gsaied/Desktop/old_rtl/first_layer
 # Command line: vivado -mode tcl -source synth.tcl
 # Log file: /home/gsaied/Desktop/old_rtl/first_layer/vivado.log
@@ -12,16 +12,17 @@
 source synth.tcl
 # read_verilog -sv [ glob *.sv ] 
 # create_fileset -constrset constr
-# add_files strain_conv1.xdc -fileset constr 
-# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -constrset constr -directive AreaOptimized_high
-Command: synth_design -top conv1 -part xc7vx690t -flatten_hierarchy rebuilt -constrset constr -directive AreaOptimized_high
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top conv1 -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10725 
+INFO: Helper process launched with PID 14989 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1425.637 ; gain = 91.000 ; free physical = 1194 ; free virtual = 3836
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1424.457 ; gain = 69.000 ; free physical = 1138 ; free virtual = 5325
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'conv1' [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:10]
 	Parameter WOUT bound to: 128 - type: integer 
@@ -183,7 +184,7 @@ INFO: [Synth 8-3876] $readmem data file 'third_part.mem' is read successfully [/
 INFO: [Synth 8-6155] done synthesizing module 'wrapper_image' (4#1) [/home/gsaied/Desktop/old_rtl/first_layer/wrapper_image.sv:2]
 INFO: [Synth 8-6155] done synthesizing module 'conv1' (5#1) [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:10]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1594.457 ; gain = 259.820 ; free physical = 1101 ; free virtual = 3753
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1594.277 ; gain = 238.820 ; free physical = 1049 ; free virtual = 5240
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -196,42 +197,41 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1594.457 ; gain = 259.820 ; free physical = 1106 ; free virtual = 3758
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1594.277 ; gain = 238.820 ; free physical = 1054 ; free virtual = 5245
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1594.457 ; gain = 259.820 ; free physical = 1106 ; free virtual = 3758
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1594.277 ; gain = 238.820 ; free physical = 1054 ; free virtual = 5245
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc]
-CRITICAL WARNING: [Designutils 20-1307] Command 'keep_hierarchy' is not supported in the xdc constraint file. [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc:2]
-Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc]
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/temp.xdc]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/temp.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2089.684 ; gain = 0.000 ; free physical = 544 ; free virtual = 3249
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2088.832 ; gain = 0.000 ; free physical = 598 ; free virtual = 4789
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2089.684 ; gain = 0.000 ; free physical = 542 ; free virtual = 3247
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2089.684 ; gain = 0.000 ; free physical = 542 ; free virtual = 3247
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2088.832 ; gain = 0.000 ; free physical = 597 ; free virtual = 4788
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2088.832 ; gain = 0.000 ; free physical = 597 ; free virtual = 4788
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2089.684 ; gain = 755.047 ; free physical = 645 ; free virtual = 3354
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2088.832 ; gain = 733.375 ; free physical = 712 ; free virtual = 4895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx690tffg1157-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2089.684 ; gain = 755.047 ; free physical = 645 ; free virtual = 3354
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2088.832 ; gain = 733.375 ; free physical = 712 ; free virtual = 4895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2089.684 ; gain = 755.047 ; free physical = 648 ; free virtual = 3356
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2088.832 ; gain = 733.375 ; free physical = 706 ; free virtual = 4897
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5547] Trying to map ROM "first_part" into Block RAM due to explicit "ram_style" or "rom_style" specification
 INFO: [Synth 8-5547] Trying to map ROM "second_part" into Block RAM due to explicit "ram_style" or "rom_style" specification
@@ -241,7 +241,7 @@ INFO: [Synth 8-5546] ROM "row_end" won't be mapped to RAM because it is too spar
 INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "conv1_end" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 2105.699 ; gain = 771.062 ; free physical = 589 ; free virtual = 3291
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 2104.848 ; gain = 749.391 ; free physical = 655 ; free virtual = 4844
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -678,7 +678,7 @@ INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__11' (FD) to 'u
 INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__12' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
 INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__13' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 2137.723 ; gain = 803.086 ; free physical = 534 ; free virtual = 3265
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 2128.863 ; gain = 773.406 ; free physical = 611 ; free virtual = 4821
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -944,7 +944,7 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:03 . Memory (MB): peak = 2174.723 ; gain = 840.086 ; free physical = 339 ; free virtual = 3050
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 2173.863 ; gain = 818.406 ; free physical = 386 ; free virtual = 4607
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -965,7 +965,7 @@ INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__11' (FD) to 'u_1i_
 INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__12' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
 INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__13' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 2292.738 ; gain = 958.102 ; free physical = 263 ; free virtual = 2970
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 318 ; free virtual = 4539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1029,7 +1029,7 @@ INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_14 (implemented as
 INFO: [Synth 8-6837] The timing for the instance u_1/o1_reg_3_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:07 ; elapsed = 00:01:14 . Memory (MB): peak = 2292.738 ; gain = 958.102 ; free physical = 382 ; free virtual = 3089
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 395 ; free virtual = 4616
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1054,7 +1054,7 @@ INFO: [Synth 8-6064] Net img_rom_wire[15] is driving 960 big block pins (URAM, B
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:11 ; elapsed = 00:01:18 . Memory (MB): peak = 2292.738 ; gain = 958.102 ; free physical = 386 ; free virtual = 3102
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 396 ; free virtual = 4617
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1067,7 +1067,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:11 ; elapsed = 00:01:18 . Memory (MB): peak = 2292.738 ; gain = 958.102 ; free physical = 391 ; free virtual = 3102
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 396 ; free virtual = 4617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1079,25 +1079,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 2292.738 ; gain = 958.102 ; free physical = 389 ; free virtual = 3100
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 396 ; free virtual = 4617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 2292.738 ; gain = 958.102 ; free physical = 389 ; free virtual = 3100
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 396 ; free virtual = 4617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 2292.738 ; gain = 958.102 ; free physical = 389 ; free virtual = 3100
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 396 ; free virtual = 4617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 2292.738 ; gain = 958.102 ; free physical = 388 ; free virtual = 3098
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 397 ; free virtual = 4617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1113,89 +1113,86 @@ Report Cell Usage:
 +------+------------+------+
 |      |Cell        |Count |
 +------+------------+------+
-|1     |BUFG        |     1|
-|2     |CARRY4      |   538|
-|3     |DSP48E1     |    64|
-|4     |LUT1        |   490|
-|5     |LUT2        |    12|
-|6     |LUT3        |    29|
-|7     |LUT4        |    90|
-|8     |LUT5        |   884|
-|9     |LUT6        |   132|
-|10    |RAMB36E1    |     1|
-|11    |RAMB36E1_1  |     1|
-|12    |RAMB36E1_10 |     1|
-|13    |RAMB36E1_11 |     1|
-|14    |RAMB36E1_12 |     1|
-|15    |RAMB36E1_13 |     1|
-|16    |RAMB36E1_14 |     1|
-|17    |RAMB36E1_15 |     1|
-|18    |RAMB36E1_16 |     1|
-|19    |RAMB36E1_17 |     1|
-|20    |RAMB36E1_18 |     1|
-|21    |RAMB36E1_19 |     1|
-|22    |RAMB36E1_2  |     1|
-|23    |RAMB36E1_20 |     7|
-|24    |RAMB36E1_21 |     7|
-|25    |RAMB36E1_22 |     1|
-|26    |RAMB36E1_23 |     1|
-|27    |RAMB36E1_24 |     1|
-|28    |RAMB36E1_25 |     1|
-|29    |RAMB36E1_26 |     1|
-|30    |RAMB36E1_27 |     1|
-|31    |RAMB36E1_28 |     1|
-|32    |RAMB36E1_29 |     1|
-|33    |RAMB36E1_3  |     1|
-|34    |RAMB36E1_30 |     1|
-|35    |RAMB36E1_31 |     1|
-|36    |RAMB36E1_32 |     1|
-|37    |RAMB36E1_33 |     1|
-|38    |RAMB36E1_34 |     1|
-|39    |RAMB36E1_35 |     1|
-|40    |RAMB36E1_36 |     1|
-|41    |RAMB36E1_37 |     1|
-|42    |RAMB36E1_38 |     1|
-|43    |RAMB36E1_39 |     1|
-|44    |RAMB36E1_4  |     1|
-|45    |RAMB36E1_40 |     7|
-|46    |RAMB36E1_41 |     7|
-|47    |RAMB36E1_42 |     1|
-|48    |RAMB36E1_43 |     1|
-|49    |RAMB36E1_44 |     1|
-|50    |RAMB36E1_45 |     1|
-|51    |RAMB36E1_46 |     1|
-|52    |RAMB36E1_47 |     1|
-|53    |RAMB36E1_48 |     1|
-|54    |RAMB36E1_49 |     1|
-|55    |RAMB36E1_5  |     1|
-|56    |RAMB36E1_50 |     1|
-|57    |RAMB36E1_51 |     1|
-|58    |RAMB36E1_52 |     1|
-|59    |RAMB36E1_53 |     1|
-|60    |RAMB36E1_54 |     1|
-|61    |RAMB36E1_55 |     1|
-|62    |RAMB36E1_56 |     1|
-|63    |RAMB36E1_57 |     1|
-|64    |RAMB36E1_58 |     1|
-|65    |RAMB36E1_59 |     1|
-|66    |RAMB36E1_6  |     1|
-|67    |RAMB36E1_60 |     7|
-|68    |RAMB36E1_61 |     7|
-|69    |RAMB36E1_7  |     1|
-|70    |RAMB36E1_8  |     1|
-|71    |RAMB36E1_9  |     1|
-|72    |FDCE        |     8|
-|73    |FDRE        |  1204|
-|74    |FDSE        |     1|
-|75    |IBUF        |     4|
-|76    |OBUF        |  1026|
+|1     |CARRY4      |   538|
+|2     |DSP48E1     |    64|
+|3     |LUT1        |   490|
+|4     |LUT2        |    12|
+|5     |LUT3        |    29|
+|6     |LUT4        |    90|
+|7     |LUT5        |   884|
+|8     |LUT6        |   132|
+|9     |RAMB36E1    |     1|
+|10    |RAMB36E1_1  |     1|
+|11    |RAMB36E1_10 |     1|
+|12    |RAMB36E1_11 |     1|
+|13    |RAMB36E1_12 |     1|
+|14    |RAMB36E1_13 |     1|
+|15    |RAMB36E1_14 |     1|
+|16    |RAMB36E1_15 |     1|
+|17    |RAMB36E1_16 |     1|
+|18    |RAMB36E1_17 |     1|
+|19    |RAMB36E1_18 |     1|
+|20    |RAMB36E1_19 |     1|
+|21    |RAMB36E1_2  |     1|
+|22    |RAMB36E1_20 |     7|
+|23    |RAMB36E1_21 |     7|
+|24    |RAMB36E1_22 |     1|
+|25    |RAMB36E1_23 |     1|
+|26    |RAMB36E1_24 |     1|
+|27    |RAMB36E1_25 |     1|
+|28    |RAMB36E1_26 |     1|
+|29    |RAMB36E1_27 |     1|
+|30    |RAMB36E1_28 |     1|
+|31    |RAMB36E1_29 |     1|
+|32    |RAMB36E1_3  |     1|
+|33    |RAMB36E1_30 |     1|
+|34    |RAMB36E1_31 |     1|
+|35    |RAMB36E1_32 |     1|
+|36    |RAMB36E1_33 |     1|
+|37    |RAMB36E1_34 |     1|
+|38    |RAMB36E1_35 |     1|
+|39    |RAMB36E1_36 |     1|
+|40    |RAMB36E1_37 |     1|
+|41    |RAMB36E1_38 |     1|
+|42    |RAMB36E1_39 |     1|
+|43    |RAMB36E1_4  |     1|
+|44    |RAMB36E1_40 |     7|
+|45    |RAMB36E1_41 |     7|
+|46    |RAMB36E1_42 |     1|
+|47    |RAMB36E1_43 |     1|
+|48    |RAMB36E1_44 |     1|
+|49    |RAMB36E1_45 |     1|
+|50    |RAMB36E1_46 |     1|
+|51    |RAMB36E1_47 |     1|
+|52    |RAMB36E1_48 |     1|
+|53    |RAMB36E1_49 |     1|
+|54    |RAMB36E1_5  |     1|
+|55    |RAMB36E1_50 |     1|
+|56    |RAMB36E1_51 |     1|
+|57    |RAMB36E1_52 |     1|
+|58    |RAMB36E1_53 |     1|
+|59    |RAMB36E1_54 |     1|
+|60    |RAMB36E1_55 |     1|
+|61    |RAMB36E1_56 |     1|
+|62    |RAMB36E1_57 |     1|
+|63    |RAMB36E1_58 |     1|
+|64    |RAMB36E1_59 |     1|
+|65    |RAMB36E1_6  |     1|
+|66    |RAMB36E1_60 |     7|
+|67    |RAMB36E1_61 |     7|
+|68    |RAMB36E1_7  |     1|
+|69    |RAMB36E1_8  |     1|
+|70    |RAMB36E1_9  |     1|
+|71    |FDCE        |     8|
+|72    |FDRE        |  1204|
+|73    |FDSE        |     1|
 +------+------------+------+
 
 Report Instance Areas: 
 +------+----------------------+--------------+------+
 |      |Instance              |Module        |Cells |
 +------+----------------------+--------------+------+
-|1     |top                   |              |  4581|
+|1     |top                   |              |  3550|
 |2     |  \genblk1[0].mac_i   |conv_mac      |    27|
 |3     |  \genblk1[10].mac_i  |conv_mac_0    |    27|
 |4     |  \genblk1[11].mac_i  |conv_mac_1    |    26|
@@ -1263,39 +1260,48 @@ Report Instance Areas:
 |66    |  u_1                 |wrapper_image |   212|
 +------+----------------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 2292.738 ; gain = 958.102 ; free physical = 387 ; free virtual = 3098
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2291.879 ; gain = 936.422 ; free physical = 397 ; free virtual = 4617
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:57 ; elapsed = 00:01:03 . Memory (MB): peak = 2292.738 ; gain = 462.875 ; free physical = 446 ; free virtual = 3156
-Synthesis Optimization Complete : Time (s): cpu = 00:01:13 ; elapsed = 00:01:20 . Memory (MB): peak = 2292.746 ; gain = 958.102 ; free physical = 446 ; free virtual = 3156
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 2291.879 ; gain = 441.867 ; free physical = 462 ; free virtual = 4683
+Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 2291.887 ; gain = 936.422 ; free physical = 463 ; free virtual = 4684
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 700 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc]
-CRITICAL WARNING: [Designutils 20-1307] Command 'keep_hierarchy' is not supported in the xdc constraint file. [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc:2]
-Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/strain_conv1.xdc]
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/temp.xdc]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/first_layer/temp.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2292.746 ; gain = 0.000 ; free physical = 337 ; free virtual = 3053
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2291.887 ; gain = 0.000 ; free physical = 384 ; free virtual = 4605
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-300 Infos, 0 Warnings, 2 Critical Warnings and 0 Errors encountered.
+300 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 2292.746 ; gain = 978.559 ; free physical = 518 ; free virtual = 3234
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2291.887 ; gain = 944.426 ; free physical = 564 ; free virtual = 4785
 # report_utilization -file utiliziation.rpt
 # report_utilization -hierarchical -file hierarchical_utilization.rpt
-# report_timing -max_paths 50 -file timing.rpt
+# report_timing -file post_synth_timing.rpt
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Timing 38-78] ReportTimingParams: -max_paths 50 -nworst 1 -delay_type max -sort_by slack.
-report_timing: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2623.508 ; gain = 330.762 ; free physical = 168 ; free virtual = 2720
-# report_design_analysis -file design.rpt
-vi utiliziation.rpt
-WARNING: [Common 17-259] Unknown Tcl command 'vi utiliziation.rpt' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
-opt_design -directive ExploreArea
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2622.695 ; gain = 330.809 ; free physical = 137 ; free virtual = 4286
+# write_checkpoint -force temp_syn.dcp
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2622.695 ; gain = 0.000 ; free physical = 137 ; free virtual = 4286
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2663.898 ; gain = 0.000 ; free physical = 132 ; free virtual = 4285
+INFO: [Common 17-1381] The checkpoint '/home/gsaied/Desktop/old_rtl/first_layer/temp_syn.dcp' has been generated.
+# if {[get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]] < 0} {
+# puts "Found setup timing violations => running physical optimization"
+# report_timing -file slack.rpt
+# }
+Found setup timing violations => running physical optimization
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+# opt_design -directive ExploreArea
 Command: opt_design -directive ExploreArea
 INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: ExploreArea
 Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
@@ -1307,83 +1313,85 @@ INFO: [DRC 23-27] Running DRC with 4 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2672.523 ; gain = 43.016 ; free physical = 190 ; free virtual = 2702
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2670.859 ; gain = 4.996 ; free physical = 140 ; free virtual = 4282
 
 Starting Cache Timing Information Task
-Ending Cache Timing Information Task | Checksum: 112a3dc7e
+Ending Cache Timing Information Task | Checksum: 1b784d192
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2672.523 ; gain = 0.000 ; free physical = 186 ; free virtual = 2702
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2670.859 ; gain = 0.000 ; free physical = 140 ; free virtual = 4282
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 32 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 199fe84ce
+Phase 1 Retarget | Checksum: 1af4b60c6
 
-Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.42 . Memory (MB): peak = 2724.523 ; gain = 0.000 ; free physical = 171 ; free virtual = 2685
+Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.33 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 132 ; free virtual = 4236
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
-INFO: [Opt 31-1021] In phase Retarget, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 16f4df8ca
+Phase 2 Constant propagation | Checksum: c56b9e4f
 
-Time (s): cpu = 00:00:00.70 ; elapsed = 00:00:00.55 . Memory (MB): peak = 2724.523 ; gain = 0.000 ; free physical = 171 ; free virtual = 2685
+Time (s): cpu = 00:00:00.58 ; elapsed = 00:00:00.43 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 132 ; free virtual = 4236
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1a5d03e8b
+Phase 3 Sweep | Checksum: 1bacd208e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.90 . Memory (MB): peak = 2724.523 ; gain = 0.000 ; free physical = 166 ; free virtual = 2679
+Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.71 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 132 ; free virtual = 4236
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Sweep, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 1a5d03e8b
+Phase 4 BUFG optimization | Checksum: 1bacd208e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2724.523 ; gain = 0.000 ; free physical = 166 ; free virtual = 2679
+Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.73 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 132 ; free virtual = 4236
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: a5c2658b
+Phase 5 Shift Register Optimization | Checksum: a467164b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2724.523 ; gain = 0.000 ; free physical = 165 ; free virtual = 2678
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 131 ; free virtual = 4235
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 6 Constant propagation | Checksum: a5c2658b
+Phase 6 Constant propagation | Checksum: a467164b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2724.523 ; gain = 0.000 ; free physical = 165 ; free virtual = 2678
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 131 ; free virtual = 4236
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 7 Sweep
-Phase 7 Sweep | Checksum: a5c2658b
+Phase 7 Sweep | Checksum: a467164b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2724.523 ; gain = 0.000 ; free physical = 165 ; free virtual = 2678
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2721.859 ; gain = 0.000 ; free physical = 131 ; free virtual = 4236
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Sweep, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 8 Resynthesis
 INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
 INFO: [Opt 31-74] Optimized 2 modules.
 INFO: [Opt 31-75] Optimized module 'conv1'.
 INFO: [Opt 31-75] Optimized module 'wrapper_image'.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 8 Resynthesis | Checksum: 122db50a0
+Phase 8 Resynthesis | Checksum: f840fa2a
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 2732.352 ; gain = 7.828 ; free physical = 506 ; free virtual = 2663
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 2729.688 ; gain = 7.828 ; free physical = 484 ; free virtual = 4236
 INFO: [Opt 31-389] Phase Resynthesis created 338 cells and removed 446 cells
 INFO: [Opt 31-1021] In phase Resynthesis, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 9 Post Processing Netlist
-Phase 9 Post Processing Netlist | Checksum: 122db50a0
+Phase 9 Post Processing Netlist | Checksum: f840fa2a
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 2732.352 ; gain = 7.828 ; free physical = 506 ; free virtual = 2663
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 2729.688 ; gain = 7.828 ; free physical = 484 ; free virtual = 4236
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -1392,7 +1400,7 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |               1  |                                              2  |
+|  Retarget                     |               0  |               1  |                                              1  |
 |  Constant propagation         |               0  |               0  |                                              1  |
 |  Sweep                        |               0  |               0  |                                              2  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
@@ -1407,15 +1415,17 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2732.352 ; gain = 0.000 ; free physical = 506 ; free virtual = 2663
-Ending Logic Optimization Task | Checksum: 128435f96
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2729.688 ; gain = 0.000 ; free physical = 484 ; free virtual = 4236
+Ending Logic Optimization Task | Checksum: dcd1dd43
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 2732.352 ; gain = 7.828 ; free physical = 506 ; free virtual = 2663
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2729.688 ; gain = 7.828 ; free physical = 484 ; free virtual = 4236
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.683 | TNS=-1311.766 |
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.564 | TNS=-1082.136 |
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
@@ -1429,224 +1439,28 @@ INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 64 newly gated: 34 Total Ports: 196
 Number of Flops added for Enable Generation: 4
 
-Ending PowerOpt Patch Enables Task | Checksum: b1b6fc6a
+Ending PowerOpt Patch Enables Task | Checksum: 10527057d
 
-Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.44 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 445 ; free virtual = 2623
-Ending Power Optimization Task | Checksum: b1b6fc6a
+Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.39 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 461 ; free virtual = 4215
+Ending Power Optimization Task | Checksum: 10527057d
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 2966.629 ; gain = 234.277 ; free physical = 454 ; free virtual = 2631
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2951.961 ; gain = 222.273 ; free physical = 472 ; free virtual = 4225
 
 Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 10527057d
 
-Starting Logic Optimization Task
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: b220b2d7
-
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 440 ; free virtual = 2622
-Ending Final Cleanup Task | Checksum: b220b2d7
-
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 440 ; free virtual = 2622
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4225
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 441 ; free virtual = 2622
-Ending Netlist Obfuscation Task | Checksum: b220b2d7
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4225
+Ending Netlist Obfuscation Task | Checksum: c33ac33e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 441 ; free virtual = 2622
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4225
 INFO: [Common 17-83] Releasing license: Implementation
-39 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+38 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:26 . Memory (MB): peak = 2966.629 ; gain = 338.121 ; free physical = 440 ; free virtual = 2622
-0
-report_utilization 
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Mon Mar  2 01:02:20 2020
-| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
-| Command      : report_utilization
-| Design       : conv1
-| Device       : 7vx690tffg1157-3
-| Design State : Synthesized
-------------------------------------------------------------------------------------
-
-Utilization Design Information
-
-Table of Contents
------------------
-1. Slice Logic
-1.1 Summary of Registers by Type
-2. Memory
-3. DSP
-4. IO and GT Specific
-5. Clocking
-6. Specific Feature
-7. Primitives
-8. Black Boxes
-9. Instantiated Netlists
-
-1. Slice Logic
---------------
-
-+-------------------------+------+-------+-----------+-------+
-|        Site Type        | Used | Fixed | Available | Util% |
-+-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 1594 |     0 |    433200 |  0.37 |
-|   LUT as Logic          | 1594 |     0 |    433200 |  0.37 |
-|   LUT as Memory         |    0 |     0 |    174200 |  0.00 |
-| Slice Registers         | 1217 |     0 |    866400 |  0.14 |
-|   Register as Flip Flop | 1217 |     0 |    866400 |  0.14 |
-|   Register as Latch     |    0 |     0 |    866400 |  0.00 |
-| F7 Muxes                |    0 |     0 |    216600 |  0.00 |
-| F8 Muxes                |    0 |     0 |    108300 |  0.00 |
-+-------------------------+------+-------+-----------+-------+
-* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
-
-
-1.1 Summary of Registers by Type
---------------------------------
-
-+-------+--------------+-------------+--------------+
-| Total | Clock Enable | Synchronous | Asynchronous |
-+-------+--------------+-------------+--------------+
-| 0     |            _ |           - |            - |
-| 0     |            _ |           - |          Set |
-| 0     |            _ |           - |        Reset |
-| 0     |            _ |         Set |            - |
-| 0     |            _ |       Reset |            - |
-| 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 12    |          Yes |           - |        Reset |
-| 1     |          Yes |         Set |            - |
-| 1204  |          Yes |       Reset |            - |
-+-------+--------------+-------------+--------------+
-
-
-2. Memory
----------
-
-+-------------------+------+-------+-----------+-------+
-|     Site Type     | Used | Fixed | Available | Util% |
-+-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |   98 |     0 |      1470 |  6.67 |
-|   RAMB36/FIFO*    |   98 |     0 |      1470 |  6.67 |
-|     RAMB36E1 only |   98 |       |           |       |
-|   RAMB18          |    0 |     0 |      2940 |  0.00 |
-+-------------------+------+-------+-----------+-------+
-* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
-
-
-3. DSP
-------
-
-+----------------+------+-------+-----------+-------+
-|    Site Type   | Used | Fixed | Available | Util% |
-+----------------+------+-------+-----------+-------+
-| DSPs           |   64 |     0 |      3600 |  1.78 |
-|   DSP48E1 only |   64 |       |           |       |
-+----------------+------+-------+-----------+-------+
-
-
-4. IO and GT Specific
----------------------
-
-+-----------------------------+------+-------+-----------+--------+
-|          Site Type          | Used | Fixed | Available |  Util% |
-+-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  | 1030 |     0 |       600 | 171.67 |
-| Bonded IPADs                |    0 |     0 |        62 |   0.00 |
-| Bonded OPADs                |    0 |     0 |        40 |   0.00 |
-| PHY_CONTROL                 |    0 |     0 |        20 |   0.00 |
-| PHASER_REF                  |    0 |     0 |        20 |   0.00 |
-| OUT_FIFO                    |    0 |     0 |        80 |   0.00 |
-| IN_FIFO                     |    0 |     0 |        80 |   0.00 |
-| IDELAYCTRL                  |    0 |     0 |        20 |   0.00 |
-| IBUFDS                      |    0 |     0 |       576 |   0.00 |
-| GTHE2_CHANNEL               |    0 |     0 |        20 |   0.00 |
-| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |   0.00 |
-| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |   0.00 |
-| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
-| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
-| IBUFDS_GTE2                 |    0 |     0 |        10 |   0.00 |
-| ILOGIC                      |    0 |     0 |       600 |   0.00 |
-| OLOGIC                      |    0 |     0 |       600 |   0.00 |
-+-----------------------------+------+-------+-----------+--------+
-
-
-5. Clocking
------------
-
-+------------+------+-------+-----------+-------+
-|  Site Type | Used | Fixed | Available | Util% |
-+------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
-| BUFIO      |    0 |     0 |        80 |  0.00 |
-| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
-| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
-| BUFMRCE    |    0 |     0 |        40 |  0.00 |
-| BUFHCE     |    0 |     0 |       240 |  0.00 |
-| BUFR       |    0 |     0 |        80 |  0.00 |
-+------------+------+-------+-----------+-------+
-
-
-6. Specific Feature
--------------------
-
-+-------------+------+-------+-----------+-------+
-|  Site Type  | Used | Fixed | Available | Util% |
-+-------------+------+-------+-----------+-------+
-| BSCANE2     |    0 |     0 |         4 |  0.00 |
-| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
-| DNA_PORT    |    0 |     0 |         1 |  0.00 |
-| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
-| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
-| ICAPE2      |    0 |     0 |         2 |  0.00 |
-| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
-| STARTUPE2   |    0 |     0 |         1 |  0.00 |
-| XADC        |    0 |     0 |         1 |  0.00 |
-+-------------+------+-------+-----------+-------+
-
-
-7. Primitives
--------------
-
-+----------+------+---------------------+
-| Ref Name | Used | Functional Category |
-+----------+------+---------------------+
-| FDRE     | 1204 |        Flop & Latch |
-| OBUF     | 1026 |                  IO |
-| LUT5     |  894 |                 LUT |
-| CARRY4   |  538 |          CarryLogic |
-| LUT1     |  489 |                 LUT |
-| RAMB36E1 |   98 |        Block Memory |
-| LUT3     |   91 |                 LUT |
-| LUT2     |   77 |                 LUT |
-| DSP48E1  |   64 |    Block Arithmetic |
-| LUT4     |   23 |                 LUT |
-| LUT6     |   20 |                 LUT |
-| FDCE     |   12 |        Flop & Latch |
-| IBUF     |    4 |                  IO |
-| FDSE     |    1 |        Flop & Latch |
-| BUFG     |    1 |               Clock |
-+----------+------+---------------------+
-
-
-8. Black Boxes
---------------
-
-+----------+------+
-| Ref Name | Used |
-+----------+------+
-
-
-9. Instantiated Netlists
-------------------------
-
-+----------+------+
-| Ref Name | Used |
-+----------+------+
-
-
-opt_design -merge_equivalent_drivers 
+opt_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:21 . Memory (MB): peak = 2951.961 ; gain = 286.102 ; free physical = 472 ; free virtual = 4225
+# opt_design -merge_equivalent_drivers
 Command: opt_design -merge_equivalent_drivers
 Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
@@ -1657,22 +1471,22 @@ INFO: [DRC 23-27] Running DRC with 4 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 376 ; free virtual = 2620
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 471 ; free virtual = 4225
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 1 Merging equivalent drivers
-Phase 1 Merging equivalent drivers | Checksum: 1027bf3b6
+Phase 1 Merging equivalent drivers | Checksum: 137ec959b
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 369 ; free virtual = 2623
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 480 ; free virtual = 4226
 INFO: [Opt 31-389] Phase Merging equivalent drivers created 0 cells and removed 183 cells
 INFO: [Opt 31-1021] In phase Merging equivalent drivers, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Post Processing Netlist
-Phase 2 Post Processing Netlist | Checksum: 1027bf3b6
+Phase 2 Post Processing Netlist | Checksum: 137ec959b
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 362 ; free virtual = 2624
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4226
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -1686,25 +1500,31 @@ Opt_design Change Summary
 ------------------------------------------------------------------------------------------------------------------------
 
 
-Ending Logic Optimization Task | Checksum: 10e0a35b4
+Ending Logic Optimization Task | Checksum: 15e839db5
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 362 ; free virtual = 2624
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4226
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 362 ; free virtual = 2623
-Ending Netlist Obfuscation Task | Checksum: 10e0a35b4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4226
+Ending Netlist Obfuscation Task | Checksum: 15e839db5
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 362 ; free virtual = 2624
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 472 ; free virtual = 4226
 INFO: [Common 17-83] Releasing license: Implementation
 9 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2966.629 ; gain = 0.000 ; free physical = 362 ; free virtual = 2624
-0
+opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2951.961 ; gain = 0.000 ; free physical = 474 ; free virtual = 4228
+# report_utilization -file post_utiliziation.rpt
+# report_utilization -hierarchical -file post_hierarchical_utilization.rpt
+# report_timing -file post_opt_timing.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
 report_utilization 
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Mon Mar  2 01:03:20 2020
+| Date         : Tue Mar  3 18:02:38 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization
 | Design       : conv1
@@ -1792,27 +1612,27 @@ Table of Contents
 4. IO and GT Specific
 ---------------------
 
-+-----------------------------+------+-------+-----------+--------+
-|          Site Type          | Used | Fixed | Available |  Util% |
-+-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  | 1030 |     0 |       600 | 171.67 |
-| Bonded IPADs                |    0 |     0 |        62 |   0.00 |
-| Bonded OPADs                |    0 |     0 |        40 |   0.00 |
-| PHY_CONTROL                 |    0 |     0 |        20 |   0.00 |
-| PHASER_REF                  |    0 |     0 |        20 |   0.00 |
-| OUT_FIFO                    |    0 |     0 |        80 |   0.00 |
-| IN_FIFO                     |    0 |     0 |        80 |   0.00 |
-| IDELAYCTRL                  |    0 |     0 |        20 |   0.00 |
-| IBUFDS                      |    0 |     0 |       576 |   0.00 |
-| GTHE2_CHANNEL               |    0 |     0 |        20 |   0.00 |
-| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |   0.00 |
-| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |   0.00 |
-| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
-| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
-| IBUFDS_GTE2                 |    0 |     0 |        10 |   0.00 |
-| ILOGIC                      |    0 |     0 |       600 |   0.00 |
-| OLOGIC                      |    0 |     0 |       600 |   0.00 |
-+-----------------------------+------+-------+-----------+--------+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |    0 |     0 |       600 |  0.00 |
+| Bonded IPADs                |    0 |     0 |        62 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        40 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |        20 |  0.00 |
+| PHASER_REF                  |    0 |     0 |        20 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        80 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        80 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |        20 |  0.00 |
+| IBUFDS                      |    0 |     0 |       576 |  0.00 |
+| GTHE2_CHANNEL               |    0 |     0 |        20 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        10 |  0.00 |
+| ILOGIC                      |    0 |     0 |       600 |  0.00 |
+| OLOGIC                      |    0 |     0 |       600 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
 
 
 5. Clocking
@@ -1821,7 +1641,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
 | BUFIO      |    0 |     0 |        80 |  0.00 |
 | MMCME2_ADV |    0 |     0 |        20 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
@@ -1856,7 +1676,6 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     | 1100 |        Flop & Latch |
-| OBUF     | 1026 |                  IO |
 | LUT5     |  894 |                 LUT |
 | CARRY4   |  538 |          CarryLogic |
 | LUT1     |  482 |                 LUT |
@@ -1867,9 +1686,7 @@ Table of Contents
 | LUT4     |   21 |                 LUT |
 | LUT6     |   20 |                 LUT |
 | FDCE     |   11 |        Flop & Latch |
-| IBUF     |    4 |                  IO |
 | FDSE     |    1 |        Flop & Latch |
-| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 
@@ -1889,7 +1706,5 @@ Table of Contents
 +----------+------+
 
 
-vi vivado.log 
-WARNING: [Common 17-259] Unknown Tcl command 'vi vivado.log' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Mar  2 01:04:02 2020...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  3 18:02:44 2020...

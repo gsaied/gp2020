@@ -1,5 +1,4 @@
 module mac (
-	input rst,
 	input clk,
 	input clr,
 	input layer_en,
@@ -9,8 +8,9 @@ module mac (
 );
 wire [31:0] intermed ;
 	assign intermed = pix*ker + mul_out ; 
+	initial mul_out = 32'b0 ;
 	always @(posedge clk ) begin
-		if (!rst || clr)
+		if (clr)
 			mul_out <= 32'b0 ;
 		else if (layer_en) 
 			mul_out <= intermed ; 

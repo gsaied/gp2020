@@ -1,0 +1,93 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Mar  3 18:02:22 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_utilization -hierarchical -file post_hierarchical_utilization.rpt
+| Design       : conv1
+| Device       : 7vx690tffg1157-3
+| Design State : Synthesized
+------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------------+---------------+------------+------------+---------+------+------+--------+--------+--------------+
+|       Instance      |     Module    | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++---------------------+---------------+------------+------------+---------+------+------+--------+--------+--------------+
+| conv1               |         (top) |       1516 |       1516 |       0 |    0 | 1112 |     98 |      0 |           64 |
+|   (conv1)           |         (top) |        178 |        178 |       0 |    0 | 1107 |      0 |      0 |            0 |
+|   genblk1[0].mac_i  |      conv_mac |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[10].mac_i |    conv_mac_0 |         18 |         18 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[11].mac_i |    conv_mac_1 |         17 |         17 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[12].mac_i |    conv_mac_2 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[13].mac_i |    conv_mac_3 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[14].mac_i |    conv_mac_4 |         40 |         40 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[15].mac_i |    conv_mac_5 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[16].mac_i |    conv_mac_6 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[17].mac_i |    conv_mac_7 |         15 |         15 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[18].mac_i |    conv_mac_8 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[19].mac_i |    conv_mac_9 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[1].mac_i  |   conv_mac_10 |         17 |         17 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[20].mac_i |   conv_mac_11 |         21 |         21 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[21].mac_i |   conv_mac_12 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[22].mac_i |   conv_mac_13 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[23].mac_i |   conv_mac_14 |         22 |         22 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[24].mac_i |   conv_mac_15 |         15 |         15 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[25].mac_i |   conv_mac_16 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[26].mac_i |   conv_mac_17 |         18 |         18 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[27].mac_i |   conv_mac_18 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[28].mac_i |   conv_mac_19 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[29].mac_i |   conv_mac_20 |         17 |         17 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[2].mac_i  |   conv_mac_21 |         21 |         21 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[30].mac_i |   conv_mac_22 |         22 |         22 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[31].mac_i |   conv_mac_23 |         17 |         17 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[32].mac_i |   conv_mac_24 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[33].mac_i |   conv_mac_25 |         15 |         15 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[34].mac_i |   conv_mac_26 |         42 |         42 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[35].mac_i |   conv_mac_27 |         18 |         18 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[36].mac_i |   conv_mac_28 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[37].mac_i |   conv_mac_29 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[38].mac_i |   conv_mac_30 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[39].mac_i |   conv_mac_31 |         42 |         42 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[3].mac_i  |   conv_mac_32 |         15 |         15 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[40].mac_i |   conv_mac_33 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[41].mac_i |   conv_mac_34 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[42].mac_i |   conv_mac_35 |         21 |         21 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[43].mac_i |   conv_mac_36 |         18 |         18 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[44].mac_i |   conv_mac_37 |         18 |         18 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[45].mac_i |   conv_mac_38 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[46].mac_i |   conv_mac_39 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[47].mac_i |   conv_mac_40 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[48].mac_i |   conv_mac_41 |         13 |         13 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[49].mac_i |   conv_mac_42 |         40 |         40 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[4].mac_i  |   conv_mac_43 |         14 |         14 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[50].mac_i |   conv_mac_44 |         18 |         18 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[51].mac_i |   conv_mac_45 |         12 |         12 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[52].mac_i |   conv_mac_46 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[53].mac_i |   conv_mac_47 |         21 |         21 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[54].mac_i |   conv_mac_48 |         40 |         40 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[55].mac_i |   conv_mac_49 |         17 |         17 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[56].mac_i |   conv_mac_50 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[57].mac_i |   conv_mac_51 |         18 |         18 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[58].mac_i |   conv_mac_52 |         22 |         22 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[59].mac_i |   conv_mac_53 |         14 |         14 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[5].mac_i  |   conv_mac_54 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[60].mac_i |   conv_mac_55 |         42 |         42 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[61].mac_i |   conv_mac_56 |         18 |         18 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[62].mac_i |   conv_mac_57 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[63].mac_i |   conv_mac_58 |         17 |         17 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[6].mac_i  |   conv_mac_59 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[7].mac_i  |   conv_mac_60 |         38 |         38 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[8].mac_i  |   conv_mac_61 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[9].mac_i  |   conv_mac_62 |         14 |         14 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   u_1               | wrapper_image |         19 |         19 |       0 |    0 |    5 |     98 |      0 |            0 |
++---------------------+---------------+------------+------------+---------+------+------+--------+--------+--------------+
+
+

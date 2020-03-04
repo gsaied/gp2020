@@ -1,4 +1,3 @@
-/* verilator lint_off COMBDLY */
 /*
 * FIRE4 && FIRE5 EXPAND 1*1   IMPLEMENTATION
 * INPUT SIZE: 32*32*32
@@ -18,7 +17,7 @@ module fire4_5_expand_1 #(
 )
 (
 	input clk,
-	input rst,
+//	input rst,
 	input fire4_expand_1_en,
 	input fire5_expand_1_en,
 	input [15:0] ifm_4,
@@ -71,11 +70,24 @@ end
 reg clr_pulse ; 
 reg rom_clr_pulse;
 ///////
+always@(posedge clk) clr_pulse<=rom_clr_pulse;
 ///////
-always @(posedge clk or negedge rst) begin
-	if(!rst)
+initial begin
+	weight_rom_address<=0;
+	rom_clr_pulse<=0;
+	clr_counter<=0;
+	ram_feedback_reg_4<=1'b0;
+	ram_feedback_reg_5<=1'b0;
+	fire4_expand_1_timer<=0;
+	fire5_expand_1_timer<=0;
+	fire4_expand_1_end<=1'b0;
+	fire5_expand_1_end<=1'b0;
+
+end
+always @(posedge clk/* or negedge rst/*/) begin
+	/*if(!rst)
 		weight_rom_address<= 0 ; 
-	else if (rom_clr_pulse || rst_gen)
+	else*/ if (rom_clr_pulse || rst_gen)
 		weight_rom_address<= 0;
 	else if (fire4_expand_1_en || fire5_expand_1_en)begin
 		weight_rom_address<= weight_rom_address+1;
@@ -106,30 +118,29 @@ end
 //GENERATION OF CLR PULSE///
 ////////////////////////////
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ; 
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
+always @(posedge clk /*or negedge rst*/) begin
+	/*if(!rst) begin
 		clr_pulse <= 1'b0 ; 
 		rom_clr_pulse <= 1'b0 ; 
 		clr_counter <= 0 ;
 	end
-	else if (!(fire4_expand_1_end && fire5_expand_1_end) && (fire5_expand_1_en || fire4_expand_1_en) && !rst_gen) begin
+	else*/ if (!(fire4_expand_1_end && fire5_expand_1_end) && (fire5_expand_1_en || fire4_expand_1_en) && !rst_gen) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ; 
 			clr_counter <= clr_counter+1 ;
 		end
 		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
 			clr_counter <= 0 ;
-			clr_pulse<= 1'b1 ;
+			
 			rom_clr_pulse <= 1'b0 ; 
 		end
 		else begin
-			clr_pulse <= 1'b0 ; 
+			
 			clr_counter <= clr_counter +1;
 			rom_clr_pulse <= 1'b0 ; 
 		end
 	end
 	else if (rst_gen) begin
-		clr_pulse <= 1'b0 ; 
 		rom_clr_pulse <= 1'b0 ; 
 		clr_counter <= 0 ;
 	end
@@ -137,14 +148,14 @@ end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
+reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
 genvar i ; 
 generate for (i = 0 ; i< CHOUT ; i++) begin
 	mac mac_i (
 		.clr(clr_pulse || rst_gen),
 		.clk(clk),
-		.rst(rst),
+	//	.rst(rst),
 		.layer_en(layer_en_reg),
 		.pix(ifm),
 		.mul_out(ofmw[i]),
@@ -184,14 +195,14 @@ end
 ///////////////////////////////
 reg [$clog2(WOUT**2):0] fire4_expand_1_timer ;
 reg [$clog2(WOUT**2):0] fire5_expand_1_timer ;
-always @(posedge clk or negedge rst) begin
-	if (!rst) begin
+always @(posedge clk/* or negedge rst*/) begin
+	/*if (!rst) begin
 		fire4_expand_1_timer<= 0 ;
 		fire5_expand_1_timer<= 0 ;
 		fire4_expand_1_end <= 1'b0 ; 
 		fire5_expand_1_end <= 1'b0 ; 
 	end
-	else if (fire4_expand_1_en) begin
+	else*/ if (fire4_expand_1_en) begin
 		if (fire4_expand_1_timer == WOUT**2+1)
 			fire4_expand_1_end <= 1'b1 ;
 		else if (clr_pulse)
@@ -208,14 +219,14 @@ always @(posedge clk) begin
 	fire4_expand_1_sample <= clr_pulse ; 
 end 
 
-reg ram_feedback_reg_4 ; 
-reg ram_feedback_reg_5 ; 
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
+(*dont_touch="yes"*)reg ram_feedback_reg_4 ; 
+(*dont_touch="yes"*)reg ram_feedback_reg_5 ; 
+always @(posedge clk/* or negedge rst*/)begin
+	/*if(!rst) begin
 		ram_feedback_reg_4<=1'b0 ;
 		ram_feedback_reg_5<=1'b0 ;
 	end
-	else if (ram_feedback_4) 
+	else*/ if (ram_feedback_4) 
 		ram_feedback_reg_4<= 1'b1 ;
 	else if (ram_feedback_5) 
 		ram_feedback_reg_5<= 1'b1 ;

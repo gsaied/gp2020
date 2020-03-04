@@ -1,4 +1,3 @@
-
 module fire2_squeeze #(
 	parameter WOUT = 64,
 	parameter DSP_NO = 16 ,
@@ -9,7 +8,7 @@ module fire2_squeeze #(
 )
 (
 	input clk,
-	input rst,
+//	input rst,
 	input fire2_squeeze_en,
 	input [WIDTH-1:0] ifm,
 	input ram_feedback,
@@ -39,13 +38,21 @@ reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
 ///////////////////////////////////
 reg clr_pulse ;
 reg rom_clr_pulse;
+initial begin 
+weight_rom_address =0;
+ram_feedback_reg = 1'b0;
+rom_clr_pulse =1'b0;
+clr_counter=0;
+fire2_squeeze_timer =0;
+fire2_squeeze_end =1'b0;
+end 
 always @(posedge clk) clr_pulse <= rom_clr_pulse ; 
 ///////
 ///////
-always @(posedge clk or negedge rst) begin
-	if(!rst)
+always @(posedge clk/* or negedge rst*/) begin
+	/*if(!rst)
 		weight_rom_address<= 0 ;
-	else if (rom_clr_pulse)
+	else */if (rom_clr_pulse)
 		weight_rom_address<= 0;
 	else if (fire2_squeeze_en) begin
 		weight_rom_address<= weight_rom_address+1;
@@ -62,12 +69,12 @@ end
 //GENERATION OF CLR PULSE///
 ////////////////////////////
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ;
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
+always @(posedge clk /*or negedge rst*/) begin
+	/*if(!rst) begin
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
-	else if (!fire2_squeeze_end && fire2_squeeze_en) begin
+	else*/ if (!fire2_squeeze_end && fire2_squeeze_en) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
@@ -92,7 +99,6 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 	mac mac_i (
 		.clr(clr_pulse),
 		.clk(clk),
-		.rst(rst),
 		.layer_en(1),
 		.pix(ifm),
 		.mul_out(ofmw[i]),
@@ -122,12 +128,12 @@ end
 //CHECK FOR LAYER END//////////
 ///////////////////////////////
 reg [$clog2(WOUT**2):0] fire2_squeeze_timer ;
-always @(posedge clk or negedge rst) begin
-	if (!rst) begin
+always @(posedge clk /*or negedge rst*/) begin
+	/*if (!rst) begin
 		fire2_squeeze_timer<= 0 ;
 		fire2_squeeze_end <= 1'b0 ;
 	end
-	else if (fire2_squeeze_timer == WOUT**2+1)
+	else*/ if (fire2_squeeze_timer == WOUT**2+1)
 		fire2_squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire2_squeeze_timer<= fire2_squeeze_timer+1 ;
@@ -135,11 +141,12 @@ end
 always @(posedge clk) begin
 	fire2_squeeze_sample <= clr_pulse ; 
 end
+(* dont_touch ="true"*)
 reg ram_feedback_reg ; 
-always @(posedge clk or negedge rst) begin
-	if (!rst)
+always @(posedge clk /*or negedge rst*/) begin
+	/*if (!rst)
 		ram_feedback_reg<= 1'b0 ; 
-	else if (ram_feedback)
+	else */if (ram_feedback)
 		ram_feedback_reg<= 1'b1 ;
 end
 assign fire2_squeeze_finish= !ram_feedback_reg && fire2_squeeze_end ; 

@@ -54,8 +54,8 @@ reg clr_pulse ;
 reg rom_clr_pulse;
 ///////
 ///////
-always @(posedge clk or negedge rst) begin
-	if(!rst)
+always @(posedge clk or posedge rst) begin
+	if(rst)
 		weight_rom_address<= 0 ;
 	else if (rom_clr_pulse)
 		weight_rom_address<= 0;
@@ -75,8 +75,8 @@ end
 //GENERATION OF CLR PULSE///
 ////////////////////////////
 reg [\$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ;
-always @(posedge clk or negedge rst) begin
-	if(!rst) begin
+always @(posedge clk or posedge rst) begin
+	if(rst) begin
 		clr_pulse <= 1'b0 ;
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
@@ -138,8 +138,8 @@ end
 //CHECK FOR LAYER END//////////
 ///////////////////////////////
 reg [\$clog2(WOUT**2):0] "$layer_name"_timer ;
-always @(posedge clk or negedge rst) begin
-	if (!rst) begin
+always @(posedge clk or posedge rst) begin
+	if (rst) begin
 		"$layer_name"_timer<= 0 ;
 		"$layer_name"_end <= 1'b0 ;
 	end
@@ -152,8 +152,8 @@ always @(posedge clk) begin
 	"$layer_name"_sample <= clr_pulse ; 
 end
 reg ram_feedback_reg ; 
-always @(posedge clk or negedge rst) begin
-	if (!rst)
+always @(posedge clk or posedge rst) begin
+	if (rst)
 		ram_feedback_reg<= 1'b0 ; 
 	else if (ram_feedback)
 		ram_feedback_reg<= 1'b1 ;
