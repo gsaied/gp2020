@@ -69,11 +69,11 @@ always @(posedge clk /*or negedge rst*/) begin
 		clr_counter <= 0 ;
 	end
 	else */if (!fire8_expand1_end && fire8_expand1_en) begin
-		if(clr_counter > KERNEL_DIM**2*CHIN-2 ) begin
+		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
 		end
-		else if(clr_counter > KERNEL_DIM**2*CHIN-1) begin
+		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
 			clr_counter <= 0 ;
 			rom_clr_pulse <= 1'b0 ;
 		end

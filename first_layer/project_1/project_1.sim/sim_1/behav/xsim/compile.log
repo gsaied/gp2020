@@ -1,0 +1,15 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/first_layer/biasing.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module biasing_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/first_layer/conv_mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/first_layer/rom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_array_layer_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/first_layer/wrapper_image.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wrapper_image
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1
+WARNING: [VRFC 10-3380] identifier 'row_end' is used before its declaration [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:62]
+WARNING: [VRFC 10-3380] identifier 'conv1_timer' is used before its declaration [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:63]
+WARNING: [VRFC 10-3380] identifier 'img_addr_counter' is used before its declaration [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:67]
+WARNING: [VRFC 10-3380] identifier 'img_rom_address' is used before its declaration [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:68]
+WARNING: [VRFC 10-3380] identifier 'ref_address' is used before its declaration [/home/gsaied/Desktop/old_rtl/first_layer/conv1.sv:69]

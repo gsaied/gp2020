@@ -19,7 +19,7 @@ parameter CHOUT = 64
 )       
 	(
 	input clk,
-	input rst,
+	//input rst,
 	input conv1_en,
 	input ram_feedback,
 	output reg conv1_sample,
@@ -59,6 +59,7 @@ always @(posedge clk) clr_pulse<= rom_clr_pulse ;
 ///////
 initial begin
 	weight_rom_address<= 5'b0 ; 
+	row_end <= 0 ; 
 	conv1_timer<= 0 ;
 	conv1_end <= 1'b0 ; 
 	clr_counter<= 5'b0 ; 
@@ -92,10 +93,10 @@ always @(posedge clk) begin
 		img_addr_counter <= img_addr_counter+1 ;
 end
 reg [7:0] row_end ;
-always @(posedge clk or negedge rst) begin
-	if (!rst)
+always @(posedge clk/* or posedge rst*/) begin
+	/*if (!rst)
 		row_end <= 0 ; 
-	else if (rom_clr_pulse) 
+	else */if (rom_clr_pulse) 
 		row_end <= row_end +1 ; 
 	else if (row_end > 127)
 		row_end <= 0 ; 
@@ -134,11 +135,11 @@ wrapper_image u_1 (
 // counter to generate clock_divider
 always @(posedge clk) begin
 	if (!conv1_end && conv1_en) begin
-		if (clr_counter > KERNEL_DIM**2*CHIN-2) begin
+		if (clr_counter == KERNEL_DIM**2*CHIN-1) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter<= clr_counter +1 ;
 		end
-		else if (clr_counter > KERNEL_DIM**2*CHIN-1 ) begin //after 10 cycles the new output is good to go. New inputs to be fetched
+		else if (  clr_counter == KERNEL_DIM**2*CHIN ) begin //after 10 cycles the new output is good to go. New inputs to be fetched
 			clr_counter<= 5'b0 ; 
 			rom_clr_pulse<= 1'b0 ;
 		end
@@ -172,6 +173,7 @@ generate for (i = 0 ; i < CHOUT ; i++) begin
 		.clr(clr_pulse),
 		.clk(clk),
 		.pix(img_rom_wire),
+		.layer_en(conv1_en),
 		.mul_out(ofmw[i]),
 		.ker(kernel_regs[i])
 	);

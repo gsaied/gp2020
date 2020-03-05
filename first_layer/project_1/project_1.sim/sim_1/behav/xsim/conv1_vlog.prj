@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../biasing.sv" \
+"../../../../../conv_mac.sv" \
+"../../../../../rom.sv" \
+"../../../../../wrapper_image.sv" \
+"../../../../../conv1.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

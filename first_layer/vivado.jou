@@ -2,16 +2,76 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Mar  4 05:34:00 2020
-# Process ID: 7398
+# Start of session at: Thu Mar  5 04:15:56 2020
+# Process ID: 6916
 # Current directory: /home/gsaied/Desktop/old_rtl/first_layer
-# Command line: vivado -mode tcl -source synth.tcl
+# Command line: vivado -project project_1/project_1.xpr
 # Log file: /home/gsaied/Desktop/old_rtl/first_layer/vivado.log
 # Journal file: /home/gsaied/Desktop/old_rtl/first_layer/vivado.jou
 #-----------------------------------------------------------
-source synth.tcl
-report_utilization 
-vi slack.rpt 
-report_timing
-place_design 
-report_timing -hold 
+start_gui
+open_project project_1/project_1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source conv1.tcl
+add_force {/conv1/clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 100 ns
+run 100 ns
+add_force {/conv1/conv1_en} -radix hex {1 0ns}
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+relaunch_sim
+add_force {/conv1/clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 1000 ns
+add_force {/conv1/conv1_en} -radix hex {1 0ns}
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+relaunch_sim
+add_force clk {1 0ns} {0 50ns} -repeat_every 100ns
+run 100 ns
+run 100 ns
+add_force conv1_en 1
+run 100
+run 2700
+run 100
+run 100
+run 100
+run 100
+current_wave_config {Untitled 1}
+add_wave {{/conv1/\genblk1[0].mac_i }} 
+relaunch_sim
+add_force clk {1 0ns} {0 50ns} -repeat_every 100ns
+run 100
+run 100
+run 100
+relaunch_sim
+add_force clk {1 0ns} {0 50ns} -repeat_every 100ns
+run 100
+run 100
+relaunch_sim
+add_force clk {1 0ns} {0 50ns} -repeat_every 100ns
+run 100
+run 100
+run 100
+relaunch_sim
+add_force clk {0 0ns} {0 50ns} -repeat_every 100ns
+add_force clk {0 1ns} {0 50ns} -repeat_every 100ns
+add_force {/conv1/clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 1000 ns
+add_force {/conv1/conv1_en} -radix hex {1 0ns}
+relaunch_sim
+add_force clk {1 0ns} {0 50ns} -repeat_every 100ns
+run 100
+run 1000 ns
+relaunch_sim
+add_force clk {1 0ns} {0 50ns} -repeat_every 100ns
+run 100
+run 100
+add_force conv1_en {1 0ns}
+run 100
+run 2900
+close_sim
