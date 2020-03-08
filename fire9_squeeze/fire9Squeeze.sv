@@ -108,7 +108,7 @@ always @(*) begin
 	end
 end
 always@(posedge clk) begin
-	if(clr_pulse && fire9Squeeze_en && !fire9Squeeze_end) begin
+	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 )
 				ofm[i] <= 16'b0 ;
@@ -122,7 +122,7 @@ end
 ///////////////////////////////
 reg [$clog2(WOUT**2):0] fire9Squeeze_timer ;
 always @(posedge clk) begin
-	if (fire9Squeeze_timer == WOUT**2+1)
+	if (fire9Squeeze_timer > WOUT**2)
 		fire9Squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire9Squeeze_timer<= fire9Squeeze_timer+1 ;

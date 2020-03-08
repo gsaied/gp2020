@@ -1,0 +1,1 @@
+-wto "a95b9d9222624ea3b6a44f11a2b8cc22" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "rom_fire6_expand3_behav" "xil_defaultlib.rom_fire6_expand3" "xil_defaultlib.glbl" -log "elaborate.log" 

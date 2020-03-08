@@ -158,7 +158,7 @@ always @(*) begin
 	end
 end
 always@(posedge clk) begin
-	if(!conv1_end && conv1_en && clr_pulse) begin
+	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 ) 
 				ofm[i] <= 16'b0 ;

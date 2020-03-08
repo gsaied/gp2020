@@ -125,7 +125,7 @@ always @(*) begin
 	end
 end
 always@(posedge clk) begin
-	if(clr_pulse && "$layer_name"_en && !"$layer_name"_end) begin
+	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 )
 				ofm[i] <= 16'b0 ;
@@ -143,7 +143,7 @@ always @(posedge clk or posedge rst) begin
 		"$layer_name"_timer<= 0 ;
 		"$layer_name"_end <= 1'b0 ;
 	end
-	else if ("$layer_name"_timer == WOUT**2+1)
+	else if ("$layer_name"_timer > WOUT**2)
 		"$layer_name"_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		"$layer_name"_timer<= "$layer_name"_timer+1 ;

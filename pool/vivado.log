@@ -1,0 +1,2121 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Mar  6 19:47:31 2020
+# Process ID: 17144
+# Current directory: /home/gsaied/Desktop/old_rtl/pool
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/pool/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/pool/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top acc_array -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17159 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1441.645 ; gain = 91.000 ; free physical = 124 ; free virtual = 5223
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'acc_array' [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:1]
+	Parameter TOTAL_ACC bound to: 512 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'acc' [/home/gsaied/Desktop/old_rtl/pool/half_acc.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'acc' (1#1) [/home/gsaied/Desktop/old_rtl/pool/half_acc.sv:1]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+WARNING: [Synth 8-350] instance 'u_i' of module 'acc' requires 6 connections, but only 5 given [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:27]
+INFO: [Common 17-14] Message 'Synth 8-350' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'acc_array' (2#1) [/home/gsaied/Desktop/old_rtl/pool/acc_array.sv:1]
+WARNING: [Synth 8-3331] design acc has unconnected port pool_en
+WARNING: [Synth 8-3331] design acc_array has unconnected port conv10_1_end
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1554.395 ; gain = 203.750 ; free physical = 200 ; free virtual = 5196
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1554.395 ; gain = 203.750 ; free physical = 212 ; free virtual = 5208
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1554.395 ; gain = 203.750 ; free physical = 212 ; free virtual = 5208
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/pool/temp.xdc]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/pool/temp.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2124.637 ; gain = 0.000 ; free physical = 135 ; free virtual = 4677
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2128.637 ; gain = 0.000 ; free physical = 131 ; free virtual = 4673
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2128.637 ; gain = 4.000 ; free physical = 131 ; free virtual = 4673
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2128.637 ; gain = 777.992 ; free physical = 311 ; free virtual = 4853
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1157-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2128.637 ; gain = 777.992 ; free physical = 311 ; free virtual = 4853
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2128.637 ; gain = 777.992 ; free physical = 313 ; free virtual = 4855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 2128.637 ; gain = 777.992 ; free physical = 289 ; free virtual = 4834
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |acc_array__GB0 |           1|     29604|
+|2     |acc_array__GB1 |           1|      6104|
+|3     |acc_array__GB2 |           1|      7001|
+|4     |acc_array__GB3 |           1|      8958|
+|5     |acc_array__GB4 |           1|     11450|
+|6     |acc_array__GB5 |           1|     14414|
+|7     |acc_array__GB6 |           1|     17738|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1025  
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1024  
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module acc_array 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1025  
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1024  
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design acc_array has unconnected port conv10_1_end
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[979][9]' (FDE) to 'i_0/pool_out_reg[979][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[568][9]' (FDE) to 'i_0/pool_out_reg[568][10]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[467][9]' (FDE) to 'i_0/pool_out_reg[467][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[56][9]' (FDE) to 'i_0/pool_out_reg[56][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1019][10]' (FDE) to 'i_0/pool_out_reg[1019][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1018][10]' (FDE) to 'i_0/pool_out_reg[1018][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1017][10]' (FDE) to 'i_0/pool_out_reg[1017][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1013][10]' (FDE) to 'i_0/pool_out_reg[1013][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1012][10]' (FDE) to 'i_0/pool_out_reg[1012][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1011][10]' (FDE) to 'i_0/pool_out_reg[1011][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1010][10]' (FDE) to 'i_0/pool_out_reg[1010][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1008][10]' (FDE) to 'i_0/pool_out_reg[1008][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1007][10]' (FDE) to 'i_0/pool_out_reg[1007][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1005][10]' (FDE) to 'i_0/pool_out_reg[1005][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1004][10]' (FDE) to 'i_0/pool_out_reg[1004][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1002][10]' (FDE) to 'i_0/pool_out_reg[1002][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1001][10]' (FDE) to 'i_0/pool_out_reg[1001][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[1000][10]' (FDE) to 'i_0/pool_out_reg[1000][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[999][10]' (FDE) to 'i_0/pool_out_reg[999][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[997][10]' (FDE) to 'i_0/pool_out_reg[997][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[996][10]' (FDE) to 'i_0/pool_out_reg[996][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[995][10]' (FDE) to 'i_0/pool_out_reg[995][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[992][10]' (FDE) to 'i_0/pool_out_reg[992][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[991][10]' (FDE) to 'i_0/pool_out_reg[991][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[990][10]' (FDE) to 'i_0/pool_out_reg[990][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[989][10]' (FDE) to 'i_0/pool_out_reg[989][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[988][10]' (FDE) to 'i_0/pool_out_reg[988][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[987][10]' (FDE) to 'i_0/pool_out_reg[987][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[986][10]' (FDE) to 'i_0/pool_out_reg[986][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[985][10]' (FDE) to 'i_0/pool_out_reg[985][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[984][10]' (FDE) to 'i_0/pool_out_reg[984][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[981][10]' (FDE) to 'i_0/pool_out_reg[981][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[980][10]' (FDE) to 'i_0/pool_out_reg[980][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[979][10]' (FDE) to 'i_0/pool_out_reg[979][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[977][10]' (FDE) to 'i_0/pool_out_reg[977][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[976][10]' (FDE) to 'i_0/pool_out_reg[976][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[975][10]' (FDE) to 'i_0/pool_out_reg[975][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[969][10]' (FDE) to 'i_0/pool_out_reg[969][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[968][10]' (FDE) to 'i_0/pool_out_reg[968][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[964][10]' (FDE) to 'i_0/pool_out_reg[964][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[960][10]' (FDE) to 'i_0/pool_out_reg[960][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[958][10]' (FDE) to 'i_0/pool_out_reg[958][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[957][10]' (FDE) to 'i_0/pool_out_reg[957][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[956][10]' (FDE) to 'i_0/pool_out_reg[956][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[955][10]' (FDE) to 'i_0/pool_out_reg[955][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[951][10]' (FDE) to 'i_0/pool_out_reg[951][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[950][10]' (FDE) to 'i_0/pool_out_reg[950][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[948][10]' (FDE) to 'i_0/pool_out_reg[948][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[947][10]' (FDE) to 'i_0/pool_out_reg[947][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[945][10]' (FDE) to 'i_0/pool_out_reg[945][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[944][10]' (FDE) to 'i_0/pool_out_reg[944][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[940][10]' (FDE) to 'i_0/pool_out_reg[940][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[938][10]' (FDE) to 'i_0/pool_out_reg[938][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[937][10]' (FDE) to 'i_0/pool_out_reg[937][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[934][10]' (FDE) to 'i_0/pool_out_reg[934][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[932][10]' (FDE) to 'i_0/pool_out_reg[932][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[931][10]' (FDE) to 'i_0/pool_out_reg[931][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[930][10]' (FDE) to 'i_0/pool_out_reg[930][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[928][10]' (FDE) to 'i_0/pool_out_reg[928][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[927][10]' (FDE) to 'i_0/pool_out_reg[927][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[926][10]' (FDE) to 'i_0/pool_out_reg[926][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[923][10]' (FDE) to 'i_0/pool_out_reg[923][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[922][10]' (FDE) to 'i_0/pool_out_reg[922][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[921][10]' (FDE) to 'i_0/pool_out_reg[921][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[920][10]' (FDE) to 'i_0/pool_out_reg[920][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[917][10]' (FDE) to 'i_0/pool_out_reg[917][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[916][10]' (FDE) to 'i_0/pool_out_reg[916][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[915][10]' (FDE) to 'i_0/pool_out_reg[915][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[914][10]' (FDE) to 'i_0/pool_out_reg[914][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[913][10]' (FDE) to 'i_0/pool_out_reg[913][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[912][10]' (FDE) to 'i_0/pool_out_reg[912][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[911][10]' (FDE) to 'i_0/pool_out_reg[911][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[910][10]' (FDE) to 'i_0/pool_out_reg[910][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[909][10]' (FDE) to 'i_0/pool_out_reg[909][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[908][10]' (FDE) to 'i_0/pool_out_reg[908][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[907][10]' (FDE) to 'i_0/pool_out_reg[907][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[905][10]' (FDE) to 'i_0/pool_out_reg[905][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[904][10]' (FDE) to 'i_0/pool_out_reg[904][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[903][10]' (FDE) to 'i_0/pool_out_reg[903][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[902][10]' (FDE) to 'i_0/pool_out_reg[902][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[901][10]' (FDE) to 'i_0/pool_out_reg[901][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[899][10]' (FDE) to 'i_0/pool_out_reg[899][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[898][10]' (FDE) to 'i_0/pool_out_reg[898][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[897][10]' (FDE) to 'i_0/pool_out_reg[897][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[896][10]' (FDE) to 'i_0/pool_out_reg[896][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[895][10]' (FDE) to 'i_0/pool_out_reg[895][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[894][10]' (FDE) to 'i_0/pool_out_reg[894][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[892][10]' (FDE) to 'i_0/pool_out_reg[892][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[891][10]' (FDE) to 'i_0/pool_out_reg[891][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[890][10]' (FDE) to 'i_0/pool_out_reg[890][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[889][10]' (FDE) to 'i_0/pool_out_reg[889][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[888][10]' (FDE) to 'i_0/pool_out_reg[888][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[887][10]' (FDE) to 'i_0/pool_out_reg[887][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[885][10]' (FDE) to 'i_0/pool_out_reg[885][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[880][10]' (FDE) to 'i_0/pool_out_reg[880][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[879][10]' (FDE) to 'i_0/pool_out_reg[879][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[878][10]' (FDE) to 'i_0/pool_out_reg[878][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[877][10]' (FDE) to 'i_0/pool_out_reg[877][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[875][10]' (FDE) to 'i_0/pool_out_reg[875][15]'
+INFO: [Synth 8-3886] merging instance 'i_0/pool_out_reg[874][10]' (FDE) to 'i_0/pool_out_reg[874][15]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:02 ; elapsed = 00:05:08 . Memory (MB): peak = 2402.707 ; gain = 1052.062 ; free physical = 535 ; free virtual = 4628
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |acc_array__GB0 |           1|     18814|
+|2     |acc_array__GB1 |           1|      3848|
+|3     |acc_array__GB2 |           1|      4530|
+|4     |acc_array__GB3 |           1|      6108|
+|5     |acc_array__GB4 |           1|      7954|
+|6     |acc_array__GB5 |           1|     10044|
+|7     |acc_array__GB6 |           1|     12228|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:09 ; elapsed = 00:05:15 . Memory (MB): peak = 2402.707 ; gain = 1052.062 ; free physical = 410 ; free virtual = 4515
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:09:22 ; elapsed = 00:09:30 . Memory (MB): peak = 2803.121 ; gain = 1452.477 ; free physical = 605 ; free virtual = 4229
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |acc_array__GB3 |           1|      6108|
+|2     |acc_array__GB5 |           1|     10044|
+|3     |acc_array__GB6 |           1|     12228|
+|4     |acc_array_GT0  |           1|     35146|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:09:39 ; elapsed = 00:09:48 . Memory (MB): peak = 2803.121 ; gain = 1452.477 ; free physical = 1817 ; free virtual = 5445
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:09:42 ; elapsed = 00:09:50 . Memory (MB): peak = 2803.121 ; gain = 1452.477 ; free physical = 1808 ; free virtual = 5443
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:09:42 ; elapsed = 00:09:50 . Memory (MB): peak = 2803.121 ; gain = 1452.477 ; free physical = 1811 ; free virtual = 5447
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:09:53 ; elapsed = 00:10:01 . Memory (MB): peak = 2803.121 ; gain = 1452.477 ; free physical = 1812 ; free virtual = 5444
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:09:53 ; elapsed = 00:10:02 . Memory (MB): peak = 2803.121 ; gain = 1452.477 ; free physical = 1804 ; free virtual = 5444
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:09:54 ; elapsed = 00:10:02 . Memory (MB): peak = 2803.121 ; gain = 1452.477 ; free physical = 1804 ; free virtual = 5445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:09:54 ; elapsed = 00:10:02 . Memory (MB): peak = 2803.121 ; gain = 1452.477 ; free physical = 1804 ; free virtual = 5445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |  2048|
+|2     |LUT1   |    23|
+|3     |LUT2   |    28|
+|4     |LUT3   |  1093|
+|5     |LUT4   |  8204|
+|6     |LUT5   |     2|
+|7     |LUT6   |  2732|
+|8     |MUXF7  |  1360|
+|9     |MUXF8  |   680|
+|10    |FDRE   | 18518|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------+--------+------+
+|      |Instance              |Module  |Cells |
++------+----------------------+--------+------+
+|1     |top                   |        | 34688|
+|2     |  \half_acc[0].u_i    |acc     |    36|
+|3     |  \half_acc[102].u_i  |acc_2   |    36|
+|4     |  \half_acc[105].u_i  |acc_5   |    36|
+|5     |  \half_acc[10].u_i   |acc_10  |    36|
+|6     |  \half_acc[111].u_i  |acc_12  |    36|
+|7     |  \half_acc[115].u_i  |acc_16  |    36|
+|8     |  \half_acc[128].u_i  |acc_30  |    36|
+|9     |  \half_acc[136].u_i  |acc_39  |    36|
+|10    |  \half_acc[157].u_i  |acc_62  |    36|
+|11    |  \half_acc[103].u_i  |acc_3   |    36|
+|12    |  \half_acc[114].u_i  |acc_15  |    36|
+|13    |  \half_acc[116].u_i  |acc_17  |    36|
+|14    |  \half_acc[117].u_i  |acc_18  |    36|
+|15    |  \half_acc[122].u_i  |acc_24  |    36|
+|16    |  \half_acc[124].u_i  |acc_26  |    36|
+|17    |  \half_acc[126].u_i  |acc_28  |    36|
+|18    |  \half_acc[129].u_i  |acc_31  |    36|
+|19    |  \half_acc[137].u_i  |acc_40  |    36|
+|20    |  \half_acc[13].u_i   |acc_43  |    36|
+|21    |  \half_acc[141].u_i  |acc_45  |    36|
+|22    |  \half_acc[143].u_i  |acc_47  |    36|
+|23    |  \half_acc[148].u_i  |acc_52  |    36|
+|24    |  \half_acc[152].u_i  |acc_57  |    36|
+|25    |  \half_acc[154].u_i  |acc_59  |    36|
+|26    |  \half_acc[159].u_i  |acc_64  |    36|
+|27    |  \half_acc[160].u_i  |acc_66  |    36|
+|28    |  \half_acc[163].u_i  |acc_69  |    36|
+|29    |  \half_acc[167].u_i  |acc_73  |    36|
+|30    |  \half_acc[172].u_i  |acc_79  |    36|
+|31    |  \half_acc[179].u_i  |acc_86  |    36|
+|32    |  \half_acc[186].u_i  |acc_94  |    36|
+|33    |  \half_acc[190].u_i  |acc_99  |    36|
+|34    |  \half_acc[193].u_i  |acc_102 |    36|
+|35    |  \half_acc[198].u_i  |acc_107 |    36|
+|36    |  \half_acc[19].u_i   |acc_109 |    36|
+|37    |  \half_acc[210].u_i  |acc_122 |    36|
+|38    |  \half_acc[218].u_i  |acc_130 |    36|
+|39    |  \half_acc[225].u_i  |acc_138 |    36|
+|40    |  \half_acc[227].u_i  |acc_140 |    36|
+|41    |  \half_acc[230].u_i  |acc_144 |    36|
+|42    |  \half_acc[233].u_i  |acc_147 |    36|
+|43    |  \half_acc[234].u_i  |acc_148 |    36|
+|44    |  \half_acc[238].u_i  |acc_152 |    36|
+|45    |  \half_acc[23].u_i   |acc_154 |    36|
+|46    |  \half_acc[245].u_i  |acc_160 |    36|
+|47    |  \half_acc[24].u_i   |acc_165 |    36|
+|48    |  \half_acc[251].u_i  |acc_167 |    36|
+|49    |  \half_acc[259].u_i  |acc_175 |    36|
+|50    |  \half_acc[260].u_i  |acc_177 |    36|
+|51    |  \half_acc[262].u_i  |acc_179 |    36|
+|52    |  \half_acc[263].u_i  |acc_180 |    36|
+|53    |  \half_acc[268].u_i  |acc_185 |    36|
+|54    |  \half_acc[273].u_i  |acc_191 |    36|
+|55    |  \half_acc[275].u_i  |acc_193 |    36|
+|56    |  \half_acc[276].u_i  |acc_194 |    36|
+|57    |  \half_acc[281].u_i  |acc_200 |    36|
+|58    |  \half_acc[285].u_i  |acc_204 |    36|
+|59    |  \half_acc[286].u_i  |acc_205 |    36|
+|60    |  \half_acc[294].u_i  |acc_214 |    36|
+|61    |  \half_acc[295].u_i  |acc_215 |    36|
+|62    |  \half_acc[299].u_i  |acc_219 |    36|
+|63    |  \half_acc[301].u_i  |acc_223 |    36|
+|64    |  \half_acc[302].u_i  |acc_224 |    36|
+|65    |  \half_acc[306].u_i  |acc_228 |    36|
+|66    |  \half_acc[307].u_i  |acc_229 |    36|
+|67    |  \half_acc[308].u_i  |acc_230 |    36|
+|68    |  \half_acc[100].u_i  |acc_0   |    36|
+|69    |  \half_acc[104].u_i  |acc_4   |    36|
+|70    |  \half_acc[108].u_i  |acc_8   |    36|
+|71    |  \half_acc[109].u_i  |acc_9   |    36|
+|72    |  \half_acc[110].u_i  |acc_11  |    36|
+|73    |  \half_acc[112].u_i  |acc_13  |    36|
+|74    |  \half_acc[113].u_i  |acc_14  |    36|
+|75    |  \half_acc[123].u_i  |acc_25  |    36|
+|76    |  \half_acc[12].u_i   |acc_32  |    36|
+|77    |  \half_acc[130].u_i  |acc_33  |    36|
+|78    |  \half_acc[132].u_i  |acc_35  |    36|
+|79    |  \half_acc[133].u_i  |acc_36  |    36|
+|80    |  \half_acc[138].u_i  |acc_41  |    36|
+|81    |  \half_acc[139].u_i  |acc_42  |    36|
+|82    |  \half_acc[150].u_i  |acc_55  |    36|
+|83    |  \half_acc[153].u_i  |acc_58  |    36|
+|84    |  \half_acc[156].u_i  |acc_61  |    36|
+|85    |  \half_acc[158].u_i  |acc_63  |    36|
+|86    |  \half_acc[15].u_i   |acc_65  |    36|
+|87    |  \half_acc[168].u_i  |acc_74  |    36|
+|88    |  \half_acc[16].u_i   |acc_76  |    36|
+|89    |  \half_acc[176].u_i  |acc_83  |    36|
+|90    |  \half_acc[182].u_i  |acc_90  |    36|
+|91    |  \half_acc[183].u_i  |acc_91  |    36|
+|92    |  \half_acc[187].u_i  |acc_95  |    36|
+|93    |  \half_acc[189].u_i  |acc_97  |    36|
+|94    |  \half_acc[18].u_i   |acc_98  |    36|
+|95    |  \half_acc[191].u_i  |acc_100 |    36|
+|96    |  \half_acc[192].u_i  |acc_101 |    36|
+|97    |  \half_acc[196].u_i  |acc_105 |    36|
+|98    |  \half_acc[199].u_i  |acc_108 |    36|
+|99    |  \half_acc[1].u_i    |acc_110 |    36|
+|100   |  \half_acc[202].u_i  |acc_113 |    36|
+|101   |  \half_acc[208].u_i  |acc_119 |    36|
+|102   |  \half_acc[209].u_i  |acc_120 |    36|
+|103   |  \half_acc[212].u_i  |acc_124 |    36|
+|104   |  \half_acc[214].u_i  |acc_126 |    36|
+|105   |  \half_acc[231].u_i  |acc_145 |    36|
+|106   |  \half_acc[232].u_i  |acc_146 |    36|
+|107   |  \half_acc[241].u_i  |acc_156 |    36|
+|108   |  \half_acc[242].u_i  |acc_157 |    36|
+|109   |  \half_acc[243].u_i  |acc_158 |    36|
+|110   |  \half_acc[244].u_i  |acc_159 |    36|
+|111   |  \half_acc[246].u_i  |acc_161 |    36|
+|112   |  \half_acc[249].u_i  |acc_164 |    36|
+|113   |  \half_acc[250].u_i  |acc_166 |    36|
+|114   |  \half_acc[252].u_i  |acc_168 |    36|
+|115   |  \half_acc[253].u_i  |acc_169 |    36|
+|116   |  \half_acc[256].u_i  |acc_172 |    36|
+|117   |  \half_acc[264].u_i  |acc_181 |    36|
+|118   |  \half_acc[266].u_i  |acc_183 |    36|
+|119   |  \half_acc[267].u_i  |acc_184 |    36|
+|120   |  \half_acc[269].u_i  |acc_186 |    36|
+|121   |  \half_acc[272].u_i  |acc_190 |    36|
+|122   |  \half_acc[283].u_i  |acc_202 |    36|
+|123   |  \half_acc[284].u_i  |acc_203 |    36|
+|124   |  \half_acc[292].u_i  |acc_212 |    36|
+|125   |  \half_acc[296].u_i  |acc_216 |    36|
+|126   |  \half_acc[297].u_i  |acc_217 |    36|
+|127   |  \half_acc[298].u_i  |acc_218 |    36|
+|128   |  \half_acc[300].u_i  |acc_222 |    36|
+|129   |  \half_acc[303].u_i  |acc_225 |    36|
+|130   |  \half_acc[304].u_i  |acc_226 |    36|
+|131   |  \half_acc[309].u_i  |acc_231 |    36|
+|132   |  \half_acc[310].u_i  |acc_233 |    36|
+|133   |  \half_acc[311].u_i  |acc_234 |    36|
+|134   |  \half_acc[312].u_i  |acc_235 |    36|
+|135   |  \half_acc[313].u_i  |acc_236 |    36|
+|136   |  \half_acc[101].u_i  |acc_1   |    36|
+|137   |  \half_acc[106].u_i  |acc_6   |    36|
+|138   |  \half_acc[107].u_i  |acc_7   |    36|
+|139   |  \half_acc[118].u_i  |acc_19  |    51|
+|140   |  \half_acc[119].u_i  |acc_20  |    36|
+|141   |  \half_acc[11].u_i   |acc_21  |    51|
+|142   |  \half_acc[120].u_i  |acc_22  |    36|
+|143   |  \half_acc[121].u_i  |acc_23  |    36|
+|144   |  \half_acc[125].u_i  |acc_27  |    36|
+|145   |  \half_acc[127].u_i  |acc_29  |    36|
+|146   |  \half_acc[131].u_i  |acc_34  |    36|
+|147   |  \half_acc[134].u_i  |acc_37  |    51|
+|148   |  \half_acc[135].u_i  |acc_38  |    51|
+|149   |  \half_acc[140].u_i  |acc_44  |    51|
+|150   |  \half_acc[142].u_i  |acc_46  |    36|
+|151   |  \half_acc[144].u_i  |acc_48  |    36|
+|152   |  \half_acc[145].u_i  |acc_49  |    36|
+|153   |  \half_acc[146].u_i  |acc_50  |    36|
+|154   |  \half_acc[147].u_i  |acc_51  |    36|
+|155   |  \half_acc[149].u_i  |acc_53  |    36|
+|156   |  \half_acc[14].u_i   |acc_54  |    51|
+|157   |  \half_acc[151].u_i  |acc_56  |    36|
+|158   |  \half_acc[155].u_i  |acc_60  |    36|
+|159   |  \half_acc[161].u_i  |acc_67  |    36|
+|160   |  \half_acc[162].u_i  |acc_68  |    36|
+|161   |  \half_acc[164].u_i  |acc_70  |    36|
+|162   |  \half_acc[165].u_i  |acc_71  |    36|
+|163   |  \half_acc[166].u_i  |acc_72  |    36|
+|164   |  \half_acc[169].u_i  |acc_75  |    36|
+|165   |  \half_acc[170].u_i  |acc_77  |    36|
+|166   |  \half_acc[171].u_i  |acc_78  |    36|
+|167   |  \half_acc[173].u_i  |acc_80  |    36|
+|168   |  \half_acc[174].u_i  |acc_81  |    36|
+|169   |  \half_acc[175].u_i  |acc_82  |    36|
+|170   |  \half_acc[177].u_i  |acc_84  |    36|
+|171   |  \half_acc[178].u_i  |acc_85  |    51|
+|172   |  \half_acc[17].u_i   |acc_87  |    51|
+|173   |  \half_acc[180].u_i  |acc_88  |    51|
+|174   |  \half_acc[181].u_i  |acc_89  |    51|
+|175   |  \half_acc[184].u_i  |acc_92  |    51|
+|176   |  \half_acc[185].u_i  |acc_93  |    51|
+|177   |  \half_acc[188].u_i  |acc_96  |    51|
+|178   |  \half_acc[194].u_i  |acc_103 |    51|
+|179   |  \half_acc[195].u_i  |acc_104 |    36|
+|180   |  \half_acc[197].u_i  |acc_106 |    36|
+|181   |  \half_acc[200].u_i  |acc_111 |    51|
+|182   |  \half_acc[201].u_i  |acc_112 |    36|
+|183   |  \half_acc[203].u_i  |acc_114 |    36|
+|184   |  \half_acc[204].u_i  |acc_115 |    36|
+|185   |  \half_acc[205].u_i  |acc_116 |    36|
+|186   |  \half_acc[206].u_i  |acc_117 |    36|
+|187   |  \half_acc[207].u_i  |acc_118 |    51|
+|188   |  \half_acc[20].u_i   |acc_121 |    36|
+|189   |  \half_acc[211].u_i  |acc_123 |    36|
+|190   |  \half_acc[213].u_i  |acc_125 |    51|
+|191   |  \half_acc[215].u_i  |acc_127 |    36|
+|192   |  \half_acc[216].u_i  |acc_128 |    36|
+|193   |  \half_acc[217].u_i  |acc_129 |    36|
+|194   |  \half_acc[219].u_i  |acc_131 |    51|
+|195   |  \half_acc[21].u_i   |acc_132 |    36|
+|196   |  \half_acc[220].u_i  |acc_133 |    51|
+|197   |  \half_acc[221].u_i  |acc_134 |    36|
+|198   |  \half_acc[222].u_i  |acc_135 |    36|
+|199   |  \half_acc[223].u_i  |acc_136 |    36|
+|200   |  \half_acc[224].u_i  |acc_137 |    36|
+|201   |  \half_acc[226].u_i  |acc_139 |    36|
+|202   |  \half_acc[228].u_i  |acc_141 |    51|
+|203   |  \half_acc[229].u_i  |acc_142 |    36|
+|204   |  \half_acc[22].u_i   |acc_143 |    51|
+|205   |  \half_acc[235].u_i  |acc_149 |    51|
+|206   |  \half_acc[236].u_i  |acc_150 |    36|
+|207   |  \half_acc[237].u_i  |acc_151 |    52|
+|208   |  \half_acc[239].u_i  |acc_153 |    36|
+|209   |  \half_acc[240].u_i  |acc_155 |    36|
+|210   |  \half_acc[247].u_i  |acc_162 |    36|
+|211   |  \half_acc[248].u_i  |acc_163 |    36|
+|212   |  \half_acc[254].u_i  |acc_170 |    36|
+|213   |  \half_acc[255].u_i  |acc_171 |    36|
+|214   |  \half_acc[257].u_i  |acc_173 |    36|
+|215   |  \half_acc[258].u_i  |acc_174 |    36|
+|216   |  \half_acc[25].u_i   |acc_176 |    36|
+|217   |  \half_acc[261].u_i  |acc_178 |    36|
+|218   |  \half_acc[265].u_i  |acc_182 |    36|
+|219   |  \half_acc[26].u_i   |acc_187 |    36|
+|220   |  \half_acc[270].u_i  |acc_188 |    51|
+|221   |  \half_acc[271].u_i  |acc_189 |    36|
+|222   |  \half_acc[274].u_i  |acc_192 |    51|
+|223   |  \half_acc[277].u_i  |acc_195 |    36|
+|224   |  \half_acc[278].u_i  |acc_196 |    36|
+|225   |  \half_acc[279].u_i  |acc_197 |    51|
+|226   |  \half_acc[27].u_i   |acc_198 |    36|
+|227   |  \half_acc[280].u_i  |acc_199 |    36|
+|228   |  \half_acc[282].u_i  |acc_201 |    36|
+|229   |  \half_acc[287].u_i  |acc_206 |    36|
+|230   |  \half_acc[288].u_i  |acc_207 |    51|
+|231   |  \half_acc[289].u_i  |acc_208 |    36|
+|232   |  \half_acc[28].u_i   |acc_209 |    36|
+|233   |  \half_acc[290].u_i  |acc_210 |    36|
+|234   |  \half_acc[291].u_i  |acc_211 |    36|
+|235   |  \half_acc[293].u_i  |acc_213 |    36|
+|236   |  \half_acc[29].u_i   |acc_220 |    51|
+|237   |  \half_acc[2].u_i    |acc_221 |    36|
+|238   |  \half_acc[305].u_i  |acc_227 |    36|
+|239   |  \half_acc[30].u_i   |acc_232 |    36|
+|240   |  \half_acc[314].u_i  |acc_237 |    51|
+|241   |  \half_acc[315].u_i  |acc_238 |    36|
+|242   |  \half_acc[316].u_i  |acc_239 |    51|
+|243   |  \half_acc[317].u_i  |acc_240 |    51|
+|244   |  \half_acc[318].u_i  |acc_241 |    51|
+|245   |  \half_acc[319].u_i  |acc_242 |    36|
+|246   |  \half_acc[31].u_i   |acc_243 |    36|
+|247   |  \half_acc[320].u_i  |acc_244 |    36|
+|248   |  \half_acc[321].u_i  |acc_245 |    51|
+|249   |  \half_acc[322].u_i  |acc_246 |    51|
+|250   |  \half_acc[323].u_i  |acc_247 |    36|
+|251   |  \half_acc[324].u_i  |acc_248 |    36|
+|252   |  \half_acc[325].u_i  |acc_249 |    36|
+|253   |  \half_acc[326].u_i  |acc_250 |    36|
+|254   |  \half_acc[327].u_i  |acc_251 |    51|
+|255   |  \half_acc[328].u_i  |acc_252 |    36|
+|256   |  \half_acc[329].u_i  |acc_253 |    51|
+|257   |  \half_acc[32].u_i   |acc_254 |    36|
+|258   |  \half_acc[330].u_i  |acc_255 |    51|
+|259   |  \half_acc[331].u_i  |acc_256 |    36|
+|260   |  \half_acc[332].u_i  |acc_257 |    36|
+|261   |  \half_acc[333].u_i  |acc_258 |    36|
+|262   |  \half_acc[334].u_i  |acc_259 |    51|
+|263   |  \half_acc[335].u_i  |acc_260 |    51|
+|264   |  \half_acc[336].u_i  |acc_261 |    36|
+|265   |  \half_acc[337].u_i  |acc_262 |    51|
+|266   |  \half_acc[338].u_i  |acc_263 |    36|
+|267   |  \half_acc[339].u_i  |acc_264 |    36|
+|268   |  \half_acc[33].u_i   |acc_265 |    36|
+|269   |  \half_acc[340].u_i  |acc_266 |    36|
+|270   |  \half_acc[341].u_i  |acc_267 |    36|
+|271   |  \half_acc[342].u_i  |acc_268 |    36|
+|272   |  \half_acc[343].u_i  |acc_269 |    51|
+|273   |  \half_acc[344].u_i  |acc_270 |    36|
+|274   |  \half_acc[345].u_i  |acc_271 |    36|
+|275   |  \half_acc[346].u_i  |acc_272 |    36|
+|276   |  \half_acc[347].u_i  |acc_273 |    36|
+|277   |  \half_acc[348].u_i  |acc_274 |    36|
+|278   |  \half_acc[349].u_i  |acc_275 |    36|
+|279   |  \half_acc[34].u_i   |acc_276 |    36|
+|280   |  \half_acc[350].u_i  |acc_277 |    51|
+|281   |  \half_acc[351].u_i  |acc_278 |    36|
+|282   |  \half_acc[352].u_i  |acc_279 |    36|
+|283   |  \half_acc[353].u_i  |acc_280 |    36|
+|284   |  \half_acc[354].u_i  |acc_281 |    36|
+|285   |  \half_acc[355].u_i  |acc_282 |    36|
+|286   |  \half_acc[356].u_i  |acc_283 |    36|
+|287   |  \half_acc[357].u_i  |acc_284 |    51|
+|288   |  \half_acc[358].u_i  |acc_285 |    36|
+|289   |  \half_acc[359].u_i  |acc_286 |    36|
+|290   |  \half_acc[35].u_i   |acc_287 |    36|
+|291   |  \half_acc[360].u_i  |acc_288 |    36|
+|292   |  \half_acc[361].u_i  |acc_289 |    36|
+|293   |  \half_acc[362].u_i  |acc_290 |    36|
+|294   |  \half_acc[363].u_i  |acc_291 |    51|
+|295   |  \half_acc[364].u_i  |acc_292 |    51|
+|296   |  \half_acc[365].u_i  |acc_293 |    51|
+|297   |  \half_acc[366].u_i  |acc_294 |    51|
+|298   |  \half_acc[367].u_i  |acc_295 |    36|
+|299   |  \half_acc[368].u_i  |acc_296 |    36|
+|300   |  \half_acc[369].u_i  |acc_297 |    36|
+|301   |  \half_acc[36].u_i   |acc_298 |    36|
+|302   |  \half_acc[370].u_i  |acc_299 |    36|
+|303   |  \half_acc[371].u_i  |acc_300 |    36|
+|304   |  \half_acc[372].u_i  |acc_301 |    36|
+|305   |  \half_acc[373].u_i  |acc_302 |    36|
+|306   |  \half_acc[374].u_i  |acc_303 |    36|
+|307   |  \half_acc[375].u_i  |acc_304 |    36|
+|308   |  \half_acc[376].u_i  |acc_305 |    36|
+|309   |  \half_acc[377].u_i  |acc_306 |    36|
+|310   |  \half_acc[378].u_i  |acc_307 |    36|
+|311   |  \half_acc[379].u_i  |acc_308 |    36|
+|312   |  \half_acc[37].u_i   |acc_309 |    36|
+|313   |  \half_acc[380].u_i  |acc_310 |    36|
+|314   |  \half_acc[381].u_i  |acc_311 |    36|
+|315   |  \half_acc[382].u_i  |acc_312 |    36|
+|316   |  \half_acc[383].u_i  |acc_313 |    36|
+|317   |  \half_acc[384].u_i  |acc_314 |    36|
+|318   |  \half_acc[385].u_i  |acc_315 |    36|
+|319   |  \half_acc[386].u_i  |acc_316 |    36|
+|320   |  \half_acc[387].u_i  |acc_317 |    36|
+|321   |  \half_acc[388].u_i  |acc_318 |    51|
+|322   |  \half_acc[389].u_i  |acc_319 |    36|
+|323   |  \half_acc[38].u_i   |acc_320 |    36|
+|324   |  \half_acc[390].u_i  |acc_321 |    36|
+|325   |  \half_acc[391].u_i  |acc_322 |    36|
+|326   |  \half_acc[392].u_i  |acc_323 |    36|
+|327   |  \half_acc[393].u_i  |acc_324 |    36|
+|328   |  \half_acc[394].u_i  |acc_325 |    51|
+|329   |  \half_acc[395].u_i  |acc_326 |    36|
+|330   |  \half_acc[396].u_i  |acc_327 |    36|
+|331   |  \half_acc[397].u_i  |acc_328 |    36|
+|332   |  \half_acc[398].u_i  |acc_329 |    36|
+|333   |  \half_acc[399].u_i  |acc_330 |    36|
+|334   |  \half_acc[39].u_i   |acc_331 |    36|
+|335   |  \half_acc[3].u_i    |acc_332 |    51|
+|336   |  \half_acc[400].u_i  |acc_333 |    36|
+|337   |  \half_acc[401].u_i  |acc_334 |    36|
+|338   |  \half_acc[402].u_i  |acc_335 |    36|
+|339   |  \half_acc[403].u_i  |acc_336 |    36|
+|340   |  \half_acc[404].u_i  |acc_337 |    36|
+|341   |  \half_acc[405].u_i  |acc_338 |    36|
+|342   |  \half_acc[406].u_i  |acc_339 |    51|
+|343   |  \half_acc[407].u_i  |acc_340 |    36|
+|344   |  \half_acc[408].u_i  |acc_341 |    36|
+|345   |  \half_acc[409].u_i  |acc_342 |    36|
+|346   |  \half_acc[40].u_i   |acc_343 |    36|
+|347   |  \half_acc[410].u_i  |acc_344 |    36|
+|348   |  \half_acc[411].u_i  |acc_345 |    36|
+|349   |  \half_acc[412].u_i  |acc_346 |    51|
+|350   |  \half_acc[413].u_i  |acc_347 |    36|
+|351   |  \half_acc[414].u_i  |acc_348 |    36|
+|352   |  \half_acc[415].u_i  |acc_349 |    36|
+|353   |  \half_acc[416].u_i  |acc_350 |    36|
+|354   |  \half_acc[417].u_i  |acc_351 |    36|
+|355   |  \half_acc[418].u_i  |acc_352 |    36|
+|356   |  \half_acc[419].u_i  |acc_353 |    36|
+|357   |  \half_acc[41].u_i   |acc_354 |    36|
+|358   |  \half_acc[420].u_i  |acc_355 |    36|
+|359   |  \half_acc[421].u_i  |acc_356 |    36|
+|360   |  \half_acc[422].u_i  |acc_357 |    36|
+|361   |  \half_acc[423].u_i  |acc_358 |    36|
+|362   |  \half_acc[424].u_i  |acc_359 |    36|
+|363   |  \half_acc[425].u_i  |acc_360 |    36|
+|364   |  \half_acc[426].u_i  |acc_361 |    36|
+|365   |  \half_acc[427].u_i  |acc_362 |    36|
+|366   |  \half_acc[428].u_i  |acc_363 |    36|
+|367   |  \half_acc[429].u_i  |acc_364 |    36|
+|368   |  \half_acc[42].u_i   |acc_365 |    36|
+|369   |  \half_acc[430].u_i  |acc_366 |    36|
+|370   |  \half_acc[431].u_i  |acc_367 |    51|
+|371   |  \half_acc[432].u_i  |acc_368 |    36|
+|372   |  \half_acc[433].u_i  |acc_369 |    36|
+|373   |  \half_acc[434].u_i  |acc_370 |    51|
+|374   |  \half_acc[435].u_i  |acc_371 |    36|
+|375   |  \half_acc[436].u_i  |acc_372 |    36|
+|376   |  \half_acc[437].u_i  |acc_373 |    36|
+|377   |  \half_acc[438].u_i  |acc_374 |    36|
+|378   |  \half_acc[439].u_i  |acc_375 |    36|
+|379   |  \half_acc[43].u_i   |acc_376 |    36|
+|380   |  \half_acc[440].u_i  |acc_377 |    36|
+|381   |  \half_acc[441].u_i  |acc_378 |    51|
+|382   |  \half_acc[442].u_i  |acc_379 |    51|
+|383   |  \half_acc[443].u_i  |acc_380 |    36|
+|384   |  \half_acc[444].u_i  |acc_381 |    51|
+|385   |  \half_acc[445].u_i  |acc_382 |    51|
+|386   |  \half_acc[446].u_i  |acc_383 |    51|
+|387   |  \half_acc[447].u_i  |acc_384 |    51|
+|388   |  \half_acc[448].u_i  |acc_385 |    36|
+|389   |  \half_acc[449].u_i  |acc_386 |    51|
+|390   |  \half_acc[44].u_i   |acc_387 |    36|
+|391   |  \half_acc[450].u_i  |acc_388 |    51|
+|392   |  \half_acc[451].u_i  |acc_389 |    51|
+|393   |  \half_acc[452].u_i  |acc_390 |    36|
+|394   |  \half_acc[453].u_i  |acc_391 |    51|
+|395   |  \half_acc[454].u_i  |acc_392 |    51|
+|396   |  \half_acc[455].u_i  |acc_393 |    36|
+|397   |  \half_acc[456].u_i  |acc_394 |    36|
+|398   |  \half_acc[457].u_i  |acc_395 |    36|
+|399   |  \half_acc[458].u_i  |acc_396 |    51|
+|400   |  \half_acc[459].u_i  |acc_397 |    36|
+|401   |  \half_acc[45].u_i   |acc_398 |    36|
+|402   |  \half_acc[460].u_i  |acc_399 |    36|
+|403   |  \half_acc[461].u_i  |acc_400 |    51|
+|404   |  \half_acc[462].u_i  |acc_401 |    51|
+|405   |  \half_acc[463].u_i  |acc_402 |    36|
+|406   |  \half_acc[464].u_i  |acc_403 |    36|
+|407   |  \half_acc[465].u_i  |acc_404 |    51|
+|408   |  \half_acc[466].u_i  |acc_405 |    51|
+|409   |  \half_acc[467].u_i  |acc_406 |    51|
+|410   |  \half_acc[468].u_i  |acc_407 |    36|
+|411   |  \half_acc[469].u_i  |acc_408 |    36|
+|412   |  \half_acc[46].u_i   |acc_409 |    36|
+|413   |  \half_acc[470].u_i  |acc_410 |    36|
+|414   |  \half_acc[471].u_i  |acc_411 |    36|
+|415   |  \half_acc[472].u_i  |acc_412 |    36|
+|416   |  \half_acc[473].u_i  |acc_413 |    36|
+|417   |  \half_acc[474].u_i  |acc_414 |    36|
+|418   |  \half_acc[475].u_i  |acc_415 |    36|
+|419   |  \half_acc[476].u_i  |acc_416 |    36|
+|420   |  \half_acc[477].u_i  |acc_417 |    36|
+|421   |  \half_acc[478].u_i  |acc_418 |    36|
+|422   |  \half_acc[479].u_i  |acc_419 |    36|
+|423   |  \half_acc[47].u_i   |acc_420 |    36|
+|424   |  \half_acc[480].u_i  |acc_421 |    36|
+|425   |  \half_acc[481].u_i  |acc_422 |    36|
+|426   |  \half_acc[482].u_i  |acc_423 |    36|
+|427   |  \half_acc[483].u_i  |acc_424 |    36|
+|428   |  \half_acc[484].u_i  |acc_425 |    36|
+|429   |  \half_acc[485].u_i  |acc_426 |    36|
+|430   |  \half_acc[486].u_i  |acc_427 |    36|
+|431   |  \half_acc[487].u_i  |acc_428 |    36|
+|432   |  \half_acc[488].u_i  |acc_429 |    36|
+|433   |  \half_acc[489].u_i  |acc_430 |    36|
+|434   |  \half_acc[48].u_i   |acc_431 |    36|
+|435   |  \half_acc[490].u_i  |acc_432 |    36|
+|436   |  \half_acc[491].u_i  |acc_433 |    36|
+|437   |  \half_acc[492].u_i  |acc_434 |    36|
+|438   |  \half_acc[493].u_i  |acc_435 |    36|
+|439   |  \half_acc[494].u_i  |acc_436 |    36|
+|440   |  \half_acc[495].u_i  |acc_437 |    36|
+|441   |  \half_acc[496].u_i  |acc_438 |    36|
+|442   |  \half_acc[497].u_i  |acc_439 |    36|
+|443   |  \half_acc[498].u_i  |acc_440 |    36|
+|444   |  \half_acc[499].u_i  |acc_441 |    36|
+|445   |  \half_acc[49].u_i   |acc_442 |    36|
+|446   |  \half_acc[4].u_i    |acc_443 |    36|
+|447   |  \half_acc[500].u_i  |acc_444 |    36|
+|448   |  \half_acc[501].u_i  |acc_445 |    36|
+|449   |  \half_acc[502].u_i  |acc_446 |    36|
+|450   |  \half_acc[503].u_i  |acc_447 |    36|
+|451   |  \half_acc[504].u_i  |acc_448 |    36|
+|452   |  \half_acc[505].u_i  |acc_449 |    36|
+|453   |  \half_acc[506].u_i  |acc_450 |    36|
+|454   |  \half_acc[507].u_i  |acc_451 |    36|
+|455   |  \half_acc[508].u_i  |acc_452 |    36|
+|456   |  \half_acc[509].u_i  |acc_453 |    36|
+|457   |  \half_acc[50].u_i   |acc_454 |    36|
+|458   |  \half_acc[510].u_i  |acc_455 |    36|
+|459   |  \half_acc[511].u_i  |acc_456 |    36|
+|460   |  \half_acc[51].u_i   |acc_457 |    36|
+|461   |  \half_acc[52].u_i   |acc_458 |    36|
+|462   |  \half_acc[53].u_i   |acc_459 |    36|
+|463   |  \half_acc[54].u_i   |acc_460 |    36|
+|464   |  \half_acc[55].u_i   |acc_461 |    36|
+|465   |  \half_acc[56].u_i   |acc_462 |    36|
+|466   |  \half_acc[57].u_i   |acc_463 |    36|
+|467   |  \half_acc[58].u_i   |acc_464 |    36|
+|468   |  \half_acc[59].u_i   |acc_465 |    36|
+|469   |  \half_acc[5].u_i    |acc_466 |    36|
+|470   |  \half_acc[60].u_i   |acc_467 |    36|
+|471   |  \half_acc[61].u_i   |acc_468 |    36|
+|472   |  \half_acc[62].u_i   |acc_469 |    36|
+|473   |  \half_acc[63].u_i   |acc_470 |    36|
+|474   |  \half_acc[64].u_i   |acc_471 |    36|
+|475   |  \half_acc[65].u_i   |acc_472 |    36|
+|476   |  \half_acc[66].u_i   |acc_473 |    36|
+|477   |  \half_acc[67].u_i   |acc_474 |    36|
+|478   |  \half_acc[68].u_i   |acc_475 |    36|
+|479   |  \half_acc[69].u_i   |acc_476 |    36|
+|480   |  \half_acc[6].u_i    |acc_477 |    36|
+|481   |  \half_acc[70].u_i   |acc_478 |    36|
+|482   |  \half_acc[71].u_i   |acc_479 |    36|
+|483   |  \half_acc[72].u_i   |acc_480 |    36|
+|484   |  \half_acc[73].u_i   |acc_481 |    36|
+|485   |  \half_acc[74].u_i   |acc_482 |    36|
+|486   |  \half_acc[75].u_i   |acc_483 |    36|
+|487   |  \half_acc[76].u_i   |acc_484 |    36|
+|488   |  \half_acc[77].u_i   |acc_485 |    36|
+|489   |  \half_acc[78].u_i   |acc_486 |    36|
+|490   |  \half_acc[79].u_i   |acc_487 |    36|
+|491   |  \half_acc[7].u_i    |acc_488 |    36|
+|492   |  \half_acc[80].u_i   |acc_489 |    36|
+|493   |  \half_acc[81].u_i   |acc_490 |    36|
+|494   |  \half_acc[82].u_i   |acc_491 |    36|
+|495   |  \half_acc[83].u_i   |acc_492 |    36|
+|496   |  \half_acc[84].u_i   |acc_493 |    36|
+|497   |  \half_acc[85].u_i   |acc_494 |    36|
+|498   |  \half_acc[86].u_i   |acc_495 |    36|
+|499   |  \half_acc[87].u_i   |acc_496 |    36|
+|500   |  \half_acc[88].u_i   |acc_497 |    36|
+|501   |  \half_acc[89].u_i   |acc_498 |    36|
+|502   |  \half_acc[8].u_i    |acc_499 |    51|
+|503   |  \half_acc[90].u_i   |acc_500 |    36|
+|504   |  \half_acc[91].u_i   |acc_501 |    36|
+|505   |  \half_acc[92].u_i   |acc_502 |    36|
+|506   |  \half_acc[93].u_i   |acc_503 |    36|
+|507   |  \half_acc[94].u_i   |acc_504 |    36|
+|508   |  \half_acc[95].u_i   |acc_505 |    36|
+|509   |  \half_acc[96].u_i   |acc_506 |    36|
+|510   |  \half_acc[97].u_i   |acc_507 |    36|
+|511   |  \half_acc[98].u_i   |acc_508 |    36|
+|512   |  \half_acc[99].u_i   |acc_509 |    36|
+|513   |  \half_acc[9].u_i    |acc_510 |    36|
++------+----------------------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:09:54 ; elapsed = 00:10:02 . Memory (MB): peak = 2803.121 ; gain = 1452.477 ; free physical = 1804 ; free virtual = 5445
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:09:36 ; elapsed = 00:09:44 . Memory (MB): peak = 2803.121 ; gain = 878.234 ; free physical = 1858 ; free virtual = 5499
+Synthesis Optimization Complete : Time (s): cpu = 00:09:54 ; elapsed = 00:10:02 . Memory (MB): peak = 2803.129 ; gain = 1452.477 ; free physical = 1858 ; free virtual = 5499
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4088 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/pool/temp.xdc]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/pool/temp.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2803.129 ; gain = 0.000 ; free physical = 1755 ; free virtual = 5402
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+117 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:10:03 ; elapsed = 00:10:11 . Memory (MB): peak = 2803.129 ; gain = 1472.914 ; free physical = 1841 ; free virtual = 5489
+# report_utilization -file utiliziation.rpt
+# report_utilization -hierarchical -file hierarchical_utilization.rpt
+# report_timing -file post_synth_timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2838.148 ; gain = 35.020 ; free physical = 1262 ; free virtual = 4954
+# write_checkpoint -force temp_syn.dcp
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2838.148 ; gain = 0.000 ; free physical = 1262 ; free virtual = 4955
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 2870.164 ; gain = 0.000 ; free physical = 1228 ; free virtual = 4941
+INFO: [Common 17-1381] The checkpoint '/home/gsaied/Desktop/old_rtl/pool/temp_syn.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2870.164 ; gain = 32.016 ; free physical = 1249 ; free virtual = 4945
+# if {[get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]] < 0} {
+# puts "Found setup timing violations => running physical optimization"
+# report_timing -file slack.rpt
+# }
+# opt_design -directive ExploreSequentialArea
+Command: opt_design -directive ExploreSequentialArea
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: ExploreSequentialArea
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2870.168 ; gain = 0.000 ; free physical = 1237 ; free virtual = 4942
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 103763b4c
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2870.168 ; gain = 0.000 ; free physical = 1237 ; free virtual = 4942
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 103763b4c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2878.164 ; gain = 0.000 ; free physical = 1241 ; free virtual = 4948
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 103763b4c
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2878.164 ; gain = 0.000 ; free physical = 1257 ; free virtual = 4964
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 12806ea43
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2878.164 ; gain = 0.000 ; free physical = 1249 ; free virtual = 4957
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 12806ea43
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2878.164 ; gain = 0.000 ; free physical = 1247 ; free virtual = 4955
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 1be88bbf5
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2878.164 ; gain = 0.000 ; free physical = 1263 ; free virtual = 4965
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 6 Constant propagation | Checksum: 1be88bbf5
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2878.164 ; gain = 0.000 ; free physical = 1255 ; free virtual = 4965
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 7 Sweep
+Phase 7 Sweep | Checksum: 1be88bbf5
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2878.164 ; gain = 0.000 ; free physical = 1250 ; free virtual = 4960
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 8 Resynthesis
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Opt 31-74] Optimized 1 modules.
+INFO: [Opt 31-75] Optimized module 'acc_array'.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 8 Resynthesis | Checksum: 11034ff7f
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:45 . Memory (MB): peak = 2885.992 ; gain = 7.828 ; free physical = 1156 ; free virtual = 4932
+INFO: [Opt 31-389] Phase Resynthesis created 2746 cells and removed 2872 cells
+
+Phase 9 Post Processing Netlist
+Phase 9 Post Processing Netlist | Checksum: 11034ff7f
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:45 . Memory (MB): peak = 2885.992 ; gain = 7.828 ; free physical = 1155 ; free virtual = 4932
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  Resynthesis                  |            2746  |            2872  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2885.992 ; gain = 0.000 ; free physical = 1155 ; free virtual = 4932
+Ending Logic Optimization Task | Checksum: ad956859
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:47 . Memory (MB): peak = 2885.992 ; gain = 7.828 ; free physical = 1153 ; free virtual = 4932
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: ad956859
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2885.992 ; gain = 0.000 ; free physical = 1150 ; free virtual = 4932
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: ad956859
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2885.992 ; gain = 0.000 ; free physical = 1150 ; free virtual = 4931
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2885.992 ; gain = 0.000 ; free physical = 1150 ; free virtual = 4931
+Ending Netlist Obfuscation Task | Checksum: ad956859
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2885.992 ; gain = 0.000 ; free physical = 1150 ; free virtual = 4931
+INFO: [Common 17-83] Releasing license: Implementation
+25 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:09 ; elapsed = 00:00:51 . Memory (MB): peak = 2885.992 ; gain = 15.828 ; free physical = 1150 ; free virtual = 4931
+# report_utilization -file post_utiliziation.rpt
+# report_utilization -hierarchical -file post_hierarchical_utilization.rpt
+# report_timing -file post_opt_timing.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 2885.992 ; gain = 0.000 ; free physical = 1113 ; free virtual = 4892
+vi utiliziation.rpt 
+WARNING: [Common 17-259] Unknown Tcl command 'vi utiliziation.rpt' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+vi post_utiliziation.rpt 
+WARNING: [Common 17-259] Unknown Tcl command 'vi post_utiliziation.rpt' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+open_checkpoint temp_syn.dcp 
+Command: open_checkpoint temp_syn.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2885.992 ; gain = 0.000 ; free physical = 1506 ; free virtual = 5303
+INFO: [Netlist 29-17] Analyzing 4088 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3098.219 ; gain = 0.000 ; free physical = 1244 ; free virtual = 5043
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2018.3 (64-bit) build 2405991
+open_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 3098.219 ; gain = 212.227 ; free physical = 1242 ; free virtual = 5042
+checkpoint_temp_syn
+report_timing
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri Mar  6 20:00:32 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_timing
+| Design       : acc_array
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             2.873ns  (required time - arrival time)
+  Source:                 pool_out_reg[887][0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            pooltomax_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.130ns  (logic 0.927ns (43.521%)  route 1.203ns (56.479%))
+  Logic Levels:           7  (LUT6=3 MUXF7=2 MUXF8=2)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.483ns = ( 5.483 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.508ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=18517, unset)        0.508     0.508    clk
+                         FDRE                                         r  pool_out_reg[887][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.254     0.762 r  pool_out_reg[887][0]/Q
+                         net (fo=1, unplaced)         0.501     1.263    pool_out_reg[887]__0[0]
+                         LUT6 (Prop_lut6_I0_O)        0.119     1.382 r  pooltomax[0]_i_239/O
+                         net (fo=1, unplaced)         0.000     1.382    pooltomax[0]_i_239_n_0
+                         MUXF7 (Prop_muxf7_I1_O)      0.113     1.495 r  pooltomax_reg[0]_i_102/O
+                         net (fo=1, unplaced)         0.000     1.495    pooltomax_reg[0]_i_102_n_0
+                         MUXF8 (Prop_muxf8_I0_O)      0.044     1.539 r  pooltomax_reg[0]_i_34/O
+                         net (fo=1, unplaced)         0.351     1.890    pooltomax_reg[0]_i_34_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.120     2.010 r  pooltomax[0]_i_15/O
+                         net (fo=1, unplaced)         0.000     2.010    pooltomax[0]_i_15_n_0
+                         MUXF7 (Prop_muxf7_I1_O)      0.113     2.123 r  pooltomax_reg[0]_i_6/O
+                         net (fo=1, unplaced)         0.000     2.123    pooltomax_reg[0]_i_6_n_0
+                         MUXF8 (Prop_muxf8_I0_O)      0.044     2.167 r  pooltomax_reg[0]_i_2/O
+                         net (fo=1, unplaced)         0.351     2.518    pooltomax_reg[0]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.120     2.638 r  pooltomax[0]_i_1/O
+                         net (fo=1, unplaced)         0.000     2.638    pool_out[0]
+                         FDRE                                         r  pooltomax_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=18517, unset)        0.483     5.483    clk
+                         FDRE                                         r  pooltomax_reg[0]/C
+                         clock pessimism              0.000     5.483    
+                         clock uncertainty           -0.035     5.447    
+                         FDRE (Setup_fdre_C_D)        0.064     5.511    pooltomax_reg[0]
+  -------------------------------------------------------------------
+                         required time                          5.511    
+                         arrival time                          -2.638    
+  -------------------------------------------------------------------
+                         slack                                  2.873    
+
+
+
+
+report_timing -hold
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type min -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri Mar  6 20:00:42 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_timing -hold
+| Design       : acc_array
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.133ns  (arrival time - required time)
+  Source:                 half_acc[0].u_i/acc_out_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            half_acc[0].u_i/acc_out_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.241ns  (logic 0.180ns (74.789%)  route 0.061ns (25.211%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.312ns
+    Source Clock Delay      (SCD):    0.296ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=18517, unset)        0.296     0.296    half_acc[0].u_i/clk
+                         FDRE                                         r  half_acc[0].u_i/acc_out_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.118     0.414 r  half_acc[0].u_i/acc_out_reg[0]/Q
+                         net (fo=2, unplaced)         0.061     0.475    half_acc[0].u_i/acc_out_reg_n_0_[0]
+                         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.062     0.537 r  half_acc[0].u_i/acc_out_reg[0]_i_1__54/O[1]
+                         net (fo=1, unplaced)         0.000     0.537    half_acc[0].u_i/acc_out_reg[0]_i_1__54_n_6
+                         FDRE                                         r  half_acc[0].u_i/acc_out_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=18517, unset)        0.312     0.312    half_acc[0].u_i/clk
+                         FDRE                                         r  half_acc[0].u_i/acc_out_reg[1]/C
+                         clock pessimism              0.000     0.312    
+                         FDRE (Hold_fdre_C_D)         0.092     0.404    half_acc[0].u_i/acc_out_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -0.404    
+                         arrival time                           0.537    
+  -------------------------------------------------------------------
+                         slack                                  0.133    
+
+
+
+
+opt_design -sweep
+Command: opt_design -sweep
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3154.734 ; gain = 42.016 ; free physical = 1206 ; free virtual = 5022
+
+Starting Logic Optimization Task
+
+Phase 1 Sweep
+Phase 1 Sweep | Checksum: 12806ea43
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3163.734 ; gain = 0.000 ; free physical = 1310 ; free virtual = 5127
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 2 Post Processing Netlist
+Phase 2 Post Processing Netlist | Checksum: 12806ea43
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3163.734 ; gain = 0.000 ; free physical = 1303 ; free virtual = 5120
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Sweep                    |               0  |               0  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1be88bbf5
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 3163.734 ; gain = 0.000 ; free physical = 1310 ; free virtual = 5127
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3163.734 ; gain = 0.000 ; free physical = 1310 ; free virtual = 5126
+Ending Netlist Obfuscation Task | Checksum: 1be88bbf5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3163.734 ; gain = 0.000 ; free physical = 1310 ; free virtual = 5126
+INFO: [Common 17-83] Releasing license: Implementation
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 3163.734 ; gain = 53.016 ; free physical = 1310 ; free virtual = 5126
+0
+opt_design -control_set_merge
+Command: opt_design -control_set_merge
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3163.738 ; gain = 0.000 ; free physical = 1300 ; free virtual = 5118
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Control set merging
+Phase 1 Control set merging | Checksum: 1be88bbf5
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3163.738 ; gain = 0.000 ; free physical = 1301 ; free virtual = 5120
+INFO: [Opt 31-389] Phase Control set merging created 0 cells and removed 0 cells
+
+Phase 2 Post Processing Netlist
+Phase 2 Post Processing Netlist | Checksum: 1be88bbf5
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3163.738 ; gain = 0.000 ; free physical = 1301 ; free virtual = 5120
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Control set merging      |               0  |               0  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1be88bbf5
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3163.738 ; gain = 0.000 ; free physical = 1301 ; free virtual = 5120
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3163.738 ; gain = 0.000 ; free physical = 1300 ; free virtual = 5118
+Ending Netlist Obfuscation Task | Checksum: 1be88bbf5
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3163.738 ; gain = 0.000 ; free physical = 1300 ; free virtual = 5118
+INFO: [Common 17-83] Releasing license: Implementation
+8 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3163.738 ; gain = 0.004 ; free physical = 1300 ; free virtual = 5118
+0
+opt_design -resynth_area 
+Command: opt_design -resynth_area
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3163.738 ; gain = 0.000 ; free physical = 1292 ; free virtual = 5115
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Resynthesis
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Opt 31-74] Optimized 1 modules.
+INFO: [Opt 31-75] Optimized module 'acc_array'.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 1 Resynthesis | Checksum: 112700bb8
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:27 . Memory (MB): peak = 3171.562 ; gain = 7.824 ; free physical = 1274 ; free virtual = 5111
+INFO: [Opt 31-389] Phase Resynthesis created 2791 cells and removed 2821 cells
+
+Phase 2 Post Processing Netlist
+Phase 2 Post Processing Netlist | Checksum: 112700bb8
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:27 . Memory (MB): peak = 3171.562 ; gain = 7.824 ; free physical = 1285 ; free virtual = 5122
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Resynthesis              |            2791  |            2821  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:29 . Memory (MB): peak = 3171.562 ; gain = 7.824 ; free physical = 1290 ; free virtual = 5120
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1283 ; free virtual = 5120
+Ending Netlist Obfuscation Task | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1282 ; free virtual = 5120
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 3171.562 ; gain = 7.824 ; free physical = 1283 ; free virtual = 5120
+0
+opt_design -debug_log 
+Command: opt_design -debug_log
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1268 ; free virtual = 5112
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1251 ; free virtual = 5095
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1 to load counter_reg[0] because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_1 to load index_reg[0]_rep__0 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_10 to load index_reg[0]_rep__18 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_11 to load index_reg[0]_rep__19 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_12 to load index_reg[0]_rep__1 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_13 to load index_reg[0]_rep__2 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_14 to load index_reg[0]_rep__3 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_15 to load index_reg[0]_rep__4 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_16 to load index_reg[0]_rep__5 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_17 to load index_reg[0]_rep__6 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_18 to load index_reg[0]_rep__7 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_19 to load index_reg[0]_rep__8 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_2 to load index_reg[0]_rep__10 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_20 to load index_reg[0]_rep__9 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_21 to load index_reg[0]_rep because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_3 to load index_reg[0]_rep__11 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_4 to load index_reg[0]_rep__12 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_5 to load index_reg[0]_rep__13 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_6 to load index_reg[0]_rep__14 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_61 to load index_reg[0] because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_7 to load index_reg[0]_rep__15 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_8 to load index_reg[0]_rep__16 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_9 to load index_reg[0]_rep__17 because inversion is not supported on the pin D
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1276 ; free virtual = 5115
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-431] constant propagation found 0 starting points
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1 to load counter_reg[0] because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_1 to load index_reg[0]_rep__0 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_10 to load index_reg[0]_rep__18 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_11 to load index_reg[0]_rep__19 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_12 to load index_reg[0]_rep__1 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_13 to load index_reg[0]_rep__2 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_14 to load index_reg[0]_rep__3 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_15 to load index_reg[0]_rep__4 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_16 to load index_reg[0]_rep__5 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_17 to load index_reg[0]_rep__6 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_18 to load index_reg[0]_rep__7 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_19 to load index_reg[0]_rep__8 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_2 to load index_reg[0]_rep__10 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_20 to load index_reg[0]_rep__9 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_21 to load index_reg[0]_rep because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_3 to load index_reg[0]_rep__11 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_4 to load index_reg[0]_rep__12 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_5 to load index_reg[0]_rep__13 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_6 to load index_reg[0]_rep__14 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_61 to load index_reg[0] because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_7 to load index_reg[0]_rep__15 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_8 to load index_reg[0]_rep__16 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_9 to load index_reg[0]_rep__17 because inversion is not supported on the pin D
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1275 ; free virtual = 5114
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1272 ; free virtual = 5112
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1272 ; free virtual = 5111
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1255 ; free virtual = 5099
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1 to load counter_reg[0] because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_1 to load index_reg[0]_rep__0 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_10 to load index_reg[0]_rep__18 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_11 to load index_reg[0]_rep__19 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_12 to load index_reg[0]_rep__1 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_13 to load index_reg[0]_rep__2 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_14 to load index_reg[0]_rep__3 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_15 to load index_reg[0]_rep__4 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_16 to load index_reg[0]_rep__5 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_17 to load index_reg[0]_rep__6 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_18 to load index_reg[0]_rep__7 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_19 to load index_reg[0]_rep__8 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_2 to load index_reg[0]_rep__10 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_20 to load index_reg[0]_rep__9 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_21 to load index_reg[0]_rep because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_3 to load index_reg[0]_rep__11 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_4 to load index_reg[0]_rep__12 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_5 to load index_reg[0]_rep__13 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_6 to load index_reg[0]_rep__14 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_61 to load index_reg[0] because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_7 to load index_reg[0]_rep__15 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_8 to load index_reg[0]_rep__16 because inversion is not supported on the pin D
+INFO: [Opt 31-677] Could not push inverter acc_array_LUT1_9 to load index_reg[0]_rep__17 because inversion is not supported on the pin D
+Phase 6 Post Processing Netlist | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1269 ; free virtual = 5110
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1269 ; free virtual = 5110
+Ending Logic Optimization Task | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1269 ; free virtual = 5110
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1269 ; free virtual = 5110
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1269 ; free virtual = 5110
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1269 ; free virtual = 5110
+Ending Netlist Obfuscation Task | Checksum: 1404b7202
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1273 ; free virtual = 5109
+INFO: [Common 17-83] Releasing license: Implementation
+86 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1273 ; free virtual = 5109
+0
+report_utilization 
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri Mar  6 20:03:12 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_utilization
+| Design       : acc_array
+| Device       : 7vx690tffg1157-3
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+-------+-------+-----------+-------+
+|        Site Type        |  Used | Fixed | Available | Util% |
++-------------------------+-------+-------+-----------+-------+
+| Slice LUTs*             | 10972 |     0 |    433200 |  2.53 |
+|   LUT as Logic          | 10972 |     0 |    433200 |  2.53 |
+|   LUT as Memory         |     0 |     0 |    174200 |  0.00 |
+| Slice Registers         | 18518 |     0 |    866400 |  2.14 |
+|   Register as Flip Flop | 18518 |     0 |    866400 |  2.14 |
+|   Register as Latch     |     0 |     0 |    866400 |  0.00 |
+| F7 Muxes                |  1360 |     0 |    216600 |  0.63 |
+| F8 Muxes                |   680 |     0 |    108300 |  0.63 |
++-------------------------+-------+-------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 18518 |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| Block RAM Tile |    0 |     0 |      1470 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |      1470 |  0.00 |
+|   RAMB18       |    0 |     0 |      2940 |  0.00 |
++----------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |      3600 |  0.00 |
++-----------+------+-------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |    0 |     0 |       600 |  0.00 |
+| Bonded IPADs                |    0 |     0 |        62 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        40 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |        20 |  0.00 |
+| PHASER_REF                  |    0 |     0 |        20 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        80 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        80 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |        20 |  0.00 |
+| IBUFDS                      |    0 |     0 |       576 |  0.00 |
+| GTHE2_CHANNEL               |    0 |     0 |        20 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        10 |  0.00 |
+| ILOGIC                      |    0 |     0 |       600 |  0.00 |
+| OLOGIC                      |    0 |     0 |       600 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFIO      |    0 |     0 |        80 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
+| BUFMRCE    |    0 |     0 |        40 |  0.00 |
+| BUFHCE     |    0 |     0 |       240 |  0.00 |
+| BUFR       |    0 |     0 |        80 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+-------+---------------------+
+| Ref Name |  Used | Functional Category |
++----------+-------+---------------------+
+| FDRE     | 18518 |        Flop & Latch |
+| LUT4     |  8194 |                 LUT |
+| LUT6     |  2732 |                 LUT |
+| CARRY4   |  2048 |          CarryLogic |
+| MUXF7    |  1360 |               MuxFx |
+| LUT3     |  1082 |                 LUT |
+| MUXF8    |   680 |               MuxFx |
+| LUT1     |    23 |                 LUT |
+| LUT2     |    19 |                 LUT |
+| LUT5     |     2 |                 LUT |
++----------+-------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+opt_design -resynth_seq_area 
+Command: opt_design -resynth_seq_area
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 1200 ; free virtual = 5063
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Resynthesis
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Opt 31-74] Optimized 1 modules.
+INFO: [Opt 31-75] Optimized module 'acc_array'.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 1 Resynthesis | Checksum: b18aacfa
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:52 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 740 ; free virtual = 4678
+INFO: [Opt 31-389] Phase Resynthesis created 2746 cells and removed 2842 cells
+
+Phase 2 Post Processing Netlist
+Phase 2 Post Processing Netlist | Checksum: b18aacfa
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:52 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 741 ; free virtual = 4680
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Resynthesis              |            2746  |            2842  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1a618e42b
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:55 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 758 ; free virtual = 4690
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 750 ; free virtual = 4689
+Ending Netlist Obfuscation Task | Checksum: 1a618e42b
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 750 ; free virtual = 4689
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:16 ; elapsed = 00:00:58 . Memory (MB): peak = 3171.562 ; gain = 0.000 ; free physical = 751 ; free virtual = 4690
+0
+report_utilization 
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri Mar  6 20:05:03 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_utilization
+| Design       : acc_array
+| Device       : 7vx690tffg1157-3
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+-------+-------+-----------+-------+
+|        Site Type        |  Used | Fixed | Available | Util% |
++-------------------------+-------+-------+-----------+-------+
+| Slice LUTs*             | 10939 |     0 |    433200 |  2.53 |
+|   LUT as Logic          | 10939 |     0 |    433200 |  2.53 |
+|   LUT as Memory         |     0 |     0 |    174200 |  0.00 |
+| Slice Registers         | 18455 |     0 |    866400 |  2.13 |
+|   Register as Flip Flop | 18455 |     0 |    866400 |  2.13 |
+|   Register as Latch     |     0 |     0 |    866400 |  0.00 |
+| F7 Muxes                |  1360 |     0 |    216600 |  0.63 |
+| F8 Muxes                |   680 |     0 |    108300 |  0.63 |
++-------------------------+-------+-------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 18455 |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| Block RAM Tile |    0 |     0 |      1470 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |      1470 |  0.00 |
+|   RAMB18       |    0 |     0 |      2940 |  0.00 |
++----------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |      3600 |  0.00 |
++-----------+------+-------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |    0 |     0 |       600 |  0.00 |
+| Bonded IPADs                |    0 |     0 |        62 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        40 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |        20 |  0.00 |
+| PHASER_REF                  |    0 |     0 |        20 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        80 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        80 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |        20 |  0.00 |
+| IBUFDS                      |    0 |     0 |       576 |  0.00 |
+| GTHE2_CHANNEL               |    0 |     0 |        20 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        10 |  0.00 |
+| ILOGIC                      |    0 |     0 |       600 |  0.00 |
+| OLOGIC                      |    0 |     0 |       600 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFIO      |    0 |     0 |        80 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
+| BUFMRCE    |    0 |     0 |        40 |  0.00 |
+| BUFHCE     |    0 |     0 |       240 |  0.00 |
+| BUFR       |    0 |     0 |        80 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+-------+---------------------+
+| Ref Name |  Used | Functional Category |
++----------+-------+---------------------+
+| FDRE     | 18455 |        Flop & Latch |
+| LUT4     |  8194 |                 LUT |
+| LUT6     |  2732 |                 LUT |
+| CARRY4   |  2048 |          CarryLogic |
+| MUXF7    |  1360 |               MuxFx |
+| LUT3     |  1082 |                 LUT |
+| MUXF8    |   680 |               MuxFx |
+| LUT2     |     7 |                 LUT |
+| LUT5     |     2 |                 LUT |
+| LUT1     |     2 |                 LUT |
++----------+-------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Mar  7 02:07:00 2020...

@@ -169,7 +169,7 @@ fire2_expand_3_end<=1'b0;
 fire3_expand_3_end<=1'b0;
 end
 always@(posedge clk) begin
-	if(clr_pulse && (fire2_expand_3_en || fire3_expand_3_en) && !(fire2_expand_3_end && fire3_expand_3_end)) begin
+	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 ) begin 
 				if (fire2_expand_3_en)
@@ -199,13 +199,13 @@ always @(posedge clk /*or negedge rst*/) begin
 		fire3_expand_3_end <= 1'b0 ; 
 	end
 	else*/ if (fire2_expand_3_en) begin
-		if (fire2_expand_3_timer == WOUT**2+1)
+		if (fire2_expand_3_timer > WOUT**2)
 			fire2_expand_3_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire2_expand_3_timer<= fire2_expand_3_timer+1 ; 
 		end
 	else if (fire3_expand_3_en) begin
-		if (fire3_expand_3_timer == WOUT**2+1)
+		if (fire3_expand_3_timer > WOUT**2)
 			fire3_expand_3_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire3_expand_3_timer<= fire3_expand_3_timer+1 ; 

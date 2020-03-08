@@ -121,7 +121,7 @@ fire6_expand1_timer=0;
 fire6_expand1_end=1'b0;
 end
 always@(posedge clk) begin
-	if(clr_pulse && fire6_expand1_en && !fire6_expand1_end) begin
+	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 )
 				ofm[i] <= 16'b0 ;

@@ -11,33 +11,36 @@ module conv10_1_2 #(
 )
 (
 	input clk,
-	input conv10_1_en_i,
-	input conv10_2_en_i,
-	input [15:0] ifm_1_i,
-	input [15:0] ifm_2_i,
+	input conv10_1_en,
+	input conv10_2_en,
+	input [15:0] ifm_1,
+	input [15:0] ifm_2,
 	input ram_feedback_1,
 	input ram_feedback_2,
 	output conv10_1_finish,
 	output conv10_2_finish,
 	output reg conv10_1_sample,
-	output reg [WIDTH-1:0] ofm_1 [0:DSP_NO-1],
-	output reg [WIDTH-1:0] ofm_2 [0:DSP_NO-1]
+	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
 	reg conv10_1_end;
 	reg conv10_2_end;
-	reg [WIDTH-1:0] ifm_1 ;
+
+/*	reg [WIDTH-1:0] ifm_1 ;
 	reg [WIDTH-1:0] ifm_2 ;
 	reg conv10_1_en ;
 	reg conv10_2_en ;
+	*/
 ////////////////////////
 /* REGISTERING INPUTS */
 ////////////////////////
+/*
 always @(posedge clk) begin
 	conv10_1_en <= conv10_1_en_i ;
 	conv10_2_en <= conv10_2_en_i ;
 	ifm_1<= ifm_1_i ; 
 	ifm_2<= ifm_2_i ; 
 end
+*/
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
 reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
@@ -167,12 +170,9 @@ always @(*) begin
 	end
 end
 always@(posedge clk) begin
-	if(clr_pulse && (conv10_1_en || conv10_2_en) && !(conv10_1_end && conv10_2_end)) begin
+	if(clr_pulse ) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
-				if (conv10_1_en)
-					ofm_1[i] <= {ofmw2[i][31],ofmw2[i][29:15]};
-				else
-					ofm_2[i] <= {ofmw2[i][31],ofmw2[i][29:15]};
+				ofm[i] <= {ofmw2[i][31],ofmw2[i][29:15]};
 		end
 	end
 end
@@ -183,13 +183,13 @@ reg [$clog2(WOUT**2):0] conv10_1_timer ;
 reg [$clog2(WOUT**2):0] conv10_2_timer ;
 always @(posedge clk ) begin
 	if (conv10_1_en) begin
-		if (conv10_1_timer == WOUT**2+1)
+		if (conv10_1_timer > WOUT**2)
 			conv10_1_end <= 1'b1 ;
 		else if (clr_pulse)
 			conv10_1_timer<= conv10_1_timer+1 ; 
 		end
 	else begin
-		if (conv10_2_timer == WOUT**2+1)
+		if (conv10_2_timer > WOUT**2)
 			conv10_2_end <= 1'b1 ;
 		else if (clr_pulse)
 			conv10_2_timer<= conv10_2_timer+1 ; 

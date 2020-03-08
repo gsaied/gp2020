@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Feb 22 19:51:02 2020
-| Host         : GCS running 64-bit Ubuntu 18.04.3 LTS
+| Date         : Thu Mar  5 17:35:34 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -file utiliziation.rpt
 | Design       : fire4_5_expand_1
 | Device       : 7vx690tffg1157-3
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 6764 |     0 |    433200 |  1.56 |
-|   LUT as Logic          | 6764 |     0 |    433200 |  1.56 |
+| Slice LUTs*             | 6880 |     0 |    433200 |  1.59 |
+|   LUT as Logic          | 6880 |     0 |    433200 |  1.59 |
 |   LUT as Memory         |    0 |     0 |    174200 |  0.00 |
-| Slice Registers         | 4265 |     0 |    866400 |  0.49 |
-|   Register as Flip Flop | 4265 |     0 |    866400 |  0.49 |
+| Slice Registers         | 4270 |     0 |    866400 |  0.49 |
+|   Register as Flip Flop | 4270 |     0 |    866400 |  0.49 |
 |   Register as Latch     |    0 |     0 |    866400 |  0.00 |
 | F7 Muxes                | 1575 |     0 |    216600 |  0.73 |
 | F8 Muxes                |    0 |     0 |    108300 |  0.00 |
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 167   |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 4098  |          Yes |       Reset |            - |
+| 0     |          Yes |           - |        Reset |
+| 1     |          Yes |         Set |            - |
+| 4269  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -88,27 +88,27 @@ Table of Contents
 4. IO and GT Specific
 ---------------------
 
-+-----------------------------+------+-------+-----------+--------+
-|          Site Type          | Used | Fixed | Available |  Util% |
-+-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  | 4137 |     0 |       600 | 689.50 |
-| Bonded IPADs                |    0 |     0 |        62 |   0.00 |
-| Bonded OPADs                |    0 |     0 |        40 |   0.00 |
-| PHY_CONTROL                 |    0 |     0 |        20 |   0.00 |
-| PHASER_REF                  |    0 |     0 |        20 |   0.00 |
-| OUT_FIFO                    |    0 |     0 |        80 |   0.00 |
-| IN_FIFO                     |    0 |     0 |        80 |   0.00 |
-| IDELAYCTRL                  |    0 |     0 |        20 |   0.00 |
-| IBUFDS                      |    0 |     0 |       576 |   0.00 |
-| GTHE2_CHANNEL               |    0 |     0 |        20 |   0.00 |
-| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |   0.00 |
-| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |   0.00 |
-| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
-| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |   0.00 |
-| IBUFDS_GTE2                 |    0 |     0 |        10 |   0.00 |
-| ILOGIC                      |    0 |     0 |       600 |   0.00 |
-| OLOGIC                      |    0 |     0 |       600 |   0.00 |
-+-----------------------------+------+-------+-----------+--------+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |    0 |     0 |       600 |  0.00 |
+| Bonded IPADs                |    0 |     0 |        62 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        40 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |        20 |  0.00 |
+| PHASER_REF                  |    0 |     0 |        20 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        80 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        80 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |        20 |  0.00 |
+| IBUFDS                      |    0 |     0 |       576 |  0.00 |
+| GTHE2_CHANNEL               |    0 |     0 |        20 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        10 |  0.00 |
+| ILOGIC                      |    0 |     0 |       600 |  0.00 |
+| OLOGIC                      |    0 |     0 |       600 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
 
 
 5. Clocking
@@ -117,7 +117,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
 | BUFIO      |    0 |     0 |        80 |  0.00 |
 | MMCME2_ADV |    0 |     0 |        20 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
@@ -151,20 +151,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     | 4099 |                  IO |
-| FDRE     | 4098 |        Flop & Latch |
-| LUT5     | 3723 |                 LUT |
-| LUT2     | 2076 |                 LUT |
+| FDRE     | 4269 |        Flop & Latch |
+| LUT5     | 3721 |                 LUT |
+| LUT2     | 2071 |                 LUT |
 | MUXF7    | 1575 |               MuxFx |
 | CARRY4   | 1024 |          CarryLogic |
-| LUT3     |  639 |                 LUT |
-| LUT1     |  579 |                 LUT |
-| FDCE     |  167 |        Flop & Latch |
+| LUT1     |  604 |                 LUT |
+| LUT3     |  393 |                 LUT |
+| LUT6     |  266 |                 LUT |
 | DSP48E1  |  128 |    Block Arithmetic |
-| LUT4     |  100 |                 LUT |
-| LUT6     |   40 |                 LUT |
-| IBUF     |   38 |                  IO |
-| BUFG     |    1 |               Clock |
+| LUT4     |   99 |                 LUT |
+| FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 
 

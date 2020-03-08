@@ -129,7 +129,7 @@ fire6_squeeze_timer=0;
 fire6_squeeze_end=1'b0;
 end
 always@(posedge clk) begin
-	if(clr_pulse && fire6_squeeze_en && !fire6_squeeze_end) begin
+	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 )
 				ofm[i] <= 16'b0 ;
@@ -147,7 +147,7 @@ always @(posedge clk/* or negedge rst*/) begin
 		fire6_squeeze_timer<= 0 ;
 		fire6_squeeze_end <= 1'b0 ;
 	end
-	else */if (fire6_squeeze_timer == WOUT**2+1)
+	else */if (fire6_squeeze_timer > WOUT**2)
 		fire6_squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire6_squeeze_timer<= fire6_squeeze_timer+1 ;
