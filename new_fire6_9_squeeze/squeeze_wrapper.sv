@@ -9,10 +9,10 @@ module squeeze_wrapper #(
 
         input clk,
         input rst,
-        input fire8_squeeze_en,
-        input fire9_squeeze_en,
-        input [WIDTH-1:0] ifm8,
-        input [WIDTH-1:0] ifm9,
+        input fire8_squeeze_en_i,
+        input fire9_squeeze_en_i,
+        input [WIDTH-1:0] ifm8_i,
+        input [WIDTH-1:0] ifm9_i,
         input ram_feedback8,
         input ram_feedback9,
         output reg fire8_squeeze_sample,
@@ -25,12 +25,22 @@ module squeeze_wrapper #(
 wire [WIDTH-1:0] kernels [0:DSP_NO-1] ;
 wire rom_clr_pulse_8;
 wire rom_clr_pulse_9;
+reg fire8_squeeze_en ;
+reg fire9_squeeze_en ;
+reg [WIDTH-1:0] ifm8 ;
+reg [WIDTH-1:0] ifm9 ;
+always @(posedge clk) begin
+	fire8_squeeze_en  <= fire8_squeeze_en_i ;
+	fire9_squeeze_en  <= fire9_squeeze_en_i ;
+	ifm8<= ifm8_i ; 
+	ifm9<= ifm9_i ; 
+end
 fire8_squeeze u_8 (
 	.kernels(kernels),
 	.clk(clk),
 	.rom_clr_pulse_o(rom_clr_pulse_8),
-	.fire8_squeeze_en_i(fire8_squeeze_en),
-	.ifm_i(ifm8),
+	.fire8_squeeze_en(fire8_squeeze_en),
+	.ifm(ifm8),
 	.ram_feedback(ram_feedback8),
 	.fire8_squeeze_sample(fire8_squeeze_sample),
 	.fire8_squeeze_finish(fire8_squeeze_finish),
@@ -38,9 +48,9 @@ fire8_squeeze u_8 (
 );
 fire9Squeeze u_9 (
 	.clk(clk),
-	.fire9Squeeze_en_i(fire9_squeeze_en),
+	.fire9Squeeze_en(fire9_squeeze_en),
 	.rom_clr_pulse_o(rom_clr_pulse_9),
-	.ifm_i(ifm9),
+	.ifm(ifm9),
 	.kernels(kernels),
 	.ram_feedback(ram_feedback9),
 	.fire9Squeeze_sample(fire9_squeeze_sample),

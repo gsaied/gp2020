@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar  9 12:52:20 2020
+# Process ID: 11251
+# Current directory: /home/gsaied/Desktop/old_rtl/aspect_test
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/aspect_test/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/aspect_test/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+couldn't read file "synth.tcl": no such file or directory
+cp ../fire5_squeeze/synth.tcl .
+WARNING: [Common 17-259] Unknown Tcl command 'cp ../fire5_squeeze/synth.tcl .' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+vi synth.tcl 
+WARNING: [Common 17-259] Unknown Tcl command 'vi synth.tcl' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+viva
+invalid command name "viva"
+source synth.tcl 
+# read_verilog -sv [ glob *.sv ] 
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+ERROR: [Vivado 12-172] File or Directory 'temp.xdc' does not exist
+cp ../fire5_squeeze/temp.xdc 
+WARNING: [Common 17-259] Unknown Tcl command 'cp ../fire5_squeeze/temp.xdc' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+child process exited abnormally
+cp ../fire5_squeeze/temp.xdc . 
+WARNING: [Common 17-259] Unknown Tcl command 'cp ../fire5_squeeze/temp.xdc .' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  9 12:53:17 2020...

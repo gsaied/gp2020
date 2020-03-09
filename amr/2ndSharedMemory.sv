@@ -1,25 +1,3 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 02/14/2020 06:49:05 PM
-// Design Name: 
-// Module Name: 2ndSharedMemory
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 module SecondSharedMemory#(
     parameter ram_num=16,
     parameter num_instances1=7,
@@ -30,7 +8,6 @@ module SecondSharedMemory#(
 
 (
 input clk,
-input rst,
 input[width-1:0] squeeze2[0:ram_num-1],
 input [width-1:0] squeeze3[0:ram_num-1],
 input [width-1:0] squeeze4[0:2*ram_num-1],
@@ -63,6 +40,7 @@ input ensqueeze8,
 input squeeze8_end,
 input ensqueeze9,
 input squeeze9_end,
+input conv10_1end,
 output reg enexpand2,
 output reg enexpand3,
 output reg enexpand4,
@@ -87,7 +65,7 @@ output reg [width-1:0] expand81x1,
 output reg [width-1:0] expand83x3,
 output reg [width-1:0] expand91x1,
 output reg [width-1:0] expand93x3,
-output reg [width-1:0] doutb [0:38][0:ram_num-1]
+output reg [width-1:0] doutb [0:13][0:ram_num-1]
     );
    
    
@@ -102,6 +80,7 @@ reg [width-1:0] dina1 [0:num_instances1-1][0:ram_num-1];
 reg [width-1:0] douta1 [0:num_instances1-1][0:ram_num-1];
 reg [width-1:0] douta2 [0:num_instances2-1][0:ram_num-1];
 reg [width-1:0] dina2 [0:num_instances2-1][0:ram_num-1];
+reg [width-1:0] dinb [0:ram_num-1];
 reg [ram_num-1:0] ena2[0:num_instances2-1];
 reg [ram_num-1:0] web;
 reg [ram_num-1:0] enb;
@@ -109,49 +88,40 @@ reg [ram_num-1:0] wea1[0:num_instances1-1];
 reg [ram_num-1:0] wea2[0:num_instances2-1];
 reg [ram_num-1:0] ena1[0:num_instances1-1];
    
-genvar i;
 generate // 2 ram blocks ,each contains 8 instances . port a signals are used , port b signals aren't used.
-    for (i=0; i < num_instances1 ; i=i+1) begin :ram_3d1 
+    for (genvar g=0; g < 7 ; g=g+1) begin :ram_3d1 
         ram_3d #(
         .ram_num(ram_num),
         .width(width),
         .address(address))
         u(
         .clk(clk), 
-        .rst(rst), 
-        .wea(wea1[i]), 
-        .ena(ena1[i]), 
+        .wea(wea1[g]), 
+        .ena(ena1[g]), 
         .web(web), 
         .enb(enb), 
         .addra(addra1),
         .addrb(addrb1),
-        .dina(dina1[i]),
-        .dinb(0),
-        .douta(douta1[i]),
-        .doutb(doutb[i])
+        .dina(dina1[g]),
+        .douta(douta1[g]) 
         );
     end
 
-
-
-    for (i=0; i < num_instances2 ; i=i+1) begin :ram_3d2 
+    for (genvar kh=0; kh < 7 ; kh=kh+1) begin :ram_3d2 
         ram_3d #(
         .ram_num(ram_num),
         .width(width),
         .address(address))
         u(
         .clk(clk), 
-        .rst(rst), 
-        .wea(wea2[i]), 
-        .ena(ena2[i]), 
+        .wea(wea2[kh]), 
+        .ena(ena2[kh]), 
         .web(web), 
         .enb(enb), 
         .addra(addra2),
         .addrb(addrb2),
-        .dina(dina2[i]),
-        .dinb(0),
-        .douta(douta2[i]),
-        .doutb(doutb[i+7])
+        .dina(dina2[kh]),
+        .douta(douta2[kh]) 
         );
     end
     
@@ -163,20 +133,21 @@ reg[2:0] set1_counter=0;
 reg[2:0] set2_counter=0;
 reg flag1=0;
 reg flag2=0;
+reg flag3=0;
 reg flag4=0;
-reg squeeze2rst,expand2rst,squeeze3rst,expand3rst,squeeze4rst,expand4rst,squeeze5rst,expand5rst,squeeze6rst,expand6rst,squeeze7rst,expand7rst,squeeze8rst,expand8rst,squeeze9rst,expand9rst=1;
+reg squeeze2rst,expand2rst,squeeze3rst,expand3rst,squeeze4rst,expand4rst,squeeze5rst,expand5rst,squeeze6rst,expand6rst,squeeze7rst,expand7rst,squeeze8rst,expand8rst,squeeze9rst,expand9rst,conv10_1rst,conv10_2rst=1;
 reg[9:0] startdata;
 reg[2:0] norm_numofchannels;
-reg[3:0] randomcounter;
+reg [4:0] ram_numcounter;
 wire newlayer;
-reg flagsqueeze2;
 reg flagreset;
+//wire readinglayer;
 /////////////// read signals
 reg[14:0] index1;//real index in ram
 reg[14:0] index1_shifted;//real index in ram
 reg[14:0] win1;// first index in windows
 reg[11:0] numwin1;//total number of windows
-reg[5:0] rowcounter;//to put internal padding
+reg[6:0] rowcounter;//to put internal padding
 reg[3:0] channels_1;
 reg[3:0] channels1_1;
 reg[3:0] channels2_1;
@@ -190,7 +161,6 @@ reg[14:0] winref1;
 reg[14:0] winref2;
 reg[11:0] numwin2;//total number of windows
 reg[3:0] channels_2;
-reg[4:0] ram_numcounter;
 reg[3:0] channels1_2;
 reg[3:0] channels2_2;
 reg[3:0] channels3_2;
@@ -218,6 +188,8 @@ reg flagread1_shiftedagainagain;
 reg resetmem;//initialize memory with zeros
 reg[14:0] truncated_index2;//index for new ram
 reg[14:0] truncated_index1;//index for new ram
+reg shift1conv1;
+reg shift2conv1;
 reg shift1expand2;
 reg shift2expand2;
 reg shift1squeeze2;
@@ -250,194 +222,226 @@ reg shift1expand9;
 reg shift2expand9;
 reg shift1squeeze9;
 reg shift2squeeze9;
+reg shift1conv10_1;
+reg shift2conv10_1;
+reg shift1conv10_2;
+reg shift2conv10_2;
+
+initial begin
+    shift1expand2=1;
+        shift2expand2=1;
+        expand2rst=1;
+        shift1squeeze2=1;
+        shift2squeeze2=1;
+        squeeze2rst=1;
+        shift1expand3=1;
+        shift2expand3=1;
+        expand3rst=1;
+        shift1squeeze3=1;
+        shift2squeeze3=1;
+        squeeze3rst=1;
+        shift1expand4=1;
+        shift2expand4=1;
+        expand4rst=1;
+        shift1squeeze4=1;
+        shift2squeeze4=1;
+        squeeze4rst=1;
+        shift1expand5=1;
+        shift2expand5=1;
+        expand5rst=1;
+        shift1squeeze5=1;
+        shift2squeeze5=1;
+        squeeze5rst=1;
+        shift1expand6=1;
+        shift2expand6=1;
+        expand6rst=1;
+        shift1squeeze6=1;
+        shift2squeeze6=1;
+        squeeze6rst=1;
+        shift1expand7=1;
+        shift2expand7=1;
+        expand7rst=1;
+        shift1squeeze7=1;
+        shift2squeeze7=1;
+        squeeze7rst=1;
+        shift1expand8=1;
+        shift2expand8=1;
+        expand8rst=1;
+        shift1squeeze8=1;
+        shift2squeeze8=1;
+        squeeze9rst=1;
+        shift1expand9=1;
+        shift2expand9=1;
+        expand9rst=1;
+        shift1squeeze9=1;
+        shift2squeeze9=1;
+        squeeze9rst=1;
+        set1_counter=0;
+        flag1=0;
+        flag2=0;
+        set2_counter=0;
+        resetmem=0;
+        rowcounter=0;
+        flag4=0;
+        flagreset=0;
+        for(int j=0;j<ram_num;j++)begin
+               dinb[j]=0;
+        end
+        for(int addressrams_counter=0;addressrams_counter<ram_num;addressrams_counter++) begin
+        
+            addra1[addressrams_counter]=10'b1111111111;
+            addra2[addressrams_counter]=10'b1111111111;
+	    enb[addressrams_counter]=0;
+            web[addressrams_counter]=0;
+            for(int instances_counter=0;instances_counter<num_instances1;instances_counter++) begin
+                ena1[instances_counter][addressrams_counter]=0;
+                wea1[instances_counter][addressrams_counter]=0;
+                
+            end
+	    for(int instances_counter=0;instances_counter<num_instances2;instances_counter++) begin
+                ena2[instances_counter][addressrams_counter]=0;
+                wea2[instances_counter][addressrams_counter]=0;
+                
+            end
+        end
+        enexpand2=0;
+        enexpand3=0;
+        enexpand4=0;
+        enexpand5=0;
+        enexpand6=0;
+        enexpand7=0;
+        enexpand8=0;
+        enexpand9=0;
+        startcounter=0;
+        expand21x1=0;
+        expand31x1=0;
+        expand41x1=0;
+        expand51x1=0;
+        expand61x1=0;
+        expand71x1=0;
+        expand81x1=0;
+        expand91x1=0;
+        expand23x3=0;
+        expand33x3=0;
+        expand43x3=0;
+        expand53x3=0;
+        expand63x3=0;
+        expand73x3=0;
+        expand83x3=0;
+        expand93x3=0;
+        index2_shifted=0;
+        truncated_index2=0;
+        index1_shifted=0;
+        truncated_index1=0;
+end
 /////////// reset signals control for all layers
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1expand2<=1;
-        shift2expand2<=1;
-        expand2rst<=1;
-    end
-    else if(squeeze2_end)begin
+always@(posedge clk  ) begin
+    if(squeeze2_end)begin
         shift1expand2<=0;
         shift2expand2<=shift1expand2;
         expand2rst<=shift2expand2;
         end
     end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1squeeze2<=1;
-        shift2squeeze2<=1;
-        squeeze2rst<=1;
-    end
-    else if(ensqueeze2)begin
+always@(posedge clk  ) begin
+    if(ensqueeze2)begin
         shift1squeeze2<=0;
         shift2squeeze2<=shift1squeeze2;
         squeeze2rst<=shift2squeeze2;
     end
 end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1expand3<=1;
-        shift2expand3<=1;
-        expand3rst<=1;
-    end
-    else if(squeeze3_end)begin
+always@(posedge clk  ) begin
+    if(squeeze3_end)begin
         shift1expand3<=0;
         shift2expand3<=shift1expand3;
         expand3rst<=shift2expand3;
         end
     end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1squeeze3<=1;
-        shift2squeeze3<=1;
-        squeeze3rst<=1;
-    end
-    else if(ensqueeze3)begin
+always@(posedge clk  ) begin
+    if(ensqueeze3)begin
         shift1squeeze3<=0;
         shift2squeeze3<=shift1squeeze3;
         squeeze3rst<=shift2squeeze3;
     end
 end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1expand4<=1;
-        shift2expand4<=1;
-        expand4rst<=1;
-    end
-    else if(squeeze4_end)begin
+always@(posedge clk  ) begin
+    if(squeeze4_end)begin
         shift1expand4<=0;
         shift2expand4<=shift1expand4;
         expand4rst<=shift2expand4;
         end
     end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1squeeze4<=1;
-        shift2squeeze4<=1;
-        squeeze4rst<=1;
-    end
-    else if(ensqueeze4)begin
+always@(posedge clk  ) begin
+    if(ensqueeze4)begin
         shift1squeeze4<=0;
         shift2squeeze4<=shift1squeeze4;
         squeeze4rst<=shift2squeeze4;
     end
 end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1expand5<=1;
-        shift2expand5<=1;
-        expand5rst<=1;
-    end
-    else if(squeeze5_end)begin
+always@(posedge clk  ) begin
+    if(squeeze5_end)begin
         shift1expand5<=0;
         shift2expand5<=shift1expand5;
         expand5rst<=shift2expand5;
         end
     end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1squeeze5<=1;
-        shift2squeeze5<=1;
-        squeeze5rst<=1;
-    end
-    else if(ensqueeze5)begin
+always@(posedge clk  ) begin
+    if(ensqueeze5)begin
         shift1squeeze5<=0;
         shift2squeeze5<=shift1squeeze5;
         squeeze5rst<=shift2squeeze5;
     end
 end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1expand6<=1;
-        shift2expand6<=1;
-        expand6rst<=1;
-    end
-    else if(squeeze6_end)begin
+always@(posedge clk  ) begin
+    if(squeeze6_end)begin
         shift1expand6<=0;
         shift2expand6<=shift1expand6;
         expand6rst<=shift2expand6;
         end
     end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1squeeze6<=1;
-        shift2squeeze6<=1;
-        squeeze6rst<=1;
-    end
-    else if(ensqueeze6)begin
+always@(posedge clk  ) begin
+    if(ensqueeze6)begin
         shift1squeeze6<=0;
         shift2squeeze6<=shift1squeeze6;
         squeeze6rst<=shift2squeeze6;
     end
 end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1expand7<=1;
-        shift2expand7<=1;
-        expand7rst<=1;
-    end
-    else if(squeeze7_end)begin
+always@(posedge clk  ) begin
+    if(squeeze7_end)begin
         shift1expand7<=0;
         shift2expand7<=shift1expand7;
         expand7rst<=shift2expand7;
         end
     end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1squeeze7<=1;
-        shift2squeeze7<=1;
-        squeeze7rst<=1;
-    end
-    else if(ensqueeze7)begin
+always@(posedge clk  ) begin
+    if(ensqueeze7)begin
         shift1squeeze7<=0;
         shift2squeeze7<=shift1squeeze7;
         squeeze7rst<=shift2squeeze7;
     end
 end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1expand8<=1;
-        shift2expand8<=1;
-        expand8rst<=1;
-    end
-    else if(squeeze8_end)begin
+always@(posedge clk  ) begin
+    if(squeeze8_end)begin
         shift1expand8<=0;
         shift2expand8<=shift1expand8;
         expand8rst<=shift2expand8;
         end
     end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1squeeze8<=1;
-        shift2squeeze8<=1;
-        squeeze8rst<=1;
-    end
-    else if(ensqueeze8)begin
+always@(posedge clk  ) begin
+    if(ensqueeze8)begin
         shift1squeeze8<=0;
         shift2squeeze8<=shift1squeeze8;
         squeeze8rst<=shift2squeeze8;
     end
 end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1expand9<=1;
-        shift2expand9<=1;
-        expand9rst<=1;
-    end
-    else if(squeeze9_end)begin
+always@(posedge clk  ) begin
+    if(squeeze9_end)begin
         shift1expand9<=0;
         shift2expand9<=shift1expand9;
         expand9rst<=shift2expand9;
         end
     end
-always@(posedge clk ) begin
-    if(rst)begin
-        shift1squeeze9<=1;
-        shift2squeeze9<=1;
-        squeeze9rst<=1;
-    end
-    else if(ensqueeze9)begin
+always@(posedge clk  ) begin
+    if(ensqueeze9)begin
         shift1squeeze9<=0;
         shift2squeeze9<=shift1squeeze9;
         squeeze9rst<=shift2squeeze9;
@@ -850,41 +854,11 @@ always@(*) begin
                    dina2[i][j]=0;
                 end
             end
-            
         end
-	  
-    endcase
-end 
-always@(posedge clk ) begin
-    if(rst) begin
-        set1_counter<=0;
-        flag1<=0;
-        flag2<=0;
-        set2_counter<=0;
-        resetmem<=0;
-        rowcounter<=0;
-        flag4<=0;
-        flagreset<=0;
-        for(int addressrams_counter=0;addressrams_counter<ram_num;addressrams_counter++) begin
-        
-            addra1[addressrams_counter]<=10'b1111111111;
-            addra2[addressrams_counter]<=10'b1111111111;
-	    enb[addressrams_counter]<=0;
-            web[addressrams_counter]<=0;
-            for(int instances_counter=0;instances_counter<num_instances1;instances_counter++) begin
-                ena1[instances_counter][addressrams_counter]<=0;
-                wea1[instances_counter][addressrams_counter]<=0;
-                
-            end
-	    for(int instances_counter=0;instances_counter<num_instances2;instances_counter++) begin
-                ena2[instances_counter][addressrams_counter]<=0;
-                wea2[instances_counter][addressrams_counter]<=0;
-                
-            end
-        end
-        
+        endcase
     end
-    else if(rw==1) begin
+always@(posedge clk) begin
+    if(rw==1) begin
         if(newlayer) begin
             set1_counter<=0;
             flag1<=0;
@@ -932,12 +906,53 @@ always@(posedge clk ) begin
         end
         if(clock1) begin
             if(!flag1) begin
-               for(randomcounter=0;randomcounter<norm_numofchannels;randomcounter++)begin//to open the enables of instances for each layer 
-                   for(int rams=0;rams<ram_num;rams++)begin
-                    ena1[set1_counter+randomcounter][rams]<=1;
-                    wea1[set1_counter+randomcounter][rams]<=1;
+               
+               if(ensqueeze2||ensqueeze3)begin
+                    for(int rams=0;rams<ram_num;rams++)begin
+                    ena1[set1_counter][rams]<=1;
+                    wea1[set1_counter][rams]<=1;
                    end
-               end
+              end
+              else if(ensqueeze4||ensqueeze5)begin
+                    for(int rams=0;rams<ram_num;rams++)begin
+                    ena1[set1_counter][rams]<=1;
+                    wea1[set1_counter][rams]<=1;
+                    ena1[set1_counter+1][rams]<=1;
+                    wea1[set1_counter+1][rams]<=1;
+                   end
+              end
+              else if(ensqueeze6||ensqueeze7)begin
+                    for(int rams=0;rams<ram_num;rams++)begin
+                    ena1[set1_counter][rams]<=1;
+                    wea1[set1_counter][rams]<=1;
+                    ena1[set1_counter+1][rams]<=1;
+                    wea1[set1_counter+1][rams]<=1;
+                    ena1[set1_counter+2][rams]<=1;
+                    wea1[set1_counter+2][rams]<=1;
+                    ena1[set1_counter+3][rams]<=1;
+                    wea1[set1_counter+3][rams]<=1;
+                   end
+              end
+              else if(ensqueeze8||ensqueeze9)begin
+                    for(int rams=0;rams<ram_num;rams++)begin
+                    ena1[set1_counter][rams]<=1;
+                    wea1[set1_counter][rams]<=1;
+                    ena1[set1_counter+1][rams]<=1;
+                    wea1[set1_counter+1][rams]<=1;
+                    ena1[set1_counter+2][rams]<=1;
+                    wea1[set1_counter+2][rams]<=1;
+                    ena1[set1_counter+3][rams]<=1;
+                    wea1[set1_counter+3][rams]<=1;
+                    ena1[set1_counter+4][rams]<=1;
+                    wea1[set1_counter+4][rams]<=1;
+                    ena1[set1_counter+5][rams]<=1;
+                    wea1[set1_counter+5][rams]<=1;
+                    ena1[set1_counter+6][rams]<=1;
+                    wea1[set1_counter+6][rams]<=1;
+                   end
+              end
+              
+              
                
               if(addra1[0]==1022) begin
                    if(set1_counter>=num_instances1-1)begin
@@ -965,17 +980,56 @@ always@(posedge clk ) begin
         
         if(clock2) begin
                 if(!flag2) begin
-                for(randomcounter=0;randomcounter<norm_numofchannels;randomcounter++)begin//to open the enables of instances for each layer 
-                   for(int rams=0;rams<ram_num;rams++)begin
-                    ena2[set2_counter+randomcounter][rams]<=1;
-                    wea2[set2_counter+randomcounter][rams]<=1;
+                if(ensqueeze2||ensqueeze3)begin
+                    for(int rams=0;rams<ram_num;rams++)begin
+                    ena2[set2_counter][rams]<=1;
+                    wea2[set2_counter][rams]<=1;
                    end
-                 end
-                   if({1'b0,rowcounter}==lengthofrow&&addra2[0]!=1020) begin
+              end
+              else if(ensqueeze4||ensqueeze5)begin
+                    for(int rams=0;rams<ram_num;rams++)begin
+                    ena2[set2_counter][rams]<=1;
+                    wea2[set2_counter][rams]<=1;
+                    ena2[set2_counter+1][rams]<=1;
+                    wea2[set2_counter+1][rams]<=1;
+                   end
+              end
+              else if(ensqueeze6||ensqueeze7)begin
+                    for(int rams=0;rams<ram_num;rams++)begin
+                    ena2[set2_counter][rams]<=1;
+                    wea2[set2_counter][rams]<=1;
+                    ena2[set2_counter+1][rams]<=1;
+                    wea2[set2_counter+1][rams]<=1;
+                    ena2[set2_counter+2][rams]<=1;
+                    wea2[set2_counter+2][rams]<=1;
+                    ena2[set2_counter+3][rams]<=1;
+                    wea2[set2_counter+3][rams]<=1;
+                   end
+              end
+              else if(ensqueeze8||ensqueeze9)begin
+                    for(int rams=0;rams<ram_num;rams++)begin
+                    ena2[set2_counter][rams]<=1;
+                    wea2[set2_counter][rams]<=1;
+                    ena2[set2_counter+1][rams]<=1;
+                    wea2[set2_counter+1][rams]<=1;
+                    ena2[set2_counter+2][rams]<=1;
+                    wea2[set2_counter+2][rams]<=1;
+                    ena2[set2_counter+3][rams]<=1;
+                    wea2[set2_counter+3][rams]<=1;
+                    ena2[set2_counter+4][rams]<=1;
+                    wea2[set2_counter+4][rams]<=1;
+                    ena2[set2_counter+5][rams]<=1;
+                    wea2[set2_counter+5][rams]<=1;
+                    ena2[set2_counter+6][rams]<=1;
+                    wea2[set2_counter+6][rams]<=1;
+                   end
+              end
+              
+                   if(rowcounter==lengthofrow&&addra2[0]!=1020) begin
                        flag4<=1;
                        
                    end
-                   if({1'b0,rowcounter}==lengthofrow)begin
+                   if(rowcounter==lengthofrow)begin
                         rowcounter<=0;
                    end
                    else rowcounter<=rowcounter+1;
@@ -994,7 +1048,7 @@ always@(posedge clk ) begin
                        end
                    end
                    
-                   if(addra2[0]==1022|| (addra2[0]==1020 && flag4)||(addra2[0]==1020 && {1'b0,rowcounter}==lengthofrow )) begin
+                   if(addra2[0]==1022|| (addra2[0]==1020 && flag4)||(addra2[0]==1020 && rowcounter==lengthofrow )) begin
                        if(set2_counter>=num_instances2-1)
                             flag2<=1;
                        else  
@@ -1068,7 +1122,9 @@ always@(posedge clk ) begin
             end
         end
         ///////////////////////////////////////start reading/////////////////////////////////////////////
-        if(!flagread2_shiftedagainagain) begin
+        else begin
+            
+            if(!flagread2_shiftedagainagain)begin
             flagread2_shifted<=flagread2;
             flagread2_shiftedagain<=flagread2_shifted;
             flagread2_shiftedagainagain<=flagread2_shiftedagain;
@@ -1082,14 +1138,13 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances2;instances++)begin
                     if(instances==0)begin
                         ena2[instances][channels1_2]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_2)begin
-                                ena2[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_2)begin
+                                ena2[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin
-                        ena2[instances][channels1_2]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena2[instances][i]<=0;
                         end
@@ -1104,14 +1159,13 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances2;instances++)begin
                     if(instances==1)begin
                         ena2[instances][channels1_2]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_2)begin
-                                ena2[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_2)begin
+                                ena2[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin 
-                        ena2[instances][channels1_2]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena2[instances][i]<=0;
                         end
@@ -1125,14 +1179,13 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances2;instances++)begin
                     if(instances==2)begin
                         ena2[instances][channels1_2]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_2)begin
-                                ena2[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_2)begin
+                                ena2[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin 
-                        ena2[instances][channels1_2]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena2[instances][i]<=0;
                         end
@@ -1146,14 +1199,13 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances2;instances++)begin
                     if(instances==3)begin
                         ena2[instances][channels1_2]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_2)begin
-                                ena2[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_2)begin
+                                ena2[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin 
-                        ena2[instances][channels1_2]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena2[instances][i]<=0;
                         end
@@ -1167,14 +1219,13 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances2;instances++)begin
                     if(instances==4)begin
                         ena2[instances][channels1_2]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_2)begin
-                                ena2[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_2)begin
+                                ena2[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin 
-                        ena2[instances][channels1_2]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena2[instances][i]<=0;
                         end
@@ -1188,14 +1239,13 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances2;instances++)begin
                     if(instances==5)begin
                         ena2[instances][channels1_2]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_2)begin
-                                ena2[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_2)begin
+                                ena2[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin 
-                        ena2[instances][channels1_2]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena2[instances][i]<=0;
                         end
@@ -1209,46 +1259,25 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances2;instances++)begin
                     if(instances==6)begin
                         ena2[instances][channels1_2]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_2)begin
-                                ena2[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_2)begin
+                                ena2[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin 
-                        ena2[instances][channels1_2]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena2[instances][i]<=0;
                         end
                     end
                 end 
             end
-            else if(index2_shifted<8*(2**address)) begin
-                addra2[channels1_2]<=truncated_index2[9:0];
-                a02<=7;
-                a12<=a02;
-                for(int instances=0;instances<num_instances2;instances++)begin
-                    if(instances==7)begin
-                        ena2[instances][channels1_2]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_2)begin
-                                ena2[instances][ram_numcounter]<=0;
-                            end
-                        end
-                    end
-                    else begin 
-                        ena2[instances][channels1_2]<=0;
-                        for (int i=0;i<ram_num;i++)begin
-                            ena2[instances][i]<=0;
-                        end
-                    end
-                end
-            end
+            
                  
             if(col2==2) begin
                     if(row2==2)begin
                         row2<=0;
-                        if(channels_2==ram_num-2)begin
+                        if({1'b0,channels_2}==ram_num-2)begin
                         if({1'b0,channels2_counter}>=numchannels-1)begin
                             if(countwin==rowwin)begin
                                 win2<=win2+2*stride_expand+1;//stride 
@@ -1338,6 +1367,7 @@ always@(posedge clk ) begin
                     ena2[instances_counter][addressrams_counter]<=0;
                 end
             end
+            
         end/// layers read from set2
         if(!flagread1_shiftedagainagain) begin
             flagread1_shifted<=flagread1;
@@ -1353,14 +1383,13 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances1;instances++)begin
                     if(instances==0)begin
                         ena1[instances][channels1_1]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_1)begin
-                                ena1[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_1)begin
+                                ena1[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin
-                        //ena1[instances][channels1_1]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena1[instances][i]<=0;
                         end
@@ -1375,14 +1404,13 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances1;instances++)begin
                     if(instances==1)begin
                         ena1[instances][channels1_1]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_1)begin
-                                ena1[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_1)begin
+                                ena1[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin 
-                        //ena1[instances][channels1_1]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena1[instances][i]<=0;
                         end
@@ -1396,14 +1424,13 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances1;instances++)begin
                     if(instances==2)begin
                         ena1[instances][channels1_1]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_1)begin
-                                ena1[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_1)begin
+                                ena1[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin 
-                        //ena1[instances][channels1_1]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena1[instances][i]<=0;
                         end
@@ -1417,15 +1444,14 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances1;instances++)begin
                     if(instances==3)begin
                         ena1[instances][channels1_1]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_1)begin
-                                ena1[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_1)begin
+                                ena1[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
-                    else begin 
-                        //ena1[instances][channels1_1]<=0;
-                        for (int i=0;i<ram_num;i++)begin
+                    else begin
+                    for (int i=0;i<ram_num;i++)begin
                             ena1[instances][i]<=0;
                         end
                     end
@@ -1438,14 +1464,13 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances1;instances++)begin
                     if(instances==4)begin
                         ena1[instances][channels1_1]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_1)begin
-                                ena1[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_1)begin
+                                ena1[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
-                    else begin 
-                        //ena1[instances][channels1_1]<=0;
+                    else begin
                         for (int i=0;i<ram_num;i++)begin
                             ena1[instances][i]<=0;
                         end
@@ -1459,14 +1484,13 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances1;instances++)begin
                     if(instances==5)begin
                         ena1[instances][channels1_1]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_1)begin
-                                ena1[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_1)begin
+                                ena1[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin 
-                        //ena1[instances][channels1_1]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena1[instances][i]<=0;
                         end
@@ -1480,50 +1504,28 @@ always@(posedge clk ) begin
                 for(int instances=0;instances<num_instances2;instances++)begin
                     if(instances==6)begin
                         ena1[instances][channels1_1]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_1)begin
-                                ena1[instances][ram_numcounter]<=0;
+                        for(ram_numcounter=0;ram_numcounter<ram_num;ram_numcounter++)begin
+                            if(ram_numcounter[3:0]!=channels1_1)begin
+                                ena1[instances][ram_numcounter[3:0]]<=0;
                             end
                         end
                     end
                     else begin 
-                        ena1[instances][channels1_1]<=0;
                         for (int i=0;i<ram_num;i++)begin
                             ena1[instances][i]<=0;
                         end
                     end
                 end 
             end
-            else if(index1_shifted<8*(2**address)) begin
-                addra1[channels1_1]<=truncated_index1[9:0];
-                a01<=7;
-                a11<=a01;
-                for(int instances=0;instances<num_instances2;instances++)begin
-                    if(instances==7)begin
-                        ena1[instances][channels1_1]<=1;
-                        for(ram_numcounter=0;{1'b0,ram_numcounter}<ram_num;ram_numcounter++)begin
-                            if(ram_numcounter!=channels1_1)begin
-                                ena1[instances][ram_numcounter]<=0;
-                            end
-                        end
-                    end
-                    else begin 
-                        //ena1[instances][channels1_1]<=0; check if channels1
-				//range is incuded in ram_num
-                        for (int i=0;i<ram_num;i++)begin
-                            ena1[instances][i]<=0;
-                        end
-                    end
-                end
-            end
+            
             if(col1==0) begin
                     if(row1==0)begin
                         row1<=0;
-                        if(channels_1==ram_num-2)begin
+                        if({1'b0,channels_1}==ram_num-2)begin
                             if(channels1_counter>=numchannels-1)
                             win1<=win1+{13'b0,stride_expand}; //stride 
                         end
-                        if(channels_1==ram_num-1)begin//for expand 2,3 no of channels =ram num
+                        if({1'b0,channels_1}==ram_num-1)begin//for expand 2,3 no of channels =ram num
                             if( channels1_counter<numchannels)begin//for expand 2,3 channels = channels_counter
                                 channels_1<=0;
                                 col1<=0;
@@ -1575,36 +1577,11 @@ always@(posedge clk ) begin
             end
         end    
     end
-end
-always@(posedge clk )begin///////choose enable for reading layer
-    if(rst)begin
-        enexpand2<=0;
-        enexpand3<=0;
-        enexpand4<=0;
-        enexpand5<=0;
-        enexpand6<=0;
-        enexpand7<=0;
-        enexpand8<=0;
-        enexpand9<=0;
-        startcounter<=0;
-        expand21x1<=0;
-        expand31x1<=0;
-        expand41x1<=0;
-        expand51x1<=0;
-        expand61x1<=0;
-        expand71x1<=0;
-        expand81x1<=0;
-        expand91x1<=0;
-        expand23x3<=0;
-        expand33x3<=0;
-        expand43x3<=0;
-        expand53x3<=0;
-        expand63x3<=0;
-        expand73x3<=0;
-        expand83x3<=0;
-        expand93x3<=0;
     end
-    else if(rw==0)begin
+end
+
+always@(posedge clk  )begin///////choose enable for reading layer
+    if(rw==0)begin
         if(newlayer) startcounter<=1;
 
         else begin
@@ -1649,7 +1626,10 @@ always@(posedge clk )begin///////choose enable for reading layer
                 expand91x1<=douta1[a11][channels3_1];
                 expand93x3<=douta2[a12][channels3_2];
                 end
-               
+                /*else if(conv10_2end)begin
+                enconv10_2<=1;
+                conv10_2<=douta[a1][channels3];
+                end*/
             end
             else begin
                 startcounter<=startcounter+1;
@@ -1664,20 +1644,13 @@ always@(posedge clk )begin///////choose enable for reading layer
             enexpand5<=0;
             enexpand6<=0;
             enexpand7<=0;
-	    startcounter<=0;
             enexpand8<=0;
             enexpand9<=0;
         end
 end     
 
-always@(posedge clk )begin/// trancated index sync
-    if(rst)begin
-        index2_shifted<=0;
-        truncated_index2<=0;
-        index1_shifted<=0;
-        truncated_index1<=0;
-    end
-    else begin
+always@(posedge clk  )begin/// trancated index sync
+    if(!flagread1 ||!flagread2) begin
         index2_shifted<=index2;
         if(index2<2**address) truncated_index2<=index2;
         else if(index2<2*(2**address)) truncated_index2<=index2-(2**address);
@@ -1686,31 +1659,6 @@ always@(posedge clk )begin/// trancated index sync
         else if(index2<5*(2**address)) truncated_index2<=index2-4*(2**address);
         else if(index2<6*(2**address)) truncated_index2<=index2-5*(2**address);
         else if(index2<7*(2**address)) truncated_index2<=index2-6*(2**address);
-        else if(index2<8*(2**address)) truncated_index2<=index2-7*(2**address);
-        else if(index2<9*(2**address)) truncated_index2<=index2-8*(2**address);
-        else if(index2<10*(2**address)) truncated_index2<=index2-9*(2**address);
-        else if(index2<11*(2**address)) truncated_index2<=index2-10*(2**address);
-        else if(index2<12*(2**address)) truncated_index2<=index2-11*(2**address);
-        else if(index2<13*(2**address)) truncated_index2<=index2-12*(2**address);
-        else if(index2<14*(2**address)) truncated_index2<=index2-13*(2**address);
-        else if(index2<15*(2**address)) truncated_index2<=index2-14*(2**address);
-        else if(index2<16*(2**address)) truncated_index2<=index2-15*(2**address);
-        else if(index2<17*(2**address)) truncated_index2<=index2-16*(2**address);
-        else if(index2<18*(2**address)) truncated_index2<=index2-17*(2**address);
-        else if(index2<19*(2**address)) truncated_index2<=index2-18*(2**address);
-        else if(index2<20*(2**address)) truncated_index2<=index2-19*(2**address);
-        else if(index2<21*(2**address)) truncated_index2<=index2-20*(2**address);
-        else if(index2<22*(2**address)) truncated_index2<=index2-21*(2**address);
-        else if(index2<23*(2**address)) truncated_index2<=index2-22*(2**address);
-        else if(index2<24*(2**address)) truncated_index2<=index2-23*(2**address);
-        else if(index2<25*(2**address)) truncated_index2<=index2-24*(2**address);
-        else if(index2<26*(2**address)) truncated_index2<=index2-25*(2**address);
-        else if(index2<27*(2**address)) truncated_index2<=index2-26*(2**address);
-        else if(index2<28*(2**address)) truncated_index2<=index2-27*(2**address);
-        else if(index2<29*(2**address)) truncated_index2<=index2-28*(2**address);
-        else if(index2<30*(2**address)) truncated_index2<=index2-29*(2**address);
-        else if(index2<31*(2**address)) truncated_index2<=index2-30*(2**address);
-        else if(index2<32*(2**address)) truncated_index2<=index2-31*(2**address);
         index1_shifted<=index1;
         if(index1<2**address) truncated_index1<=index1;
         else if(index1<2*(2**address)) truncated_index1<=index1-(2**address);
@@ -1719,7 +1667,6 @@ always@(posedge clk )begin/// trancated index sync
         else if(index1<5*(2**address)) truncated_index1<=index1-4*(2**address);
         else if(index1<6*(2**address)) truncated_index1<=index1-5*(2**address);
         else if(index1<7*(2**address)) truncated_index1<=index1-6*(2**address);
-        else if(index1<8*(2**address)) truncated_index1<=index1-7*(2**address);
   end
 end
 endmodule

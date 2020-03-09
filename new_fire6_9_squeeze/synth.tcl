@@ -11,12 +11,11 @@ synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebui
 report_utilization -file utiliziation.rpt
 report_utilization -hierarchical -file hierarchical_utilization.rpt
 report_timing -file post_synth_timing.rpt
-write_checkpoint -force temp_syn.dcp
 if {[get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]] < 0} {
 puts "Found setup timing violations => running physical optimization"
 report_timing -file slack.rpt
 }
 opt_design -directive ExploreSequentialArea
-report_utilization -file post_utiliziation.rpt
-report_utilization -hierarchical -file post_hierarchical_utilization.rpt
-report_timing -file post_opt_timing.rpt
+place_design -no_fanout_opt -directive ExtraTimingOpt
+route_design -directive NoTimingRelaxation -tns_cleanup
+report_timing

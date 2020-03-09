@@ -25,8 +25,9 @@ biasing_fire8_expand3 b7 (
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
-wire [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ;
+reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ;
 wire [WIDTH-1:0] kernels [0:DSP_NO-1] ;
+//always@(posedge clk) kernel_regs <= kernels ; 
 reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
 //////////////////////////////////
 (* keep_hierarchy = "yes" *)
@@ -52,12 +53,10 @@ always @(posedge clk /*or negedge rst*/) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
-/*
 reg layer_en_reg ;
 always @(posedge clk) begin
     layer_en_reg <= fire8_expand3_en  ; 
 end
-*/
 ////////////////////////////
 //GENERATION OF CLR PULSE///
 ////////////////////////////
@@ -95,7 +94,7 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 		.clk(clk),
 	//	.rst(rst),
 		.pix(ifm),
-		.layer_en(1),
+		.layer_en(layer_en_reg),
 		.mul_out(ofmw[i]),
 		.ker(kernels[i])
 	);

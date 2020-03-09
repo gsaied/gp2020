@@ -1,0 +1,508 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar  9 13:44:07 2020
+# Process ID: 14503
+# Current directory: /home/gsaied/Desktop/old_rtl/aspect_test
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/aspect_test/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/aspect_test/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top rom_fire3_squeeze -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14514 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1441.645 ; gain = 91.000 ; free physical = 131 ; free virtual = 4331
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'rom_fire3_squeeze' [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:3]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter ADDR bound to: 7 - type: integer 
+	Parameter NUM bound to: 16 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:15]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:18]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:21]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:24]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:27]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:30]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:33]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:36]
+INFO: [Synth 8-3876] $readmem data file 'new_file_fire3_squeeze_1.mem' is read successfully [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:38]
+INFO: [Synth 8-3876] $readmem data file 'new_file_fire3_squeeze_3.mem' is read successfully [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:39]
+INFO: [Synth 8-3876] $readmem data file 'new_file_fire3_squeeze_5.mem' is read successfully [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:40]
+INFO: [Synth 8-3876] $readmem data file 'new_file_fire3_squeeze_7.mem' is read successfully [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:41]
+INFO: [Synth 8-3876] $readmem data file 'new_file_fire3_squeeze_9.mem' is read successfully [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:42]
+INFO: [Synth 8-3876] $readmem data file 'new_file_fire3_squeeze_11.mem' is read successfully [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:43]
+INFO: [Synth 8-3876] $readmem data file 'new_file_fire3_squeeze_13.mem' is read successfully [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:44]
+INFO: [Synth 8-3876] $readmem data file 'new_file_fire3_squeeze_15.mem' is read successfully [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:45]
+WARNING: [Synth 8-3848] Net rom_out[8] in module/entity rom_fire3_squeeze does not have driver. [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:10]
+WARNING: [Synth 8-3848] Net rom_out[9] in module/entity rom_fire3_squeeze does not have driver. [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:10]
+WARNING: [Synth 8-3848] Net rom_out[10] in module/entity rom_fire3_squeeze does not have driver. [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:10]
+WARNING: [Synth 8-3848] Net rom_out[11] in module/entity rom_fire3_squeeze does not have driver. [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:10]
+WARNING: [Synth 8-3848] Net rom_out[12] in module/entity rom_fire3_squeeze does not have driver. [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:10]
+WARNING: [Synth 8-3848] Net rom_out[13] in module/entity rom_fire3_squeeze does not have driver. [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:10]
+WARNING: [Synth 8-3848] Net rom_out[14] in module/entity rom_fire3_squeeze does not have driver. [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:10]
+WARNING: [Synth 8-3848] Net rom_out[15] in module/entity rom_fire3_squeeze does not have driver. [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'rom_fire3_squeeze' (1#1) [/home/gsaied/Desktop/old_rtl/aspect_test/new_rom.sv:3]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][31]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][30]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][29]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][28]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][27]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][26]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][25]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][24]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][23]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][22]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][21]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][20]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][19]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][18]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][17]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][16]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][15]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][14]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][13]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][12]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][11]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][10]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][9]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][8]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][7]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][6]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][5]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][4]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][3]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][2]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][1]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[8][0]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][31]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][30]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][29]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][28]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][27]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][26]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][25]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][24]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][23]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][22]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][21]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][20]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][19]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][18]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][17]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][16]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][15]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][14]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][13]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][12]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][11]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][10]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][9]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][8]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][7]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][6]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][5]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][4]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][3]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][2]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][1]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[9][0]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][31]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][30]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][29]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][28]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][27]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][26]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][25]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][24]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][23]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][22]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][21]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][20]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][19]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][18]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][17]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][16]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][15]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][14]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][13]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][12]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][11]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][10]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][9]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][8]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][7]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][6]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][5]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][4]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][3]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][2]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][1]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[10][0]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[11][31]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[11][30]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[11][29]
+WARNING: [Synth 8-3331] design rom_fire3_squeeze has unconnected port rom_out[11][28]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1486.395 ; gain = 135.750 ; free physical = 196 ; free virtual = 4352
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1486.395 ; gain = 135.750 ; free physical = 195 ; free virtual = 4351
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1486.395 ; gain = 135.750 ; free physical = 195 ; free virtual = 4351
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/aspect_test/temp.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/gsaied/Desktop/old_rtl/aspect_test/temp.xdc:1]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [/home/gsaied/Desktop/old_rtl/aspect_test/temp.xdc:1]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/aspect_test/temp.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1952.035 ; gain = 0.000 ; free physical = 134 ; free virtual = 3961
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1952.035 ; gain = 0.000 ; free physical = 134 ; free virtual = 3961
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1952.035 ; gain = 0.000 ; free physical = 133 ; free virtual = 3960
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1952.035 ; gain = 601.391 ; free physical = 224 ; free virtual = 4046
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1157-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1952.035 ; gain = 601.391 ; free physical = 224 ; free virtual = 4046
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1952.035 ; gain = 601.391 ; free physical = 223 ; free virtual = 4046
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1952.035 ; gain = 601.391 ; free physical = 219 ; free virtual = 4046
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.035 ; gain = 601.391 ; free physical = 197 ; free virtual = 4023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------------+------------+---------------+----------------+
+|Module Name       | RTL Object | Depth x Width | Implemented As | 
++------------------+------------+---------------+----------------+
+|rom_fire3_squeeze | p_0_out    | 128x32        | LUT            | 
+|rom_fire3_squeeze | p_0_out    | 128x32        | LUT            | 
+|rom_fire3_squeeze | p_0_out    | 128x32        | LUT            | 
+|rom_fire3_squeeze | p_0_out    | 128x32        | LUT            | 
+|rom_fire3_squeeze | p_0_out    | 128x32        | LUT            | 
+|rom_fire3_squeeze | p_0_out    | 128x32        | LUT            | 
+|rom_fire3_squeeze | p_0_out    | 128x32        | LUT            | 
+|rom_fire3_squeeze | p_0_out    | 128x32        | LUT            | 
+|rom_fire3_squeeze | p_0_out    | 128x32        | LUT            | 
+|rom_fire3_squeeze | p_0_out    | 128x32        | LUT            | 
+|rom_fire3_squeeze | p_0_out    | 128x32        | LUT            | 
++------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1958.035 ; gain = 607.391 ; free physical = 135 ; free virtual = 3907
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1958.035 ; gain = 607.391 ; free physical = 139 ; free virtual = 3908
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1966.043 ; gain = 615.398 ; free physical = 140 ; free virtual = 3910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1966.043 ; gain = 615.398 ; free physical = 141 ; free virtual = 3910
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1966.043 ; gain = 615.398 ; free physical = 141 ; free virtual = 3910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1966.043 ; gain = 615.398 ; free physical = 141 ; free virtual = 3910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1966.043 ; gain = 615.398 ; free physical = 141 ; free virtual = 3910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1966.043 ; gain = 615.398 ; free physical = 141 ; free virtual = 3910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1966.043 ; gain = 615.398 ; free physical = 141 ; free virtual = 3910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT3  |    28|
+|2     |LUT6  |   470|
+|3     |MUXF7 |   214|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   712|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1966.043 ; gain = 615.398 ; free physical = 141 ; free virtual = 3910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 256 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1966.043 ; gain = 149.758 ; free physical = 194 ; free virtual = 3963
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1966.051 ; gain = 615.398 ; free physical = 194 ; free virtual = 3963
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 214 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/aspect_test/temp.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/gsaied/Desktop/old_rtl/aspect_test/temp.xdc:1]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [/home/gsaied/Desktop/old_rtl/aspect_test/temp.xdc:1]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/aspect_test/temp.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1987.043 ; gain = 0.000 ; free physical = 138 ; free virtual = 3889
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 111 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1987.043 ; gain = 656.852 ; free physical = 184 ; free virtual = 3935
+# report_utilization -file utiliziation.rpt
+# report_utilization -hierarchical -file hierarchical_utilization.rpt
+# report_timing -file post_synth_timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2552.059 ; gain = 565.016 ; free physical = 143 ; free virtual = 3479
+# write_checkpoint -force temp_syn.dcp
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2552.059 ; gain = 0.000 ; free physical = 143 ; free virtual = 3479
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2593.262 ; gain = 0.000 ; free physical = 135 ; free virtual = 3476
+INFO: [Common 17-1381] The checkpoint '/home/gsaied/Desktop/old_rtl/aspect_test/temp_syn.dcp' has been generated.
+# if {[get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]] < 0} {
+# puts "Found setup timing violations => running physical optimization"
+# report_timing -file slack.rpt
+# }
+Found setup timing violations => running physical optimization
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+# opt_design -directive ExploreSequentialArea
+Command: opt_design -directive ExploreSequentialArea
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: ExploreSequentialArea
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2601.223 ; gain = 5.996 ; free physical = 151 ; free virtual = 3473
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 1c4936270
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2601.223 ; gain = 0.000 ; free physical = 151 ; free virtual = 3473
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1c4936270
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2653.223 ; gain = 0.000 ; free physical = 143 ; free virtual = 3425
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1c4936270
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2653.223 ; gain = 0.000 ; free physical = 143 ; free virtual = 3425
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1c4936270
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2653.223 ; gain = 0.000 ; free physical = 143 ; free virtual = 3425
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1c4936270
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2653.223 ; gain = 0.000 ; free physical = 143 ; free virtual = 3425
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 1c4936270
+
+Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2653.223 ; gain = 0.000 ; free physical = 142 ; free virtual = 3424
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 6 Constant propagation | Checksum: 1c4936270
+
+Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2653.223 ; gain = 0.000 ; free physical = 142 ; free virtual = 3424
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 7 Sweep
+Phase 7 Sweep | Checksum: 1c4936270
+
+Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.30 . Memory (MB): peak = 2653.223 ; gain = 0.000 ; free physical = 142 ; free virtual = 3424
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 8 Resynthesis
+INFO: [Timing 38-35] Done setting XDC timing constraints.

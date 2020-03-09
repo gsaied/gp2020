@@ -9,9 +9,9 @@ module fire9Squeeze #(
 )
 (
 	input clk,
-	input fire9Squeeze_en_i,
+	input fire9Squeeze_en,
 	output rom_clr_pulse_o ,
-	input [WIDTH-1:0] ifm_i,
+	input [WIDTH-1:0] ifm,
 	input [WIDTH-1:0] kernels [0:DSP_NO-1] ,
 	input ram_feedback,
 	output reg fire9Squeeze_sample,
@@ -23,10 +23,6 @@ wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_fire9Squeeze b7 (
 	.bias_mem(biasing_wire)
 );
-reg fire9Squeeze_en ;
-reg [WIDTH-1:0] ifm ;
-always @(posedge clk) ifm <= ifm_i; 
-always @(posedge clk ) fire9Squeeze_en <= fire9Squeeze_en_i ;
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////

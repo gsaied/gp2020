@@ -9,21 +9,15 @@ module fire8_squeeze #(
 (
 	input clk,
 	//input rst,
-	input fire8_squeeze_en_i,
+	input fire8_squeeze_en,
 	input [WIDTH-1:0] kernels [0:DSP_NO-1] ,
-	input [WIDTH-1:0] ifm_i,
+	input [WIDTH-1:0] ifm,
 	input ram_feedback,
 	output reg fire8_squeeze_sample,
 	output rom_clr_pulse_o ,
 	output fire8_squeeze_finish ,
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
-reg fire8_squeeze_en ;
-reg [WIDTH-1:0] ifm;
-always @(posedge clk) begin
-	ifm<= ifm_i ; 
-	fire8_squeeze_en<= fire8_squeeze_en_i;
-end
 reg fire8_squeeze_end;
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_fire8_squeeze b7 (
@@ -43,7 +37,6 @@ initial begin
 		fire8_squeeze_timer= 0 ;
 		fire8_squeeze_end = 1'b0 ;
 		clr_counter = 0 ;
-		fire8_squeeze_en = 0 ;
 end
 ////////////////////////////
 //GENERATION OF CLR PULSE///
@@ -74,6 +67,8 @@ end
 //////////////////////////////
 wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
 reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
+reg layer_en_reg ;
+always @(posedge clk) layer_en_reg <= fire8_squeeze_en ; 
 genvar i ;
 generate for (i = 0 ; i< DSP_NO ; i++) begin
 	mac mac_i (
@@ -81,7 +76,7 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 		.clk(clk),
 		//.rst(rst),
 		.pix(ifm),
-		.layer_en(1),
+		.layer_en(layer_en_reg),
 		.mul_out(ofmw[i]),
 		.ker(kernels[i])
 	);
@@ -96,7 +91,7 @@ always @(*) begin
 	end
 end
 always@(posedge clk) begin
-	if(clr_pulse && fire8_squeeze_en && !fire8_squeeze_end) begin
+	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 )
 				ofm[i] <= 16'b0 ;

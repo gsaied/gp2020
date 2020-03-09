@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Feb 22 16:30:32 2020
-| Host         : GCS running 64-bit Ubuntu 18.04.3 LTS
+| Date         : Mon Mar  9 14:30:28 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -file utiliziation.rpt
 | Design       : fire3_squeeze
 | Device       : 7vx690tffg1157-3
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  652 |     0 |    433200 |  0.15 |
-|   LUT as Logic          |  652 |     0 |    433200 |  0.15 |
+| Slice LUTs*             |  646 |     0 |    433200 |  0.15 |
+|   LUT as Logic          |  646 |     0 |    433200 |  0.15 |
 |   LUT as Memory         |    0 |     0 |    174200 |  0.00 |
-| Slice Registers         |  402 |     0 |    866400 |  0.05 |
-|   Register as Flip Flop |  402 |     0 |    866400 |  0.05 |
+| Slice Registers         |  403 |     0 |    866400 |  0.05 |
+|   Register as Flip Flop |  403 |     0 |    866400 |  0.05 |
 |   Register as Latch     |    0 |     0 |    866400 |  0.00 |
 | F7 Muxes                |  214 |     0 |    216600 |  0.10 |
 | F8 Muxes                |    0 |     0 |    108300 |  0.00 |
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 144   |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 258   |          Yes |       Reset |            - |
+| 0     |          Yes |           - |        Reset |
+| 1     |          Yes |         Set |            - |
+| 402   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -91,7 +91,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |  278 |     0 |       600 | 46.33 |
+| Bonded IOB                  |    0 |     0 |       600 |  0.00 |
 | Bonded IPADs                |    0 |     0 |        62 |  0.00 |
 | Bonded OPADs                |    0 |     0 |        40 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |        20 |  0.00 |
@@ -117,7 +117,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
 | BUFIO      |    0 |     0 |        80 |  0.00 |
 | MMCME2_ADV |    0 |     0 |        20 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
@@ -151,20 +151,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  476 |                 LUT |
-| OBUF     |  258 |                  IO |
-| FDRE     |  258 |        Flop & Latch |
+| LUT6     |  473 |                 LUT |
+| FDRE     |  402 |        Flop & Latch |
 | MUXF7    |  214 |               MuxFx |
-| FDCE     |  144 |        Flop & Latch |
 | CARRY4   |  130 |          CarryLogic |
 | LUT1     |  114 |                 LUT |
-| LUT3     |   34 |                 LUT |
-| LUT4     |   22 |                 LUT |
-| IBUF     |   20 |                  IO |
+| LUT3     |   33 |                 LUT |
+| LUT2     |   24 |                 LUT |
 | DSP48E1  |   16 |    Block Arithmetic |
-| LUT2     |    8 |                 LUT |
 | LUT5     |    6 |                 LUT |
-| BUFG     |    1 |               Clock |
+| LUT4     |    4 |                 LUT |
+| FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 
 

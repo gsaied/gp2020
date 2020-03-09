@@ -1,0 +1,232 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar  9 16:28:22 2020
+# Process ID: 28806
+# Current directory: /home/gsaied/Desktop/old_rtl/amr
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/amr/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/amr/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 28826 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1426.461 ; gain = 71.000 ; free physical = 1664 ; free virtual = 4553
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SecondSharedMemory' [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:23]
+	Parameter ram_num bound to: 16 - type: integer 
+	Parameter num_instances1 bound to: 7 - type: integer 
+	Parameter num_instances2 bound to: 7 - type: integer 
+	Parameter width bound to: 16 - type: integer 
+	Parameter address bound to: 10 - type: integer 
+ERROR: [Synth 8-439] module 'ram_3d' not found [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:120]
+	Parameter ram_num bound to: 16 - type: integer 
+	Parameter width bound to: 16 - type: integer 
+	Parameter address bound to: 10 - type: integer 
+ERROR: [Synth 8-196] conditional expression could not be resolved to a constant [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:115]
+ERROR: [Synth 8-6156] failed synthesizing module 'SecondSharedMemory' [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1472.211 ; gain = 116.750 ; free physical = 1676 ; free virtual = 4565
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+vi 2ndSharedMemory.sv 
+WARNING: [Common 17-259] Unknown Tcl command 'vi 2ndSharedMemory.sv' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+vi 2ndSharedMemory.sv 
+WARNING: [Common 17-259] Unknown Tcl command 'vi 2ndSharedMemory.sv' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+vi 2ndSharedMemory.sv 
+WARNING: [Common 17-259] Unknown Tcl command 'vi 2ndSharedMemory.sv' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+check_syntax 
+CRITICAL WARNING: [HDL 9-806] Syntax error near "int". [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:114]
+CRITICAL WARNING: [HDL 9-2948] SystemVerilog keyword int used in incorrect context [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:114]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<". [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:114]
+CRITICAL WARNING: [HDL 9-3101] 'i' is not a genvar [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:134]
+CRITICAL WARNING: [HDL 9-3098] 'i' is not a constant [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:134]
+CRITICAL WARNING: [HDL 9-3101] 'i' is not a genvar [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:134]
+CRITICAL WARNING: [HDL 9-3098] 'i' is not a constant [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:134]
+delete_fileset 
+ERROR: [Common 17-163] Missing value for option 'fileset', please type 'delete_fileset -help' for usage info.
+delete_fileset constr
+source synth.tcl 
+# read_verilog -sv [ glob *.sv ] 
+WARNING: [filemgmt 56-12] File '/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/gsaied/Desktop/old_rtl/amr/temp.sv' cannot be added to the project because it already exists in the project, skipping this file
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+ERROR: [Synth 8-2715] syntax error near int [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:114]
+ERROR: [Synth 8-2715] syntax error near < [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:114]
+ERROR: [Synth 8-2715] syntax error near endgenerate [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:153]
+INFO: [Synth 8-2350] module SecondSharedMemory ignored due to previous errors [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:23]
+Failed to read verilog '/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv'
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+vi 2ndSharedMemory.sv 
+WARNING: [Common 17-259] Unknown Tcl command 'vi 2ndSharedMemory.sv' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+delete_fileset constr
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+WARNING: [filemgmt 56-12] File '/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/gsaied/Desktop/old_rtl/amr/temp.sv' cannot be added to the project because it already exists in the project, skipping this file
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+ERROR: [Synth 8-2062] generate loop index i is not defined as a genvar [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:134]
+INFO: [Synth 8-2350] module SecondSharedMemory ignored due to previous errors [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:23]
+Failed to read verilog '/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv'
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+vi 2ndSharedMemory.sv 
+WARNING: [Common 17-259] Unknown Tcl command 'vi 2ndSharedMemory.sv' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+delete_fileset constr
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+WARNING: [filemgmt 56-12] File '/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/gsaied/Desktop/old_rtl/amr/temp.sv' cannot be added to the project because it already exists in the project, skipping this file
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1473.590 ; gain = 0.000 ; free physical = 1667 ; free virtual = 4544
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SecondSharedMemory' [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:23]
+	Parameter ram_num bound to: 16 - type: integer 
+	Parameter num_instances1 bound to: 7 - type: integer 
+	Parameter num_instances2 bound to: 7 - type: integer 
+	Parameter width bound to: 16 - type: integer 
+	Parameter address bound to: 10 - type: integer 
+ERROR: [Synth 8-439] module 'ram_3d' not found [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:119]
+	Parameter ram_num bound to: 16 - type: integer 
+	Parameter width bound to: 16 - type: integer 
+	Parameter address bound to: 10 - type: integer 
+ERROR: [Synth 8-196] conditional expression could not be resolved to a constant [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:114]
+ERROR: [Synth 8-6156] failed synthesizing module 'SecondSharedMemory' [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1473.590 ; gain = 0.000 ; free physical = 1666 ; free virtual = 4557
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+vi 2ndSharedMemory.sv 
+WARNING: [Common 17-259] Unknown Tcl command 'vi 2ndSharedMemory.sv' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+check_syntax 
+INFO: [Vivado 12-4796] No errors or warning reported.
+delete_fileset constr
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+WARNING: [filemgmt 56-12] File '/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/gsaied/Desktop/old_rtl/amr/temp.sv' cannot be added to the project because it already exists in the project, skipping this file
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1475.105 ; gain = 0.000 ; free physical = 1660 ; free virtual = 4537
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SecondSharedMemory' [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:23]
+	Parameter ram_num bound to: 16 - type: integer 
+	Parameter num_instances1 bound to: 7 - type: integer 
+	Parameter num_instances2 bound to: 7 - type: integer 
+	Parameter width bound to: 16 - type: integer 
+	Parameter address bound to: 10 - type: integer 
+ERROR: [Synth 8-439] module 'ram_3d' not found [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:119]
+	Parameter ram_num bound to: 16 - type: integer 
+	Parameter width bound to: 16 - type: integer 
+	Parameter address bound to: 10 - type: integer 
+ERROR: [Synth 8-196] conditional expression could not be resolved to a constant [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:114]
+ERROR: [Synth 8-6156] failed synthesizing module 'SecondSharedMemory' [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1476.227 ; gain = 1.121 ; free physical = 1661 ; free virtual = 4553
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+vi 2ndSharedMemory.sv 
+WARNING: [Common 17-259] Unknown Tcl command 'vi 2ndSharedMemory.sv' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+check_syntax 
+CRITICAL WARNING: [HDL 9-3136] 'i' is not declared [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:114]
+vi 2ndSharedMemory.sv 
+WARNING: [Common 17-259] Unknown Tcl command 'vi 2ndSharedMemory.sv' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+check_syntax 
+INFO: [Vivado 12-4796] No errors or warning reported.
+delete_fileset 
+ERROR: [Common 17-163] Missing value for option 'fileset', please type 'delete_fileset -help' for usage info.
+delete_fileset constr
+source synth.tcl 
+# read_verilog -sv [ glob *.sv ] 
+WARNING: [filemgmt 56-12] File '/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/gsaied/Desktop/old_rtl/amr/temp.sv' cannot be added to the project because it already exists in the project, skipping this file
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top SecondSharedMemory -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1476.230 ; gain = 0.000 ; free physical = 1677 ; free virtual = 4555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SecondSharedMemory' [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:23]
+	Parameter ram_num bound to: 16 - type: integer 
+	Parameter num_instances1 bound to: 7 - type: integer 
+	Parameter num_instances2 bound to: 7 - type: integer 
+	Parameter width bound to: 16 - type: integer 
+	Parameter address bound to: 10 - type: integer 
+ERROR: [Synth 8-439] module 'ram_3d' not found [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:119]
+	Parameter ram_num bound to: 16 - type: integer 
+	Parameter width bound to: 16 - type: integer 
+	Parameter address bound to: 10 - type: integer 
+ERROR: [Synth 8-196] conditional expression could not be resolved to a constant [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:114]
+ERROR: [Synth 8-6156] failed synthesizing module 'SecondSharedMemory' [/home/gsaied/Desktop/old_rtl/amr/2ndSharedMemory.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1479.477 ; gain = 3.246 ; free physical = 1677 ; free virtual = 4570
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  9 16:38:15 2020...

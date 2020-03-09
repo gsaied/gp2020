@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu Mar  5 15:29:02 2020
-| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Date         : Mon Mar  9 00:18:05 2020
+| Host         : GCS running 64-bit unknown
 | Command      : report_timing -file post_synth_timing.rpt
 | Design       : fire4_squeeze
 | Device       : 7vx690t-ffg1157
@@ -11,18 +11,18 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 Timing Report
 
-Slack (MET) :             1.502ns  (required time - arrival time)
+Slack (VIOLATED) :        -0.098ns  (required time - arrival time)
   Source:                 weight_rom_address_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.700ns period=3.400ns})
   Destination:            genblk1[31].mac_i/mul_out_reg/B[12]
-                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@1.700ns period=3.400ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Requirement:            3.400ns  (clk rise@3.400ns - clk rise@0.000ns)
   Data Path Delay:        3.162ns  (logic 0.631ns (19.953%)  route 2.531ns (80.047%))
   Logic Levels:           7  (LUT2=1 LUT3=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.483ns = ( 5.483 - 5.000 ) 
+    Destination Clock Delay (DCD):    0.483ns = ( 3.883 - 3.400 ) 
     Source Clock Delay      (SCD):    0.508ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -57,19 +57,19 @@ Slack (MET) :             1.502ns  (required time - arrival time)
                          DSP48E1                                      r  genblk1[31].mac_i/mul_out_reg/B[12]
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)        5.000     5.000 r  
-                                                      0.000     5.000 r  clk (IN)
-                         net (fo=656, unset)          0.483     5.483    genblk1[31].mac_i/clk
+                         (clock clk rise edge)        3.400     3.400 r  
+                                                      0.000     3.400 r  clk (IN)
+                         net (fo=656, unset)          0.483     3.883    genblk1[31].mac_i/clk
                          DSP48E1                                      r  genblk1[31].mac_i/mul_out_reg/CLK
-                         clock pessimism              0.000     5.483    
-                         clock uncertainty           -0.035     5.447    
+                         clock pessimism              0.000     3.883    
+                         clock uncertainty           -0.035     3.847    
                          DSP48E1 (Setup_dsp48e1_CLK_B[12])
-                                                     -0.275     5.172    genblk1[31].mac_i/mul_out_reg
+                                                     -0.275     3.572    genblk1[31].mac_i/mul_out_reg
   -------------------------------------------------------------------
-                         required time                          5.172    
+                         required time                          3.572    
                          arrival time                          -3.670    
   -------------------------------------------------------------------
-                         slack                                  1.502    
+                         slack                                 -0.098    
 
 
 

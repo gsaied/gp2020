@@ -10,8 +10,8 @@ module fire3_squeeze #(
 (
 	input clk,
 //	input rst,
-	input fire3_squeeze_en,
-	input [WIDTH-1:0] ifm,
+	input fire3_squeeze_en_i,
+	input [WIDTH-1:0] ifm_i,
 	input ram_feedback,
 	output reg fire3_squeeze_sample,
 	output fire3_squeeze_finish ,
@@ -22,6 +22,12 @@ wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_fire3_squeeze b7 (
 	.bias_mem(biasing_wire)
 );
+reg fire3_squeeze_en ;
+reg [WIDTH-1:0] ifm ; 
+always @(posedge clk) begin
+	fire3_squeeze_en <= fire3_squeeze_en_i ;
+	ifm<= ifm_i; 
+end	
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
@@ -111,14 +117,6 @@ always @(*) begin
 		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
 	end
 end
-initial begin
-weight_rom_address <= 0;
-rom_clr_pulse<=0;
-clr_counter<=0;
-ram_feedback_reg<=1'b0;
-fire3_squeeze_timer<=0;
-fire3_squeeze_end<=1'b0;
-end
 always@(posedge clk) begin
 	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
@@ -154,6 +152,14 @@ always @(posedge clk /*or negedge rst*/) begin
 		ram_feedback_reg<= 1'b1 ;
 end
 assign fire3_squeeze_finish= !ram_feedback_reg && fire3_squeeze_end ; 
+initial begin
+weight_rom_address = 0;
+rom_clr_pulse=0;
+clr_counter=0;
+ram_feedback_reg=1'b0;
+fire3_squeeze_timer=0;
+fire3_squeeze_end=1'b0;
+end
 endmodule
 
 

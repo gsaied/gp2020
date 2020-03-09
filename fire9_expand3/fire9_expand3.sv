@@ -57,11 +57,12 @@ always @(posedge clk) begin
 	if(fire9_expand3_en) 
 		kernel_regs<=kernels ;
 end
+*/
 reg layer_en_reg ;
 always @(posedge clk) begin
     layer_en_reg <= fire9_expand3_en  ; 
 end
-*/
+
 ////////////////////////////
 //GENERATION OF CLR PULSE///
 ////////////////////////////
@@ -101,7 +102,7 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 		.clk(clk),
 		//.rst(rst),
 		.pix(ifm),
-		.layer_en(1),
+		.layer_en(layer_en_reg),
 		.mul_out(ofmw[i]),
 		.ker(kernels[i])
 	);

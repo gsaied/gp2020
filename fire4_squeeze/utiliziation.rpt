@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu Mar  5 15:28:51 2020
+| Date         : Mon Mar  9 00:17:53 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -file utiliziation.rpt
 | Design       : fire4_squeeze
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+-------+-------+-----------+-------+
 |        Site Type        |  Used | Fixed | Available | Util% |
 +-------------------------+-------+-------+-----------+-------+
-| Slice LUTs*             | 10991 |     0 |    433200 |  2.54 |
-|   LUT as Logic          | 10991 |     0 |    433200 |  2.54 |
+| Slice LUTs*             | 10989 |     0 |    433200 |  2.54 |
+|   LUT as Logic          | 10989 |     0 |    433200 |  2.54 |
 |   LUT as Memory         |     0 |     0 |    174200 |  0.00 |
 | Slice Registers         |   625 |     0 |    866400 |  0.07 |
 |   Register as Flip Flop |   625 |     0 |    866400 |  0.07 |
@@ -158,9 +158,9 @@ Table of Contents
 | FDRE     |  624 |        Flop & Latch |
 | LUT1     |  361 |                 LUT |
 | CARRY4   |  246 |          CarryLogic |
-| LUT3     |  141 |                 LUT |
-| LUT2     |   50 |                 LUT |
-| LUT4     |   37 |                 LUT |
+| LUT3     |  109 |                 LUT |
+| LUT2     |   81 |                 LUT |
+| LUT4     |   35 |                 LUT |
 | DSP48E1  |   32 |    Block Arithmetic |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+

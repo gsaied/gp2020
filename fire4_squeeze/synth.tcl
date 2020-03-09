@@ -17,6 +17,8 @@ puts "Found setup timing violations => running physical optimization"
 report_timing -file slack.rpt
 }
 opt_design -directive ExploreSequentialArea
-report_utilization -file post_utiliziation.rpt
-report_utilization -hierarchical -file post_hierarchical_utilization.rpt
-report_timing -file post_opt_timing.rpt
+place_design
+opt_design
+route_design
+report_timing
+

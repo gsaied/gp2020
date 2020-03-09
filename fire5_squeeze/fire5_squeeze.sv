@@ -40,12 +40,12 @@ reg clr_pulse ;
 reg rom_clr_pulse;
 always @(posedge clk) clr_pulse <= rom_clr_pulse ;
 initial begin
-		fire5_squeeze_timer<= 0 ;
-		ram_feedback_reg<=1'b0 ;
-		rom_clr_pulse <= 1'b0 ;
-		clr_counter <= 0 ;
-		fire5_squeeze_end <= 1'b0 ;
-		weight_rom_address<= 0 ;
+		fire5_squeeze_timer= 0 ;
+		ram_feedback_reg=1'b0 ;
+		rom_clr_pulse = 1'b0 ;
+		clr_counter = 0 ;
+		fire5_squeeze_end = 1'b0 ;
+		weight_rom_address= 0 ;
 end
 ///////
 ///////

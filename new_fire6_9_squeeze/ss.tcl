@@ -1,3 +1,0 @@
-place_design
-route_design
-report_timing 
