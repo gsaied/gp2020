@@ -29,6 +29,7 @@ reg fire8_squeeze_en ;
 reg fire9_squeeze_en ;
 reg [WIDTH-1:0] ifm8 ;
 reg [WIDTH-1:0] ifm9 ;
+reg [$clog2(KERNEL_DIM8**2*CHIN8)-1:0] weight_rom_address ;
 always @(posedge clk) begin
 	fire8_squeeze_en  <= fire8_squeeze_en_i ;
 	fire9_squeeze_en  <= fire9_squeeze_en_i ;
@@ -65,7 +66,6 @@ fire9Squeeze u_9 (
 ////////////////////////
 /* SHARED ROM CONTROL */
 ////////////////////////
-reg [$clog2(KERNEL_DIM8**2*CHIN8)-1:0] weight_rom_address ;
 initial begin
 	weight_rom_address= 0;
 end

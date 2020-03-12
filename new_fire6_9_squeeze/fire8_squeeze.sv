@@ -31,13 +31,6 @@ biasing_fire8_squeeze b7 (
 reg clr_pulse ;
 reg rom_clr_pulse;
 always @(posedge clk) clr_pulse <= rom_clr_pulse ;
-initial begin
-		rom_clr_pulse = 1'b0 ;
-		ram_feedback_reg= 1'b0 ; 
-		fire8_squeeze_timer= 0 ;
-		fire8_squeeze_end = 1'b0 ;
-		clr_counter = 0 ;
-end
 ////////////////////////////
 //GENERATION OF CLR PULSE///
 ////////////////////////////
@@ -127,6 +120,13 @@ end
 assign fire8_squeeze_finish= !ram_feedback_reg && fire8_squeeze_end ; 
 assign rom_clr_pulse_o = rom_clr_pulse ; 
 
+initial begin
+		rom_clr_pulse = 1'b0 ;
+		ram_feedback_reg= 1'b0 ; 
+		fire8_squeeze_timer= 0 ;
+		fire8_squeeze_end = 1'b0 ;
+		clr_counter = 0 ;
+end
 endmodule
 
 

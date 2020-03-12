@@ -111,14 +111,6 @@ always @(*) begin
 		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
 	end
 end
-initial begin
-weight_rom_address=0;
-ram_feedback_reg=1'b0;
-rom_clr_pulse=1'b0;
-clr_counter=0;
-fire7_expand1_timer=0;
-fire7_expand1_end=1'b0;
-end
 always@(posedge clk) begin
 	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
@@ -154,6 +146,14 @@ always @(posedge clk /*or negedge rst*/) begin
 		ram_feedback_reg<= 1'b1 ;
 end
 assign fire7_expand1_finish= !ram_feedback_reg && fire7_expand1_end ; 
+initial begin
+weight_rom_address=0;
+ram_feedback_reg=1'b0;
+rom_clr_pulse=1'b0;
+clr_counter=0;
+fire7_expand1_timer=0;
+fire7_expand1_end=1'b0;
+end
 endmodule
 
 

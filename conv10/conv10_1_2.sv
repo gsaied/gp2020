@@ -13,8 +13,8 @@ module conv10_1_2 #(
 	input clk,
 	input conv10_1_en,
 	input conv10_2_en,
-	input [15:0] ifm_1,
-	input [15:0] ifm_2,
+	input [15:0] ifm_1_i,
+	input [15:0] ifm_2_i,
 	input ram_feedback_1,
 	input ram_feedback_2,
 	output conv10_1_finish,
@@ -24,23 +24,20 @@ module conv10_1_2 #(
 );
 	reg conv10_1_end;
 	reg conv10_2_end;
-
-/*	reg [WIDTH-1:0] ifm_1 ;
+	wire rst_gen ; 
+	reg [WIDTH-1:0] ifm_1 ;
 	reg [WIDTH-1:0] ifm_2 ;
+/*	
 	reg conv10_1_en ;
 	reg conv10_2_en ;
 	*/
 ////////////////////////
 /* REGISTERING INPUTS */
 ////////////////////////
-/*
 always @(posedge clk) begin
-	conv10_1_en <= conv10_1_en_i ;
-	conv10_2_en <= conv10_2_en_i ;
 	ifm_1<= ifm_1_i ; 
 	ifm_2<= ifm_2_i ; 
 end
-*/
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
 reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
@@ -81,17 +78,6 @@ reg rom_clr_pulse;
 always @(posedge clk) clr_pulse <= rom_clr_pulse ;
 ///////
 ///////
-initial begin
-	weight_rom_address<= 0 ;
-	rom_clr_pulse <= 1'b0 ; 
-	clr_counter <= 0 ;
-	conv10_1_timer<= 0 ;
-	conv10_2_timer<= 0 ;
-	conv10_1_end <= 1'b0 ; 
-	conv10_2_end <= 1'b0 ; 
-	ram_feedback_reg_1<=1'b0 ;
-	ram_feedback_reg_2<=1'b0 ;
-end
 always @(posedge clk  ) begin
 	if (rom_clr_pulse || rst_gen )
 		weight_rom_address<= 0;
@@ -99,7 +85,6 @@ always @(posedge clk  ) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
-wire rst_gen ; 
 assign rst_gen = conv10_1_en && conv10_1_end ; 
 ////////////////////////////
 //ENABLE SIGNALS MULTIPLEX//
@@ -209,5 +194,16 @@ always @(posedge clk ) begin
 end
 assign conv10_1_finish = conv10_1_end && !ram_feedback_reg_1 ;
 assign conv10_2_finish = conv10_2_end && !ram_feedback_reg_2 ;
+initial begin
+	weight_rom_address<= 0 ;
+	rom_clr_pulse <= 1'b0 ; 
+	clr_counter <= 0 ;
+	conv10_1_timer<= 0 ;
+	conv10_2_timer<= 0 ;
+	conv10_1_end <= 1'b0 ; 
+	conv10_2_end <= 1'b0 ; 
+	ram_feedback_reg_1<=1'b0 ;
+	ram_feedback_reg_2<=1'b0 ;
+end
 endmodule
 

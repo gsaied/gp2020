@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/new_fire6_expand3/rom_fire6_expand3.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rom_fire6_expand3
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/gsaied/Desktop/old_rtl/new_fire6_expand3/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

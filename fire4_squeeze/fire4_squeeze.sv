@@ -1,5 +1,4 @@
-/*verilator lint_off INITIALDLY*/
-/*verilator lint_off WIDTH*/
+/* verilator lint_off COMBDLY */
 module fire4_squeeze #(
 	parameter WOUT = 32,
 	parameter DSP_NO = 32 ,
@@ -26,14 +25,39 @@ biasing_fire4_squeeze b7 (
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
-wire [WIDTH-1:0] kernels [0:DSP_NO-1] ;
+//wire [WIDTH-1:0] kernels [0:DSP_NO-1] ;
 reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ;
+wire [WIDTH-1:0] kernels_bram [0:DSP_NO-1] ;
+wire [WIDTH-1:0] kernels_lut [0:DSP_NO-1] ;
+reg [WIDTH-1:0] kernels_lut_reg [0:DSP_NO-1] ;
+
 reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
 //////////////////////////////////
+/*
 wrapper_rom_fire4_squeeze u_2 (
 	.address(weight_rom_address),
 	.rom_out(kernels)
 );
+*/
+
+rom_fire4_squeeze u_2 (
+	.address(weight_rom_address[9:0]),
+	.clk(clk),
+	.rom_out(kernels_bram)
+);
+rom2_fire4_squeeze u_3 (
+	.address(weight_rom_address[6:0]),
+	.rom_out(kernels_lut)
+);
+always @(posedge clk) begin
+		kernels_lut_reg<=kernels_lut ;
+end
+always @(*) begin
+	if (weight_rom_address > 1024)
+		kernel_regs <= kernels_lut_reg ;
+	else
+		kernel_regs <= kernels_bram ;
+end
 ///////////////////////////////////
 //this signal is very important to track
 ///////////////////////////////////
@@ -42,14 +66,6 @@ reg rom_clr_pulse;
 ///////
 always@(posedge clk) clr_pulse <= rom_clr_pulse;
 ///////
-initial begin
-	weight_rom_address<=0;
-	rom_clr_pulse<=0;
-	clr_counter<=0;
-	ram_feedback_reg<=1'b0;
-	fire4_squeeze_timer<=0;
-	fire4_squeeze_end<=1'b0;
-end
 always @(posedge clk /*or negedge rst*/) begin
 	/*if(!rst)
 		weight_rom_address<= 0 ;
@@ -58,10 +74,6 @@ always @(posedge clk /*or negedge rst*/) begin
 	else if (fire4_squeeze_en) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
-end
-always @(posedge clk) begin
-	if(fire4_squeeze_en) 
-		kernel_regs<=kernels ;
 end
 reg layer_en_reg ;
 always @(posedge clk) begin
@@ -152,6 +164,14 @@ always @(posedge clk /*or negedge rst*/) begin
 		ram_feedback_reg<= 1'b1 ;
 end
 assign fire4_squeeze_finish= !ram_feedback_reg && fire4_squeeze_end ; 
+initial begin
+	weight_rom_address=0;
+	rom_clr_pulse=0;
+	clr_counter=0;
+	ram_feedback_reg=1'b0;
+	fire4_squeeze_timer=0;
+	fire4_squeeze_end=1'b0;
+end
 endmodule
 
 

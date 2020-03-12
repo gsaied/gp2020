@@ -8,8 +8,8 @@ module fire2_squeeze #(
 (
 	input clk,
 //	input rst,
-	input fire2_squeeze_en,
-	input [WIDTH-1:0] ifm,
+	input fire2_squeeze_en_i,
+	input [WIDTH-1:0] ifm_i,
 	input ram_feedback,
 	output reg fire2_squeeze_sample,
 	output fire2_squeeze_finish ,
@@ -20,6 +20,15 @@ wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO_FIRE2_SQUEEZE-1] ;
 biasing_fire2_squeeze b7 (
 	.bias_mem(biasing_wire)
 );
+reg fire2_squeeze_en;
+reg [WIDTH-1:0] ifm ;
+reg [WIDTH-1:0] temp_ifm ;
+always@(posedge clk) temp_ifm <= ifm_i ; 
+always@(posedge clk) fire2_squeeze_en <= fire2_squeeze_en_i ;
+always@(posedge clk)begin
+
+        ifm<=temp_ifm;
+end
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
@@ -37,14 +46,6 @@ reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
 ///////////////////////////////////
 reg clr_pulse ;
 reg rom_clr_pulse;
-initial begin 
-weight_rom_address =0;
-ram_feedback_reg = 1'b0;
-rom_clr_pulse =1'b0;
-clr_counter=0;
-fire2_squeeze_timer =0;
-fire2_squeeze_end =1'b0;
-end 
 always @(posedge clk) clr_pulse <= rom_clr_pulse ; 
 ///////
 ///////
@@ -57,13 +58,11 @@ always @(posedge clk/* or negedge rst*/) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
-/*
 always @(posedge clk) begin
 	if(fire2_squeeze_en) 
 		kernel_regs<=kernels ;
 end
 
-*/
 ////////////////////////////
 //GENERATION OF CLR PULSE///
 ////////////////////////////
@@ -104,7 +103,7 @@ for (k = 0 ; k< DSP_NO_FIRE2_SQUEEZE ; k++) begin
 		.layer_en(layer_en_reg),
 		.pix(ifm),
 		.mul_out(ofmw[k]),
-		.ker(kernels[k])
+		.ker(kernel_regs[k])
 	);
 end
 endgenerate
@@ -152,6 +151,14 @@ always @(posedge clk /*or negedge rst*/) begin
 		ram_feedback_reg<= 1'b1 ;
 end
 assign fire2_squeeze_finish= !ram_feedback_reg && fire2_squeeze_end ; 
+initial begin 
+weight_rom_address =0;
+ram_feedback_reg = 1'b0;
+rom_clr_pulse =1'b0;
+clr_counter=0;
+fire2_squeeze_timer =0;
+fire2_squeeze_end =1'b0;
+end 
 endmodule
 
 

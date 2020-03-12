@@ -1,0 +1,205 @@
+/* FIRST IMPLEMENTATION OF A CONV LAYER
+* LAYER: CONV1 
+* INPUT SIZE: 258*258*3
+* OUTPUT SIZE: 128*128*64
+* STRIDE: 2
+* PAD:	1
+* WINDOW: 3*3
+*/
+/* verilator lint_off COMBDLY */
+module conv1#(
+parameter WOUT = 128 ,
+parameter DSP_NO = 64 ,
+parameter STRIDE = 2 ,
+parameter W_IN = 258 ,
+parameter WIDTH = 16 ,
+parameter CHIN = 3 , 
+parameter KERNEL_DIM = 3 ,
+parameter CHOUT = 64   
+)       
+	(
+	input clk,
+	//input rst,
+	input conv1_en,
+	input ram_feedback,
+	output reg conv1_sample,
+	output conv1_finish,
+	output reg [15:0] ofm [0:DSP_NO-1]
+
+);
+wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
+biasing_rom b1 (
+	.bias_mem(biasing_wire)
+);
+////////////////////////////////////
+	reg conv1_end ; 
+wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
+reg  [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
+reg [4:0] clr_counter ;
+//reg [$clog2(WINDOWS)-1:0] conv1_timer ; 
+///////////////////////////////////
+//KERNELS INSTANTIATION
+///////////////////////////////////
+wire [WIDTH-1:0] kernels [0:DSP_NO-1] ; 
+reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ; 
+reg [5-1:0] weight_rom_address ; 
+//////////////////////////////////
+rom_array_layer_1 u_2 (
+	.address(weight_rom_address),
+	.rom_out(kernels)
+);
+///////////////////////////////////
+//this signal is very important to track
+//represents a pulse to clr pin of mac to reset every 27 cycles of clk
+///////////////////////////////////
+reg clr_pulse ; 
+reg rom_clr_pulse ;
+always @(posedge clk) clr_pulse<= rom_clr_pulse ;
+///////
+///////
+always @(posedge clk) begin
+	if (rom_clr_pulse)
+		weight_rom_address<= 5'b0;// 5--> ceil(logn(HIN**2*CHIN,2))
+	else if (conv1_en) begin
+		weight_rom_address<= weight_rom_address+1;
+	end
+end
+always @(posedge clk) begin
+	kernel_regs<=kernels ;		
+end
+wire [WIDTH-1:0] img_rom_wire  ;
+reg [17:0] img_rom_address ;
+reg [17:0] ref_address ;
+ 
+///////////////////////////////////
+//GENERATION OF WINDOW ADDRESSES///
+///////////////////////////////////
+reg [4:0] img_addr_counter ;
+always @(posedge clk) begin
+	if (rom_clr_pulse)
+		img_addr_counter <= 0 ;
+	else if (conv1_en)
+		img_addr_counter <= img_addr_counter+1 ;
+end
+reg [7:0] row_end ;
+always @(posedge clk/* or posedge rst*/) begin
+	/*if (!rst)
+		row_end <= 0 ; 
+	else */if (rom_clr_pulse) 
+		row_end <= row_end +1 ; 
+	else if (row_end > 127)
+		row_end <= 0 ; 
+
+end
+always @(posedge clk) begin
+	if (rom_clr_pulse) begin
+		if (row_end > 126) begin
+			ref_address <= ref_address+2*STRIDE+258 ; 
+			img_rom_address<= ref_address+2*STRIDE+258 ; 
+		end
+		else begin
+		ref_address<= ref_address+STRIDE;//makes sense; for window has ended here, a new address should be generated
+		img_rom_address<= ref_address+STRIDE ; 
+		end
+	end
+	else if (conv1_en) begin
+		case (img_addr_counter) 
+			5'd2 : img_rom_address<= ref_address+ W_IN ;
+			5'd5 : img_rom_address<= ref_address+ W_IN*2 ;
+			5'd8 : img_rom_address<= ref_address+ W_IN**2;
+			5'd11: img_rom_address<= ref_address+ W_IN**2 + W_IN;
+			5'd14: img_rom_address<= ref_address+ W_IN**2 + 2*W_IN;
+			5'd17: img_rom_address<= ref_address+ 2*W_IN**2;
+			5'd20 : img_rom_address<= ref_address+ 2*W_IN**2 + W_IN;
+			5'd23 : img_rom_address<= ref_address+ 2*W_IN**2 + 2*W_IN;
+			default: img_rom_address<= img_rom_address+1 ;
+		endcase
+	end
+end
+wrapper_image u_1 (
+	.clk(clk),
+	.address(img_rom_address),
+	.image_wrapper_o(img_rom_wire)
+);
+// counter to generate clock_divider
+always @(posedge clk) begin
+	if (!conv1_end && conv1_en) begin
+		if (clr_counter == KERNEL_DIM**2*CHIN-1) begin
+			rom_clr_pulse<= 1'b1 ;
+			clr_counter<= clr_counter +1 ;
+		end
+		else if (  clr_counter == KERNEL_DIM**2*CHIN ) begin //after 10 cycles the new output is good to go. New inputs to be fetched
+			clr_counter<= 5'b0 ; 
+			rom_clr_pulse<= 1'b0 ;
+		end
+		else begin
+			clr_counter<= clr_counter +1 ;	
+			rom_clr_pulse<= 1'b0 ;
+		end
+	end
+end
+//////////////////////////////////////////
+// wait for all channels to be processed
+// ///////////////////////////////////////
+always @(*) begin
+	for (int i = 0 ; i < DSP_NO ; i++) begin
+		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
+	end
+end
+always@(posedge clk) begin
+	if(clr_pulse) begin
+		for (int i = 0 ; i< DSP_NO ; i++) begin
+			if(ofmw2[i][31] == 1'b1 ) 
+				ofm[i] <= 16'b0 ;
+			else
+				ofm[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
+		end
+	end
+end
+genvar i ; 
+generate for (i = 0 ; i < CHOUT ; i++) begin
+	conv_mac mac_i  (
+		.clr(clr_pulse),
+		.clk(clk),
+		.pix(img_rom_wire),
+		.layer_en(conv1_en),
+		.mul_out(ofmw[i]),
+		.ker(kernel_regs[i])
+	);
+end
+endgenerate//#FILTERS instances of macs
+//////////////////////////////////
+//CHECK IF THE LAYER HAS FINISHED
+/////////////////////////////////
+
+reg [$clog2(WOUT**2):0] conv1_timer ;
+always @(posedge clk) begin//will be modified to use clk_sampling as the counting signal
+	if (conv1_timer > WOUT**2)
+		conv1_end <= 1'b1 ;//LAYER_1 HAS FINISHED
+	else if (clr_pulse) 
+		conv1_timer<= conv1_timer+1 ; 
+	else 
+		conv1_timer<= conv1_timer; 
+end
+always @(posedge clk) begin
+   conv1_sample <= clr_pulse ; 
+end 
+(* dont_touch = "true" *)reg ram_feedback_reg ; 
+initial ram_feedback_reg<= 1'b0 ;
+always @(posedge clk) begin
+        if (ram_feedback) 
+                ram_feedback_reg<= 1'b1;
+end
+assign conv1_finish = conv1_end && !ram_feedback_reg ; 
+initial begin
+	weight_rom_address<= 5'b0 ; 
+	row_end <= 0 ; 
+	conv1_timer<= 0 ;
+	conv1_end <= 1'b0 ; 
+	clr_counter<= 5'b0 ; 
+	rom_clr_pulse<= 1'b0 ;
+	img_addr_counter <= 0 ;
+	img_rom_address<=18'b0; 
+	ref_address<= 18'b0 ; 
+end
+endmodule

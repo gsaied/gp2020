@@ -44,7 +44,6 @@ wire [2*WIDTH-1:0] biasing_wire_3 [0:DSP_NO-1] ;
 biasing_fire3_expand1 b8 (
 	.bias_mem(biasing_wire_3)
 );
-always@ (posedge clk) clr_pulse<= rom_clr_pulse;
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
@@ -71,6 +70,8 @@ end
 ///////////////////////////////////
 reg clr_pulse ; 
 reg rom_clr_pulse;
+wire rst_gen ; 
+always@ (posedge clk) clr_pulse<= rom_clr_pulse;
 ///////
 ///////
 always @(posedge clk/* or negedge rst*/) begin
@@ -82,7 +83,6 @@ always @(posedge clk/* or negedge rst*/) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
-wire rst_gen ; 
 assign rst_gen = fire2_expand_1_en && fire2_expand_1_end ; 
 ////////////////////////////
 //ENABLE SIGNALS MULTIPLEX//
@@ -160,17 +160,6 @@ always @(*) begin
 		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
 	end
 end
-initial begin
-	weight_rom_address<=0;
-	ram_feedback_reg_2<=1'b0;
-	ram_feedback_reg_3<=1'b0;
-	rom_clr_pulse <= 1'b0;
-	clr_counter <=0;
-	fire2_expand_1_timer<=0;
-	fire3_expand_1_timer<=0;
-	fire2_expand_1_end<=1'b0;
-	fire3_expand_1_end<=1'b0;
-end
 always@(posedge clk) begin
 	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
@@ -235,5 +224,16 @@ end
 assign fire2_expand_1_finish = fire2_expand_1_end && !ram_feedback_reg_2 ;
 assign fire3_expand_1_finish = fire3_expand_1_end && !ram_feedback_reg_3 ;
 */
+initial begin
+	weight_rom_address<=0;
+	ram_feedback_reg_2<=1'b0;
+	ram_feedback_reg_3<=1'b0;
+	rom_clr_pulse <= 1'b0;
+	clr_counter <=0;
+	fire2_expand_1_timer<=0;
+	fire3_expand_1_timer<=0;
+	fire2_expand_1_end<=1'b0;
+	fire3_expand_1_end<=1'b0;
+end
 endmodule
 

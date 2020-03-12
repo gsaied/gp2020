@@ -10,18 +10,28 @@ module fire9_expand3 #(
 (
 	input clk,
 	//input rst,
-	input fire9_expand3_en,
-	input [WIDTH-1:0] ifm,
+	input fire9_expand3_en_i,
+	input [WIDTH-1:0] ifm_i,
 	input ram_feedback,
 	output reg fire9_expand3_sample,
 	output fire9_expand3_finish ,
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
 reg fire9_expand3_end;
+reg fire9_expand3_en;
+reg [WIDTH-1:0] ifm ;
+reg [WIDTH-1:0] temp_ifm ;
+always@(posedge clk) temp_ifm <= ifm_i ; 
+always@(posedge clk) fire9_expand3_en <= fire9_expand3_en_i ;
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_fire9_expand3 b7 (
 	.bias_mem(biasing_wire)
 );
+
+always@(posedge clk)begin
+
+        ifm<=temp_ifm;
+end
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
@@ -40,7 +50,11 @@ rom_fire9_expand3 u_2 (
 ///////////////////////////////////
 reg clr_pulse ;
 reg rom_clr_pulse;
-always@(posedge clk) clr_pulse<= rom_clr_pulse;
+reg temp_clr_pulse ; 
+always@(posedge clk) begin
+	temp_clr_pulse<= rom_clr_pulse;
+	clr_pulse <= temp_clr_pulse ; 
+end
 ///////
 ///////
 always @(posedge clk/*or negedge rst*/) begin
@@ -52,12 +66,9 @@ always @(posedge clk/*or negedge rst*/) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
-/*
 always @(posedge clk) begin
-	if(fire9_expand3_en) 
 		kernel_regs<=kernels ;
 end
-*/
 reg layer_en_reg ;
 always @(posedge clk) begin
     layer_en_reg <= fire9_expand3_en  ; 
@@ -104,7 +115,7 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 		.pix(ifm),
 		.layer_en(layer_en_reg),
 		.mul_out(ofmw[i]),
-		.ker(kernels[i])
+		.ker(kernel_regs[i])
 	);
 end
 endgenerate
@@ -115,14 +126,6 @@ always @(*) begin
 	for (int i = 0 ; i < DSP_NO ; i++) begin
 		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
 	end
-end
-initial begin
-weight_rom_address<=0;
-ram_feedback_reg<=1'b0;
-rom_clr_pulse<=1'b0;
-clr_counter<=0;
-fire9_expand3_timer<=0;
-fire9_expand3_end<=1'b0;
 end
 always@(posedge clk) begin
 	if(clr_pulse) begin
@@ -159,6 +162,14 @@ always @(posedge clk /*or negedge rst*/) begin
 		ram_feedback_reg<= 1'b1 ;
 end
 assign fire9_expand3_finish= !ram_feedback_reg && fire9_expand3_end ; 
+initial begin
+weight_rom_address=0;
+ram_feedback_reg=1'b0;
+rom_clr_pulse=1'b0;
+clr_counter=0;
+fire9_expand3_timer=0;
+fire9_expand3_end=1'b0;
+end
 endmodule
 
 

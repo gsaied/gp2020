@@ -69,21 +69,10 @@ end
 ///////////////////////////////////
 reg clr_pulse ; 
 reg rom_clr_pulse;
+wire rst_gen ; 
 ///////
 always@(posedge clk) clr_pulse<=rom_clr_pulse;
 ///////
-initial begin
-	weight_rom_address<=0;
-	rom_clr_pulse<=0;
-	clr_counter<=0;
-	ram_feedback_reg_4<=1'b0;
-	ram_feedback_reg_5<=1'b0;
-	fire4_expand_1_timer<=0;
-	fire5_expand_1_timer<=0;
-	fire4_expand_1_end<=1'b0;
-	fire5_expand_1_end<=1'b0;
-
-end
 always @(posedge clk/* or negedge rst/*/) begin
 	/*if(!rst)
 		weight_rom_address<= 0 ; 
@@ -93,7 +82,6 @@ always @(posedge clk/* or negedge rst/*/) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
-wire rst_gen ; 
 assign rst_gen = fire4_expand_1_end && fire4_expand_1_en ;
 ////////////////////////////
 //ENABLE SIGNALS MULTIPLEX//
@@ -235,5 +223,17 @@ end
 assign fire4_expand_1_finish = fire4_expand_1_end && !ram_feedback_reg_4 ;
 assign fire5_expand_1_finish = fire5_expand_1_end && !ram_feedback_reg_5 ;
 */
+initial begin
+	weight_rom_address<=0;
+	rom_clr_pulse<=0;
+	clr_counter<=0;
+	ram_feedback_reg_4<=1'b0;
+	ram_feedback_reg_5<=1'b0;
+	fire4_expand_1_timer<=0;
+	fire5_expand_1_timer<=0;
+	fire4_expand_1_end<=1'b0;
+	fire5_expand_1_end<=1'b0;
+
+end
 endmodule
 

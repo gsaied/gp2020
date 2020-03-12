@@ -7,7 +7,7 @@ module mac (
 	output reg signed [31:0] mul_out 
 );
 wire [31:0] intermed ;
-initial	mul_out <= 32'b0 ;
+initial	mul_out = 32'b0 ;
 	assign intermed = pix*ker + mul_out ; 
 	always @(posedge clk ) begin
 		if (clr)

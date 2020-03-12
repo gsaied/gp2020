@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Mar 11 01:57:54 2020
+# Process ID: 2544
+# Current directory: /home/gsaied/Desktop/old_rtl/fire9_expand3
+# Command line: vivado -mode tcl -project post_synth.dcp
+# Log file: /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado.jou
+#-----------------------------------------------------------
+open_checkpoint post_synth.dcp
+open_checkpoint post_route.dcp 
+report_utilization 
+report_timing
+start_gui 
+show_objects -name find_1 [get_sites "*DSP48E1*" ]
+show_objects -name find_1 [get_sites "*DSP48_X11Y82*" ]
+show_objects -name find_2 [get_sites "*SLICE_X142Y207*" ]
+show_objects -name find_3 [get_iobanks "*BUF*" ]
+show_objects -name find_3 [get_clock_regions "*BUF*" ]
+close_design

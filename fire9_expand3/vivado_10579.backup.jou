@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Mar 11 00:50:39 2020
+# Process ID: 10579
+# Current directory: /home/gsaied/Desktop/old_rtl/fire9_expand3
+# Command line: vivado -mode tcl -project post_synth.dcp
+# Log file: /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado.jou
+#-----------------------------------------------------------
+open_checkpoint post_synth.dcp
+vi pop 
+source pop
+set_property HD.CLK_SRC BUFGCTRL_X4Y2 [get_ports clk]
+set_property HD.CLK_SRC BUFGCTRL_X1Y2 [get_ports clk]
+set_property HD.CLK_SRC BUFGCTRL_X0Y32 [get_ports clk]
+set_property HD.CLK_SRC BUFGCTRL_X0Y18 [get_ports clk]
+set_property HD.CLK_SRC BUFGCTRL_X0Y25 [get_ports clk]
+place_design -directive ExtraTimingOpt
+report_timing
+phys_opt_design 
+report_timing
+phys_opt_design -tns_cleanup retime
+phys_opt_design -tns_cleanup -retime
+phys_opt_design -tns_cleanup 
+phys_opt_design -retime 
+phys_opt_design -fanout_opt 
+phys_opt_design -critical_cell_opt 
+report_timing
+phys_opt_design -placement_opt 
+report_timing
+phys_opt_design -force_replication_on_nets [get_nets 6848]
+phys_opt_design -directive AggressiveExplore
+vi utiliziation.rpt 
+report_utilization 
+report_timing
+route_design -directive NoTimingRelaxation
+report_timing
+write_checkpoint -force post_route.dcp

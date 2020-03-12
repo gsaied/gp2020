@@ -34,6 +34,7 @@ module fire4_5_expand_3 #(
 );
 	reg fire4_expand_3_end;
 	reg fire5_expand_3_end;
+	wire rst_gen ; 
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
 reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
@@ -79,20 +80,6 @@ always@(posedge clk)begin
 		clr_pulse<=rom_clr_pulse;
 end
 ///////
-initial begin
-weight_rom_address=0;
-rom_clr_pulse=1'b0;
-clr_counter=0;
-ram_feedback_reg_4=1'b0;
-ram_feedback_reg_5=1'b0;
-fire4_expand_3_timer=0;
-fire5_expand_3_timer=0;
-fire4_expand_3_end=1'b0;
-fire5_expand_3_end=1'b0;
-
-
-
-end
 always @(posedge clk /*or negedge rst*/) begin
 	/*if(!rst)
 		weight_rom_address<= 0 ; 
@@ -102,7 +89,6 @@ always @(posedge clk /*or negedge rst*/) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
-wire rst_gen ; 
 assign rst_gen = fire4_expand_3_end && fire4_expand_3_en ;
 ////////////////////////////
 //ENABLE SIGNALS MULTIPLEX//
@@ -244,5 +230,19 @@ always @(posedge clk/* or negedge rst*/) begin
 end
 assign fire4_expand_3_finish = fire4_expand_3_end && !ram_feedback_reg_4 ;
 assign fire5_expand_3_finish = fire5_expand_3_end && !ram_feedback_reg_5 ;
+initial begin
+weight_rom_address=0;
+rom_clr_pulse=1'b0;
+clr_counter=0;
+ram_feedback_reg_4=1'b0;
+ram_feedback_reg_5=1'b0;
+fire4_expand_3_timer=0;
+fire5_expand_3_timer=0;
+fire4_expand_3_end=1'b0;
+fire5_expand_3_end=1'b0;
+
+
+
+end
 endmodule
 

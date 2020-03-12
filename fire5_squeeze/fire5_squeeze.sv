@@ -39,14 +39,6 @@ rom_fire5_squeeze u_2 (
 reg clr_pulse ;
 reg rom_clr_pulse;
 always @(posedge clk) clr_pulse <= rom_clr_pulse ;
-initial begin
-		fire5_squeeze_timer= 0 ;
-		ram_feedback_reg=1'b0 ;
-		rom_clr_pulse = 1'b0 ;
-		clr_counter = 0 ;
-		fire5_squeeze_end = 1'b0 ;
-		weight_rom_address= 0 ;
-end
 ///////
 ///////
 always @(posedge clk/* or posedge rst*/) begin
@@ -150,6 +142,14 @@ always @(posedge clk/* or posedge rst*/) begin
 		ram_feedback_reg<= 1'b1 ;
 end
 assign fire5_squeeze_finish= !ram_feedback_reg && fire5_squeeze_end ; 
+initial begin
+		fire5_squeeze_timer= 0 ;
+		ram_feedback_reg=1'b0 ;
+		rom_clr_pulse = 1'b0 ;
+		clr_counter = 0 ;
+		fire5_squeeze_end = 1'b0 ;
+		weight_rom_address= 0 ;
+end
 endmodule
 
 

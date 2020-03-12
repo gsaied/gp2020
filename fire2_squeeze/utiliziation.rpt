@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Mon Mar  9 16:15:54 2020
+| Date         : Wed Mar 11 02:17:53 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -file utiliziation.rpt
 | Design       : fire2_squeeze
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |  238 |     0 |    433200 |  0.05 |
 |   LUT as Logic          |  238 |     0 |    433200 |  0.05 |
 |   LUT as Memory         |    0 |     0 |    174200 |  0.00 |
-| Slice Registers         |  297 |     0 |    866400 |  0.03 |
-|   Register as Flip Flop |  297 |     0 |    866400 |  0.03 |
+| Slice Registers         |  298 |     0 |    866400 |  0.03 |
+|   Register as Flip Flop |  298 |     0 |    866400 |  0.03 |
 |   Register as Latch     |    0 |     0 |    866400 |  0.00 |
 | F7 Muxes                |    6 |     0 |    216600 | <0.01 |
 | F8 Muxes                |    0 |     0 |    108300 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 296   |          Yes |       Reset |            - |
+| 297   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -152,7 +152,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  296 |        Flop & Latch |
+| FDRE     |  297 |        Flop & Latch |
 | LUT1     |  180 |                 LUT |
 | CARRY4   |   99 |          CarryLogic |
 | LUT2     |   23 |                 LUT |

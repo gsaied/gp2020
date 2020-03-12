@@ -1,0 +1,2837 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 4216
+License: Customer
+
+Current time: 	Tue Mar 10 23:46:31 EET 2020
+Time zone: 	Eastern European Standard Time (Africa/Cairo)
+
+OS: Ubuntu
+OS Version: 4.15.0-88-generic
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :0
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 2 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/tools/Xilinx/Vivado/2018.3/tps/lnx64/jre9.0.4
+Java executable location: 	/tools/Xilinx/Vivado/2018.3/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	gsaied
+User home directory: /home/gsaied
+User working directory: /home/gsaied/Desktop/old_rtl/fire9_expand3
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2018.3
+RDI_DATADIR: /tools/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: /home/gsaied/.Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: /home/gsaied/.Xilinx/Vivado/2018.3/
+Vivado layouts directory: /home/gsaied/.Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	/tools/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	/home/gsaied/Desktop/old_rtl/fire9_expand3/vivado.log
+Vivado journal file location: 	/home/gsaied/Desktop/old_rtl/fire9_expand3/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-4216-GCS
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2018.3
+XILINX_SDK: /tools/Xilinx/SDK/2018.3
+XILINX_VIVADO: /tools/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	282 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 3,370 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 53 MB (+53522kb) [00:00:04]
+// [Engine Memory]: 3,108 MB (+3107310kb) [00:00:04]
+// [GUI Memory]: 56 MB (+129kb) [00:00:04]
+// [GUI Memory]: 68 MB (+8984kb) [00:00:05]
+// Xgd.load filename: /tools/Xilinx/Vivado/2018.3/data/parts/xilinx/virtex7/devint/virtex7/xc7vx690t/xc7vx690t.xgd; ZipEntry: xc7vx690t_detail.xgd elapsed time: 2s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 7.4s
+// [GUI Memory]: 100 MB (+29983kb) [00:00:12]
+// [GUI Memory]: 105 MB (+350kb) [00:00:14]
+// [GUI Memory]: 117 MB (+7053kb) [00:00:15]
+// [Engine Memory]: 3,264 MB (+534kb) [00:00:15]
+// Device: addNotify
+// DeviceView Instantiated
+// [GUI Memory]: 127 MB (+4233kb) [00:00:17]
+// Tcl Message: source synth.tcl 
+// Tcl Message: # read_verilog -sv [ glob *.sv ]  
+// Tcl Message: INFO: [Project 1-571] Translating synthesized netlist INFO: [Netlist 29-17] Analyzing 3671 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire9_expand3/temp.xdc] Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire9_expand3/temp.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2688.801 ; gain = 0.000 ; free physical = 2201 ; free virtual = 6482 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  INFO: [Common 17-83] Releasing license: Synthesis 
+// Tcl Message: 325 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:04:55 ; elapsed = 00:05:11 . Memory (MB): peak = 2688.801 ; gain = 1358.594 ; free physical = 2457 ; free virtual = 6733 
+// Tcl Message: # report_utilization -file utiliziation.rpt # report_utilization -hierarchical -file hierarchical_utilization.rpt # report_timing -file post_synth_timing.rpt 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs INFO: [Timing 38-35] Done setting XDC timing constraints. 
+// Tcl Message: INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack. 
+// Tcl Message: report_timing: Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 2841.820 ; gain = 153.020 ; free physical = 1891 ; free virtual = 6197 
+// Tcl Message: # if {[get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]] < 0} { # puts "Found setup timing violations => running physical optimization" # report_timing -file slack.rpt # } 
+// Tcl Message: Found setup timing violations => running physical optimization 
+// Tcl Message: INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack. 
+// Tcl Message: # opt_design -directive ExploreSequentialArea 
+// Tcl Message: Command: opt_design -directive ExploreSequentialArea 
+// Tcl Message: INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: ExploreSequentialArea 
+// Tcl Message: Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t' 
+// Tcl Message: Running DRC as a precondition to command opt_design  Starting DRC Task 
+// Tcl Message: INFO: [DRC 23-27] Running DRC with 4 threads INFO: [Project 1-461] DRC finished with 0 Errors INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information. 
+// Tcl Message:  Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2873.836 ; gain = 32.012 ; free physical = 1889 ; free virtual = 6200  Starting Cache Timing Information Task Ending Cache Timing Information Task | Checksum: 1233042b1  Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2873.836 ; gain = 0.000 ; free physical = 1892 ; free virtual = 6200  Starting Logic Optimization Task  Phase 1 Retarget 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Opt 31-49] Retargeted 0 cell(s). 
+// Tcl Message: Phase 1 Retarget | Checksum: 1233042b1  Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2888.836 ; gain = 0.000 ; free physical = 1859 ; free virtual = 6179 
+// Tcl Message: INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail.  
+// Tcl Message:  Phase 2 Constant propagation 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Phase 2 Constant propagation | Checksum: 150c2be16  Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2888.836 ; gain = 0.000 ; free physical = 1860 ; free virtual = 6177 
+// Tcl Message: INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells INFO: [Opt 31-1021] In phase Constant propagation, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail.  
+// Tcl Message:  Phase 3 Sweep Phase 3 Sweep | Checksum: 1230fa8f0  Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2888.836 ; gain = 0.000 ; free physical = 1864 ; free virtual = 6176 
+// Tcl Message: INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells INFO: [Opt 31-1021] In phase Sweep, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail.  
+// Tcl Message:  Phase 4 BUFG optimization Phase 4 BUFG optimization | Checksum: 1230fa8f0  Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2888.836 ; gain = 0.000 ; free physical = 1859 ; free virtual = 6175 
+// Tcl Message: INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells. 
+// Tcl Message:  Phase 5 Shift Register Optimization Phase 5 Shift Register Optimization | Checksum: 178eaf0ce  Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2888.836 ; gain = 0.000 ; free physical = 1845 ; free virtual = 6158 
+// Tcl Message: INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells 
+// Tcl Message:  Phase 6 Constant propagation 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Phase 6 Constant propagation | Checksum: 178eaf0ce  Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2888.836 ; gain = 0.000 ; free physical = 1828 ; free virtual = 6154 
+// Tcl Message: INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells INFO: [Opt 31-1021] In phase Constant propagation, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail.  
+// Tcl Message:  Phase 7 Sweep Phase 7 Sweep | Checksum: 178eaf0ce  Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2888.836 ; gain = 0.000 ; free physical = 1826 ; free virtual = 6144 
+// Tcl Message: INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells INFO: [Opt 31-1021] In phase Sweep, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail.  
+// Tcl Message:  Phase 8 Resynthesis 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. 
+// Tcl Message: INFO: [Opt 31-74] Optimized 1 modules. INFO: [Opt 31-75] Optimized module 'fire9_expand3'. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Phase 8 Resynthesis | Checksum: 162848423  Time (s): cpu = 00:01:20 ; elapsed = 00:01:00 . Memory (MB): peak = 2899.664 ; gain = 10.828 ; free physical = 2272 ; free virtual = 6507 
+// Tcl Message: INFO: [Opt 31-389] Phase Resynthesis created 1153 cells and removed 1559 cells INFO: [Opt 31-1021] In phase Resynthesis, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail.  
+// Tcl Message:  Phase 9 Post Processing Netlist Phase 9 Post Processing Netlist | Checksum: 162848423  Time (s): cpu = 00:01:20 ; elapsed = 00:01:00 . Memory (MB): peak = 2899.664 ; gain = 10.828 ; free physical = 2272 ; free virtual = 6507 
+// Tcl Message: INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells 
+// Tcl Message: INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns. INFO: [Timing 38-35] Done setting XDC timing constraints. 
+// Tcl Message: INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.099 | TNS=-357.396 | 
+// Tcl Message: Running Vector-less Activity Propagation...  Finished Running Vector-less Activity Propagation 
+// Tcl Message: INFO: [Pwropt 34-9] Applying IDT optimizations ... INFO: [Pwropt 34-10] Applying ODC optimizations ... 
+// Tcl Message:   Starting PowerOpt Patch Enables Task 
+// Tcl Message: INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 368 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated. INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 2246 ; free virtual = 6483 
+// Tcl Message: Ending Netlist Obfuscation Task | Checksum: 2b82c11c  Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 2246 ; free virtual = 6483 
+// Tcl Message: INFO: [Common 17-83] Releasing license: Implementation 
+// Tcl Message: 37 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered. opt_design completed successfully 
+// Tcl Message: opt_design: Time (s): cpu = 00:02:41 ; elapsed = 00:01:57 . Memory (MB): peak = 3384.941 ; gain = 543.121 ; free physical = 2246 ; free virtual = 6483 
+// Tcl Message: # place_design -no_fanout_opt -directive ExtraTimingOpt 
+// Tcl Message: Command: place_design -no_fanout_opt -directive ExtraTimingOpt Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t' INFO: [DRC 23-27] Running DRC with 4 threads INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information. 
+// Tcl Message: Running DRC as a precondition to command place_design 
+// Tcl Message: INFO: [DRC 23-27] Running DRC with 4 threads INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information. 
+// Tcl Message:  Starting Placer Task 
+// Tcl Message: INFO: [Place 46-5] The placer was invoked with the 'ExtraTimingOpt' directive. INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs 
+// Tcl Message:  Phase 1 Placer Initialization  Phase 1.1 Placer Initialization Netlist Sorting 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 2256 ; free virtual = 6484 
+// Tcl Message: Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 033058e4  Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 2256 ; free virtual = 6484 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 2256 ; free virtual = 6484 
+// Tcl Message:  Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. 
+// Tcl Message:  Phase 4.1.1 Post Placement Optimization Post Placement Optimization Initialization | Checksum: 13afc1fec  Phase 4.1.1.1 BUFG Insertion 
+// Tcl Message: INFO: [Place 46-46] BUFG insertion identified 0 candidate nets, 0 success, 0 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason 
+// Tcl Message: Phase 4.1.1.1 BUFG Insertion | Checksum: 13afc1fec  Time (s): cpu = 00:02:30 ; elapsed = 00:01:31 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 1904 ; free virtual = 6179 
+// Tcl Message: INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.071. For the most accurate timing information please run report_timing. 
+// Tcl Message: Phase 4.1.1 Post Placement Optimization | Checksum: 152772481  Time (s): cpu = 00:14:47 ; elapsed = 00:14:03 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 1505 ; free virtual = 6010 Phase 4.1 Post Commit Optimization | Checksum: 152772481  Time (s): cpu = 00:14:47 ; elapsed = 00:14:03 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 1505 ; free virtual = 6010 Post Placement Optimization Initialization | Checksum: 144b9a56b 
+// Tcl Message: INFO: [Place 46-46] BUFG insertion identified 0 candidate nets, 0 success, 0 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.016. For the most accurate timing information please run report_timing. 
+// Tcl Message:  Phase 4.2 Post Placement Cleanup Phase 4.2 Post Placement Cleanup | Checksum: 1ae97e1f2  Time (s): cpu = 00:16:41 ; elapsed = 00:15:48 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 1493 ; free virtual = 6005  Phase 4.3 Placer Reporting Phase 4.3 Placer Reporting | Checksum: 1ae97e1f2  Time (s): cpu = 00:16:41 ; elapsed = 00:15:49 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 1493 ; free virtual = 6005  Phase 4.4 Final Placement Cleanup 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 1493 ; free virtual = 6005 
+// Tcl Message: Phase 4.4 Final Placement Cleanup | Checksum: 186c83e06  Time (s): cpu = 00:16:42 ; elapsed = 00:15:49 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 1493 ; free virtual = 6005 Phase 4 Post Placement Optimization and Clean-Up | Checksum: 186c83e06  Time (s): cpu = 00:16:42 ; elapsed = 00:15:49 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 1493 ; free virtual = 6005 Ending Placer Task | Checksum: f741201a  Time (s): cpu = 00:16:42 ; elapsed = 00:15:49 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 1567 ; free virtual = 6078 
+// Tcl Message: INFO: [Common 17-83] Releasing license: Implementation 
+// Tcl Message: 16 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. place_design completed successfully 
+// Tcl Message: place_design: Time (s): cpu = 00:16:48 ; elapsed = 00:15:52 . Memory (MB): peak = 3384.941 ; gain = 0.000 ; free physical = 1567 ; free virtual = 6078 
+// Tcl Message: # route_design -directive NoTimingRelaxation -tns_cleanup 
+// Tcl Message: Command: route_design -directive NoTimingRelaxation -tns_cleanup Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t' 
+// Tcl Message: Running DRC as a precondition to command route_design 
+// Tcl Message: INFO: [DRC 23-27] Running DRC with 4 threads INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information. 
+// Tcl Message:  
+// Tcl Message:  Starting Routing Task 
+// Tcl Message: INFO: [Route 35-270] Using Router directive 'NoTimingRelaxation'. INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs 
+// Tcl Message: Checksum: PlaceDB: d334c48c ConstDB: 0 ShapeSum: 240c5b8e RouteDB: 0 
+// Tcl Message:  Phase 1 Build RT Design 
+// Tcl Message: Phase 1 Build RT Design | Checksum: 180b850de  Time (s): cpu = 00:02:02 ; elapsed = 00:01:12 . Memory (MB): peak = 3453.992 ; gain = 69.051 ; free physical = 1142 ; free virtual = 5650 
+// Tcl Message: Post Restoration Checksum: NetGraph: a5dc8eb0 NumContArr: dadbc22e Constraints: 0 Timing: 0 
+// Tcl Message:  Phase 2 Router Initialization  Phase 2.1 Create Timer Phase 2.1 Create Timer | Checksum: 180b850de  Time (s): cpu = 00:02:02 ; elapsed = 00:01:12 . Memory (MB): peak = 3473.746 ; gain = 88.805 ; free physical = 1106 ; free virtual = 5618  Phase 2.2 Fix Topology Constraints Phase 2.2 Fix Topology Constraints | Checksum: 180b850de  Time (s): cpu = 00:02:02 ; elapsed = 00:01:13 . Memory (MB): peak = 3503.996 ; gain = 119.055 ; free physical = 1063 ; free virtual = 5584  Phase 2.3 Pre Route Cleanup Phase 2.3 Pre Route Cleanup | Checksum: 180b850de  Time (s): cpu = 00:02:02 ; elapsed = 00:01:13 . Memory (MB): peak = 3503.996 ; gain = 119.055 ; free physical = 1063 ; free virtual = 5584 
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 2.4 Update Timing Phase 2.4 Update Timing | Checksum: 18c78d6bb  Time (s): cpu = 00:02:13 ; elapsed = 00:01:20 . Memory (MB): peak = 3550.574 ; gain = 165.633 ; free physical = 1056 ; free virtual = 5539 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.823 | TNS=-2818.703| WHS=0.035  | THS=0.000  |  
+// Tcl Message: Phase 2 Router Initialization | Checksum: 10e1eefd6  Time (s): cpu = 00:02:17 ; elapsed = 00:01:21 . Memory (MB): peak = 3550.574 ; gain = 165.633 ; free physical = 1047 ; free virtual = 5533  Phase 3 Initial Routing Phase 3 Initial Routing | Checksum: 21a1a40c8  Time (s): cpu = 00:04:16 ; elapsed = 00:02:29 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 994 ; free virtual = 5527  Phase 4 Rip-up And Reroute  Phase 4.1 Global Iteration 0 
+// Tcl Message:  Number of Nodes with overlaps = 32  Number of Nodes with overlaps = 1  Number of Nodes with overlaps = 0 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6309.802| WHS=N/A    | THS=N/A    |  
+// Tcl Message: Phase 4.1 Global Iteration 0 | Checksum: 271de8b89  Time (s): cpu = 00:04:40 ; elapsed = 00:02:45 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1019 ; free virtual = 5556  Phase 4.2 Global Iteration 1 
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.061 | TNS=-5833.754| WHS=N/A    | THS=N/A    |  
+// Tcl Message: Phase 4.2 Global Iteration 1 | Checksum: 218dd34bf  Time (s): cpu = 00:04:44 ; elapsed = 00:02:48 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1016 ; free virtual = 5553 Phase 4 Rip-up And Reroute | Checksum: 218dd34bf  Time (s): cpu = 00:04:44 ; elapsed = 00:02:49 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1016 ; free virtual = 5553  Phase 5 Delay and Skew Optimization  Phase 5.1 TNS Cleanup  Phase 5.1.1 Delay CleanUp  Phase 5.1.1.1 Update Timing Phase 5.1.1.1 Update Timing | Checksum: 237f8af32  Time (s): cpu = 00:04:46 ; elapsed = 00:02:49 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1014 ; free virtual = 5552 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6309.796| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 5.1.1.2 Update Timing Phase 5.1.1.2 Update Timing | Checksum: 1a3cf049f  Time (s): cpu = 00:04:47 ; elapsed = 00:02:50 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1014 ; free virtual = 5551 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6296.321| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 5.1.1.3 Update Timing Phase 5.1.1.3 Update Timing | Checksum: 1b8e6d761  Time (s): cpu = 00:04:48 ; elapsed = 00:02:51 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1013 ; free virtual = 5550 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6286.479| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 5.1.1.4 Update Timing Phase 5.1.1.4 Update Timing | Checksum: 187191d08  Time (s): cpu = 00:04:49 ; elapsed = 00:02:51 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1013 ; free virtual = 5550 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6282.049| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 5.1.1.5 Update Timing Phase 5.1.1.5 Update Timing | Checksum: 1c1e8f1b3  Time (s): cpu = 00:04:50 ; elapsed = 00:02:52 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1013 ; free virtual = 5550 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6275.802| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 5.1.1.6 Update Timing Phase 5.1.1.6 Update Timing | Checksum: 173de1b8e  Time (s): cpu = 00:04:51 ; elapsed = 00:02:53 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1014 ; free virtual = 5551 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6270.447| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 5.1.1.7 Update Timing Phase 5.1.1.7 Update Timing | Checksum: 1aace05ff  Time (s): cpu = 00:04:52 ; elapsed = 00:02:53 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1013 ; free virtual = 5551 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6266.429| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 5.1.1.8 Update Timing Phase 5.1.1.8 Update Timing | Checksum: 21d6c30d3  Time (s): cpu = 00:04:53 ; elapsed = 00:02:54 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1013 ; free virtual = 5551 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6262.580| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 5.1.1.9 Update Timing Phase 5.1.1.9 Update Timing | Checksum: cabceead  Time (s): cpu = 00:04:54 ; elapsed = 00:02:55 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1012 ; free virtual = 5550 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6257.986| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 5.1.1.10 Update Timing Phase 5.1.1.10 Update Timing | Checksum: 1600a8da2  Time (s): cpu = 00:04:55 ; elapsed = 00:02:55 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1012 ; free virtual = 5550 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6255.038| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6253.021| WHS=0.123  | THS=0.000  |  
+// Tcl Message: Phase 6.1 Hold Fix Iter | Checksum: 13f47e99d  Time (s): cpu = 00:04:59 ; elapsed = 00:02:57 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1017 ; free virtual = 5554 Phase 6 Post Hold Fix | Checksum: 13f47e99d  Time (s): cpu = 00:04:59 ; elapsed = 00:02:57 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1017 ; free virtual = 5554  Phase 7 Timing Verification  Phase 7.1 Update Timing Phase 7.1 Update Timing | Checksum: 2071ce2a0  Time (s): cpu = 00:05:02 ; elapsed = 00:02:59 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1014 ; free virtual = 5552 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.817 | TNS=-6253.021| WHS=N/A    | THS=N/A    |  
+// Tcl Message: Phase 7 Timing Verification | Checksum: 2071ce2a0  Time (s): cpu = 00:05:02 ; elapsed = 00:02:59 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1014 ; free virtual = 5552  Phase 8 Route finalize 
+// Tcl Message: Phase 8 Route finalize | Checksum: 2071ce2a0  Time (s): cpu = 00:05:04 ; elapsed = 00:02:59 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1009 ; free virtual = 5546  Phase 9 Verifying routed nets 
+// Tcl Message:   Verification completed successfully 
+// Tcl Message: Phase 9 Verifying routed nets | Checksum: 2071ce2a0  Time (s): cpu = 00:05:04 ; elapsed = 00:02:59 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1009 ; free virtual = 5546  Phase 10 Depositing Routes Phase 10 Depositing Routes | Checksum: 17585d750  Time (s): cpu = 00:05:05 ; elapsed = 00:03:01 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1011 ; free virtual = 5548  Phase 11 Incr Placement Change 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3776.402 ; gain = 0.000 ; free physical = 1062 ; free virtual = 5599 
+// Tcl Message: INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.750. For the most accurate timing information please run report_timing. 
+// Tcl Message: Ending IncrPlace Task | Checksum: 114c65ef4  Time (s): cpu = 00:01:36 ; elapsed = 00:01:27 . Memory (MB): peak = 3776.402 ; gain = 0.000 ; free physical = 1068 ; free virtual = 5605 Phase 11 Incr Placement Change | Checksum: 17585d750  Time (s): cpu = 00:06:42 ; elapsed = 00:04:29 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1068 ; free virtual = 5605  Phase 12 Build RT Design 
+// Tcl Message: Phase 12 Build RT Design | Checksum: 143c3dfcf  Time (s): cpu = 00:07:09 ; elapsed = 00:04:56 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 924 ; free virtual = 5557 
+// Tcl Message: Post Restoration Checksum: NetGraph: c5efdf98 NumContArr: 5bbf35a9 Constraints: 0 Timing: 0 
+// Tcl Message:  Phase 13 Router Initialization  Phase 13.1 Create Timer Phase 13.1 Create Timer | Checksum: 121af1541  Time (s): cpu = 00:07:10 ; elapsed = 00:04:57 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 856 ; free virtual = 5499  Phase 13.2 Fix Topology Constraints Phase 13.2 Fix Topology Constraints | Checksum: 121af1541  Time (s): cpu = 00:07:11 ; elapsed = 00:04:57 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 824 ; free virtual = 5464  Phase 13.3 Pre Route Cleanup Phase 13.3 Pre Route Cleanup | Checksum: 12c98ed38  Time (s): cpu = 00:07:11 ; elapsed = 00:04:58 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 824 ; free virtual = 5464 
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 13.4 Update Timing Phase 13.4 Update Timing | Checksum: 1c6bc5139  Time (s): cpu = 00:07:21 ; elapsed = 00:05:03 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 813 ; free virtual = 5452 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.723 | TNS=-5768.164| WHS=0.035  | THS=0.000  |  
+// Tcl Message: Phase 13 Router Initialization | Checksum: 287dc30f6  Time (s): cpu = 00:07:24 ; elapsed = 00:05:04 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 806 ; free virtual = 5445  Phase 14 Initial Routing Phase 14 Initial Routing | Checksum: 219b24d13  Time (s): cpu = 00:07:41 ; elapsed = 00:05:17 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 795 ; free virtual = 5404  Phase 15 Rip-up And Reroute  Phase 15.1 Global Iteration 0 
+// Tcl Message:  Number of Nodes with overlaps = 7  Number of Nodes with overlaps = 0 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6030.226| WHS=N/A    | THS=N/A    |  
+// Tcl Message: Phase 15.1 Global Iteration 0 | Checksum: 1c2d369d2  Time (s): cpu = 00:08:03 ; elapsed = 00:05:34 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 800 ; free virtual = 5409  Phase 15.2 Global Iteration 1 
+// Tcl Message:  Number of Nodes with overlaps = 5  Number of Nodes with overlaps = 0 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.897 | TNS=-5517.021| WHS=N/A    | THS=N/A    |  
+// Tcl Message: Phase 15.2 Global Iteration 1 | Checksum: 1bd6e312e  Time (s): cpu = 00:08:07 ; elapsed = 00:05:37 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 800 ; free virtual = 5413 Phase 15 Rip-up And Reroute | Checksum: 1bd6e312e  Time (s): cpu = 00:08:07 ; elapsed = 00:05:37 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 800 ; free virtual = 5413  Phase 16 Delay and Skew Optimization  Phase 16.1 TNS Cleanup  Phase 16.1.1 Delay CleanUp  Phase 16.1.1.1 Update Timing Phase 16.1.1.1 Update Timing | Checksum: 1c4d41de2  Time (s): cpu = 00:08:09 ; elapsed = 00:05:38 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 800 ; free virtual = 5413 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6030.220| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 16.1.1.2 Update Timing Phase 16.1.1.2 Update Timing | Checksum: 1ae8d9412  Time (s): cpu = 00:08:10 ; elapsed = 00:05:39 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 799 ; free virtual = 5412 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6028.049| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 16.1.1.3 Update Timing Phase 16.1.1.3 Update Timing | Checksum: 1d5157927  Time (s): cpu = 00:08:10 ; elapsed = 00:05:39 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 801 ; free virtual = 5414 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6026.902| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 16.1.1.4 Update Timing Phase 16.1.1.4 Update Timing | Checksum: 206b51234  Time (s): cpu = 00:08:11 ; elapsed = 00:05:40 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 800 ; free virtual = 5413 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6025.544| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 16.1.1.5 Update Timing Phase 16.1.1.5 Update Timing | Checksum: 28177b915  Time (s): cpu = 00:08:12 ; elapsed = 00:05:41 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 800 ; free virtual = 5413 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6023.752| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 16.1.1.6 Update Timing Phase 16.1.1.6 Update Timing | Checksum: 206a14d66  Time (s): cpu = 00:08:13 ; elapsed = 00:05:41 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 801 ; free virtual = 5413 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6023.488| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 16.1.1.7 Update Timing Phase 16.1.1.7 Update Timing | Checksum: 1ce6b3fb6  Time (s): cpu = 00:08:14 ; elapsed = 00:05:42 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 800 ; free virtual = 5413 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6022.339| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 16.1.1.8 Update Timing Phase 16.1.1.8 Update Timing | Checksum: d8d82960  Time (s): cpu = 00:08:16 ; elapsed = 00:05:43 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 800 ; free virtual = 5413 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6018.310| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 16.1.1.9 Update Timing Phase 16.1.1.9 Update Timing | Checksum: c9b6263e  Time (s): cpu = 00:08:17 ; elapsed = 00:05:43 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 800 ; free virtual = 5413 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6016.579| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message:  Phase 16.1.1.10 Update Timing Phase 16.1.1.10 Update Timing | Checksum: 1609b78f8  Time (s): cpu = 00:08:18 ; elapsed = 00:05:44 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 800 ; free virtual = 5413 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6014.498| WHS=N/A    | THS=N/A    |  
+// Tcl Message:  Number of Nodes with overlaps = 0 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6011.663| WHS=0.123  | THS=0.000  |  
+// Tcl Message: Phase 17.1 Hold Fix Iter | Checksum: 148aefecc  Time (s): cpu = 00:08:21 ; elapsed = 00:05:46 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 805 ; free virtual = 5418 Phase 17 Post Hold Fix | Checksum: 148aefecc  Time (s): cpu = 00:08:21 ; elapsed = 00:05:46 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 805 ; free virtual = 5418  Phase 18 Timing Verification  Phase 18.1 Update Timing Phase 18.1 Update Timing | Checksum: 14bd8a12e  Time (s): cpu = 00:08:25 ; elapsed = 00:05:48 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 804 ; free virtual = 5417 
+// Tcl Message: INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.866 | TNS=-6011.666| WHS=N/A    | THS=N/A    |  
+// Tcl Message: Phase 18 Timing Verification | Checksum: 14bd8a12e  Time (s): cpu = 00:08:25 ; elapsed = 00:05:48 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 804 ; free virtual = 5416  Phase 19 Reset Design 
+// Tcl Message: INFO: [Route 35-307] 26775 nets already restored were skipped. 
+// Tcl Message: Post Restoration Checksum: NetGraph: 76e694a1 NumContArr: e4da6efd Constraints: 0 Timing: f2a4f42f 
+// Tcl Message: Phase 19 Reset Design | Checksum: 24e65f7cd  Time (s): cpu = 00:08:30 ; elapsed = 00:05:50 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 856 ; free virtual = 5468  Phase 20 Post Router Timing 
+// Tcl Message: INFO: [Route 35-62] Timer settings changed to match sign-off timing analysis. Setup and Hold analysis on slow, fast Corners with nearest common node skew is enabled. 
+// Tcl Message: INFO: [Route 35-20] Post Routing Timing Summary | WNS=-0.816 | TNS=-6241.226| WHS=0.124  | THS=0.000  |  
+// Tcl Message: INFO: [Route 35-253] TNS is the sum of the worst slack violation on every endpoint in the design. Review the paths with the biggest WNS violations in the timing reports and modify your constraints or your design to improve both WNS and TNS. 
+// Tcl Message: Phase 20 Post Router Timing | Checksum: 161699634  Time (s): cpu = 00:08:40 ; elapsed = 00:05:53 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 857 ; free virtual = 5470 
+// Tcl Message: INFO: [Route 35-16] Router Completed Successfully 
+// Tcl Message:  Time (s): cpu = 00:08:40 ; elapsed = 00:05:54 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1147 ; free virtual = 5759 
+// Tcl Message:  Routing Is Done. 
+// Tcl Message: INFO: [Common 17-83] Releasing license: Implementation 
+// Tcl Message: 43 Infos, 39 Warnings, 1 Critical Warnings and 0 Errors encountered. route_design completed successfully 
+// Tcl Message: route_design: Time (s): cpu = 00:08:47 ; elapsed = 00:05:56 . Memory (MB): peak = 3776.402 ; gain = 391.461 ; free physical = 1147 ; free virtual = 5760 
+// Tcl Message: # report_timing 
+// Tcl Message: INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack. 
+// Tcl Message: start_gui  
+// Tcl Message: # create_fileset -constrset constr # add_files -fileset constr temp.xdc # set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304" # synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context 
+// Tcl Message: Command: synth_design -top fire9_expand3 -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context Starting synth_design Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t' 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 2283.621 ; gain = 932.977 ; free physical = 2890 ; free virtual = 7054 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Loading Part and Timing Information --------------------------------------------------------------------------------- Loading part: xc7vx690tffg1157-3 --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 2283.621 ; gain = 932.977 ; free physical = 2890 ; free virtual = 7054 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Applying 'set_property' XDC Constraints --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 2283.621 ; gain = 932.977 ; free physical = 2890 ; free virtual = 7054 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2416.652 ; gain = 1066.008 ; free physical = 2873 ; free virtual = 6983 
+// Tcl Message: INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse 
+// Tcl Message: Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:19 ; elapsed = 00:02:28 . Memory (MB): peak = 2626.785 ; gain = 1276.141 ; free physical = 2414 ; free virtual = 6665 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report RTL Partitions:  +-+--------------+------------+----------+ | |RTL Partition |Replication |Instances | +-+--------------+------------+----------+ +-+--------------+------------+----------+ --------------------------------------------------------------------------------- Start Applying XDC Timing Constraints --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:42 ; elapsed = 00:02:53 . Memory (MB): peak = 2626.785 ; gain = 1276.141 ; free physical = 2124 ; free virtual = 6371 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Timing Optimization --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Timing Optimization : Time (s): cpu = 00:03:25 ; elapsed = 00:03:37 . Memory (MB): peak = 2688.793 ; gain = 1338.148 ; free physical = 2061 ; free virtual = 6328 
+// Tcl Message: ---------------------------------------------------------------------------------  Report RTL Partitions:  +-+--------------+------------+----------+ | |RTL Partition |Replication |Instances | +-+--------------+------------+----------+ +-+--------------+------------+----------+ --------------------------------------------------------------------------------- Start Technology Mapping --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Technology Mapping : Time (s): cpu = 00:04:00 ; elapsed = 00:04:14 . Memory (MB): peak = 2688.793 ; gain = 1338.148 ; free physical = 2197 ; free virtual = 6468 
+// Tcl Message: INFO: [Synth 8-6064] Net layer_en_reg is driving 368 big block pins (URAM, BRAM and DSP loads). Created 37 replicas of its driver.  
+// Tcl Message: --------------------------------------------------------------------------------- Finished Final Netlist Cleanup --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished IO Insertion : Time (s): cpu = 00:04:05 ; elapsed = 00:04:19 . Memory (MB): peak = 2688.793 ; gain = 1338.148 ; free physical = 2184 ; free virtual = 6464 
+// Tcl Message: Finished Renaming Generated Instances : Time (s): cpu = 00:04:06 ; elapsed = 00:04:20 . Memory (MB): peak = 2688.793 ; gain = 1338.148 ; free physical = 2186 ; free virtual = 6464 
+// Tcl Message: ---------------------------------------------------------------------------------  Report RTL Partitions:  +-+--------------+------------+----------+ | |RTL Partition |Replication |Instances | +-+--------------+------------+----------+ +-+--------------+------------+----------+ --------------------------------------------------------------------------------- Start Rebuilding User Hierarchy --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:28 ; elapsed = 00:04:43 . Memory (MB): peak = 2688.793 ; gain = 1338.148 ; free physical = 2230 ; free virtual = 6503 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Renaming Generated Ports --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Renaming Generated Ports : Time (s): cpu = 00:04:28 ; elapsed = 00:04:43 . Memory (MB): peak = 2688.793 ; gain = 1338.148 ; free physical = 2226 ; free virtual = 6503 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:04:29 ; elapsed = 00:04:44 . Memory (MB): peak = 2688.793 ; gain = 1338.148 ; free physical = 2226 ; free virtual = 6503 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Renaming Generated Nets --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Renaming Generated Nets : Time (s): cpu = 00:04:29 ; elapsed = 00:04:44 . Memory (MB): peak = 2688.793 ; gain = 1338.148 ; free physical = 2226 ; free virtual = 6503 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Writing Synthesis Report ---------------------------------------------------------------------------------  Report BlackBoxes:  +-+--------------+----------+ | |BlackBox name |Instances | +-+--------------+----------+ +-+--------------+----------+ 
+// Tcl Message: Finished Writing Synthesis Report : Time (s): cpu = 00:04:29 ; elapsed = 00:04:44 . Memory (MB): peak = 2688.793 ; gain = 1338.148 ; free physical = 2226 ; free virtual = 6503 
+// Tcl Message: --------------------------------------------------------------------------------- Synthesis finished with 0 errors, 0 critical warnings and 0 warnings. Synthesis Optimization Runtime : Time (s): cpu = 00:04:03 ; elapsed = 00:04:17 . Memory (MB): peak = 2688.793 ; gain = 822.922 ; free physical = 2289 ; free virtual = 6567 Synthesis Optimization Complete : Time (s): cpu = 00:04:30 ; elapsed = 00:04:45 . Memory (MB): peak = 2688.801 ; gain = 1338.148 ; free physical = 2289 ; free virtual = 6567 
+// [GUI Memory]: 138 MB (+5136kb) [00:00:19]
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Device view-level: 0.0
+// [GUI Memory]: 145 MB (+435kb) [00:00:20]
+// [GUI Memory]: 153 MB (+211kb) [00:00:20]
+// Device view-level: 0.0
+// HMemoryUtils.trashcanNow. Engine heap size: 3,371 MB. GUI used memory: 87 MB. Current time: 3/10/20, 11:46:33 PM EET
+// Device view-level: 0.3
+// [GUI Memory]: 165 MB (+4936kb) [00:00:32]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,374 MB. GUI used memory: 114 MB. Current time: 3/10/20, 11:46:41 PM EET
+// Device view-level: 0.6
+// Device view-level: 0.9
+// Device view-level: 1.2
+// Device view-level: 1.5
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 3,375 MB. GUI used memory: 93 MB. Current time: 3/10/20, 11:46:43 PM EET
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.6
+// WARNING: HEventQueue.dispatchEvent() is taking  1088 ms.
+// Device view-level: 2.9
+// [Engine Memory]: 3,503 MB (+79776kb) [00:00:35]
+// Device view-level: 3.2
+// HMemoryUtils.trashcanNow. Engine heap size: 3,439 MB. GUI used memory: 102 MB. Current time: 3/10/20, 11:46:45 PM EET
+// Device view-level: 2.9
+// Device view-level: 2.6
+// Device view-level: 2.9
+// Device view-level: 3.2
+// [GUI Memory]: 174 MB (+254kb) [00:00:39]
+// Device view-level: 3.5
+// [GUI Memory]: 191 MB (+9201kb) [00:00:39]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,419 MB. GUI used memory: 95 MB. Current time: 3/10/20, 11:46:49 PM EET
+// Device view-level: 4.4
+// Device view-level: 5.0
+// Device view-level: 5.3
+// Device view-level: 5.0
+// Device view-level: 4.7
+// HMemoryUtils.trashcanNow. Engine heap size: 3,420 MB. GUI used memory: 105 MB. Current time: 3/10/20, 11:46:53 PM EET
+// Device view-level: 4.1
+// Device view-level: 3.8
+// Device view-level: 3.2
+// Device view-level: 2.9
+// Device view-level: 2.6
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 3,416 MB. GUI used memory: 94 MB. Current time: 3/10/20, 11:46:55 PM EET
+// Device view-level: 1.5
+// Device view-level: 1.2
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 3,416 MB. GUI used memory: 128 MB. Current time: 3/10/20, 11:47:00 PM EET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,416 MB. GUI used memory: 174 MB. Current time: 3/10/20, 11:47:10 PM EET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,417 MB. GUI used memory: 165 MB. Current time: 3/10/20, 11:47:15 PM EET
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3346, 1106386); // D (I, cp)
+// Run Command: RDIResourceCommand.RDICommands_FIND
+// g (cp): Find: addNotify
+// Elapsed time: 25 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (g)
+// bx (g):  Find Cells : addNotify
+// Tcl Command: 'show_objects -name find_1 [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ BMEM.*.* }  -of_objects RAMB18_X1Y72]'
+// HMemoryUtils.trashcanNow. Engine heap size: 3,441 MB. GUI used memory: 100 MB. Current time: 3/10/20, 11:47:54 PM EET
+// Tcl Message: show_objects -name find_1 [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ BMEM.*.* }  -of_objects RAMB18_X1Y72] 
+// Tcl Message: ERROR: [Vivado 12-614] Cannot specify '-hierarchical' with '-of_objects'. 
+// HOptionPane Warning: '[Vivado 12-614] Cannot specify '-hierarchical' with '-of_objects'.  (Find)'
+selectButton("PAResourceTtoZ.TclFindTask_FIND_OK", "OK"); // JButton (C, J)
+selectCheckBox(PAResourceTtoZ.TclFindDialog_SEARCH_HIERARCHICALLY, "Search hierarchically", false); // g (g): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (g)
+// Tcl Command: 'show_objects -name find_1 [get_cells  -filter { PRIMITIVE_TYPE =~ BMEM.*.* }  -of_objects RAMB18_X1Y72]'
+// bx (g):  Find Cells : addNotify
+// Tcl Message: show_objects -name find_1 [get_cells  -filter { PRIMITIVE_TYPE =~ BMEM.*.* }  -of_objects RAMB18_X1Y72] 
+// Tcl Message: ERROR: [Common 17-697] get_cells: option '-of_objects' requires explicit objects, e.g. -of_objects [get_cells lut2], implicit search for '-of_objects' using name or pattern is not supported. 
+// HOptionPane Warning: '[Common 17-697] get_cells: option '-of_objects' requires explicit objects, e.g. - of_objects [get_cells lut2], implicit search for '-of_objects' using name or pattern is not supported.  (Find)'
+selectButton("PAResourceTtoZ.TclFindTask_FIND_OK", "OK"); // JButton (C, J)
+selectComboBox(PAResourceTtoZ.TclFindDialog_FIND, "Sites", 9); // e (g)
+setText("pa.Finder.Sites_filter_1", (String) null); // C (Q, g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (g)
+// Tcl Command: 'show_objects -name find_1 [get_sites "*RAMB18_X1Y72*" ]'
+// bx (g):  Find Sites : addNotify
+// TclEventType: SHOW_OBJECTS
+// Tcl Message: show_objects -name find_1 [get_sites "*RAMB18_X1Y72*" ] 
+dismissDialog("Find Sites"); // bx (g)
+dismissDialog("Find"); // g (cp)
+// Device view-level: 0.6
+// Device view-level: 0.0
+// Device view-level: 0.3
+// HMemoryUtils.trashcanNow. Engine heap size: 3,446 MB. GUI used memory: 195 MB. Current time: 3/10/20, 11:48:37 PM EET
+// Device view-level: 0.9
+// Device view-level: 1.2
+// [GUI Memory]: 206 MB (+4786kb) [00:02:28]
+// Device view-level: 1.5
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 3,446 MB. GUI used memory: 150 MB. Current time: 3/10/20, 11:48:38 PM EET
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.6
+// Device view-level: 2.9
+// HMemoryUtils.trashcanNow. Engine heap size: 3,446 MB. GUI used memory: 146 MB. Current time: 3/10/20, 11:48:41 PM EET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,447 MB. GUI used memory: 144 MB. Current time: 3/10/20, 11:48:44 PM EET
+// Device view-level: 2.6
+// Device view-level: 2.0
+// HMemoryUtils.trashcanNow. Engine heap size: 3,447 MB. GUI used memory: 145 MB. Current time: 3/10/20, 11:48:45 PM EET
+// Device view-level: 1.8
+// Device view-level: 1.5
+// Device view-level: 1.2
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 3,447 MB. GUI used memory: 99 MB. Current time: 3/10/20, 11:48:49 PM EET
+// Device view-level: 1.8
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.6
+// Device view-level: 2.9
+// HMemoryUtils.trashcanNow. Engine heap size: 3,447 MB. GUI used memory: 108 MB. Current time: 3/10/20, 11:48:51 PM EET
+// Device view-level: 3.2
+// Device view-level: 3.5
+// Device view-level: 3.2
+// Device view-level: 2.9
+// Device view-level: 2.3
+// HMemoryUtils.trashcanNow. Engine heap size: 3,517 MB. GUI used memory: 185 MB. Current time: 3/10/20, 11:49:10 PM EET
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.0
+// Device view-level: 1.8
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 3,517 MB. GUI used memory: 170 MB. Current time: 3/10/20, 11:49:11 PM EET
+// Device view-level: 1.2
+// Device view-level: 0.9
+// Device view-level: 0.6
+// Elapsed time: 59 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aI (aF, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 298334, 815457); // D (I, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,452 MB. GUI used memory: 101 MB. Current time: 3/10/20, 11:49:24 PM EET
+// Elapsed time: 10 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (aF, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,523 MB. GUI used memory: 146 MB. Current time: 3/10/20, 11:49:34 PM EET
+// Elapsed time: 46 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 372857, 1041894); // D (I, cp)
+// Device select: 'Cell - mul_out_reg'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 782, 727, 1807, 845); // U (k, cp)
+// PAPropertyPanels.initPanels (mul_out_reg (DSP48E1)) elapsed time: 1s
+// WARNING: HEventQueue.dispatchEvent() is taking  1140 ms.
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 3,526 MB. GUI used memory: 178 MB. Current time: 3/10/20, 11:50:21 PM EET
+// Device view-level: 1.5
+// [GUI Memory]: 216 MB (+258kb) [00:04:29]
+// [GUI Memory]: 228 MB (+852kb) [00:04:32]
+// [GUI Memory]: 240 MB (+473kb) [00:04:36]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,498 MB. GUI used memory: 113 MB. Current time: 3/10/20, 11:50:55 PM EET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,499 MB. GUI used memory: 187 MB. Current time: 3/10/20, 11:50:59 PM EET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,499 MB. GUI used memory: 175 MB. Current time: 3/10/20, 11:51:00 PM EET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,499 MB. GUI used memory: 203 MB. Current time: 3/10/20, 11:51:13 PM EET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,500 MB. GUI used memory: 187 MB. Current time: 3/10/20, 11:51:38 PM EET
+// Elapsed time: 92 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 121445, 1137171); // D (I, cp)
+// Device select: 'Cell - rom_out_reg[290]'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 286, 2678, 1807, 845); // U (k, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,579 MB. GUI used memory: 243 MB. Current time: 3/10/20, 11:51:53 PM EET
+// [GUI Memory]: 252 MB (+471kb) [00:05:45]
+// [GUI Memory]: 265 MB (+228kb) [00:05:47]
+// Device view-level: 1.8
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.6
+// HMemoryUtils.trashcanNow. Engine heap size: 3,673 MB. GUI used memory: 184 MB. Current time: 3/10/20, 11:51:59 PM EET
+// Device view-level: 2.9
+// Device view-level: 3.2
+// HMemoryUtils.trashcanNow. Engine heap size: 3,482 MB. GUI used memory: 108 MB. Current time: 3/10/20, 11:52:19 PM EET
+// Elapsed time: 112 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax
+// Tcl Command: 'rdi::info_commands {phys*}'
+// Tcl Command: 'rdi::info_commands {phys*}'
+// Tcl Command: 'rdi::match_options {phys_opt_design} {}'
+// Tcl Command: 'rdi::match_options {phys_opt_design} {}'
+// Tcl Command: 'rdi::match_options {phys_opt_design} {}'
+// Elapsed time: 29 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "phys_opt_design -routing_opt", true); // aC (Z, cp)
+// Tcl Command: 'phys_opt_design -routing_opt'
+// Tcl Command: 'phys_opt_design -routing_opt'
+// Tcl Message: phys_opt_design -routing_opt 
+// Tcl Message: Command: phys_opt_design -routing_opt Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t' 
+// TclEventType: TIMING_RESULTS_STALE
+// Tcl Message: INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode ( 100.0% nets are fully routed) 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8817.152 ; gain = 0.000 ; free physical = 467 ; free virtual = 5240 
+// Tcl Message:  Starting Physical Synthesis Task  Phase 1 Physical Synthesis Initialization 
+// Tcl Message: INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs 
+// bx (cp):  Tcl Command Line : addNotify
+// Tcl Message: INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.816 | TNS=-6241.225 | WHS=0.124 | THS=0.000 | 
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: Phase 1 Physical Synthesis Initialization | Checksum: f28e6118  Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 8838.160 ; gain = 21.008 ; free physical = 464 ; free virtual = 5239 
+// Tcl Message:  Phase 2 Critical Path Optimization 
+// Tcl Message: INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.816 | TNS=-6241.225 | WHS=0.124 | THS=0.000 | 
+// TclEventType: ROUTE_NET
+// Tcl Message: INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: u_2/rom_out[6][0]. 
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: ROUTE_NET
+// RouteApi::updateRouteStorage elapsed time: 3.1s
+// TclEventType: ROUTE_NET
+// Tcl Message: INFO: [Physopt 32-952] Improved path group WNS = -0.771. Path group: clk. Processed net: weight_rom_address_reg__0[7]. INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: genblk1[201].mac_i/mul_out_reg_n_104. 
+// TclEventType: ROUTE_NET
+// TclEventType: MSGMGR_REFRESH_MSG
+// RouteApi::updateRouteStorage elapsed time: 4.3s
+// Tcl Message: INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: u_2/rom_out[201][13]. INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.771 | TNS=-6240.421 | WHS=0.124 | THS=0.000 | 
+// Tcl Message: Phase 2 Critical Path Optimization | Checksum: f28e6118  Time (s): cpu = 00:02:19 ; elapsed = 00:01:09 . Memory (MB): peak = 8931.934 ; gain = 114.781 ; free physical = 198 ; free virtual = 4766 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8931.934 ; gain = 0.000 ; free physical = 197 ; free virtual = 4765 
+// Tcl Message: INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=-0.771 | TNS=-6240.421 | WHS=0.124 | THS=0.000 | 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 8931.934 ; gain = 0.000 ; free physical = 198 ; free virtual = 4766 
+// Tcl Message: Ending Physical Synthesis Task | Checksum: f28e6118  Time (s): cpu = 00:02:19 ; elapsed = 00:01:09 . Memory (MB): peak = 8931.934 ; gain = 114.781 ; free physical = 198 ; free virtual = 4766 
+// Tcl Message: INFO: [Common 17-83] Releasing license: Implementation 
+// Tcl Message: 12 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered. phys_opt_design completed successfully 
+// Tcl Message: phys_opt_design: Time (s): cpu = 00:02:22 ; elapsed = 00:01:10 . Memory (MB): peak = 8931.934 ; gain = 114.785 ; free physical = 476 ; free virtual = 5052 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,579 MB. GUI used memory: 159 MB. Current time: 3/10/20, 11:55:27 PM EET
+// Elapsed time: 73 seconds
+dismissDialog("Tcl Command Line"); // bx (cp)
+// Tcl Command: 'rdi::info_commands {repor*}'
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:56:41 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:56:41 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// Tcl Command: 'rdi::info_commands {report_ti*}'
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:56:44 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// Device view-level: 2.9
+// Device view-level: 2.3
+// Device view-level: 2.0
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 3,580 MB. GUI used memory: 151 MB. Current time: 3/10/20, 11:56:57 PM EET
+// Device view-level: 1.5
+// Device view-level: 1.8
+// Device view-level: 2.0
+// Device view-level: 2.3
+// HMemoryUtils.trashcanNow. Engine heap size: 3,580 MB. GUI used memory: 192 MB. Current time: 3/10/20, 11:57:00 PM EET
+// Device view-level: 2.6
+// Device view-level: 2.9
+// Device view-level: 3.2
+// HMemoryUtils.trashcanNow. Engine heap size: 3,580 MB. GUI used memory: 185 MB. Current time: 3/10/20, 11:57:03 PM EET
+// Device view-level: 3.5
+// Device view-level: 3.8
+// Device view-level: 4.1
+// Device view-level: 4.4
+// Device view-level: 4.7
+// HMemoryUtils.trashcanNow. Engine heap size: 3,580 MB. GUI used memory: 204 MB. Current time: 3/10/20, 11:57:04 PM EET
+// Device view-level: 5.0
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:05 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:08 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:08 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:08 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:08 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:08 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:08 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:08 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:08 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:08 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// [Engine Memory]: 3,857 MB (+187697kb) [00:10:59]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,857 MB. GUI used memory: 158 MB. Current time: 3/10/20, 11:57:09 PM EET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,857 MB. GUI used memory: 172 MB. Current time: 3/10/20, 11:57:10 PM EET
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:13 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:13 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:13 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:13 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:15 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:15 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:15 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:15 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:15 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:16 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:16 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:32 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:32 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:32 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:32 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:32 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// HMemoryUtils.trashcanNow. Engine heap size: 3,858 MB. GUI used memory: 171 MB. Current time: 3/10/20, 11:57:32 PM EET
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:32 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:32 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:32 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:32 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:32 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:33 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:33 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:33 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:34 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:34 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:37 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:38 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:39 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// Elapsed time: 131 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // aC (Z, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 120685, 1138592); // D (I, cp)
+// Device select: 'Cell Pin - ADDRARDADDR[11]'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 36875, 347895, 1807, 582); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 120691, 1138589); // D (I, cp)
+// Device select: 'Cell Pin - ADDRARDADDR[11]'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 36877, 347894, 1807, 582); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 120691, 1138589, false, false, false, false, true); // D (I, cp) - Double Click
+// Device select: 'Cell Pin - ADDRARDADDR[11]'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 36877, 347894, 1807, 582); // U (k, cp)
+// Device view-level: 4.7
+// HMemoryUtils.trashcanNow. Engine heap size: 3,858 MB. GUI used memory: 179 MB. Current time: 3/10/20, 11:57:42 PM EET
+// Device view-level: 3.8
+// Device view-level: 3.5
+// Device view-level: 3.2
+// Device view-level: 2.3
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 3,859 MB. GUI used memory: 165 MB. Current time: 3/10/20, 11:57:43 PM EET
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 3.2
+// Device view-level: 3.5
+// Device view-level: 3.8
+// HMemoryUtils.trashcanNow. Engine heap size: 3,859 MB. GUI used memory: 178 MB. Current time: 3/10/20, 11:57:44 PM EET
+// Device view-level: 4.1
+// Device view-level: 4.4
+// Device view-level: 4.7
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 121513, 1138145); // D (I, cp)
+// Device select: 'Cell - rom_out_reg[290]'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 24752, 231839, 1807, 582); // U (k, cp)
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:47 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// HMemoryUtils.trashcanNow. Engine heap size: 3,859 MB. GUI used memory: 226 MB. Current time: 3/10/20, 11:57:48 PM EET
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:49 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:49 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:49 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// HMemoryUtils.trashcanNow. Engine heap size: 3,859 MB. GUI used memory: 230 MB. Current time: 3/10/20, 11:57:49 PM EET
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:49 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// Device view-level: 4.4
+// Device view-level: 3.8
+// Device view-level: 3.5
+// Device view-level: 3.2
+// HMemoryUtils.trashcanNow. Engine heap size: 3,859 MB. GUI used memory: 260 MB. Current time: 3/10/20, 11:57:49 PM EET
+// Device view-level: 2.9
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:50 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// Device view-level: 2.3
+// Device view-level: 1.8
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:51 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:51 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:51 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:51 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// Device view-level: 2.0
+// Device view-level: 2.3
+// HMemoryUtils.trashcanNow. Engine heap size: 3,859 MB. GUI used memory: 173 MB. Current time: 3/10/20, 11:57:51 PM EET
+// Device view-level: 2.6
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:51 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:51 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:51 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:51 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:51 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:51 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:52 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:52 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:52 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:52 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:52 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:52 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:52 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:52 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:52 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:52 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:52 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// Device view-level: 2.9
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:53 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// Device view-level: 3.2
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:53 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:53 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:53 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:53 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// HMemoryUtils.trashcanNow. Engine heap size: 3,859 MB. GUI used memory: 237 MB. Current time: 3/10/20, 11:57:53 PM EET
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:54 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// Device view-level: 3.5
+// Device view-level: 4.1
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:55 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// Device view-level: 4.4
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:55 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:55 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:55 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:55 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Tue Mar 10 23:57:55 EET 2020
+# Process ID (PID): 4216
+# OS: Ubuntu
+# User: gsaied
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado_pid4216.debug)
+*/
+// Elapsed time: 12 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124397, 1140690); // D (I, cp)
+// Device select: 'Cell - rom_out_reg[207]_ENARDEN_cooolgate_en_gate_241'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 16893, 154905, 1807, 582); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124522, 1140911); // D (I, cp)
+// Device select: 'Site - SLICE_X16Y177'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 16910, 154935, 1807, 582); // U (k, cp)
+// PAPropertyPanels.initPanels (Site: SLICE_X16Y177) elapsed time: 0.2s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,581 MB. GUI used memory: 107 MB. Current time: 3/10/20, 11:58:01 PM EET
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124316, 1141287); // D (I, cp)
+// Device select: 'Tile - CLBLL_L_X12Y176'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 16882, 154986, 1807, 582); // U (k, cp)
+// PAPropertyPanels.initPanels (Tile: CLBLL_L_X12Y176) elapsed time: 0.3s
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 123690, 1141169); // D (I, cp)
+// Device select: 'Tile - BRAM_R_X11Y175'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 16797, 154970, 1807, 582); // U (k, cp)
+// Device view-level: 4.1
+// Device view-level: 3.5
+// Device view-level: 2.6
+// HMemoryUtils.trashcanNow. Engine heap size: 3,583 MB. GUI used memory: 145 MB. Current time: 3/10/20, 11:58:05 PM EET
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 126656, 1148798); // D (I, cp)
+// Device select: 'Clock Region - X0Y3'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 1510, 13696, 1807, 582); // U (k, cp)
+// DeviceOracle::getDeviceDataByteArray length(bytes): 109867
+// DeviceOracle::getDeviceDataByteArray length(bytes): 237302
+// DeviceOracle::getDeviceDataByteArray length(bytes): 113694
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 122127, 1149301); // D (I, cp)
+// Device select: 'Clock Region - X0Y3'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 1456, 13702, 1807, 582); // U (k, cp)
+// Device view-level: 2.3
+// Device view-level: 1.5
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 3,759 MB. GUI used memory: 200 MB. Current time: 3/10/20, 11:58:12 PM EET
+// Device view-level: 0.9
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, -107482, 1040459); // D (I, cp)
+// Device view-level: 1.2
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 3,759 MB. GUI used memory: 229 MB. Current time: 3/10/20, 11:58:18 PM EET
+// Elapsed time: 41 seconds
+selectButton(PAResourceTtoZ.TimingGettingStartedPanel_REPORT_TIMING, "Report Timing"); // h (Q, cp)
+selectTable(PAResourceQtoS.SiteTablePanel_SITE_TABLE, "RAMB18_X1Y72 ; RAMB18E1 ;  ; BRAM_R_X11Y180 ; 1", 0, "RAMB18E1", 1); // J (Q, cp)
+selectTable(PAResourceQtoS.SiteTablePanel_SITE_TABLE, "RAMB18_X1Y72 ; RAMB18E1 ;  ; BRAM_R_X11Y180 ; 1", 0, "RAMB18E1", 1, false, false, false, false, true); // J (Q, cp) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 3,601 MB. GUI used memory: 112 MB. Current time: 3/10/20, 11:59:00 PM EET
+// Device view-level: 1.8
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.6
+// Device view-level: 2.9
+// HMemoryUtils.trashcanNow. Engine heap size: 3,601 MB. GUI used memory: 152 MB. Current time: 3/10/20, 11:59:03 PM EET
+// Device view-level: 3.2
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124401, 1124417); // D (I, cp)
+// Device select: 'Cell Pin - I0'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3337, 30162, 1807, 582); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124401, 1124417, false, false, false, true, false); // D (I, cp) - Popup Trigger
+// Device select: 'Cell Pin - I0'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3337, 30162, 1807, 582); // U (k, cp)
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3337, 30162, 1807, 582, false, false, false, true, false); // U (k, cp) - Popup Trigger
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124513, 1124417); // D (I, cp)
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3340, 30162, 1807, 582); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124513, 1124417, false, false, false, true, false); // D (I, cp) - Popup Trigger
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3340, 30162, 1807, 582); // U (k, cp)
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3340, 30162, 1807, 582, false, false, false, true, false); // U (k, cp) - Popup Trigger
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124513, 1124417); // D (I, cp)
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3340, 30162, 1807, 582); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124513, 1124417); // D (I, cp)
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3340, 30162, 1807, 582); // U (k, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,602 MB. GUI used memory: 161 MB. Current time: 3/10/20, 11:59:09 PM EET
+// Device view-level: 3.5
+// Device view-level: 3.8
+// Device view-level: 4.1
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124507, 1124408); // D (I, cp)
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 11272, 101796, 1807, 582); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124529, 1124298); // D (I, cp)
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 11274, 101786, 1807, 582); // U (k, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,602 MB. GUI used memory: 211 MB. Current time: 3/10/20, 11:59:12 PM EET
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124529, 1124254); // D (I, cp)
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 11274, 101782, 1807, 582); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124529, 1124254, false, false, false, false, true); // D (I, cp) - Double Click
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 11274, 101782, 1807, 582); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124529, 1124508); // D (I, cp)
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 11274, 101805, 1807, 582); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124529, 1124508, false, false, false, true, false); // D (I, cp) - Popup Trigger
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 11274, 101805, 1807, 582); // U (k, cp)
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 11274, 101805, 1807, 582, false, false, false, true, false); // U (k, cp) - Popup Trigger
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124529, 1124508, false, false, false, true, false); // D (I, cp) - Popup Trigger
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 11274, 101805, 1807, 582); // U (k, cp)
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 11274, 101805, 1807, 582, false, false, false, true, false); // U (k, cp) - Popup Trigger
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124529, 1124508, false, false, false, true, false); // D (I, cp) - Popup Trigger
+// Device select: 'Cell - rom_out_reg[6]_ENARDEN_cooolgate_en_gate_671'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 11274, 101805, 1807, 582); // U (k, cp)
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 11274, 101805, 1807, 582, false, false, false, true, false); // U (k, cp) - Popup Trigger
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 124529, 1124508); // D (I, cp)
+// Elapsed time: 94 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, design_1, General Messages, [Physopt 32-745] Physical Optimization has determined that the magnitude of the negative slack is too large and it is highly unlikely that slack will be improved. Post-Route Physical Optimization is most effective when WNS is above -0.5ns. ]", 59, false); // ah (Q, cp)
+// Device view-level: 3.8
+// Device view-level: 3.5
+// HMemoryUtils.trashcanNow. Engine heap size: 3,604 MB. GUI used memory: 113 MB. Current time: 3/11/20, 12:00:57 AM EET
+// Device view-level: 2.9
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.6
+// Device view-level: 2.9
+// HMemoryUtils.trashcanNow. Engine heap size: 3,604 MB. GUI used memory: 149 MB. Current time: 3/11/20, 12:01:00 AM EET
+// Elapsed time: 14 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 63, 138); // dr (af, cp)
+typeControlKey(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, "RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR", 'c'); // dr (af, cp)
+typeControlKey(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, "RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR", 'c'); // dr (af, cp)
+typeControlKey(null, null, 'z');
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "r"); // aC (Z, cp)
+typeControlKey(null, null, 'z');
+// Tcl Command: 'rdi::info_commands {r*}'
+// Tcl Command: 'rdi::info_commands {exit*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 3,604 MB. GUI used memory: 188 MB. Current time: 3/11/20, 12:01:18 AM EET
+// Tcl Command: 'rdi::info_commands {re*}'
+// Tcl Command: 'rdi::info_commands {ch*}'
+// Tcl Command: 'rdi::info_commands {l*}'
+// Tcl Command: 'rdi::info_commands {list*}'
+// Tcl Command: 'rdi::info_commands {list_p*}'
+// Elapsed time: 19 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "list", true); // aC (Z, cp)
+// Tcl Command: 'list'
+// Elapsed time: 15 seconds
+closeMainWindow("Vivado 2018.3"); // cp
+closeMainWindow("Vivado 2018.3"); // cp
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "exit", true); // aC (Z, cp)
