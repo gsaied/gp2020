@@ -1,7 +1,7 @@
 read_verilog -sv [ glob *.sv ] 
 create_fileset -constrset constr
 add_files -fileset constr temp.xdc
-set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+#set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
 #uncomment the following 2 lines to get schematic view
 #synth_design -rtl <TOP>
 #start_gui
@@ -18,5 +18,5 @@ report_timing -file slack.rpt
 }
 write_checkpoint -force post_synth.dcp
 place_design -no_fanout_opt -directive ExtraTimingOpt
-#route_design -directive NoTimingRelaxation -tns_cleanup
-#report_timing
+route_design -directive NoTimingRelaxation -tns_cleanup
+report_timing

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Mon Mar  9 15:52:51 2020
+| Date         : Thu Mar 12 14:23:53 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_timing -file post_synth_timing.rpt
 | Design       : fire8_expand3
@@ -11,18 +11,18 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 Timing Report
 
-Slack (MET) :             0.589ns  (required time - arrival time)
+Slack (VIOLATED) :        -0.111ns  (required time - arrival time)
   Source:                 genblk1[100].mac_i/mul_out_reg/CLK
-                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@1.600ns period=3.200ns})
+                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Destination:            ofm_reg[100][0]/R
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.600ns period=3.200ns})
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            3.200ns  (clk rise@3.200ns - clk rise@0.000ns)
+  Requirement:            2.500ns  (clk rise@2.500ns - clk rise@0.000ns)
   Data Path Delay:        2.279ns  (logic 1.187ns (52.074%)  route 1.092ns (47.926%))
   Logic Levels:           10  (CARRY4=8 LUT1=1 LUT2=1)
   Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.483ns = ( 3.683 - 3.200 ) 
+    Destination Clock Delay (DCD):    0.483ns = ( 2.983 - 2.500 ) 
     Source Clock Delay      (SCD):    0.508ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -35,7 +35,7 @@ Slack (MET) :             0.589ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=4666, unset)         0.508     0.508    genblk1[100].mac_i/clk
+                         net (fo=4668, unset)         0.508     0.508    genblk1[100].mac_i/clk
                          DSP48E1                                      r  genblk1[100].mac_i/mul_out_reg/CLK
   -------------------------------------------------------------------    -------------------
                          DSP48E1 (Prop_dsp48e1_CLK_P[1])
@@ -72,18 +72,18 @@ Slack (MET) :             0.589ns  (required time - arrival time)
                          FDRE                                         r  ofm_reg[100][0]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)        3.200     3.200 r  
-                                                      0.000     3.200 r  clk (IN)
-                         net (fo=4666, unset)         0.483     3.683    clk
+                         (clock clk rise edge)        2.500     2.500 r  
+                                                      0.000     2.500 r  clk (IN)
+                         net (fo=4668, unset)         0.483     2.983    clk
                          FDRE                                         r  ofm_reg[100][0]/C
-                         clock pessimism              0.000     3.683    
-                         clock uncertainty           -0.035     3.647    
-                         FDRE (Setup_fdre_C_R)       -0.271     3.376    ofm_reg[100][0]
+                         clock pessimism              0.000     2.983    
+                         clock uncertainty           -0.035     2.947    
+                         FDRE (Setup_fdre_C_R)       -0.271     2.676    ofm_reg[100][0]
   -------------------------------------------------------------------
-                         required time                          3.376    
+                         required time                          2.676    
                          arrival time                          -2.787    
   -------------------------------------------------------------------
-                         slack                                  0.589    
+                         slack                                 -0.111    
 
 
 

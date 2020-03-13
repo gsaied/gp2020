@@ -25,9 +25,17 @@ end
 reg [WIDTH-1:0] o1; 
 reg [WIDTH-1:0] o2; 
 reg [WIDTH-1:0] o3; 
+reg [WIDTH-1:0] o11; 
+reg [WIDTH-1:0] o21; 
+reg [WIDTH-1:0] o31; 
 reg [1:0] address_reg ; 
 always @(posedge clk) begin
 	address_reg <= address[17:16] ;
+end
+always @(posedge clk) begin 
+o21 <= o2;
+o31 <= o3;
+o11 <= o1;
 end
 always @(*) begin
 	case(address_reg) 

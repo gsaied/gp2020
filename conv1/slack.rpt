@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Mar 11 22:43:17 2020
+| Date         : Fri Mar 13 22:06:16 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_timing -file slack.rpt
 | Design       : conv1
@@ -11,7 +11,7 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 Timing Report
 
-Slack (VIOLATED) :        -2.364ns  (required time - arrival time)
+Slack (VIOLATED) :        -0.276ns  (required time - arrival time)
   Source:                 u_1/o1_reg_0_0/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@1.600ns period=3.200ns})
   Destination:            genblk1[0].mac_i/mul_out_reg/A[0]
@@ -35,7 +35,7 @@ Slack (VIOLATED) :        -2.364ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=1372, unset)         0.508     0.508    u_1/clk
+                         net (fo=1369, unset)         0.508     0.508    u_1/clk
                          RAMB36E1                                     r  u_1/o1_reg_0_0/CLKARDCLK
   -------------------------------------------------------------------    -------------------
                          RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
@@ -51,17 +51,17 @@ Slack (VIOLATED) :        -2.364ns  (required time - arrival time)
 
                          (clock clk rise edge)        3.200     3.200 r  
                                                       0.000     3.200 r  clk (IN)
-                         net (fo=1372, unset)         0.483     3.683    genblk1[0].mac_i/clk
+                         net (fo=1369, unset)         0.483     3.683    genblk1[0].mac_i/clk
                          DSP48E1                                      r  genblk1[0].mac_i/mul_out_reg/CLK
                          clock pessimism              0.000     3.683    
                          clock uncertainty           -0.035     3.647    
                          DSP48E1 (Setup_dsp48e1_CLK_A[0])
-                                                     -2.320     1.327    genblk1[0].mac_i/mul_out_reg
+                                                     -0.232     3.415    genblk1[0].mac_i/mul_out_reg
   -------------------------------------------------------------------
-                         required time                          1.327    
+                         required time                          3.415    
                          arrival time                          -3.691    
   -------------------------------------------------------------------
-                         slack                                 -2.364    
+                         slack                                 -0.276    
 
 
 

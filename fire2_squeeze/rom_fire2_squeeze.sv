@@ -2,13 +2,12 @@
 	/* verilator lint_off COMBDLY */
 	module rom_fire2_squeeze #(
 	parameter WIDTH=16,
-	parameter KERNEL=3,
 	parameter ADDR=10,
 	parameter NUM=16)
 	(
 		input [ADDR-1:0] address ,
 		input clk,
-		output reg [WIDTH-1:0] rom_out [0:NUM-1]
+		output reg [WIDTH-1:0] kernels [0:NUM-1]
 	);	
 	
 
@@ -77,6 +76,7 @@ $readmemb("file_fire2_squeeze_14.mem",rom_14,0,2**ADDR-1);
 $readmemb("file_fire2_squeeze_15.mem",rom_15,0,2**ADDR-1);
 $readmemb("file_fire2_squeeze_16.mem",rom_16,0,2**ADDR-1);
 end
+reg [WIDTH-1:0] rom_out [0:NUM-1];
 always @(posedge clk) begin
 
 rom_out[0] <= rom_1[address] ;
@@ -96,4 +96,5 @@ rom_out[13] <= rom_14[address] ;
 rom_out[14] <= rom_15[address] ;
 rom_out[15] <= rom_16[address] ;
 end
+always @(posedge clk) kernels <= rom_out ; 
 endmodule

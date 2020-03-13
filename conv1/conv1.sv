@@ -35,13 +35,15 @@ biasing_rom b1 (
 	reg conv1_end ; 
 wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
 reg  [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
+reg [WIDTH-1:0] ker_pl [0:DSP_NO-1] ;
+reg [WIDTH-1:0] ker_pl2 [0:DSP_NO-1] ;
 reg [4:0] clr_counter ;
 //reg [$clog2(WINDOWS)-1:0] conv1_timer ; 
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
 wire [WIDTH-1:0] kernels [0:DSP_NO-1] ; 
-reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ; 
+(* ram_style = "registers" *)reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ; 
 reg [5-1:0] weight_rom_address ; 
 //////////////////////////////////
 rom_array_layer_1 u_2 (
@@ -53,10 +55,24 @@ rom_array_layer_1 u_2 (
 //represents a pulse to clr pin of mac to reset every 27 cycles of clk
 ///////////////////////////////////
 reg clr_pulse ; 
+reg temp_pulse;
+reg temp2_pulse;
 reg rom_clr_pulse ;
-always @(posedge clk) clr_pulse<= rom_clr_pulse ;
+reg [WIDTH-1:0] ifm;
+always @(posedge clk) begin
+temp_pulse<= rom_clr_pulse ;
+temp2_pulse <=temp_pulse;
+clr_pulse <= temp2_pulse;
+end
 ///////
 ///////
+reg layer_en_reg ;
+reg layer2_en_reg ;
+always @(posedge clk) begin
+    //layer2_en_reg <= conv1_en  ; 
+    //layer_en_reg <= layer2_en_reg;
+    layer_en_reg<= conv1_en ; 
+end 
 always @(posedge clk) begin
 	if (rom_clr_pulse)
 		weight_rom_address<= 5'b0;// 5--> ceil(logn(HIN**2*CHIN,2))
@@ -64,10 +80,16 @@ always @(posedge clk) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
-always @(posedge clk) begin
-	kernel_regs<=kernels ;		
-end
 wire [WIDTH-1:0] img_rom_wire  ;
+reg [WIDTH-1:0] img_rom_wire2  ;
+always @(posedge clk) begin
+	kernel_regs<=kernels ;
+	ker_pl2 <= kernel_regs;	
+	ker_pl <= ker_pl2;
+	img_rom_wire2 <= img_rom_wire;
+	ifm <= img_rom_wire2;
+end
+
 reg [17:0] img_rom_address ;
 reg [17:0] ref_address ;
  
@@ -161,10 +183,10 @@ generate for (i = 0 ; i < CHOUT ; i++) begin
 	conv_mac mac_i  (
 		.clr(clr_pulse),
 		.clk(clk),
-		.pix(img_rom_wire),
-		.layer_en(conv1_en),
+		.pix(ifm),
+		.layer_en(layer_en_reg),
 		.mul_out(ofmw[i]),
-		.ker(kernel_regs[i])
+		.ker(ker_pl[i])
 	);
 end
 endgenerate//#FILTERS instances of macs
@@ -174,7 +196,7 @@ endgenerate//#FILTERS instances of macs
 
 reg [$clog2(WOUT**2):0] conv1_timer ;
 always @(posedge clk) begin//will be modified to use clk_sampling as the counting signal
-	if (conv1_timer > WOUT**2)
+	if (conv1_timer > WOUT**2+1)
 		conv1_end <= 1'b1 ;//LAYER_1 HAS FINISHED
 	else if (clr_pulse) 
 		conv1_timer<= conv1_timer+1 ; 

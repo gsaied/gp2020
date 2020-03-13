@@ -11,7 +11,7 @@ module fire8_squeeze #(
 	//input rst,
 	input fire8_squeeze_en,
 	input [WIDTH-1:0] kernels [0:DSP_NO-1] ,
-	input [WIDTH-1:0] ifm,
+	input [WIDTH-1:0] ifm_i,
 	input ram_feedback,
 	output reg fire8_squeeze_sample,
 	output rom_clr_pulse_o ,
@@ -19,6 +19,8 @@ module fire8_squeeze #(
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
 reg fire8_squeeze_end;
+reg[WIDTH-1:0] ifm;
+always @(posedge clk) ifm<= ifm_i ; 
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_fire8_squeeze b7 (
 	.bias_mem(biasing_wire)
@@ -29,8 +31,12 @@ biasing_fire8_squeeze b7 (
 //this signal is very important to track
 ///////////////////////////////////
 reg clr_pulse ;
+reg temp_clr_pulse ;
 reg rom_clr_pulse;
-always @(posedge clk) clr_pulse <= rom_clr_pulse ;
+always @(posedge clk) begin
+	temp_clr_pulse <= rom_clr_pulse ;
+	clr_pulse <= temp_clr_pulse ;
+end
 ////////////////////////////
 //GENERATION OF CLR PULSE///
 ////////////////////////////

@@ -33,20 +33,24 @@ end
 //KERNELS INSTANTIATION
 ///////////////////////////////////
 wire [WIDTH-1:0] kernels [0:DSP_NO_FIRE2_SQUEEZE-1] ;
-reg [WIDTH-1:0] kernel_regs [0:DSP_NO_FIRE2_SQUEEZE-1] ;
 reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
 //////////////////////////////////
-(* keep_hierarchy = "yes" *)rom_fire2_squeeze u_2 (
+//(* keep_hierarchy = "yes" *)
+rom_fire2_squeeze u_2 (
 	.clk(clk),
 	.address(weight_rom_address),
-	.rom_out(kernels)
+	.kernels(kernels)
 );
 ///////////////////////////////////
 //this signal is very important to track
 ///////////////////////////////////
 reg clr_pulse ;
+reg temp_clr_pulse ;
 reg rom_clr_pulse;
-always @(posedge clk) clr_pulse <= rom_clr_pulse ; 
+always @(posedge clk) begin
+       	temp_clr_pulse <= rom_clr_pulse ; 
+	clr_pulse<= temp_clr_pulse ; 
+end
 ///////
 ///////
 always @(posedge clk/* or negedge rst*/) begin
@@ -57,10 +61,6 @@ always @(posedge clk/* or negedge rst*/) begin
 	else if (fire2_squeeze_en) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
-end
-always @(posedge clk) begin
-	if(fire2_squeeze_en) 
-		kernel_regs<=kernels ;
 end
 
 ////////////////////////////
@@ -103,7 +103,7 @@ for (k = 0 ; k< DSP_NO_FIRE2_SQUEEZE ; k++) begin
 		.layer_en(layer_en_reg),
 		.pix(ifm),
 		.mul_out(ofmw[k]),
-		.ker(kernel_regs[k])
+		.ker(kernels[k])
 	);
 end
 endgenerate

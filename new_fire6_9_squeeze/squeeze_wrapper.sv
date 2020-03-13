@@ -8,7 +8,7 @@ module squeeze_wrapper #(
 (
 
         input clk,
-        input rst,
+       // input rst,
         input fire8_squeeze_en_i,
         input fire9_squeeze_en_i,
         input [WIDTH-1:0] ifm8_i,
@@ -22,7 +22,9 @@ module squeeze_wrapper #(
         output reg [WIDTH-1:0] ofm8 [0:DSP_NO-1],
         output reg [WIDTH-1:0] ofm9 [0:DSP_NO-1]
 );
-wire [WIDTH-1:0] kernels [0:DSP_NO-1] ;
+wire [WIDTH-1:0] kernels_wire [0:DSP_NO-1] ;
+reg [WIDTH-1:0] kernels [0:DSP_NO-1] ;
+always @(posedge clk ) kernels <= kernels_wire ; 
 wire rom_clr_pulse_8;
 wire rom_clr_pulse_9;
 reg fire8_squeeze_en ;
@@ -41,7 +43,7 @@ fire8_squeeze u_8 (
 	.clk(clk),
 	.rom_clr_pulse_o(rom_clr_pulse_8),
 	.fire8_squeeze_en(fire8_squeeze_en),
-	.ifm(ifm8),
+	.ifm_i(ifm8),
 	.ram_feedback(ram_feedback8),
 	.fire8_squeeze_sample(fire8_squeeze_sample),
 	.fire8_squeeze_finish(fire8_squeeze_finish),
@@ -51,7 +53,7 @@ fire9Squeeze u_9 (
 	.clk(clk),
 	.fire9Squeeze_en(fire9_squeeze_en),
 	.rom_clr_pulse_o(rom_clr_pulse_9),
-	.ifm(ifm9),
+	.ifm_i(ifm9),
 	.kernels(kernels),
 	.ram_feedback(ram_feedback9),
 	.fire9Squeeze_sample(fire9_squeeze_sample),
@@ -61,7 +63,7 @@ fire9Squeeze u_9 (
 (* keep_hierarchy = "yes" *) rom_fire8_squeeze u_2 (
         .clk(clk),
         .address(weight_rom_address),
-        .rom_out(kernels)
+        .rom_out(kernels_wire)
 );
 ////////////////////////
 /* SHARED ROM CONTROL */

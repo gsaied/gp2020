@@ -1,0 +1,1243 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Mar 13 21:59:14 2020
+# Process ID: 2375
+# Current directory: /home/gsaied/Desktop/old_rtl/conv1
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/conv1/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/conv1/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top conv1 -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2384 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1425.996 ; gain = 29.000 ; free physical = 3659 ; free virtual = 4975
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'conv1' [/home/gsaied/Desktop/old_rtl/conv1/conv1.sv:10]
+	Parameter WOUT bound to: 128 - type: integer 
+	Parameter DSP_NO bound to: 64 - type: integer 
+	Parameter STRIDE bound to: 2 - type: integer 
+	Parameter W_IN bound to: 258 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter CHIN bound to: 3 - type: integer 
+	Parameter KERNEL_DIM bound to: 3 - type: integer 
+	Parameter CHOUT bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'conv_mac' [/home/gsaied/Desktop/old_rtl/conv1/conv_mac.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mac' (1#1) [/home/gsaied/Desktop/old_rtl/conv1/conv_mac.sv:1]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/gsaied/Desktop/old_rtl/conv1/conv1.sv:209]
+INFO: [Synth 8-6157] synthesizing module 'biasing_rom' [/home/gsaied/Desktop/old_rtl/conv1/biasing.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'biasing_rom' (2#1) [/home/gsaied/Desktop/old_rtl/conv1/biasing.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'rom_array_layer_1' [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 3 - type: integer 
+	Parameter ADDR bound to: 5 - type: integer 
+	Parameter NUM bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:15]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:18]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:21]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:24]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:27]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:30]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:33]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:36]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:39]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:42]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:45]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:48]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:51]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:54]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:57]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:60]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:63]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:66]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:69]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:72]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:75]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:78]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:81]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:84]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:87]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:90]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:93]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:96]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:99]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:102]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:105]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:108]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:111]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:114]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:117]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:120]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:123]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:126]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:129]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:132]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:135]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:138]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:141]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:144]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:147]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:150]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:153]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:156]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:159]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:162]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:165]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:168]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:171]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:174]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:177]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:180]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:183]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:186]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:189]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:192]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:195]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:198]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:201]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:204]
+INFO: [Synth 8-3876] $readmem data file 'file_1.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:206]
+INFO: [Synth 8-3876] $readmem data file 'file_2.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:207]
+INFO: [Synth 8-3876] $readmem data file 'file_3.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:208]
+INFO: [Synth 8-3876] $readmem data file 'file_4.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:209]
+INFO: [Synth 8-3876] $readmem data file 'file_5.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:210]
+INFO: [Synth 8-3876] $readmem data file 'file_6.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:211]
+INFO: [Synth 8-3876] $readmem data file 'file_7.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:212]
+INFO: [Synth 8-3876] $readmem data file 'file_8.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:213]
+INFO: [Synth 8-3876] $readmem data file 'file_9.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:214]
+INFO: [Synth 8-3876] $readmem data file 'file_10.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:215]
+INFO: [Synth 8-3876] $readmem data file 'file_11.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:216]
+INFO: [Synth 8-3876] $readmem data file 'file_12.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:217]
+INFO: [Synth 8-3876] $readmem data file 'file_13.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:218]
+INFO: [Synth 8-3876] $readmem data file 'file_14.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:219]
+INFO: [Synth 8-3876] $readmem data file 'file_15.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:220]
+INFO: [Synth 8-3876] $readmem data file 'file_16.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:221]
+INFO: [Synth 8-3876] $readmem data file 'file_17.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:222]
+INFO: [Synth 8-3876] $readmem data file 'file_18.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:223]
+INFO: [Synth 8-3876] $readmem data file 'file_19.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:224]
+INFO: [Synth 8-3876] $readmem data file 'file_20.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:225]
+INFO: [Synth 8-3876] $readmem data file 'file_21.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:226]
+INFO: [Synth 8-3876] $readmem data file 'file_22.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:227]
+INFO: [Synth 8-3876] $readmem data file 'file_23.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:228]
+INFO: [Synth 8-3876] $readmem data file 'file_24.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:229]
+INFO: [Synth 8-3876] $readmem data file 'file_25.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:230]
+INFO: [Synth 8-3876] $readmem data file 'file_26.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:231]
+INFO: [Synth 8-3876] $readmem data file 'file_27.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:232]
+INFO: [Synth 8-3876] $readmem data file 'file_28.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:233]
+INFO: [Synth 8-3876] $readmem data file 'file_29.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:234]
+INFO: [Synth 8-3876] $readmem data file 'file_30.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:235]
+INFO: [Synth 8-3876] $readmem data file 'file_31.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:236]
+INFO: [Synth 8-3876] $readmem data file 'file_32.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:237]
+INFO: [Synth 8-3876] $readmem data file 'file_33.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:238]
+INFO: [Synth 8-3876] $readmem data file 'file_34.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:239]
+INFO: [Synth 8-3876] $readmem data file 'file_35.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:240]
+INFO: [Synth 8-3876] $readmem data file 'file_36.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:241]
+INFO: [Synth 8-3876] $readmem data file 'file_37.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:242]
+INFO: [Synth 8-3876] $readmem data file 'file_38.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:243]
+INFO: [Synth 8-3876] $readmem data file 'file_39.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:244]
+INFO: [Synth 8-3876] $readmem data file 'file_40.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:245]
+INFO: [Synth 8-3876] $readmem data file 'file_41.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:246]
+INFO: [Synth 8-3876] $readmem data file 'file_42.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:247]
+INFO: [Synth 8-3876] $readmem data file 'file_43.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:248]
+INFO: [Synth 8-3876] $readmem data file 'file_44.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:249]
+INFO: [Synth 8-3876] $readmem data file 'file_45.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:250]
+INFO: [Synth 8-3876] $readmem data file 'file_46.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:251]
+INFO: [Synth 8-3876] $readmem data file 'file_47.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:252]
+INFO: [Synth 8-3876] $readmem data file 'file_48.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:253]
+INFO: [Synth 8-3876] $readmem data file 'file_49.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:254]
+INFO: [Synth 8-3876] $readmem data file 'file_50.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:255]
+INFO: [Synth 8-3876] $readmem data file 'file_51.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:256]
+INFO: [Synth 8-3876] $readmem data file 'file_52.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:257]
+INFO: [Synth 8-3876] $readmem data file 'file_53.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:258]
+INFO: [Synth 8-3876] $readmem data file 'file_54.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:259]
+INFO: [Synth 8-3876] $readmem data file 'file_55.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:260]
+INFO: [Synth 8-3876] $readmem data file 'file_56.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:261]
+INFO: [Synth 8-3876] $readmem data file 'file_57.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:262]
+INFO: [Synth 8-3876] $readmem data file 'file_58.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:263]
+INFO: [Synth 8-3876] $readmem data file 'file_59.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:264]
+INFO: [Synth 8-3876] $readmem data file 'file_60.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:265]
+INFO: [Synth 8-3876] $readmem data file 'file_61.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:266]
+INFO: [Synth 8-3876] $readmem data file 'file_62.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:267]
+INFO: [Synth 8-3876] $readmem data file 'file_63.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:268]
+INFO: [Synth 8-3876] $readmem data file 'file_64.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:269]
+INFO: [Synth 8-6155] done synthesizing module 'rom_array_layer_1' (3#1) [/home/gsaied/Desktop/old_rtl/conv1/rom.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'wrapper_image' [/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv:2]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter ADDR bound to: 18 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv:12]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv:15]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv:18]
+INFO: [Synth 8-3876] $readmem data file 'first_part.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv:21]
+INFO: [Synth 8-3876] $readmem data file 'second_part.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv:22]
+INFO: [Synth 8-3876] $readmem data file 'third_part.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv:23]
+WARNING: [Synth 8-6014] Unused sequential element o21_reg was removed.  [/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv:36]
+WARNING: [Synth 8-6014] Unused sequential element o31_reg was removed.  [/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv:37]
+WARNING: [Synth 8-6014] Unused sequential element o11_reg was removed.  [/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv:38]
+INFO: [Synth 8-6155] done synthesizing module 'wrapper_image' (4#1) [/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'conv1' (5#1) [/home/gsaied/Desktop/old_rtl/conv1/conv1.sv:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1596.816 ; gain = 199.820 ; free physical = 3571 ; free virtual = 4889
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1596.816 ; gain = 199.820 ; free physical = 3575 ; free virtual = 4893
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1596.816 ; gain = 199.820 ; free physical = 3575 ; free virtual = 4893
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/conv1/temp.xdc]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/conv1/temp.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2094.371 ; gain = 0.000 ; free physical = 3238 ; free virtual = 5936
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2094.371 ; gain = 0.000 ; free physical = 3236 ; free virtual = 5934
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2094.371 ; gain = 0.000 ; free physical = 3236 ; free virtual = 5934
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2094.371 ; gain = 697.375 ; free physical = 3352 ; free virtual = 6045
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1157-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2094.371 ; gain = 697.375 ; free physical = 3352 ; free virtual = 6045
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2094.371 ; gain = 697.375 ; free physical = 3349 ; free virtual = 6047
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5547] Trying to map ROM "first_part" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "second_part" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "third_part" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/gsaied/Desktop/old_rtl/conv1/conv1.sv:128]
+INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:52 ; elapsed = 00:01:00 . Memory (MB): peak = 2110.387 ; gain = 713.391 ; free physical = 3298 ; free virtual = 5997
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 64    
+	   2 Input     18 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 64    
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 261   
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---ROMs : 
+	                              ROMs := 3     
++---Muxes : 
+	   3 Input     18 Bit        Muxes := 1     
+	   8 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   9 Input      3 Bit        Muxes := 1     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module conv1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 64    
+	   2 Input     18 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 258   
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   3 Input     18 Bit        Muxes := 1     
+	   8 Input     18 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   9 Input      3 Bit        Muxes := 1     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module wrapper_image 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module conv_mac 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP genblk1[0].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[0] is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[0] is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: register genblk1[0].mac_i/mul_out_reg is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: operator genblk1[0].mac_i/mul_out0 is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: operator genblk1[0].mac_i/mul_out1 is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[1].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[1] is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[1] is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: register genblk1[1].mac_i/mul_out_reg is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: operator genblk1[1].mac_i/mul_out0 is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: operator genblk1[1].mac_i/mul_out1 is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[2].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[2] is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[2] is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: register genblk1[2].mac_i/mul_out_reg is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: operator genblk1[2].mac_i/mul_out0 is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: operator genblk1[2].mac_i/mul_out1 is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[3].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[3] is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[3] is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: register genblk1[3].mac_i/mul_out_reg is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: operator genblk1[3].mac_i/mul_out0 is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: operator genblk1[3].mac_i/mul_out1 is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[4].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[4] is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[4] is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: register genblk1[4].mac_i/mul_out_reg is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: operator genblk1[4].mac_i/mul_out0 is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: operator genblk1[4].mac_i/mul_out1 is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[5].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[5] is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[5] is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: register genblk1[5].mac_i/mul_out_reg is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: operator genblk1[5].mac_i/mul_out0 is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: operator genblk1[5].mac_i/mul_out1 is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[6].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[6] is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[6] is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: register genblk1[6].mac_i/mul_out_reg is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: operator genblk1[6].mac_i/mul_out0 is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: operator genblk1[6].mac_i/mul_out1 is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[7].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[7] is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[7] is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: register genblk1[7].mac_i/mul_out_reg is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: operator genblk1[7].mac_i/mul_out0 is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: operator genblk1[7].mac_i/mul_out1 is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[8].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[8] is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[8] is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: register genblk1[8].mac_i/mul_out_reg is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: operator genblk1[8].mac_i/mul_out0 is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: operator genblk1[8].mac_i/mul_out1 is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[9].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[9] is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[9] is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: register genblk1[9].mac_i/mul_out_reg is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: operator genblk1[9].mac_i/mul_out0 is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: operator genblk1[9].mac_i/mul_out1 is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[10].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[10] is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[10] is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: register genblk1[10].mac_i/mul_out_reg is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: operator genblk1[10].mac_i/mul_out0 is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: operator genblk1[10].mac_i/mul_out1 is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[11].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[11] is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[11] is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: register genblk1[11].mac_i/mul_out_reg is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: operator genblk1[11].mac_i/mul_out0 is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: operator genblk1[11].mac_i/mul_out1 is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[12].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[12] is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[12] is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: register genblk1[12].mac_i/mul_out_reg is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: operator genblk1[12].mac_i/mul_out0 is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: operator genblk1[12].mac_i/mul_out1 is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[13].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[13] is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[13] is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: register genblk1[13].mac_i/mul_out_reg is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: operator genblk1[13].mac_i/mul_out0 is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: operator genblk1[13].mac_i/mul_out1 is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[14].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[14] is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[14] is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: register genblk1[14].mac_i/mul_out_reg is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: operator genblk1[14].mac_i/mul_out0 is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: operator genblk1[14].mac_i/mul_out1 is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[15].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[15] is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[15] is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: register genblk1[15].mac_i/mul_out_reg is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: operator genblk1[15].mac_i/mul_out0 is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: operator genblk1[15].mac_i/mul_out1 is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[16].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[16] is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[16] is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: register genblk1[16].mac_i/mul_out_reg is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: operator genblk1[16].mac_i/mul_out0 is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: operator genblk1[16].mac_i/mul_out1 is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[17].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[17] is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[17] is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: register genblk1[17].mac_i/mul_out_reg is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: operator genblk1[17].mac_i/mul_out0 is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: operator genblk1[17].mac_i/mul_out1 is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[18].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[18] is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[18] is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: register genblk1[18].mac_i/mul_out_reg is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: operator genblk1[18].mac_i/mul_out0 is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: operator genblk1[18].mac_i/mul_out1 is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[19].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[19] is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[19] is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: register genblk1[19].mac_i/mul_out_reg is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: operator genblk1[19].mac_i/mul_out0 is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: operator genblk1[19].mac_i/mul_out1 is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[20].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[20] is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[20] is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: register genblk1[20].mac_i/mul_out_reg is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: operator genblk1[20].mac_i/mul_out0 is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: operator genblk1[20].mac_i/mul_out1 is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[21].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[21] is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[21] is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: register genblk1[21].mac_i/mul_out_reg is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: operator genblk1[21].mac_i/mul_out0 is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: operator genblk1[21].mac_i/mul_out1 is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[22].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[22] is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[22] is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: register genblk1[22].mac_i/mul_out_reg is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: operator genblk1[22].mac_i/mul_out0 is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: operator genblk1[22].mac_i/mul_out1 is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[23].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[23] is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[23] is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: register genblk1[23].mac_i/mul_out_reg is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: operator genblk1[23].mac_i/mul_out0 is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: operator genblk1[23].mac_i/mul_out1 is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[24].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[24] is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[24] is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: register genblk1[24].mac_i/mul_out_reg is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: operator genblk1[24].mac_i/mul_out0 is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: operator genblk1[24].mac_i/mul_out1 is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[25].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[25] is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[25] is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: register genblk1[25].mac_i/mul_out_reg is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: operator genblk1[25].mac_i/mul_out0 is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: operator genblk1[25].mac_i/mul_out1 is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[26].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[26] is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[26] is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: register genblk1[26].mac_i/mul_out_reg is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: operator genblk1[26].mac_i/mul_out0 is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: operator genblk1[26].mac_i/mul_out1 is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[27].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[27] is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[27] is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: register genblk1[27].mac_i/mul_out_reg is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: operator genblk1[27].mac_i/mul_out0 is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: operator genblk1[27].mac_i/mul_out1 is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[28].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[28] is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[28] is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: register genblk1[28].mac_i/mul_out_reg is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: operator genblk1[28].mac_i/mul_out0 is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: operator genblk1[28].mac_i/mul_out1 is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[29].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[29] is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[29] is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: register genblk1[29].mac_i/mul_out_reg is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: operator genblk1[29].mac_i/mul_out0 is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: operator genblk1[29].mac_i/mul_out1 is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[30].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[30] is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[30] is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: register genblk1[30].mac_i/mul_out_reg is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: operator genblk1[30].mac_i/mul_out0 is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: operator genblk1[30].mac_i/mul_out1 is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[31].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[31] is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[31] is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: register genblk1[31].mac_i/mul_out_reg is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: operator genblk1[31].mac_i/mul_out0 is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: operator genblk1[31].mac_i/mul_out1 is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[32].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[32] is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[32] is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: register genblk1[32].mac_i/mul_out_reg is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: operator genblk1[32].mac_i/mul_out0 is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: operator genblk1[32].mac_i/mul_out1 is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[33].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[33] is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[33] is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: register genblk1[33].mac_i/mul_out_reg is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: operator genblk1[33].mac_i/mul_out0 is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: operator genblk1[33].mac_i/mul_out1 is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[34].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[34] is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[34] is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: register genblk1[34].mac_i/mul_out_reg is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: operator genblk1[34].mac_i/mul_out0 is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: operator genblk1[34].mac_i/mul_out1 is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[35].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[35] is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[35] is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: register genblk1[35].mac_i/mul_out_reg is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: operator genblk1[35].mac_i/mul_out0 is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: operator genblk1[35].mac_i/mul_out1 is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[36].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[36] is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[36] is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: register genblk1[36].mac_i/mul_out_reg is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: operator genblk1[36].mac_i/mul_out0 is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: operator genblk1[36].mac_i/mul_out1 is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[37].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[37] is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[37] is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: register genblk1[37].mac_i/mul_out_reg is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: operator genblk1[37].mac_i/mul_out0 is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: operator genblk1[37].mac_i/mul_out1 is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[38].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[38] is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[38] is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: register genblk1[38].mac_i/mul_out_reg is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: operator genblk1[38].mac_i/mul_out0 is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: operator genblk1[38].mac_i/mul_out1 is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[39].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[39] is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[39] is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: register genblk1[39].mac_i/mul_out_reg is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: operator genblk1[39].mac_i/mul_out0 is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: operator genblk1[39].mac_i/mul_out1 is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[40].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[40] is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[40] is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: register genblk1[40].mac_i/mul_out_reg is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: operator genblk1[40].mac_i/mul_out0 is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: operator genblk1[40].mac_i/mul_out1 is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[41].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[41] is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[41] is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: register genblk1[41].mac_i/mul_out_reg is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: operator genblk1[41].mac_i/mul_out0 is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: operator genblk1[41].mac_i/mul_out1 is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[42].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[42] is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[42] is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: register genblk1[42].mac_i/mul_out_reg is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: operator genblk1[42].mac_i/mul_out0 is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: operator genblk1[42].mac_i/mul_out1 is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[43].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[43] is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[43] is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: register genblk1[43].mac_i/mul_out_reg is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: operator genblk1[43].mac_i/mul_out0 is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: operator genblk1[43].mac_i/mul_out1 is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[44].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[44] is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[44] is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: register genblk1[44].mac_i/mul_out_reg is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: operator genblk1[44].mac_i/mul_out0 is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: operator genblk1[44].mac_i/mul_out1 is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[45].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[45] is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[45] is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: register genblk1[45].mac_i/mul_out_reg is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: operator genblk1[45].mac_i/mul_out0 is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: operator genblk1[45].mac_i/mul_out1 is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[46].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[46] is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[46] is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: register genblk1[46].mac_i/mul_out_reg is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: operator genblk1[46].mac_i/mul_out0 is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: operator genblk1[46].mac_i/mul_out1 is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[47].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[47] is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[47] is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: register genblk1[47].mac_i/mul_out_reg is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: operator genblk1[47].mac_i/mul_out0 is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: operator genblk1[47].mac_i/mul_out1 is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[48].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[48] is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[48] is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: register genblk1[48].mac_i/mul_out_reg is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: operator genblk1[48].mac_i/mul_out0 is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: operator genblk1[48].mac_i/mul_out1 is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[49].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[49] is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[49] is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: register genblk1[49].mac_i/mul_out_reg is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: operator genblk1[49].mac_i/mul_out0 is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: operator genblk1[49].mac_i/mul_out1 is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[50].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[50] is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[50] is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: register genblk1[50].mac_i/mul_out_reg is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: operator genblk1[50].mac_i/mul_out0 is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: operator genblk1[50].mac_i/mul_out1 is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[51].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[51] is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[51] is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: register genblk1[51].mac_i/mul_out_reg is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: operator genblk1[51].mac_i/mul_out0 is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: operator genblk1[51].mac_i/mul_out1 is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[52].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[52] is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[52] is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: register genblk1[52].mac_i/mul_out_reg is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: operator genblk1[52].mac_i/mul_out0 is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: operator genblk1[52].mac_i/mul_out1 is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[53].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[53] is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[53] is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: register genblk1[53].mac_i/mul_out_reg is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: operator genblk1[53].mac_i/mul_out0 is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: operator genblk1[53].mac_i/mul_out1 is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[54].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[54] is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[54] is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: register genblk1[54].mac_i/mul_out_reg is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: operator genblk1[54].mac_i/mul_out0 is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: operator genblk1[54].mac_i/mul_out1 is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[55].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[55] is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[55] is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: register genblk1[55].mac_i/mul_out_reg is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: operator genblk1[55].mac_i/mul_out0 is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: operator genblk1[55].mac_i/mul_out1 is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[56].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[56] is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[56] is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: register genblk1[56].mac_i/mul_out_reg is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: operator genblk1[56].mac_i/mul_out0 is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: operator genblk1[56].mac_i/mul_out1 is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[57].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[57] is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[57] is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: register genblk1[57].mac_i/mul_out_reg is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: operator genblk1[57].mac_i/mul_out0 is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: operator genblk1[57].mac_i/mul_out1 is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[58].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[58] is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[58] is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: register genblk1[58].mac_i/mul_out_reg is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: operator genblk1[58].mac_i/mul_out0 is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: operator genblk1[58].mac_i/mul_out1 is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[59].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[59] is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[59] is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: register genblk1[59].mac_i/mul_out_reg is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: operator genblk1[59].mac_i/mul_out0 is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: operator genblk1[59].mac_i/mul_out1 is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[60].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[60] is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[60] is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: register genblk1[60].mac_i/mul_out_reg is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: operator genblk1[60].mac_i/mul_out0 is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: operator genblk1[60].mac_i/mul_out1 is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[61].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[61] is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[61] is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: register genblk1[61].mac_i/mul_out_reg is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: operator genblk1[61].mac_i/mul_out0 is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: operator genblk1[61].mac_i/mul_out1 is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[62].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[62] is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[62] is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: register genblk1[62].mac_i/mul_out_reg is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: operator genblk1[62].mac_i/mul_out0 is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: operator genblk1[62].mac_i/mul_out1 is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[63].mac_i/mul_out_reg, operation Mode is: (P+A''*B'')'.
+DSP Report: register ker_pl2_reg[63] is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: register ker_pl_reg[63] is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: register img_rom_wire2_reg is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: register genblk1[63].mac_i/mul_out_reg is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: operator genblk1[63].mac_i/mul_out0 is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: operator genblk1[63].mac_i/mul_out1 is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_107/\ref_address_reg[0] )
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__0' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__1' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__2' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__3' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__4' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__5' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__6' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__7' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__8' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__9' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__10' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__11' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__12' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/u_1/o1_reg_mux_sel__13' (FD) to 'u_1i_3/u_1/o1_reg_mux_sel__14'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 2134.402 ; gain = 737.406 ; free physical = 3252 ; free virtual = 5972
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------------+---------------------+---------------+----------------+
+|Module Name       | RTL Object          | Depth x Width | Implemented As | 
++------------------+---------------------+---------------+----------------+
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|rom_array_layer_1 | p_0_out             | 32x16         | LUT            | 
+|wrapper_image     | o1_reg              | 131072x16     | Block RAM      | 
+|conv1             | kernel_regs_reg[0]  | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[1]  | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[2]  | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[3]  | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[4]  | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[5]  | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[6]  | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[7]  | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[8]  | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[9]  | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[10] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[11] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[12] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[13] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[14] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[15] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[16] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[17] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[18] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[19] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[20] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[21] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[38] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[39] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[40] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[41] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[42] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[43] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[44] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[45] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[46] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[47] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[48] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[49] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[50] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[51] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[52] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[53] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[54] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[55] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[56] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[57] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[58] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[59] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[60] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[61] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[62] | 32x16         | Block RAM      | 
+|conv1             | kernel_regs_reg[63] | 32x16         | Block RAM      | 
++------------------+---------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|conv1       | (P+A''*B'')' | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 1    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance u_1i_0/u_1/o3_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_0/u_1/o3_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_1/u_1/o2_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_1i_3/u_1/o1_reg_3_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_10/kernel_regs_reg[0] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_11/kernel_regs_reg[1] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_13/kernel_regs_reg[2] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_14/kernel_regs_reg[3] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_16/kernel_regs_reg[4] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_17/kernel_regs_reg[5] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_19/kernel_regs_reg[6] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_20/kernel_regs_reg[7] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_22/kernel_regs_reg[8] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_23/kernel_regs_reg[9] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_25/kernel_regs_reg[10] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_26/kernel_regs_reg[11] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_28/kernel_regs_reg[12] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_29/kernel_regs_reg[13] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_31/kernel_regs_reg[14] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_32/kernel_regs_reg[15] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_34/kernel_regs_reg[16] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_35/kernel_regs_reg[17] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_37/kernel_regs_reg[18] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_38/kernel_regs_reg[19] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_40/kernel_regs_reg[20] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_41/kernel_regs_reg[21] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_43/kernel_regs_reg[22] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_44/kernel_regs_reg[23] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_46/kernel_regs_reg[24] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_47/kernel_regs_reg[25] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_49/kernel_regs_reg[26] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_50/kernel_regs_reg[27] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_52/kernel_regs_reg[28] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_53/kernel_regs_reg[29] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_55/kernel_regs_reg[30] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_56/kernel_regs_reg[31] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_58/kernel_regs_reg[32] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_59/kernel_regs_reg[33] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_61/kernel_regs_reg[34] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_62/kernel_regs_reg[35] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_64/kernel_regs_reg[36] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_65/kernel_regs_reg[37] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_67/kernel_regs_reg[38] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_68/kernel_regs_reg[39] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_70/kernel_regs_reg[40] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_71/kernel_regs_reg[41] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_73/kernel_regs_reg[42] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_74/kernel_regs_reg[43] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_76/kernel_regs_reg[44] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_77/kernel_regs_reg[45] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_79/kernel_regs_reg[46] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_80/kernel_regs_reg[47] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_82/kernel_regs_reg[48] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_83/kernel_regs_reg[49] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:18 . Memory (MB): peak = 2199.402 ; gain = 802.406 ; free physical = 3013 ; free virtual = 5737
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__0' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__1' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__2' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__3' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__4' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__5' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__6' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__7' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__8' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__9' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__10' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__11' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__12' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'u_1i_3/o1_reg_mux_sel__13' (FD) to 'u_1i_3/o1_reg_mux_sel__14'
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 2318.418 ; gain = 921.422 ; free physical = 2943 ; free virtual = 5667
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'u_1/address_reg_reg[0]' (FD) to 'u_1/o1_reg_mux_sel__14'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:19 ; elapsed = 00:01:29 . Memory (MB): peak = 2318.418 ; gain = 921.422 ; free physical = 3026 ; free virtual = 5747
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net img_rom_wire[15] is driving 960 big block pins (URAM, BRAM and DSP loads). Created 96 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+1
+INFO: [Common 17-83] Releasing license: Synthesis
+294 Infos, 3 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 13 22:01:10 2020...

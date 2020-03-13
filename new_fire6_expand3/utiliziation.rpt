@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu Mar  5 15:10:33 2020
+| Date         : Fri Mar 13 15:51:45 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -file utiliziation.rpt
 | Design       : fire6_expand3
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+-------+-------+-----------+-------+
 |        Site Type        |  Used | Fixed | Available | Util% |
 +-------------------------+-------+-------+-----------+-------+
-| Slice LUTs*             | 11216 |     0 |    433200 |  2.59 |
-|   LUT as Logic          | 11216 |     0 |    433200 |  2.59 |
+| Slice LUTs*             | 11121 |     0 |    433200 |  2.57 |
+|   LUT as Logic          | 11121 |     0 |    433200 |  2.57 |
 |   LUT as Memory         |     0 |     0 |    174200 |  0.00 |
-| Slice Registers         |  8264 |     0 |    866400 |  0.95 |
-|   Register as Flip Flop |  8264 |     0 |    866400 |  0.95 |
+| Slice Registers         |  8266 |     0 |    866400 |  0.95 |
+|   Register as Flip Flop |  8266 |     0 |    866400 |  0.95 |
 |   Register as Latch     |     0 |     0 |    866400 |  0.00 |
 | F7 Muxes                |     0 |     0 |    216600 |  0.00 |
 | F8 Muxes                |     0 |     0 |    108300 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 8263  |          Yes |       Reset |            - |
+| 8265  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -152,16 +152,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 8263 |        Flop & Latch |
-| LUT6     | 7096 |                 LUT |
-| LUT1     | 3774 |                 LUT |
-| CARRY4   | 2005 |          CarryLogic |
-| LUT3     |  262 |                 LUT |
+| FDRE     | 8265 |        Flop & Latch |
+| LUT3     | 4106 |                 LUT |
+| LUT1     | 3715 |                 LUT |
+| LUT6     | 3031 |                 LUT |
+| CARRY4   | 1991 |          CarryLogic |
+| LUT4     |  269 |                 LUT |
 | DSP48E1  |  256 |    Block Arithmetic |
 | RAMB18E1 |  128 |        Block Memory |
-| LUT4     |   77 |                 LUT |
-| LUT5     |   10 |                 LUT |
-| LUT2     |   10 |                 LUT |
+| LUT2     |    9 |                 LUT |
+| LUT5     |    6 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 

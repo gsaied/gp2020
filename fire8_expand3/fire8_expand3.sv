@@ -10,24 +10,33 @@ module fire8_expand3 #(
 (
 	input clk,
 	//input rst,
-	input fire8_expand3_en,
-	input [WIDTH-1:0] ifm,
+	input fire8_expand3_en_i,
+	input [WIDTH-1:0] ifm_i,
 	input ram_feedback,
 	output reg fire8_expand3_sample,
 	output fire8_expand3_finish ,
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
 reg fire8_expand3_end;
+reg fire8_expand3_en;
+reg [WIDTH-1:0] ifm ;
+reg [WIDTH-1:0] temp_ifm ;
+always@(posedge clk) temp_ifm <= ifm_i ; 
+always@(posedge clk) fire8_expand3_en <= fire8_expand3_en_i ;
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_fire8_expand3 b7 (
 	.bias_mem(biasing_wire)
 );
+always@(posedge clk)begin
+
+        ifm<=temp_ifm;
+end
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
 reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ;
 wire [WIDTH-1:0] kernels [0:DSP_NO-1] ;
-//always@(posedge clk) kernel_regs <= kernels ; 
+always@(posedge clk) kernel_regs <= kernels ; 
 reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
 //////////////////////////////////
 (* keep_hierarchy = "yes" *)
@@ -41,7 +50,11 @@ rom_fire8_expand3 u_2 (
 ///////////////////////////////////
 reg clr_pulse ;
 reg rom_clr_pulse;
-always@(posedge clk) clr_pulse<= rom_clr_pulse;
+reg temp_clr_pulse ; 
+always@(posedge clk) begin
+	temp_clr_pulse<= rom_clr_pulse;
+	clr_pulse <= temp_clr_pulse ; 
+end
 ///////
 ///////
 always @(posedge clk /*or negedge rst*/) begin
@@ -96,7 +109,7 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 		.pix(ifm),
 		.layer_en(layer_en_reg),
 		.mul_out(ofmw[i]),
-		.ker(kernels[i])
+		.ker(kernel_regs[i])
 	);
 end
 endgenerate

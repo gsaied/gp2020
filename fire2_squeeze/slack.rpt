@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Mar 11 01:39:18 2020
+| Date         : Thu Mar 12 15:10:23 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_timing -file slack.rpt
 | Design       : fire2_squeeze
@@ -11,18 +11,18 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 Timing Report
 
-Slack (VIOLATED) :        -0.142ns  (required time - arrival time)
-  Source:                 genblk1[12].mac_k/mul_out_reg/CLK
-                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@1.250ns period=2.500ns})
-  Destination:            ofm_reg[12][0]/R
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+Slack (VIOLATED) :        -0.043ns  (required time - arrival time)
+  Source:                 u_2/rom_out_reg[0]/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@1.600ns period=3.200ns})
+  Destination:            genblk1[0].mac_k/mul_out_reg/B[0]
+                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@1.600ns period=3.200ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            2.500ns  (clk rise@2.500ns - clk rise@0.000ns)
-  Data Path Delay:        2.244ns  (logic 1.161ns (51.728%)  route 1.083ns (48.272%))
-  Logic Levels:           9  (CARRY4=8 LUT2=1)
+  Requirement:            3.200ns  (clk rise@3.200ns - clk rise@0.000ns)
+  Data Path Delay:        0.973ns  (logic 0.539ns (55.371%)  route 0.434ns (44.629%))
+  Logic Levels:           0  
   Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.483ns = ( 2.983 - 2.500 ) 
+    Destination Clock Delay (DCD):    0.483ns = ( 3.683 - 3.200 ) 
     Source Clock Delay      (SCD):    0.508ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -35,53 +35,28 @@ Slack (VIOLATED) :        -0.142ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=328, unset)          0.508     0.508    genblk1[12].mac_k/clk
-                         DSP48E1                                      r  genblk1[12].mac_k/mul_out_reg/CLK
+                         net (fo=329, unset)          0.508     0.508    u_2/clk
+                         RAMB18E1                                     r  u_2/rom_out_reg[0]/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-                         DSP48E1 (Prop_dsp48e1_CLK_P[2])
-                                                      0.324     0.832 r  genblk1[12].mac_k/mul_out_reg/P[2]
-                         net (fo=1, unplaced)         0.434     1.266    genblk1[12].mac_k/mul_out_reg_n_103
-                         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.295     1.561 r  genblk1[12].mac_k/ofm_reg[12][2]_i_5/CO[3]
-                         net (fo=1, unplaced)         0.000     1.561    genblk1[12].mac_k/ofm_reg[12][2]_i_5_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.050     1.611 r  genblk1[12].mac_k/ofm_reg[12][2]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     1.611    genblk1[12].mac_k/ofm_reg[12][2]_i_3_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.050     1.661 r  genblk1[12].mac_k/ofm_reg[12][2]_i_2/CO[3]
-                         net (fo=1, unplaced)         0.000     1.661    genblk1[12].mac_k/ofm_reg[12][2]_i_2_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.050     1.711 r  genblk1[12].mac_k/ofm_reg[12][2]_i_1/CO[3]
-                         net (fo=1, unplaced)         0.000     1.711    genblk1[12].mac_k/ofm_reg[12][2]_i_1_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.050     1.761 r  genblk1[12].mac_k/ofm_reg[12][6]_i_1/CO[3]
-                         net (fo=1, unplaced)         0.000     1.761    genblk1[12].mac_k/ofm_reg[12][6]_i_1_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.050     1.811 r  genblk1[12].mac_k/ofm_reg[12][10]_i_1/CO[3]
-                         net (fo=1, unplaced)         0.000     1.811    genblk1[12].mac_k/ofm_reg[12][10]_i_1_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.050     1.861 r  genblk1[12].mac_k/ofm_reg[12][14]_i_1/CO[3]
-                         net (fo=1, unplaced)         0.000     1.861    genblk1[12].mac_k/ofm_reg[12][14]_i_1_n_0
-                         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.116     1.977 r  genblk1[12].mac_k/ofm_reg[12][15]_i_2/O[2]
-                         net (fo=2, unplaced)         0.255     2.232    ofmw2[12][31]
-                         LUT2 (Prop_lut2_I1_O)        0.126     2.358 r  ofm[12][15]_i_1/O
-                         net (fo=16, unplaced)        0.394     2.752    ofm[12][15]_i_1_n_0
-                         FDRE                                         r  ofm_reg[12][0]/R
+                         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[0])
+                                                      0.539     1.047 r  u_2/rom_out_reg[0]/DOADO[0]
+                         net (fo=1, unplaced)         0.434     1.481    genblk1[0].mac_k/kernels[0][0]
+                         DSP48E1                                      r  genblk1[0].mac_k/mul_out_reg/B[0]
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)        2.500     2.500 r  
-                                                      0.000     2.500 r  clk (IN)
-                         net (fo=328, unset)          0.483     2.983    clk
-                         FDRE                                         r  ofm_reg[12][0]/C
-                         clock pessimism              0.000     2.983    
-                         clock uncertainty           -0.035     2.947    
-                         FDRE (Setup_fdre_C_R)       -0.337     2.610    ofm_reg[12][0]
+                         (clock clk rise edge)        3.200     3.200 r  
+                                                      0.000     3.200 r  clk (IN)
+                         net (fo=329, unset)          0.483     3.683    genblk1[0].mac_k/clk
+                         DSP48E1                                      r  genblk1[0].mac_k/mul_out_reg/CLK
+                         clock pessimism              0.000     3.683    
+                         clock uncertainty           -0.035     3.647    
+                         DSP48E1 (Setup_dsp48e1_CLK_B[0])
+                                                     -2.209     1.438    genblk1[0].mac_k/mul_out_reg
   -------------------------------------------------------------------
-                         required time                          2.610    
-                         arrival time                          -2.752    
+                         required time                          1.438    
+                         arrival time                          -1.481    
   -------------------------------------------------------------------
-                         slack                                 -0.142    
+                         slack                                 -0.043    
 
 
 

@@ -10,8 +10,8 @@ module fire6_expand3 #(
 (
 	input clk,
 //	input rst,
-	input fire6_expand3_en,
-	input [WIDTH-1:0] ifm,
+	input fire6_expand3_en_i,
+	input [WIDTH-1:0] ifm_i,
 	input ram_feedback,
 	output reg fire6_expand3_sample,
 	output fire6_expand3_finish ,
@@ -22,14 +22,24 @@ wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_fire6_expand3 b7 (
 	.bias_mem(biasing_wire)
 );
+reg [WIDTH-1:0] ifm ;
+reg [WIDTH-1:0] temp_ifm ;
+reg fire6_expand3_en;
+always @(posedge clk) begin
+	temp_ifm <= ifm_i ;
+	ifm <= temp_ifm ; 
+	fire6_expand3_en<= fire6_expand3_en_i ; 
+end
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
-wire [WIDTH-1:0] kernels_bram [0:DSP_NO-1] ;
+reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
+reg [WIDTH-1:0] kernel_mux [0:DSP_NO-1] ;
+wire [WIDTH-1:0] kernels_bram_wire [0:DSP_NO-1] ;
+reg [WIDTH-1:0] kernels_bram [0:DSP_NO-1] ;
 wire [WIDTH-1:0] kernels_lut [0:DSP_NO-1] ;
 reg [WIDTH-1:0] kernels_lut_reg [0:DSP_NO-1] ;
-reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ;
-reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
+reg [WIDTH-1:0] kernel_final_reg [0:DSP_NO-1] ;
 //////////////////////////////////
 //(* dont_touch ="true"*)
 (* keep_hierarchy = "yes" *)rom_fire6_expand3 u_2 (
@@ -44,19 +54,24 @@ reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
 );
 always @(posedge clk) begin
 		kernels_lut_reg<=kernels_lut ;
+		kernel_final_reg<=kernel_mux;
 end
 always @(*) begin
 	if (weight_rom_address > 512)
-		kernel_regs <= kernels_lut_reg ;
+		kernel_mux <= kernels_lut_reg ;
 	else
-		kernel_regs <= kernels_bram ;
+		kernel_mux <= kernels_bram ;
 end
 ///////////////////////////////////
 //this signal is very important to track
 ///////////////////////////////////
 reg clr_pulse ;
+reg temp_clr_pulse ;
 reg rom_clr_pulse;
-always @(posedge clk) clr_pulse <= rom_clr_pulse ;
+always@(posedge clk) begin
+	temp_clr_pulse<= rom_clr_pulse;
+	clr_pulse <= temp_clr_pulse ; 
+end
 ///////
 ///////
 always @(posedge clk /*or negedge rst*/) begin
@@ -110,7 +125,7 @@ generate for (i = 0 ; i< DSP_NO ; i++) begin
 		.pix(ifm),
 		.layer_en(layer_en_reg),
 		.mul_out(ofmw[i]),
-		.ker(kernel_regs[i])
+		.ker(kernel_final_reg[i])
 	);
 end
 endgenerate
@@ -123,7 +138,7 @@ always @(*) begin
 	end
 end
 always@(posedge clk) begin
-	if(clr_pulse && fire6_expand3_en && !fire6_expand3_end) begin
+	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 )
 				ofm[i] <= 16'b0 ;
