@@ -32,14 +32,14 @@ biasing_rom b1 (
 	.bias_mem(biasing_wire)
 );
 ////////////////////////////////////
-reg conv1_end ; 
+	reg conv1_end ; 
+	reg conv1_en ;
+	always @(posedge clk) conv1_en <= conv1_en_i ;
 wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
 reg  [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
 reg [WIDTH-1:0] ker_pl [0:DSP_NO-1] ;
 reg [WIDTH-1:0] ker_pl2 [0:DSP_NO-1] ;
 reg [4:0] clr_counter ;
-reg conv1_en ; 
-always @(posedge clk) conv1_en <= conv1_en_i; 
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
@@ -82,13 +82,13 @@ always @(posedge clk) begin
 	end
 end
 wire [WIDTH-1:0] img_rom_wire  ;
-reg [WIDTH-1:0] img_rom_wire2  ;
+//reg [WIDTH-1:0] img_rom_wire2  ;
 always @(posedge clk) begin
 	kernel_regs<=kernels ;
 	ker_pl2 <= kernel_regs;	
 	ker_pl <= ker_pl2;
-	img_rom_wire2 <= img_rom_wire;
-	ifm <= img_rom_wire2;
+	//img_rom_wire2 <= img_rom_wire;
+	ifm <= img_rom_wire;
 end
 
 reg [17:0] img_rom_address ;
@@ -214,7 +214,6 @@ always @(posedge clk) begin
 end
 assign conv1_finish = conv1_end && !ram_feedback_reg ; 
 initial begin
-	ram_feedback_reg= 1'b0 ;
 	weight_rom_address= 5'b0 ; 
 	row_end = 0 ; 
 	conv1_timer= 0 ;
@@ -224,5 +223,6 @@ initial begin
 	img_addr_counter = 0 ;
 	img_rom_address=18'b0; 
 	ref_address= 18'b0 ; 
+	ram_feedback_reg= 0 ;
 end
 endmodule

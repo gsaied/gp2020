@@ -25,12 +25,15 @@ end
 reg [WIDTH-1:0] o1; 
 reg [WIDTH-1:0] o2; 
 reg [WIDTH-1:0] o3; 
-reg [WIDTH-1:0] o11; 
-reg [WIDTH-1:0] o21; 
-reg [WIDTH-1:0] o31; 
+(* dont_touch = "true" *)reg [WIDTH-1:0] o11; 
+(* dont_touch = "true" *)reg [WIDTH-1:0] o21; 
+(* dont_touch = "true" *)reg [WIDTH-1:0] o31; 
 reg [1:0] address_reg ; 
+reg [1:0] address_reg1 ; 
 always @(posedge clk) begin
-	address_reg <= address[17:16] ;
+	address_reg1 <= address[17:16] ;
+	address_reg <= address_reg1;
+	
 end
 always @(posedge clk) begin 
 o21 <= o2;
