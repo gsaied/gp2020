@@ -14,6 +14,7 @@ report_timing -file post_synth_timing.rpt
 if {[get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]] < 0} {
 puts "Found setup timing violations => running physical optimization"
 report_timing -file slack.rpt
+phys_opt_design -directive AggressivExplore
 }
 place_design -no_fanout_opt -directive ExtraTimingOpt
 route_design -directive NoTimingRelaxation -tns_cleanup

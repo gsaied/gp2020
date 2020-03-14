@@ -108,7 +108,7 @@ always @(posedge clk/* or posedge rst*/) begin
 		fire8_squeeze_timer<= 0 ;
 		fire8_squeeze_end <= 1'b0 ;
 	end
-	else*/ if (fire8_squeeze_timer > WOUT**2)
+	else*/ if (fire8_squeeze_timer > WOUT**2-1)
 		fire8_squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire8_squeeze_timer<= fire8_squeeze_timer+1 ;

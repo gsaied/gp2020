@@ -1,5 +1,4 @@
 /* verilator lint_off COMBDLY */
-/* verilator lint_off INITIALDLY*/
 /*
 * FIRE4 && FIRE5 EXPAND 3*3   IMPLEMENTATION
 * INPUT SIZE: 32*32*32
@@ -20,10 +19,10 @@ module fire4_5_expand_3 #(
 (
 	input clk,
 	//input rst,
-	input fire4_expand_3_en,
-	input fire5_expand_3_en,
-	input [15:0] ifm_4,
-	input [15:0] ifm_5,
+	input fire4_expand_3_en_i,
+	input fire5_expand_3_en_i,
+	input [15:0] ifm_4_i,
+	input [15:0] ifm_5_i,
 	input ram_feedback_4,
 	input ram_feedback_5,
 	output fire4_expand_3_finish,
@@ -35,6 +34,17 @@ module fire4_5_expand_3 #(
 	reg fire4_expand_3_end;
 	reg fire5_expand_3_end;
 	wire rst_gen ; 
+        reg fire4_expand_3_en;
+        reg fire5_expand_3_en;
+        reg [15:0] ifm_4;
+        reg [15:0] ifm_5;
+        always @(posedge clk ) begin
+                fire4_expand_3_en <= fire4_expand_3_en_i ;
+                fire5_expand_3_en <= fire5_expand_3_en_i ;
+                ifm_4 <= ifm_4_i;
+                ifm_5 <= ifm_5_i;
+        end
+
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
 reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
@@ -198,13 +208,13 @@ always @(posedge clk/* or negedge rst*/) begin
 		fire5_expand_3_end <= 1'b0 ; 
 	end
 	else*/ if (fire4_expand_3_en) begin
-		if (fire4_expand_3_timer > WOUT**2)
+		if (fire4_expand_3_timer > WOUT**2-1)
 			fire4_expand_3_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire4_expand_3_timer<= fire4_expand_3_timer+1 ; 
 		end
 	else begin
-		if (fire5_expand_3_timer > WOUT**2)
+		if (fire5_expand_3_timer > WOUT**2-1)
 			fire5_expand_3_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire5_expand_3_timer<= fire5_expand_3_timer+1 ; 
@@ -240,9 +250,6 @@ fire4_expand_3_timer=0;
 fire5_expand_3_timer=0;
 fire4_expand_3_end=1'b0;
 fire5_expand_3_end=1'b0;
-
-
-
 end
 endmodule
 

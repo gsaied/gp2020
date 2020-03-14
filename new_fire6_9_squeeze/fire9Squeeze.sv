@@ -103,7 +103,7 @@ end
 ///////////////////////////////
 reg [$clog2(WOUT**2):0] fire9Squeeze_timer ;
 always @(posedge clk) begin
-	if (fire9Squeeze_timer > WOUT**2)
+	if (fire9Squeeze_timer > WOUT**2-1)
 		fire9Squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire9Squeeze_timer<= fire9Squeeze_timer+1 ;

@@ -146,7 +146,7 @@ always @(posedge clk /*or negedge rst*/) begin
 		fire9_expand3_timer<= 0 ;
 		fire9_expand3_end <= 1'b0 ;
 	end
-	else */if (fire9_expand3_timer > WOUT**2)
+	else */if (fire9_expand3_timer > WOUT**2-1)
 		fire9_expand3_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire9_expand3_timer<= fire9_expand3_timer+1 ;

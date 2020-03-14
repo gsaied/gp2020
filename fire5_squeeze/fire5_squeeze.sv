@@ -10,14 +10,20 @@ module fire5_squeeze #(
 (
 	input clk,
 //	input rst,
-	input fire5_squeeze_en,
-	input [WIDTH-1:0] ifm,
+	input fire5_squeeze_en_i,
+	input [WIDTH-1:0] ifm_i,
 	input ram_feedback,
 	output reg fire5_squeeze_sample,
 	output fire5_squeeze_finish ,
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
 reg fire5_squeeze_end;
+reg [WIDTH-1:0] ifm ; 
+reg fire5_squeeze_en ; 
+always @(posedge clk) begin
+	ifm<= ifm_i ; 
+	fire5_squeeze_en <= fire5_squeeze_en_i ; 
+end
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_fire5_squeeze b7 (
 	.bias_mem(biasing_wire)
@@ -126,7 +132,7 @@ always @(posedge clk/* or posedge rst*/) begin
 		fire5_squeeze_timer<= 0 ;
 		fire5_squeeze_end <= 1'b0 ;
 	end
-	else */if (fire5_squeeze_timer > WOUT**2)
+	else */if (fire5_squeeze_timer > WOUT**2-1)
 		fire5_squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire5_squeeze_timer<= fire5_squeeze_timer+1 ;

@@ -22,8 +22,7 @@ reg [WIDTH-1:0] ifm ;
 reg [WIDTH-1:0] temp_ifm ;
 reg fire6_squeeze_en;
 always @(posedge clk) begin
-	temp_ifm <= ifm_i ;
-	ifm <= temp_ifm ; 
+	ifm <= ifm_i; 
 	fire6_squeeze_en<= fire6_squeeze_en_i ; 
 end
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
@@ -56,7 +55,7 @@ always @(posedge clk) begin
 		kernel_final_reg<=kernel_mux;
 end
 always @(*) begin
-	if (weight_rom_address > 1024)
+	if (weight_rom_address > 2048)
 		kernel_mux <= kernels_lut_reg ;
 	else
 		kernel_mux <= kernels_bram ;

@@ -39,9 +39,9 @@ o11 <= o1;
 end
 always @(*) begin
 	case(address_reg) 
-		2'b10:image_wrapper_o<= o2;
-		2'b11:image_wrapper_o<= o3;
-		default:image_wrapper_o<= o1;
+		2'b10:image_wrapper_o<= o21;
+		2'b11:image_wrapper_o<= o31;
+		default:image_wrapper_o<= o11;
 	endcase
 end
 always @(posedge clk) begin

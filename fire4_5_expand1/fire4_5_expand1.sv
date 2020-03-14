@@ -1,3 +1,4 @@
+/* verilator lint_off COMBDLY */
 /*
 * FIRE4 && FIRE5 EXPAND 1*1   IMPLEMENTATION
 * INPUT SIZE: 32*32*32
@@ -18,10 +19,10 @@ module fire4_5_expand_1 #(
 (
 	input clk,
 //	input rst,
-	input fire4_expand_1_en,
-	input fire5_expand_1_en,
-	input [15:0] ifm_4,
-	input [15:0] ifm_5,
+	input fire4_expand_1_en_i,
+	input fire5_expand_1_en_i,
+	input [15:0] ifm_4_i,
+	input [15:0] ifm_5_i,
 	input ram_feedback_4,
 	input ram_feedback_5,
 	//output fire4_expand_1_finish,
@@ -32,6 +33,16 @@ module fire4_5_expand_1 #(
 );
 	reg fire4_expand_1_end;
 	reg fire5_expand_1_end;
+	reg fire4_expand_1_en;
+	reg fire5_expand_1_en;
+	reg [15:0] ifm_4;
+	reg [15:0] ifm_5;
+	always @(posedge clk ) begin
+		fire4_expand_1_en <= fire4_expand_1_en_i ;
+		fire5_expand_1_en <= fire5_expand_1_en_i ;
+		ifm_4 <= ifm_4_i; 
+		ifm_5 <= ifm_5_i; 
+	end
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
 reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
@@ -191,13 +202,13 @@ always @(posedge clk/* or negedge rst*/) begin
 		fire5_expand_1_end <= 1'b0 ; 
 	end
 	else*/ if (fire4_expand_1_en) begin
-		if (fire4_expand_1_timer > WOUT**2)
+		if (fire4_expand_1_timer > WOUT**2-1)
 			fire4_expand_1_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire4_expand_1_timer<= fire4_expand_1_timer+1 ; 
 		end
 	else begin
-		if (fire5_expand_1_timer > WOUT**2)
+		if (fire5_expand_1_timer > WOUT**2-1)
 			fire5_expand_1_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire5_expand_1_timer<= fire5_expand_1_timer+1 ; 
@@ -224,15 +235,15 @@ assign fire4_expand_1_finish = fire4_expand_1_end && !ram_feedback_reg_4 ;
 assign fire5_expand_1_finish = fire5_expand_1_end && !ram_feedback_reg_5 ;
 */
 initial begin
-	weight_rom_address<=0;
-	rom_clr_pulse<=0;
-	clr_counter<=0;
-	ram_feedback_reg_4<=1'b0;
-	ram_feedback_reg_5<=1'b0;
-	fire4_expand_1_timer<=0;
-	fire5_expand_1_timer<=0;
-	fire4_expand_1_end<=1'b0;
-	fire5_expand_1_end<=1'b0;
+	weight_rom_address=0;
+	rom_clr_pulse=0;
+	clr_counter=0;
+	ram_feedback_reg_4=1'b0;
+	ram_feedback_reg_5=1'b0;
+	fire4_expand_1_timer=0;
+	fire5_expand_1_timer=0;
+	fire4_expand_1_end=1'b0;
+	fire5_expand_1_end=1'b0;
 
 end
 endmodule

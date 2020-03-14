@@ -11,8 +11,8 @@ module conv10_1_2 #(
 )
 (
 	input clk,
-	input conv10_1_en,
-	input conv10_2_en,
+	input conv10_1_en_i,
+	input conv10_2_en_i,
 	input [15:0] ifm_1_i,
 	input [15:0] ifm_2_i,
 	input ram_feedback_1,
@@ -25,18 +25,22 @@ module conv10_1_2 #(
 	reg conv10_1_end;
 	reg conv10_2_end;
 	wire rst_gen ; 
+	reg [WIDTH-1:0] ifm_1_reg ;
+	reg [WIDTH-1:0] ifm_2_reg ;
 	reg [WIDTH-1:0] ifm_1 ;
 	reg [WIDTH-1:0] ifm_2 ;
-/*	
 	reg conv10_1_en ;
 	reg conv10_2_en ;
-	*/
 ////////////////////////
 /* REGISTERING INPUTS */
 ////////////////////////
 always @(posedge clk) begin
-	ifm_1<= ifm_1_i ; 
-	ifm_2<= ifm_2_i ; 
+	ifm_1_reg<= ifm_1_i ; 
+	ifm_2_reg<= ifm_2_i ; 
+	ifm_1<= ifm_1_reg ; 
+	ifm_2<= ifm_2_reg ; 
+	conv10_1_en<= conv10_1_en_i ; 
+	conv10_2_en<= conv10_2_en_i ; 
 end
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
@@ -168,13 +172,13 @@ reg [$clog2(WOUT**2):0] conv10_1_timer ;
 reg [$clog2(WOUT**2):0] conv10_2_timer ;
 always @(posedge clk ) begin
 	if (conv10_1_en) begin
-		if (conv10_1_timer > WOUT**2)
+		if (conv10_1_timer > WOUT**2-1)
 			conv10_1_end <= 1'b1 ;
 		else if (clr_pulse)
 			conv10_1_timer<= conv10_1_timer+1 ; 
 		end
 	else begin
-		if (conv10_2_timer > WOUT**2)
+		if (conv10_2_timer > WOUT**2-1)
 			conv10_2_end <= 1'b1 ;
 		else if (clr_pulse)
 			conv10_2_timer<= conv10_2_timer+1 ; 

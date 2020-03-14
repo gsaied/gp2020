@@ -136,7 +136,7 @@ always @(posedge clk /*or negedge rst*/) begin
 		fire3_squeeze_timer<= 0 ;
 		fire3_squeeze_end <= 1'b0 ;
 	end
-	else*/ if (fire3_squeeze_timer >WOUT**2)
+	else*/ if (fire3_squeeze_timer >WOUT**2-1)
 		fire3_squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire3_squeeze_timer<= fire3_squeeze_timer+1 ;

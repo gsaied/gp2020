@@ -143,7 +143,7 @@ always @(posedge clk or posedge rst) begin
 		"$layer_name"_timer<= 0 ;
 		"$layer_name"_end <= 1'b0 ;
 	end
-	else if ("$layer_name"_timer > WOUT**2)
+	else if ("$layer_name"_timer > WOUT**2-1)
 		"$layer_name"_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		"$layer_name"_timer<= "$layer_name"_timer+1 ;

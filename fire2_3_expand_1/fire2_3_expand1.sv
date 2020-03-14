@@ -19,10 +19,10 @@ module fire2_3_expand_1 #(
 (
 	input clk,
 //	input rst,
-	input fire2_expand_1_en,
-	input fire3_expand_1_en,
-	input [15:0] ifm_2,
-	input [15:0] ifm_3,
+	input fire2_expand_1_en_i,
+	input fire3_expand_1_en_i,
+	input [15:0] ifm_2_i,
+	input [15:0] ifm_3_i,
 	input ram_feedback_2,
 	input ram_feedback_3,
 	//output fire2_expand_1_finish,
@@ -33,9 +33,16 @@ module fire2_3_expand_1 #(
 );
 	reg fire2_expand_1_end;
 	reg fire3_expand_1_end;
-reg [WIDTH-1:0] ifm ; //MUX OUT
-reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
-reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
+	reg fire2_expand_1_en ; 
+	reg fire3_expand_1_en ; 
+	reg [WIDTH-1:0] ifm_2 ;
+	reg [WIDTH-1:0] ifm_3 ;
+always @(posedge clk) begin
+	fire2_expand_1_en <= fire2_expand_1_en_i ;
+	fire3_expand_1_en <= fire3_expand_1_en_i ;
+	ifm_2<= ifm_2_i ; 
+	ifm_3<= ifm_3_i ; 
+end
 wire [2*WIDTH-1:0] biasing_wire_2 [0:DSP_NO-1] ;
 biasing_fire2_expand1 b7 (
 	.bias_mem(biasing_wire_2)
@@ -88,6 +95,9 @@ assign rst_gen = fire2_expand_1_en && fire2_expand_1_end ;
 //ENABLE SIGNALS MULTIPLEX//
 //ROM & INPUTS TO MAC///////
 ////////////////////////////
+reg [WIDTH-1:0] ifm ; //MUX OUT
+reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
+reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
 always @(*) begin
 	if (fire2_expand_1_en) begin
 		kernels <= kernels_2 ;
@@ -192,13 +202,13 @@ always @(posedge clk /*or negedge rst*/) begin
 		fire3_expand_1_end <= 1'b0 ; 
 	end
 	else*/ if (fire2_expand_1_en) begin
-		if (fire2_expand_1_timer > WOUT**2)
+		if (fire2_expand_1_timer > WOUT**2-1)
 			fire2_expand_1_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire2_expand_1_timer<= fire2_expand_1_timer+1 ; 
 		end
 	else begin
-		if (fire3_expand_1_timer > WOUT**2)
+		if (fire3_expand_1_timer > WOUT**2-1)
 			fire3_expand_1_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire3_expand_1_timer<= fire3_expand_1_timer+1 ; 
@@ -225,15 +235,15 @@ assign fire2_expand_1_finish = fire2_expand_1_end && !ram_feedback_reg_2 ;
 assign fire3_expand_1_finish = fire3_expand_1_end && !ram_feedback_reg_3 ;
 */
 initial begin
-	weight_rom_address<=0;
-	ram_feedback_reg_2<=1'b0;
-	ram_feedback_reg_3<=1'b0;
-	rom_clr_pulse <= 1'b0;
-	clr_counter <=0;
-	fire2_expand_1_timer<=0;
-	fire3_expand_1_timer<=0;
-	fire2_expand_1_end<=1'b0;
-	fire3_expand_1_end<=1'b0;
+	weight_rom_address=0;
+	ram_feedback_reg_2=1'b0;
+	ram_feedback_reg_3=1'b0;
+	rom_clr_pulse = 1'b0;
+	clr_counter =0;
+	fire2_expand_1_timer=0;
+	fire3_expand_1_timer=0;
+	fire2_expand_1_end=1'b0;
+	fire3_expand_1_end=1'b0;
 end
 endmodule
 

@@ -10,14 +10,21 @@ module fire7_expand3 #(
 (
 	input clk,
 	//input rst,
-	input fire7_expand3_en,
-	input [WIDTH-1:0] ifm,
+	input fire7_expand3_en_i,
+	input [WIDTH-1:0] ifm_i,
 	input ram_feedback,
 	output reg fire7_expand3_sample,
 	output fire7_expand3_finish ,
 	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
 );
 reg fire7_expand3_end;
+reg fire7_expand3_en ; 
+reg [WIDTH-1:0] ifm ; 
+always @(posedge clk) begin
+        fire7_expand3_en <= fire7_expand3_en_i ;
+        ifm<= ifm_i ;
+end
+
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_fire7_expand3 b7 (
 	.bias_mem(biasing_wire)
@@ -130,7 +137,7 @@ always @(posedge clk /*or negedge rst*/) begin
 		fire7_expand3_timer<= 0 ;
 		fire7_expand3_end <= 1'b0 ;
 	end
-	else*/ if (fire7_expand3_timer > WOUT**2)
+	else*/ if (fire7_expand3_timer > WOUT**2-1)
 		fire7_expand3_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire7_expand3_timer<= fire7_expand3_timer+1 ;

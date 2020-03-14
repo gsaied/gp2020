@@ -140,7 +140,7 @@ always @(posedge clk /*or negedge rst*/) begin
 		fire8_expand3_timer<= 0 ;
 		fire8_expand3_end <= 1'b0 ;
 	end
-	else */if (fire8_expand3_timer > WOUT**2+1)
+	else */if (fire8_expand3_timer > WOUT**2-1)
 		fire8_expand3_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire8_expand3_timer<= fire8_expand3_timer+1 ;

@@ -19,10 +19,10 @@ module fire2_3_expand_3 #(
 (
 	input clk,
 //	input rst,
-	input fire2_expand_3_en,
-	input fire3_expand_3_en,
-	input [15:0] ifm_2,
-	input [15:0] ifm_3,
+	input fire2_expand_3_en_i,
+	input fire3_expand_3_en_i,
+	input [15:0] ifm_2_i,
+	input [15:0] ifm_3_i,
 	input ram_feedback_2,
 	input ram_feedback_3,
 	output fire2_expand_3_finish,
@@ -33,6 +33,16 @@ module fire2_3_expand_3 #(
 );
 	reg fire2_expand_3_end;
 	reg fire3_expand_3_end;
+	reg fire2_expand_3_en;
+	reg fire3_expand_3_en;
+	reg [WIDTH-1:0] ifm_2 ; 
+	reg [WIDTH-1:0] ifm_3 ; 
+always @(posedge clk) begin
+	fire2_expand_3_en <= fire2_expand_3_en_i;
+	fire3_expand_3_en <= fire3_expand_3_en_i;
+	ifm_3<= ifm_3_i ; 
+	ifm_2<= ifm_2_i ; 
+end
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
 reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
@@ -188,13 +198,13 @@ always @(posedge clk /*or negedge rst*/) begin
 		fire3_expand_3_end <= 1'b0 ; 
 	end
 	else*/ if (fire2_expand_3_en) begin
-		if (fire2_expand_3_timer > WOUT**2)
+		if (fire2_expand_3_timer > WOUT**2-1)
 			fire2_expand_3_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire2_expand_3_timer<= fire2_expand_3_timer+1 ; 
 		end
 	else if (fire3_expand_3_en) begin
-		if (fire3_expand_3_timer > WOUT**2)
+		if (fire3_expand_3_timer > WOUT**2-1)
 			fire3_expand_3_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire3_expand_3_timer<= fire3_expand_3_timer+1 ; 
@@ -220,15 +230,15 @@ end
 assign fire2_expand_3_finish = fire2_expand_3_end && !ram_feedback_reg_2 ;
 assign fire3_expand_3_finish = fire3_expand_3_end && !ram_feedback_reg_3 ;
 initial begin
-rom_clr_pulse <= 1'b0 ; 
-clr_counter <= 0 ;
-weight_rom_address<=0;
-ram_feedback_reg_2<=1'b0;
-ram_feedback_reg_3<=1'b0;
-fire2_expand_3_timer<=0;
-fire3_expand_3_timer<=0;
-fire2_expand_3_end<=1'b0;
-fire3_expand_3_end<=1'b0;
+rom_clr_pulse= 1'b0 ; 
+clr_counter = 0 ;
+weight_rom_address=0;
+ram_feedback_reg_2=1'b0;
+ram_feedback_reg_3=1'b0;
+fire2_expand_3_timer=0;
+fire3_expand_3_timer=0;
+fire2_expand_3_end=1'b0;
+fire3_expand_3_end=1'b0;
 end
 endmodule
 

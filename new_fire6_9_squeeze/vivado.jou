@@ -10,3 +10,4 @@
 # Journal file: /home/gsaied/Desktop/old_rtl/new_fire6_9_squeeze/vivado.jou
 #-----------------------------------------------------------
 source synth.tcl
+write_checkpoint post_route.dcp

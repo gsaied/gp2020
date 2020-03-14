@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Fri Mar 13 22:05:58 2020
+| Date         : Sat Mar 14 13:10:25 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -hierarchical -file hierarchical_utilization.rpt
 | Design       : conv1
@@ -21,8 +21,8 @@ Table of Contents
 +---------------------+---------------+------------+------------+---------+------+------+--------+--------+--------------+
 |       Instance      |     Module    | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +---------------------+---------------+------------+------------+---------+------+------+--------+--------+--------------+
-| conv1               |         (top) |       1619 |       1618 |       0 |    1 | 1207 |     98 |      0 |           64 |
-|   (conv1)           |         (top) |        124 |        123 |       0 |    1 | 1205 |      0 |      0 |            0 |
+| conv1               |         (top) |       1684 |       1683 |       0 |    1 | 1212 |     98 |      0 |           64 |
+|   (conv1)           |         (top) |        180 |        179 |       0 |    1 | 1194 |      0 |      0 |            0 |
 |   genblk1[0].mac_i  |      conv_mac |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[10].mac_i |    conv_mac_0 |         19 |         19 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[11].mac_i |    conv_mac_1 |         18 |         18 |       0 |    0 |    0 |      0 |      0 |            1 |
@@ -87,7 +87,7 @@ Table of Contents
 |   genblk1[7].mac_i  |   conv_mac_60 |         39 |         39 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[8].mac_i  |   conv_mac_61 |         21 |         21 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[9].mac_i  |   conv_mac_62 |         15 |         15 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   u_1               | wrapper_image |        112 |        112 |       0 |    0 |    2 |     98 |      0 |            0 |
+|   u_1               | wrapper_image |        121 |        121 |       0 |    0 |   18 |     98 |      0 |            0 |
 +---------------------+---------------+------------+------------+---------+------+------+--------+--------+--------------+
 
 

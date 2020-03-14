@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar  5 18:11:52 2020
+# Process ID: 11287
+# Current directory: /home/gsaied/Desktop/old_rtl/fire4_5_expand1
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/fire4_5_expand1/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire4_5_expand1/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+report_utilization 
+opt_design -resynth_area 
+opt_design -resynth_seq_area 
+report_utilization 
+vi synth.tcl 
+open_checkpoint temp_syn.dcp 
+set_property HLUTNM all_dd [get_cells *]
+report_utilization 
+vi utiliziation.rpt 
+open_checkpoint temp_syn.dcp 
+report_utilization 
+set_property LUTNM gp1 [get_cells *]
+report_utilization 
+opt_design -resynth_area 
+opt_design -resynth_seq_area 
+report_utilization 
