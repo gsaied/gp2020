@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 16 22:14:54 2020
+# Process ID: 6163
+# Current directory: /home/gsaied/Desktop/old_rtl/scripts/flows
+# Command line: vivado -mode tcl
+# Log file: /home/gsaied/Desktop/old_rtl/scripts/flows/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/scripts/flows/vivado.jou
+#-----------------------------------------------------------
+create_fileset ct
+ERROR: [Common 17-53] User Exception: No open project. Please create or open a project before executing this command.
+read_verilog ../../conv1/conv1.sv
+/home/gsaied/Desktop/old_rtl/conv1/conv1.sv
+create_fileset st
+st
