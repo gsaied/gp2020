@@ -1,0 +1,2175 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 16 11:34:51 2020
+# Process ID: 4928
+# Current directory: /home/gsaied/Desktop/old_rtl/fire2_3_expand_1
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/fire2_3_expand_1/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire2_3_expand_1/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top fire2_3_expand_1 -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5125 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1441.641 ; gain = 91.000 ; free physical = 2108 ; free virtual = 6570
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fire2_3_expand_1' [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/fire2_3_expand1.sv:10]
+	Parameter WOUT bound to: 64 - type: integer 
+	Parameter DSP_NO bound to: 64 - type: integer 
+	Parameter W_IN bound to: 64 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter CHIN bound to: 16 - type: integer 
+	Parameter KERNEL_DIM bound to: 1 - type: integer 
+	Parameter CHOUT bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/fire2_3_expand1.sv:74]
+INFO: [Synth 8-6157] synthesizing module 'mac' [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/mac.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'mac' (1#1) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/mac.sv:1]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "yes" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/fire2_3_expand1.sv:235]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "yes" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/fire2_3_expand1.sv:236]
+INFO: [Synth 8-6157] synthesizing module 'biasing_fire2_expand1' [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/biasing_fire2_expand1.sv:2]
+	Parameter bias_reg_0 bound to: 386 - type: integer 
+	Parameter bias_reg_1 bound to: -1 - type: integer 
+	Parameter bias_reg_2 bound to: 0 - type: integer 
+	Parameter bias_reg_3 bound to: 666 - type: integer 
+	Parameter bias_reg_4 bound to: -22 - type: integer 
+	Parameter bias_reg_5 bound to: -19 - type: integer 
+	Parameter bias_reg_6 bound to: 99 - type: integer 
+	Parameter bias_reg_7 bound to: 0 - type: integer 
+	Parameter bias_reg_8 bound to: 0 - type: integer 
+	Parameter bias_reg_9 bound to: 145 - type: integer 
+	Parameter bias_reg_10 bound to: -116 - type: integer 
+	Parameter bias_reg_11 bound to: 183 - type: integer 
+	Parameter bias_reg_12 bound to: 464 - type: integer 
+	Parameter bias_reg_13 bound to: 851 - type: integer 
+	Parameter bias_reg_14 bound to: 0 - type: integer 
+	Parameter bias_reg_15 bound to: 0 - type: integer 
+	Parameter bias_reg_16 bound to: 0 - type: integer 
+	Parameter bias_reg_17 bound to: 722 - type: integer 
+	Parameter bias_reg_18 bound to: 0 - type: integer 
+	Parameter bias_reg_19 bound to: 463 - type: integer 
+	Parameter bias_reg_20 bound to: -1 - type: integer 
+	Parameter bias_reg_21 bound to: 0 - type: integer 
+	Parameter bias_reg_22 bound to: -141 - type: integer 
+	Parameter bias_reg_23 bound to: 0 - type: integer 
+	Parameter bias_reg_24 bound to: 332 - type: integer 
+	Parameter bias_reg_25 bound to: 0 - type: integer 
+	Parameter bias_reg_26 bound to: -78 - type: integer 
+	Parameter bias_reg_27 bound to: 143 - type: integer 
+	Parameter bias_reg_28 bound to: 82 - type: integer 
+	Parameter bias_reg_29 bound to: 0 - type: integer 
+	Parameter bias_reg_30 bound to: 0 - type: integer 
+	Parameter bias_reg_31 bound to: 380 - type: integer 
+	Parameter bias_reg_32 bound to: 0 - type: integer 
+	Parameter bias_reg_33 bound to: 0 - type: integer 
+	Parameter bias_reg_34 bound to: 0 - type: integer 
+	Parameter bias_reg_35 bound to: 113 - type: integer 
+	Parameter bias_reg_36 bound to: -29 - type: integer 
+	Parameter bias_reg_37 bound to: -1 - type: integer 
+	Parameter bias_reg_38 bound to: 267 - type: integer 
+	Parameter bias_reg_39 bound to: 0 - type: integer 
+	Parameter bias_reg_40 bound to: -42 - type: integer 
+	Parameter bias_reg_41 bound to: 0 - type: integer 
+	Parameter bias_reg_42 bound to: 0 - type: integer 
+	Parameter bias_reg_43 bound to: 53 - type: integer 
+	Parameter bias_reg_44 bound to: 0 - type: integer 
+	Parameter bias_reg_45 bound to: 0 - type: integer 
+	Parameter bias_reg_46 bound to: 0 - type: integer 
+	Parameter bias_reg_47 bound to: -1 - type: integer 
+	Parameter bias_reg_48 bound to: 205 - type: integer 
+	Parameter bias_reg_49 bound to: -2 - type: integer 
+	Parameter bias_reg_50 bound to: 0 - type: integer 
+	Parameter bias_reg_51 bound to: 0 - type: integer 
+	Parameter bias_reg_52 bound to: 0 - type: integer 
+	Parameter bias_reg_53 bound to: 580 - type: integer 
+	Parameter bias_reg_54 bound to: 0 - type: integer 
+	Parameter bias_reg_55 bound to: 263 - type: integer 
+	Parameter bias_reg_56 bound to: 0 - type: integer 
+	Parameter bias_reg_57 bound to: 21 - type: integer 
+	Parameter bias_reg_58 bound to: 0 - type: integer 
+	Parameter bias_reg_59 bound to: 0 - type: integer 
+	Parameter bias_reg_60 bound to: 217 - type: integer 
+	Parameter bias_reg_61 bound to: -187 - type: integer 
+	Parameter bias_reg_62 bound to: 0 - type: integer 
+	Parameter bias_reg_63 bound to: 1114 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'biasing_fire2_expand1' (2#1) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/biasing_fire2_expand1.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'biasing_fire3_expand1' [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/biasing_fire3_expand1.sv:2]
+	Parameter bias_parameter_0 bound to: -321 - type: integer 
+	Parameter bias_parameter_1 bound to: 290 - type: integer 
+	Parameter bias_parameter_2 bound to: 714 - type: integer 
+	Parameter bias_parameter_3 bound to: 1169 - type: integer 
+	Parameter bias_parameter_4 bound to: 154 - type: integer 
+	Parameter bias_parameter_5 bound to: -130 - type: integer 
+	Parameter bias_parameter_6 bound to: 541 - type: integer 
+	Parameter bias_parameter_7 bound to: 296 - type: integer 
+	Parameter bias_parameter_8 bound to: 60 - type: integer 
+	Parameter bias_parameter_9 bound to: 381 - type: integer 
+	Parameter bias_parameter_10 bound to: -642 - type: integer 
+	Parameter bias_parameter_11 bound to: 58 - type: integer 
+	Parameter bias_parameter_12 bound to: 862 - type: integer 
+	Parameter bias_parameter_13 bound to: 430 - type: integer 
+	Parameter bias_parameter_14 bound to: 68 - type: integer 
+	Parameter bias_parameter_15 bound to: 515 - type: integer 
+	Parameter bias_parameter_16 bound to: -14 - type: integer 
+	Parameter bias_parameter_17 bound to: 31 - type: integer 
+	Parameter bias_parameter_18 bound to: -17 - type: integer 
+	Parameter bias_parameter_19 bound to: 8 - type: integer 
+	Parameter bias_parameter_20 bound to: 243 - type: integer 
+	Parameter bias_parameter_21 bound to: 368 - type: integer 
+	Parameter bias_parameter_22 bound to: 130 - type: integer 
+	Parameter bias_parameter_23 bound to: 128 - type: integer 
+	Parameter bias_parameter_24 bound to: 1080 - type: integer 
+	Parameter bias_parameter_25 bound to: 192 - type: integer 
+	Parameter bias_parameter_26 bound to: 218 - type: integer 
+	Parameter bias_parameter_27 bound to: 156 - type: integer 
+	Parameter bias_parameter_28 bound to: 390 - type: integer 
+	Parameter bias_parameter_29 bound to: 153 - type: integer 
+	Parameter bias_parameter_30 bound to: 646 - type: integer 
+	Parameter bias_parameter_31 bound to: 98 - type: integer 
+	Parameter bias_parameter_32 bound to: 0 - type: integer 
+	Parameter bias_parameter_33 bound to: 224 - type: integer 
+	Parameter bias_parameter_34 bound to: -40 - type: integer 
+	Parameter bias_parameter_35 bound to: -84 - type: integer 
+	Parameter bias_parameter_36 bound to: -84 - type: integer 
+	Parameter bias_parameter_37 bound to: 925 - type: integer 
+	Parameter bias_parameter_38 bound to: 440 - type: integer 
+	Parameter bias_parameter_39 bound to: 205 - type: integer 
+	Parameter bias_parameter_40 bound to: 265 - type: integer 
+	Parameter bias_parameter_41 bound to: 58 - type: integer 
+	Parameter bias_parameter_42 bound to: -117 - type: integer 
+	Parameter bias_parameter_43 bound to: -104 - type: integer 
+	Parameter bias_parameter_44 bound to: -41 - type: integer 
+	Parameter bias_parameter_45 bound to: 196 - type: integer 
+	Parameter bias_parameter_46 bound to: -161 - type: integer 
+	Parameter bias_parameter_47 bound to: 226 - type: integer 
+	Parameter bias_parameter_48 bound to: 306 - type: integer 
+	Parameter bias_parameter_49 bound to: 275 - type: integer 
+	Parameter bias_parameter_50 bound to: 382 - type: integer 
+	Parameter bias_parameter_51 bound to: 133 - type: integer 
+	Parameter bias_parameter_52 bound to: -136 - type: integer 
+	Parameter bias_parameter_53 bound to: 416 - type: integer 
+	Parameter bias_parameter_54 bound to: 448 - type: integer 
+	Parameter bias_parameter_55 bound to: -55 - type: integer 
+	Parameter bias_parameter_56 bound to: 709 - type: integer 
+	Parameter bias_parameter_57 bound to: -132 - type: integer 
+	Parameter bias_parameter_58 bound to: -150 - type: integer 
+	Parameter bias_parameter_59 bound to: -58 - type: integer 
+	Parameter bias_parameter_60 bound to: 608 - type: integer 
+	Parameter bias_parameter_61 bound to: 588 - type: integer 
+	Parameter bias_parameter_62 bound to: -183 - type: integer 
+	Parameter bias_parameter_63 bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'biasing_fire3_expand1' (3#1) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/biasing_fire3_expand1.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'rom_fire2_expand1' [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 1 - type: integer 
+	Parameter ADDR bound to: 4 - type: integer 
+	Parameter NUM bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:16]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:19]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:22]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:25]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:28]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:31]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:34]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:37]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:40]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:43]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:46]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:49]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:52]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:55]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:58]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:61]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:64]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:67]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:70]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:73]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:76]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:79]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:82]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:85]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:88]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:91]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:94]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:97]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:100]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:103]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:106]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:109]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:112]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:115]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:118]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:121]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:124]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:127]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:130]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:133]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:136]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:139]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:142]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:145]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:148]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:151]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:154]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:157]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:160]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:163]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:166]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:169]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:172]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:175]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:178]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:181]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:184]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:187]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:190]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:193]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:196]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:199]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:202]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:205]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_1.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:207]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_2.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:208]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_3.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:209]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_4.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:210]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_5.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:211]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_6.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:212]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_7.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:213]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_8.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:214]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_9.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:215]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_10.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:216]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_11.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:217]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_12.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:218]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_13.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:219]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_14.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:220]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_15.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:221]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_16.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:222]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_17.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:223]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_18.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:224]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_19.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:225]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_20.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:226]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_21.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:227]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_22.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:228]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_23.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:229]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_24.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:230]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_25.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:231]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_26.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:232]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_27.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:233]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_28.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:234]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_29.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:235]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_30.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:236]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_31.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:237]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_32.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:238]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_33.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:239]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_34.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:240]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_35.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:241]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_36.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:242]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_37.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:243]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_38.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:244]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_39.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:245]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_40.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:246]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_41.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:247]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_42.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:248]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_43.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:249]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_44.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:250]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_45.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:251]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_46.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:252]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_47.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:253]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_48.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:254]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_49.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:255]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_50.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:256]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_51.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:257]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_52.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:258]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_53.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:259]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_54.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:260]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_55.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:261]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_56.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:262]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_57.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:263]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_58.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:264]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_59.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:265]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_60.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:266]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_61.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:267]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_62.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:268]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_63.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:269]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_expand1_64.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:270]
+INFO: [Synth 8-6155] done synthesizing module 'rom_fire2_expand1' (4#1) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire2_expand1.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'rom_fire3_expand1' [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 1 - type: integer 
+	Parameter ADDR bound to: 4 - type: integer 
+	Parameter NUM bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:16]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:19]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:22]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:25]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:28]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:31]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:34]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:37]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:40]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:43]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:46]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:49]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:52]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:55]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:58]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:61]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:64]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:67]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:70]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:73]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:76]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:79]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:82]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:85]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:88]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:91]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:94]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:97]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:100]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:103]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:106]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:109]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:112]
+INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_1.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:207]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_2.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:208]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_3.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:209]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_4.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:210]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_5.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:211]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_6.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:212]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_7.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:213]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_8.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:214]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_9.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:215]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_10.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:216]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_11.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:217]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_12.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:218]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_13.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:219]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_14.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:220]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_15.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:221]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_16.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:222]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_17.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:223]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_18.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:224]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_19.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:225]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_20.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:226]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_21.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:227]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_22.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:228]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_23.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:229]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_24.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:230]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_25.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:231]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_26.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:232]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_27.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:233]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_28.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:234]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_29.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:235]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_30.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:236]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_31.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:237]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_32.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:238]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_33.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:239]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_34.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:240]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_35.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:241]
+INFO: [Synth 8-3876] $readmem data file 'file_fire3_expand1_36.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:242]
+INFO: [Common 17-14] Message 'Synth 8-3876' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'rom_fire3_expand1' (5#1) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/rom_fire3_expand1.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fire2_3_expand_1' (6#1) [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/fire2_3_expand1.sv:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1507.391 ; gain = 156.750 ; free physical = 2903 ; free virtual = 7334
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1507.391 ; gain = 156.750 ; free physical = 2952 ; free virtual = 7385
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1507.391 ; gain = 156.750 ; free physical = 2951 ; free virtual = 7384
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/temp.xdc]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/temp.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2030.641 ; gain = 0.000 ; free physical = 1330 ; free virtual = 5861
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2031.641 ; gain = 0.000 ; free physical = 1333 ; free virtual = 5863
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2031.641 ; gain = 1.000 ; free physical = 1330 ; free virtual = 5863
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 2031.641 ; gain = 681.000 ; free physical = 1480 ; free virtual = 5996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1157-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 2031.641 ; gain = 681.000 ; free physical = 1480 ; free virtual = 5996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 2031.641 ; gain = 681.000 ; free physical = 1473 ; free virtual = 5997
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "rom_1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_3" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_4" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_5" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_6" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_7" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_8" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_9" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_10" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_11" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_12" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_13" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_14" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_15" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_16" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_17" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_18" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_19" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_20" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_21" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_22" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_23" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_24" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_25" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_26" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_27" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_28" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_29" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_30" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_31" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_32" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_33" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_34" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_35" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_36" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_37" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_38" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_39" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_40" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_41" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_42" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_43" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_44" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_45" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_46" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_47" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_48" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_49" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_50" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_51" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_52" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_53" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_54" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_55" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_56" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_57" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_58" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_59" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_60" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_61" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_62" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_63" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_64" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_3" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_4" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_5" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_6" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_7" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_8" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_9" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_10" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_11" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_12" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_13" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_14" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_15" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_16" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_17" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_18" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_19" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_20" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_21" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_22" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_23" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_24" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_25" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_26" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_27" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_28" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_29" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_30" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_31" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_32" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_33" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_34" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_35" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_36" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 2031.641 ; gain = 681.000 ; free physical = 1294 ; free virtual = 5830
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 64    
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 64    
+	               16 Bit    Registers := 261   
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 64    
+	  17 Input     16 Bit        Muxes := 128   
+	   2 Input     16 Bit        Muxes := 65    
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fire2_3_expand_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 64    
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 261   
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 64    
+	   2 Input     16 Bit        Muxes := 65    
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module rom_fire2_expand1 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input     16 Bit        Muxes := 64    
+Module rom_fire3_expand1 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input     16 Bit        Muxes := 64    
+Module mac 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP genblk1[0].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[0] is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[0] is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: register genblk1[0].mac_i/mul_out_reg is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: operator genblk1[0].mac_i/intermed is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: operator genblk1[0].mac_i/intermed0 is absorbed into DSP genblk1[0].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[1].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[1] is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[1] is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: register genblk1[1].mac_i/mul_out_reg is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: operator genblk1[1].mac_i/intermed is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: operator genblk1[1].mac_i/intermed0 is absorbed into DSP genblk1[1].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[2].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[2] is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[2] is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: register genblk1[2].mac_i/mul_out_reg is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: operator genblk1[2].mac_i/intermed is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: operator genblk1[2].mac_i/intermed0 is absorbed into DSP genblk1[2].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[3].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[3] is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[3] is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: register genblk1[3].mac_i/mul_out_reg is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: operator genblk1[3].mac_i/intermed is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: operator genblk1[3].mac_i/intermed0 is absorbed into DSP genblk1[3].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[4].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[4] is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[4] is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: register genblk1[4].mac_i/mul_out_reg is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: operator genblk1[4].mac_i/intermed is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: operator genblk1[4].mac_i/intermed0 is absorbed into DSP genblk1[4].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[5].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[5] is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[5] is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: register genblk1[5].mac_i/mul_out_reg is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: operator genblk1[5].mac_i/intermed is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: operator genblk1[5].mac_i/intermed0 is absorbed into DSP genblk1[5].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[6].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[6] is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[6] is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: register genblk1[6].mac_i/mul_out_reg is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: operator genblk1[6].mac_i/intermed is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: operator genblk1[6].mac_i/intermed0 is absorbed into DSP genblk1[6].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[7].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[7] is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[7] is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: register genblk1[7].mac_i/mul_out_reg is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: operator genblk1[7].mac_i/intermed is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: operator genblk1[7].mac_i/intermed0 is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[8].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[8] is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[8] is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: register genblk1[8].mac_i/mul_out_reg is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: operator genblk1[8].mac_i/intermed is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: operator genblk1[8].mac_i/intermed0 is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[9].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[9] is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[9] is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: register genblk1[9].mac_i/mul_out_reg is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: operator genblk1[9].mac_i/intermed is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: operator genblk1[9].mac_i/intermed0 is absorbed into DSP genblk1[9].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[10].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[10] is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[10] is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: register genblk1[10].mac_i/mul_out_reg is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: operator genblk1[10].mac_i/intermed is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: operator genblk1[10].mac_i/intermed0 is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[11].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[11] is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[11] is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: register genblk1[11].mac_i/mul_out_reg is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: operator genblk1[11].mac_i/intermed is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: operator genblk1[11].mac_i/intermed0 is absorbed into DSP genblk1[11].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[12].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[12] is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[12] is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: register genblk1[12].mac_i/mul_out_reg is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: operator genblk1[12].mac_i/intermed is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: operator genblk1[12].mac_i/intermed0 is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[13].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[13] is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[13] is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: register genblk1[13].mac_i/mul_out_reg is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: operator genblk1[13].mac_i/intermed is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: operator genblk1[13].mac_i/intermed0 is absorbed into DSP genblk1[13].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[14].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[14] is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[14] is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: register genblk1[14].mac_i/mul_out_reg is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: operator genblk1[14].mac_i/intermed is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: operator genblk1[14].mac_i/intermed0 is absorbed into DSP genblk1[14].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[15].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[15] is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[15] is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: register genblk1[15].mac_i/mul_out_reg is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: operator genblk1[15].mac_i/intermed is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: operator genblk1[15].mac_i/intermed0 is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[16].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[16] is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[16] is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: register genblk1[16].mac_i/mul_out_reg is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: operator genblk1[16].mac_i/intermed is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: operator genblk1[16].mac_i/intermed0 is absorbed into DSP genblk1[16].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[17].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[17] is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[17] is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: register genblk1[17].mac_i/mul_out_reg is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: operator genblk1[17].mac_i/intermed is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: operator genblk1[17].mac_i/intermed0 is absorbed into DSP genblk1[17].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[18].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[18] is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[18] is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: register genblk1[18].mac_i/mul_out_reg is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: operator genblk1[18].mac_i/intermed is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: operator genblk1[18].mac_i/intermed0 is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[19].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[19] is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[19] is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: register genblk1[19].mac_i/mul_out_reg is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: operator genblk1[19].mac_i/intermed is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: operator genblk1[19].mac_i/intermed0 is absorbed into DSP genblk1[19].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[20].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[20] is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[20] is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: register genblk1[20].mac_i/mul_out_reg is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: operator genblk1[20].mac_i/intermed is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: operator genblk1[20].mac_i/intermed0 is absorbed into DSP genblk1[20].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[21].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[21] is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[21] is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: register genblk1[21].mac_i/mul_out_reg is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: operator genblk1[21].mac_i/intermed is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: operator genblk1[21].mac_i/intermed0 is absorbed into DSP genblk1[21].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[22].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[22] is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[22] is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: register genblk1[22].mac_i/mul_out_reg is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: operator genblk1[22].mac_i/intermed is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: operator genblk1[22].mac_i/intermed0 is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[23].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[23] is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[23] is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: register genblk1[23].mac_i/mul_out_reg is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: operator genblk1[23].mac_i/intermed is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: operator genblk1[23].mac_i/intermed0 is absorbed into DSP genblk1[23].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[24].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[24] is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[24] is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: register genblk1[24].mac_i/mul_out_reg is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: operator genblk1[24].mac_i/intermed is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: operator genblk1[24].mac_i/intermed0 is absorbed into DSP genblk1[24].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[25].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[25] is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[25] is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: register genblk1[25].mac_i/mul_out_reg is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: operator genblk1[25].mac_i/intermed is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: operator genblk1[25].mac_i/intermed0 is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[26].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[26] is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[26] is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: register genblk1[26].mac_i/mul_out_reg is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: operator genblk1[26].mac_i/intermed is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: operator genblk1[26].mac_i/intermed0 is absorbed into DSP genblk1[26].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[27].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[27] is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[27] is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: register genblk1[27].mac_i/mul_out_reg is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: operator genblk1[27].mac_i/intermed is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: operator genblk1[27].mac_i/intermed0 is absorbed into DSP genblk1[27].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[28].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[28] is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[28] is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: register genblk1[28].mac_i/mul_out_reg is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: operator genblk1[28].mac_i/intermed is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: operator genblk1[28].mac_i/intermed0 is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[29].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[29] is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[29] is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: register genblk1[29].mac_i/mul_out_reg is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: operator genblk1[29].mac_i/intermed is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: operator genblk1[29].mac_i/intermed0 is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[30].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[30] is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[30] is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: register genblk1[30].mac_i/mul_out_reg is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: operator genblk1[30].mac_i/intermed is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: operator genblk1[30].mac_i/intermed0 is absorbed into DSP genblk1[30].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[31].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[31] is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[31] is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: register genblk1[31].mac_i/mul_out_reg is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: operator genblk1[31].mac_i/intermed is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: operator genblk1[31].mac_i/intermed0 is absorbed into DSP genblk1[31].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[32].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[32] is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[32] is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: register genblk1[32].mac_i/mul_out_reg is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: operator genblk1[32].mac_i/intermed is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: operator genblk1[32].mac_i/intermed0 is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[33].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[33] is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[33] is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: register genblk1[33].mac_i/mul_out_reg is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: operator genblk1[33].mac_i/intermed is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: operator genblk1[33].mac_i/intermed0 is absorbed into DSP genblk1[33].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[34].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[34] is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[34] is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: register genblk1[34].mac_i/mul_out_reg is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: operator genblk1[34].mac_i/intermed is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: operator genblk1[34].mac_i/intermed0 is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[35].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[35] is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[35] is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: register genblk1[35].mac_i/mul_out_reg is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: operator genblk1[35].mac_i/intermed is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: operator genblk1[35].mac_i/intermed0 is absorbed into DSP genblk1[35].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[36].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[36] is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[36] is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: register genblk1[36].mac_i/mul_out_reg is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: operator genblk1[36].mac_i/intermed is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: operator genblk1[36].mac_i/intermed0 is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[37].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[37] is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[37] is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: register genblk1[37].mac_i/mul_out_reg is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: operator genblk1[37].mac_i/intermed is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: operator genblk1[37].mac_i/intermed0 is absorbed into DSP genblk1[37].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[38].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[38] is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[38] is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: register genblk1[38].mac_i/mul_out_reg is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: operator genblk1[38].mac_i/intermed is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: operator genblk1[38].mac_i/intermed0 is absorbed into DSP genblk1[38].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[39].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[39] is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[39] is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: register genblk1[39].mac_i/mul_out_reg is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: operator genblk1[39].mac_i/intermed is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: operator genblk1[39].mac_i/intermed0 is absorbed into DSP genblk1[39].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[40].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[40] is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[40] is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: register genblk1[40].mac_i/mul_out_reg is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: operator genblk1[40].mac_i/intermed is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: operator genblk1[40].mac_i/intermed0 is absorbed into DSP genblk1[40].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[41].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[41] is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[41] is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: register genblk1[41].mac_i/mul_out_reg is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: operator genblk1[41].mac_i/intermed is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: operator genblk1[41].mac_i/intermed0 is absorbed into DSP genblk1[41].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[42].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[42] is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[42] is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: register genblk1[42].mac_i/mul_out_reg is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: operator genblk1[42].mac_i/intermed is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: operator genblk1[42].mac_i/intermed0 is absorbed into DSP genblk1[42].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[43].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[43] is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[43] is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: register genblk1[43].mac_i/mul_out_reg is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: operator genblk1[43].mac_i/intermed is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: operator genblk1[43].mac_i/intermed0 is absorbed into DSP genblk1[43].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[44].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[44] is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[44] is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: register genblk1[44].mac_i/mul_out_reg is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: operator genblk1[44].mac_i/intermed is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: operator genblk1[44].mac_i/intermed0 is absorbed into DSP genblk1[44].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[45].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[45] is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[45] is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: register genblk1[45].mac_i/mul_out_reg is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: operator genblk1[45].mac_i/intermed is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: operator genblk1[45].mac_i/intermed0 is absorbed into DSP genblk1[45].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[46].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[46] is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[46] is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: register genblk1[46].mac_i/mul_out_reg is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: operator genblk1[46].mac_i/intermed is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: operator genblk1[46].mac_i/intermed0 is absorbed into DSP genblk1[46].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[47].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[47] is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[47] is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: register genblk1[47].mac_i/mul_out_reg is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: operator genblk1[47].mac_i/intermed is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: operator genblk1[47].mac_i/intermed0 is absorbed into DSP genblk1[47].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[48].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[48] is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[48] is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: register genblk1[48].mac_i/mul_out_reg is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: operator genblk1[48].mac_i/intermed is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: operator genblk1[48].mac_i/intermed0 is absorbed into DSP genblk1[48].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[49].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[49] is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[49] is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: register genblk1[49].mac_i/mul_out_reg is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: operator genblk1[49].mac_i/intermed is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: operator genblk1[49].mac_i/intermed0 is absorbed into DSP genblk1[49].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[50].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[50] is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[50] is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: register genblk1[50].mac_i/mul_out_reg is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: operator genblk1[50].mac_i/intermed is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: operator genblk1[50].mac_i/intermed0 is absorbed into DSP genblk1[50].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[51].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[51] is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[51] is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: register genblk1[51].mac_i/mul_out_reg is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: operator genblk1[51].mac_i/intermed is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: operator genblk1[51].mac_i/intermed0 is absorbed into DSP genblk1[51].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[52].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[52] is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[52] is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: register genblk1[52].mac_i/mul_out_reg is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: operator genblk1[52].mac_i/intermed is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: operator genblk1[52].mac_i/intermed0 is absorbed into DSP genblk1[52].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[53].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[53] is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[53] is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: register genblk1[53].mac_i/mul_out_reg is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: operator genblk1[53].mac_i/intermed is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: operator genblk1[53].mac_i/intermed0 is absorbed into DSP genblk1[53].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[54].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[54] is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[54] is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: register genblk1[54].mac_i/mul_out_reg is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: operator genblk1[54].mac_i/intermed is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: operator genblk1[54].mac_i/intermed0 is absorbed into DSP genblk1[54].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[55].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[55] is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[55] is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: register genblk1[55].mac_i/mul_out_reg is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: operator genblk1[55].mac_i/intermed is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: operator genblk1[55].mac_i/intermed0 is absorbed into DSP genblk1[55].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[56].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[56] is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[56] is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: register genblk1[56].mac_i/mul_out_reg is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: operator genblk1[56].mac_i/intermed is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: operator genblk1[56].mac_i/intermed0 is absorbed into DSP genblk1[56].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[57].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[57] is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[57] is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: register genblk1[57].mac_i/mul_out_reg is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: operator genblk1[57].mac_i/intermed is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: operator genblk1[57].mac_i/intermed0 is absorbed into DSP genblk1[57].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[58].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[58] is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[58] is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: register genblk1[58].mac_i/mul_out_reg is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: operator genblk1[58].mac_i/intermed is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: operator genblk1[58].mac_i/intermed0 is absorbed into DSP genblk1[58].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[59].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[59] is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[59] is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: register genblk1[59].mac_i/mul_out_reg is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: operator genblk1[59].mac_i/intermed is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: operator genblk1[59].mac_i/intermed0 is absorbed into DSP genblk1[59].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[60].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[60] is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[60] is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: register genblk1[60].mac_i/mul_out_reg is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: operator genblk1[60].mac_i/intermed is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: operator genblk1[60].mac_i/intermed0 is absorbed into DSP genblk1[60].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[61].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[61] is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[61] is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: register genblk1[61].mac_i/mul_out_reg is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: operator genblk1[61].mac_i/intermed is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: operator genblk1[61].mac_i/intermed0 is absorbed into DSP genblk1[61].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[62].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[62] is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[62] is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: register genblk1[62].mac_i/mul_out_reg is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: operator genblk1[62].mac_i/intermed is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: operator genblk1[62].mac_i/intermed0 is absorbed into DSP genblk1[62].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[63].mac_i/mul_out_reg, operation Mode is: (P+A2*B'')'.
+DSP Report: register kernels_reg[63] is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[63] is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: register genblk1[63].mac_i/mul_out_reg is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: operator genblk1[63].mac_i/intermed is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+DSP Report: operator genblk1[63].mac_i/intermed0 is absorbed into DSP genblk1[63].mac_i/mul_out_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:26 . Memory (MB): peak = 2031.641 ; gain = 681.000 ; free physical = 1187 ; free virtual = 5779
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++-----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fire2_3_expand_1 | (P+A2*B'')' | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
++-----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:28 ; elapsed = 00:01:40 . Memory (MB): peak = 2031.641 ; gain = 681.000 ; free physical = 969 ; free virtual = 5576
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:44 ; elapsed = 00:01:57 . Memory (MB): peak = 2111.445 ; gain = 760.805 ; free physical = 919 ; free virtual = 5511
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:50 ; elapsed = 00:02:03 . Memory (MB): peak = 2119.453 ; gain = 768.812 ; free physical = 891 ; free virtual = 5498
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net p_0_in__0[15] is driving 960 big block pins (URAM, BRAM and DSP loads). Created 96 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:52 ; elapsed = 00:02:05 . Memory (MB): peak = 2119.453 ; gain = 768.812 ; free physical = 886 ; free virtual = 5494
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:52 ; elapsed = 00:02:05 . Memory (MB): peak = 2119.453 ; gain = 768.812 ; free physical = 886 ; free virtual = 5494
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:54 ; elapsed = 00:02:07 . Memory (MB): peak = 2119.453 ; gain = 768.812 ; free physical = 884 ; free virtual = 5492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:54 ; elapsed = 00:02:07 . Memory (MB): peak = 2119.453 ; gain = 768.812 ; free physical = 884 ; free virtual = 5492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:54 ; elapsed = 00:02:07 . Memory (MB): peak = 2119.453 ; gain = 768.812 ; free physical = 884 ; free virtual = 5492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:54 ; elapsed = 00:02:07 . Memory (MB): peak = 2119.453 ; gain = 768.812 ; free physical = 875 ; free virtual = 5483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   508|
+|2     |DSP48E1 |    64|
+|3     |LUT1    |   152|
+|4     |LUT2    |  1003|
+|5     |LUT3    |   440|
+|6     |LUT4    |    15|
+|7     |LUT5    |   895|
+|8     |LUT6    |     1|
+|9     |FDRE    |  2199|
+|10    |FDSE    |     1|
++------+--------+------+
+
+Report Instance Areas: 
++------+----------------------+-------+------+
+|      |Instance              |Module |Cells |
++------+----------------------+-------+------+
+|1     |top                   |       |  5278|
+|2     |  \genblk1[0].mac_i   |mac    |    57|
+|3     |  \genblk1[10].mac_i  |mac_0  |    56|
+|4     |  \genblk1[11].mac_i  |mac_1  |    31|
+|5     |  \genblk1[12].mac_i  |mac_2  |    34|
+|6     |  \genblk1[13].mac_i  |mac_3  |    34|
+|7     |  \genblk1[14].mac_i  |mac_4  |    26|
+|8     |  \genblk1[15].mac_i  |mac_5  |    26|
+|9     |  \genblk1[16].mac_i  |mac_6  |    54|
+|10    |  \genblk1[17].mac_i  |mac_7  |    58|
+|11    |  \genblk1[18].mac_i  |mac_8  |    55|
+|12    |  \genblk1[19].mac_i  |mac_9  |    56|
+|13    |  \genblk1[1].mac_i   |mac_10 |    58|
+|14    |  \genblk1[20].mac_i  |mac_11 |    58|
+|15    |  \genblk1[21].mac_i  |mac_12 |    28|
+|16    |  \genblk1[22].mac_i  |mac_13 |    56|
+|17    |  \genblk1[23].mac_i  |mac_14 |    23|
+|18    |  \genblk1[24].mac_i  |mac_15 |    33|
+|19    |  \genblk1[25].mac_i  |mac_16 |    24|
+|20    |  \genblk1[26].mac_i  |mac_17 |    56|
+|21    |  \genblk1[27].mac_i  |mac_18 |    31|
+|22    |  \genblk1[28].mac_i  |mac_19 |    32|
+|23    |  \genblk1[29].mac_i  |mac_20 |    27|
+|24    |  \genblk1[2].mac_i   |mac_21 |    30|
+|25    |  \genblk1[30].mac_i  |mac_22 |    29|
+|26    |  \genblk1[31].mac_i  |mac_23 |    34|
+|27    |  \genblk1[32].mac_i  |mac_24 |     8|
+|28    |  \genblk1[33].mac_i  |mac_25 |    25|
+|29    |  \genblk1[34].mac_i  |mac_26 |    51|
+|30    |  \genblk1[35].mac_i  |mac_27 |    55|
+|31    |  \genblk1[36].mac_i  |mac_28 |    58|
+|32    |  \genblk1[37].mac_i  |mac_29 |    57|
+|33    |  \genblk1[38].mac_i  |mac_30 |    34|
+|34    |  \genblk1[39].mac_i  |mac_31 |    28|
+|35    |  \genblk1[3].mac_i   |mac_32 |    32|
+|36    |  \genblk1[40].mac_i  |mac_33 |    60|
+|37    |  \genblk1[41].mac_i  |mac_34 |    27|
+|38    |  \genblk1[42].mac_i  |mac_35 |    53|
+|39    |  \genblk1[43].mac_i  |mac_36 |    54|
+|40    |  \genblk1[44].mac_i  |mac_37 |    53|
+|41    |  \genblk1[45].mac_i  |mac_38 |    27|
+|42    |  \genblk1[46].mac_i  |mac_39 |    54|
+|43    |  \genblk1[47].mac_i  |mac_40 |    58|
+|44    |  \genblk1[48].mac_i  |mac_41 |    62|
+|45    |  \genblk1[49].mac_i  |mac_42 |    59|
+|46    |  \genblk1[4].mac_i   |mac_43 |    55|
+|47    |  \genblk1[50].mac_i  |mac_44 |    31|
+|48    |  \genblk1[51].mac_i  |mac_45 |    27|
+|49    |  \genblk1[52].mac_i  |mac_46 |    51|
+|50    |  \genblk1[53].mac_i  |mac_47 |    32|
+|51    |  \genblk1[54].mac_i  |mac_48 |    27|
+|52    |  \genblk1[55].mac_i  |mac_49 |    59|
+|53    |  \genblk1[56].mac_i  |mac_50 |    30|
+|54    |  \genblk1[57].mac_i  |mac_51 |    55|
+|55    |  \genblk1[58].mac_i  |mac_52 |    53|
+|56    |  \genblk1[59].mac_i  |mac_53 |    51|
+|57    |  \genblk1[5].mac_i   |mac_54 |    57|
+|58    |  \genblk1[60].mac_i  |mac_55 |    36|
+|59    |  \genblk1[61].mac_i  |mac_56 |    53|
+|60    |  \genblk1[62].mac_i  |mac_57 |    53|
+|61    |  \genblk1[63].mac_i  |mac_58 |    74|
+|62    |  \genblk1[6].mac_i   |mac_59 |    59|
+|63    |  \genblk1[7].mac_i   |mac_60 |    27|
+|64    |  \genblk1[8].mac_i   |mac_61 |    28|
+|65    |  \genblk1[9].mac_i   |mac_62 |    32|
++------+----------------------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:54 ; elapsed = 00:02:07 . Memory (MB): peak = 2119.453 ; gain = 768.812 ; free physical = 875 ; free virtual = 5483
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:32 ; elapsed = 00:01:42 . Memory (MB): peak = 2119.453 ; gain = 244.562 ; free physical = 946 ; free virtual = 5554
+Synthesis Optimization Complete : Time (s): cpu = 00:01:54 ; elapsed = 00:02:08 . Memory (MB): peak = 2119.461 ; gain = 768.812 ; free physical = 958 ; free virtual = 5565
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 572 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/temp.xdc]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire2_3_expand_1/temp.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2119.461 ; gain = 0.000 ; free physical = 851 ; free virtual = 5460
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+329 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:01 ; elapsed = 00:02:14 . Memory (MB): peak = 2119.461 ; gain = 789.270 ; free physical = 934 ; free virtual = 5542
+# report_utilization -file utiliziation.rpt
+# report_utilization -hierarchical -file hierarchical_utilization.rpt
+# report_timing -file post_synth_timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2610.441 ; gain = 490.980 ; free physical = 375 ; free virtual = 5011
+# place_design -no_fanout_opt -directive ExtraTimingOpt
+Command: place_design -no_fanout_opt -directive ExtraTimingOpt
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'ExtraTimingOpt' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2668.004 ; gain = 0.000 ; free physical = 316 ; free virtual = 4953
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: d17df810
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2668.004 ; gain = 0.000 ; free physical = 316 ; free virtual = 4953
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2668.004 ; gain = 0.000 ; free physical = 315 ; free virtual = 4952
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 66c9ea5a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2679.559 ; gain = 11.555 ; free physical = 192 ; free virtual = 4838
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: c1670d21
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2689.629 ; gain = 21.625 ; free physical = 186 ; free virtual = 4810
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: c1670d21
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2689.629 ; gain = 21.625 ; free physical = 170 ; free virtual = 4809
+Phase 1 Placer Initialization | Checksum: c1670d21
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2689.629 ; gain = 21.625 ; free physical = 170 ; free virtual = 4809
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: a2ce2ec6
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2689.629 ; gain = 21.625 ; free physical = 156 ; free virtual = 4795
+Phase 2 Global Placement | Checksum: 1917e7cd6
+
+Time (s): cpu = 00:02:27 ; elapsed = 00:02:26 . Memory (MB): peak = 2697.633 ; gain = 29.629 ; free physical = 150 ; free virtual = 4063
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1917e7cd6
+
+Time (s): cpu = 00:02:28 ; elapsed = 00:02:26 . Memory (MB): peak = 2697.633 ; gain = 29.629 ; free physical = 134 ; free virtual = 4061
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 207f90c6a
+
+Time (s): cpu = 00:02:30 ; elapsed = 00:02:29 . Memory (MB): peak = 2697.633 ; gain = 29.629 ; free physical = 148 ; free virtual = 4052
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1c80c654e
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:02:30 . Memory (MB): peak = 2697.633 ; gain = 29.629 ; free physical = 143 ; free virtual = 4046
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 16b352a2b
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:02:30 . Memory (MB): peak = 2697.633 ; gain = 29.629 ; free physical = 143 ; free virtual = 4047
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 19f826a88
+
+Time (s): cpu = 00:02:33 ; elapsed = 00:02:32 . Memory (MB): peak = 2697.633 ; gain = 29.629 ; free physical = 133 ; free virtual = 4036
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1ce560678
+
+Time (s): cpu = 00:02:36 ; elapsed = 00:02:35 . Memory (MB): peak = 2709.738 ; gain = 41.734 ; free physical = 157 ; free virtual = 4032
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 161b784dd
+
+Time (s): cpu = 00:02:36 ; elapsed = 00:02:36 . Memory (MB): peak = 2709.738 ; gain = 41.734 ; free physical = 157 ; free virtual = 4040
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 8e7f9231
+
+Time (s): cpu = 00:02:36 ; elapsed = 00:02:36 . Memory (MB): peak = 2709.738 ; gain = 41.734 ; free physical = 157 ; free virtual = 4040
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 174b5b4de
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:02:39 . Memory (MB): peak = 2709.738 ; gain = 41.734 ; free physical = 134 ; free virtual = 4017
+Phase 3 Detail Placement | Checksum: 174b5b4de
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:02:39 . Memory (MB): peak = 2709.738 ; gain = 41.734 ; free physical = 148 ; free virtual = 4002
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: ec0a6758
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-46] BUFG insertion identified 0 candidate nets, 0 success, 0 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: ec0a6758
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:02:44 . Memory (MB): peak = 2735.742 ; gain = 67.738 ; free physical = 128 ; free virtual = 3982
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.020. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: e4604a75
+
+Time (s): cpu = 00:07:12 ; elapsed = 00:07:23 . Memory (MB): peak = 2735.742 ; gain = 67.738 ; free physical = 142 ; free virtual = 3195
+Phase 4.1 Post Commit Optimization | Checksum: e4604a75
+
+Time (s): cpu = 00:07:12 ; elapsed = 00:07:23 . Memory (MB): peak = 2735.742 ; gain = 67.738 ; free physical = 126 ; free virtual = 3186
+Post Placement Optimization Initialization | Checksum: 10cb016c4
+INFO: [Place 46-46] BUFG insertion identified 0 candidate nets, 0 success, 0 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.020. For the most accurate timing information please run report_timing.
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 7b55180f
+
+Time (s): cpu = 00:09:31 ; elapsed = 00:09:48 . Memory (MB): peak = 2757.633 ; gain = 89.629 ; free physical = 161 ; free virtual = 3039
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 7b55180f
+
+Time (s): cpu = 00:09:32 ; elapsed = 00:09:48 . Memory (MB): peak = 2757.633 ; gain = 89.629 ; free physical = 160 ; free virtual = 3039
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2757.633 ; gain = 0.000 ; free physical = 160 ; free virtual = 3039
+Phase 4.4 Final Placement Cleanup | Checksum: d28abbc8
+
+Time (s): cpu = 00:09:32 ; elapsed = 00:09:48 . Memory (MB): peak = 2757.633 ; gain = 89.629 ; free physical = 169 ; free virtual = 3047
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: d28abbc8
+
+Time (s): cpu = 00:09:32 ; elapsed = 00:09:48 . Memory (MB): peak = 2757.633 ; gain = 89.629 ; free physical = 169 ; free virtual = 3047
+Ending Placer Task | Checksum: d0509f70
+
+Time (s): cpu = 00:09:32 ; elapsed = 00:09:48 . Memory (MB): peak = 2757.633 ; gain = 89.629 ; free physical = 237 ; free virtual = 3116
+INFO: [Common 17-83] Releasing license: Implementation
+17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:09:35 ; elapsed = 00:09:53 . Memory (MB): peak = 2757.633 ; gain = 147.191 ; free physical = 237 ; free virtual = 3116
+# if {[get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]] < 0} {
+# puts "Found setup timing violations => running physical optimization"
+# report_timing -file slack.rpt
+# phys_opt_design -directive AggressiveExplore
+# }
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# route_design -directive NoTimingRelaxation -tns_cleanup
+Command: route_design -directive NoTimingRelaxation -tns_cleanup
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'NoTimingRelaxation'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: 29449051 ConstDB: 0 ShapeSum: a70c0f1f RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-197] Clock port "clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "ram_feedback_3" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ram_feedback_3". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ram_feedback_2" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ram_feedback_2". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "fire2_expand_1_en_i" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "fire2_expand_1_en_i". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "fire3_expand_1_en_i" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "fire3_expand_1_en_i". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_3_i[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_3_i[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ifm_2_i[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ifm_2_i[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Phase 1 Build RT Design | Checksum: 1abbf97b4
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:49 . Memory (MB): peak = 3216.785 ; gain = 459.148 ; free physical = 183 ; free virtual = 2496
+Post Restoration Checksum: NetGraph: ef90e3c2 NumContArr: bc2eb3f2 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 1abbf97b4
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:50 . Memory (MB): peak = 3216.785 ; gain = 459.148 ; free physical = 174 ; free virtual = 2497
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 1abbf97b4
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:50 . Memory (MB): peak = 3230.531 ; gain = 472.895 ; free physical = 137 ; free virtual = 2463
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 1abbf97b4
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:50 . Memory (MB): peak = 3230.531 ; gain = 472.895 ; free physical = 137 ; free virtual = 2463
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 130f42a0f
+
+Time (s): cpu = 00:02:57 ; elapsed = 00:02:55 . Memory (MB): peak = 3278.109 ; gain = 520.473 ; free physical = 206 ; free virtual = 2375
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.177  | TNS=0.000  | WHS=0.099  | THS=0.000  |
+
+Phase 2 Router Initialization | Checksum: 116328413
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:57 . Memory (MB): peak = 3278.109 ; gain = 520.473 ; free physical = 202 ; free virtual = 2372
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 12326269d
+
+Time (s): cpu = 00:03:08 ; elapsed = 00:03:06 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 194 ; free virtual = 2365
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 340
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.002 | TNS=-0.014 | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1371f2724
+
+Time (s): cpu = 00:03:17 ; elapsed = 00:03:16 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 531 ; free virtual = 2703
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.022  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 2288a7fa1
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:03:18 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 618 ; free virtual = 2790
+Phase 4 Rip-up And Reroute | Checksum: 2288a7fa1
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:03:18 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 620 ; free virtual = 2792
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 TNS Cleanup
+
+Phase 5.1.1 Delay CleanUp
+Phase 5.1.1 Delay CleanUp | Checksum: 2288a7fa1
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:03:18 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 624 ; free virtual = 2796
+Phase 5.1 TNS Cleanup | Checksum: 2288a7fa1
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:03:18 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 626 ; free virtual = 2797
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 2288a7fa1
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:03:18 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 627 ; free virtual = 2799
+Phase 5 Delay and Skew Optimization | Checksum: 2288a7fa1
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:03:18 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 629 ; free virtual = 2801
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 214fc928b
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:03:19 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 670 ; free virtual = 2842
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.022  | TNS=0.000  | WHS=0.119  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 214fc928b
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:03:19 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 674 ; free virtual = 2846
+Phase 6 Post Hold Fix | Checksum: 214fc928b
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:03:19 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 676 ; free virtual = 2848
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.145108 %
+  Global Horizontal Routing Utilization  = 0.17186 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 157576d2e
+
+Time (s): cpu = 00:03:21 ; elapsed = 00:03:20 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 751 ; free virtual = 2924
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 157576d2e
+
+Time (s): cpu = 00:03:21 ; elapsed = 00:03:20 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 755 ; free virtual = 2927
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: f730bd22
+
+Time (s): cpu = 00:03:22 ; elapsed = 00:03:21 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 805 ; free virtual = 2979
+
+Phase 10 Post Router Timing
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.024  | TNS=0.000  | WHS=0.120  | THS=0.000  |
+
+INFO: [Route 35-61] The design met the timing requirement.
+Phase 10 Post Router Timing | Checksum: 1cade50bc
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:03:25 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 811 ; free virtual = 2999
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:03:25 . Memory (MB): peak = 3291.094 ; gain = 533.457 ; free physical = 1115 ; free virtual = 3304
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+14 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:30 ; elapsed = 00:03:30 . Memory (MB): peak = 3291.094 ; gain = 533.461 ; free physical = 1106 ; free virtual = 3304
+# report_timing
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Mar 16 11:51:14 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_timing
+| Design       : fire2_3_expand_1
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.024ns  (required time - arrival time)
+  Source:                 fire2_expand_1_en_reg_rep__3/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.500ns period=3.000ns})
+  Destination:            ofm_2_reg[37][0]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.500ns period=3.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.000ns  (clk rise@3.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.620ns  (logic 1.029ns (39.268%)  route 1.591ns (60.732%))
+  Logic Levels:           10  (CARRY4=8 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.483ns = ( 3.483 - 3.000 ) 
+    Source Clock Delay      (SCD):    0.508ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=2263, unset)         0.508     0.508    clk
+    SLICE_X39Y189        FDRE                                         r  fire2_expand_1_en_reg_rep__3/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y189        FDRE (Prop_fdre_C_Q)         0.216     0.724 r  fire2_expand_1_en_reg_rep__3/Q
+                         net (fo=131, routed)         0.933     1.657    genblk1[37].mac_i/DI[0]
+    SLICE_X57Y186        LUT2 (Prop_lut2_I1_O)        0.043     1.700 r  genblk1[37].mac_i/ofm_2[37][2]_i_23/O
+                         net (fo=1, routed)           0.000     1.700    genblk1[37].mac_i/ofm_2[37][2]_i_23_n_0
+    SLICE_X57Y186        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.251     1.951 r  genblk1[37].mac_i/ofm_2_reg[37][2]_i_13/CO[3]
+                         net (fo=1, routed)           0.000     1.951    genblk1[37].mac_i/ofm_2_reg[37][2]_i_13_n_0
+    SLICE_X57Y187        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.049     2.000 r  genblk1[37].mac_i/ofm_2_reg[37][2]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.000    genblk1[37].mac_i/ofm_2_reg[37][2]_i_7_n_0
+    SLICE_X57Y188        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.049     2.049 r  genblk1[37].mac_i/ofm_2_reg[37][2]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     2.049    genblk1[37].mac_i/ofm_2_reg[37][2]_i_2_n_0
+    SLICE_X57Y189        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.049     2.098 r  genblk1[37].mac_i/ofm_2_reg[37][2]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.098    genblk1[37].mac_i/ofm_2_reg[37][2]_i_1_n_0
+    SLICE_X57Y190        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.049     2.147 r  genblk1[37].mac_i/ofm_2_reg[37][6]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.147    genblk1[37].mac_i/ofm_2_reg[37][6]_i_1_n_0
+    SLICE_X57Y191        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.049     2.196 r  genblk1[37].mac_i/ofm_2_reg[37][10]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.196    genblk1[37].mac_i/ofm_2_reg[37][10]_i_1_n_0
+    SLICE_X57Y192        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.049     2.245 r  genblk1[37].mac_i/ofm_2_reg[37][14]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.245    genblk1[37].mac_i/ofm_2_reg[37][14]_i_1_n_0
+    SLICE_X57Y193        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.107     2.352 r  genblk1[37].mac_i/ofm_2_reg[37][15]_i_3/O[2]
+                         net (fo=6, routed)           0.307     2.658    p_180_out[15]
+    SLICE_X59Y193        LUT3 (Prop_lut3_I1_O)        0.118     2.776 r  ofm_2[37][15]_i_1/O
+                         net (fo=16, routed)          0.352     3.128    ofm_2[37][15]_i_1_n_0
+    SLICE_X59Y193        FDRE                                         r  ofm_2_reg[37][0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        3.000     3.000 r  
+                                                      0.000     3.000 r  clk (IN)
+                         net (fo=2263, unset)         0.483     3.483    clk
+    SLICE_X59Y193        FDRE                                         r  ofm_2_reg[37][0]/C
+                         clock pessimism              0.000     3.483    
+                         clock uncertainty           -0.035     3.447    
+    SLICE_X59Y193        FDRE (Setup_fdre_C_R)       -0.295     3.152    ofm_2_reg[37][0]
+  -------------------------------------------------------------------
+                         required time                          3.152    
+                         arrival time                          -3.128    
+  -------------------------------------------------------------------
+                         slack                                  0.024    
+
+
+
+
+report_high_fanout_nets 
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Mar 16 12:18:14 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_high_fanout_nets
+| Design       : fire2_3_expand_1
+| Device       : xc7vx690t
+------------------------------------------------------------------------------------
+
+High Fan-out Nets Information
+
+1. Summary
+----------
+
++--------------------------------------+--------+-------------+
+| Net Name                             | Fanout | Driver Type |
++--------------------------------------+--------+-------------+
+| fire2_expand_1_en_reg_rep__13_n_0    |    209 | FDRE        |
+| weight_rom_address_reg__0[0]         |    165 | FDRE        |
+| weight_rom_address_reg__0[3]         |    144 | FDRE        |
+| fire2_expand_1_en_reg_rep__1_n_0     |    143 | FDRE        |
+| weight_rom_address_reg[1]_rep__0_n_0 |    143 | FDRE        |
+| weight_rom_address_reg[2]_rep__2_n_0 |    142 | FDRE        |
+| weight_rom_address_reg[0]_rep__0_n_0 |    141 | FDRE        |
+| weight_rom_address_reg[3]_rep__0_n_0 |    141 | FDRE        |
+| fire2_expand_1_en_reg_rep__2_n_0     |    140 | FDRE        |
+| fire2_expand_1_en_reg_rep__4_n_0     |    140 | FDRE        |
++--------------------------------------+--------+-------------+
+
+
+report_high_fanout_nets: Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.55 . Memory (MB): peak = 3291.094 ; gain = 0.000 ; free physical = 254 ; free virtual = 2698
+report_utilization 
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Mar 16 12:18:19 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_utilization
+| Design       : fire2_3_expand_1
+| Device       : 7vx690tffg1157-3
+| Design State : Fully Placed
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Slice Logic Distribution
+3. Memory
+4. DSP
+5. IO and GT Specific
+6. Clocking
+7. Specific Feature
+8. Primitives
+9. Black Boxes
+10. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs              | 2447 |     0 |    433200 |  0.56 |
+|   LUT as Logic          | 2447 |     0 |    433200 |  0.56 |
+|   LUT as Memory         |    0 |     0 |    174200 |  0.00 |
+| Slice Registers         | 2200 |     0 |    866400 |  0.25 |
+|   Register as Flip Flop | 2200 |     0 |    866400 |  0.25 |
+|   Register as Latch     |    0 |     0 |    866400 |  0.00 |
+| F7 Muxes                |    0 |     0 |    216600 |  0.00 |
+| F8 Muxes                |    0 |     0 |    108300 |  0.00 |
++-------------------------+------+-------+-----------+-------+
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 1     |          Yes |         Set |            - |
+| 2199  |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Slice Logic Distribution
+---------------------------
+
++--------------------------------------------+------+-------+-----------+-------+
+|                  Site Type                 | Used | Fixed | Available | Util% |
++--------------------------------------------+------+-------+-----------+-------+
+| Slice                                      | 1056 |     0 |    108300 |  0.98 |
+|   SLICEL                                   |  591 |     0 |           |       |
+|   SLICEM                                   |  465 |     0 |           |       |
+| LUT as Logic                               | 2447 |     0 |    433200 |  0.56 |
+|   using O5 output only                     |    0 |       |           |       |
+|   using O6 output only                     | 2388 |       |           |       |
+|   using O5 and O6                          |   59 |       |           |       |
+| LUT as Memory                              |    0 |     0 |    174200 |  0.00 |
+|   LUT as Distributed RAM                   |    0 |     0 |           |       |
+|   LUT as Shift Register                    |    0 |     0 |           |       |
+| Slice Registers                            | 2200 |     0 |    866400 |  0.25 |
+|   Register driven from within the Slice    |  896 |       |           |       |
+|   Register driven from outside the Slice   | 1304 |       |           |       |
+|     LUT in front of the register is unused |  719 |       |           |       |
+|     LUT in front of the register is used   |  585 |       |           |       |
+| Unique Control Sets                        |  135 |       |    108300 |  0.12 |
++--------------------------------------------+------+-------+-----------+-------+
+* Note: Available Control Sets calculated as Slice Registers / 8, Review the Control Sets Report for more information regarding control sets.
+
+
+3. Memory
+---------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| Block RAM Tile |    0 |     0 |      1470 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |      1470 |  0.00 |
+|   RAMB18       |    0 |     0 |      2940 |  0.00 |
++----------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+4. DSP
+------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |   64 |     0 |      3600 |  1.78 |
+|   DSP48E1 only |   64 |       |           |       |
++----------------+------+-------+-----------+-------+
+
+
+5. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |    0 |     0 |       600 |  0.00 |
+| Bonded IPADs                |    0 |     0 |        62 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        40 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |        20 |  0.00 |
+| PHASER_REF                  |    0 |     0 |        20 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        80 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        80 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |        20 |  0.00 |
+| IBUFDS                      |    0 |     0 |       576 |  0.00 |
+| GTHE2_CHANNEL               |    0 |     0 |        20 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        10 |  0.00 |
+| ILOGIC                      |    0 |     0 |       600 |  0.00 |
+| OLOGIC                      |    0 |     0 |       600 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
+
+
+6. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFIO      |    0 |     0 |        80 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
+| BUFMRCE    |    0 |     0 |        40 |  0.00 |
+| BUFHCE     |    0 |     0 |       240 |  0.00 |
+| BUFR       |    0 |     0 |        80 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+7. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+8. Primitives
+-------------
+
++----------+------+---------------------+
+| Ref Name | Used | Functional Category |
++----------+------+---------------------+
+| FDRE     | 2199 |        Flop & Latch |
+| LUT2     | 1003 |                 LUT |
+| LUT5     |  895 |                 LUT |
+| CARRY4   |  508 |          CarryLogic |
+| LUT3     |  440 |                 LUT |
+| LUT1     |  152 |                 LUT |
+| DSP48E1  |   64 |    Block Arithmetic |
+| LUT4     |   15 |                 LUT |
+| LUT6     |    1 |                 LUT |
+| FDSE     |    1 |        Flop & Latch |
++----------+------+---------------------+
+
+
+9. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+10. Instantiated Netlists
+-------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+opt_design 
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 147 ; free virtual = 1967
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 1c7dc1242
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 144 ; free virtual = 1964
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1c7dc1242
+
+Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:01 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 191 ; free virtual = 1966
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 24550644c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 179 ; free virtual = 1953
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 2430a5a24
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 159 ; free virtual = 1940
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Sweep, 6 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 2430a5a24
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 163 ; free virtual = 1940
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 2709c47a7
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 173 ; free virtual = 1961
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 2709c47a7
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 193 ; free virtual = 1983
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              1  |
+|  Constant propagation         |               0  |               0  |                                              1  |
+|  Sweep                        |               0  |               0  |                                              6  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 192 ; free virtual = 1981
+Ending Logic Optimization Task | Checksum: 2709c47a7
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 190 ; free virtual = 1980
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 2709c47a7
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 187 ; free virtual = 1979
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 2709c47a7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 187 ; free virtual = 1979
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 187 ; free virtual = 1979
+Ending Netlist Obfuscation Task | Checksum: 2709c47a7
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3291.098 ; gain = 0.000 ; free physical = 187 ; free virtual = 1979
+INFO: [Common 17-83] Releasing license: Implementation
+18 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 3291.098 ; gain = 0.004 ; free physical = 187 ; free virtual = 1979
+0
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 16 12:28:12 2020...

@@ -2,540 +2,2979 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Mar  5 18:27:27 2020
-# Process ID: 12209
+# Start of session at: Mon Mar 16 17:21:51 2020
+# Process ID: 2517
 # Current directory: /home/gsaied/Desktop/old_rtl/conv10
-# Command line: vivado -mode tcl -project conv10_1_2.dcp
+# Command line: vivado -mode tcl -source synth.tcl
 # Log file: /home/gsaied/Desktop/old_rtl/conv10/vivado.log
 # Journal file: /home/gsaied/Desktop/old_rtl/conv10/vivado.jou
 #-----------------------------------------------------------
-open_checkpoint conv10_1_2.dcp
-Command: open_checkpoint conv10_1_2.dcp
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top conv10_1_2 -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2714 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1447.645 ; gain = 97.000 ; free physical = 5386 ; free virtual = 8753
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'conv10_1_2' [/home/gsaied/Desktop/old_rtl/conv10/conv10_1_2.sv:3]
+	Parameter WOUT bound to: 8 - type: integer 
+	Parameter DSP_NO bound to: 512 - type: integer 
+	Parameter W_IN bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter CHIN bound to: 736 - type: integer 
+	Parameter KERNEL_DIM bound to: 1 - type: integer 
+	Parameter CHOUT bound to: 512 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mac' [/home/gsaied/Desktop/old_rtl/conv10/mac.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'mac' (1#1) [/home/gsaied/Desktop/old_rtl/conv10/mac.sv:1]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/gsaied/Desktop/old_rtl/conv10/conv10_1_2.sv:211]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/gsaied/Desktop/old_rtl/conv10/conv10_1_2.sv:212]
+INFO: [Synth 8-6157] synthesizing module 'biasing_conv10_1' [/home/gsaied/Desktop/old_rtl/conv10/biasing_conv10_1.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'biasing_conv10_1' (2#1) [/home/gsaied/Desktop/old_rtl/conv10/biasing_conv10_1.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'biasing_conv10_2' [/home/gsaied/Desktop/old_rtl/conv10/biasing_conv10_2.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'biasing_conv10_2' (3#1) [/home/gsaied/Desktop/old_rtl/conv10/biasing_conv10_2.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'wrapper_rom_conv10_1' [/home/gsaied/Desktop/old_rtl/conv10/wrapper_rom_conv10_1.sv:2]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 1 - type: integer 
+	Parameter ADDR bound to: 10 - type: integer 
+	Parameter NUM bound to: 512 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'rom_conv10_1' [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 1 - type: integer 
+	Parameter ADDR bound to: 9 - type: integer 
+	Parameter NUM bound to: 512 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:16]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:19]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:22]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:25]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:28]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:31]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:34]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:37]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:40]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:43]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:46]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:49]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:52]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:55]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:58]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:61]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:64]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:67]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:70]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:73]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:76]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:79]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:82]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:85]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:88]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:91]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:94]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:97]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:100]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:103]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:106]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:109]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:112]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:115]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:118]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:121]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:124]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:127]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:130]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:133]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:136]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:139]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:142]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:145]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:148]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:151]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:154]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:157]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:160]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:163]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:166]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:169]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:172]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:175]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:178]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:181]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:184]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:187]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:190]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:193]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:196]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:199]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:202]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:205]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:208]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:211]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:214]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:217]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:220]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:223]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:226]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:229]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:232]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:235]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:238]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:241]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:244]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:247]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:250]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:253]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:256]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:259]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:262]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:265]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:268]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:271]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:274]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:277]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:280]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:283]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:286]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:289]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:292]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:295]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:298]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:301]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:304]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:307]
+INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_1.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1551]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_2.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1552]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_3.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1553]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_4.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1554]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_5.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1555]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_6.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1556]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_7.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1557]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_8.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1558]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_9.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1559]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_10.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1560]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_11.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1561]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_12.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1562]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_13.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1563]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_14.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1564]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_15.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1565]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_16.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1566]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_17.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1567]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_18.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1568]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_19.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1569]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_20.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1570]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_21.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1571]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_22.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1572]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_23.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1573]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_24.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1574]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_25.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1575]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_26.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1576]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_27.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1577]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_28.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1578]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_29.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1579]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_30.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1580]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_31.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1581]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_32.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1582]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_33.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1583]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_34.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1584]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_35.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1585]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_36.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1586]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_37.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1587]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_38.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1588]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_39.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1589]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_40.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1590]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_41.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1591]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_42.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1592]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_43.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1593]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_44.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1594]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_45.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1595]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_46.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1596]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_47.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1597]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_48.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1598]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_49.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1599]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_50.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1600]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_51.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1601]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_52.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1602]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_53.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1603]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_54.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1604]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_55.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1605]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_56.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1606]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_57.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1607]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_58.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1608]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_59.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1609]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_60.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1610]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_61.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1611]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_62.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1612]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_63.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1613]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_64.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1614]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_65.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1615]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_66.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1616]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_67.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1617]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_68.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1618]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_69.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1619]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_70.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1620]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_71.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1621]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_72.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1622]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_73.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1623]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_74.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1624]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_75.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1625]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_76.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1626]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_77.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1627]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_78.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1628]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_79.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1629]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_80.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1630]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_81.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1631]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_82.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1632]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_83.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1633]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_84.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1634]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_85.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1635]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_86.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1636]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_87.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1637]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_88.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1638]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_89.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1639]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_90.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1640]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_91.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1641]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_92.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1642]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_93.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1643]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_94.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1644]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_95.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1645]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_96.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1646]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_97.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1647]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_98.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1648]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_99.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1649]
+INFO: [Synth 8-3876] $readmem data file 'file_conv10_1_100.mem' is read successfully [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:1650]
+INFO: [Common 17-14] Message 'Synth 8-3876' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'rom_conv10_1' (4#1) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_1.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'rom2_conv10_1' [/home/gsaied/Desktop/old_rtl/conv10/rom2_conv10_1.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 1 - type: integer 
+	Parameter ADDR bound to: 8 - type: integer 
+	Parameter NUM bound to: 512 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rom2_conv10_1' (5#1) [/home/gsaied/Desktop/old_rtl/conv10/rom2_conv10_1.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'wrapper_rom_conv10_1' (6#1) [/home/gsaied/Desktop/old_rtl/conv10/wrapper_rom_conv10_1.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'wrapper_rom_conv10_2' [/home/gsaied/Desktop/old_rtl/conv10/wrapper_rom_conv10_2.sv:2]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 1 - type: integer 
+	Parameter ADDR bound to: 10 - type: integer 
+	Parameter NUM bound to: 512 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'rom_conv10_2' [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_2.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 1 - type: integer 
+	Parameter ADDR bound to: 9 - type: integer 
+	Parameter NUM bound to: 512 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rom_conv10_2' (7#1) [/home/gsaied/Desktop/old_rtl/conv10/rom_conv10_2.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'rom2_conv10_2' [/home/gsaied/Desktop/old_rtl/conv10/rom2_conv10_2.sv:2]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 1 - type: integer 
+	Parameter ADDR bound to: 8 - type: integer 
+	Parameter NUM bound to: 512 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rom2_conv10_2' (8#1) [/home/gsaied/Desktop/old_rtl/conv10/rom2_conv10_2.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'wrapper_rom_conv10_2' (9#1) [/home/gsaied/Desktop/old_rtl/conv10/wrapper_rom_conv10_2.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'conv10_1_2' (10#1) [/home/gsaied/Desktop/old_rtl/conv10/conv10_1_2.sv:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2223.395 ; gain = 872.750 ; free physical = 4722 ; free virtual = 8133
+---------------------------------------------------------------------------------
 
-Starting open_checkpoint Task
-
-Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1388.977 ; gain = 0.000 ; free physical = 286 ; free virtual = 5093
-INFO: [Netlist 29-17] Analyzing 80117 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2018.3
-INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2223.395 ; gain = 872.750 ; free physical = 4815 ; free virtual = 8230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2223.395 ; gain = 872.750 ; free physical = 4815 ; free virtual = 8230
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2185.547 ; gain = 0.000 ; free physical = 2363 ; free virtual = 6196
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/conv10/temp.xdc]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/conv10/temp.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2753.621 ; gain = 0.000 ; free physical = 3978 ; free virtual = 7550
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-INFO: [Project 1-604] Checkpoint was created with Vivado v2018.3 (64-bit) build 2405991
-open_checkpoint: Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 2185.547 ; gain = 796.570 ; free physical = 2363 ; free virtual = 6196
-report_utilization 
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu Mar  5 18:28:43 2020
-| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
-| Command      : report_utilization
-| Design       : conv10_1_2
-| Device       : 7vx690tffg1761-2
-| Design State : Synthesized
-------------------------------------------------------------------------------------
-
-Utilization Design Information
-
-Table of Contents
------------------
-1. Slice Logic
-1.1 Summary of Registers by Type
-2. Memory
-3. DSP
-4. IO and GT Specific
-5. Clocking
-6. Specific Feature
-7. Primitives
-8. Black Boxes
-9. Instantiated Netlists
-
-1. Slice Logic
---------------
-
-+-------------------------+--------+-------+-----------+-------+
-|        Site Type        |  Used  | Fixed | Available | Util% |
-+-------------------------+--------+-------+-----------+-------+
-| Slice LUTs*             | 171855 |     0 |    433200 | 39.67 |
-|   LUT as Logic          | 171855 |     0 |    433200 | 39.67 |
-|   LUT as Memory         |      0 |     0 |    174200 |  0.00 |
-| Slice Registers         |  16478 |     0 |    866400 |  1.90 |
-|   Register as Flip Flop |  16478 |     0 |    866400 |  1.90 |
-|   Register as Latch     |      0 |     0 |    866400 |  0.00 |
-| F7 Muxes                |  64708 |     0 |    216600 | 29.87 |
-| F8 Muxes                |  10801 |     0 |    108300 |  9.97 |
-+-------------------------+--------+-------+-----------+-------+
-* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
-
-
-1.1 Summary of Registers by Type
---------------------------------
-
-+-------+--------------+-------------+--------------+
-| Total | Clock Enable | Synchronous | Asynchronous |
-+-------+--------------+-------------+--------------+
-| 0     |            _ |           - |            - |
-| 0     |            _ |           - |          Set |
-| 0     |            _ |           - |        Reset |
-| 0     |            _ |         Set |            - |
-| 0     |            _ |       Reset |            - |
-| 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 41    |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 16437 |          Yes |       Reset |            - |
-+-------+--------------+-------------+--------------+
-
-
-2. Memory
----------
-
-+----------------+------+-------+-----------+-------+
-|    Site Type   | Used | Fixed | Available | Util% |
-+----------------+------+-------+-----------+-------+
-| Block RAM Tile |    0 |     0 |      1470 |  0.00 |
-|   RAMB36/FIFO* |    0 |     0 |      1470 |  0.00 |
-|   RAMB18       |    0 |     0 |      2940 |  0.00 |
-+----------------+------+-------+-----------+-------+
-* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
-
-
-3. DSP
-------
-
-+----------------+------+-------+-----------+-------+
-|    Site Type   | Used | Fixed | Available | Util% |
-+----------------+------+-------+-----------+-------+
-| DSPs           |  512 |     0 |      3600 | 14.22 |
-|   DSP48E1 only |  512 |       |           |       |
-+----------------+------+-------+-----------+-------+
-
-
-4. IO and GT Specific
----------------------
-
-+-----------------------------+-------+-------+-----------+---------+
-|          Site Type          |  Used | Fixed | Available |  Util%  |
-+-----------------------------+-------+-------+-----------+---------+
-| Bonded IOB                  | 16425 |     0 |       850 | 1932.35 |
-| Bonded IPADs                |     0 |     0 |       110 |    0.00 |
-| Bonded OPADs                |     0 |     0 |        72 |    0.00 |
-| PHY_CONTROL                 |     0 |     0 |        20 |    0.00 |
-| PHASER_REF                  |     0 |     0 |        20 |    0.00 |
-| OUT_FIFO                    |     0 |     0 |        80 |    0.00 |
-| IN_FIFO                     |     0 |     0 |        80 |    0.00 |
-| IDELAYCTRL                  |     0 |     0 |        20 |    0.00 |
-| IBUFDS                      |     0 |     0 |       816 |    0.00 |
-| GTHE2_CHANNEL               |     0 |     0 |        36 |    0.00 |
-| PHASER_OUT/PHASER_OUT_PHY   |     0 |     0 |        80 |    0.00 |
-| PHASER_IN/PHASER_IN_PHY     |     0 |     0 |        80 |    0.00 |
-| IDELAYE2/IDELAYE2_FINEDELAY |     0 |     0 |      1000 |    0.00 |
-| ODELAYE2/ODELAYE2_FINEDELAY |     0 |     0 |      1000 |    0.00 |
-| IBUFDS_GTE2                 |     0 |     0 |        18 |    0.00 |
-| ILOGIC                      |     0 |     0 |       850 |    0.00 |
-| OLOGIC                      |     0 |     0 |       850 |    0.00 |
-+-----------------------------+-------+-------+-----------+---------+
-
-
-5. Clocking
------------
-
-+------------+------+-------+-----------+-------+
-|  Site Type | Used | Fixed | Available | Util% |
-+------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
-| BUFIO      |    0 |     0 |        80 |  0.00 |
-| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
-| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
-| BUFMRCE    |    0 |     0 |        40 |  0.00 |
-| BUFHCE     |    0 |     0 |       240 |  0.00 |
-| BUFR       |    0 |     0 |        80 |  0.00 |
-+------------+------+-------+-----------+-------+
-
-
-6. Specific Feature
--------------------
-
-+-------------+------+-------+-----------+-------+
-|  Site Type  | Used | Fixed | Available | Util% |
-+-------------+------+-------+-----------+-------+
-| BSCANE2     |    0 |     0 |         4 |  0.00 |
-| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
-| DNA_PORT    |    0 |     0 |         1 |  0.00 |
-| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
-| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
-| ICAPE2      |    0 |     0 |         2 |  0.00 |
-| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
-| STARTUPE2   |    0 |     0 |         1 |  0.00 |
-| XADC        |    0 |     0 |         1 |  0.00 |
-+-------------+------+-------+-----------+-------+
-
-
-7. Primitives
--------------
-
-+----------+--------+---------------------+
-| Ref Name |  Used  | Functional Category |
-+----------+--------+---------------------+
-| LUT6     | 155437 |                 LUT |
-| MUXF7    |  64708 |               MuxFx |
-| FDRE     |  16437 |        Flop & Latch |
-| OBUF     |  16387 |                  IO |
-| MUXF8    |  10801 |               MuxFx |
-| LUT2     |   8659 |                 LUT |
-| LUT1     |   4302 |                 LUT |
-| CARRY4   |   4096 |          CarryLogic |
-| LUT5     |   2298 |                 LUT |
-| LUT3     |   1313 |                 LUT |
-| DSP48E1  |    512 |    Block Arithmetic |
-| LUT4     |    128 |                 LUT |
-| FDCE     |     41 |        Flop & Latch |
-| IBUF     |     38 |                  IO |
-| BUFG     |      1 |               Clock |
-+----------+--------+---------------------+
-
-
-8. Black Boxes
---------------
-
-+----------+------+
-| Ref Name | Used |
-+----------+------+
-
-
-9. Instantiated Netlists
-------------------------
-
-+----------+------+
-| Ref Name | Used |
-+----------+------+
-
-
-opt_design -directive ExploreSequentialArea
-Command: opt_design -directive ExploreSequentialArea
-INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: ExploreSequentialArea
-Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
-Running DRC as a precondition to command opt_design
-
-Starting DRC Task
-INFO: [DRC 23-27] Running DRC with 4 threads
-INFO: [Project 1-461] DRC finished with 0 Errors
-INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
-
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2225.566 ; gain = 32.016 ; free physical = 2358 ; free virtual = 6189
-
-Starting Cache Timing Information Task
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 11063092a
-
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 3010.277 ; gain = 784.711 ; free physical = 3291 ; free virtual = 7134
-
-Starting Logic Optimization Task
-
-Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 11063092a
-
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 3457 ; free virtual = 7300
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
-
-Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: cede3513
-
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 3449 ; free virtual = 7292
-INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
-
-Phase 3 Sweep
-Phase 3 Sweep | Checksum: 9a722d22
-
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 3430 ; free virtual = 7273
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
-
-Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 9a722d22
-
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 3340 ; free virtual = 7184
-INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
-
-Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: e9c450e5
-
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:35 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 2950 ; free virtual = 6793
-INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
-
-Phase 6 Constant propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 6 Constant propagation | Checksum: e9c450e5
-
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:39 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 2882 ; free virtual = 6726
-INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
-
-Phase 7 Sweep
-Phase 7 Sweep | Checksum: e9c450e5
-
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:43 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 2781 ; free virtual = 6624
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
-
-Phase 8 Resynthesis
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Opt 31-74] Optimized 5 modules.
-INFO: [Opt 31-75] Optimized module 'conv10_1_2'.
-INFO: [Opt 31-75] Optimized module 'mac_138'.
-INFO: [Opt 31-75] Optimized module 'mac_433'.
-INFO: [Opt 31-75] Optimized module 'mac_448'.
-INFO: [Opt 31-75] Optimized module 'mac_78'.
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 8 Resynthesis | Checksum: 173c5abba
-
-Time (s): cpu = 00:21:07 ; elapsed = 00:07:59 . Memory (MB): peak = 3229.188 ; gain = 145.910 ; free physical = 1921 ; free virtual = 5773
-INFO: [Opt 31-389] Phase Resynthesis created 1393 cells and removed 1501 cells
-
-Phase 9 Post Processing Netlist
-Phase 9 Post Processing Netlist | Checksum: 173c5abba
-
-Time (s): cpu = 00:21:09 ; elapsed = 00:08:00 . Memory (MB): peak = 3229.188 ; gain = 145.910 ; free physical = 1925 ; free virtual = 5776
-INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-Opt_design Change Summary
-=========================
-
-
--------------------------------------------------------------------------------------------------------------------------
-|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
--------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |               0  |                                              0  |
-|  Constant propagation         |               0  |               0  |                                              0  |
-|  Sweep                        |               0  |               0  |                                              0  |
-|  BUFG optimization            |               0  |               0  |                                              0  |
-|  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Constant propagation         |               0  |               0  |                                              0  |
-|  Sweep                        |               0  |               0  |                                              0  |
-|  Resynthesis                  |            1393  |            1501  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                              0  |
--------------------------------------------------------------------------------------------------------------------------
-
-
-
-Starting Connectivity Check Task
-
-Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.86 . Memory (MB): peak = 3229.188 ; gain = 0.000 ; free physical = 1924 ; free virtual = 5776
-Ending Logic Optimization Task | Checksum: 154d7773b
-
-Time (s): cpu = 00:21:15 ; elapsed = 00:08:06 . Memory (MB): peak = 3229.188 ; gain = 145.910 ; free physical = 1923 ; free virtual = 5774
-
-Starting Power Optimization Task
-INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 154d7773b
-
-Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3229.188 ; gain = 0.000 ; free physical = 1923 ; free virtual = 5775
-
-Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 154d7773b
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3229.188 ; gain = 0.000 ; free physical = 1923 ; free virtual = 5775
-
-Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3229.188 ; gain = 0.000 ; free physical = 1923 ; free virtual = 5775
-Ending Netlist Obfuscation Task | Checksum: 154d7773b
-
-Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3229.188 ; gain = 0.000 ; free physical = 1923 ; free virtual = 5774
-INFO: [Common 17-83] Releasing license: Implementation
-30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-opt_design completed successfully
-opt_design: Time (s): cpu = 00:21:54 ; elapsed = 00:08:33 . Memory (MB): peak = 3229.188 ; gain = 1043.641 ; free physical = 1924 ; free virtual = 5776
-1
-report_utilization 
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu Mar  5 18:40:46 2020
-| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
-| Command      : report_utilization
-| Design       : conv10_1_2
-| Device       : 7vx690tffg1761-2
-| Design State : Synthesized
-------------------------------------------------------------------------------------
-
-Utilization Design Information
-
-Table of Contents
------------------
-1. Slice Logic
-1.1 Summary of Registers by Type
-2. Memory
-3. DSP
-4. IO and GT Specific
-5. Clocking
-6. Specific Feature
-7. Primitives
-8. Black Boxes
-9. Instantiated Netlists
-
-1. Slice Logic
---------------
-
-+-------------------------+--------+-------+-----------+-------+
-|        Site Type        |  Used  | Fixed | Available | Util% |
-+-------------------------+--------+-------+-----------+-------+
-| Slice LUTs*             | 171818 |     0 |    433200 | 39.66 |
-|   LUT as Logic          | 171818 |     0 |    433200 | 39.66 |
-|   LUT as Memory         |      0 |     0 |    174200 |  0.00 |
-| Slice Registers         |  16427 |     0 |    866400 |  1.90 |
-|   Register as Flip Flop |  16427 |     0 |    866400 |  1.90 |
-|   Register as Latch     |      0 |     0 |    866400 |  0.00 |
-| F7 Muxes                |  64708 |     0 |    216600 | 29.87 |
-| F8 Muxes                |  10801 |     0 |    108300 |  9.97 |
-+-------------------------+--------+-------+-----------+-------+
-* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
-
-
-1.1 Summary of Registers by Type
---------------------------------
-
-+-------+--------------+-------------+--------------+
-| Total | Clock Enable | Synchronous | Asynchronous |
-+-------+--------------+-------------+--------------+
-| 0     |            _ |           - |            - |
-| 0     |            _ |           - |          Set |
-| 0     |            _ |           - |        Reset |
-| 0     |            _ |         Set |            - |
-| 0     |            _ |       Reset |            - |
-| 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 41    |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 16386 |          Yes |       Reset |            - |
-+-------+--------------+-------------+--------------+
-
-
-2. Memory
----------
-
-+----------------+------+-------+-----------+-------+
-|    Site Type   | Used | Fixed | Available | Util% |
-+----------------+------+-------+-----------+-------+
-| Block RAM Tile |    0 |     0 |      1470 |  0.00 |
-|   RAMB36/FIFO* |    0 |     0 |      1470 |  0.00 |
-|   RAMB18       |    0 |     0 |      2940 |  0.00 |
-+----------------+------+-------+-----------+-------+
-* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
-
-
-3. DSP
-------
-
-+----------------+------+-------+-----------+-------+
-|    Site Type   | Used | Fixed | Available | Util% |
-+----------------+------+-------+-----------+-------+
-| DSPs           |  512 |     0 |      3600 | 14.22 |
-|   DSP48E1 only |  512 |       |           |       |
-+----------------+------+-------+-----------+-------+
-
-
-4. IO and GT Specific
----------------------
-
-+-----------------------------+-------+-------+-----------+---------+
-|          Site Type          |  Used | Fixed | Available |  Util%  |
-+-----------------------------+-------+-------+-----------+---------+
-| Bonded IOB                  | 16425 |     0 |       850 | 1932.35 |
-| Bonded IPADs                |     0 |     0 |       110 |    0.00 |
-| Bonded OPADs                |     0 |     0 |        72 |    0.00 |
-| PHY_CONTROL                 |     0 |     0 |        20 |    0.00 |
-| PHASER_REF                  |     0 |     0 |        20 |    0.00 |
-| OUT_FIFO                    |     0 |     0 |        80 |    0.00 |
-| IN_FIFO                     |     0 |     0 |        80 |    0.00 |
-| IDELAYCTRL                  |     0 |     0 |        20 |    0.00 |
-| IBUFDS                      |     0 |     0 |       816 |    0.00 |
-| GTHE2_CHANNEL               |     0 |     0 |        36 |    0.00 |
-| PHASER_OUT/PHASER_OUT_PHY   |     0 |     0 |        80 |    0.00 |
-| PHASER_IN/PHASER_IN_PHY     |     0 |     0 |        80 |    0.00 |
-| IDELAYE2/IDELAYE2_FINEDELAY |     0 |     0 |      1000 |    0.00 |
-| ODELAYE2/ODELAYE2_FINEDELAY |     0 |     0 |      1000 |    0.00 |
-| IBUFDS_GTE2                 |     0 |     0 |        18 |    0.00 |
-| ILOGIC                      |     0 |     0 |       850 |    0.00 |
-| OLOGIC                      |     0 |     0 |       850 |    0.00 |
-+-----------------------------+-------+-------+-----------+---------+
-
-
-5. Clocking
------------
-
-+------------+------+-------+-----------+-------+
-|  Site Type | Used | Fixed | Available | Util% |
-+------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
-| BUFIO      |    0 |     0 |        80 |  0.00 |
-| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
-| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
-| BUFMRCE    |    0 |     0 |        40 |  0.00 |
-| BUFHCE     |    0 |     0 |       240 |  0.00 |
-| BUFR       |    0 |     0 |        80 |  0.00 |
-+------------+------+-------+-----------+-------+
-
-
-6. Specific Feature
--------------------
-
-+-------------+------+-------+-----------+-------+
-|  Site Type  | Used | Fixed | Available | Util% |
-+-------------+------+-------+-----------+-------+
-| BSCANE2     |    0 |     0 |         4 |  0.00 |
-| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
-| DNA_PORT    |    0 |     0 |         1 |  0.00 |
-| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
-| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
-| ICAPE2      |    0 |     0 |         2 |  0.00 |
-| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
-| STARTUPE2   |    0 |     0 |         1 |  0.00 |
-| XADC        |    0 |     0 |         1 |  0.00 |
-+-------------+------+-------+-----------+-------+
-
-
-7. Primitives
--------------
-
-+----------+--------+---------------------+
-| Ref Name |  Used  | Functional Category |
-+----------+--------+---------------------+
-| LUT6     | 155453 |                 LUT |
-| MUXF7    |  64708 |               MuxFx |
-| OBUF     |  16387 |                  IO |
-| FDRE     |  16386 |        Flop & Latch |
-| MUXF8    |  10801 |               MuxFx |
-| LUT2     |   8613 |                 LUT |
-| LUT1     |   4302 |                 LUT |
-| CARRY4   |   4096 |          CarryLogic |
-| LUT5     |   2287 |                 LUT |
-| LUT3     |   1304 |                 LUT |
-| DSP48E1  |    512 |    Block Arithmetic |
-| LUT4     |    121 |                 LUT |
-| FDCE     |     41 |        Flop & Latch |
-| IBUF     |     38 |                  IO |
-| BUFG     |      1 |               Clock |
-+----------+--------+---------------------+
-
-
-8. Black Boxes
---------------
-
-+----------+------+
-| Ref Name | Used |
-+----------+------+
-
-
-9. Instantiated Netlists
-------------------------
-
-+----------+------+
-| Ref Name | Used |
-+----------+------+
-
-
-INFO: [Common 17-206] Exiting Vivado at Thu Mar  5 18:41:10 2020...
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2765.621 ; gain = 0.000 ; free physical = 3972 ; free virtual = 7544
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.42 . Memory (MB): peak = 2765.621 ; gain = 12.000 ; free physical = 3972 ; free virtual = 7543
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2765.621 ; gain = 1414.977 ; free physical = 4267 ; free virtual = 7839
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1157-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2765.621 ; gain = 1414.977 ; free physical = 4267 ; free virtual = 7839
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2765.621 ; gain = 1414.977 ; free physical = 4266 ; free virtual = 7838
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "rom_489" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_490" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_491" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_492" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_493" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_494" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_495" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_496" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_497" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_498" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_499" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_500" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_501" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_502" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_503" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_504" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_505" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_506" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_507" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_508" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_509" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_510" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_511" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_512" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_489" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_490" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_491" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_492" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_493" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_494" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_495" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_496" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_497" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_498" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_499" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_500" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_501" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_502" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_503" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_504" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_505" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_506" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_507" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_508" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_509" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_510" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_511" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_512" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:44 ; elapsed = 00:01:59 . Memory (MB): peak = 3249.191 ; gain = 1898.547 ; free physical = 3900 ; free virtual = 7495
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------+------------+----------+
+|      |RTL Partition             |Replication |Instances |
++------+--------------------------+------------+----------+
+|1     |rom_conv10_1__GB0         |           1|     30720|
+|2     |rom_conv10_1__GB1         |           1|     30720|
+|3     |rom_conv10_1__GB2         |           1|     30720|
+|4     |rom_conv10_1__GB3         |           1|     30720|
+|5     |rom2_conv10_1__GB0        |           1|     28672|
+|6     |rom2_conv10_1__GB1        |           1|     28672|
+|7     |wrapper_rom_conv10_1__GC0 |           1|      8192|
+|8     |rom_conv10_2__GB0         |           1|     36656|
+|9     |rom_conv10_2__GB1         |           1|     37868|
+|10    |rom_conv10_2__GB2         |           1|     40772|
+|11    |rom_conv10_2__GB3         |           1|     34560|
+|12    |rom2_conv10_2__GB0        |           1|     35408|
+|13    |rom2_conv10_2__GB1        |           1|     32304|
+|14    |wrapper_rom_conv10_2__GC0 |           1|      8192|
+|15    |conv10_1_2__GCB0          |           1|     48016|
+|16    |conv10_1_2__GCB1          |           1|      6112|
+|17    |conv10_1_2__GCB2          |           1|      6800|
+|18    |conv10_1_2__GCB3          |           1|     10256|
+|19    |conv10_1_2__GCB4          |           1|     10928|
+|20    |conv10_1_2__GCB5          |           1|     16352|
+|21    |conv10_1_2__GCB6          |           1|     17232|
+|22    |conv10_1_2__GCB7          |           1|     21574|
+|23    |conv10_1_2__GCB8          |           1|     20992|
+|24    |conv10_1_2__GCB9          |           1|      5891|
++------+--------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 512   
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1024  
+	               16 Bit    Registers := 1538  
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 512   
+	   2 Input     16 Bit        Muxes := 1537  
+	 513 Input     16 Bit        Muxes := 24    
+	 225 Input     16 Bit        Muxes := 24    
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module conv10_1_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 512   
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 512   
+	               16 Bit    Registers := 1538  
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 512   
+	   2 Input     16 Bit        Muxes := 513   
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module wrapper_rom_conv10_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 512   
+Module rom_conv10_2 
+Detailed RTL Component Info : 
++---Muxes : 
+	 513 Input     16 Bit        Muxes := 24    
+Module rom2_conv10_2 
+Detailed RTL Component Info : 
++---Muxes : 
+	 225 Input     16 Bit        Muxes := 24    
+Module wrapper_rom_conv10_2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 512   
+Module mac__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__8 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__9 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__10 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__11 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__12 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__13 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__14 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__15 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__16 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__17 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__18 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__19 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__20 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__21 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__22 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__23 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__24 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__25 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__26 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__27 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__28 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__29 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__30 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__31 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__32 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__33 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__34 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__35 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__36 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__37 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__38 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__39 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__40 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__41 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__42 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__43 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__44 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__45 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__46 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__47 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__48 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__49 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__50 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__51 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__52 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__53 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__54 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__55 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__56 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__57 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__58 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__59 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__60 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__61 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__62 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__63 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__64 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__65 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__66 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__67 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__68 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__69 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__70 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__71 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__72 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__73 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__74 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__75 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__76 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__77 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__78 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__79 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__80 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__81 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__82 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__83 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__84 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__85 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__86 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__87 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__88 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__89 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__90 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__91 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__92 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__93 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__94 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__95 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__96 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__97 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__98 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__99 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__100 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__101 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__102 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__103 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__104 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__105 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__106 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__107 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__108 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__109 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__110 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__111 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__112 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__113 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__114 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__115 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__116 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__117 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__118 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__119 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__120 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__121 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__122 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__123 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__124 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__125 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__126 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__127 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__128 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__129 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__130 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__131 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__132 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__133 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__134 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__135 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__136 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__137 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__138 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__139 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__140 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__141 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__142 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__143 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__144 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__145 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__146 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__147 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__148 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__149 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__150 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__151 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__152 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__153 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__154 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__155 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__156 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__157 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__158 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__159 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__160 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__161 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__162 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__163 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__164 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__165 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__166 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__167 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__168 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__169 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__170 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__171 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__172 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__173 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__174 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__175 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__176 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__177 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__178 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__179 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__180 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__181 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__182 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__183 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__184 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__185 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__186 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__187 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__188 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__189 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__190 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__191 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__192 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__193 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__194 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__195 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__196 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__197 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__198 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__199 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__200 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__201 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__202 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__203 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__204 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__205 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__206 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__207 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__208 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__209 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__210 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__211 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__212 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__213 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__214 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__215 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__216 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__217 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__218 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__219 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__220 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__221 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__222 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__223 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__224 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__225 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__226 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__227 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__228 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__229 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__230 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__231 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__232 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__233 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__234 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__235 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__236 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__237 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__238 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__239 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__240 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__241 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__242 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__243 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__244 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__245 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__246 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__247 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__248 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__249 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__250 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__251 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__252 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__253 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__254 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__255 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__256 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__257 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__258 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__259 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__260 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__261 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__262 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__263 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__264 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__265 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__266 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__267 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__268 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__269 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__270 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__271 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__272 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__273 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__274 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__275 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__276 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__277 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__278 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__279 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__280 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__281 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__282 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__283 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__284 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__285 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__286 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__287 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__288 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__289 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__290 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__291 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__292 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__293 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__294 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__295 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__296 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__297 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__298 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__299 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__300 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__301 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__302 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__303 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__304 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__305 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__306 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__307 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__308 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__309 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__310 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__311 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__312 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__313 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__314 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__315 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__316 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__317 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__318 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__319 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__320 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__321 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__322 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__323 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__324 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__325 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__326 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__327 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__328 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__329 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__330 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__331 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__332 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__333 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__334 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__335 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__336 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__337 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__338 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__339 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__340 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__341 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__342 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__343 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__344 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__345 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__346 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__347 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__348 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__349 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__350 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__351 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__352 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__353 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__354 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__355 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__356 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__357 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__358 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__359 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__360 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__361 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__362 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__363 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__364 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__365 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__366 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__367 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__368 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__369 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__370 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__371 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__372 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__373 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__374 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__375 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__376 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__377 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__378 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__379 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__380 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__381 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__382 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__383 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__384 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__385 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__386 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__387 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__388 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__389 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__390 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__391 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__392 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__393 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__394 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__395 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__396 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__397 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__398 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__399 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__400 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__401 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__402 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__403 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__404 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__405 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__406 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__407 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__408 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__409 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__410 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__411 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__412 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__413 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__414 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__415 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__416 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__417 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__418 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__419 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__420 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__421 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__422 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__423 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__424 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__425 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__426 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__427 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__428 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__429 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__430 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__431 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__432 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__433 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__434 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__435 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__436 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__437 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__438 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__439 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__440 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__441 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__442 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__443 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__444 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__445 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__446 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__447 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__448 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__449 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__450 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__451 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__452 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__453 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__454 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__455 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__456 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__457 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__458 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__459 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__460 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__461 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__462 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__463 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__464 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__465 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__466 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__467 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__468 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__469 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__470 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__471 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__472 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__473 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__474 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__475 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__476 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__477 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__478 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__479 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__480 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__481 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__482 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__483 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__484 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__485 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__486 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__487 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__488 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__489 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__490 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__491 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__492 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__493 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__494 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__495 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__496 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__497 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__498 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__499 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__500 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__501 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__502 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__503 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__504 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__505 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__506 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__507 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__508 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__509 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__510 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac__511 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mac 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP genblk1[75].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[75] is absorbed into DSP genblk1[75].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[75] is absorbed into DSP genblk1[75].mac_i/mul_out_reg.
+DSP Report: register genblk1[75].mac_i/mul_out_reg is absorbed into DSP genblk1[75].mac_i/mul_out_reg.
+DSP Report: operator genblk1[75].mac_i/intermed is absorbed into DSP genblk1[75].mac_i/mul_out_reg.
+DSP Report: operator genblk1[75].mac_i/intermed0 is absorbed into DSP genblk1[75].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[222].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[222] is absorbed into DSP genblk1[222].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[222] is absorbed into DSP genblk1[222].mac_i/mul_out_reg.
+DSP Report: register genblk1[222].mac_i/mul_out_reg is absorbed into DSP genblk1[222].mac_i/mul_out_reg.
+DSP Report: operator genblk1[222].mac_i/intermed is absorbed into DSP genblk1[222].mac_i/mul_out_reg.
+DSP Report: operator genblk1[222].mac_i/intermed0 is absorbed into DSP genblk1[222].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[214].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[214] is absorbed into DSP genblk1[214].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[214] is absorbed into DSP genblk1[214].mac_i/mul_out_reg.
+DSP Report: register genblk1[214].mac_i/mul_out_reg is absorbed into DSP genblk1[214].mac_i/mul_out_reg.
+DSP Report: operator genblk1[214].mac_i/intermed is absorbed into DSP genblk1[214].mac_i/mul_out_reg.
+DSP Report: operator genblk1[214].mac_i/intermed0 is absorbed into DSP genblk1[214].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[223].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[223].mac_i/mul_out_reg is absorbed into DSP genblk1[223].mac_i/mul_out_reg.
+DSP Report: operator genblk1[223].mac_i/intermed is absorbed into DSP genblk1[223].mac_i/mul_out_reg.
+DSP Report: operator genblk1[223].mac_i/intermed0 is absorbed into DSP genblk1[223].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[232].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[232] is absorbed into DSP genblk1[232].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[232] is absorbed into DSP genblk1[232].mac_i/mul_out_reg.
+DSP Report: register genblk1[232].mac_i/mul_out_reg is absorbed into DSP genblk1[232].mac_i/mul_out_reg.
+DSP Report: operator genblk1[232].mac_i/intermed is absorbed into DSP genblk1[232].mac_i/mul_out_reg.
+DSP Report: operator genblk1[232].mac_i/intermed0 is absorbed into DSP genblk1[232].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[352].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[352].mac_i/mul_out_reg is absorbed into DSP genblk1[352].mac_i/mul_out_reg.
+DSP Report: operator genblk1[352].mac_i/intermed is absorbed into DSP genblk1[352].mac_i/mul_out_reg.
+DSP Report: operator genblk1[352].mac_i/intermed0 is absorbed into DSP genblk1[352].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[149].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[149].mac_i/mul_out_reg is absorbed into DSP genblk1[149].mac_i/mul_out_reg.
+DSP Report: operator genblk1[149].mac_i/intermed is absorbed into DSP genblk1[149].mac_i/mul_out_reg.
+DSP Report: operator genblk1[149].mac_i/intermed0 is absorbed into DSP genblk1[149].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[273].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[273].mac_i/mul_out_reg is absorbed into DSP genblk1[273].mac_i/mul_out_reg.
+DSP Report: operator genblk1[273].mac_i/intermed is absorbed into DSP genblk1[273].mac_i/mul_out_reg.
+DSP Report: operator genblk1[273].mac_i/intermed0 is absorbed into DSP genblk1[273].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[152].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[152] is absorbed into DSP genblk1[152].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[152] is absorbed into DSP genblk1[152].mac_i/mul_out_reg.
+DSP Report: register genblk1[152].mac_i/mul_out_reg is absorbed into DSP genblk1[152].mac_i/mul_out_reg.
+DSP Report: operator genblk1[152].mac_i/intermed is absorbed into DSP genblk1[152].mac_i/mul_out_reg.
+DSP Report: operator genblk1[152].mac_i/intermed0 is absorbed into DSP genblk1[152].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[238].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[238].mac_i/mul_out_reg is absorbed into DSP genblk1[238].mac_i/mul_out_reg.
+DSP Report: operator genblk1[238].mac_i/intermed is absorbed into DSP genblk1[238].mac_i/mul_out_reg.
+DSP Report: operator genblk1[238].mac_i/intermed0 is absorbed into DSP genblk1[238].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[431].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[431].mac_i/mul_out_reg is absorbed into DSP genblk1[431].mac_i/mul_out_reg.
+DSP Report: operator genblk1[431].mac_i/intermed is absorbed into DSP genblk1[431].mac_i/mul_out_reg.
+DSP Report: operator genblk1[431].mac_i/intermed0 is absorbed into DSP genblk1[431].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[94].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[94] is absorbed into DSP genblk1[94].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[94] is absorbed into DSP genblk1[94].mac_i/mul_out_reg.
+DSP Report: register genblk1[94].mac_i/mul_out_reg is absorbed into DSP genblk1[94].mac_i/mul_out_reg.
+DSP Report: operator genblk1[94].mac_i/intermed is absorbed into DSP genblk1[94].mac_i/mul_out_reg.
+DSP Report: operator genblk1[94].mac_i/intermed0 is absorbed into DSP genblk1[94].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[359].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[359] is absorbed into DSP genblk1[359].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[359] is absorbed into DSP genblk1[359].mac_i/mul_out_reg.
+DSP Report: register genblk1[359].mac_i/mul_out_reg is absorbed into DSP genblk1[359].mac_i/mul_out_reg.
+DSP Report: operator genblk1[359].mac_i/intermed is absorbed into DSP genblk1[359].mac_i/mul_out_reg.
+DSP Report: operator genblk1[359].mac_i/intermed0 is absorbed into DSP genblk1[359].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[429].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[429].mac_i/mul_out_reg is absorbed into DSP genblk1[429].mac_i/mul_out_reg.
+DSP Report: operator genblk1[429].mac_i/intermed is absorbed into DSP genblk1[429].mac_i/mul_out_reg.
+DSP Report: operator genblk1[429].mac_i/intermed0 is absorbed into DSP genblk1[429].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[443].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[443] is absorbed into DSP genblk1[443].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[443] is absorbed into DSP genblk1[443].mac_i/mul_out_reg.
+DSP Report: register genblk1[443].mac_i/mul_out_reg is absorbed into DSP genblk1[443].mac_i/mul_out_reg.
+DSP Report: operator genblk1[443].mac_i/intermed is absorbed into DSP genblk1[443].mac_i/mul_out_reg.
+DSP Report: operator genblk1[443].mac_i/intermed0 is absorbed into DSP genblk1[443].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[210].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[210].mac_i/mul_out_reg is absorbed into DSP genblk1[210].mac_i/mul_out_reg.
+DSP Report: operator genblk1[210].mac_i/intermed is absorbed into DSP genblk1[210].mac_i/mul_out_reg.
+DSP Report: operator genblk1[210].mac_i/intermed0 is absorbed into DSP genblk1[210].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[209].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[209].mac_i/mul_out_reg is absorbed into DSP genblk1[209].mac_i/mul_out_reg.
+DSP Report: operator genblk1[209].mac_i/intermed is absorbed into DSP genblk1[209].mac_i/mul_out_reg.
+DSP Report: operator genblk1[209].mac_i/intermed0 is absorbed into DSP genblk1[209].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[103].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[103] is absorbed into DSP genblk1[103].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[103] is absorbed into DSP genblk1[103].mac_i/mul_out_reg.
+DSP Report: register genblk1[103].mac_i/mul_out_reg is absorbed into DSP genblk1[103].mac_i/mul_out_reg.
+DSP Report: operator genblk1[103].mac_i/intermed is absorbed into DSP genblk1[103].mac_i/mul_out_reg.
+DSP Report: operator genblk1[103].mac_i/intermed0 is absorbed into DSP genblk1[103].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[255].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[255] is absorbed into DSP genblk1[255].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[255] is absorbed into DSP genblk1[255].mac_i/mul_out_reg.
+DSP Report: register genblk1[255].mac_i/mul_out_reg is absorbed into DSP genblk1[255].mac_i/mul_out_reg.
+DSP Report: operator genblk1[255].mac_i/intermed is absorbed into DSP genblk1[255].mac_i/mul_out_reg.
+DSP Report: operator genblk1[255].mac_i/intermed0 is absorbed into DSP genblk1[255].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[173].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[173].mac_i/mul_out_reg is absorbed into DSP genblk1[173].mac_i/mul_out_reg.
+DSP Report: operator genblk1[173].mac_i/intermed is absorbed into DSP genblk1[173].mac_i/mul_out_reg.
+DSP Report: operator genblk1[173].mac_i/intermed0 is absorbed into DSP genblk1[173].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[108].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[108] is absorbed into DSP genblk1[108].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[108] is absorbed into DSP genblk1[108].mac_i/mul_out_reg.
+DSP Report: register genblk1[108].mac_i/mul_out_reg is absorbed into DSP genblk1[108].mac_i/mul_out_reg.
+DSP Report: operator genblk1[108].mac_i/intermed is absorbed into DSP genblk1[108].mac_i/mul_out_reg.
+DSP Report: operator genblk1[108].mac_i/intermed0 is absorbed into DSP genblk1[108].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[366].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[366] is absorbed into DSP genblk1[366].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[366] is absorbed into DSP genblk1[366].mac_i/mul_out_reg.
+DSP Report: register genblk1[366].mac_i/mul_out_reg is absorbed into DSP genblk1[366].mac_i/mul_out_reg.
+DSP Report: operator genblk1[366].mac_i/intermed is absorbed into DSP genblk1[366].mac_i/mul_out_reg.
+DSP Report: operator genblk1[366].mac_i/intermed0 is absorbed into DSP genblk1[366].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[331].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[331] is absorbed into DSP genblk1[331].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[331] is absorbed into DSP genblk1[331].mac_i/mul_out_reg.
+DSP Report: register genblk1[331].mac_i/mul_out_reg is absorbed into DSP genblk1[331].mac_i/mul_out_reg.
+DSP Report: operator genblk1[331].mac_i/intermed is absorbed into DSP genblk1[331].mac_i/mul_out_reg.
+DSP Report: operator genblk1[331].mac_i/intermed0 is absorbed into DSP genblk1[331].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[191].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[191] is absorbed into DSP genblk1[191].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[191] is absorbed into DSP genblk1[191].mac_i/mul_out_reg.
+DSP Report: register genblk1[191].mac_i/mul_out_reg is absorbed into DSP genblk1[191].mac_i/mul_out_reg.
+DSP Report: operator genblk1[191].mac_i/intermed is absorbed into DSP genblk1[191].mac_i/mul_out_reg.
+DSP Report: operator genblk1[191].mac_i/intermed0 is absorbed into DSP genblk1[191].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[330].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[330] is absorbed into DSP genblk1[330].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[330] is absorbed into DSP genblk1[330].mac_i/mul_out_reg.
+DSP Report: register genblk1[330].mac_i/mul_out_reg is absorbed into DSP genblk1[330].mac_i/mul_out_reg.
+DSP Report: operator genblk1[330].mac_i/intermed is absorbed into DSP genblk1[330].mac_i/mul_out_reg.
+DSP Report: operator genblk1[330].mac_i/intermed0 is absorbed into DSP genblk1[330].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[392].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[392] is absorbed into DSP genblk1[392].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[392] is absorbed into DSP genblk1[392].mac_i/mul_out_reg.
+DSP Report: register genblk1[392].mac_i/mul_out_reg is absorbed into DSP genblk1[392].mac_i/mul_out_reg.
+DSP Report: operator genblk1[392].mac_i/intermed is absorbed into DSP genblk1[392].mac_i/mul_out_reg.
+DSP Report: operator genblk1[392].mac_i/intermed0 is absorbed into DSP genblk1[392].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[130].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[130].mac_i/mul_out_reg is absorbed into DSP genblk1[130].mac_i/mul_out_reg.
+DSP Report: operator genblk1[130].mac_i/intermed is absorbed into DSP genblk1[130].mac_i/mul_out_reg.
+DSP Report: operator genblk1[130].mac_i/intermed0 is absorbed into DSP genblk1[130].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[295].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[295] is absorbed into DSP genblk1[295].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[295] is absorbed into DSP genblk1[295].mac_i/mul_out_reg.
+DSP Report: register genblk1[295].mac_i/mul_out_reg is absorbed into DSP genblk1[295].mac_i/mul_out_reg.
+DSP Report: operator genblk1[295].mac_i/intermed is absorbed into DSP genblk1[295].mac_i/mul_out_reg.
+DSP Report: operator genblk1[295].mac_i/intermed0 is absorbed into DSP genblk1[295].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[34].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[34].mac_i/mul_out_reg is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: operator genblk1[34].mac_i/intermed is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: operator genblk1[34].mac_i/intermed0 is absorbed into DSP genblk1[34].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[132].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[132].mac_i/mul_out_reg is absorbed into DSP genblk1[132].mac_i/mul_out_reg.
+DSP Report: operator genblk1[132].mac_i/intermed is absorbed into DSP genblk1[132].mac_i/mul_out_reg.
+DSP Report: operator genblk1[132].mac_i/intermed0 is absorbed into DSP genblk1[132].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[32].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[32] is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[32] is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: register genblk1[32].mac_i/mul_out_reg is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: operator genblk1[32].mac_i/intermed is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: operator genblk1[32].mac_i/intermed0 is absorbed into DSP genblk1[32].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[133].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[133].mac_i/mul_out_reg is absorbed into DSP genblk1[133].mac_i/mul_out_reg.
+DSP Report: operator genblk1[133].mac_i/intermed is absorbed into DSP genblk1[133].mac_i/mul_out_reg.
+DSP Report: operator genblk1[133].mac_i/intermed0 is absorbed into DSP genblk1[133].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[395].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[395] is absorbed into DSP genblk1[395].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[395] is absorbed into DSP genblk1[395].mac_i/mul_out_reg.
+DSP Report: register genblk1[395].mac_i/mul_out_reg is absorbed into DSP genblk1[395].mac_i/mul_out_reg.
+DSP Report: operator genblk1[395].mac_i/intermed is absorbed into DSP genblk1[395].mac_i/mul_out_reg.
+DSP Report: operator genblk1[395].mac_i/intermed0 is absorbed into DSP genblk1[395].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[213].mac_i/mul_out_reg, operation Mode is: (P+A*B2)'.
+DSP Report: register kernel_regs_reg[213] is absorbed into DSP genblk1[213].mac_i/mul_out_reg.
+DSP Report: register genblk1[213].mac_i/mul_out_reg is absorbed into DSP genblk1[213].mac_i/mul_out_reg.
+DSP Report: operator genblk1[213].mac_i/intermed is absorbed into DSP genblk1[213].mac_i/mul_out_reg.
+DSP Report: operator genblk1[213].mac_i/intermed0 is absorbed into DSP genblk1[213].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[345].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[345] is absorbed into DSP genblk1[345].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[345] is absorbed into DSP genblk1[345].mac_i/mul_out_reg.
+DSP Report: register genblk1[345].mac_i/mul_out_reg is absorbed into DSP genblk1[345].mac_i/mul_out_reg.
+DSP Report: operator genblk1[345].mac_i/intermed is absorbed into DSP genblk1[345].mac_i/mul_out_reg.
+DSP Report: operator genblk1[345].mac_i/intermed0 is absorbed into DSP genblk1[345].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[136].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[136].mac_i/mul_out_reg is absorbed into DSP genblk1[136].mac_i/mul_out_reg.
+DSP Report: operator genblk1[136].mac_i/intermed is absorbed into DSP genblk1[136].mac_i/mul_out_reg.
+DSP Report: operator genblk1[136].mac_i/intermed0 is absorbed into DSP genblk1[136].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[218].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[218].mac_i/mul_out_reg is absorbed into DSP genblk1[218].mac_i/mul_out_reg.
+DSP Report: operator genblk1[218].mac_i/intermed is absorbed into DSP genblk1[218].mac_i/mul_out_reg.
+DSP Report: operator genblk1[218].mac_i/intermed0 is absorbed into DSP genblk1[218].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[219].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[219].mac_i/mul_out_reg is absorbed into DSP genblk1[219].mac_i/mul_out_reg.
+DSP Report: operator genblk1[219].mac_i/intermed is absorbed into DSP genblk1[219].mac_i/mul_out_reg.
+DSP Report: operator genblk1[219].mac_i/intermed0 is absorbed into DSP genblk1[219].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[291].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[291] is absorbed into DSP genblk1[291].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[291] is absorbed into DSP genblk1[291].mac_i/mul_out_reg.
+DSP Report: register genblk1[291].mac_i/mul_out_reg is absorbed into DSP genblk1[291].mac_i/mul_out_reg.
+DSP Report: operator genblk1[291].mac_i/intermed is absorbed into DSP genblk1[291].mac_i/mul_out_reg.
+DSP Report: operator genblk1[291].mac_i/intermed0 is absorbed into DSP genblk1[291].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[140].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[140].mac_i/mul_out_reg is absorbed into DSP genblk1[140].mac_i/mul_out_reg.
+DSP Report: operator genblk1[140].mac_i/intermed is absorbed into DSP genblk1[140].mac_i/mul_out_reg.
+DSP Report: operator genblk1[140].mac_i/intermed0 is absorbed into DSP genblk1[140].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[318].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[318] is absorbed into DSP genblk1[318].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[318] is absorbed into DSP genblk1[318].mac_i/mul_out_reg.
+DSP Report: register genblk1[318].mac_i/mul_out_reg is absorbed into DSP genblk1[318].mac_i/mul_out_reg.
+DSP Report: operator genblk1[318].mac_i/intermed is absorbed into DSP genblk1[318].mac_i/mul_out_reg.
+DSP Report: operator genblk1[318].mac_i/intermed0 is absorbed into DSP genblk1[318].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[354].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[354] is absorbed into DSP genblk1[354].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[354] is absorbed into DSP genblk1[354].mac_i/mul_out_reg.
+DSP Report: register genblk1[354].mac_i/mul_out_reg is absorbed into DSP genblk1[354].mac_i/mul_out_reg.
+DSP Report: operator genblk1[354].mac_i/intermed is absorbed into DSP genblk1[354].mac_i/mul_out_reg.
+DSP Report: operator genblk1[354].mac_i/intermed0 is absorbed into DSP genblk1[354].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[317].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[317] is absorbed into DSP genblk1[317].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[317] is absorbed into DSP genblk1[317].mac_i/mul_out_reg.
+DSP Report: register genblk1[317].mac_i/mul_out_reg is absorbed into DSP genblk1[317].mac_i/mul_out_reg.
+DSP Report: operator genblk1[317].mac_i/intermed is absorbed into DSP genblk1[317].mac_i/mul_out_reg.
+DSP Report: operator genblk1[317].mac_i/intermed0 is absorbed into DSP genblk1[317].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[494].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[494].mac_i/mul_out_reg is absorbed into DSP genblk1[494].mac_i/mul_out_reg.
+DSP Report: operator genblk1[494].mac_i/intermed is absorbed into DSP genblk1[494].mac_i/mul_out_reg.
+DSP Report: operator genblk1[494].mac_i/intermed0 is absorbed into DSP genblk1[494].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[376].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[376].mac_i/mul_out_reg is absorbed into DSP genblk1[376].mac_i/mul_out_reg.
+DSP Report: operator genblk1[376].mac_i/intermed is absorbed into DSP genblk1[376].mac_i/mul_out_reg.
+DSP Report: operator genblk1[376].mac_i/intermed0 is absorbed into DSP genblk1[376].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[309].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[309] is absorbed into DSP genblk1[309].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[309] is absorbed into DSP genblk1[309].mac_i/mul_out_reg.
+DSP Report: register genblk1[309].mac_i/mul_out_reg is absorbed into DSP genblk1[309].mac_i/mul_out_reg.
+DSP Report: operator genblk1[309].mac_i/intermed is absorbed into DSP genblk1[309].mac_i/mul_out_reg.
+DSP Report: operator genblk1[309].mac_i/intermed0 is absorbed into DSP genblk1[309].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[184].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[184] is absorbed into DSP genblk1[184].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[184] is absorbed into DSP genblk1[184].mac_i/mul_out_reg.
+DSP Report: register genblk1[184].mac_i/mul_out_reg is absorbed into DSP genblk1[184].mac_i/mul_out_reg.
+DSP Report: operator genblk1[184].mac_i/intermed is absorbed into DSP genblk1[184].mac_i/mul_out_reg.
+DSP Report: operator genblk1[184].mac_i/intermed0 is absorbed into DSP genblk1[184].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[268].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[268] is absorbed into DSP genblk1[268].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[268] is absorbed into DSP genblk1[268].mac_i/mul_out_reg.
+DSP Report: register genblk1[268].mac_i/mul_out_reg is absorbed into DSP genblk1[268].mac_i/mul_out_reg.
+DSP Report: operator genblk1[268].mac_i/intermed is absorbed into DSP genblk1[268].mac_i/mul_out_reg.
+DSP Report: operator genblk1[268].mac_i/intermed0 is absorbed into DSP genblk1[268].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[374].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[374].mac_i/mul_out_reg is absorbed into DSP genblk1[374].mac_i/mul_out_reg.
+DSP Report: operator genblk1[374].mac_i/intermed is absorbed into DSP genblk1[374].mac_i/mul_out_reg.
+DSP Report: operator genblk1[374].mac_i/intermed0 is absorbed into DSP genblk1[374].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[256].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[256] is absorbed into DSP genblk1[256].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[256] is absorbed into DSP genblk1[256].mac_i/mul_out_reg.
+DSP Report: register genblk1[256].mac_i/mul_out_reg is absorbed into DSP genblk1[256].mac_i/mul_out_reg.
+DSP Report: operator genblk1[256].mac_i/intermed is absorbed into DSP genblk1[256].mac_i/mul_out_reg.
+DSP Report: operator genblk1[256].mac_i/intermed0 is absorbed into DSP genblk1[256].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[299].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[299] is absorbed into DSP genblk1[299].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[299] is absorbed into DSP genblk1[299].mac_i/mul_out_reg.
+DSP Report: register genblk1[299].mac_i/mul_out_reg is absorbed into DSP genblk1[299].mac_i/mul_out_reg.
+DSP Report: operator genblk1[299].mac_i/intermed is absorbed into DSP genblk1[299].mac_i/mul_out_reg.
+DSP Report: operator genblk1[299].mac_i/intermed0 is absorbed into DSP genblk1[299].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[369].mac_i/mul_out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register genblk1[369].mac_i/mul_out_reg is absorbed into DSP genblk1[369].mac_i/mul_out_reg.
+DSP Report: operator genblk1[369].mac_i/intermed is absorbed into DSP genblk1[369].mac_i/mul_out_reg.
+DSP Report: operator genblk1[369].mac_i/intermed0 is absorbed into DSP genblk1[369].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[178].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[178] is absorbed into DSP genblk1[178].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[178] is absorbed into DSP genblk1[178].mac_i/mul_out_reg.
+DSP Report: register genblk1[178].mac_i/mul_out_reg is absorbed into DSP genblk1[178].mac_i/mul_out_reg.
+DSP Report: operator genblk1[178].mac_i/intermed is absorbed into DSP genblk1[178].mac_i/mul_out_reg.
+DSP Report: operator genblk1[178].mac_i/intermed0 is absorbed into DSP genblk1[178].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[183].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[183] is absorbed into DSP genblk1[183].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[183] is absorbed into DSP genblk1[183].mac_i/mul_out_reg.
+DSP Report: register genblk1[183].mac_i/mul_out_reg is absorbed into DSP genblk1[183].mac_i/mul_out_reg.
+DSP Report: operator genblk1[183].mac_i/intermed is absorbed into DSP genblk1[183].mac_i/mul_out_reg.
+DSP Report: operator genblk1[183].mac_i/intermed0 is absorbed into DSP genblk1[183].mac_i/mul_out_reg.
+INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP genblk1[7].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[7] is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[7] is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: register genblk1[7].mac_i/mul_out_reg is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: operator genblk1[7].mac_i/intermed is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: operator genblk1[7].mac_i/intermed0 is absorbed into DSP genblk1[7].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[8].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[8] is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[8] is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: register genblk1[8].mac_i/mul_out_reg is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: operator genblk1[8].mac_i/intermed is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: operator genblk1[8].mac_i/intermed0 is absorbed into DSP genblk1[8].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[10].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[10] is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[10] is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: register genblk1[10].mac_i/mul_out_reg is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: operator genblk1[10].mac_i/intermed is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: operator genblk1[10].mac_i/intermed0 is absorbed into DSP genblk1[10].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[12].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[12] is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[12] is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: register genblk1[12].mac_i/mul_out_reg is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: operator genblk1[12].mac_i/intermed is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: operator genblk1[12].mac_i/intermed0 is absorbed into DSP genblk1[12].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[15].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[15] is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[15] is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: register genblk1[15].mac_i/mul_out_reg is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: operator genblk1[15].mac_i/intermed is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: operator genblk1[15].mac_i/intermed0 is absorbed into DSP genblk1[15].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[18].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[18] is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[18] is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: register genblk1[18].mac_i/mul_out_reg is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: operator genblk1[18].mac_i/intermed is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: operator genblk1[18].mac_i/intermed0 is absorbed into DSP genblk1[18].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[22].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[22] is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[22] is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: register genblk1[22].mac_i/mul_out_reg is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: operator genblk1[22].mac_i/intermed is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: operator genblk1[22].mac_i/intermed0 is absorbed into DSP genblk1[22].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[25].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[25] is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[25] is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: register genblk1[25].mac_i/mul_out_reg is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: operator genblk1[25].mac_i/intermed is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: operator genblk1[25].mac_i/intermed0 is absorbed into DSP genblk1[25].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[28].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[28] is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[28] is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: register genblk1[28].mac_i/mul_out_reg is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: operator genblk1[28].mac_i/intermed is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: operator genblk1[28].mac_i/intermed0 is absorbed into DSP genblk1[28].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[29].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[29] is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[29] is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: register genblk1[29].mac_i/mul_out_reg is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: operator genblk1[29].mac_i/intermed is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: operator genblk1[29].mac_i/intermed0 is absorbed into DSP genblk1[29].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[36].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[36] is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[36] is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: register genblk1[36].mac_i/mul_out_reg is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: operator genblk1[36].mac_i/intermed is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: operator genblk1[36].mac_i/intermed0 is absorbed into DSP genblk1[36].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[97].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[97] is absorbed into DSP genblk1[97].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[97] is absorbed into DSP genblk1[97].mac_i/mul_out_reg.
+DSP Report: register genblk1[97].mac_i/mul_out_reg is absorbed into DSP genblk1[97].mac_i/mul_out_reg.
+DSP Report: operator genblk1[97].mac_i/intermed is absorbed into DSP genblk1[97].mac_i/mul_out_reg.
+DSP Report: operator genblk1[97].mac_i/intermed0 is absorbed into DSP genblk1[97].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[105].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[105] is absorbed into DSP genblk1[105].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[105] is absorbed into DSP genblk1[105].mac_i/mul_out_reg.
+DSP Report: register genblk1[105].mac_i/mul_out_reg is absorbed into DSP genblk1[105].mac_i/mul_out_reg.
+DSP Report: operator genblk1[105].mac_i/intermed is absorbed into DSP genblk1[105].mac_i/mul_out_reg.
+DSP Report: operator genblk1[105].mac_i/intermed0 is absorbed into DSP genblk1[105].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[204].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[204] is absorbed into DSP genblk1[204].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[204] is absorbed into DSP genblk1[204].mac_i/mul_out_reg.
+DSP Report: register genblk1[204].mac_i/mul_out_reg is absorbed into DSP genblk1[204].mac_i/mul_out_reg.
+DSP Report: operator genblk1[204].mac_i/intermed is absorbed into DSP genblk1[204].mac_i/mul_out_reg.
+DSP Report: operator genblk1[204].mac_i/intermed0 is absorbed into DSP genblk1[204].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[235].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[235] is absorbed into DSP genblk1[235].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[235] is absorbed into DSP genblk1[235].mac_i/mul_out_reg.
+DSP Report: register genblk1[235].mac_i/mul_out_reg is absorbed into DSP genblk1[235].mac_i/mul_out_reg.
+DSP Report: operator genblk1[235].mac_i/intermed is absorbed into DSP genblk1[235].mac_i/mul_out_reg.
+DSP Report: operator genblk1[235].mac_i/intermed0 is absorbed into DSP genblk1[235].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[282].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[282] is absorbed into DSP genblk1[282].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[282] is absorbed into DSP genblk1[282].mac_i/mul_out_reg.
+DSP Report: register genblk1[282].mac_i/mul_out_reg is absorbed into DSP genblk1[282].mac_i/mul_out_reg.
+DSP Report: operator genblk1[282].mac_i/intermed is absorbed into DSP genblk1[282].mac_i/mul_out_reg.
+DSP Report: operator genblk1[282].mac_i/intermed0 is absorbed into DSP genblk1[282].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[293].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[293] is absorbed into DSP genblk1[293].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[293] is absorbed into DSP genblk1[293].mac_i/mul_out_reg.
+DSP Report: register genblk1[293].mac_i/mul_out_reg is absorbed into DSP genblk1[293].mac_i/mul_out_reg.
+DSP Report: operator genblk1[293].mac_i/intermed is absorbed into DSP genblk1[293].mac_i/mul_out_reg.
+DSP Report: operator genblk1[293].mac_i/intermed0 is absorbed into DSP genblk1[293].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[301].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[301] is absorbed into DSP genblk1[301].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[301] is absorbed into DSP genblk1[301].mac_i/mul_out_reg.
+DSP Report: register genblk1[301].mac_i/mul_out_reg is absorbed into DSP genblk1[301].mac_i/mul_out_reg.
+DSP Report: operator genblk1[301].mac_i/intermed is absorbed into DSP genblk1[301].mac_i/mul_out_reg.
+DSP Report: operator genblk1[301].mac_i/intermed0 is absorbed into DSP genblk1[301].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[305].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[305] is absorbed into DSP genblk1[305].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[305] is absorbed into DSP genblk1[305].mac_i/mul_out_reg.
+DSP Report: register genblk1[305].mac_i/mul_out_reg is absorbed into DSP genblk1[305].mac_i/mul_out_reg.
+DSP Report: operator genblk1[305].mac_i/intermed is absorbed into DSP genblk1[305].mac_i/mul_out_reg.
+DSP Report: operator genblk1[305].mac_i/intermed0 is absorbed into DSP genblk1[305].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[393].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[393] is absorbed into DSP genblk1[393].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[393] is absorbed into DSP genblk1[393].mac_i/mul_out_reg.
+DSP Report: register genblk1[393].mac_i/mul_out_reg is absorbed into DSP genblk1[393].mac_i/mul_out_reg.
+DSP Report: operator genblk1[393].mac_i/intermed is absorbed into DSP genblk1[393].mac_i/mul_out_reg.
+DSP Report: operator genblk1[393].mac_i/intermed0 is absorbed into DSP genblk1[393].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[409].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[409] is absorbed into DSP genblk1[409].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[409] is absorbed into DSP genblk1[409].mac_i/mul_out_reg.
+DSP Report: register genblk1[409].mac_i/mul_out_reg is absorbed into DSP genblk1[409].mac_i/mul_out_reg.
+DSP Report: operator genblk1[409].mac_i/intermed is absorbed into DSP genblk1[409].mac_i/mul_out_reg.
+DSP Report: operator genblk1[409].mac_i/intermed0 is absorbed into DSP genblk1[409].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[411].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[411] is absorbed into DSP genblk1[411].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[411] is absorbed into DSP genblk1[411].mac_i/mul_out_reg.
+DSP Report: register genblk1[411].mac_i/mul_out_reg is absorbed into DSP genblk1[411].mac_i/mul_out_reg.
+DSP Report: operator genblk1[411].mac_i/intermed is absorbed into DSP genblk1[411].mac_i/mul_out_reg.
+DSP Report: operator genblk1[411].mac_i/intermed0 is absorbed into DSP genblk1[411].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[461].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[461] is absorbed into DSP genblk1[461].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[461] is absorbed into DSP genblk1[461].mac_i/mul_out_reg.
+DSP Report: register genblk1[461].mac_i/mul_out_reg is absorbed into DSP genblk1[461].mac_i/mul_out_reg.
+DSP Report: operator genblk1[461].mac_i/intermed is absorbed into DSP genblk1[461].mac_i/mul_out_reg.
+DSP Report: operator genblk1[461].mac_i/intermed0 is absorbed into DSP genblk1[461].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[470].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[470] is absorbed into DSP genblk1[470].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[470] is absorbed into DSP genblk1[470].mac_i/mul_out_reg.
+DSP Report: register genblk1[470].mac_i/mul_out_reg is absorbed into DSP genblk1[470].mac_i/mul_out_reg.
+DSP Report: operator genblk1[470].mac_i/intermed is absorbed into DSP genblk1[470].mac_i/mul_out_reg.
+DSP Report: operator genblk1[470].mac_i/intermed0 is absorbed into DSP genblk1[470].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[481].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[481] is absorbed into DSP genblk1[481].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[481] is absorbed into DSP genblk1[481].mac_i/mul_out_reg.
+DSP Report: register genblk1[481].mac_i/mul_out_reg is absorbed into DSP genblk1[481].mac_i/mul_out_reg.
+DSP Report: operator genblk1[481].mac_i/intermed is absorbed into DSP genblk1[481].mac_i/mul_out_reg.
+DSP Report: operator genblk1[481].mac_i/intermed0 is absorbed into DSP genblk1[481].mac_i/mul_out_reg.
+DSP Report: Generating DSP genblk1[511].mac_i/mul_out_reg, operation Mode is: (P+A*B'')'.
+DSP Report: register kernels_reg[511] is absorbed into DSP genblk1[511].mac_i/mul_out_reg.
+DSP Report: register kernel_regs_reg[511] is absorbed into DSP genblk1[511].mac_i/mul_out_reg.
+DSP Report: register genblk1[511].mac_i/mul_out_reg is absorbed into DSP genblk1[511].mac_i/mul_out_reg.
+DSP Report: operator genblk1[511].mac_i/intermed is absorbed into DSP genblk1[511].mac_i/mul_out_reg.
+DSP Report: operator genblk1[511].mac_i/intermed0 is absorbed into DSP genblk1[511].mac_i/mul_out_reg.

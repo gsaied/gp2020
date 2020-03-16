@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Mar 14 14:07:43 2020
-| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Date         : Mon Mar 16 13:30:31 2020
+| Host         : GCS running 64-bit unknown
 | Command      : report_timing -file slack.rpt
 | Design       : fire2_3_expand_3
 | Device       : 7vx690t-ffg1157
@@ -11,18 +11,18 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 Timing Report
 
-Slack (VIOLATED) :        -1.107ns  (required time - arrival time)
-  Source:                 ifm_2_reg[5]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.600ns period=3.200ns})
-  Destination:            genblk1[63].mac_i/mul_out_reg/A[5]
-                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@1.600ns period=3.200ns})
+Slack (VIOLATED) :        -0.065ns  (required time - arrival time)
+  Source:                 biasing_wire_reg[43][6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.500ns period=3.000ns})
+  Destination:            ofm_3_reg[34][13]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.500ns period=3.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            3.200ns  (clk rise@3.200ns - clk rise@0.000ns)
-  Data Path Delay:        1.926ns  (logic 0.259ns (13.448%)  route 1.667ns (86.552%))
-  Logic Levels:           1  (LUT3=1)
+  Requirement:            3.000ns  (clk rise@3.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.733ns  (logic 1.070ns (39.151%)  route 1.663ns (60.849%))
+  Logic Levels:           10  (CARRY4=8 LUT2=2)
   Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.483ns = ( 3.683 - 3.200 ) 
+    Destination Clock Delay (DCD):    0.483ns = ( 3.483 - 3.000 ) 
     Source Clock Delay      (SCD):    0.508ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -35,29 +35,54 @@ Slack (VIOLATED) :        -1.107ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=2440, unset)         0.508     0.508    clk
-    SLICE_X48Y53         FDRE                                         r  ifm_2_reg[5]/C
+                         net (fo=1456, unset)         0.508     0.508    clk
+    SLICE_X53Y62         FDRE                                         r  biasing_wire_reg[43][6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X48Y53         FDRE (Prop_fdre_C_Q)         0.216     0.724 r  ifm_2_reg[5]/Q
-                         net (fo=1, estimated)        0.397     1.121    genblk1[41].mac_i/Q[5]
-    SLICE_X48Y53         LUT3 (Prop_lut3_I0_O)        0.043     1.164 r  genblk1[41].mac_i/mul_out_reg_i_27__39/O
-                         net (fo=64, estimated)       1.270     2.434    genblk1[63].mac_i/mul_out_reg_1[5]
-    DSP48_X4Y25          DSP48E1                                      r  genblk1[63].mac_i/mul_out_reg/A[5]
+    SLICE_X53Y62         FDRE (Prop_fdre_C_Q)         0.216     0.724 r  biasing_wire_reg[43][6]/Q
+                         net (fo=142, estimated)      1.130     1.854    genblk1[34].mac_i/biasing_wire_reg[43][0]
+    SLICE_X44Y80         LUT2 (Prop_lut2_I1_O)        0.043     1.897 r  genblk1[34].mac_i/ofm_3[34][3]_i_19/O
+                         net (fo=1, routed)           0.000     1.897    genblk1[34].mac_i/ofm_3[34][3]_i_19_n_0
+    SLICE_X44Y80         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.238     2.135 r  genblk1[34].mac_i/ofm_3_reg[34][3]_i_12/CO[3]
+                         net (fo=1, estimated)        0.000     2.135    genblk1[34].mac_i/ofm_3_reg[34][3]_i_12_n_0
+    SLICE_X44Y81         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     2.185 r  genblk1[34].mac_i/ofm_3_reg[34][3]_i_7/CO[3]
+                         net (fo=1, estimated)        0.000     2.185    genblk1[34].mac_i/ofm_3_reg[34][3]_i_7_n_0
+    SLICE_X44Y82         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     2.235 r  genblk1[34].mac_i/ofm_3_reg[34][3]_i_2/CO[3]
+                         net (fo=1, estimated)        0.000     2.235    genblk1[34].mac_i/ofm_3_reg[34][3]_i_2_n_0
+    SLICE_X44Y83         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     2.285 r  genblk1[34].mac_i/ofm_3_reg[34][3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     2.285    genblk1[34].mac_i/ofm_3_reg[34][3]_i_1_n_0
+    SLICE_X44Y84         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     2.335 r  genblk1[34].mac_i/ofm_3_reg[34][7]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     2.335    genblk1[34].mac_i/ofm_3_reg[34][7]_i_1_n_0
+    SLICE_X44Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     2.385 r  genblk1[34].mac_i/ofm_3_reg[34][11]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     2.385    genblk1[34].mac_i/ofm_3_reg[34][11]_i_1_n_0
+    SLICE_X44Y86         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.050     2.435 r  genblk1[34].mac_i/ofm_3_reg[34][14]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     2.435    genblk1[34].mac_i/ofm_3_reg[34][14]_i_1_n_0
+    SLICE_X44Y87         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.152     2.587 r  genblk1[34].mac_i/ofm_3_reg[34][15]_i_2/O[1]
+                         net (fo=2, estimated)        0.179     2.766    ofmw2[34][31]
+    SLICE_X44Y88         LUT2 (Prop_lut2_I1_O)        0.121     2.887 r  ofm_3[34][15]_i_1/O
+                         net (fo=16, estimated)       0.354     3.241    ofm_3[34][15]_i_1_n_0
+    SLICE_X44Y88         FDRE                                         r  ofm_3_reg[34][13]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)        3.200     3.200 r  
-                                                      0.000     3.200 r  clk (IN)
-                         net (fo=2440, unset)         0.483     3.683    genblk1[63].mac_i/clk
-    DSP48_X4Y25          DSP48E1                                      r  genblk1[63].mac_i/mul_out_reg/CLK
-                         clock pessimism              0.000     3.683    
-                         clock uncertainty           -0.035     3.647    
-    DSP48_X4Y25          DSP48E1 (Setup_dsp48e1_CLK_A[5])
-                                                     -2.320     1.327    genblk1[63].mac_i/mul_out_reg
+                         (clock clk rise edge)        3.000     3.000 r  
+                                                      0.000     3.000 r  clk (IN)
+                         net (fo=1456, unset)         0.483     3.483    clk
+    SLICE_X44Y88         FDRE                                         r  ofm_3_reg[34][13]/C
+                         clock pessimism              0.000     3.483    
+                         clock uncertainty           -0.035     3.447    
+    SLICE_X44Y88         FDRE (Setup_fdre_C_R)       -0.271     3.176    ofm_3_reg[34][13]
   -------------------------------------------------------------------
-                         required time                          1.327    
-                         arrival time                          -2.434    
+                         required time                          3.176    
+                         arrival time                          -3.241    
   -------------------------------------------------------------------
-                         slack                                 -1.107    
+                         slack                                 -0.065    
 
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Mar 14 13:35:35 2020
+| Date         : Mon Mar 16 12:48:16 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -hierarchical -file hierarchical_utilization.rpt
 | Design       : fire2_3_expand_1
@@ -21,8 +21,8 @@ Table of Contents
 +----------------------+--------+------------+------------+---------+------+------+--------+--------+--------------+
 |       Instance       | Module | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +----------------------+--------+------------+------------+---------+------+------+--------+--------+--------------+
-| fire2_3_expand_1     |  (top) |       2447 |       2447 |       0 |    0 | 2166 |      0 |      0 |           64 |
-|   (fire2_3_expand_1) |  (top) |        313 |        313 |       0 |    0 | 2166 |      0 |      0 |            0 |
+| fire2_3_expand_1     |  (top) |       2257 |       2257 |       0 |    0 | 1172 |      0 |      0 |           64 |
+|   (fire2_3_expand_1) |  (top) |        124 |        124 |       0 |    0 | 1172 |      0 |      0 |            0 |
 |   genblk1[0].mac_i   |    mac |         48 |         48 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[10].mac_i  |  mac_0 |         47 |         47 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[11].mac_i  |  mac_1 |         22 |         22 |       0 |    0 |    0 |      0 |      0 |            1 |
@@ -48,7 +48,7 @@ Table of Contents
 |   genblk1[2].mac_i   | mac_21 |         21 |         21 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[30].mac_i  | mac_22 |         20 |         20 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[31].mac_i  | mac_23 |         24 |         24 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   genblk1[32].mac_i  | mac_24 |          5 |          5 |       0 |    0 |    0 |      0 |      0 |            1 |
+|   genblk1[32].mac_i  | mac_24 |          4 |          4 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[33].mac_i  | mac_25 |         17 |         17 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[34].mac_i  | mac_26 |         42 |         42 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[35].mac_i  | mac_27 |         46 |         46 |       0 |    0 |    0 |      0 |      0 |            1 |

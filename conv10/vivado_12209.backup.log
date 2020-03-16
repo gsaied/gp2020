@@ -1,0 +1,541 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar  5 18:27:27 2020
+# Process ID: 12209
+# Current directory: /home/gsaied/Desktop/old_rtl/conv10
+# Command line: vivado -mode tcl -project conv10_1_2.dcp
+# Log file: /home/gsaied/Desktop/old_rtl/conv10/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/conv10/vivado.jou
+#-----------------------------------------------------------
+open_checkpoint conv10_1_2.dcp
+Command: open_checkpoint conv10_1_2.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1388.977 ; gain = 0.000 ; free physical = 286 ; free virtual = 5093
+INFO: [Netlist 29-17] Analyzing 80117 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2185.547 ; gain = 0.000 ; free physical = 2363 ; free virtual = 6196
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2018.3 (64-bit) build 2405991
+open_checkpoint: Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 2185.547 ; gain = 796.570 ; free physical = 2363 ; free virtual = 6196
+report_utilization 
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu Mar  5 18:28:43 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_utilization
+| Design       : conv10_1_2
+| Device       : 7vx690tffg1761-2
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+--------+-------+-----------+-------+
+|        Site Type        |  Used  | Fixed | Available | Util% |
++-------------------------+--------+-------+-----------+-------+
+| Slice LUTs*             | 171855 |     0 |    433200 | 39.67 |
+|   LUT as Logic          | 171855 |     0 |    433200 | 39.67 |
+|   LUT as Memory         |      0 |     0 |    174200 |  0.00 |
+| Slice Registers         |  16478 |     0 |    866400 |  1.90 |
+|   Register as Flip Flop |  16478 |     0 |    866400 |  1.90 |
+|   Register as Latch     |      0 |     0 |    866400 |  0.00 |
+| F7 Muxes                |  64708 |     0 |    216600 | 29.87 |
+| F8 Muxes                |  10801 |     0 |    108300 |  9.97 |
++-------------------------+--------+-------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 41    |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 16437 |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| Block RAM Tile |    0 |     0 |      1470 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |      1470 |  0.00 |
+|   RAMB18       |    0 |     0 |      2940 |  0.00 |
++----------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |  512 |     0 |      3600 | 14.22 |
+|   DSP48E1 only |  512 |       |           |       |
++----------------+------+-------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+-------+-------+-----------+---------+
+|          Site Type          |  Used | Fixed | Available |  Util%  |
++-----------------------------+-------+-------+-----------+---------+
+| Bonded IOB                  | 16425 |     0 |       850 | 1932.35 |
+| Bonded IPADs                |     0 |     0 |       110 |    0.00 |
+| Bonded OPADs                |     0 |     0 |        72 |    0.00 |
+| PHY_CONTROL                 |     0 |     0 |        20 |    0.00 |
+| PHASER_REF                  |     0 |     0 |        20 |    0.00 |
+| OUT_FIFO                    |     0 |     0 |        80 |    0.00 |
+| IN_FIFO                     |     0 |     0 |        80 |    0.00 |
+| IDELAYCTRL                  |     0 |     0 |        20 |    0.00 |
+| IBUFDS                      |     0 |     0 |       816 |    0.00 |
+| GTHE2_CHANNEL               |     0 |     0 |        36 |    0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |     0 |     0 |        80 |    0.00 |
+| PHASER_IN/PHASER_IN_PHY     |     0 |     0 |        80 |    0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |     0 |     0 |      1000 |    0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |     0 |     0 |      1000 |    0.00 |
+| IBUFDS_GTE2                 |     0 |     0 |        18 |    0.00 |
+| ILOGIC                      |     0 |     0 |       850 |    0.00 |
+| OLOGIC                      |     0 |     0 |       850 |    0.00 |
++-----------------------------+-------+-------+-----------+---------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFIO      |    0 |     0 |        80 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
+| BUFMRCE    |    0 |     0 |        40 |  0.00 |
+| BUFHCE     |    0 |     0 |       240 |  0.00 |
+| BUFR       |    0 |     0 |        80 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+--------+---------------------+
+| Ref Name |  Used  | Functional Category |
++----------+--------+---------------------+
+| LUT6     | 155437 |                 LUT |
+| MUXF7    |  64708 |               MuxFx |
+| FDRE     |  16437 |        Flop & Latch |
+| OBUF     |  16387 |                  IO |
+| MUXF8    |  10801 |               MuxFx |
+| LUT2     |   8659 |                 LUT |
+| LUT1     |   4302 |                 LUT |
+| CARRY4   |   4096 |          CarryLogic |
+| LUT5     |   2298 |                 LUT |
+| LUT3     |   1313 |                 LUT |
+| DSP48E1  |    512 |    Block Arithmetic |
+| LUT4     |    128 |                 LUT |
+| FDCE     |     41 |        Flop & Latch |
+| IBUF     |     38 |                  IO |
+| BUFG     |      1 |               Clock |
++----------+--------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+opt_design -directive ExploreSequentialArea
+Command: opt_design -directive ExploreSequentialArea
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: ExploreSequentialArea
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2225.566 ; gain = 32.016 ; free physical = 2358 ; free virtual = 6189
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 11063092a
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 3010.277 ; gain = 784.711 ; free physical = 3291 ; free virtual = 7134
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 11063092a
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 3457 ; free virtual = 7300
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: cede3513
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 3449 ; free virtual = 7292
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 9a722d22
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 3430 ; free virtual = 7273
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 9a722d22
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 3340 ; free virtual = 7184
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: e9c450e5
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:35 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 2950 ; free virtual = 6793
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 6 Constant propagation | Checksum: e9c450e5
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:39 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 2882 ; free virtual = 6726
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 7 Sweep
+Phase 7 Sweep | Checksum: e9c450e5
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:43 . Memory (MB): peak = 3083.277 ; gain = 0.000 ; free physical = 2781 ; free virtual = 6624
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 8 Resynthesis
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-74] Optimized 5 modules.
+INFO: [Opt 31-75] Optimized module 'conv10_1_2'.
+INFO: [Opt 31-75] Optimized module 'mac_138'.
+INFO: [Opt 31-75] Optimized module 'mac_433'.
+INFO: [Opt 31-75] Optimized module 'mac_448'.
+INFO: [Opt 31-75] Optimized module 'mac_78'.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 8 Resynthesis | Checksum: 173c5abba
+
+Time (s): cpu = 00:21:07 ; elapsed = 00:07:59 . Memory (MB): peak = 3229.188 ; gain = 145.910 ; free physical = 1921 ; free virtual = 5773
+INFO: [Opt 31-389] Phase Resynthesis created 1393 cells and removed 1501 cells
+
+Phase 9 Post Processing Netlist
+Phase 9 Post Processing Netlist | Checksum: 173c5abba
+
+Time (s): cpu = 00:21:09 ; elapsed = 00:08:00 . Memory (MB): peak = 3229.188 ; gain = 145.910 ; free physical = 1925 ; free virtual = 5776
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  Resynthesis                  |            1393  |            1501  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.86 . Memory (MB): peak = 3229.188 ; gain = 0.000 ; free physical = 1924 ; free virtual = 5776
+Ending Logic Optimization Task | Checksum: 154d7773b
+
+Time (s): cpu = 00:21:15 ; elapsed = 00:08:06 . Memory (MB): peak = 3229.188 ; gain = 145.910 ; free physical = 1923 ; free virtual = 5774
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 154d7773b
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3229.188 ; gain = 0.000 ; free physical = 1923 ; free virtual = 5775
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 154d7773b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3229.188 ; gain = 0.000 ; free physical = 1923 ; free virtual = 5775
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3229.188 ; gain = 0.000 ; free physical = 1923 ; free virtual = 5775
+Ending Netlist Obfuscation Task | Checksum: 154d7773b
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3229.188 ; gain = 0.000 ; free physical = 1923 ; free virtual = 5774
+INFO: [Common 17-83] Releasing license: Implementation
+30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:21:54 ; elapsed = 00:08:33 . Memory (MB): peak = 3229.188 ; gain = 1043.641 ; free physical = 1924 ; free virtual = 5776
+1
+report_utilization 
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu Mar  5 18:40:46 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_utilization
+| Design       : conv10_1_2
+| Device       : 7vx690tffg1761-2
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+--------+-------+-----------+-------+
+|        Site Type        |  Used  | Fixed | Available | Util% |
++-------------------------+--------+-------+-----------+-------+
+| Slice LUTs*             | 171818 |     0 |    433200 | 39.66 |
+|   LUT as Logic          | 171818 |     0 |    433200 | 39.66 |
+|   LUT as Memory         |      0 |     0 |    174200 |  0.00 |
+| Slice Registers         |  16427 |     0 |    866400 |  1.90 |
+|   Register as Flip Flop |  16427 |     0 |    866400 |  1.90 |
+|   Register as Latch     |      0 |     0 |    866400 |  0.00 |
+| F7 Muxes                |  64708 |     0 |    216600 | 29.87 |
+| F8 Muxes                |  10801 |     0 |    108300 |  9.97 |
++-------------------------+--------+-------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 41    |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 16386 |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| Block RAM Tile |    0 |     0 |      1470 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |      1470 |  0.00 |
+|   RAMB18       |    0 |     0 |      2940 |  0.00 |
++----------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |  512 |     0 |      3600 | 14.22 |
+|   DSP48E1 only |  512 |       |           |       |
++----------------+------+-------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+-------+-------+-----------+---------+
+|          Site Type          |  Used | Fixed | Available |  Util%  |
++-----------------------------+-------+-------+-----------+---------+
+| Bonded IOB                  | 16425 |     0 |       850 | 1932.35 |
+| Bonded IPADs                |     0 |     0 |       110 |    0.00 |
+| Bonded OPADs                |     0 |     0 |        72 |    0.00 |
+| PHY_CONTROL                 |     0 |     0 |        20 |    0.00 |
+| PHASER_REF                  |     0 |     0 |        20 |    0.00 |
+| OUT_FIFO                    |     0 |     0 |        80 |    0.00 |
+| IN_FIFO                     |     0 |     0 |        80 |    0.00 |
+| IDELAYCTRL                  |     0 |     0 |        20 |    0.00 |
+| IBUFDS                      |     0 |     0 |       816 |    0.00 |
+| GTHE2_CHANNEL               |     0 |     0 |        36 |    0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |     0 |     0 |        80 |    0.00 |
+| PHASER_IN/PHASER_IN_PHY     |     0 |     0 |        80 |    0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |     0 |     0 |      1000 |    0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |     0 |     0 |      1000 |    0.00 |
+| IBUFDS_GTE2                 |     0 |     0 |        18 |    0.00 |
+| ILOGIC                      |     0 |     0 |       850 |    0.00 |
+| OLOGIC                      |     0 |     0 |       850 |    0.00 |
++-----------------------------+-------+-------+-----------+---------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFIO      |    0 |     0 |        80 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
+| BUFMRCE    |    0 |     0 |        40 |  0.00 |
+| BUFHCE     |    0 |     0 |       240 |  0.00 |
+| BUFR       |    0 |     0 |        80 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+--------+---------------------+
+| Ref Name |  Used  | Functional Category |
++----------+--------+---------------------+
+| LUT6     | 155453 |                 LUT |
+| MUXF7    |  64708 |               MuxFx |
+| OBUF     |  16387 |                  IO |
+| FDRE     |  16386 |        Flop & Latch |
+| MUXF8    |  10801 |               MuxFx |
+| LUT2     |   8613 |                 LUT |
+| LUT1     |   4302 |                 LUT |
+| CARRY4   |   4096 |          CarryLogic |
+| LUT5     |   2287 |                 LUT |
+| LUT3     |   1304 |                 LUT |
+| DSP48E1  |    512 |    Block Arithmetic |
+| LUT4     |    121 |                 LUT |
+| FDCE     |     41 |        Flop & Latch |
+| IBUF     |     38 |                  IO |
+| BUFG     |      1 |               Clock |
++----------+--------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  5 18:41:10 2020...

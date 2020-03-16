@@ -1,4 +1,5 @@
 /* verilator lint_off COMBDLY */
+/* verilator lint_off INITIALDLY*/
 /*
 * FIRE4 && FIRE5 EXPAND 3*3   IMPLEMENTATION
 * INPUT SIZE: 32*32*32
@@ -28,23 +29,10 @@ module fire4_5_expand_3 #(
 	output fire4_expand_3_finish,
 	output fire5_expand_3_finish,
 	output reg fire4_expand_3_sample,
-	output reg [WIDTH-1:0] ofm_4 [0:DSP_NO-1],
 	output reg [WIDTH-1:0] ofm_5 [0:DSP_NO-1]
 );
 	reg fire4_expand_3_end;
 	reg fire5_expand_3_end;
-	wire rst_gen ; 
-        reg fire4_expand_3_en;
-        reg fire5_expand_3_en;
-        reg [15:0] ifm_4;
-        reg [15:0] ifm_5;
-        always @(posedge clk ) begin
-                fire4_expand_3_en <= fire4_expand_3_en_i ;
-                fire5_expand_3_en <= fire5_expand_3_en_i ;
-                ifm_4 <= ifm_4_i;
-                ifm_5 <= ifm_5_i;
-        end
-
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
 reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
@@ -72,9 +60,25 @@ wrapper_rom_fire5  u_3 (
 	.address(weight_rom_address),
 	.rom_out(kernels_5)
 );
-reg layer_en_reg ;
+	reg fire4_expand_3_en ; 
+	reg fire5_expand_3_en ; 
+	reg [WIDTH-1:0] ifm_4 ;
+	reg [WIDTH-1:0] ifm_5 ;
+	reg [WIDTH-1:0] tempifm4;
+	reg [WIDTH-1:0] tempifm5;
 always @(posedge clk) begin
-    layer_en_reg <= fire4_expand_3_en || fire5_expand_3_en ; 
+    tempifm4<=ifm_4_i;
+    tempifm5<=ifm_5_i;
+	fire4_expand_3_en <= fire4_expand_3_en_i ;
+	fire5_expand_3_en <= fire5_expand_3_en_i ;
+	ifm_4<= tempifm4 ; 
+	ifm_5<= tempifm5 ; 
+end
+(* dont_touch = "true"*) reg layer_en_reg ;
+reg entemp;
+always @(posedge clk) begin
+    entemp<=fire4_expand_3_en || fire5_expand_3_en;
+    layer_en_reg <= entemp ; 
 end 
 ///////////////////////////////////
 //this signal is very important to track
@@ -82,14 +86,31 @@ end
 ///////////////////////////////////
 reg clr_pulse ; 
 reg rom_clr_pulse;
+reg temp_clr_pulse ;
 ///////
 always@(posedge clk)begin
 	if (rst_gen)
 		clr_pulse<=0;
-	else
-		clr_pulse<=rom_clr_pulse;
+	else begin
+	temp_clr_pulse <= rom_clr_pulse ;
+    clr_pulse<= temp_clr_pulse;
+	end
 end
 ///////
+initial begin
+weight_rom_address=0;
+rom_clr_pulse=1'b0;
+clr_counter=0;
+ram_feedback_reg_4=1'b0;
+ram_feedback_reg_5=1'b0;
+fire4_expand_3_timer=0;
+fire5_expand_3_timer=0;
+fire4_expand_3_end=1'b0;
+fire5_expand_3_end=1'b0;
+
+
+
+end
 always @(posedge clk /*or negedge rst*/) begin
 	/*if(!rst)
 		weight_rom_address<= 0 ; 
@@ -99,12 +120,13 @@ always @(posedge clk /*or negedge rst*/) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
+wire rst_gen ; 
 assign rst_gen = fire4_expand_3_end && fire4_expand_3_en ;
 ////////////////////////////
 //ENABLE SIGNALS MULTIPLEX//
 //ROM & INPUTS TO MAC///////
 ////////////////////////////
-always @(*) begin
+always @(posedge clk) begin
 	if (fire4_expand_3_en) begin
 		kernels <= kernels_4 ;
 		biasing_wire <= biasing_wire_4 ; 	
@@ -180,17 +202,10 @@ always@(posedge clk) begin
 	if(clr_pulse ) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 ) begin 
-				if (fire4_expand_3_en)
-					ofm_4[i] <= 16'b0 ;
-				else
-					ofm_5[i] <= 16'b0 ;
+				ofm_5[i] <= 16'b0 ;
 			end
 			else begin
-				if (fire4_expand_3_en)
-					ofm_4[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
-				else
-
-					ofm_5[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
+				ofm_5[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
 			end
 		end
 	end
@@ -240,16 +255,5 @@ always @(posedge clk/* or negedge rst*/) begin
 end
 assign fire4_expand_3_finish = fire4_expand_3_end && !ram_feedback_reg_4 ;
 assign fire5_expand_3_finish = fire5_expand_3_end && !ram_feedback_reg_5 ;
-initial begin
-weight_rom_address=0;
-rom_clr_pulse=1'b0;
-clr_counter=0;
-ram_feedback_reg_4=1'b0;
-ram_feedback_reg_5=1'b0;
-fire4_expand_3_timer=0;
-fire5_expand_3_timer=0;
-fire4_expand_3_end=1'b0;
-fire5_expand_3_end=1'b0;
-end
 endmodule
 

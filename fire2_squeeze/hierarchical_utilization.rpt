@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Fri Mar 13 14:46:19 2020
-| Host         : GCS running 64-bit unknown
+| Date         : Mon Mar 16 12:47:55 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -hierarchical -file hierarchical_utilization.rpt
 | Design       : fire2_squeeze
 | Device       : 7vx690tffg1157-3
@@ -21,8 +21,8 @@ Table of Contents
 +---------------------+-------------------+------------+------------+---------+------+-----+--------+--------+--------------+
 |       Instance      |       Module      | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +---------------------+-------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-| fire2_squeeze       |             (top) |        238 |        238 |       0 |    0 | 298 |      0 |     15 |           16 |
-|   (fire2_squeeze)   |             (top) |         41 |         41 |       0 |    0 | 298 |      0 |      0 |            0 |
+| fire2_squeeze       |             (top) |        235 |        235 |       0 |    0 | 299 |      0 |     15 |           16 |
+|   (fire2_squeeze)   |             (top) |         38 |         38 |       0 |    0 | 299 |      0 |      0 |            0 |
 |   genblk1[0].mac_k  |               mac |          1 |          1 |       0 |    0 |   0 |      0 |      0 |            1 |
 |   genblk1[10].mac_k |             mac_0 |          4 |          4 |       0 |    0 |   0 |      0 |      0 |            1 |
 |   genblk1[11].mac_k |             mac_1 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |            1 |

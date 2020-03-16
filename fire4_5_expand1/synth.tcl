@@ -15,7 +15,7 @@ place_design -no_fanout_opt -directive ExtraTimingOpt
 if {[get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]] < 0} {
 puts "Found setup timing violations => running physical optimization"
 report_timing -file slack.rpt
-phys_opt_design -directive AggressiveExplore
+phys_opt_design 
 }
 route_design -directive NoTimingRelaxation -tns_cleanup
 report_timing

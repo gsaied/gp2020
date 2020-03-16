@@ -204,7 +204,7 @@
   	(* rom_style="{distributed}" *)
 	reg [WIDTH-1:0] rom_64 [0:2**ADDR-1] ;
 initial  begin
-$readmemb("file_fire2_expand1_1.mem",rom_1,0,16-1);
+$readmemb("file_fire2_expand1_1.mem",rom_1,0,2**ADDR-1);
 $readmemb("file_fire2_expand1_2.mem",rom_2,0,2**ADDR-1);
 $readmemb("file_fire2_expand1_3.mem",rom_3,0,2**ADDR-1);
 $readmemb("file_fire2_expand1_4.mem",rom_4,0,2**ADDR-1);

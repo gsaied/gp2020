@@ -20,14 +20,15 @@ wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO_FIRE2_SQUEEZE-1] ;
 biasing_fire2_squeeze b7 (
 	.bias_mem(biasing_wire)
 );
+reg fire2_squeeze_en_1 ;
 reg fire2_squeeze_en;
 reg [WIDTH-1:0] ifm ;
 reg [WIDTH-1:0] temp_ifm ;
-always@(posedge clk) temp_ifm <= ifm_i ; 
-always@(posedge clk) fire2_squeeze_en <= fire2_squeeze_en_i ;
 always@(posedge clk)begin
-
+	temp_ifm <= ifm_i ;
         ifm<=temp_ifm;
+	fire2_squeeze_en_1 <= fire2_squeeze_en_i ;
+	fire2_squeeze_en <= fire2_squeeze_en_1 ;
 end
 ///////////////////////////////////
 //KERNELS INSTANTIATION

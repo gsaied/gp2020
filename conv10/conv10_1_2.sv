@@ -27,16 +27,14 @@ module conv10_1_2 #(
 	wire rst_gen ; 
 	//reg [WIDTH-1:0] ifm_1_reg ;
 	//reg [WIDTH-1:0] ifm_2_reg ;
-	wire [WIDTH-1:0] ifm_1 ;
-	wire [WIDTH-1:0] ifm_2 ;
-	//reg conv10_1_en ;
-	//reg conv10_2_en ;
-	wire conv10_1_en ; 
-	wire conv10_2_en ; 
-	assign conv10_1_en = conv10_1_en_i ;
-	assign conv10_2_en = conv10_2_en_i ;
-	assign ifm_1 = ifm_1_i ;
-	assign ifm_2 = ifm_2_i ;
+	reg [WIDTH-1:0] ifm_1 ;
+	reg [WIDTH-1:0] ifm_2 ;
+	reg conv10_1_en ; 
+	reg conv10_2_en ; 
+	reg conv10_1_en_1 ; 
+	reg conv10_2_en_1 ; 
+	reg conv10_1_en_2 ; 
+	reg conv10_2_en_2 ; 
 ////////////////////////
 /* REGISTERING INPUTS */
 ////////////////////////
@@ -49,6 +47,14 @@ always @(posedge clk) begin
 	conv10_1_en<= conv10_1_en_i ; 
 	conv10_2_en<= conv10_2_en_i ; 
 	*/
+       conv10_1_en_1 <= conv10_1_en_i ; 
+       conv10_2_en_1 <= conv10_2_en_i ; 
+       conv10_1_en_2 <= conv10_1_en_1 ; 
+       conv10_2_en_2 <= conv10_2_en_1 ; 
+       conv10_1_en <= conv10_1_en_2 ; 
+       conv10_2_en <= conv10_2_en_2 ; 
+       ifm_1<= ifm_1_i ; 
+       ifm_2<= ifm_2_i ; 
 end
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
@@ -78,16 +84,22 @@ wrapper_rom_conv10_2 u_3 (
 	.rom_out(kernels_2)
 );
 reg layer_en_reg ;
+reg layer_en_reg_1 ;
 always @(posedge clk) begin
-    layer_en_reg <= conv10_1_en || conv10_2_en ; 
+    layer_en_reg_1 <= conv10_1_en || conv10_2_en ; 
+    layer_en_reg <= layer_en_reg_1 ; 
 end 
 ///////////////////////////////////
 //this signal is very important to track
 //represents a pulse to clr pin of mac 
 ///////////////////////////////////
 reg clr_pulse ; 
+reg temp_clr_pulse ; 
 reg rom_clr_pulse;
-always @(posedge clk) clr_pulse <= rom_clr_pulse ;
+always @(posedge clk) begin
+       	temp_clr_pulse <= rom_clr_pulse ;
+	clr_pulse <= temp_clr_pulse ;
+end
 ///////
 ///////
 always @(posedge clk  ) begin
@@ -102,7 +114,7 @@ assign rst_gen = conv10_1_en && conv10_1_end ;
 //ENABLE SIGNALS MULTIPLEX//
 //ROM & INPUTS TO MAC///////
 ////////////////////////////
-always @(*) begin
+always @(posedge clk) begin
 	if (conv10_1_en) begin
 		kernels <= kernels_1 ;
 		biasing_wire <= biasing_wire_1 ; 	

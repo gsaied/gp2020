@@ -203,7 +203,7 @@ reg[8:0] channels2_counter;////////count no of channels
 reg[8:0] numchannels;/////////total no of input channels for each reading layer
 reg[1:0] row1,col1;
 reg[1:0] row2,col2;
-reg [1:0] startcounter;//after 4 cycles 
+reg [2:0] startcounter;//after 4 cycles 
 reg flagread2;//enable reading
 reg flagread2_shifted;
 reg flagread2_shiftedagain;
@@ -253,7 +253,25 @@ reg shift1conv10_1;
 reg shift2conv10_1;
 reg shift1conv10_2;
 reg shift2conv10_2;
+reg squeeze2_endshifted;
+reg squeeze3_endshifted;
+reg squeeze4_endshifted;
+reg squeeze5_endshifted;
+reg squeeze6_endshifted;
+reg squeeze7_endshifted;
+reg squeeze8_endshifted;
+reg squeeze9_endshifted;
+always@(posedge clk) begin
+squeeze2_endshifted<=squeeze2_end;
+squeeze3_endshifted<=squeeze3_end;
+squeeze4_endshifted<=squeeze4_end;
+squeeze5_endshifted<=squeeze5_end;
+squeeze6_endshifted<=squeeze6_end;
+squeeze7_endshifted<=squeeze7_end;
+squeeze8_endshifted<=squeeze8_end;
+squeeze9_endshifted<=squeeze9_end;
 
+end
 initial begin
     shift1expand2=1;
         shift2expand2=1;
@@ -363,7 +381,7 @@ initial begin
 end
 /////////// reset signals control for all layers
 always@(posedge clk  ) begin
-    if(squeeze2_end)begin
+    if(squeeze2_endshifted)begin
         shift1expand2<=0;
         shift2expand2<=shift1expand2;
         expand2rst<=shift2expand2;
@@ -377,7 +395,7 @@ always@(posedge clk  ) begin
     end
 end
 always@(posedge clk  ) begin
-    if(squeeze3_end)begin
+    if(squeeze3_endshifted)begin
         shift1expand3<=0;
         shift2expand3<=shift1expand3;
         expand3rst<=shift2expand3;
@@ -391,7 +409,7 @@ always@(posedge clk  ) begin
     end
 end
 always@(posedge clk  ) begin
-    if(squeeze4_end)begin
+    if(squeeze4_endshifted)begin
         shift1expand4<=0;
         shift2expand4<=shift1expand4;
         expand4rst<=shift2expand4;
@@ -405,7 +423,7 @@ always@(posedge clk  ) begin
     end
 end
 always@(posedge clk  ) begin
-    if(squeeze5_end)begin
+    if(squeeze5_endshifted)begin
         shift1expand5<=0;
         shift2expand5<=shift1expand5;
         expand5rst<=shift2expand5;
@@ -419,7 +437,7 @@ always@(posedge clk  ) begin
     end
 end
 always@(posedge clk  ) begin
-    if(squeeze6_end)begin
+    if(squeeze6_endshifted)begin
         shift1expand6<=0;
         shift2expand6<=shift1expand6;
         expand6rst<=shift2expand6;
@@ -433,7 +451,7 @@ always@(posedge clk  ) begin
     end
 end
 always@(posedge clk  ) begin
-    if(squeeze7_end)begin
+    if(squeeze7_endshifted)begin
         shift1expand7<=0;
         shift2expand7<=shift1expand7;
         expand7rst<=shift2expand7;
@@ -447,7 +465,7 @@ always@(posedge clk  ) begin
     end
 end
 always@(posedge clk  ) begin
-    if(squeeze8_end)begin
+    if(squeeze8_endshifted)begin
         shift1expand8<=0;
         shift2expand8<=shift1expand8;
         expand8rst<=shift2expand8;
@@ -461,7 +479,7 @@ always@(posedge clk  ) begin
     end
 end
 always@(posedge clk  ) begin
-    if(squeeze9_end)begin
+    if(squeeze9_endshifted)begin
         shift1expand9<=0;
         shift2expand9<=shift1expand9;
         expand9rst<=shift2expand9;
@@ -476,14 +494,14 @@ always@(posedge clk  ) begin
 end
 
 ///////////////////////////////////end of reset signals
-      assign  newlayer=(squeeze2_end && expand2rst)|| (ensqueeze2 && squeeze2rst)|| (squeeze3_end && expand3rst)|| (ensqueeze3 && squeeze3rst)|| (squeeze4_end && expand4rst)|| (ensqueeze4 && squeeze4rst)|| (squeeze5_end && expand5rst)|| (ensqueeze5 && squeeze5rst)|| (squeeze6_end && expand6rst)|| (ensqueeze6 && squeeze6rst)|| (squeeze7_end && expand7rst)|| (ensqueeze7 && squeeze7rst)|| (squeeze8_end && expand8rst)|| (ensqueeze8 && squeeze8rst)|| (squeeze9_end && expand9rst)|| (ensqueeze9 && squeeze9rst);
+      assign  newlayer=(squeeze2_endshifted && expand2rst)|| (ensqueeze2 && squeeze2rst)|| (squeeze3_endshifted && expand3rst)|| (ensqueeze3 && squeeze3rst)|| (squeeze4_endshifted && expand4rst)|| (ensqueeze4 && squeeze4rst)|| (squeeze5_endshifted && expand5rst)|| (ensqueeze5 && squeeze5rst)|| (squeeze6_endshifted && expand6rst)|| (ensqueeze6 && squeeze6rst)|| (squeeze7_endshifted && expand7rst)|| (ensqueeze7 && squeeze7rst)|| (squeeze8_endshifted && expand8rst)|| (ensqueeze8 && squeeze8rst)|| (squeeze9_endshifted && expand9rst)|| (ensqueeze9 && squeeze9rst);
 
 ////////////////////////////////////////////////////////first shared memory/////////////////////////////////////////////////////////////////////////////////////////////////////
 // layer selection ,clock and input contection to ram  
 always@(*) begin
 
-   //case({enconv1,enexpand2,enexpand23x3,conv1_end,enexpand3,enexpand33x3,ensqueeze3,enexpand4,enexpand43x3,ensqueeze4,enexpand5,enexpand53x3,ensqueeze5,enexpand6,enexpand63x3,ensqueeze6,enexpand7,enexpand73x3,ensqueeze7,enexpand8,enexpand83x3,ensqueeze8,enexpand9,enexpand93x3,ensqueeze9,enconv10_1,enconv10_2}) 
-   case({ensqueeze2,ensqueeze3,ensqueeze4,ensqueeze5,ensqueeze6,ensqueeze7,ensqueeze8,ensqueeze9,squeeze2_end,squeeze3_end,squeeze4_end,squeeze5_end,squeeze6_end,squeeze7_end,squeeze8_end,squeeze9_end}) 
+   //case({enconv1,enexpand2,enexpand23x3,conv1_endshifted,enexpand3,enexpand33x3,ensqueeze3,enexpand4,enexpand43x3,ensqueeze4,enexpand5,enexpand53x3,ensqueeze5,enexpand6,enexpand63x3,ensqueeze6,enexpand7,enexpand73x3,ensqueeze7,enexpand8,enexpand83x3,ensqueeze8,enexpand9,enexpand93x3,ensqueeze9,enconv10_1,enconv10_2}) 
+   case({ensqueeze2,ensqueeze3,ensqueeze4,ensqueeze5,ensqueeze6,ensqueeze7,ensqueeze8,ensqueeze9,squeeze2_endshifted,squeeze3_endshifted,squeeze4_endshifted,squeeze5_endshifted,squeeze6_endshifted,squeeze7_endshifted,squeeze8_endshifted,squeeze9_endshifted}) 
         16'b1000000000000000: begin//squeeze2 64*64*16 needs 64 BRAMs
            clock1 = clksqueeze2;
            clock2 = clksqueeze2;
@@ -1609,46 +1627,44 @@ end
 
 always@(posedge clk  )begin///////choose enable for reading layer
     if(rw==0)begin
-        if(newlayer) startcounter<=1;
-
-        else begin
-            if(startcounter==3)begin
-                if(squeeze2_end)begin
+        begin
+            if(startcounter==4)begin
+                if(squeeze2_endshifted)begin
                 enexpand2<=1;
                 expand21x1<=douta1[a11][channels3_1];
                 expand23x3<=douta2[a12][channels3_2];
                 end
-                else if(squeeze3_end)begin
+                else if(squeeze3_endshifted)begin
                 enexpand3<=1;
                 expand31x1<=douta1[a11][channels3_1];
                 expand33x3<=douta2[a12][channels3_2];
                 end
-                else if(squeeze4_end)begin
+                else if(squeeze4_endshifted)begin
                 enexpand4<=1;
                 expand41x1<=douta1[a11][channels3_1];
                 expand43x3<=douta2[a12][channels3_2];
                 end
-                else if(squeeze5_end)begin
+                else if(squeeze5_endshifted)begin
                 enexpand5<=1;
                 expand51x1<=douta1[a11][channels3_1];
                 expand53x3<=douta2[a12][channels3_2];
                 end
-                else if(squeeze6_end)begin
+                else if(squeeze6_endshifted)begin
                 enexpand6<=1;
                 expand61x1<=douta1[a11][channels3_1];
                 expand63x3<=douta2[a12][channels3_2];
                 end
-                else if(squeeze7_end)begin
+                else if(squeeze7_endshifted)begin
                 enexpand7<=1;
                 expand71x1<=douta1[a11][channels3_1];
                 expand73x3<=douta2[a12][channels3_2];
                 end
-                else if(squeeze8_end)begin
+                else if(squeeze8_endshifted)begin
                 enexpand8<=1;
                 expand81x1<=douta1[a11][channels3_1];
                 expand83x3<=douta2[a12][channels3_2];
                 end
-                else if(squeeze9_end)begin
+                else if(squeeze9_endshifted)begin
                 enexpand9<=1;
                 expand91x1<=douta1[a11][channels3_1];
                 expand93x3<=douta2[a12][channels3_2];

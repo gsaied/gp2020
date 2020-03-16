@@ -205,7 +205,7 @@ reg[9:0] numchannels;/////////total no of input channels for each reading layer
 reg[1:0] rowfilter;////////no of rows in the filter
 reg[1:0] colfilter;////////no of cols in the filter
 reg[1:0] row,col;
-reg [1:0] startcounter;//after 4 cycles 
+reg [2:0] startcounter;//after 4 cycles 
 reg flagread;//enable reading
 reg flagread_shifted;
 reg flagread_shiftedagain;
@@ -250,6 +250,28 @@ reg shift1conv10_1;
 reg shift2conv10_1;
 reg shift1conv10_2;
 reg shift2conv10_2;
+reg conv1_endshifted;
+reg expand2_endshifted;
+reg expand3_endshifted;
+reg expand4_endshifted;
+reg expand5_endshifted;
+reg expand6_endshifted;
+reg expand7_endshifted;
+reg expand8_endshifted;
+reg expand9_endshifted;
+reg conv10_endshifted;
+always@(posedge clk)begin
+conv1_endshifted<=conv1_end;
+expand2_endshifted<=expand2_end;
+expand3_endshifted<=expand3_end;
+expand4_endshifted<=expand4_end;
+expand5_endshifted<=expand5_end;
+expand6_endshifted<=expand6_end;
+expand7_endshifted<=expand7_end;
+expand8_endshifted<=expand8_end;
+expand9_endshifted<=expand9_end;
+conv10_endshifted<=conv10_1end;
+end
    initial begin
         
         shift1conv1=1;
@@ -378,7 +400,7 @@ always@(posedge clk  ) begin
         end
     end
 always@(posedge clk  ) begin
-    if(conv1_end)begin
+    if(conv1_endshifted)begin
         shift1squeeze2<=0;
         shift2squeeze2<=shift1squeeze2;
         squeeze2rst<=shift2squeeze2;
@@ -392,7 +414,7 @@ always@(posedge clk  ) begin
         end
     end
 always@(posedge clk  ) begin
-    if(expand2_end)begin
+    if(expand2_endshifted)begin
         shift1squeeze3<=0;
         shift2squeeze3<=shift1squeeze3;
         squeeze3rst<=shift2squeeze3;
@@ -406,7 +428,7 @@ always@(posedge clk  ) begin
         end
     end
 always@(posedge clk  ) begin
-    if(expand3_end)begin
+    if(expand3_endshifted)begin
         shift1squeeze4<=0;
         shift2squeeze4<=shift1squeeze4;
         squeeze4rst<=shift2squeeze4;
@@ -420,7 +442,7 @@ always@(posedge clk  ) begin
         end
     end
 always@(posedge clk  ) begin
-    if(expand4_end)begin
+    if(expand4_endshifted)begin
         shift1squeeze5<=0;
         shift2squeeze5<=shift1squeeze5;
         squeeze5rst<=shift2squeeze5;
@@ -434,7 +456,7 @@ always@(posedge clk  ) begin
         end
     end
 always@(posedge clk  ) begin
-    if(expand5_end)begin
+    if(expand5_endshifted)begin
         shift1squeeze6<=0;
         shift2squeeze6<=shift1squeeze6;
         squeeze6rst<=shift2squeeze6;
@@ -448,7 +470,7 @@ always@(posedge clk  ) begin
         end
     end
 always@(posedge clk  ) begin
-    if(expand6_end)begin
+    if(expand6_endshifted)begin
         shift1squeeze7<=0;
         shift2squeeze7<=shift1squeeze7;
         squeeze7rst<=shift2squeeze7;
@@ -462,7 +484,7 @@ always@(posedge clk  ) begin
         end
     end
 always@(posedge clk  ) begin
-    if(expand7_end)begin
+    if(expand7_endshifted)begin
         shift1squeeze8<=0;
         shift2squeeze8<=shift1squeeze8;
         squeeze8rst<=shift2squeeze8;
@@ -476,35 +498,35 @@ always@(posedge clk  ) begin
         end
     end
 always@(posedge clk  ) begin
-    if(expand8_end)begin
+    if(expand8_endshifted)begin
         shift1squeeze9<=0;
         shift2squeeze9<=shift1squeeze9;
         squeeze9rst<=shift2squeeze9;
     end
 end
 always@(posedge clk  ) begin
-    if(expand9_end)begin
+    if(expand9_endshifted)begin
         shift1conv10_1<=0;
         shift2conv10_1<=shift1conv10_1;
         conv10_1rst<=shift2conv10_1;
         end
 end
 always@(posedge clk  ) begin
-    if(conv10_1end)begin
+    if(conv10_endshifted)begin
         shift1conv10_2<=0;
         shift2conv10_2<=shift1conv10_2;
         conv10_2rst<=shift2conv10_2;
         end
 end
 ///////////////////////////////////end of reset signals
-      assign  newlayer=(enconv1 && conv1rst)|| (enexpand2 && expand2rst)|| (conv1_end && squeeze2rst)|| (enexpand3 && expand3rst)|| (expand2_end && squeeze3rst)|| (enexpand4 && expand4rst)|| (expand3_end && squeeze4rst)|| (enexpand5 && expand5rst)|| (expand4_end && squeeze5rst)|| (enexpand6 && expand6rst)|| (expand5_end && squeeze6rst)|| (enexpand7 && expand7rst)|| (expand6_end && squeeze7rst)|| (enexpand8 && expand8rst)|| (expand7_end && squeeze8rst)|| (enexpand9 && expand9rst)|| (expand8_end && squeeze9rst)|| (expand9_end && conv10_1rst)||(conv10_1end&&conv10_2rst);
+      assign  newlayer=(enconv1 && conv1rst)|| (enexpand2 && expand2rst)|| (conv1_endshifted && squeeze2rst)|| (enexpand3 && expand3rst)|| (expand2_endshifted && squeeze3rst)|| (enexpand4 && expand4rst)|| (expand3_endshifted && squeeze4rst)|| (enexpand5 && expand5rst)|| (expand4_endshifted && squeeze5rst)|| (enexpand6 && expand6rst)|| (expand5_endshifted && squeeze6rst)|| (enexpand7 && expand7rst)|| (expand6_endshifted && squeeze7rst)|| (enexpand8 && expand8rst)|| (expand7_endshifted && squeeze8rst)|| (enexpand9 && expand9rst)|| (expand8_endshifted && squeeze9rst)|| (expand9_endshifted && conv10_1rst)||(conv10_endshifted&&conv10_2rst);
 
 ////////////////////////////////////////////////////////first shared memory/////////////////////////////////////////////////////////////////////////////////////////////////////
 // layer selection ,clock and input contection to ram  
 always@(*) begin
 
-   //case({enconv1,enexpand2,enexpand23x3,conv1_end,enexpand3,enexpand33x3,ensqueeze3,enexpand4,enexpand43x3,ensqueeze4,enexpand5,enexpand53x3,ensqueeze5,enexpand6,enexpand63x3,ensqueeze6,enexpand7,enexpand73x3,ensqueeze7,enexpand8,enexpand83x3,ensqueeze8,enexpand9,enexpand93x3,ensqueeze9,enconv10_1,enconv10_2}) 
-   case({enconv1,enexpand2,enexpand3,enexpand4,enexpand5,enexpand6,enexpand7,enexpand8,enexpand9,conv1_end,expand2_end,expand3_end,expand4_end,expand5_end,expand6_end,expand7_end,expand8_end,expand9_end,conv10_1end}) 
+   //case({enconv1,enexpand2,enexpand23x3,conv1_endshifted,enexpand3,enexpand33x3,ensqueeze3,enexpand4,enexpand43x3,ensqueeze4,enexpand5,enexpand53x3,ensqueeze5,enexpand6,enexpand63x3,ensqueeze6,enexpand7,enexpand73x3,ensqueeze7,enexpand8,enexpand83x3,ensqueeze8,enexpand9,enexpand93x3,ensqueeze9,enconv10_1,enconv10_2}) 
+   case({enconv1,enexpand2,enexpand3,enexpand4,enexpand5,enexpand6,enexpand7,enexpand8,enexpand9,conv1_endshifted,expand2_endshifted,expand3_endshifted,expand4_endshifted,expand5_endshifted,expand6_endshifted,expand7_endshifted,expand8_endshifted,expand9_endshifted,conv10_endshifted}) 
         19'b1000000000000000000: begin//conv1 128*128*64 needs 1024 BRAMs
            clock1 = clkconv1;
            clock2 = clkconv1;
@@ -741,7 +763,7 @@ always@(*) begin
            dina2[8]=expand93x3[0:ram_num-1];
         end
         
-        19'b0000000001000000000:begin//reading layer conv1_end (3x3)
+        19'b0000000001000000000:begin//reading layer conv1_endshiftedshifted (3x3)
            clock1 = 0;
            clock2 = 0;
            rw=0;
@@ -766,7 +788,7 @@ always@(*) begin
                 end
            end      
         end
-        19'b0000000000100000000:begin//reading layer expand2_end (1x1)
+        19'b0000000000100000000:begin//reading layer expand2_endshifted (1x1)
            clock1 = 0;
            clock2 = 0;
            rw=0;
@@ -2065,19 +2087,19 @@ always@(posedge clk  ) begin
                     
                     else begin//IF ROW DIDN'T END
                          if(channels_counter<64)begin
-                             if(expand5_end&&(index>=992&&index<2048)) index<=index+({7'b0,lengthofrow}-2)+1024;
+                             if(expand5_endshifted&&(index>=992&&index<2048)) index<=index+({7'b0,lengthofrow}-2)+1024;
                              else index<=index+({7'b0,lengthofrow}-2);//shift row 130
                          end
                          else if(channels_counter<128)begin
-                            if(expand5_end&&(index>=2016&&index<3072)) index<=index+({7'b0,lengthofrow}-2)+1024;
+                            if(expand5_endshifted&&(index>=2016&&index<3072)) index<=index+({7'b0,lengthofrow}-2)+1024;
                             else index<=index+({7'b0,lengthofrow}-2);//shift row 130
                          end
                          else if(channels_counter<192)begin
-                             if(expand5_end&&(index>=9184 &&index<10240)) index<=index+({7'b0,lengthofrow}-2)+1024;
+                             if(expand5_endshifted&&(index>=9184 &&index<10240)) index<=index+({7'b0,lengthofrow}-2)+1024;
                              else index<=index+({7'b0,lengthofrow}-2);//shift row 130
                          end
                          else if(channels_counter>=192)begin
-                            if(expand5_end&&(index>=10208 &&index<11264)) index<=index+({7'b0,lengthofrow}-2)+1024;
+                            if(expand5_endshifted&&(index>=10208 &&index<11264)) index<=index+({7'b0,lengthofrow}-2)+1024;
                             else index<=index+({7'b0,lengthofrow}-2);//shift row 130
                          end
                          row<=row+1;
@@ -2124,44 +2146,45 @@ end
 
 always@(posedge clk  )begin///////choose enable for reading layer
     if(rw==0)begin
-        if(startcounter==3)begin
-            if(conv1_end)begin
+    
+        if(startcounter==4)begin
+            if(conv1_endshifted)begin
             ensqueeze2<=1;
             squeeze2<=douta[a1][channels3];
             end
-            else if(expand2_end)begin
+            else if(expand2_endshifted)begin
             ensqueeze3<=1;
             squeeze3<=douta[a1][channels3];
             end
-            else if(expand3_end)begin
+            else if(expand3_endshifted)begin
             ensqueeze4<=1;
             squeeze4<=douta[a1][channels3];
             end
-            else if(expand4_end)begin
+            else if(expand4_endshifted)begin
             ensqueeze5<=1;
             squeeze5<=douta[a1][channels3];
             end
-            else if(expand5_end)begin
+            else if(expand5_endshifted)begin
             ensqueeze6<=1;
             squeeze6<=douta[a1][channels3];
             end
-            else if(expand6_end)begin
+            else if(expand6_endshifted)begin
             ensqueeze7<=1;
             squeeze7<=douta[a1][channels3];
             end
-            else if(expand7_end)begin
+            else if(expand7_endshifted)begin
             ensqueeze8<=1;
             squeeze8<=douta[a1][channels3];
             end
-            else if(expand8_end)begin
+            else if(expand8_endshifted)begin
             ensqueeze9<=1;
             squeeze9<=douta[a1][channels3];
             end
-            else if(expand9_end)begin
+            else if(expand9_endshifted)begin
             enconv10_1<=1;
             conv10_1<=douta[a1][channels3];
             end
-            else if(conv10_1end)begin
+            else if(conv10_endshifted)begin
             enconv10_2<=1;
             conv10_2<=douta[a1][channels3];
             end

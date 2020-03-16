@@ -28,20 +28,23 @@ module fire2_3_expand_3 #(
 	output fire2_expand_3_finish,
 	output fire3_expand_3_finish,
 	output reg fire2_expand_3_sample,
-	output reg [WIDTH-1:0] ofm_2 [0:DSP_NO-1],
 	output reg [WIDTH-1:0] ofm_3 [0:DSP_NO-1]
 );
 	reg fire2_expand_3_end;
 	reg fire3_expand_3_end;
 	reg fire2_expand_3_en;
 	reg fire3_expand_3_en;
-	reg [WIDTH-1:0] ifm_2 ; 
-	reg [WIDTH-1:0] ifm_3 ; 
+	reg [WIDTH-1:0] ifm_2 ;
+	reg [WIDTH-1:0] ifm_3 ;
+	reg [WIDTH-1:0] tempifm2;
+	reg [WIDTH-1:0] tempifm3;
 always @(posedge clk) begin
-	fire2_expand_3_en <= fire2_expand_3_en_i;
-	fire3_expand_3_en <= fire3_expand_3_en_i;
-	ifm_3<= ifm_3_i ; 
-	ifm_2<= ifm_2_i ; 
+    tempifm2<=ifm_2_i;
+    tempifm3<=ifm_3_i;
+	fire2_expand_3_en <= fire2_expand_3_en_i ;
+	fire3_expand_3_en <= fire3_expand_3_en_i ;
+	ifm_2<= tempifm2 ; 
+	ifm_3<= tempifm3 ; 
 end
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
@@ -71,17 +74,23 @@ wrapper_rom_fire3 u_3 (
 	.rom_out(kernels_3)
 );
 reg layer_en_reg ;
+reg entemp;
 always @(posedge clk) begin
-    layer_en_reg <= fire2_expand_3_en || fire3_expand_3_en ; 
+    entemp<=fire2_expand_3_en || fire3_expand_3_en;
+    layer_en_reg <= entemp ; 
 end 
 ///////////////////////////////////
 //this signal is very important to track
 //represents a pulse to clr pin of mac 
 ///////////////////////////////////
 reg clr_pulse ; 
+reg temp_clr_pulse ;
 reg rom_clr_pulse;
-wire rst_gen ;// resets all signals after fire2 ends
-always @(posedge clk) clr_pulse <= rom_clr_pulse ;
+wire rst_gen ; 
+always@ (posedge clk) begin
+temp_clr_pulse <= rom_clr_pulse ;
+clr_pulse<= temp_clr_pulse;
+end
 ///////
 ///////
 always @(posedge clk/* or negedge rst*/) begin
@@ -98,7 +107,7 @@ assign rst_gen = fire2_expand_3_end && fire2_expand_3_en ;
 //ENABLE SIGNALS MULTIPLEX//
 //ROM & INPUTS TO MAC///////
 ////////////////////////////
-always @(*) begin
+always @(posedge clk) begin
 	if (fire2_expand_3_en) begin
 		kernels <= kernels_2 ;
 		biasing_wire <= biasing_wire_2 ; 	
@@ -171,15 +180,9 @@ always@(posedge clk) begin
 	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 ) begin 
-				if (fire2_expand_3_en)
-					ofm_2[i] <= 16'b0 ;
-				else if (fire3_expand_3_en)
 					ofm_3[i] <= 16'b0 ;
 			end
 			else begin
-				if (fire2_expand_3_en)
-					ofm_2[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
-				else if (fire3_expand_3_en)
 					ofm_3[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
 			end
 		end

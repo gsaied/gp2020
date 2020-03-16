@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Mar 14 13:34:36 2020
+# Process ID: 18447
+# Current directory: /home/gsaied/Desktop/old_rtl/fire4_5_expand1
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/fire4_5_expand1/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire4_5_expand1/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+report_timing -file final_slack.rpt
+vi fire4_5_expand1.sv 
+report_high_fanout_nets 
+vi fire4_5_expand1.sv 
+synth_design -top amc
+synth_design -top mac
+report_timing

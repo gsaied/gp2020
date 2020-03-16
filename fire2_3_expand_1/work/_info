@@ -1,0 +1,34 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/gsaied/Desktop/old_rtl/fire2_3_expand_1
+vbiasing_fire2_expand1
+DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1584230091
+!i10b 1
+!s100 3R9aHJN:B059RfZL>I3iM0
+IIz`Z_XZ4JCd0ZAC<eE0C62
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 biasing_fire2_expand1_sv_unit
+S1
+R0
+w1584230087
+8biasing_fire2_expand1.sv
+Fbiasing_fire2_expand1.sv
+L0 2
+OL;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1584230091.000000
+!s107 biasing_fire2_expand1.sv|
+!s90 biasing_fire2_expand1.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0

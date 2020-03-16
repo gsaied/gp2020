@@ -28,7 +28,6 @@ module fire2_3_expand_1 #(
 	//output fire2_expand_1_finish,
 	//output fire3_expand_1_finish,
 	output reg fire2_expand_1_sample,
-	output reg [WIDTH-1:0] ofm_2 [0:DSP_NO-1],
 	output reg [WIDTH-1:0] ofm_3 [0:DSP_NO-1]
 );
 	reg fire2_expand_1_end;
@@ -37,11 +36,15 @@ module fire2_3_expand_1 #(
 	reg fire3_expand_1_en ; 
 	reg [WIDTH-1:0] ifm_2 ;
 	reg [WIDTH-1:0] ifm_3 ;
+	reg [WIDTH-1:0] tempifm2;
+	reg [WIDTH-1:0] tempifm3;
 always @(posedge clk) begin
+	tempifm2<=ifm_2_i;
+	tempifm3<=ifm_3_i;
 	fire2_expand_1_en <= fire2_expand_1_en_i ;
 	fire3_expand_1_en <= fire3_expand_1_en_i ;
-	ifm_2<= ifm_2_i ; 
-	ifm_3<= ifm_3_i ; 
+	ifm_2<= tempifm2 ; 
+	ifm_3<= tempifm3 ; 
 end
 wire [2*WIDTH-1:0] biasing_wire_2 [0:DSP_NO-1] ;
 biasing_fire2_expand1 b7 (
@@ -68,20 +71,26 @@ rom_fire3_expand1 u_3 (
 	.rom_out(kernels_3)
 );
 reg layer_en_reg ;
+reg entemp;
 always @(posedge clk) begin
-    layer_en_reg <= fire2_expand_1_en || fire3_expand_1_en ; 
+    entemp<=fire2_expand_1_en || fire3_expand_1_en;
+    layer_en_reg <= entemp ; 
 end 
 ///////////////////////////////////
 //this signal is very important to track
 //represents a pulse to clr pin of mac 
 ///////////////////////////////////
 reg clr_pulse ; 
+reg temp_clr_pulse ;
 reg rom_clr_pulse;
 wire rst_gen ; 
-always@ (posedge clk) clr_pulse<= rom_clr_pulse;
+always@ (posedge clk) begin
+temp_clr_pulse <= rom_clr_pulse ;
+clr_pulse<= temp_clr_pulse;
+end
 ///////
 ///////
-always @(posedge clk/* or negedge rst*/) begin
+always @(posedge clk/* or posedge rst*/) begin
 	/*if(!rst)
 		weight_rom_address<= 0 ; 
 	else*/ if (rom_clr_pulse || rst_gen)
@@ -98,17 +107,21 @@ assign rst_gen = fire2_expand_1_en && fire2_expand_1_end ;
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
 reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
-always @(*) begin
+always @(posedge clk) begin
 	if (fire2_expand_1_en) begin
 		kernels <= kernels_2 ;
-		biasing_wire <= biasing_wire_2 ; 	
 		ifm<= ifm_2 ; 
 	end
 	else begin 
 		kernels <= kernels_3 ;
-		biasing_wire <= biasing_wire_3 ; 
 		ifm<= ifm_3 ; 
 	end
+end
+always @(*) begin
+	if (fire2_expand_1_en) 
+		biasing_wire <= biasing_wire_2 ; 	
+	else 
+		biasing_wire <= biasing_wire_3 ; 
 end
 always @(posedge clk) begin
 	kernel_regs<=kernels ;		
@@ -117,7 +130,7 @@ end
 //GENERATION OF CLR PULSE///
 ////////////////////////////
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ; 
-always @(posedge clk /*or negedge rst*/) begin
+always @(posedge clk /*or posedge rst*/) begin
 	/*if(!rst) begin
 			clr_pulse <= 1'b0 ; 
 			rom_clr_pulse <= 1'b0 ; 
@@ -174,17 +187,10 @@ always@(posedge clk) begin
 	if(clr_pulse) begin
 		for (int i = 0 ; i< DSP_NO ; i++) begin
 			if(ofmw2[i][31] == 1'b1 ) begin 
-				if (fire2_expand_1_en)
-					ofm_2[i] <= 16'b0 ;
-				else
-					ofm_3[i] <= 16'b0 ;
+				ofm_3[i] <= 16'b0 ;
 			end
 			else begin
-				if (fire2_expand_1_en)
-					ofm_2[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
-				else
-
-					ofm_3[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
+				ofm_3[i] <= {ofmw2[i][31],ofmw2[i][28:14]};
 			end
 		end
 	end
@@ -194,7 +200,7 @@ end
 ///////////////////////////////
 reg [$clog2(WOUT**2):0] fire2_expand_1_timer ;
 reg [$clog2(WOUT**2):0] fire3_expand_1_timer ;
-always @(posedge clk /*or negedge rst*/) begin
+always @(posedge clk /*or posedge rst*/) begin
 	/*if (!rst) begin
 		fire2_expand_1_timer<= 0 ;
 		fire3_expand_1_timer<= 0 ;
@@ -220,7 +226,7 @@ end
 
 (*dont_touch="yes"*)reg ram_feedback_reg_2 ; 
 (*dont_touch="yes"*)reg ram_feedback_reg_3 ; 
-always @(posedge clk /*or negedge rst*/) begin
+always @(posedge clk /*or posedge rst*/) begin
 	/*if(!rst) begin
 		ram_feedback_reg_2<=1'b0 ;
 		ram_feedback_reg_3<=1'b0 ;

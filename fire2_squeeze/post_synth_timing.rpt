@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Fri Mar 13 14:46:41 2020
+| Date         : Mon Mar 16 12:48:06 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_timing -file post_synth_timing.rpt
 | Design       : fire2_squeeze
@@ -35,7 +35,7 @@ Slack (MET) :             0.558ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=328, unset)          0.508     0.508    genblk1[12].mac_k/clk
+                         net (fo=329, unset)          0.508     0.508    genblk1[12].mac_k/clk
                          DSP48E1                                      r  genblk1[12].mac_k/mul_out_reg/CLK
   -------------------------------------------------------------------    -------------------
                          DSP48E1 (Prop_dsp48e1_CLK_P[2])
@@ -72,7 +72,7 @@ Slack (MET) :             0.558ns  (required time - arrival time)
 
                          (clock clk rise edge)        3.200     3.200 r  
                                                       0.000     3.200 r  clk (IN)
-                         net (fo=328, unset)          0.483     3.683    clk
+                         net (fo=329, unset)          0.483     3.683    clk
                          FDRE                                         r  ofm_reg[12][0]/C
                          clock pessimism              0.000     3.683    
                          clock uncertainty           -0.035     3.647    
