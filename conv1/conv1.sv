@@ -31,15 +31,16 @@ wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
 biasing_rom b1 (
 	.bias_mem(biasing_wire)
 );
+wire conv1_en ;
+assign conv1_en = conv1_en_i ;
 ////////////////////////////////////
 	reg conv1_end ; 
-	reg conv1_en ;
-	always @(posedge clk) conv1_en <= conv1_en_i ;
 wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
 reg  [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
 reg [WIDTH-1:0] ker_pl [0:DSP_NO-1] ;
 reg [WIDTH-1:0] ker_pl2 [0:DSP_NO-1] ;
 reg [4:0] clr_counter ;
+//reg [$clog2(WINDOWS)-1:0] conv1_timer ; 
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
@@ -197,7 +198,7 @@ endgenerate//#FILTERS instances of macs
 
 reg [$clog2(WOUT**2):0] conv1_timer ;
 always @(posedge clk) begin//will be modified to use clk_sampling as the counting signal
-	if (conv1_timer > WOUT**2-1)
+	if (conv1_timer > WOUT**2+1)
 		conv1_end <= 1'b1 ;//LAYER_1 HAS FINISHED
 	else if (clr_pulse) 
 		conv1_timer<= conv1_timer+1 ; 
@@ -208,21 +209,21 @@ always @(posedge clk) begin
    conv1_sample <= clr_pulse ; 
 end 
 (* dont_touch = "true" *)reg ram_feedback_reg ; 
+initial ram_feedback_reg<= 1'b0 ;
 always @(posedge clk) begin
         if (ram_feedback) 
                 ram_feedback_reg<= 1'b1;
 end
 assign conv1_finish = conv1_end && !ram_feedback_reg ; 
 initial begin
-	weight_rom_address= 5'b0 ; 
-	row_end = 0 ; 
-	conv1_timer= 0 ;
-	conv1_end = 1'b0 ; 
-	clr_counter= 5'b0 ; 
-	rom_clr_pulse= 1'b0 ;
-	img_addr_counter = 0 ;
-	img_rom_address=18'b0; 
-	ref_address= 18'b0 ; 
-	ram_feedback_reg= 0 ;
+	weight_rom_address<= 5'b0 ; 
+	row_end <= 0 ; 
+	conv1_timer<= 0 ;
+	conv1_end <= 1'b0 ; 
+	clr_counter<= 5'b0 ; 
+	rom_clr_pulse<= 1'b0 ;
+	img_addr_counter <= 0 ;
+	img_rom_address<=18'b0; 
+	ref_address<= 18'b0 ; 
 end
 endmodule

@@ -57,6 +57,7 @@ always @(posedge clk/* or negedge rst*/) begin
 	end
 end
 always @(posedge clk) begin
+	if(fire3_squeeze_en) 
 		kernel_regs<=kernels ;
 end
 reg layer_en_reg ;
@@ -160,6 +161,4 @@ fire3_squeeze_timer=0;
 fire3_squeeze_end=1'b0;
 end
 endmodule
-
-
 

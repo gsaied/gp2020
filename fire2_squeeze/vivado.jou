@@ -2,11 +2,16 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Mar 16 12:46:44 2020
-# Process ID: 22170
+# Start of session at: Tue Mar 17 00:01:02 2020
+# Process ID: 8312
 # Current directory: /home/gsaied/Desktop/old_rtl/fire2_squeeze
-# Command line: vivado -mode tcl -source synth.tcl
+# Command line: vivado -mode tcl -source script_1.tcl
 # Log file: /home/gsaied/Desktop/old_rtl/fire2_squeeze/vivado.log
 # Journal file: /home/gsaied/Desktop/old_rtl/fire2_squeeze/vivado.jou
 #-----------------------------------------------------------
-source synth.tcl
+source script_1.tcl
+read_verilog -sv [ glob *.sv ]
+source script_1.tcl 
+vi script1_post_synth_utilization.rpt 
+synth_design -directive runtimeoptimized -resource_sharing on
+report_utilization 

@@ -1,2 +1,0 @@
-set name aa
-puts ["$name"_asd] ;

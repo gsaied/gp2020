@@ -6,7 +6,7 @@ set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4
 #synth_design -rtl <TOP>
 #start_gui
 #synth_design -top integ -part xc7vx690t -keep_equivalent_registers
-synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_medium -constrset constr -mode out_of_context -retiming
 #keep_hierarchy for brams
 report_utilization -file utiliziation.rpt
 report_utilization -hierarchical -file hierarchical_utilization.rpt

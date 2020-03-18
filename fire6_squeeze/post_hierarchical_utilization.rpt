@@ -1,13 +1,13 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Mar 17 14:02:51 2020
+| Date         : Tue Mar 17 14:05:27 2020
 | Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
-| Command      : report_utilization -hierarchical -file hierarchical_utilization.rpt
+| Command      : report_utilization -hierarchical -file post_hierarchical_utilization.rpt
 | Design       : fire6_squeeze
 | Device       : 7vx690tffg1157-3
 | Design State : Synthesized
--------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
@@ -21,8 +21,8 @@ Table of Contents
 +---------------------+--------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |       Instance      |       Module       | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +---------------------+--------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| fire6_squeeze       |              (top) |       5011 |       5011 |       0 |    0 | 2552 |     64 |      0 |           64 |
-|   (fire6_squeeze)   |              (top) |         82 |         82 |       0 |    0 | 2552 |      0 |      0 |            0 |
+| fire6_squeeze       |              (top) |       5080 |       5080 |       0 |    0 | 1795 |     64 |      0 |           64 |
+|   (fire6_squeeze)   |              (top) |         87 |         87 |       0 |    0 | 1795 |      0 |      0 |            0 |
 |   genblk1[0].mac_i  |                mac |         31 |         31 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[10].mac_i |              mac_0 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[11].mac_i |              mac_1 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
@@ -87,7 +87,7 @@ Table of Contents
 |   genblk1[7].mac_i  |             mac_60 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[8].mac_i  |             mac_61 |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            1 |
 |   genblk1[9].mac_i  |             mac_62 |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            1 |
-|   u_2               |  rom_fire6_squeeze |       1024 |       1024 |       0 |    0 |    0 |     64 |      0 |            0 |
+|   u_2               |  rom_fire6_squeeze |       1088 |       1088 |       0 |    0 |    0 |     64 |      0 |            0 |
 |   u_3               | rom2_fire6_squeeze |       3097 |       3097 |       0 |    0 |    0 |      0 |      0 |            0 |
 +---------------------+--------------------+------------+------------+---------+------+------+--------+--------+--------------+
 
