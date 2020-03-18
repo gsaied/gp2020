@@ -137,6 +137,7 @@ generate // 2 ram blocks ,each contains 8 instances . port a signals are used , 
         .enb(enb), 
         .addra(addra1),
         .addrb(addrb),
+	.dinb('{default:16'b0}),
         .dina(dina1[i]),
         .douta(douta[i]),
         .doutb(doutb[i])
@@ -159,6 +160,7 @@ generate // 2 ram blocks ,each contains 8 instances . port a signals are used , 
         .addra(addra2),
         .addrb(addrb),
         .dina(dina2[i]),
+	.dinb('{default:16'b0}),
         .douta(douta[i+8]),
         .doutb(doutb[i+8])
         );

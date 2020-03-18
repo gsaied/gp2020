@@ -5,7 +5,6 @@ module ram_3d #(
 )
 (
 	input clk,
-	input rst,
 	input [ram_num-1:0] wea,
 	input [ram_num-1:0] ena,
 	input [ram_num-1:0] web,
@@ -13,16 +12,14 @@ module ram_3d #(
 	input [address-1:0] addra [0:ram_num-1],
 	input [address-1:0] addrb [0:ram_num-1],
 	input [width-1:0] dina [0:ram_num-1],
+	input [width-1:0] dinb [0:ram_num-1],
 	output reg [width-1:0] douta  [0:ram_num-1],
 	output reg [width-1:0] doutb  [0:ram_num-1] 
 );
    (* ram_style="{distributed}" *)
 reg [width-1:0] ram3d [0:ram_num-1][0:2**address-1] ;
-
-	reg [width-1:0] dinb [0:ram_num-1];
 initial  begin
 for(int x=0;x<ram_num;x++)begin
-    dinb[x]=0;
     for(int y=0;y<1024;y++)begin
         ram3d[x][y]=0;
     end
