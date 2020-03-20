@@ -1,27 +1,26 @@
 /* verilator lint_off INITIALDLY */
 module fire9Squeeze #(
-	parameter WOUT = 8,
-	parameter DSP_NO = 112 ,
-	parameter W_IN = 8 ,
+	parameter WOUT_FIRE9SQUEEZE = 8,
+	parameter DSP_NO_FIRE9SQUEEZE = 112 ,
 	parameter WIDTH = 16 ,
-	parameter CHIN = 512,
-	parameter KERNEL_DIM = 1  
+	parameter CHIN_FIRE9SQUEEZE = 512,
+	parameter KERNEL_DIM_FIRE9SQUEEZE = 1  
 )
 (
 	input clk,
 	input fire9Squeeze_en,
 	output rom_clr_pulse_o ,
 	input [WIDTH-1:0] ifm_i,
-	input [WIDTH-1:0] kernels [0:DSP_NO-1] ,
+	input [WIDTH-1:0] kernels [0:DSP_NO_FIRE9SQUEEZE-1] ,
 	input ram_feedback,
 	output reg fire9Squeeze_sample,
 	output fire9Squeeze_finish ,
-	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
+	output reg [WIDTH-1:0] ofm [0:DSP_NO_FIRE9SQUEEZE-1]
 );
 reg fire9Squeeze_end;
 reg [WIDTH-1:0] ifm;
 always @(posedge clk) ifm<= ifm_i ; 
-wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
+wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO_FIRE9SQUEEZE-1] ;
 biasing_fire9Squeeze b7 (
 	.bias_mem(biasing_wire)
 );
@@ -46,14 +45,14 @@ end
 ////////////////////////////
 //GENERATION OF CLR PULSE///
 ////////////////////////////
-reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ;
+reg [$clog2(KERNEL_DIM_FIRE9SQUEEZE**2*CHIN_FIRE9SQUEEZE):0] clr_counter ;
 always @(posedge clk) begin
 	if (!fire9Squeeze_end && fire9Squeeze_en) begin
-		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
+		if(clr_counter == KERNEL_DIM_FIRE9SQUEEZE**2*CHIN_FIRE9SQUEEZE-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
 		end
-		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
+		else if(clr_counter == KERNEL_DIM_FIRE9SQUEEZE**2*CHIN_FIRE9SQUEEZE) begin
 			clr_counter <= 0 ;
 			rom_clr_pulse <= 1'b0 ;
 		end
@@ -66,10 +65,10 @@ end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH-1:0] ofmw [0:DSP_NO_FIRE9SQUEEZE-1];
+reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO_FIRE9SQUEEZE-1];
 genvar i ;
-generate for (i = 0 ; i< DSP_NO ; i++) begin
+generate for (i = 0 ; i< DSP_NO_FIRE9SQUEEZE ; i++) begin
 	mac mac_i (
 		.clr(clr_pulse),
 		.clk(clk),
@@ -84,13 +83,13 @@ endgenerate
 //OUTPUT IS READY TO BE SAMPLED//
 /////////////////////////////////
 always @(*) begin
-	for (int i = 0 ; i < DSP_NO ; i++) begin
+	for (int i = 0 ; i < DSP_NO_FIRE9SQUEEZE ; i++) begin
 		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
 	end
 end
 always@(posedge clk) begin
 	if(clr_pulse ) begin
-		for (int i = 0 ; i< DSP_NO ; i++) begin
+		for (int i = 0 ; i< DSP_NO_FIRE9SQUEEZE ; i++) begin
 			if(ofmw2[i][31] == 1'b1 )
 				ofm[i] <= 16'b0 ;
 			else
@@ -101,9 +100,9 @@ end
 ///////////////////////////////
 //CHECK FOR LAYER END//////////
 ///////////////////////////////
-reg [$clog2(WOUT**2):0] fire9Squeeze_timer ;
+reg [$clog2(WOUT_FIRE9SQUEEZE**2):0] fire9Squeeze_timer ;
 always @(posedge clk) begin
-	if (fire9Squeeze_timer > WOUT**2-1)
+	if (fire9Squeeze_timer > WOUT_FIRE9SQUEEZE**2-1)
 		fire9Squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire9Squeeze_timer<= fire9Squeeze_timer+1 ;

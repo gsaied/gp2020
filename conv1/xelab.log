@@ -1,0 +1,16 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab --timescale 1ns/1ps conv1_tb 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.biasing_rom
+Compiling module work.rom_array_layer_1
+Compiling module work.wrapper_image
+Compiling module work.conv_mac
+Compiling module work.conv1_default
+Compiling module work.conv1_tb
+Built simulation snapshot work.conv1_tb

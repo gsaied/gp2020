@@ -80,6 +80,7 @@ module zynqnet#(
     wire clkexpand23x3;
     wire clkexpand41x1;
     wire clkexpand43x3;
+    wire clkexpand51x1;
     wire clkexpand61x1;
     wire clkexpand63x3;
     wire clkexpand71x1;
@@ -207,7 +208,8 @@ module zynqnet#(
               .ifm_4_i(expand41x1in),
               .ifm_5_i(expand51x1in),
               .ofm_5(expand51x1out),
-              .fire4_expand_1_sample(clkexpand41x1));   
+              .fire4_expand_1_sample(clkexpand41x1),
+              .fire5_expand_1_sample(clkexpand51x1));   
               
   fire4_5_expand_3 fire4_5_expand_3(.clk(clk),
               .fire4_expand_3_en_i(enexpand4),
@@ -323,8 +325,8 @@ module zynqnet#(
   conv10_1_2 conv10_1_2 (.clk(clk),
               .conv10_1_en_i(enconv10_1),
               .conv10_2_en_i(enconv10_2),
-	          .ram_feedback_1(conv10_2end),
-	          .ram_feedback_2(0), 
+	      .ram_feedback_1(conv10_2end),
+              .ram_feedback_2(1'b0), 
               .ifm_1_i(conv10_1in),
               .ifm_2_i(conv10_2in),
               .conv10_1_finish(conv10_1end),
@@ -333,7 +335,7 @@ module zynqnet#(
               .conv10_1_sample(clkconv10_1));       
 
 
-  acc_array pool (.clk(clk),
+   acc_array average_pool(.clk(clk),
               .conv10_1_end(conv10_1end),
               .conv10_2_end(conv10_2end),
               .en_conv10_1(enconv10_1),
@@ -376,7 +378,7 @@ FirstSharedMemory BRAM1(
                 .clkexpand33x3(clkexpand23x3),
                 .clkexpand41x1(clkexpand41x1),
                 .clkexpand43x3(clkexpand43x3),
-                .clkexpand51x1(clkexpand41x1),
+                .clkexpand51x1(clkexpand51x1),
                 .clkexpand53x3(clkexpand43x3),
                 .clkexpand61x1(clkexpand61x1),
                 .clkexpand63x3(clkexpand63x3),

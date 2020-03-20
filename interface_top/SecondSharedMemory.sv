@@ -102,14 +102,18 @@ reg [width-1:0] dina1 [0:num_instances1-1][0:ram_num-1];
 reg [width-1:0] douta1 [0:num_instances1-1][0:ram_num-1];
 reg [width-1:0] douta2 [0:num_instances2-1][0:ram_num-1];
 reg [width-1:0] dina2 [0:num_instances2-1][0:ram_num-1];
-reg [width-1:0] dinb [0:ram_num-1];
 reg [ram_num-1:0] ena2[0:num_instances2-1];
 reg [ram_num-1:0] web;
 reg [ram_num-1:0] enb;
 reg [ram_num-1:0] wea1[0:num_instances1-1];
 reg [ram_num-1:0] wea2[0:num_instances2-1];
 reg [ram_num-1:0] ena1[0:num_instances1-1];
-   
+(* dont_touch = "true" *) reg [width-1:0] dinb [0:ram_num-1] ;
+initial  begin
+for(int x=0;x<ram_num;x++)begin
+    dinb[x]=0;
+end
+end
 genvar i;
 generate // 2 ram blocks ,each contains 8 instances . port a signals are used , port b signals aren't used.
     for (i=0; i < num_instances1 ; i=i+1) begin :ram_3d1 
@@ -126,7 +130,7 @@ generate // 2 ram blocks ,each contains 8 instances . port a signals are used , 
         .addra(addra1),
         .addrb(addrb1),
         .dina(dina1[i]),
-	.dinb('{default:16'b0}),
+	.dinb(dinb),
         .douta(douta1[i]),
         .doutb(doutb[i])
         );
@@ -148,7 +152,7 @@ generate // 2 ram blocks ,each contains 8 instances . port a signals are used , 
         .addra(addra2),
         .addrb(addrb2),
         .dina(dina2[i]),
-	.dinb('{default:16'b0}),
+	.dinb(dinb),
         .douta(douta2[i]),
         .doutb(doutb[i+7])
         );
@@ -331,9 +335,7 @@ initial begin
         rowcounter=0;
         flag4=0;
         flagreset=0;
-        for(int j=0;j<ram_num;j++)begin
-               dinb[j]=0;
-        end
+        
         for(int addressrams_counter=0;addressrams_counter<ram_num;addressrams_counter++) begin
         
             addra1[addressrams_counter]=10'b1111111111;
@@ -1689,6 +1691,7 @@ always@(posedge clk  )begin///////choose enable for reading layer
             enexpand5<=0;
             enexpand6<=0;
             enexpand7<=0;
+	    startcounter<=0;
             enexpand8<=0;
             enexpand9<=0;
         end

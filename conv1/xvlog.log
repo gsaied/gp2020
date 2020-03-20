@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/conv1/biasing.sv" into library work
+INFO: [VRFC 10-311] analyzing module biasing_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/conv1/conv1.sv" into library work
+INFO: [VRFC 10-311] analyzing module conv1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/conv1/conv1_tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module conv1_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/conv1/conv_mac.sv" into library work
+INFO: [VRFC 10-311] analyzing module conv_mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/conv1/rom.sv" into library work
+INFO: [VRFC 10-311] analyzing module rom_array_layer_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/gsaied/Desktop/old_rtl/conv1/wrapper_image.sv" into library work
+INFO: [VRFC 10-311] analyzing module wrapper_image

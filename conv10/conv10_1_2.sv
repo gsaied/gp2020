@@ -25,36 +25,20 @@ module conv10_1_2 #(
 	reg conv10_1_end;
 	reg conv10_2_end;
 	wire rst_gen ; 
-	//reg [WIDTH-1:0] ifm_1_reg ;
-	//reg [WIDTH-1:0] ifm_2_reg ;
 	reg [WIDTH-1:0] ifm_1 ;
 	reg [WIDTH-1:0] ifm_2 ;
 	reg conv10_1_en ; 
 	reg conv10_2_en ; 
-	reg conv10_1_en_1 ; 
-	reg conv10_2_en_1 ; 
-	reg conv10_1_en_2 ; 
-	reg conv10_2_en_2 ; 
 ////////////////////////
 /* REGISTERING INPUTS */
 ////////////////////////
+reg [WIDTH-1:0] ifm_1_reg;
 always @(posedge clk) begin
-	/*
-	ifm_1_reg<= ifm_1_i ; 
-	ifm_2_reg<= ifm_2_i ; 
+       conv10_1_en <= conv10_1_en_i ; 
+       conv10_2_en <= conv10_2_en_i ; 
+     	ifm_1_reg<= ifm_1_i ; 
+	ifm_2<= ifm_2_i ;
 	ifm_1<= ifm_1_reg ; 
-	ifm_2<= ifm_2_reg ; 
-	conv10_1_en<= conv10_1_en_i ; 
-	conv10_2_en<= conv10_2_en_i ; 
-	*/
-       conv10_1_en_1 <= conv10_1_en_i ; 
-       conv10_2_en_1 <= conv10_2_en_i ; 
-       conv10_1_en_2 <= conv10_1_en_1 ; 
-       conv10_2_en_2 <= conv10_2_en_1 ; 
-       conv10_1_en <= conv10_1_en_2 ; 
-       conv10_2_en <= conv10_2_en_2 ; 
-       ifm_1<= ifm_1_i ; 
-       ifm_2<= ifm_2_i ; 
 end
 reg [WIDTH-1:0] ifm ; //MUX OUT
 reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT

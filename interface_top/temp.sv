@@ -121,7 +121,12 @@ reg [ram_num-1:0] enb;
 reg [ram_num-1:0] wea1[0:num_instances-1];
 reg [ram_num-1:0] wea2[0:num_instances];
 reg [ram_num-1:0] ena1[0:num_instances-1];
-   
+(* dont_touch = "true" *)reg [width-1:0] dinb [0:ram_num-1] ;
+initial  begin
+for(int x=0;x<ram_num;x++)begin
+    dinb[x]=0;
+end
+end
 genvar i;
 generate // 2 ram blocks ,each contains 8 instances . port a signals are used , port b signals aren't used.
     for (i=0; i < num_instances ; i=i+1) begin :ram_3d1 
@@ -137,7 +142,7 @@ generate // 2 ram blocks ,each contains 8 instances . port a signals are used , 
         .enb(enb), 
         .addra(addra1),
         .addrb(addrb),
-	.dinb('{default:16'b0}),
+	.dinb(dinb),
         .dina(dina1[i]),
         .douta(douta[i]),
         .doutb(doutb[i])
@@ -160,7 +165,7 @@ generate // 2 ram blocks ,each contains 8 instances . port a signals are used , 
         .addra(addra2),
         .addrb(addrb),
         .dina(dina2[i]),
-	.dinb('{default:16'b0}),
+	.dinb(dinb),
         .douta(douta[i+8]),
         .doutb(doutb[i+8])
         );

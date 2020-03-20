@@ -31,12 +31,16 @@ reg fire8_squeeze_en ;
 reg fire9_squeeze_en ;
 reg [WIDTH-1:0] ifm8 ;
 reg [WIDTH-1:0] ifm9 ;
+reg [WIDTH-1:0] ifm8_1 ;
+reg [WIDTH-1:0] ifm9_1 ;
 reg [$clog2(KERNEL_DIM8**2*CHIN8)-1:0] weight_rom_address ;
 always @(posedge clk) begin
 	fire8_squeeze_en  <= fire8_squeeze_en_i ;
 	fire9_squeeze_en  <= fire9_squeeze_en_i ;
-	ifm8<= ifm8_i ; 
-	ifm9<= ifm9_i ; 
+	ifm8_1<= ifm8_i ; 
+	ifm9_1<= ifm9_i ; 
+	ifm8<= ifm8_1 ; 
+	ifm9<= ifm9_1 ; 
 end
 fire8_squeeze u_8 (
 	.kernels(kernels),

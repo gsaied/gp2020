@@ -1,3 +1,0 @@
-phys_opt_design -directive AggressiveExplore
-route_design -directive NoTimingRelaxation
-report_timing 

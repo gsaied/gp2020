@@ -9,13 +9,11 @@
 * WINDOW: 3*3
 */
 module fire4_5_expand_3 #(
-	parameter WOUT = 32,
-	parameter DSP_NO = 128,
-	parameter W_IN = 32,
+	parameter WOUT_FIRE4_5_EXPAND3 = 32,
 	parameter WIDTH = 16 ,
-	parameter CHIN = 32 , 
-	parameter KERNEL_DIM = 3 ,
-	parameter CHOUT =128   
+	parameter CHIN_FIRE4_5_EXPAND3 = 32 , 
+	parameter KERNEL_DIM_FIRE4_5_EXPAND3 = 3 ,
+	parameter DSP_NO_FIRE4_5_EXPAND3 =128   
 )
 (
 	input clk,
@@ -29,28 +27,29 @@ module fire4_5_expand_3 #(
 	output fire4_expand_3_finish,
 	output fire5_expand_3_finish,
 	output reg fire4_expand_3_sample,
-	output reg [WIDTH-1:0] ofm_5 [0:DSP_NO-1]
+	output reg [WIDTH-1:0] ofm_5 [0:DSP_NO_FIRE4_5_EXPAND3-1]
 );
 	reg fire4_expand_3_end;
 	reg fire5_expand_3_end;
+	wire rst_gen ; 
 reg [WIDTH-1:0] ifm ; //MUX OUT
-reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;//MUX OUT
-reg [WIDTH-1:0] kernels [0:DSP_NO-1] ; //MUX OUT
-wire [2*WIDTH-1:0] biasing_wire_4 [0:DSP_NO-1] ;
+reg [2*WIDTH-1:0] biasing_wire [0:DSP_NO_FIRE4_5_EXPAND3-1] ;//MUX OUT
+reg [WIDTH-1:0] kernels [0:DSP_NO_FIRE4_5_EXPAND3-1] ; //MUX OUT
+wire [2*WIDTH-1:0] biasing_wire_4 [0:DSP_NO_FIRE4_5_EXPAND3-1] ;
 biasing_fire4_expand3 b7 (
 	.bias_mem(biasing_wire_4)
 );
-wire [2*WIDTH-1:0] biasing_wire_5 [0:DSP_NO-1] ;
+wire [2*WIDTH-1:0] biasing_wire_5 [0:DSP_NO_FIRE4_5_EXPAND3-1] ;
 biasing_fire5_expand3 b8 (
 	.bias_mem(biasing_wire_5)
 );
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
-wire [WIDTH-1:0] kernels_4 [0:DSP_NO-1] ; 
-wire [WIDTH-1:0] kernels_5 [0:DSP_NO-1] ; 
-reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ; 
-reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ; 
+wire [WIDTH-1:0] kernels_4 [0:DSP_NO_FIRE4_5_EXPAND3-1] ; 
+wire [WIDTH-1:0] kernels_5 [0:DSP_NO_FIRE4_5_EXPAND3-1] ; 
+reg [WIDTH-1:0] kernel_regs [0:DSP_NO_FIRE4_5_EXPAND3-1] ; 
+reg [$clog2(KERNEL_DIM_FIRE4_5_EXPAND3**2*CHIN_FIRE4_5_EXPAND3)-1:0] weight_rom_address ; 
 //////////////////////////////////
 wrapper_rom_fire4 u_2 (
 	.address(weight_rom_address),
@@ -97,20 +96,6 @@ always@(posedge clk)begin
 	end
 end
 ///////
-initial begin
-weight_rom_address=0;
-rom_clr_pulse=1'b0;
-clr_counter=0;
-ram_feedback_reg_4=1'b0;
-ram_feedback_reg_5=1'b0;
-fire4_expand_3_timer=0;
-fire5_expand_3_timer=0;
-fire4_expand_3_end=1'b0;
-fire5_expand_3_end=1'b0;
-
-
-
-end
 always @(posedge clk /*or negedge rst*/) begin
 	/*if(!rst)
 		weight_rom_address<= 0 ; 
@@ -120,7 +105,6 @@ always @(posedge clk /*or negedge rst*/) begin
 		weight_rom_address<= weight_rom_address+1;
 	end
 end
-wire rst_gen ; 
 assign rst_gen = fire4_expand_3_end && fire4_expand_3_en ;
 ////////////////////////////
 //ENABLE SIGNALS MULTIPLEX//
@@ -144,7 +128,7 @@ end
 ////////////////////////////
 //GENERATION OF CLR PULSE///
 ////////////////////////////
-reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ; 
+reg [$clog2(KERNEL_DIM_FIRE4_5_EXPAND3**2*CHIN_FIRE4_5_EXPAND3):0] clr_counter ; 
 always @(posedge clk/* or negedge rst*/) begin
 	/*if(!rst) begin
 		clr_pulse <= 1'b0 ; 
@@ -152,11 +136,11 @@ always @(posedge clk/* or negedge rst*/) begin
 		clr_counter <= 0 ;
 	end
 	else*/ if (!(fire4_expand_3_end && fire5_expand_3_end) && (fire5_expand_3_en || fire4_expand_3_en) && !rst_gen) begin
-		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
+		if(clr_counter == KERNEL_DIM_FIRE4_5_EXPAND3**2*CHIN_FIRE4_5_EXPAND3-1 ) begin
 			rom_clr_pulse<= 1'b1 ; 
 			clr_counter <= clr_counter+1 ;
 		end
-		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
+		else if(clr_counter == KERNEL_DIM_FIRE4_5_EXPAND3**2*CHIN_FIRE4_5_EXPAND3) begin
 			clr_counter <= 0 ;
 		
 			rom_clr_pulse <= 1'b0 ; 
@@ -175,10 +159,10 @@ end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH-1:0] ofmw [0:DSP_NO_FIRE4_5_EXPAND3-1];
+reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO_FIRE4_5_EXPAND3-1];
 genvar i ; 
-generate for (i = 0 ; i< CHOUT ; i++) begin
+generate for (i = 0 ; i< DSP_NO_FIRE4_5_EXPAND3 ; i++) begin
 	mac mac_i (
 		.clr(clr_pulse || rst_gen),
 		.clk(clk),
@@ -194,13 +178,13 @@ endgenerate
 //OUTPUT IS READY TO BE SAMPLED//
 /////////////////////////////////
 always @(*) begin
-	for (int i = 0 ; i < DSP_NO ; i++) begin
+	for (int i = 0 ; i < DSP_NO_FIRE4_5_EXPAND3 ; i++) begin
 		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
 	end
 end
 always@(posedge clk) begin
 	if(clr_pulse ) begin
-		for (int i = 0 ; i< DSP_NO ; i++) begin
+		for (int i = 0 ; i< DSP_NO_FIRE4_5_EXPAND3 ; i++) begin
 			if(ofmw2[i][31] == 1'b1 ) begin 
 				ofm_5[i] <= 16'b0 ;
 			end
@@ -213,8 +197,8 @@ end
 ///////////////////////////////
 //CHECK FOR LAYER END//////////
 ///////////////////////////////
-reg [$clog2(WOUT**2):0] fire4_expand_3_timer ;
-reg [$clog2(WOUT**2):0] fire5_expand_3_timer ;
+reg [$clog2(WOUT_FIRE4_5_EXPAND3**2):0] fire4_expand_3_timer ;
+reg [$clog2(WOUT_FIRE4_5_EXPAND3**2):0] fire5_expand_3_timer ;
 always @(posedge clk/* or negedge rst*/) begin
 	/*if (!rst) begin
 		fire4_expand_3_timer<= 0 ;
@@ -223,13 +207,13 @@ always @(posedge clk/* or negedge rst*/) begin
 		fire5_expand_3_end <= 1'b0 ; 
 	end
 	else*/ if (fire4_expand_3_en) begin
-		if (fire4_expand_3_timer > WOUT**2-1)
+		if (fire4_expand_3_timer > WOUT_FIRE4_5_EXPAND3**2-1)
 			fire4_expand_3_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire4_expand_3_timer<= fire4_expand_3_timer+1 ; 
 		end
 	else begin
-		if (fire5_expand_3_timer > WOUT**2-1)
+		if (fire5_expand_3_timer > WOUT_FIRE4_5_EXPAND3**2-1)
 			fire5_expand_3_end <= 1'b1 ;
 		else if (clr_pulse)
 			fire5_expand_3_timer<= fire5_expand_3_timer+1 ; 
@@ -255,5 +239,16 @@ always @(posedge clk/* or negedge rst*/) begin
 end
 assign fire4_expand_3_finish = fire4_expand_3_end && !ram_feedback_reg_4 ;
 assign fire5_expand_3_finish = fire5_expand_3_end && !ram_feedback_reg_5 ;
+initial begin
+weight_rom_address=0;
+rom_clr_pulse=1'b0;
+clr_counter=0;
+ram_feedback_reg_4=1'b0;
+ram_feedback_reg_5=1'b0;
+fire4_expand_3_timer=0;
+fire5_expand_3_timer=0;
+fire4_expand_3_end=1'b0;
+fire5_expand_3_end=1'b0;
+end
 endmodule
 

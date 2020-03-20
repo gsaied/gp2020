@@ -1,11 +1,10 @@
 /*verilator lint_off WIDTH*/
 module fire3_squeeze #(
-	parameter WOUT = 64,
-	parameter DSP_NO = 16 ,
-	parameter W_IN = 64 ,
+	parameter WOUT_FIRE3_SQUEEZE = 64,
+	parameter DSP_NO_FIRE3_SQUEEZE = 16 ,
 	parameter WIDTH = 16 ,
-	parameter CHIN = 128,
-	parameter KERNEL_DIM = 1  
+	parameter CHIN_FIRE3_SQUEEZE = 128,
+	parameter KERNEL_DIM_FIRE3_SQUEEZE = 1  
 )
 (
 	input clk,
@@ -15,25 +14,27 @@ module fire3_squeeze #(
 	input ram_feedback,
 	output reg fire3_squeeze_sample,
 	output fire3_squeeze_finish ,
-	output reg [WIDTH-1:0] ofm [0:DSP_NO-1]
+	output reg [WIDTH-1:0] ofm [0:DSP_NO_FIRE3_SQUEEZE-1]
 );
 reg fire3_squeeze_end;
-wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO-1] ;
+wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO_FIRE3_SQUEEZE-1] ;
 biasing_fire3_squeeze b7 (
 	.bias_mem(biasing_wire)
 );
 reg fire3_squeeze_en ;
 reg [WIDTH-1:0] ifm ; 
+reg [WIDTH-1:0] temp_ifm ; 
 always @(posedge clk) begin
 	fire3_squeeze_en <= fire3_squeeze_en_i ;
-	ifm<= ifm_i; 
+	temp_ifm <= ifm_i ;
+	ifm<= temp_ifm; 
 end	
 ///////////////////////////////////
 //KERNELS INSTANTIATION
 ///////////////////////////////////
-wire [WIDTH-1:0] kernels [0:DSP_NO-1] ;
-reg [WIDTH-1:0] kernel_regs [0:DSP_NO-1] ;
-reg [$clog2(KERNEL_DIM**2*CHIN)-1:0] weight_rom_address ;
+wire [WIDTH-1:0] kernels [0:DSP_NO_FIRE3_SQUEEZE-1] ;
+reg [WIDTH-1:0] kernel_regs [0:DSP_NO_FIRE3_SQUEEZE-1] ;
+reg [$clog2(KERNEL_DIM_FIRE3_SQUEEZE**2*CHIN_FIRE3_SQUEEZE)-1:0] weight_rom_address ;
 //////////////////////////////////
 rom_fire3_squeeze u_2 (
 	.address(weight_rom_address),
@@ -66,7 +67,7 @@ end
 ////////////////////////////
 //GENERATION OF CLR PULSE///
 ////////////////////////////
-reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ;
+reg [$clog2(KERNEL_DIM_FIRE3_SQUEEZE**2*CHIN_FIRE3_SQUEEZE):0] clr_counter ;
 always @(posedge clk /*or negedge rst*/) begin
 	/*if(!rst) begin
 	
@@ -74,11 +75,11 @@ always @(posedge clk /*or negedge rst*/) begin
 		clr_counter <= 0 ;
 	end
 	else*/ if (!fire3_squeeze_end && fire3_squeeze_en) begin
-		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
+		if(clr_counter == KERNEL_DIM_FIRE3_SQUEEZE**2*CHIN_FIRE3_SQUEEZE-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
 		end
-		else if(clr_counter == KERNEL_DIM**2*CHIN) begin
+		else if(clr_counter == KERNEL_DIM_FIRE3_SQUEEZE**2*CHIN_FIRE3_SQUEEZE) begin
 			clr_counter <= 0 ;
 		
 		rom_clr_pulse <= 1'b0 ;
@@ -93,10 +94,10 @@ end
 //////////////////////////////
 //CORE GENERATION/////////////
 //////////////////////////////
-wire [2*WIDTH-1:0] ofmw [0:DSP_NO-1];
-reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO-1];
+wire [2*WIDTH-1:0] ofmw [0:DSP_NO_FIRE3_SQUEEZE-1];
+reg [2*WIDTH-1:0] ofmw2 [0:DSP_NO_FIRE3_SQUEEZE-1];
 genvar i ;
-generate for (i = 0 ; i< DSP_NO ; i++) begin
+generate for (i = 0 ; i< DSP_NO_FIRE3_SQUEEZE ; i++) begin
 	mac mac_i (
 		.clr(clr_pulse),
 		.clk(clk),
@@ -112,13 +113,13 @@ endgenerate
 //OUTPUT IS READY TO BE SAMPLED//
 /////////////////////////////////
 always @(*) begin
-	for (int i = 0 ; i < DSP_NO ; i++) begin
+	for (int i = 0 ; i < DSP_NO_FIRE3_SQUEEZE ; i++) begin
 		ofmw2[i]  = ofmw[i] + biasing_wire[i]  ;
 	end
 end
 always@(posedge clk) begin
 	if(clr_pulse) begin
-		for (int i = 0 ; i< DSP_NO ; i++) begin
+		for (int i = 0 ; i< DSP_NO_FIRE3_SQUEEZE ; i++) begin
 			if(ofmw2[i][31] == 1'b1 )
 				ofm[i] <= 16'b0 ;
 			else
@@ -129,13 +130,13 @@ end
 ///////////////////////////////
 //CHECK FOR LAYER END//////////
 ///////////////////////////////
-reg [$clog2(WOUT**2):0] fire3_squeeze_timer ;
+reg [$clog2(WOUT_FIRE3_SQUEEZE**2):0] fire3_squeeze_timer ;
 always @(posedge clk /*or negedge rst*/) begin
 	/*if (!rst) begin
 		fire3_squeeze_timer<= 0 ;
 		fire3_squeeze_end <= 1'b0 ;
 	end
-	else*/ if (fire3_squeeze_timer >WOUT**2-1)
+	else*/ if (fire3_squeeze_timer >WOUT_FIRE3_SQUEEZE**2-1)
 		fire3_squeeze_end <= 1'b1 ;//LAYER HAS FINISHED
 	else if (clr_pulse)
 		fire3_squeeze_timer<= fire3_squeeze_timer+1 ;

@@ -198,7 +198,7 @@ endgenerate//#FILTERS instances of macs
 
 reg [$clog2(WOUT**2):0] conv1_timer ;
 always @(posedge clk) begin//will be modified to use clk_sampling as the counting signal
-	if (conv1_timer > WOUT**2+1)
+	if (conv1_timer > WOUT**2-1)
 		conv1_end <= 1'b1 ;//LAYER_1 HAS FINISHED
 	else if (clr_pulse) 
 		conv1_timer<= conv1_timer+1 ; 
