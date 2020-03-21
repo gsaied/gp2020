@@ -19,10 +19,12 @@ module fire6_squeeze #(
 reg fire6_squeeze_end;
 reg [WIDTH-1:0] ifm ;
 reg [WIDTH-1:0] temp_ifm ;
+reg [WIDTH-1:0] temp2_ifm ;
 reg fire6_squeeze_en;
 always @(posedge clk) begin
 	temp_ifm <= ifm_i; 
-	ifm<= temp_ifm ; 
+	temp2_ifm <= temp_ifm; 
+	ifm<= temp2_ifm ; 
 	fire6_squeeze_en<= fire6_squeeze_en_i ; 
 end
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO_FIRE6_SQUEEZE-1] ;
