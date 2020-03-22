@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Mar  7 02:07:44 2020
+# Process ID: 23192
+# Current directory: /home/gsaied/Desktop/old_rtl/fire7_expand1
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/fire7_expand1/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire7_expand1/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+vi utiliziation.rpt 
+vi post_utiliziation.rpt 
+opt_design -merge_equivalent_drivers 
+vi utiliziation.rpt 
+open_checkpoint temp_syn.dcp 
+opt_design -resynth_area 
+report_utilization 
+vi utiliziation.rpt 
+opt_design -resynth_seq_area 
+report_utilization 
+set_property HLUTNM gp1 [get_cells *]
+report_utilization 
+get_cells
+get_cells -regexp "LUT2"
+get_cells -regexp "*LUT2"
+get_cells -regexp "LUT"
+get_cells -filter LUT
+get_cells -filter "LUT"
+get_cells -regexp "fire7_expand1_LUT[0,1,2,3]"
+get_cells -regexp "fire7\_expand1\_LUT[0,1,2,3]"
+get_cells -regexp "fire7_expand1_LUT"
+get_cells -regexp "fire7_expand1_LUT."
+get_cells -regexp "fire7_expand1_."
+get_cells -regexp ".."
+place_design -directive Explore
+vi utiliziation.rpt 
+report_utilization 
+opt_design
+route_design -directive Explore
+report_utilization 
+report_timing
+report_timing -file post_routing_timing.rpt
+report_power
+phys_opt_design 
+report_design_analysis 
+open_checkpoint temp_syn.dcp 
+report_timing
+set lut_list [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ LUT.*.* && SOFT_HLUTNM != "" } ]
+set soft_hlutnm [get_property SOFT_HLUTNM $lut_list]
+puts [llength $soft_hlutnm]

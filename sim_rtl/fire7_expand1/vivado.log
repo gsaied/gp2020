@@ -1,0 +1,1313 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar 19 22:19:55 2020
+# Process ID: 13819
+# Current directory: /home/gsaied/Desktop/sim_rtl/fire7_expand1
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/sim_rtl/fire7_expand1/vivado.log
+# Journal file: /home/gsaied/Desktop/sim_rtl/fire7_expand1/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top fire7_expand1 -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13831 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1424.996 ; gain = 37.000 ; free physical = 123 ; free virtual = 3915
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fire7_expand1' [/home/gsaied/Desktop/sim_rtl/fire7_expand1/fire7_expand1.sv:2]
+	Parameter WOUT_FIRE7_EXPAND1 bound to: 16 - type: integer 
+	Parameter DSP_NO_FIRE7_EXPAND1 bound to: 192 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter CHIN_FIRE7_EXPAND1 bound to: 64 - type: integer 
+	Parameter KERNEL_DIM_FIRE7_EXPAND1 bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mac' [/home/gsaied/Desktop/sim_rtl/fire7_expand1/mac.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'mac' (1#1) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/mac.sv:1]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "yes" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/fire7_expand1.sv:149]
+INFO: [Synth 8-6157] synthesizing module 'biasing_fire7_expand1' [/home/gsaied/Desktop/sim_rtl/fire7_expand1/biasing_fire7_expand1.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'biasing_fire7_expand1' (2#1) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/biasing_fire7_expand1.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'rom_fire7_expand1' [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter KERNEL bound to: 1 - type: integer 
+	Parameter ADDR bound to: 6 - type: integer 
+	Parameter NUM bound to: 192 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:22]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:25]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:28]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:31]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:34]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:37]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:40]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:43]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:46]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:49]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:52]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:55]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:58]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:61]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:64]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:67]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:70]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:73]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:76]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:79]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:82]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:85]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:88]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:91]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:94]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:97]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:100]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:103]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:106]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:109]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:112]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:115]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:118]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:121]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:124]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:127]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:130]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:133]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:136]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:139]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:142]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:145]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:148]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:151]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:154]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:157]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:160]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:163]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:166]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:169]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:172]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:175]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:178]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:181]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:184]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:187]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:190]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:193]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:196]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:199]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:202]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:205]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:208]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:211]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:214]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:217]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:220]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:223]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:226]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:229]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:232]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:235]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:238]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:241]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:244]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:247]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:250]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:253]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:256]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:259]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:262]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:265]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:268]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:271]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:274]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:277]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:280]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:283]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:286]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:289]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:292]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:295]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:298]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:301]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:304]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:307]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed}" *) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:310]
+INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_1.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:591]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_2.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:592]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_3.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:593]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_4.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:594]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_5.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:595]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_6.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:596]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_7.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:597]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_8.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:598]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_9.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:599]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_10.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:600]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_11.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:601]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_12.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:602]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_13.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:603]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_14.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:604]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_15.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:605]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_16.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:606]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_17.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:607]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_18.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:608]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_19.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:609]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_20.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:610]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_21.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:611]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_22.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:612]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_23.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:613]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_24.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:614]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_25.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:615]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_26.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:616]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_27.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:617]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_28.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:618]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_29.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:619]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_30.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:620]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_31.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:621]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_32.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:622]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_33.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:623]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_34.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:624]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_35.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:625]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_36.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:626]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_37.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:627]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_38.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:628]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_39.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:629]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_40.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:630]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_41.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:631]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_42.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:632]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_43.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:633]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_44.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:634]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_45.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:635]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_46.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:636]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_47.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:637]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_48.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:638]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_49.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:639]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_50.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:640]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_51.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:641]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_52.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:642]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_53.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:643]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_54.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:644]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_55.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:645]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_56.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:646]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_57.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:647]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_58.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:648]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_59.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:649]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_60.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:650]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_61.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:651]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_62.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:652]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_63.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:653]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_64.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:654]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_65.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:655]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_66.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:656]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_67.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:657]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_68.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:658]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_69.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:659]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_70.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:660]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_71.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:661]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_72.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:662]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_73.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:663]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_74.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:664]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_75.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:665]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_76.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:666]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_77.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:667]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_78.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:668]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_79.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:669]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_80.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:670]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_81.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:671]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_82.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:672]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_83.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:673]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_84.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:674]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_85.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:675]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_86.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:676]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_87.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:677]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_88.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:678]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_89.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:679]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_90.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:680]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_91.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:681]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_92.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:682]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_93.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:683]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_94.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:684]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_95.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:685]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_96.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:686]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_97.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:687]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_98.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:688]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_99.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:689]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'fire7_expand1/file_fire7_expand1_100.mem'; please make sure the file is added to project and has read permission, ignoring [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:690]
+INFO: [Common 17-14] Message 'Synth 8-4445' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_1 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:16]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+WARNING: [Synth 8-3848] Net rom_2 in module/entity rom_fire7_expand1 does not have driver. [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:19]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'rom_fire7_expand1' (3#1) [/home/gsaied/Desktop/sim_rtl/fire7_expand1/rom_fire7_expand1.sv:3]
+1
+INFO: [Common 17-83] Releasing license: Synthesis
+113 Infos, 100 Warnings, 100 Critical Warnings and 1 Errors encountered.
+synth_design failed
+INFO: [Common 17-344] 'source' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 22:20:39 2020...

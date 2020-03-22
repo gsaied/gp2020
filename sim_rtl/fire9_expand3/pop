@@ -1,0 +1,4 @@
+set_property HD.CLK_SRC BUFGCTRL_X0Y17 [get_ports clk]
+set_property HD.CLK_SRC BUFGCTRL_X0Y18 [get_ports clk]
+set_property HD.CLK_SRC BUFGCTRL_X0Y16 [get_ports clk]
+set_property HD.CLK_SRC BUFGCTRL_X0Y2 [get_ports clk]

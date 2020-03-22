@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Mar  4 08:04:30 2020
+# Process ID: 15462
+# Current directory: /home/gsaied/Desktop/old_rtl/fire9_expand1
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/fire9_expand1/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire9_expand1/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+vi utiliziation.rpt 
+report_utilization 
+report_timing
+place_design 

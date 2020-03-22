@@ -1,0 +1,1270 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Mar 17 00:01:02 2020
+# Process ID: 8312
+# Current directory: /home/gsaied/Desktop/old_rtl/fire2_squeeze
+# Command line: vivado -mode tcl -source script_1.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/fire2_squeeze/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire2_squeeze/vivado.jou
+#-----------------------------------------------------------
+source script_1.tcl
+# if {[get_filesets constr] == "constr" } {
+# 	puts "Constraints fileset exists, continuing.." } else {
+# 	puts "Creating Constraints fileset"
+# 	create_fileset -constrset constr
+# 	add_files -fileset constr temp.xdc
+# }
+WARNING: [Vivado 12-1022] No filesets matching 'constr'
+Creating Constraints fileset
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_medium -constrset constr -retiming -no_srlextract
+Command: synth_design -top {} -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_medium -constrset constr -retiming -no_srlextract
+0 Infos, 0 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+ERROR: [Common 17-162] Invalid option value specified for '-top'.
+read_verilog -sv [ glob *.sv ]
+/home/gsaied/Desktop/old_rtl/fire2_squeeze/mac.sv /home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv /home/gsaied/Desktop/old_rtl/fire2_squeeze/biasing_fire2_squeeze.sv /home/gsaied/Desktop/old_rtl/fire2_squeeze/fire2_squeeze.sv
+source script_1.tcl 
+# if {[get_filesets constr] == "constr" } {
+# 	puts "Constraints fileset exists, continuing.." } else {
+# 	puts "Creating Constraints fileset"
+# 	create_fileset -constrset constr
+# 	add_files -fileset constr temp.xdc
+# }
+Constraints fileset exists, continuing..
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_medium -constrset constr -retiming -no_srlextract
+Command: synth_design -top fire2_squeeze -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_medium -constrset constr -retiming -no_srlextract
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8326 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1427.457 ; gain = 72.000 ; free physical = 1985 ; free virtual = 6250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fire2_squeeze' [/home/gsaied/Desktop/old_rtl/fire2_squeeze/fire2_squeeze.sv:1]
+	Parameter WOUT_FIRE2_SQUEEZE bound to: 64 - type: integer 
+	Parameter DSP_NO_FIRE2_SQUEEZE bound to: 16 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter CHIN bound to: 64 - type: integer 
+	Parameter KERNEL_DIM bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mac' [/home/gsaied/Desktop/old_rtl/fire2_squeeze/mac.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'mac' (1#1) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/mac.sv:1]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/fire2_squeeze.sv:147]
+INFO: [Synth 8-6157] synthesizing module 'biasing_fire2_squeeze' [/home/gsaied/Desktop/old_rtl/fire2_squeeze/biasing_fire2_squeeze.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'biasing_fire2_squeeze' (2#1) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/biasing_fire2_squeeze.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'rom_fire2_squeeze' [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter ADDR bound to: 10 - type: integer 
+	Parameter NUM bound to: 16 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:15]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:18]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:21]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:24]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:27]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:30]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:33]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:36]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:39]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:42]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:45]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:48]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:51]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:54]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:57]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:60]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_1.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:62]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_2.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:63]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_3.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:64]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_4.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:65]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_5.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:66]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_6.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:67]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_7.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:68]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_8.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:69]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_9.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:70]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_10.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:71]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_11.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:72]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_12.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:73]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_13.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:74]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_14.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:75]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_15.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:76]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_16.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:77]
+INFO: [Synth 8-6155] done synthesizing module 'rom_fire2_squeeze' (3#1) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fire2_squeeze' (4#1) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/fire2_squeeze.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1473.207 ; gain = 117.750 ; free physical = 1984 ; free virtual = 6257
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1473.207 ; gain = 117.750 ; free physical = 1987 ; free virtual = 6259
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1473.207 ; gain = 117.750 ; free physical = 1987 ; free virtual = 6259
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1157-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire2_squeeze/temp.xdc]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire2_squeeze/temp.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1990.480 ; gain = 0.000 ; free physical = 1444 ; free virtual = 5816
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1990.480 ; gain = 0.000 ; free physical = 1443 ; free virtual = 5815
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1990.480 ; gain = 0.000 ; free physical = 1443 ; free virtual = 5815
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1990.480 ; gain = 635.023 ; free physical = 1525 ; free virtual = 5903
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1157-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1990.480 ; gain = 635.023 ; free physical = 1525 ; free virtual = 5903
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1990.480 ; gain = 635.023 ; free physical = 1523 ; free virtual = 5904
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "rom_6" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1990.480 ; gain = 635.023 ; free physical = 1512 ; free virtual = 5890
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 16    
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 16    
+	               16 Bit    Registers := 50    
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---ROMs : 
+	                              ROMs := 15    
++---Muxes : 
+	 577 Input     16 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fire2_squeeze 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 16    
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 18    
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module rom_fire2_squeeze 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 32    
++---ROMs : 
+	                              ROMs := 15    
++---Muxes : 
+	 577 Input     16 Bit        Muxes := 1     
+Module mac 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP genblk1[0].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[0].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[0].mac_k/mul_out_reg.
+DSP Report: register genblk1[0].mac_k/mul_out_reg is absorbed into DSP genblk1[0].mac_k/mul_out_reg.
+DSP Report: operator genblk1[0].mac_k/intermed is absorbed into DSP genblk1[0].mac_k/mul_out_reg.
+DSP Report: operator genblk1[0].mac_k/intermed0 is absorbed into DSP genblk1[0].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[1].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[1].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[1].mac_k/mul_out_reg.
+DSP Report: register genblk1[1].mac_k/mul_out_reg is absorbed into DSP genblk1[1].mac_k/mul_out_reg.
+DSP Report: operator genblk1[1].mac_k/intermed is absorbed into DSP genblk1[1].mac_k/mul_out_reg.
+DSP Report: operator genblk1[1].mac_k/intermed0 is absorbed into DSP genblk1[1].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[2].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[2].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[2].mac_k/mul_out_reg.
+DSP Report: register genblk1[2].mac_k/mul_out_reg is absorbed into DSP genblk1[2].mac_k/mul_out_reg.
+DSP Report: operator genblk1[2].mac_k/intermed is absorbed into DSP genblk1[2].mac_k/mul_out_reg.
+DSP Report: operator genblk1[2].mac_k/intermed0 is absorbed into DSP genblk1[2].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[3].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[3].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[3].mac_k/mul_out_reg.
+DSP Report: register genblk1[3].mac_k/mul_out_reg is absorbed into DSP genblk1[3].mac_k/mul_out_reg.
+DSP Report: operator genblk1[3].mac_k/intermed is absorbed into DSP genblk1[3].mac_k/mul_out_reg.
+DSP Report: operator genblk1[3].mac_k/intermed0 is absorbed into DSP genblk1[3].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[4].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[4].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[4].mac_k/mul_out_reg.
+DSP Report: register genblk1[4].mac_k/mul_out_reg is absorbed into DSP genblk1[4].mac_k/mul_out_reg.
+DSP Report: operator genblk1[4].mac_k/intermed is absorbed into DSP genblk1[4].mac_k/mul_out_reg.
+DSP Report: operator genblk1[4].mac_k/intermed0 is absorbed into DSP genblk1[4].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[5].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[5].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[5].mac_k/mul_out_reg.
+DSP Report: register genblk1[5].mac_k/mul_out_reg is absorbed into DSP genblk1[5].mac_k/mul_out_reg.
+DSP Report: operator genblk1[5].mac_k/intermed is absorbed into DSP genblk1[5].mac_k/mul_out_reg.
+DSP Report: operator genblk1[5].mac_k/intermed0 is absorbed into DSP genblk1[5].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[6].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[6].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[6].mac_k/mul_out_reg.
+DSP Report: register genblk1[6].mac_k/mul_out_reg is absorbed into DSP genblk1[6].mac_k/mul_out_reg.
+DSP Report: operator genblk1[6].mac_k/intermed is absorbed into DSP genblk1[6].mac_k/mul_out_reg.
+DSP Report: operator genblk1[6].mac_k/intermed0 is absorbed into DSP genblk1[6].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[7].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[7].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[7].mac_k/mul_out_reg.
+DSP Report: register genblk1[7].mac_k/mul_out_reg is absorbed into DSP genblk1[7].mac_k/mul_out_reg.
+DSP Report: operator genblk1[7].mac_k/intermed is absorbed into DSP genblk1[7].mac_k/mul_out_reg.
+DSP Report: operator genblk1[7].mac_k/intermed0 is absorbed into DSP genblk1[7].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[8].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[8].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[8].mac_k/mul_out_reg.
+DSP Report: register genblk1[8].mac_k/mul_out_reg is absorbed into DSP genblk1[8].mac_k/mul_out_reg.
+DSP Report: operator genblk1[8].mac_k/intermed is absorbed into DSP genblk1[8].mac_k/mul_out_reg.
+DSP Report: operator genblk1[8].mac_k/intermed0 is absorbed into DSP genblk1[8].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[9].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[9].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[9].mac_k/mul_out_reg.
+DSP Report: register genblk1[9].mac_k/mul_out_reg is absorbed into DSP genblk1[9].mac_k/mul_out_reg.
+DSP Report: operator genblk1[9].mac_k/intermed is absorbed into DSP genblk1[9].mac_k/mul_out_reg.
+DSP Report: operator genblk1[9].mac_k/intermed0 is absorbed into DSP genblk1[9].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[10].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[10].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[10].mac_k/mul_out_reg.
+DSP Report: register genblk1[10].mac_k/mul_out_reg is absorbed into DSP genblk1[10].mac_k/mul_out_reg.
+DSP Report: operator genblk1[10].mac_k/intermed is absorbed into DSP genblk1[10].mac_k/mul_out_reg.
+DSP Report: operator genblk1[10].mac_k/intermed0 is absorbed into DSP genblk1[10].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[11].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[11].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[11].mac_k/mul_out_reg.
+DSP Report: register genblk1[11].mac_k/mul_out_reg is absorbed into DSP genblk1[11].mac_k/mul_out_reg.
+DSP Report: operator genblk1[11].mac_k/intermed is absorbed into DSP genblk1[11].mac_k/mul_out_reg.
+DSP Report: operator genblk1[11].mac_k/intermed0 is absorbed into DSP genblk1[11].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[12].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[12].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[12].mac_k/mul_out_reg.
+DSP Report: register genblk1[12].mac_k/mul_out_reg is absorbed into DSP genblk1[12].mac_k/mul_out_reg.
+DSP Report: operator genblk1[12].mac_k/intermed is absorbed into DSP genblk1[12].mac_k/mul_out_reg.
+DSP Report: operator genblk1[12].mac_k/intermed0 is absorbed into DSP genblk1[12].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[13].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[13].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[13].mac_k/mul_out_reg.
+DSP Report: register genblk1[13].mac_k/mul_out_reg is absorbed into DSP genblk1[13].mac_k/mul_out_reg.
+DSP Report: operator genblk1[13].mac_k/intermed is absorbed into DSP genblk1[13].mac_k/mul_out_reg.
+DSP Report: operator genblk1[13].mac_k/intermed0 is absorbed into DSP genblk1[13].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[14].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[14].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[14].mac_k/mul_out_reg.
+DSP Report: register genblk1[14].mac_k/mul_out_reg is absorbed into DSP genblk1[14].mac_k/mul_out_reg.
+DSP Report: operator genblk1[14].mac_k/intermed is absorbed into DSP genblk1[14].mac_k/mul_out_reg.
+DSP Report: operator genblk1[14].mac_k/intermed0 is absorbed into DSP genblk1[14].mac_k/mul_out_reg.
+DSP Report: Generating DSP genblk1[15].mac_k/mul_out_reg, operation Mode is: (P+A''*B)'.
+DSP Report: register temp_ifm_reg is absorbed into DSP genblk1[15].mac_k/mul_out_reg.
+DSP Report: register ifm_reg is absorbed into DSP genblk1[15].mac_k/mul_out_reg.
+DSP Report: register genblk1[15].mac_k/mul_out_reg is absorbed into DSP genblk1[15].mac_k/mul_out_reg.
+DSP Report: operator genblk1[15].mac_k/intermed is absorbed into DSP genblk1[15].mac_k/mul_out_reg.
+DSP Report: operator genblk1[15].mac_k/intermed0 is absorbed into DSP genblk1[15].mac_k/mul_out_reg.
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][0]' (FD) to 'u_2/rom_out_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][1]' (FD) to 'u_2/rom_out_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][2]' (FD) to 'u_2/rom_out_reg[5][3]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][3]' (FD) to 'u_2/rom_out_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][4]' (FD) to 'u_2/rom_out_reg[5][5]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][5]' (FD) to 'u_2/rom_out_reg[5][6]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][6]' (FD) to 'u_2/rom_out_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][7]' (FD) to 'u_2/rom_out_reg[5][8]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][8]' (FD) to 'u_2/rom_out_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][9]' (FD) to 'u_2/rom_out_reg[5][10]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][10]' (FD) to 'u_2/rom_out_reg[5][11]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][11]' (FD) to 'u_2/rom_out_reg[5][12]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][12]' (FD) to 'u_2/rom_out_reg[5][13]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][13]' (FD) to 'u_2/rom_out_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][14]' (FD) to 'u_2/rom_out_reg[5][15]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][0]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][1]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][2]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][3]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][4]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][5]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][6]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][7]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][8]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][9]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][10]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][11]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][12]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][13]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][14]' (FD) to 'u_2/kernels_reg[5][15]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1990.480 ; gain = 635.023 ; free physical = 1498 ; free virtual = 5875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------------+-----------------+---------------+----------------+
+|Module Name       | RTL Object      | Depth x Width | Implemented As | 
++------------------+-----------------+---------------+----------------+
+|rom_fire2_squeeze | rom_out_reg[0]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[1]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[2]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[3]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[4]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[6]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[7]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[8]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[9]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[10] | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[11] | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[12] | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[13] | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[14] | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[15] | 1024x16       | Block RAM      | 
++------------------+-----------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fire2_squeeze | (P+A''*B)'  | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_1/u_2/rom_out_reg[0] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_2/u_2/rom_out_reg[1] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_3/u_2/rom_out_reg[2] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_4/u_2/rom_out_reg[3] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_5/u_2/rom_out_reg[4] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_6/u_2/rom_out_reg[6] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_7/u_2/rom_out_reg[7] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_8/u_2/rom_out_reg[8] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_9/u_2/rom_out_reg[9] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_10/u_2/rom_out_reg[10] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_11/u_2/rom_out_reg[11] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_12/u_2/rom_out_reg[12] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_13/u_2/rom_out_reg[13] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_14/u_2/rom_out_reg[14] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_15/u_2/rom_out_reg[15] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1990.480 ; gain = 635.023 ; free physical = 1325 ; free virtual = 5709
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2008.496 ; gain = 653.039 ; free physical = 1320 ; free virtual = 5704
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `fire2_squeeze`
+	Effective logic levels on critical path before retiming is: 7
+	Total number of crtical paths = 207
+
+	Optimizing at the module level
+	Cannot find a feasible solution:
+		Effective logic levels from u_2/rom_out_reg[0](fixed:BRAM/DSP/SRL) to genblk1[0].mac_k/mul_out_reg(fixed:BRAM/DSP/SRL) is: 7
+		Effective logic levels found across for latency (=1) is: 7
+	Optimizing locally to improve critical paths(may not reduce worst delay)
+
+	Effective logic levels on critical path after retiming is: 7
+	Total number of crtical paths = 207
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `fire2_squeeze' done
+
+
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[0] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[1] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[2] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[3] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[4] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[6] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[7] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[8] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[9] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[10] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[11] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[12] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[13] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[14] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[15] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2008.496 ; gain = 653.039 ; free physical = 1315 ; free virtual = 5699
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2008.496 ; gain = 653.039 ; free physical = 1314 ; free virtual = 5698
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2008.496 ; gain = 653.039 ; free physical = 1314 ; free virtual = 5698
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2008.496 ; gain = 653.039 ; free physical = 1312 ; free virtual = 5696
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2008.496 ; gain = 653.039 ; free physical = 1312 ; free virtual = 5696
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2008.496 ; gain = 653.039 ; free physical = 1312 ; free virtual = 5696
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2008.496 ; gain = 653.039 ; free physical = 1312 ; free virtual = 5696
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     1|
+|2     |CARRY4      |    99|
+|3     |DSP48E1     |    15|
+|4     |DSP48E1_1   |     1|
+|5     |LUT1        |   180|
+|6     |LUT2        |    23|
+|7     |LUT3        |     5|
+|8     |LUT4        |     6|
+|9     |LUT5        |     9|
+|10    |LUT6        |    21|
+|11    |MUXF7       |     6|
+|12    |RAMB18E1    |     1|
+|13    |RAMB18E1_1  |     1|
+|14    |RAMB18E1_10 |     1|
+|15    |RAMB18E1_11 |     1|
+|16    |RAMB18E1_12 |     1|
+|17    |RAMB18E1_13 |     1|
+|18    |RAMB18E1_14 |     1|
+|19    |RAMB18E1_2  |     1|
+|20    |RAMB18E1_3  |     1|
+|21    |RAMB18E1_4  |     1|
+|22    |RAMB18E1_5  |     1|
+|23    |RAMB18E1_6  |     1|
+|24    |RAMB18E1_7  |     1|
+|25    |RAMB18E1_8  |     1|
+|26    |RAMB18E1_9  |     1|
+|27    |FDRE        |   298|
+|28    |FDSE        |     1|
+|29    |IBUF        |    19|
+|30    |OBUF        |   258|
++------+------------+------+
+
+Report Instance Areas: 
++------+----------------------+------------------+------+
+|      |Instance              |Module            |Cells |
++------+----------------------+------------------+------+
+|1     |top                   |                  |   957|
+|2     |  \genblk1[0].mac_k   |mac               |     2|
+|3     |  \genblk1[10].mac_k  |mac_0             |    13|
+|4     |  \genblk1[11].mac_k  |mac_1             |     2|
+|5     |  \genblk1[12].mac_k  |mac_2             |    16|
+|6     |  \genblk1[13].mac_k  |mac_3             |    13|
+|7     |  \genblk1[14].mac_k  |mac_4             |    15|
+|8     |  \genblk1[15].mac_k  |mac_5             |    40|
+|9     |  \genblk1[1].mac_k   |mac_6             |    14|
+|10    |  \genblk1[2].mac_k   |mac_7             |    14|
+|11    |  \genblk1[3].mac_k   |mac_8             |    32|
+|12    |  \genblk1[4].mac_k   |mac_9             |    13|
+|13    |  \genblk1[5].mac_k   |mac_10            |    61|
+|14    |  \genblk1[6].mac_k   |mac_11            |     2|
+|15    |  \genblk1[7].mac_k   |mac_12            |    40|
+|16    |  \genblk1[8].mac_k   |mac_13            |     2|
+|17    |  \genblk1[9].mac_k   |mac_14            |    35|
+|18    |  u_2                 |rom_fire2_squeeze |    15|
++------+----------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 2008.496 ; gain = 653.039 ; free physical = 1312 ; free virtual = 5696
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2008.496 ; gain = 135.766 ; free physical = 1379 ; free virtual = 5763
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 2008.504 ; gain = 653.039 ; free physical = 1379 ; free virtual = 5763
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 136 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire2_squeeze/temp.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: Port clk is not a partition pin, the pin is already buffered; cannot set clk src on ports that are already buffered. [/home/gsaied/Desktop/old_rtl/fire2_squeeze/temp.xdc:2]
+CRITICAL WARNING: [Common 17-69] Command failed: Port clk is not a partition pin, the pin is already buffered; cannot set clk src on ports that are already buffered. [/home/gsaied/Desktop/old_rtl/fire2_squeeze/temp.xdc:3]
+CRITICAL WARNING: [Common 17-69] Command failed: Port clk is not a partition pin, the pin is already buffered; cannot set clk src on ports that are already buffered. [/home/gsaied/Desktop/old_rtl/fire2_squeeze/temp.xdc:4]
+Finished Parsing XDC File [/home/gsaied/Desktop/old_rtl/fire2_squeeze/temp.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2018.496 ; gain = 0.000 ; free physical = 1301 ; free virtual = 5686
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+117 Infos, 0 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 2018.496 ; gain = 671.039 ; free physical = 1368 ; free virtual = 5753
+# write_checkpoint -force script1_post_synth.dcp
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2018.496 ; gain = 0.000 ; free physical = 1368 ; free virtual = 5753
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2050.512 ; gain = 0.000 ; free physical = 1367 ; free virtual = 5754
+INFO: [Common 17-1381] The checkpoint '/home/gsaied/Desktop/old_rtl/fire2_squeeze/script1_post_synth.dcp' has been generated.
+# report_utilization -file script1_post_synth_utilization.rpt
+/home/gsaied/Desktop/old_rtl/fire2_squeeze/script1_post_synth_utilization.rpt
+vi script1_post_synth_utilization.rpt 
+WARNING: [Common 17-259] Unknown Tcl command 'vi script1_post_synth_utilization.rpt' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+synth_design -directive runtimeoptimized -resource_sharing on
+Command: synth_design -directive runtimeoptimized -resource_sharing on
+Starting synth_design
+Using part: xc7vx485tffg1157-1
+Top: fire2_squeeze
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8589 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2054.512 ; gain = 3.996 ; free physical = 888 ; free virtual = 5438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fire2_squeeze' [/home/gsaied/Desktop/old_rtl/fire2_squeeze/fire2_squeeze.sv:1]
+	Parameter WOUT_FIRE2_SQUEEZE bound to: 64 - type: integer 
+	Parameter DSP_NO_FIRE2_SQUEEZE bound to: 16 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter CHIN bound to: 64 - type: integer 
+	Parameter KERNEL_DIM bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mac' [/home/gsaied/Desktop/old_rtl/fire2_squeeze/mac.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'mac' (1#1) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/mac.sv:1]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/fire2_squeeze.sv:147]
+INFO: [Synth 8-6157] synthesizing module 'biasing_fire2_squeeze' [/home/gsaied/Desktop/old_rtl/fire2_squeeze/biasing_fire2_squeeze.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'biasing_fire2_squeeze' (2#1) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/biasing_fire2_squeeze.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'rom_fire2_squeeze' [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter ADDR bound to: 10 - type: integer 
+	Parameter NUM bound to: 16 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:15]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:18]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:21]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:24]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:27]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:30]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:33]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:36]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:39]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:42]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:45]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:48]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:51]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:54]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:57]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{block}" *) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:60]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_1.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:62]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_2.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:63]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_3.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:64]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_4.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:65]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_5.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:66]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_6.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:67]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_7.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:68]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_8.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:69]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_9.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:70]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_10.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:71]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_11.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:72]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_12.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:73]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_13.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:74]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_14.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:75]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_15.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:76]
+INFO: [Synth 8-3876] $readmem data file 'file_fire2_squeeze_16.mem' is read successfully [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:77]
+INFO: [Synth 8-6155] done synthesizing module 'rom_fire2_squeeze' (3#1) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/rom_fire2_squeeze.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fire2_squeeze' (4#1) [/home/gsaied/Desktop/old_rtl/fire2_squeeze/fire2_squeeze.sv:1]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2092.762 ; gain = 42.246 ; free physical = 898 ; free virtual = 5453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2092.762 ; gain = 42.246 ; free physical = 904 ; free virtual = 5458
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2092.762 ; gain = 42.246 ; free physical = 904 ; free virtual = 5458
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "rom_6" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_clr_pulse" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2186.363 ; gain = 135.848 ; free physical = 780 ; free virtual = 5337
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 16    
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 16    
+	               16 Bit    Registers := 50    
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---ROMs : 
+	                              ROMs := 15    
++---Muxes : 
+	 577 Input     16 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fire2_squeeze 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 16    
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 18    
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module rom_fire2_squeeze 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 32    
++---ROMs : 
+	                              ROMs := 15    
++---Muxes : 
+	 577 Input     16 Bit        Muxes := 1     
+Module mac 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][0]' (FD) to 'u_2/rom_out_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][1]' (FD) to 'u_2/rom_out_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][2]' (FD) to 'u_2/rom_out_reg[5][3]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][3]' (FD) to 'u_2/rom_out_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][4]' (FD) to 'u_2/rom_out_reg[5][5]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][5]' (FD) to 'u_2/rom_out_reg[5][6]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][6]' (FD) to 'u_2/rom_out_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][7]' (FD) to 'u_2/rom_out_reg[5][8]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][8]' (FD) to 'u_2/rom_out_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][9]' (FD) to 'u_2/rom_out_reg[5][10]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][10]' (FD) to 'u_2/rom_out_reg[5][11]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][11]' (FD) to 'u_2/rom_out_reg[5][12]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][12]' (FD) to 'u_2/rom_out_reg[5][13]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][13]' (FD) to 'u_2/rom_out_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/rom_out_reg[5][14]' (FD) to 'u_2/rom_out_reg[5][15]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][0]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][1]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][2]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][3]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][4]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][5]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][6]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][7]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][8]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][9]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][10]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][11]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][12]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][13]' (FD) to 'u_2/kernels_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'u_2/kernels_reg[5][14]' (FD) to 'u_2/kernels_reg[5][15]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2310.051 ; gain = 259.535 ; free physical = 696 ; free virtual = 5255
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------------+-----------------+---------------+----------------+
+|Module Name       | RTL Object      | Depth x Width | Implemented As | 
++------------------+-----------------+---------------+----------------+
+|rom_fire2_squeeze | rom_out_reg[0]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[1]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[2]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[3]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[4]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[6]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[7]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[8]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[9]  | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[10] | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[11] | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[12] | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[13] | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[14] | 1024x16       | Block RAM      | 
+|rom_fire2_squeeze | rom_out_reg[15] | 1024x16       | Block RAM      | 
++------------------+-----------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance u_2i_0/u_2/rom_out_reg[0] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_1/u_2/rom_out_reg[1] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_2/u_2/rom_out_reg[2] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_3/u_2/rom_out_reg[3] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_4/u_2/rom_out_reg[4] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_6/u_2/rom_out_reg[6] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_7/u_2/rom_out_reg[7] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_8/u_2/rom_out_reg[8] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_9/u_2/rom_out_reg[9] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_10/u_2/rom_out_reg[10] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_11/u_2/rom_out_reg[11] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_12/u_2/rom_out_reg[12] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_13/u_2/rom_out_reg[13] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_14/u_2/rom_out_reg[14] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2i_15/u_2/rom_out_reg[15] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `fire2_squeeze`
+	Effective logic levels is 1, the effective logic levels of whole design is 1
+	Skipping retiming for this module
+
+INFO: [Synth 8-5816] Retiming module `fire2_squeeze' done
+
+
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[0] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[1] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[2] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[3] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[4] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[6] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[7] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[8] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[9] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[10] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[11] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[12] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[13] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[14] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_2/rom_out_reg[15] (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2310.051 ; gain = 259.535 ; free physical = 696 ; free virtual = 5255
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2310.051 ; gain = 259.535 ; free physical = 700 ; free virtual = 5259
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2310.051 ; gain = 259.535 ; free physical = 700 ; free virtual = 5259
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2310.051 ; gain = 259.535 ; free physical = 700 ; free virtual = 5259
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2310.051 ; gain = 259.535 ; free physical = 700 ; free virtual = 5259
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2310.051 ; gain = 259.535 ; free physical = 700 ; free virtual = 5259
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2310.051 ; gain = 259.535 ; free physical = 700 ; free virtual = 5259
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    97|
+|3     |DSP48E1  |    16|
+|4     |LUT1     |   176|
+|5     |LUT2     |    23|
+|6     |LUT3     |     7|
+|7     |LUT4     |     4|
+|8     |LUT5     |    11|
+|9     |LUT6     |    19|
+|10    |MUXF7    |     6|
+|11    |RAMB18E1 |    15|
+|12    |FDRE     |   298|
+|13    |FDSE     |     1|
+|14    |IBUF     |    19|
+|15    |OBUF     |   258|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------------+------------------+------+
+|      |Instance              |Module            |Cells |
++------+----------------------+------------------+------+
+|1     |top                   |                  |   951|
+|2     |  \genblk1[0].mac_k   |mac               |     2|
+|3     |  \genblk1[10].mac_k  |mac_0             |    11|
+|4     |  \genblk1[11].mac_k  |mac_1             |     2|
+|5     |  \genblk1[12].mac_k  |mac_2             |    16|
+|6     |  \genblk1[13].mac_k  |mac_3             |    13|
+|7     |  \genblk1[14].mac_k  |mac_4             |    14|
+|8     |  \genblk1[15].mac_k  |mac_5             |    40|
+|9     |  \genblk1[1].mac_k   |mac_6             |    14|
+|10    |  \genblk1[2].mac_k   |mac_7             |    13|
+|11    |  \genblk1[3].mac_k   |mac_8             |    31|
+|12    |  \genblk1[4].mac_k   |mac_9             |    13|
+|13    |  \genblk1[5].mac_k   |mac_10            |    61|
+|14    |  \genblk1[6].mac_k   |mac_11            |     2|
+|15    |  \genblk1[7].mac_k   |mac_12            |    40|
+|16    |  \genblk1[8].mac_k   |mac_13            |     2|
+|17    |  \genblk1[9].mac_k   |mac_14            |    33|
+|18    |  u_2                 |rom_fire2_squeeze |    15|
++------+----------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2310.051 ; gain = 259.535 ; free physical = 700 ; free virtual = 5259
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2310.051 ; gain = 259.535 ; free physical = 701 ; free virtual = 5260
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2310.059 ; gain = 259.535 ; free physical = 701 ; free virtual = 5260
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 134 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2381.051 ; gain = 0.000 ; free physical = 607 ; free virtual = 5171
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+114 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2381.051 ; gain = 330.539 ; free physical = 663 ; free virtual = 5227
+design_2
+report_utilization 
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Mar 17 00:10:03 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_utilization
+| Design       : fire2_squeeze
+| Device       : 7vx485tffg1157-1
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs*             |  230 |     0 |    303600 |  0.08 |
+|   LUT as Logic          |  230 |     0 |    303600 |  0.08 |
+|   LUT as Memory         |    0 |     0 |    130800 |  0.00 |
+| Slice Registers         |  299 |     0 |    607200 |  0.05 |
+|   Register as Flip Flop |  299 |     0 |    607200 |  0.05 |
+|   Register as Latch     |    0 |     0 |    607200 |  0.00 |
+| F7 Muxes                |    6 |     0 |    151800 | <0.01 |
+| F8 Muxes                |    0 |     0 |     75900 |  0.00 |
++-------------------------+------+-------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 1     |          Yes |         Set |            - |
+| 298   |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++-------------------+------+-------+-----------+-------+
+|     Site Type     | Used | Fixed | Available | Util% |
++-------------------+------+-------+-----------+-------+
+| Block RAM Tile    |  7.5 |     0 |      1030 |  0.73 |
+|   RAMB36/FIFO*    |    0 |     0 |      1030 |  0.00 |
+|   RAMB18          |   15 |     0 |      2060 |  0.73 |
+|     RAMB18E1 only |   15 |       |           |       |
++-------------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |   16 |     0 |      2800 |  0.57 |
+|   DSP48E1 only |   16 |       |           |       |
++----------------+------+-------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |  277 |     0 |       600 | 46.17 |
+| Bonded IPADs                |    0 |     0 |        62 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        40 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |        14 |  0.00 |
+| PHASER_REF                  |    0 |     0 |        14 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        56 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        56 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |        14 |  0.00 |
+| IBUFDS                      |    0 |     0 |       576 |  0.00 |
+| GTXE2_COMMON                |    0 |     0 |         5 |  0.00 |
+| GTXE2_CHANNEL               |    0 |     0 |        20 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        56 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        56 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       700 |  0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |       700 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        10 |  0.00 |
+| ILOGIC                      |    0 |     0 |       600 |  0.00 |
+| OLOGIC                      |    0 |     0 |       600 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFIO      |    0 |     0 |        56 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        14 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        14 |  0.00 |
+| BUFMRCE    |    0 |     0 |        28 |  0.00 |
+| BUFHCE     |    0 |     0 |       168 |  0.00 |
+| BUFR       |    0 |     0 |        56 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_2_1    |    0 |     0 |         4 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+------+---------------------+
+| Ref Name | Used | Functional Category |
++----------+------+---------------------+
+| FDRE     |  298 |        Flop & Latch |
+| OBUF     |  258 |                  IO |
+| LUT1     |  176 |                 LUT |
+| CARRY4   |   97 |          CarryLogic |
+| LUT2     |   23 |                 LUT |
+| LUT6     |   19 |                 LUT |
+| IBUF     |   19 |                  IO |
+| DSP48E1  |   16 |    Block Arithmetic |
+| RAMB18E1 |   15 |        Block Memory |
+| LUT5     |   11 |                 LUT |
+| LUT3     |    7 |                 LUT |
+| MUXF7    |    6 |               MuxFx |
+| LUT4     |    4 |                 LUT |
+| FDSE     |    1 |        Flop & Latch |
+| BUFG     |    1 |               Clock |
++----------+------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 02:35:43 2020...

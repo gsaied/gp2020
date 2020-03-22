@@ -1,0 +1,44 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu Mar  5 13:30:17 2020
+| Host         : GCS running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_timing -file post_opt_timing.rpt
+| Design       : rom_combined
+| Device       : 7vx690t-ffg1157
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 address[9]
+                            (input port)
+  Destination:            rom_out_reg[0]/ADDRBWRADDR[13]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        0.985ns  (logic 0.043ns (4.364%)  route 0.942ns (95.636%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.483ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.483ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  address[9] (IN)
+                         net (fo=128, unset)          0.508     0.508    address[9]
+                         LUT1 (Prop_lut1_I0_O)        0.043     0.551 r  rom_out_reg[0]_i_1/O
+                         net (fo=128, unplaced)       0.434     0.985    sel[9]
+                         RAMB18E1                                     r  rom_out_reg[0]/ADDRBWRADDR[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=255, unset)          0.483     0.483    clk
+                         RAMB18E1                                     r  rom_out_reg[0]/CLKBWRCLK
+
+
+
+

@@ -1,0 +1,170 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar  9 21:15:44 2020
+# Process ID: 8301
+# Current directory: /home/gsaied/Desktop/old_rtl/fire9_expand3
+# Command line: vivado -project project_1/project_1.xpr
+# Log file: /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/fire9_expand3/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 6422.953 ; gain = 155.570 ; free physical = 3413 ; free virtual = 8120
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'fire9_expand3' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_206.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_338.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_117.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_194.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_303.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_44.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_249.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_87.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_176.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_133.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_54.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_97.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_346.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_328.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_240.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_283.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_151.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_212.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_145.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_188.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_72.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_352.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_102.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_239.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_366.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_323.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_69.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_26.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_11.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_161.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_127.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_267.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_3.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_60.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_224.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_273.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_230.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_318.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_38.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_255.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_298.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_172.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_341.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_288.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_317.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_22.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_198.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_245.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_82.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_202.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_334.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_228.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_65.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_351.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_48.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_307.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_367.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_262.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_112.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_155.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_138.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_324.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_140.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_183.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_217.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_234.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_277.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_76.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_330.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_33.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_93.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_50.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_16.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_313.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_362.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_356.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_8.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_59.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_166.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_251.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_339.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_149.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_106.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_294.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_123.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_2.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_61.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_96.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_45.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_37.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_152.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_345.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_108.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_284.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_292.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_248.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_337.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_195.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_205.mem'
+INFO: [SIM-utils-43] Exported '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim/file_fire9_expand3_116.mem'
+INFO: [Common 17-14] Message 'SIM-utils 43' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj fire9_expand3_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 617826cadab34f8f95a07f4e08fe8984 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fire9_expand3_behav xil_defaultlib.fire9_expand3 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/gsaied/Desktop/old_rtl/fire9_expand3/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fire9_expand3_behav -key {Behavioral:sim_1:Functional:fire9_expand3} -tclbatch {fire9_expand3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source fire9_expand3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 9391.234 ; gain = 0.000 ; free physical = 3351 ; free virtual = 8048
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fire9_expand3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 9391.234 ; gain = 0.000 ; free physical = 3351 ; free virtual = 8048
+source ~/ss
+couldn't read file "~/ss": no such file or directory
+source ~/ss
+# dd_force {/fire9_expand3/fire9_expand3_en} -radix hex {0 0ns}
+invalid command name "dd_force"
+vi ~/ss
+WARNING: [Common 17-259] Unknown Tcl command 'vi ~/ss' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.

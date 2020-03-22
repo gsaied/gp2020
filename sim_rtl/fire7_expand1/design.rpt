@@ -1,0 +1,64 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Feb 24 23:03:39 2020
+| Host         : GCS running 64-bit unknown
+| Command      : report_design_analysis -file design.rpt
+| Design       : fire7_expand1
+| Device       : xc7vx690t
+------------------------------------------------------------------------------------
+
+Report Design Analysis
+
+Table of Contents
+-----------------
+1. Setup Path Characteristics 1-1
+2. Logic Level Distribution
+
+1. Setup Path Characteristics 1-1
+---------------------------------
+
++---------------------------+-------------------------+
+|      Characteristics      |         Path #1         |
++---------------------------+-------------------------+
+| Requirement               |                   5.000 |
+| Path Delay                |                   2.931 |
+| Logic Delay               | 2.140(74%)              |
+| Net Delay                 | 0.790(26%)              |
+| Clock Skew                |                  -1.657 |
+| Slack                     |                  -1.123 |
+| Clock Relationship        | Safely Timed            |
+| Logic Levels              |                       2 |
+| Routes                    |                       0 |
+| Logical Path              | FDCE LUT2 OBUF          |
+| Start Point Clock         | clk                     |
+| End Point Clock           | clk                     |
+| DSP Block                 | None                    |
+| BRAM                      | None                    |
+| IO Crossings              |                       0 |
+| Config Crossings          |                       0 |
+| SLR Crossings             |                       0 |
+| PBlocks                   |                       0 |
+| High Fanout               |                     199 |
+| Dont Touch                |                       0 |
+| Mark Debug                |                       0 |
+| Start Point Pin Primitive | FDCE/C                  |
+| End Point Pin Primitive   | fire7_expand1_finish    |
+| Start Point Pin           | fire7_expand1_end_reg/C |
+| End Point Pin             | fire7_expand1_finish    |
++---------------------------+-------------------------+
+* Bounding box calculated as % of dimensions for the target device (620, 1000)
+
+
+2. Logic Level Distribution
+---------------------------
+
++-----------------+-------------+-----+---+
+| End Point Clock | Requirement |  1  | 2 |
++-----------------+-------------+-----+---+
+| clk             | 5.000ns     | 999 | 1 |
++-----------------+-------------+-----+---+
+* Columns represent the logic levels per end point clock
+** Distribution is for top worst 1000 paths
+
+

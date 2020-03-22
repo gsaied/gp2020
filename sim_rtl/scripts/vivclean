@@ -1,0 +1,5 @@
+#!/bin/bash
+rm -rf *.jou *.log *.str
+if [ "$2" = "all" ] ; then
+	rm -rf *.rpt
+fi

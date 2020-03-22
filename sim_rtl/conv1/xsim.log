@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar 19 20:06:26 2020
+# Process ID: 9551
+# Current directory: /home/gsaied/Desktop/old_rtl/conv1
+# Command line: xsim -mode tcl -source {xsim.dir/work.conv1_tb/xsim_script.tcl}
+# Log file: /home/gsaied/Desktop/old_rtl/conv1/xsim.log
+# Journal file: /home/gsaied/Desktop/old_rtl/conv1/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/work.conv1_tb/xsim_script.tcl
+# xsim {work.conv1_tb} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:25 . Memory (MB): peak = 1334.188 ; gain = 0.000 ; free physical = 1466 ; free virtual = 4943
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Mar 19 20:07:00 2020...
