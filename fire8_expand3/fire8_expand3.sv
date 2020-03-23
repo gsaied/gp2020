@@ -21,7 +21,6 @@ reg fire8_expand3_en;
 reg [WIDTH-1:0] ifm ;
 reg [WIDTH-1:0] temp_ifm ;
 reg [WIDTH-1:0] temp2_ifm ;
-always@(posedge clk) fire8_expand3_en <= fire8_expand3_en_i ;
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO_FIRE8_EXPAND3-1] ;
 biasing_fire8_expand3 b7 (
 	.bias_mem(biasing_wire)
@@ -30,6 +29,8 @@ always@(posedge clk)begin
 	temp_ifm <= ifm_i ; 
 	temp2_ifm<= temp_ifm ;
         ifm<=temp2_ifm;
+	fire8_expand3_en <= fire8_expand3_en_i ;
+
 end
 ///////////////////////////////////
 //KERNELS INSTANTIATION
@@ -79,7 +80,7 @@ always @(posedge clk /*or negedge rst*/) begin
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
-	else*/ if (!fire8_expand3_end && fire8_expand3_en) begin
+	else*/ if (fire8_expand3_en) begin
 		if(clr_counter == KERNEL_DIM_FIRE8_EXPAND3**2*CHIN_FIRE8_EXPAND3-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;

@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 23 23:45:38 2020
+# Process ID: 6805
+# Current directory: /home/gsaied/Desktop/old_rtl/conv1
+# Command line: vivado -mode tcl -source synth.tcl
+# Log file: /home/gsaied/Desktop/old_rtl/conv1/vivado.log
+# Journal file: /home/gsaied/Desktop/old_rtl/conv1/vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+# read_verilog -sv [ glob *.sv ] 
+# create_fileset -constrset constr
+# add_files -fileset constr temp.xdc
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 4194304"
+# synth_design -top [lindex [find_top] 0] -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Command: synth_design -top conv1_tb -part xc7vx690t -flatten_hierarchy rebuilt -directive AreaOptimized_high -constrset constr -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6819 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1426.000 ; gain = 29.000 ; free physical = 1290 ; free virtual = 4409
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'conv1_tb' [/home/gsaied/Desktop/old_rtl/conv1/conv1_tb.sv:2]
+	Parameter WOUT bound to: 128 - type: integer 
+	Parameter DSP_NO bound to: 64 - type: integer 
+	Parameter STRIDE bound to: 2 - type: integer 
+	Parameter W_IN bound to: 258 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter CHIN bound to: 3 - type: integer 
+	Parameter KERNEL_DIM bound to: 3 - type: integer 
+	Parameter CHOUT bound to: 64 - type: integer 
+ERROR: [Synth 8-660] unable to resolve 'conv1' [/home/gsaied/Desktop/old_rtl/conv1/conv1_tb.sv:17]
+ERROR: [Synth 8-6156] failed synthesizing module 'conv1_tb' [/home/gsaied/Desktop/old_rtl/conv1/conv1_tb.sv:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1470.750 ; gain = 73.750 ; free physical = 1290 ; free virtual = 4415
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 23 23:46:13 2020...

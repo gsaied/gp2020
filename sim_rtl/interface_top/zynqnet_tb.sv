@@ -16,8 +16,8 @@ zynqnet dut (
 always @(posedge clk) begin
 	if(classi > 0) begin
 		$display(classi) ;
-		//$display("end of simulation time = %t",$time);
-		//$finish ;
+		$display("end of simulation time = %t",$time);
+		$finish ;
 	end
 end
 endmodule

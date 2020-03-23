@@ -135,7 +135,7 @@ always @(posedge clk /*or negedge rst*/) begin
 		rom_clr_pulse <= 1'b0 ; 
 		clr_counter <= 0 ;
 	end
-	else*/ if (!(fire4_expand_1_end && fire5_expand_1_end) && (fire5_expand_1_en || fire4_expand_1_en) && !rst_gen) begin
+	else*/ if ((fire5_expand_1_en || fire4_expand_1_en) && !rst_gen) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ; 
 			clr_counter <= clr_counter+1 ;

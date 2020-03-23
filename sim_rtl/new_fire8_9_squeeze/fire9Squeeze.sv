@@ -47,7 +47,7 @@ end
 ////////////////////////////
 reg [$clog2(KERNEL_DIM_FIRE9SQUEEZE**2*CHIN_FIRE9SQUEEZE):0] clr_counter ;
 always @(posedge clk) begin
-	if (!fire9Squeeze_end && fire9Squeeze_en) begin
+	if (fire9Squeeze_en) begin
 		if(clr_counter == KERNEL_DIM_FIRE9SQUEEZE**2*CHIN_FIRE9SQUEEZE-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;

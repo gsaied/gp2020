@@ -118,7 +118,7 @@ end
 ////////////////////////////
 reg [$clog2(KERNEL_DIM**2*CHIN):0] clr_counter ; 
 always @(posedge clk ) begin
-	if (!(conv10_1_end && conv10_2_end) && (conv10_2_en || conv10_1_en) && !rst_gen) begin
+	if ((conv10_2_en || conv10_1_en) && !rst_gen) begin
 		if(clr_counter == KERNEL_DIM**2*CHIN-1 ) begin
 			rom_clr_pulse<= 1'b1 ; 
 			clr_counter <= clr_counter+1 ;

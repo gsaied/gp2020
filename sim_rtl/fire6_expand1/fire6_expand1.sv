@@ -60,7 +60,6 @@ always @(posedge clk /*or negedge rst*/) begin
 	end
 end
 always @(posedge clk) begin
-	if(fire6_expand1_en) 
 		kernel_regs<=kernels ;
 end
 reg layer_en_reg ;
@@ -77,7 +76,7 @@ always @(posedge clk /*or negedge rst*/) begin
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
-	else */if (!fire6_expand1_end && fire6_expand1_en) begin
+	else */if (fire6_expand1_en) begin
 		if(clr_counter == KERNEL_DIM_FIRE6_EXPAND1**2*CHIN_FIRE6_EXPAND1-1) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;

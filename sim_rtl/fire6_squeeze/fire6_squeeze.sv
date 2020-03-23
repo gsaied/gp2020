@@ -19,10 +19,12 @@ module fire6_squeeze #(
 reg fire6_squeeze_end;
 reg [WIDTH-1:0] ifm ;
 reg [WIDTH-1:0] temp_ifm ;
+reg [WIDTH-1:0] temp2_ifm ;
 reg fire6_squeeze_en;
 always @(posedge clk) begin
 	temp_ifm <= ifm_i; 
-	ifm<= temp_ifm ; 
+	temp2_ifm<= temp_ifm ;
+	ifm<= temp2_ifm ;
 	fire6_squeeze_en<= fire6_squeeze_en_i ; 
 end
 wire [2*WIDTH-1:0] biasing_wire [0:DSP_NO_FIRE6_SQUEEZE-1] ;
@@ -94,7 +96,7 @@ always @(posedge clk/* or negedge rst*/) begin
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
-	else */if (!fire6_squeeze_end && fire6_squeeze_en) begin
+	else */if (fire6_squeeze_en) begin
 		if(clr_counter == KERNEL_DIM_FIRE6_SQUEEZE**2*CHIN_FIRE6_SQUEEZE-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;

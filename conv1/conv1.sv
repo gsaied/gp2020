@@ -147,7 +147,7 @@ wrapper_image u_1 (
 );
 // counter to generate clock_divider
 always @(posedge clk) begin
-	if (!conv1_end && conv1_en) begin
+	if (conv1_en) begin
 		if (clr_counter == KERNEL_DIM**2*CHIN-1) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter<= clr_counter +1 ;
@@ -158,7 +158,6 @@ always @(posedge clk) begin
 		end
 		else begin
 			clr_counter<= clr_counter +1 ;	
-			rom_clr_pulse<= 1'b0 ;
 		end
 	end
 end

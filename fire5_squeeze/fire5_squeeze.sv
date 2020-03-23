@@ -73,7 +73,7 @@ always @(posedge clk/* or posedge rst*/) begin
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
-	else */if (!fire5_squeeze_end && fire5_squeeze_en) begin
+	else */if (fire5_squeeze_en) begin
 		if(clr_counter == KERNEL_DIM_FIRE5_SQUEEZE**2*CHIN_FIRE5_SQUEEZE-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;

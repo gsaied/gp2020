@@ -58,7 +58,6 @@ always @(posedge clk /*or negedge rst*/) begin
 	end
 end
 always @(posedge clk) begin
-	if(fire7_expand3_en) 
 		kernel_regs<=kernels ;
 end
 reg layer_en_reg ;
@@ -75,7 +74,7 @@ always @(posedge clk /*or negedge rst*/) begin
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
-	else */if (!fire7_expand3_end && fire7_expand3_en) begin
+	else */if (fire7_expand3_en) begin
 		if(clr_counter == KERNEL_DIM_FIRE7_EXPAND3**2*CHIN_FIRE7_EXPAND3-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;

@@ -96,7 +96,7 @@ always @(posedge clk/* or negedge rst*/) begin
 		rom_clr_pulse <= 1'b0 ;
 		clr_counter <= 0 ;
 	end
-	else */if (!fire6_squeeze_end && fire6_squeeze_en) begin
+	else */if (fire6_squeeze_en) begin
 		if(clr_counter == KERNEL_DIM_FIRE6_SQUEEZE**2*CHIN_FIRE6_SQUEEZE-1 ) begin
 			rom_clr_pulse<= 1'b1 ;
 			clr_counter <= clr_counter+1 ;
